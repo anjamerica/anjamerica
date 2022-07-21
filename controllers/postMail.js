@@ -8,8 +8,6 @@ const { serverRuntimeConfig } = getConfig()
  export const postMail=(req,res)=>{
 
   console.log(req.body)
-  console.log("hiii");
-
 
  const{first_name,job_title,name,description,link,mobile_number,email,message}=req.body
 

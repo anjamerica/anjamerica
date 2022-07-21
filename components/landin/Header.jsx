@@ -14,7 +14,7 @@ export default function Header() {
   }, [router.pathname]);
 
   return (
-    <div className="relative w-full flex justify-between items-center h-[8hv] px-4 bg-violet-dark  md:px-10 md:py-4 md:items-center md:h-[10vh]">
+    <div className="relative w-full flex justify-between items-center h-[8hv] px-4 bg-white  md:px-10 md:py-4 md:items-center md:h-[10vh]">
       <div className=" xl:ml-5 w-fit">
         <Link href="/">
           <img
