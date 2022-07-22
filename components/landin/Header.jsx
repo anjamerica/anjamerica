@@ -18,7 +18,7 @@ export default function Header() {
       <div className=" xl:ml-5 w-fit">
         <Link href="/">
           <img
-            src="/assets/landing/Logo.png"
+            src="/landing/logo.svg"
             className="h-16 w-40 xl:h-20 xl:w-56 object-contain cursor-pointer"
           />
         </Link>
@@ -27,7 +27,7 @@ export default function Header() {
         <Link href="/about">
           <span
             className={`cursor-pointer text-center md:text-base mx-2 md:mx-4 ${
-              active == "/about" ? "text-primary-green " : "text-white"
+              active == "/about" ? "text-[#07038C]" : "text-[#08081E]"
             }`}
           >
             About
@@ -40,7 +40,7 @@ export default function Header() {
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
                 >
-                  <path d="M33 0L0 0.666667L33 1V0Z" fill="#33B5AF" />
+                  <path d="M33 0L0 0.666667L33 1V0Z" fill="#07038C" />
                 </svg>
               )}
             </span>
@@ -49,8 +49,8 @@ export default function Header() {
         <Link href="/digitize">
           <span
             className={`cursor-pointer text-center md:text-base mx-2 md:mx-4 ${
-              active == "/digitize" ? "text-primary-green" : "text-white"
-            }`}
+              active == "/digitize" ? "text-[#07038C]" : "text-[#08081E]"
+            }`}n
           >
             Digitize
             <span className="w-full flex justify-center ease-linear duration-1000">
@@ -62,7 +62,7 @@ export default function Header() {
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
                 >
-                  <path d="M33 0L0 0.666667L33 1V0Z" fill="#33B5AF" />
+                  <path d="M33 0L0 0.666667L33 1V0Z" fill="#07038C" />
                 </svg>
               )}
             </span>
@@ -71,7 +71,7 @@ export default function Header() {
         <Link href="/staffing">
           <span
             className={`cursor-pointer text-center md:text-base mx-2 md:mx-4 ${
-              active == "/staffing" ? "text-primary-green" : "text-white"
+              active == "/staffing" ? "text-[#07038C]" : "text-[#08081E]"
             }`}
           >
             Hire Right
@@ -84,7 +84,7 @@ export default function Header() {
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
                 >
-                  <path d="M33 0L0 0.666667L33 1V0Z" fill="#33B5AF" />
+                  <path d="M33 0L0 0.666667L33 1V0Z" fill="#07038C" />
                 </svg>
               )}
             </span>
@@ -93,7 +93,7 @@ export default function Header() {
         <Link href="/career">
           <span
             className={`cursor-pointer text-center md:text-base mx-2 md:mx-4 ${
-              active == "/career" ? "text-primary-green" : "text-white"
+              active == "/career" ? "text-[#07038C]" : "text-[#08081E]"
             }`}
           >
             Career
@@ -106,7 +106,7 @@ export default function Header() {
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
                 >
-                  <path d="M33 0L0 0.666667L33 1V0Z" fill="#33B5AF" />
+                  <path d="M33 0L0 0.666667L33 1V0Z" fill="#07038C" />
                 </svg>
               )}
             </span>
@@ -115,7 +115,7 @@ export default function Header() {
         <Link href="/#products">
           <span
             className={`cursor-pointer text-center md:text-base mx-2 md:mx-4 ${
-              active == "/#products" ? "text-primary-green" : "text-white"
+              active == "/#products" ? "text-[#07038C]" : "text-[#08081E]"
             }`}
           >
             Our Products
@@ -128,7 +128,7 @@ export default function Header() {
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
                 >
-                  <path d="M33 0L0 0.666667L33 1V0Z" fill="#33B5AF" />
+                  <path d="M33 0L0 0.666667L33 1V0Z" fill="#07038C" />
                 </svg>
               )}
             </span>
@@ -137,7 +137,7 @@ export default function Header() {
         <Link href="/blogs">
           <span
             className={`cursor-pointer text-center md:text-base mx-2 md:mx-4 ${
-              active == "/blogs" ? "text-primary-green" : "text-white"
+              active == "/blogs" ? "text-[#07038C]" : "text-[#08081E]"
             }`}
           >
             Blog
@@ -150,7 +150,7 @@ export default function Header() {
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
                 >
-                  <path d="M33 0L0 0.666667L33 1V0Z" fill="#33B5AF" />
+                  <path d="M33 0L0 0.666667L33 1V0Z" fill="#07038C" />
                 </svg>
               )}
             </span>
@@ -159,7 +159,7 @@ export default function Header() {
         <Link href="/#contact">
           <span
             className={`cursor-pointer text-center md:text-base mx-2 md:mx-4 ${
-              active == "/#contact" ? "text-primary-green" : "text-white"
+              active == "/#contact" ? "text-[#07038C]" : "text-[#08081E]"
             }`}
           >
             Get in Touch
@@ -172,7 +172,7 @@ export default function Header() {
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
                 >
-                  <path d="M33 0L0 0.666667L33 1V0Z" fill="#33B5AF" />
+                  <path d="M33 0L0 0.666667L33 1V0Z" fill="#07038C" />
                 </svg>
               )}
             </span>

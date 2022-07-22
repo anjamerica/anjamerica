@@ -46,11 +46,12 @@ export default function LandingScreen() {
     <main className="mx-auto w-full h-full snap-y ">
       <Header />
       <section className="relative">
-        <div className="dg-gradient-landing h-[50vh] pt-10 pb-20  w-full md:h-[90vh]">
+        <div className="bg-white h-[50vh] pt-10 pb-20  w-full md:h-[90vh]">
           <div>
             <img
-              src="/assets/landing/Vector-6.png"
-              className="hidden md:flex md:absolute md:w-[100%] md:px-10 md:h-[80vh] md:-top-[1rem]"
+              src="/landing/bg.png"
+              // className="hidden md:flex md:absolute md:w-[100%] md:px-10 md:h-[80vh] md:-top-[1rem]"
+              className="hidden md:flex md:absolute md:w-[100%] md:h-[80vh] md:-top-[4rem]"
             />
             <img
               src="/assets/landing/mob_bg_landing.svg"
@@ -59,16 +60,16 @@ export default function LandingScreen() {
           </div>
           <div className="flex h-full flex-col gap-3 justify-center self-center items-center">
             <div className="flex justify-center">
-              <span className="text-green-medium z-10">
+              <span className="text-[#FFD700] z-10">
                 LOREM IPSUM IS SIMPLY DUMMY
               </span>
             </div>
-            <div className="text-anim-blog text-[1.5rem] break-words z-10 text-white text-center font-extrabold md:text-[2.5rem] tracking-wide">
+            <div className="text-[#07038C] text-[1.5rem] break-words z-10 text-white text-center font-extrabold md:text-[2.5rem] tracking-wide">
               Digitize your Business today
               <br /> and Grow your Brand...
             </div>
             <div className="text-anim-blog flex items-center justify-center">
-              <span className="text-normal-landing z-10">
+              <span className="text-[#676767] z-10">
                 Create stunning products, Hire top software <br /> professionals
                 for your project.
               </span>
@@ -84,12 +85,13 @@ export default function LandingScreen() {
           </div>
         </div>
       </section>
+      <hr  className="h-[10px] bg-black"/>
       <section id="services">
-        <div className="bg-primary-blue-dark flex flex-col h-fit justify-center py-10 select-none">
+        <div className="bg-white flex flex-col h-fit justify-center py-10 select-none">
           <div className="flex flex-col gap-4 self-center justify-center">
-            <span className="text-green-medium">WHAT WE DO</span>
-            <span className="text-heading-landing">Services</span>
-            <span className="text-normal-landing">
+            <span className="text-[#07038C]">WHAT WE DO</span>
+            <span className="text-[#08081E]">Services</span>
+            <span className="text-[#08081E]">
               Services to help drive your business to success.
             </span>
           </div>

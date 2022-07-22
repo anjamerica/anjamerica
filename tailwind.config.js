@@ -15,7 +15,7 @@ module.exports = {
         "secondary-gray": "#535353",
         "violet-dark": "#0A0726",
         "primary-red":"#E70911",
-        "subheading-gray":"#434A53"
+        "subheading-gray":"#434A53",
       },
       fontSize: {
         sm: ['14px', '20px'],
