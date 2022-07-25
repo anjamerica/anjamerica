@@ -11,8 +11,8 @@ function MyApp({ Component, pageProps }) {
       <AuthContextProvider>
         <LoadingProvider>
           <Head>
-            <link rel="icon" type="image/png" href="/image.png" />
-            <title>Niche Techies</title>
+            <link rel="icon" type="image/png" href="/favicon.png" />
+            <title>Anj America</title>
           </Head>
           <CustomLayout>
             <Toaster position="top-center" reverseOrder={false} />

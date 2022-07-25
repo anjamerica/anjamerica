@@ -44,54 +44,69 @@ export default function LandingScreen() {
   const [serviceActive, setServiceActive] = useState(2);
   return (
     <main className="mx-auto w-full h-full snap-y ">
-      <Header />
       <section className="relative">
-        <div className="bg-white h-[50vh] pt-10 pb-20  w-full md:h-[90vh]">
-          <div>
-            <img
+        <div
+          style={{
+            background: `url(${"/landing/bg.png"})`,
+            backgroundSize: "100% 100%",
+          }}
+        >
+          <Header />
+          <div className="bg-white h-[60vh] pt-10 pb-20  w-full md:h-[90vh]">
+            <div>
+              {/* <img
               src="/landing/bg.png"
               // className="hidden md:flex md:absolute md:w-[100%] md:px-10 md:h-[80vh] md:-top-[1rem]"
               className="hidden md:flex md:absolute md:w-[100%] md:h-[80vh] md:-top-[4rem]"
-            />
-            <img
+            /> */}
+              {/* <img
               src="/assets/landing/mob_bg_landing.svg"
               className="absolute w-full h-[45vh] object-contain -top-[2.5rem] px-2 md:hidden"
-            />
-          </div>
-          <div className="flex h-full flex-col gap-3 justify-center self-center items-center">
-            <div className="flex justify-center">
-              <span className="text-[#FFD700] z-10">
-                LOREM IPSUM IS SIMPLY DUMMY
-              </span>
+            />  */}
             </div>
-            <div className="text-[#07038C] text-[1.5rem] break-words z-10 text-white text-center font-extrabold md:text-[2.5rem] tracking-wide">
-              Digitize your Business today
-              <br /> and Grow your Brand...
-            </div>
-            <div className="text-anim-blog flex items-center justify-center">
-              <span className="text-[#676767] z-10">
-                Create stunning products, Hire top software <br /> professionals
-                for your project.
-              </span>
-            </div>
-            <div className="absolute  bottom-6 self-center cursor-pointer">
-              <Link href="/#services">
-                <img
-                  className="w-fit h-fit md:w-[3rem] md:h-[3rem]"
-                  src="/assets/landing/down_arrow_btn.svg"
-                />
-              </Link>
+            <div className=" flex h-full flex-col gap-0 justify-center self-center items-center">
+              <div className="flex justify-center">
+                <span className="text-[#FFD700] text-[.85rem] md:text-[20px] font-[700]">
+                  LOREM IPSUM IS SIMPLY DUMMY
+                </span>
+              </div>
+              <div className="text-anim-blog text-[#07038C] uppercase text-[24px] text-center w-[17rem] font-[800] sm:w-[35rem] xl:w-[70rem] xl:leading-[4rem] sm:text-[34px] xl:text-[60px]">
+                Digitize your Business today and Grow your Brand...
+              </div>
+              <div className="text-anim-blog flex items-center text-center justify-center">
+                <span className="text-primary-gray  text-[.8rem]  xl:text-[1rem] w-[13rem] sm:w-full ">
+                  Create stunning products, Hire top software professionals for
+                  your project.
+                </span>
+              </div>
+              <div className="mt-5 xl:mt-10">
+                <button className="w-fit font-semibold text-[14px] md:text-base  uppercase text-white bg-primary-blue px-6 py-[.6rem]  tracking-wide rounded-full hover:text-primary-blue hover:bg-white cursor-pointer transition-all text-center flex items-center justify-center">
+                  KNOW MORE
+                </button>
+              </div>
+              <div className="hidden md:flex md:absolute md:bottom-6 md:self-center md:cursor-pointer">
+                <Link href="/#services">
+                  <img
+                    className="w-fit h-fit md:w-[3rem] md:h-[3rem]"
+                    src="/assets/landing/down_arrow_btn.svg"
+                  />
+                </Link>
+              </div>
             </div>
           </div>
         </div>
       </section>
-      <hr  className="h-[10px] bg-black"/>
+      <hr className="h-[5px] bg-primary-blue" />
       <section id="services">
         <div className="bg-white flex flex-col h-fit justify-center py-10 select-none">
-          <div className="flex flex-col gap-4 self-center justify-center">
-            <span className="text-[#07038C]">WHAT WE DO</span>
-            <span className="text-[#08081E]">Services</span>
-            <span className="text-[#08081E]">
+          <div className="flex flex-col gap-1 self-center justify-center">
+            <span className="text-subheading leading-[3%] text-primary-blue self-center">
+              WHAT WE DO
+            </span>
+            <span className="text-subheading-main  text-primary-black self-center">
+              Services
+            </span>
+            <span className="text-normal-landing mt-2 text-primary-black self-center">
               Services to help drive your business to success.
             </span>
           </div>
@@ -143,23 +158,31 @@ export default function LandingScreen() {
         </div>
       </section>
       <section>
-        <div className="flex flex-col justify-center items-center py-10 gap-4">
-          <div className="text-black text-[.8rem] md:text-[1rem] font-semibold uppercase px-10">
+        <div
+          className="flex flex-col justify-center items-center py-10 gap-4"
+          style={{
+            background: `url(${"/landing/career-section.png"})`,
+            backgroundSize: "100% 100%",
+          }}
+        >
+          <div className="text-subheading text-white">
             FIND THAT PERFECT FIT
           </div>
-          <div className="flex flex-col items-center text-center text-black text-[1rem] md:text-[1.5rem] font-semibold break-words px-10">
+          <div className="flex flex-col w-[70%] items-center text-center text-white text-[24px] md:text-[48px] font-semibold break-words">
             New jobs everyday - Leave us your resume for future opportunities!
           </div>
           <div>
-            <Link href="/career"><button className="cyan-action-button">Explore Career</button></Link>
+            <Link href="/career">
+              <button className="yellow-action-button">Explore Career</button>
+            </Link>
           </div>
         </div>
       </section>
       <section>
-        <div className="py-10 flex items-center flex-col gap-4 bg-primary-blue-dark">
+        <div className="py-10 flex items-center flex-col gap-4 bg-[#F3F3F3]">
           <div className="flex flex-col gap-4 pb-8">
             <div className="text-green-medium">WHAT WE DO</div>
-            <div className="text-heading-landing">
+            <div className="text-[1.5rem] tracking-wide break-words text-center font-bold md:text-[1.5rem] 2xl:text-[3rem]; text-primary-black">
               Businesses we&apos;ve aligned with
             </div>
             <div className="text-normal-landing">
@@ -168,7 +191,7 @@ export default function LandingScreen() {
             </div>
           </div>
           <div className="scrollbar-landing">
-          <div className="grid grid-cols-1 max-w-[1000px] gap-[46px] md:grid-cols-4 xl:grid-cols-6">
+            <div className="grid grid-cols-1 max-w-[1000px] gap-[46px] md:grid-cols-4 xl:grid-cols-6">
               <img
                 src="/assets/business/progressive.png"
                 className="logo-hover-color"
@@ -252,7 +275,7 @@ export default function LandingScreen() {
         <Footer />
       </section> */}
       <section>
-        <Footer/>
+        <Footer />
       </section>
     </main>
   );

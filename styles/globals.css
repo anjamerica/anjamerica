@@ -17,8 +17,9 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: "sofia-pro", sans-serif;
+  font-family: "Roboto", sans-serif;
   min-width: 350px;
+  min-height: 100%;
 }
 
 a {
@@ -38,8 +39,8 @@ a {
 p{
  user-select: none;
 }
-.cyan-action-button {
-  @apply w-fit font-medium text-white select-none bg-secondary-green px-4 py-2  uppercase  rounded-full hover:bg-[#33b5af] transition-all text-center flex items-center justify-center;
+.yellow-action-button {
+  @apply w-fit font-[800] text-black select-none bg-primary-yellow px-4 py-2  uppercase  rounded-full hover:bg-[#ecd378] transition-all text-center flex items-center justify-center;
 }
 
 .gray-action-button {
@@ -63,7 +64,7 @@ p{
 }
 
 .text-normal-landing {
-  @apply text-[.85rem] text-white text-center break-words md:text-[1rem];
+  @apply text-[14px] text-center break-words md:text-[1rem];
 }
 
 .text-normal-digitze{
@@ -436,5 +437,15 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .footer-link{
-  @apply text-xs text-white mt-2 cursor-pointer;
+  @apply text-[14px] text-white mt-2 cursor-pointer font-[400];
 }
+
+/* Landing Page */
+.text-subheading{
+  @apply  text-[14px] md:text-[20px] font-[700] uppercase ;
+}
+
+.text-subheading-main{
+  @apply text-[24px] lg:text-[36px] font-[800];
+}
+
