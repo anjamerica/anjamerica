@@ -5,64 +5,75 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <div className="relative bg-gradient-footer w-full h-fit pt-10 -z-10 select-none">
-      <div className="flex justify-center flex-col px-5 gap-2">
-        <img
-          src="/assets/landing/vector_footer_web.svg"
-          className="hidden md:flex md:absolute md:w-[90vw] md:h-full md:top-0 xl:px-20"
-        />
-        <img 
-          src="/assets/landing/vector_footer.svg"
-          className="absolute w-fit h-[100%] top-0 left-0  md:hidden "
-        />
+    <div className="relative bg-[#07081D] w-full h-fit pt-10 z-0 select-none">
+      <div className="flex justify-center  flex-col px-5 gap-4">
         <span className="text-white font-bold text-2xl self-center px-3 text-center">
           Get to know us!
         </span>
-        <span className="flex flex-col items-left text-white text-[1rem] break-words text-center px-2">
+        <span className="flex flex-col items-left text-[#787878] text-[1rem] break-words text-center px-2">
           Lorem Ipsum is simply dummy text of the printing and typesetting
           industry.
         </span>
+        <div className="justify-center flex flex-col mt-4 lg:mt-0 lg:flex-row gap-2 w-full">
+          <input
+            type="text"
+            placeholder="Subscribe Our Newsletter..."
+            className=" placeholder:text-[#777689] w-full lg:w-[30vw] text-[#777689] bg-transparent outline-none border-[#5A5A5A] border-b-[1px] px-2"
+          />
+          <button className="w-fit font-[400] self-center mt-10 text-primary-black bg-[#777689] px-8 py-[.6rem]  tracking-wide rounded-full hover:text-primary-blue hover:bg-white cursor-pointer transition-all text-center flex items-center justify-center">
+            Subscribe
+          </button>
+        </div>
       </div>
-      <div className="flex flex-col md:flex-row md:justify-around py-10 md:p-10">
+      <div className="flex justify-center mt-14 mb-2 px-20">
+        <div className="w-[60vw] bg-[#777689] h-[.1px] lg:h-[1px]"></div>
+      </div>
+      <div className="flex flex-col lg:flex-row md:justify-around py-10 md:p-10">
         <div className="flex flex-col md:gap-4">
           <Link href="/">
             <img
-              src="/assets/landing/Logo.png"
-              className="h-fit w-[13rem] xl:h-fit md:w-36 md:h-fit object-contain p-5 md:p-0"
+              src="/landing/logo.svg"
+              className="h-fit w-[13rem] xl:h-fit md:w-[192px] -ml-3 -mb-6 md:h-fit object-contain p-5 md:p-0"
             />
           </Link>
-          <span className="flex flex-col items-left font-semibold text-white text-[.75rem]  break-words text-left px-5 md:w-[15rem] md:px-0">
+          <span className="flex flex-col items-left font-[400] text-white text-[14px] lg:text-[18px]  break-words text-left px-5 md:w-[24rem] md:px-0">
             Have questions about how we work and what you get? We&apos;ve got
             all the answers you need.
           </span>
         </div>
-        <div className="flex gap-4 flex-col md:flex-row">
-          <div className="flex flex-col px-5 mt-8 md:mt-0">
-            <span className="text-white text-lg font-semibold">Company</span>
+        <div className="flex gap-4 flex-col lg:flex-row">
+          <div className="flex flex-col px-5 md:px-0 mt-8 md:mt-0">
+            <span className="text-white text-[24px] font-semibold">Company</span>
             {/* <Link href="/about"> */}
             <Link href="/about">
               <span className="footer-link">About Us</span>
             </Link>
           </div>
-          <div className="flex flex-col px-5">
+          <div className="flex flex-col px-5 md:px-0">
             <Link href="/#services" passHref>
-              <span className="text-white text-lg font-semibold">Services</span>
+              <span className="text-white text-[24px] font-semibold">Services</span>
             </Link>
-            <Link href="/digitize" passHref><span className="footer-link">Digitize</span></Link>
-            <Link href="/staffing" passHref><span className="footer-link">Hire Right</span></Link>       
+            <Link href="/digitize" passHref>
+              <span className="footer-link">Digitize</span>
+            </Link>
+            <Link href="/staffing" passHref>
+              <span className="footer-link">Hire Right</span>
+            </Link>
           </div>
-          <div className="flex flex-col px-5">
-            <span className="text-white text-lg font-semibold">Social</span>
+          <div className="flex flex-col px-5 md:px-0">
+            <span className="text-white text-[24px] font-semibold">Social</span>
             <div className="flex flex-row gap-2 text-white mt-2 mb-4">
+              <a href="https://www.facebook.com/anjamericadotcom/about/" target="_blank">
               <span className="bg-primary-violet h-8 w-8 cursor-pointer rounded-full flex items-center justify-center">
                 <FaFacebookF className="h-fit w-fit" />
-              </span>
+              </span></a>
               <span className="bg-primary-violet h-8 w-8 cursor-pointer rounded-full flex items-center justify-center">
                 <FaTwitter className="h-fit w-fit" />
               </span>
+              <a href="https://instagram.com/anj.america?igshid=YmMyMTA2M2Y=" target="_blank">
               <span className="bg-primary-violet h-8 w-8 cursor-pointer rounded-full flex items-center justify-center">
                 <FaInstagram className="h-fit w-fit" />
-              </span>
+              </span></a>
               <span className="bg-primary-violet h-8 w-8 cursor-pointer rounded-full flex items-center justify-center">
                 <BsEnvelopeFill className="h-fit w-fit" />
               </span>
@@ -70,10 +81,9 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      {/* <hr className="h-[3px] w-full bg-[#222230]" /> */}
-      <div className="flex justify-center items-center h-[3.5rem] border-t-[3px] border-[#222230]">
-        <span className="text-xs text-white self-center">
-          &copy;2021 Nichetechies - All Rights Reserved
+      <div className="flex justify-center items-center h-[4rem] lg:h-[5.5rem] mt-5 border-t-[1px] border-[#222230]">
+        <span className="text-xs md:text-[1rem] font-[400] text-white self-center">
+          &copy;2021 Anj America - All Rights Reserved
         </span>
       </div>
     </div>
