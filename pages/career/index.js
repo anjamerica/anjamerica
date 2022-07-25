@@ -50,7 +50,7 @@ export default function Career() {
           <div className="flex h-full flex-col gap-3 justify-center self-center items-center">
             <div className="flex justify-center">
               <span className="text-green-medium">
-                EXPLORE A CAREER AT NICHE TECHIES
+              EXPLORE A CAREER AT ANJ AMERICA
               </span>
             </div>
             <div className="text-anim-blog text-[1.5rem] break-words text-white text-center font-bold md:text-[2.5rem] tracking-wide">

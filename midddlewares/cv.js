@@ -7,7 +7,7 @@ import Job from "../models/jobApplicants"
 export const uploadCv = multer({
     storage: multerS3({
         s3: s3,
-        bucket: 'nichetechies',
+        bucket: process.env.AWS_PRIVATE_BUCKET,
        
 
         key: async function (req, file, cb) {
@@ -32,7 +32,7 @@ export const uploadCv = multer({
 export const getCvStream=(fileKey)=> {
     const downloadParams = {
         Key: fileKey,
-        Bucket: 'nichetechies',
+        Bucket: process.env.AWS_PRIVATE_BUCKET,
     };
 
     return s3.getObject(downloadParams).createReadStream();

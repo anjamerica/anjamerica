@@ -7,7 +7,7 @@ import { s3 } from '../utils/awsConfig';
  const uploadS3 = multer({
     storage: multerS3({
         s3: s3,
-        bucket: 'nichetechies-public',
+        bucket: process.env.AWS_PUBLIC_BUCKET,
          acl: 'public-read',
       
         key: function (req, file, cb) {
