@@ -127,7 +127,7 @@ export default function JobCard({ item, getDetails }) {
           {router.pathname == "/home" ? (
             <>
               <Link href={`home/${item._id}`}>
-                <button className="w-[4.5rem] font-semibold text-xs text-white bg-primary-green px-4 py-2  uppercase rounded-full text-center flex items-center justify-center">
+                <button className="w-[4.5rem] font-semibold text-xs text-white bg-primary-blue px-4 py-2  uppercase rounded-full text-center flex items-center justify-center">
                   Edit
                 </button>
               </Link>

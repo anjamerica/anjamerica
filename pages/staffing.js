@@ -136,7 +136,7 @@ export default function Staffing() {
                 is who they claim to be, and this provides an opportunity to
                 check and confirm the validity of someone&apos;s criminal
                 record, education, employment history, and other activities from
-                their past
+                their past.
               </p>
             </div>
             <div className="relative flex flex-col gap-2">

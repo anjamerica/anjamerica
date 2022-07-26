@@ -385,11 +385,11 @@ export default function CreateJobForm() {
   return (
     <div className="relative mx-auto w-full h-full snap-y pb-10">
       <Loader />
-      <div className="w-full flex h-[8hv] justify-between px-4 bg-violet-dark  md:px-10 md:py-4 md:items-center md:h-[10vh]">
+      <div className="w-full flex h-[8hv] justify-between px-4 bg-white  md:px-10 md:py-4 md:items-center md:h-[10vh]">
         <Link href="/home">
           <img
-            src="/assets/landing/Logo.png"
-            className="h-16 w-40 xl:h-20 xl:w-56 object-contain"
+            src="/landing/logo.svg"
+            className="h-16 w-40 xl:h-20 xl:w-56 object-contain cursor-pointer"
           />
         </Link>
         <img
@@ -409,12 +409,12 @@ export default function CreateJobForm() {
           <div className="w-fit bg-[#F0F0F0] flex justify-center h-fit md:hidden">
             <ul>
               <Link href="/applications">
-                <li className="w-full text-left py-2 cursor-pointer px-10 text-black hover:text-primary-green text-xs">
+                <li className="w-full text-left py-2 cursor-pointer px-10 text-black hover:text-primary-blue text-xs">
                   Applications
                 </li>
               </Link>
               <li
-                className="w-full text-left py-2 cursor-pointer px-10 text-black hover:text-primary-green text-xs"
+                className="w-full text-left py-2 cursor-pointer px-10 text-black hover:text-primary-blue text-xs"
                 onClick={handleLogout}
               >
                 Logout
