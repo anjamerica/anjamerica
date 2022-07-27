@@ -8,10 +8,18 @@ export default function About() {
     <main className="mx-auto w-full h-full snap-y">
       
       <section className="relative">
-      <div className="w-full h-fit shadow-sm">
-        <Header />
-      </div>
-        <div className="bg-[#FFFFFF] pt-10 lg:pb-20 lg:h-[40vh]  w-full ">
+      <div
+          style={{
+            background: `url(${"/landing/career.png"})`,
+            objectFit: "cover",
+            backgroundRepeat: "no-repeat"
+          }}
+          className="w-full h-full"
+        >
+          <div className="w-full h-fit shadow-sm">
+            <Header />
+          </div>
+        <div className=" pt-10 lg:pb-20 lg:h-[35vh]  w-full ">
           <div className="text-center flex flex-col">
             <span className="text-primary-blue text-[2rem] uppercase font-extrabold md:text-[2.5rem]">
               About Us
@@ -22,6 +30,8 @@ export default function About() {
             </span>
           </div>
         </div>
+        </div>
+        <hr className="h-[5px] bg-primary-blue" />
         <section>
           <div className=" p-6 md:p-10 flex flex-col md:flex-row justify-around w-full">
             <div className="flex flex-col text-left mt-8 w-full md:w-[50%]">

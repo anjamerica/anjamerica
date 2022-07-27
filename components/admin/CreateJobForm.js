@@ -31,21 +31,13 @@ export default function CreateJobForm() {
   const [trainingDetails, setTrainingDetails] = useState({ currency: "INR" });
   const [jobData, setJobData] = useState({});
   const [location, setLocation] = useState({});
-  const [progress, setProgress] = useState(0);
   const [formError, setFormError] = useState({});
   const [id, setId] = useState("");
-  const [file, setFile] = useState({});
-  const [filename, setFilName] = useState("");
+  const [loading, isLoading] = useState(false);
   const router = useRouter();
-  const [fileInfo, setFileInfo] = useState(null);
-  const [isDragging, setIsDragging] = useState(false);
-  const [currencymodal, setCurrencyModal] = useState(false);
   const { loaderToggler } = useContext(loadingContext);
   const formRef = useRef();
-  // const tell_code = country_code;
   const Currencies = currencies;
-
-  // console.log(currency);
 
   const nil = "NIL";
 
@@ -83,7 +75,6 @@ export default function CreateJobForm() {
         state: data.job_location.state,
         city: data.job_location.city,
       });
-      setFilName(data?.image?.file_name);
     }
   }
 
@@ -221,27 +212,6 @@ export default function CreateJobForm() {
     loaderToggler(false);
   };
 
-  const handleImageChange = (e) => {
-    setFile(e.target.files[0]);
-
-    console.log(e.target.files[0]);
-  };
-
-  const handleDragOver = (event) => {
-    let target = event.target;
-    target.style.border = "2px solid #33B5AF";
-  };
-
-  const handleDrop = (event) => {
-    let target = event.target;
-    target.style.border = "none";
-  };
-
-  const handleDragLeave = (event) => {
-    let target = event.target;
-    target.style.border = "none";
-  };
-
   const handleSubmitForm = async (e) => {
     setFormError("");
     if (!jobData.ref_id) {
@@ -315,9 +285,6 @@ export default function CreateJobForm() {
     if (!location.city) {
       return setFormError({ city_err: "City is required" });
     }
-    if (!file) {
-      return setFormError({ file_err: "select a file" });
-    }
 
     let jobDetails = {
       job_id: id,
@@ -330,23 +297,9 @@ export default function CreateJobForm() {
       training_details: trainingDetails,
       job_location: location,
       is_active: active,
-      image: fileInfo,
     };
     if (!jobId) {
       try {
-        const url = "/api/admin/fileUpload";
-        const formData = new FormData();
-        formData.append("file", file);
-        formData.append("fileName", file.name);
-        const config = {
-          headers: {
-            "content-type": "multipart/form-data",
-          },
-        };
-        const { data } = await API.post(url, formData, config);
-        setFileInfo(data?.payload);
-        if (!data?.payload?.file_Key) return toast.error("An error occured");
-        jobDetails.image = data.payload;
         const headers = { Authorization: localStorage.getItem("token") };
         const res = await createJob(jobDetails, headers);
         handleClearForm();
@@ -359,19 +312,6 @@ export default function CreateJobForm() {
       }
     } else {
       try {
-        if (file) {
-          const url = "/api/admin/fileUpload";
-          const formData = new FormData();
-          formData.append("file", file);
-          formData.append("fileName", file.name);
-          const config = {
-            headers: {
-              "content-type": "multipart/form-data",
-            },
-          };
-          const { data } = await API.post(url, formData, config);
-          jobDetails.image = data.payload;
-        }
         const headers = { Authorization: localStorage.getItem("token") };
         const res = await updateJobDetails(jobId, jobDetails, headers);
         toast.success("Job details updated succesfully");
@@ -385,36 +325,36 @@ export default function CreateJobForm() {
   return (
     <div className="relative mx-auto w-full h-full snap-y pb-10">
       <Loader />
-      <div className="w-full flex h-[8hv] justify-between px-4 bg-violet-dark  md:px-10 md:py-4 md:items-center md:h-[10vh]">
-        <Link href="/home">
+      <div className="w-full flex h-[8hv] justify-between px-4 bg-primary-black  md:px-10 md:py-4 md:items-center md:h-[10vh]">
+          <Link href="/home">
+            <img
+              src="/landing/logo.svg"
+              className="h-16 w-40 xl:h-20 xl:w-56 object-contain"
+            />
+          </Link>
           <img
-            src="/assets/landing/Logo.png"
-            className="h-16 w-40 xl:h-20 xl:w-56 object-contain"
+            src="/admin/menu.svg"
+            className="visible  md:invisible"
+            onClick={() => {
+              setNavOpen(!navOpen);
+            }}
           />
-        </Link>
-        <img
-          src="/admin/menu.svg"
-          className="md:hidden"
-          onClick={(e) => {
-            setNavOpen(!navOpen);
-          }}
-        />
-        <MdOutlineLogout
-          className="hidden md:flex md:text-white md:h-8 md:w-8 md:cursor-pointer"
-          onClick={handleLogout}
-        />
-      </div>
+          <MdOutlineLogout
+            className="hidden md:flex md:text-white md:h-8 md:w-8 md:cursor-pointer"
+            onClick={handleLogout}
+          />
+        </div>
       {navOpen && (
         <div className="absolute top-[4rem] right-[0rem] z-10">
           <div className="w-fit bg-[#F0F0F0] flex justify-center h-fit md:hidden">
             <ul>
               <Link href="/applications">
-                <li className="w-full text-left py-2 cursor-pointer px-10 text-black hover:text-primary-green text-xs">
+                <li className="w-full text-left py-2 cursor-pointer px-10 text-black hover:text-primary-blue text-xs">
                   Applications
                 </li>
               </Link>
               <li
-                className="w-full text-left py-2 cursor-pointer px-10 text-black hover:text-primary-green text-xs"
+                className="w-full text-left py-2 cursor-pointer px-10 text-black hover:text-primary-blue text-xs"
                 onClick={handleLogout}
               >
                 Logout
@@ -511,44 +451,7 @@ export default function CreateJobForm() {
               {formError.description_err}
             </span>
           </div>
-          <div className="flex flex-col gap-1">
-            <span className="form-text">Job Type</span>
-            <div className="relative">
-              <select
-                className="form-input-job"
-                value={jobData.job_type}
-                onChange={(e) => handleInputChange("job_type", e.target.value)}
-                defaultValue=""
-              >
-                <option className="text-sm" value="" disabled>
-                  Select Job Type
-                </option>
-                <option className="'text-sm" value="Contract">
-                  Contract
-                </option>
-                <option className="'text-sm" value="Direct">
-                  Direct
-                </option>
-              </select>
-              <div className="absolute top-[1rem] right-[.5rem]">
-                <svg
-                  width="13"
-                  height="10"
-                  viewBox="0 0 13 10"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M6.5 9.85718L0.00480938 0.214322L12.9952 0.214322L6.5 9.85718Z"
-                    fill="#C7C8CB"
-                  />
-                </svg>
-              </div>
-            </div>
-            <span className="text-xs text-red-600">
-              {formError.job_type_err}
-            </span>
-          </div>
+         
           <div className="flex flex-col gap-1">
             <span className="form-text">Qualifications</span>
             <div className="form-input-job outline-none resize-none h-[8.5rem] p-5 overflow-y-auto">
@@ -599,7 +502,7 @@ export default function CreateJobForm() {
                         </div>
                       </div>
                       <button
-                        className="w-fit font-medium text-white bg-[#A9B0B0] px-3 mt-1 py-1 text-xs rounded-md  text-center flex items-center justify-center"
+                        className="w-fit font-medium text-white bg-[#A9B0B0] px-2 mt-1 py-1 text-xs rounded-md  text-center flex items-center justify-center"
                         onClick={(e) => removeQualification(i)}
                       >
                         Remove
@@ -703,6 +606,44 @@ export default function CreateJobForm() {
         </div>
 
         <div className="flex flex-col gap-4 w-full">
+        <div className="flex flex-col gap-1">
+            <span className="form-text">Job Type</span>
+            <div className="relative">
+              <select
+                className="form-input-job"
+                value={jobData.job_type}
+                onChange={(e) => handleInputChange("job_type", e.target.value)}
+                defaultValue=""
+              >
+                <option className="text-sm" value="" disabled>
+                  Select Job Type
+                </option>
+                <option className="'text-sm" value="Contract">
+                  Contract
+                </option>
+                <option className="'text-sm" value="Direct">
+                  Direct
+                </option>
+              </select>
+              <div className="absolute top-[1rem] right-[.5rem]">
+                <svg
+                  width="13"
+                  height="10"
+                  viewBox="0 0 13 10"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M6.5 9.85718L0.00480938 0.214322L12.9952 0.214322L6.5 9.85718Z"
+                    fill="#C7C8CB"
+                  />
+                </svg>
+              </div>
+            </div>
+            <span className="text-xs text-red-600">
+              {formError.job_type_err}
+            </span>
+          </div>
           <div className="flex flex-col gap-1">
             <span className="form-text">Responsibilities</span>
             <div className="form-input-job outline-none resize-none h-[8.5rem] p-5  overflow-y-auto">
@@ -752,8 +693,8 @@ export default function CreateJobForm() {
                       </div>
                     </div>
                     <button
-                      className="w-fit font-medium text-white bg-[#A9B0B0] px-3 mt-1 py-1 text-xs rounded-md  text-center flex items-center justify-center"
-                      onClick={(e) => removeResponsibility(i)}
+                        className="w-fit font-medium text-white bg-[#A9B0B0] px-2 mt-1 py-1 text-xs rounded-md  text-center flex items-center justify-center"
+                        onClick={(e) => removeResponsibility(i)}
                     >
                       Remove
                     </button>
@@ -815,7 +756,7 @@ export default function CreateJobForm() {
                         </div>
                       </div>
                       <button
-                        className="w-fit font-medium text-white bg-[#A9B0B0] px-3 mt-1 py-1 text-xs rounded-md  text-center flex items-center justify-center"
+                        className="w-fit font-medium text-white bg-[#A9B0B0] px-2 mt-1 py-1 text-xs rounded-md  text-center flex items-center justify-center"
                         onClick={(e) => removeCertificate(i)}
                       >
                         Remove
@@ -905,28 +846,6 @@ export default function CreateJobForm() {
               </div>
               <div className="flex flex-col justify-between gap-2">
                 <span className="form-text">Fee</span>
-                {/* <div className="flex flex-col justify-between gap-2">
-                  <input
-                    className="form-input-job"
-                    type="number"
-                    placeholder="Type Fee"
-                    value={
-                      // trainingDetails.training_type === "Not Provided"
-                      //   ? nil
-                      //   :
-                      trainingDetails.training_fee
-                    }
-                    onChange={(e) =>
-                      handleTrainingDetailsChange(
-                        "training_fee",
-                        e.target.value
-                      )
-                    }
-                  />
-                  <span className="text-xs text-red-600">
-                    {formError.training_fee_err}
-                  </span>
-                </div> */}
                 <div className="relative flex flex-1 focus:outline-none border border-[#565962] border-opacity-[33%] rounded w-full leading-tight bg-[#FFFFFF]">
                   <select
                     className="min-w-10 w-10 focus:outline-none border-r text-xs truncate text-[#74777B] flex justify-center items-center bg-transparent px-1"
@@ -1024,81 +943,24 @@ export default function CreateJobForm() {
                 </div>
               </div>
             </div>
-            {/* <DropZone setFile={setFile} setIsDragging={setIsDragging}> */}
-              <div className="flex justify-around items-center mt-10 border border-[#565962] h-[8.5rem]  border-opacity-[33%] rounded px-2" onClick={()=>formRef.current.click()}>
-                <div>
-                  <div className="flex flex-row gap-3 items-center whitespace-nowrap md:whitespace-normal">
-                    <img src="/admin/upload_icon.svg" className="w-fit h-fit" />
-                    <span className="text-xs lg:text-sm text-subheading-gray mt-[10px] w-fit self-start">
-                      Drop files here or click...
-                    </span>
-                  </div>
-                </div>
-                <div className="cursor-pointer">
-                  <form ref={formRef} className="w-full h-full">
-                    <label
-                      htmlFor="file-input"
-                      className="mt-2 p-2 cursor-pointer select-none bg-primary-green rounded-[.25rem] whitespace-nowrap text-white text-center leading-normal self-center text-primary-black"
-                      // className="w-full h-full"
-                    >
-                      Upload Image
-                    </label>
-                    <input
-                      id="file-input"
-                      type="file"
-                      name="file"
-                      ref={formRef}
-                      
-                      // onDrop={(e)=>{console.log(e.target);}}
-                      style={{ display: "none" }}
-                      onChange={(e) => handleImageChange(e)}
-                    />
-                  </form>
-                </div>
-                {file.name ? (
-                  <span className="ml-1 text-sm truncate w-fit">
-                    {file.name}
-                  </span>
-                ) : (
-                  <span className="ml-1 text-sm truncate w-fit">
-                    {filename}
-                  </span>
-                )}
-              </div>
-            {/* </DropZone> */}
-
             <span className="text-xs text-red-600">{formError.file_err}</span>
-            <div className="mt-10 md:mt-20 justify-end  w-full flex flex-row gap-2">
+            <div className="mt-10  justify-end  w-full flex flex-row gap-2">
               <Link href="/home">
                 <button className="w-32 font-medium text-white bg-[#A9B0B0] px-4 py-1  uppercase rounded  text-center flex items-center justify-center">
                   Cancel
                 </button>
               </Link>
               <button
-                className="w-32 font-medium text-white bg-primary-green px-4 py-1  uppercase rounded  text-center flex items-center justify-center"
-                onClick={handleSubmitForm}
+                className="w-32 font-medium text-white bg-primary-blue px-4 py-1 gap-2 uppercase rounded  text-center flex items-center justify-center"
+                onClick={(e)=>handleSubmitForm(e)}
+                disabled={loading}
               >
-                Save
+                {loading ? (<div><ButtonLoader /></div>):(<>Save</>)}
               </button>
             </div>
           </div>
-        </div>
-        {/* {currencymodal && (
-                <div className="absolute top-1/2 left-1/2 w-full h-full justify-center items-center">
-                  <div className="h-[15rem] w-[15rem] bg-white drop-shadow-xl rounded-lg overflow-y-auto p-5 gap-2 ">
-                    {Currencies &&
-                      Currencies.map((item, i) => {
-                        return (
-                          <li key={i} className="list-none cursor-pointer" onClick={(e)=>{handleInputVendorRateChange("currency", e.target.value); setCurrencyModal(false)}}>
-                            {item.code}
-                          </li>
-                        );
-                      })}
-                  </div>
-                </div>
-              )} */}
+        </div>      
       </div>
-      {/* </form> */}
     </div>
   );
 }

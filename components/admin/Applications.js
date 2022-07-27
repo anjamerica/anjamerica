@@ -87,16 +87,16 @@ export default function Applications() {
 
   return (
     <div className="mx-auto w-full h-full snap-y">
-      <div className="w-full flex h-[8hv] justify-between px-4 bg-violet-dark  md:px-10 md:py-4 md:items-center md:h-[10vh]">
+      <div className="w-full flex h-[8hv] justify-between px-4 bg-primary-black  md:px-10 md:py-4 md:items-center md:h-[10vh]">
         <Link href="/home">
           <img
-            src="/assets/landing/Logo.png"
+            src="/landing/logo.svg"
             className="h-16 w-40 xl:h-20 xl:w-56 object-contain"
           />
         </Link>
         <img
           src="/admin/menu.svg"
-          className="md:hidden"
+          className="visible  md:invisible"
           onClick={() => {
             setNavOpen(!navOpen);
           }}
@@ -148,99 +148,19 @@ export default function Applications() {
           </div>
           <div>
             <Link href="/newpost">
-              <button className="hidden md:w-fit font-medium text-white bg-secondary-green px-4 py-1  rounded-md text-center md:flex items-center justify-center md:text-sm md:cursor-pointer">
+              <button className="hidden md:w-fit font-medium text-white bg-primary-blue px-4 py-1  rounded-md text-center md:flex items-center justify-center md:text-sm md:cursor-pointer">
                 Add New Post
               </button>
             </Link>
           </div>
         </div>
       </div>
-      {/* <div className="w-full"> */}
-      {/* <div className="relative grid grid-cols-12 bg-secondary-green">
-            <div className="col-span-2 text-sm text-white md:text-md font-thin px-2 py-3  break-words">
-              Name
-            </div>
-            <div className="col-span-2 text-sm text-white md:text-md font-thin px-2 py-3  break-words">
-              Phone Number
-            </div>
-            <div className="col-span-2 text-sm text-white md:text-md font-thin px-2 py-3  break-words">
-              Email ID
-            </div>
-            <div className="col-span-3 text-sm text-white md:text-md font-thin px-2 py-3  break-words">
-              Linkedin profile link
-            </div>
-            <div className="col-span-2 text-sm text-white md:text-md font-thin px-2 py-3  break-words">
-              Post
-            </div>
-          </div> */}
-      {/* <div>
-            {applications &&
-              applications.map((item, i) => {
-                return (
-                  <div
-                    className="relative grid grid-cols-12 bg-[#F9F9F9] my-2 overflow-x-scroll"
-                    key={i}
-                  >
-                    <div className="col-span-2 text-black  text-sm md:text-md font-thin px-2 py-3 break-words">
-                      {item.name}
-                    </div>
-                    <div className="col-span-2 w-full text-black  text-sm md:text-md font-thin px-2 py-3 break-words">
-                      <div className="flex flex-row gap-1">
-                        <span>{item?.phone_number?.country_code}</span>
-                        <span>{item?.phone_number?.tell_number}</span>
-                      </div>
-                      <span></span>
-                    </div>
-                    <div className="col-span-2 text-black  text-sm md:text-md font-thin px-2 py-3 break-words">
-                      {item.email}
-                    </div>
 
-                    <div className="col-span-3 cursor-pointer text-black  text-sm md:text-md font-thin px-2 py-3 break-words">
-                      <a href={item.link} target="_blank" rel="noreferrer">
-                        {item.link}
-                      </a>
-                    </div>
-
-                    <div className="col-span-2 text-black  text-sm md:text-md font-thin px-2 py-3 break-words">
-                      {item?.job_details?.job_title}
-                    </div>
-                  </div>
-                );
-              })}
-          </div> */}
-      {/* </div> */}
-      {/* <div className="flex flex-col w-28">
-          <div className="bg-primary-green w-full h-fit flex justify-center text-sm text-white md:text-md font-thin px-2 py-3  break-words">
-            Resume
-          </div>
-          {applications &&
-            applications.map((item, i) => {
-              return (
-                <div
-                  key={i}
-                  onClick={() => handleGetCv(item.file)}
-                  className="w-full text-secondary-green uppercase text-sm xl:text-base font-thin p-2 cursor-pointer flex justify-center items-center"
-                >
-                  VIEW
-                </div>
-              );
-            })}
-        </div> */}
-      {/* <div>
-          {(totalItems && totalItems) > 0 && (
-            <Pagination
-              currentPage={page}
-              setCurrentPage={setPage}
-              countPerPage={10}
-              total={totalItems}
-            />  
-          )}
-        </div> */}
       <div className="w-full p-0 md:px-10">
         <div className="scrollbar-table">
           <table className="table-fixed w-[60rem] md:w-full border-spacing-y-2">
             <thead className="overflow-x-auto">
-              <tr className="bg-[#16A59E] text-left">
+              <tr className="bg-primary-blue text-left">
                 <th className="text-sm  w-40 text-white md:text-md font-normal px-2 py-3  break-words">
                   Name
                 </th>
@@ -256,7 +176,7 @@ export default function Applications() {
                 <th className="text-sm w-44 text-white md:text-md font-normal px-2 py-3  break-words">
                   Post
                 </th>
-                <th className="sticky right-0 z-10 text-sm w-28 md:w-32 bg-[#33B5AF] md:bg-[#16A59E] text-center text-white md:text-md font-normal px-2 py-3  break-words">
+                <th className="sticky right-0 z-10 text-sm w-28 md:w-32 bg-[#33B5AF] md:bg-primary-blue text-center text-white md:text-md font-normal px-2 py-3  break-words">
                   Resume
                 </th>
               </tr>
@@ -284,13 +204,19 @@ export default function Applications() {
                           {item.link}
                         </a>
                       </td>
-                      <td className="text-black w-40 text-sm md:text-md font-normal px-2 py-3 break-words">
-                        {item?.job_details?.job_title}
-                      </td>
+                      {item?.job_details?.job_title ? (
+                        <td className="text-black w-40 text-sm md:text-md font-normal px-2 py-3 break-words">
+                          {item?.job_details?.job_title}
+                        </td>
+                      ) : (
+                        <td className="text-black w-40 text-sm md:text-md font-normal px-2 py-3 break-words">
+                          Not Available
+                        </td>
+                      )}
                       <td
                         key={i}
                         onClick={() => handleGetCv(item.file)}
-                        className="sticky right-0 z-10 w-28 text-sm bg-[#F2F1F1] md:bg-[#F9F9F9] text-[#16A59E] text-center font-normal px-2 py-3  break-words"
+                        className="sticky right-0 z-10 w-28 text-sm bg-[#F2F1F1] md:bg-[#F9F9F9] text-primary-blue text-center font-normal px-2 py-3  break-words"
                       >
                         VIEW
                       </td>
