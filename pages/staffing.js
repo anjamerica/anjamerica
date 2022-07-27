@@ -14,7 +14,7 @@ export default function Staffing() {
           <p className="text-[.85rem] text-left font-semibold break-words md:text-[1rem] text-[#04c0de]">
             WORKS WITH TOP LEVEL IT COMPANIES
           </p>
-          <p className="text-anim-blog text-[#33334f] text-[30px] mt-2 leading-[33px] md:text-[42px] md:leading-[45px] font-extrabold">
+          <p className="text-anim-blog text-[#33334f] text-[30px] mt-2 leading-[33px] md:text-[42px] md:leading-[45px] font-[900]">
             Catering to All
             <br /> Staffing Needs
           </p>
@@ -25,7 +25,7 @@ export default function Staffing() {
             <br /> as a full time or a consultant.
           </p>
           <Link href="/staffing#hiring">
-            <button className="w-fit font-semibold text-xs text-white bg-secondary-green px-6 md:px-10 py-3 md:py-4 tracking-wide mt-4  rounded-full hover:bg-[#33b5af] transition-all text-center flex items-center justify-center">
+            <button className="w-fit font-semibold text-xs text-white bg-[#04c0de] px-6 md:px-10 py-3 md:py-4 tracking-wide mt-4  rounded-full hover:bg-[#33b5af] transition-all text-center flex items-center justify-center">
               Learn More
             </button>
           </Link>
@@ -156,16 +156,7 @@ export default function Staffing() {
         </div>
       </section>
       <section id="contact">
-        <div className="relative p-5 bg-[#ecf2f8] flex justify-center w-full h-[90vh] md:p-10">
-          <div className="w-full flex justify-center">
-            <span className="text-[1.5rem] break-words text-[#0a1f44] text-center font-bold md:text-[2rem] my-2">
-              Have any Questions?
-            </span>
-          </div>
-          <div className="v-center absolute -bottom-[3rem] md:-bottom-[4rem] z-10 p-[1.5rem] md:p-[2rem]">
-            <Contact />
-          </div>
-        </div>
+       <Contact/>
       </section>
       <section>
         <Footer />

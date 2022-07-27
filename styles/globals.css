@@ -56,7 +56,7 @@ p{
 }
 
 .text-green-medium {
-  @apply text-[.8rem] uppercase font-semibold text-primary-green self-center md:text-[1rem];
+  @apply text-[.8rem] uppercase font-semibold text-[#04c0de] self-center md:text-[1rem];
 }
 
 .text-heading-landing {
@@ -75,6 +75,10 @@ p{
   @apply w-[10rem] h-[4rem] md:w-fit md:h-fit grayscale opacity-100 hover:opacity-100 hover:grayscale-0;
 }
 
+.logo-hover-landing {
+  @apply w-[20rem] h-[11.5rem] object-contain md:w-[20rem]  md:h-[6rem] grayscale opacity-100 hover:opacity-100 hover:grayscale-0;
+}
+
 .scrollbar-landing {
   display: flex;
   justify-content: center;
@@ -83,19 +87,19 @@ p{
   width: 60%;
 }
 .scrollbar-landing::-webkit-scrollbar {
-  width: 10px;
-  height: 10px;
-  right: 10px;
+  width: 0px;
+  height: 0px;
+  right: 0px;
 }
 
 .scrollbar-landing::-webkit-scrollbar-track {
-  border-radius: 100vh;
-  background: #212135;
+  /* border-radius: 100vh;
+  background: #212135; */
 }
 
 .scrollbar-landing::-webkit-scrollbar-thumb {
-  background: #33b5af;
-  border-radius: 100vh;
+  /* background: #33b5af;
+  border-radius: 100vh; */
 }
 
 @media only screen and (min-width: 768px) {
@@ -449,3 +453,25 @@ input[type=number]::-webkit-outer-spin-button {
   @apply text-[24px] lg:text-[36px] font-[800];
 }
 
+.contact {
+  background-image: url(../public/assets/landing/contact_bg.png),linear-gradient(90deg, #04c0de, #05fad9);;
+  background-size: auto auto;
+}
+
+.text-anim-services {
+  animation: .2s anim-services ease-out;
+}
+@keyframes anim-services {
+  0% {
+    opacity: 1;
+    transform: translateY(-10%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+.service {
+  user-select: none !important;
+}

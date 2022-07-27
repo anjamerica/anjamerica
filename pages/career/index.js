@@ -1,5 +1,5 @@
 import Link from "next/link";
-import React, { useState, useEffect,useContext } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import JobCard from "../../components/career/JobCard";
 import Contact from "../../components/contact/Contact";
 import Footer from "../../components/landin/Footer";
@@ -7,8 +7,6 @@ import Header from "../../components/landin/Header";
 import Loader from "../../components/layout/Loader";
 import { loadingContext } from "../../hooks/loadingContext";
 import { getJobDetails } from "../../services/JobDetails";
-
-
 
 export default function Career() {
   const [jobData, setJobData] = useState([]);
@@ -18,13 +16,13 @@ export default function Career() {
     const getDetails = async () => {
       try {
         //get job details
-        loaderToggler(true)
+        loaderToggler(true);
         const response = await getJobDetails();
         setJobData(response.data.payload);
-        loaderToggler(false)
+        loaderToggler(false);
       } catch (err) {
         console.error(err?.response?.data?.message);
-        loaderToggler(false)
+        loaderToggler(false);
       }
     };
     getDetails();
@@ -34,56 +32,42 @@ export default function Career() {
 
   return (
     <main className="mx-auto w-full h-full snap-y">
-      <Header />
       <section className="relative">
-        <div className="bg-violet-dark h-[50vh] pt-10 pb-20  w-full md:h-[90vh]">
-          <div>
-            <img
-              src="/assets/landing/Vector-6.png"
-              className="hidden md:flex md:absolute md:w-[100%] md:px-10 md:h-[80vh] md:-top-[1rem]"
-            />
-            <img
-              src="/assets/landing/mob_bg_landing.svg"
-              className="absolute w-full h-[45vh] object-contain -top-[2.5rem] px-2 md:hidden"
-            />
+        <div
+          style={{
+            background: `url(${"/landing/career.png"})`,
+            objectFit: "cover",
+            backgroundRepeat: "no-repeat"
+          }}
+          className="w-full h-full"
+        >
+          <div className="w-full h-fit shadow-sm">
+            <Header />
           </div>
-          <div className="flex h-full flex-col gap-3 justify-center self-center items-center">
-            <div className="flex justify-center">
-              <span className="text-green-medium">
-                EXPLORE A CAREER AT NICHE TECHIES
-              </span>
-            </div>
-            <div className="text-anim-blog text-[1.5rem] break-words text-white text-center font-bold md:text-[2.5rem] tracking-wide">
-              Join us
-            </div>
-            <div className="flex items-center justify-center">
-              <span className="text-anim-blog text-normal-landing  z-10 px-10">
-                Together we work hard, celebrate each other’s accomplishments,
-                disrupt the status-quo and give the best high-fives (even
-                virtually).
-              </span>
-            </div>
-            <div className="absolute bottom-6 self-center cursor-pointer">
-              <Link href="career/#career">
-                <img
-                  className="slideDown w-fit h-fit md:w-[3rem] md:h-[3rem]"
-                  src="/assets/landing/down_arrow_btn.svg"
-                />
-              </Link>
+          <div className=" h-[35vh] pt-10 pb-20  w-full">
+            <div className="flex h-full flex-col justify-center self-center items-center">
+              <div className="flex justify-center">
+                <span className="text-[#FFD700] text-[.85rem] md:text-[16px] font-[700]">
+                  EXPLORE A CAREER AT NICHE TECHIES
+                </span>
+              </div>
+              <div className="text-anim-blog text-[#07038C] uppercase text-[24px] text-center font-[800] sm:text-[34px] xl:text-[36px]">
+                Join us
+              </div>
+              <div className="flex items-center justify-center">
+                <span className="text-primary-gray  text-[.8rem] text-center  xl:text-[1rem] w-[13rem] sm:w-full ">
+                  Create stunning products, Hire top software profrssionals for
+                  your project.
+                </span>
+              </div>
             </div>
           </div>
         </div>
       </section>
+      <hr className="h-[5px] bg-primary-blue" />
       <section id="career">
-      <Loader/>
+        <Loader />
         <div className="flex flex-col justify-center items-center py-10 gap-4">
-          <div className="text-green-medium">FIND THAT PERFECT FIT</div>
-          <div className="flex flex-col items-center text-center text-black text-lg font-bold break-words px-10">
-            Explore
-          </div>
-          <div className="flex flex-col items-center text-secondary-gray text-sm break-words text-center md:text-base">
-            New jobs everyday - Leave us your resume for future opportunities!
-          </div>
           <div className="px-5 w-full flex flex-col gap-8 md:px-10">
             {jobData &&
               jobData.map((item, i) => {
@@ -96,19 +80,7 @@ export default function Career() {
           </div>
         </div>
       </section>
-      <section id="contact">
-        <div className="relative p-5 bg-[#ecf2f8] flex justify-center w-full h-[90vh] md:p-10">
-          <div className="w-full flex justify-center">
-            <span className="text-[1.5rem] break-words text-[#0a1f44] text-center font-bold md:text-[2rem] my-2">
-              Have any Questions?
-            </span>
-          </div>
-          <div className="v-center absolute -bottom-[3rem] md:-bottom-[4rem] z-10 p-[1.5rem] md:p-[2rem]">
-            <Contact />
-          </div>
-        </div>
-      </section>
-        <Footer />
+      <Footer />
     </main>
   );
 }

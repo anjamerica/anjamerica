@@ -43,26 +43,26 @@ export default function Index() {
     <main
       className="mx-auto w-full h-full snap-y"
     >
-      <Header />
       <Loader />
       <section className="relative">
-        <div className="bg-violet-dark h-[50vh] pt-10 pb-20  w-full md:h-[65vh]">
-          <div>
-            <img
-              src="/assets/landing/Vector-6.png"
-              className="hidden md:flex md:absolute md:w-[100%] md:px-10 md:h-[65vh] md:-top-[1rem]"
-            />
-            <img
-              src="/assets/landing/mob_bg_landing.svg"
-              className="absolute w-full h-[45vh] object-contain -top-[2.5rem] px-2 md:hidden"
-            />
+      <div
+          style={{
+            background: `url(${"/landing/career.png"})`,
+            objectFit: "cover",
+            backgroundRepeat: "no-repeat"
+          }}
+          className="w-full h-full"
+        >
+          <div className="w-full h-fit shadow-sm">
+            <Header />
           </div>
+        <div className=" h-[50vh] pt-10 pb-20  w-full md:h-[50vh]">
           <div className="flex h-full flex-col gap-2 justify-center self-center items-center md:gap-4">
-            <div className="text-[1.5rem] break-words text-white text-center font-bold md:text-[2.5rem] tracking-wide">
+            <div className="text-[1.5rem] break-words text-primary-blue text-center font-bold md:text-[2.5rem] tracking-wide">
               {item?.job_title}
             </div>
             <div className="flex items-center justify-center">
-              <span className="hidden md:flex md:text-base md:text-white md:text-center md:w-[70%] md:pb-5">
+              <span className="hidden md:flex md:text-base md:text-[#333333] md:text-center md:w-[70%] md:pb-5">
                 {item?.description}
               </span>
             </div>
@@ -84,7 +84,7 @@ export default function Index() {
                     />
                   </svg>
                 </span>
-                <span className="text-xs text-normal-landing ">
+                <span className="text-xs text-normal-landing text-primary-gray">
                   {item?.job_location?.country}
                   {", "}
                   {item?.job_location?.state}
@@ -95,14 +95,16 @@ export default function Index() {
             </div>
           </div>
         </div>
+        </div>
       </section>
+      <hr className="h-[5px] bg-primary-blue" />
       <section className="">
         <div className="md:p-10 relative">
-          <p className="p-5 text-md text-black break-words text-left w-full md:p-0">
+          <p className="p-5 text-md text-primary-black break-words text-left w-full md:p-0">
             {item?.description}
           </p>
           <div className="px-5 md:p-0 mt-5 md:mt-10">
-            <p className="text-md mb-4 md:font-semibold text-black text-left w-full">
+            <p className="text-md mb-4 md:font-semibold text-primary-black text-left w-full">
               Qualifications
             </p>
             {item &&
@@ -132,7 +134,7 @@ export default function Index() {
               })}
           </div>
           <div className="px-5 md:p-0 mt-5 md:mt-10">
-            <p className="text-md mb-4 md:font-semibold text-black text-left w-full">
+            <p className="text-md mb-4 md:font-semibold text-primary-black text-left w-full">
               Key Responsibilities
             </p>
             {item &&
@@ -162,7 +164,7 @@ export default function Index() {
               })}
           </div>
           <div className="px-5 md:p-0 mt-5 md:mt-10">
-            <p className="text-md mb-4 md:font-semibold text-black text-left w-full">
+            <p className="text-md mb-4 md:font-semibold text-primary-black text-left w-full">
               License and Certifications
             </p>
             {item &&
@@ -192,7 +194,7 @@ export default function Index() {
               })}
           </div>
           <div className="px-5 md:p-0 mt-5 md:mt-10">
-            <p className="text-md mb-4 md:font-semibold text-black text-left w-full">
+            <p className="text-md mb-4 md:font-semibold text-primary-black text-left w-full">
               Job Type
             </p>
             <div className="gap-3 flex flex-1 items-center">
@@ -219,7 +221,7 @@ export default function Index() {
             </div>
           </div>
           <div className="p-5 md:p-0 mt-5 md:mt-10">
-            <p className="text-md mb-4 md:font-semibold text-black text-left w-full">
+            <p className="text-md mb-4 md:font-semibold text-primary-black text-left w-full">
               Training
             </p>
 
@@ -298,7 +300,7 @@ export default function Index() {
           <button
             className={
               !modal
-                ? "sticky bottom-4 mb-4 right-4 float-right w-fit font-medium text-white bg-secondary-green px-4 py-2  uppercase  rounded-full hover:bg-[#33b5af] transition-all text-center items-center gap-2 flex flex-row justify-between"
+                ? "sticky bottom-4 mb-4 right-4 float-right w-fit font-medium text-white bg-primary-blue px-4 py-2  uppercase  rounded-full hover:bg-[#33b5af] transition-all text-center items-center gap-2 flex flex-row justify-between"
                 : "sticky bottom-4 mb-4 float-right right-4 w-fit font-medium text-white bg-red-600 px-4 py-2  uppercase  rounded-full hover:bg-red-400 transition-all text-center items-center gap-2 flex flex-row justify-between"
             }
             onClick={() => setModal(!modal)}
@@ -308,7 +310,7 @@ export default function Index() {
               <AiOutlineDoubleRight
                 className={
                   !modal
-                    ? "w-7 h-7 rounded-full bg-white text-primary-green p-1"
+                    ? "w-7 h-7 rounded-full bg-white text-primary-blue p-1"
                     : "w-7 h-7 rounded-full bg-white text-red-600 p-1"
                 }
               />

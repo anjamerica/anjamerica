@@ -1,97 +1,42 @@
-import Link from "next/link";
 import React from "react";
 import Footer from "../../components/landin/Footer";
 import Header from "../../components/landin/Header";
+import Link from "next/link";
 
 const subContent = [
   {
-    header: "Visa - ",
+    header: "Sport a smile!  ",
     content:
-      "Double check your visa details and carefully note the Entry and Exit dates speculated.",
+      "As obvious as it is; by being friendly you can connect better with people, but it remains a rigorous task for many. It’s easy to pass every day at work by just minding your own business. Colleagues will simply remain colleagues.Don’t walk around with a stern face. Instead, try to open up a little more. Smile when you meet someone in the hallways or the elevator. Say “hi” when you bump into someone you’ve never spoken to yet in the office. Start discussing their job and tell them about yours. That’s a start!",
   },
   {
-    header: "Passport - ",
+    header: "Coffee breaks and lunch is for conversations! ",
     content:
-      "Check the expiry date of your passport. If it is about to expire, get it renewed before your travel. If you are going overseas for a longer duration, getting your passport renewed would be a challenge and cause a lot of complexities in the foreign country.",
+      "If you prefer to drive home for lunch or rather sit alone with a book or a podcast, it’s perfectly fine. It’s your time and you can spend it the way you want to. However, if you do go to the cafeteria grab your chance to socialize. Capitalize on coffee breaks in the break room as well. Small talk over coffee is proven to ignite a spark! Here’s a tip: If you find someone buried in a book or having earphones on, they’re probably not in the mood for a conversation. Read the signs that people give out.",
   },
   {
-    header: "Personal documents - ",
+    header: "Newcomer? Extend a hand! ",
     content:
-      "Keep the hard copies of all your personal documents safely - Passport, National ID Cards, Birth Certificate, Wedding certificate, International Driving license, and Bank statements. Also, get your essential documents photocopied before your travel.",
+      "This may well be the easiest way to network within your workplace. People who have just joined may be new to your organization but they still possess experience, skills, and a network that you can tap into. Welcome newcomers and try initiating conversations about the office. It may be something simple like quirks about the coffee machine or handy parking tips. You can also share work tips from your expertise with the company. Bear in mind never to comment on co-workers though.",
   },
   {
-    header: "Adaptors - ",
+    header: "Take part in special projects",
     content:
-      "Your electrical adaptor won’t be suitable for use in the U.S. You would require an adaptor that would be suitable for the electric sockets.",
+      "Does your company organize CSRs, stretch assignments, or other special projects? Participate in at least one per month. Is there a cross-functional committee? Join them. These projects and committees open doors for you to network with colleagues from other teams and departments. If you are contemplating a switch to one of these teams, this network could be your catapult.",
   },
   {
-    header: "Money - ",
+    header: "Leverage LinkedIn",
     content:
-      "Bring some local currency in case it’s needed after disembarking.",
+      "LinkedIn is a professional social networking platform where people share work expertise, experiences, and skills. Most of your peers are on LinkedIn. If you aren’t on LinkedIn yet, go ahead and create a profile. With LinkedIn, you can see your colleague’s professional experience and assets without knocking into their",
   },
   {
-    header: "Outstanding bills and debts - ",
+    header: "personal life",
     content:
-      "If there is any outstanding debt, do clear it out before migrating. This would have an impact on your credit rating after you return.",
-  },
-  {
-    header: "Pay Taxes on time - ",
-    content:
-      "Intimate your local tax office that you are going to be abroad and make sure you pay your taxes (house, personal) before your travel.",
-  },
-  {
-    header: "Insurance - ",
-    content:
-      "Arrange the appropriate travel and health insurance for yourself and your family members.",
-  },
-  {
-    header: "Sell/rent out your properties - ",
-    content:
-      "Do sell/rent the furniture, car, and other tangible properties before your travel. Else you can also ask your friends to look after your belongings during your absence.",
-  },
-  {
-    header: "Bank Accounts - ",
-    content:
-      "If you have multiple bank accounts and you are not going to access them when you are on travel, you could close the accounts. This would also prevent the penalty from being charged to your account for not maintaining the required balance.",
-  },
-  {
-    header: "Redirecting mails - ",
-    content:
-      "Inform your post office about your travel and ask them not to deliver any letters to your home. If required open a PO Box and ask the post office to re-direct all your mails to the PO Box.",
-  },
-  {
-    header: "Medical Examination - ",
-    content:
-      "Get medical examinations done for you and your family, This would be necessary once you land in the United States. The immigration officials might ask for your medical reports upon arrival.",
-  },
-  {
-    header: "Cost of Living - ",
-    content:
-      "Compute the cost of living for the place where you are going to stay in. This would give you a brief idea of how much you can save from your salary and also guide you during house-hunting.",
-  },
-  {
-    header: "Pets - ",
-    content:
-      " You need not leave your pet(s) behind. You can obtain a health certificate from your local veterinarian and take your pet along with you. A health certificate is enough for taking your dog or cat. In case you have a feathered pet, you also need confirmation from your Government to take your bird along with you.",
-  },
-  {
-    header: "Connectivity - ",
-    content:
-      "Create an online Skype account and share it with your friends and family. This would be helpful for you to stay in touch with them. Also, get an international SIM Card for your mobile phone. Once you land in the country, you would be able to make calls from your mobile phone and also inform them.",
-  },
-  {
-    header: "American slang - ",
-    content:
-      "Familiarize yourself with a few American lingo statements to avoid confusion in the new country.",
-  },
-  {
-    header: "Know the route - ",
-    content:
-      "Familiarize yourself with the route from the airport to your place of accommodation and your workplace.",
+      " Be sure to connect with colleagues. While at it, look into the tab on the right that lists people and skills you and your new connection may have in common. You may be surprised at how much you get from your LinkedIn network. Explore and get connecting!",
   },
 ];
 
-export default function BlogFive() {
+export default function BlogNine() {
   var count = 1;
   return (
     <main className="mx-auto w-full h-full snap-y bg-[#F4F4F4]">
@@ -102,17 +47,17 @@ export default function BlogFive() {
             <div className="relative">
               <div className="img-gradient">
                 <img
-                  src="/assets/landing/blog/blog_5.jpg"
+                  src="/blog/blog-8.jpg"
                   className="w-full h-[45vh] md:h-[80vh] object-cover"
                 />
               </div>
-              <div className="absolute top-[30%] right-[50%] -translate-y-[19%] translate-x-[50%] md:translate-y-[50%]">
+              <div className="absolute top-[30%] right-[48%] -translate-y-[19%] translate-x-[50%] md:translate-y-[50%]">
                 <div className="flex flex-col text-center">
-                  <span className="text-normal-landing font-semibold text-white">
-                    January 30, 2021
+                  <span className="text-normal-landing text-white font-semibold">
+                    April 5, 2021
                   </span>
                   <span className="text-anim-blog text-white text-[1.2rem] md:text-[2rem] font-semibold">
-                    Migrating To The USA? Here Is A Consolidated Checklist
+                    Networking At Your Workplace
                   </span>
                 </div>
               </div>
@@ -121,10 +66,29 @@ export default function BlogFive() {
               <div className="w-full h-fit bg-white rounded-sm md:rounded-md drop-shadow-lg p-5 md:p-10">
                 <div className="flex flex-col gap-4">
                   <p className="text-[#333] text-xs xl:text-base font-light break-words">
-                    When you are planning to pursue your ‘American Dream’, you
-                    must get a few things ready on your front. Before you get
-                    onto your flight to America, take a look at this checklist,
-                    and prepare yourself accordingly:
+                    Networking at your workplace isn’t far fetched. After all
+                    “it’s not what you know, it’s whom you know.” How many times
+                    have you heard that being said?
+                  </p>
+                  <p className="text-[#333] text-xs xl:text-base font-light break-words">
+                    Although this sentence is overrated, its essence is true.
+                    Professional networking leads you to people who may know a
+                    great opportunity that you’re interested in or they may just
+                    become your trusted mentor. As you develop a good
+                    professional rapport with people, you can tap into their
+                    network and meet experts in the industry you are pursuing
+                  </p>
+                  <p className="text-[#333] text-xs xl:text-base font-light break-words">
+                    We’ve compiled the top five ways to help you gain a fresh
+                    skillset.
+                  </p>
+
+                  <p className="text-[#333] text-xs xl:text-base font-light break-words">
+                    or wish to pursue a career in.
+                  </p>
+
+                  <p className="text-[#333] text-xs xl:text-base font-light break-words">
+                    Where to begin? Your office.
                   </p>
                   <div>
                     {subContent.map((data, i) => {
@@ -146,6 +110,13 @@ export default function BlogFive() {
                       );
                     })}
                   </div>
+                  <p className="text-[#333] text-xs xl:text-base font-light break-words">
+                    Professional networking is more than just a formal handshake
+                    or handing out your business card to someone. It’s about
+                    making real connections with people so that you can help
+                    each other progress in your career. Take an effort to greet
+                    colleagues with a smile, or grab a bite with them.
+                  </p>
                 </div>
               </div>
             </div>
@@ -206,7 +177,7 @@ export default function BlogFive() {
                   href="/blogs/5-ways-to-learn-new-skills-to-boost-your-cv"
                   passHref
                 >
-                  <span className="text-[#5d3eff] text-xs underline xl:font-semibold xl:text-sm cursor-pointer hover:text-primary-black">
+                  <span className="text-[#5d3eff] text-xs underline xl:font-semibold xl:text-sm cursor-pointer">
                     READ MORE
                   </span>
                 </Link>
@@ -214,26 +185,23 @@ export default function BlogFive() {
             </div>
             <div className="rounded-xl w-fit  h-full bg-white drop-shadow-xl">
               <img
-                src="/blog/blog-8.jpg"
+                src="/blog/blog-9.jpg"
                 className="w-full rounded-t-xl h-[40%]"
               />
               <div className="p-5 flex flex-col justify-evenly text-left gap-4">
                 <span className="text-xs xl:text-sm text-[#5d3eff] xl:font-semibold">
-                  April 5, 2021
+                  March 18, 2021
                 </span>
                 <p className="text-[#0a1f44] md:text-base xl:text-xl font-bold break-words">
-                  Networking At Your Workplace
+                  Common Yet Tricky Interview Questions That You Need To Be
+                  Cautious About
                 </p>
                 <p className="text-[#4e5d78] text-xs xl:text-base font-light break-words h-fit">
-                  Networking at your workplace isn’t far-fetched. After all
-                  “it’s not what you know, it’s whom you know.” How many times
-                  have you heard that being said?
+                  Interviews can be stressful. Every question that the hiring
+                  manager asks may seem intended to churn out information that
+                  will put you in a disadvantageous position. How do you tackle
+                  this? Simply by preparing ahead of time.
                 </p>
-                <Link href="/blogs/networking-at-your-workplace" passHref>
-                  <span className="text-[#5d3eff] text-xs underline xl:font-semibold xl:text-sm cursor-pointer">
-                    READ MORE
-                  </span>
-                </Link>
               </div>
             </div>
           </div>

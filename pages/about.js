@@ -6,35 +6,37 @@ import Contact from "../components/contact/Contact";
 export default function About() {
   return (
     <main className="mx-auto w-full h-full snap-y">
-      <Header />
+      
       <section className="relative">
-        <div className="bg-primary-blue-dark pt-10 pb-20 h-[40vh]  w-full ">
+      <div className="w-full h-fit shadow-sm">
+        <Header />
+      </div>
+        <div className="bg-[#FFFFFF] pt-10 lg:pb-20 lg:h-[40vh]  w-full ">
           <div className="text-center flex flex-col">
-            <span className="text-white text-[2rem] font-extrabold md:text-[2.5rem]">
+            <span className="text-primary-blue text-[2rem] uppercase font-extrabold md:text-[2.5rem]">
               About Us
             </span>
-            <span className="text-[.8rem] px-5 font-semibold text-primary-green self-center md:text-[1rem]">
+            <span className="text-[.8rem] px-5 w-[80%] sm:w-full font-normal tracking-wide text-primary-gray self-center md:text-[1rem]">
               We offer a wide range of services from Software Development ,
-              Mobile Application <br />
-              Development and much more.
+              Mobile <br /> Application Development and much more.
             </span>
           </div>
         </div>
         <section>
           <div className=" p-6 md:p-10 flex flex-col md:flex-row justify-around w-full">
             <div className="flex flex-col text-left mt-8 w-full md:w-[50%]">
-              <span className="text-[14px] font-semibold pb-2">
+              <span className="text-[14px] font-normal text-[#333333] pb-2">
                 OUR PHILOSOPHY
               </span>
-              <span className="w-full text-[25px] md:text-[2.5rem] text-[#33b5af] font-extrabold md:leading-[45px]">
+              <span className="w-full text-[25px] md:text-[2.5rem] text-[#04c0de] font-extrabold md:leading-[45px]">
                 Good business should
                 <br /> know every step of{" "}
-                <span className="text-[#0439d9]">growth.</span>
+                <span className="text-[#05fad9]">growth.</span>
                 <br /> That&apos;s why we are here.
               </span>
             </div>
             <div className="h-full pt-8 w-full md:w-[50%]">
-              <p className="text-[16px] text-left leading-[30px]">
+              <p className="text-[16px] text-[#333333] text-left leading-[30px]">
                 We believe in transparency and would like to maintain a sense of
                 fairness in what we deliver in terms of quality and deadlines.
                 Our major focus is to empower our client&apos;s end to end
@@ -44,8 +46,7 @@ export default function About() {
                 customer-specific customized Digital Marketing Methodology,
                 Techniques, Artificial Intelligence and other Tools.
               </p>
-              <p className="text-[16px] text-left leading-[30px] mt-2">
-                {" "}
+              <p className="text-[16px] text-[#333333] text-left leading-[30px] mt-2">
                 Yes, we are the biggest advocates of customer satisfaction;
                 hence we always thrive to develop efficient and cost-effective
                 software solutions for our clients by help them achieve their
@@ -122,7 +123,7 @@ export default function About() {
           </div>
         </div>
       </section>
-      <div className="bg-[#33b5af] h-full md:h-[11rem] py-10 gap-2 md:py-0 md:gap-0 flex flex-col md:flex-row justify-evenly ">
+      <div className="bg-[#04c0de] h-full md:h-[11rem] py-10 gap-2 md:py-0 md:gap-0 flex flex-col md:flex-row justify-evenly ">
         <div className="flex flex-col justify-center">
           <span className="md:text-[50px] text-[55px] font-[940] text-white text-center">
             &#36;15M+
@@ -149,18 +150,7 @@ export default function About() {
         </div>
       </div>
       <section>
-        <section id="contact">
-          <div className="relative p-5 bg-[#ecf2f8] flex justify-center w-full h-[90vh] md:p-10">
-            <div className="w-full flex justify-center">
-              <span className="text-[1.5rem] break-words text-[#0a1f44] text-center font-bold md:text-[2rem] my-2">
-                Have any Questions?
-              </span>
-            </div>
-            <div className="v-center absolute -bottom-[3rem] md:-bottom-[4rem] z-10 p-[1.5rem] md:p-[2rem]">
-              <Contact />
-            </div>
-          </div>
-        </section>
+        <Contact/>
         <Footer />
       </section>
     </main>

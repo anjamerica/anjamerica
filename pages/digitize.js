@@ -10,13 +10,15 @@ export default function Digitize() {
     <main className="mx-auto w-full h-full snap-y">
       <Header />
       <section className="relative p-5 md:p-10 flex justify-center flex-col">
-        <p className="text-anim-blog  w-full text-[1.5rem] font-extrabold md:text-[2.5rem]  leading-[33px]  md:leading-[45px]  text-primary-blue-dark text-center mt-10">
+        <p className="text-anim-blog  w-full text-[1.5rem] font-extrabold md:text-[2.5rem]  leading-[33px]  md:leading-[45px]  text-[#0a1f44] text-center mt-4 sm:mt-10">
           We Provide Software Solution
         </p>
-        <p className="text-anim-blog text-normal-digitze text-center">
-          Our goal is to help you focus on your business while we integrate highly competitive technology to help your business grow
-          faster.
-        </p>
+        <div className="w-full flex justify-center">
+          <p className="text-anim-blog text-normal-digitze w-[90%] sm:w-[48%] sm:mt-8 leading-[24px] tracking-wide text-center">
+            Our goal is to help you focus on your business while we integrate
+            highly competitive technology to help your business grow faster.
+          </p>
+        </div>
         <div className="w-full flex justify-center mt-0 md:mt-8">
           <img
             src="/assets/landing/about_1.png"
@@ -24,14 +26,19 @@ export default function Digitize() {
           />
         </div>
         <span className="self-center text-base flex flex-row gap-2 mt-0 md:mt-8">
-          Learn about<Link href="\digitize#feature"><span className="text-[#7540ee]">all our features</span></Link> 
+          Learn about
+          <Link href="\digitize#feature">
+            <span className="text-[#7540ee]">all our features</span>
+          </Link>
           <BsArrowRight className="w-5 h-4 self-center text-black" />
         </span>
       </section>
       <section id="feature">
         <div className="bg-[#e4fdfc] w-full h-full p-10 flex gap-10 flex-col lg:flex-row">
           <div className="flex flex-col w-full">
-            <p className="text-md text-primary-blue-dark font-semibold">OUR FEATURES</p>
+            <p className="text-md text-primary-black font-semibold">
+              OUR FEATURES
+            </p>
             <p className="text-[30px] leading-[33px] md:text-[42px] md:leading-[45px] font-bold mt-1 text-[#04c0de]">
               Helping you grow at every Step
             </p>
@@ -51,8 +58,13 @@ export default function Digitize() {
           </div>
           <div>
             <div className="flex justify-between gap-6 w-full mt-6">
-            <div className="w-14 h-full flex rounded-[50px] justify-center items-center  bg-white drop-shadow-lg">
-              <div className="h-10 w-10 flex justify-center items-center"><img src="/assets/landing/about_3.svg" className="w-5 h-5 self-center" /></div>
+              <div className="w-14 h-full flex rounded-[50px] justify-center items-center  bg-white drop-shadow-lg">
+                <div className="h-10 w-10 flex justify-center items-center">
+                  <img
+                    src="/assets/landing/about_3.svg"
+                    className="w-5 h-5 self-center"
+                  />
+                </div>
               </div>
               <div className="flex flex-col gap-4">
                 <div className="text-[1rem] font-semibold text-[#333]">
@@ -66,8 +78,13 @@ export default function Digitize() {
               </div>
             </div>
             <div className="flex justify-between gap-6 w-full mt-6">
-            <div className="w-14 h-full flex rounded-[50px] justify-center items-center  bg-white drop-shadow-lg">
-            <div className="h-10 w-10 flex justify-center items-center"><img src="/assets/landing/about_4.svg" className="w-5 h-5 self-center" /></div>
+              <div className="w-14 h-full flex rounded-[50px] justify-center items-center  bg-white drop-shadow-lg">
+                <div className="h-10 w-10 flex justify-center items-center">
+                  <img
+                    src="/assets/landing/about_4.svg"
+                    className="w-5 h-5 self-center"
+                  />
+                </div>
               </div>
               <div className="flex flex-col gap-4">
                 <div className="text-[1rem] font-semibold text-[#333]">
@@ -80,8 +97,13 @@ export default function Digitize() {
               </div>
             </div>
             <div className="flex justify-between gap-6 w-full mt-6">
-            <div className="w-14 h-full flex rounded-[50px] justify-center items-center  bg-white drop-shadow-lg">
-            <div className="h-10 w-10 flex justify-center items-center"><img src="/assets/landing/about_6.svg" className="w-5 h-5 self-center" /></div>
+              <div className="w-14 h-full flex rounded-[50px] justify-center items-center  bg-white drop-shadow-lg">
+                <div className="h-10 w-10 flex justify-center items-center">
+                  <img
+                    src="/assets/landing/about_6.svg"
+                    className="w-5 h-5 self-center"
+                  />
+                </div>
               </div>
               <div className="flex flex-col gap-4">
                 <div className="text-[1rem] font-semibold text-[#333]">
@@ -96,7 +118,12 @@ export default function Digitize() {
             </div>
             <div className="flex justify-between gap-6 w-full mt-6">
               <div className="w-14 h-full flex rounded-[50px] justify-center items-center  bg-white drop-shadow-lg">
-                <div className="h-10 w-10 flex justify-center items-center"><img src="/assets/landing/about_7.svg" className="w-5 h-5 self-center" /></div>
+                <div className="h-10 w-10 flex justify-center items-center">
+                  <img
+                    src="/assets/landing/about_7.svg"
+                    className="w-5 h-5 self-center"
+                  />
+                </div>
               </div>
               <div className="flex flex-col gap-4">
                 <div className="text-[1rem] font-semibold text-[#333]">
@@ -110,11 +137,18 @@ export default function Digitize() {
               </div>
             </div>
             <div className="flex justify-between gap-6 w-full mt-6">
-            <div className="w-14 h-full flex rounded-[50px] justify-center items-center  bg-white drop-shadow-lg">
-            <div className="h-10 w-10 flex justify-center items-center"><img src="/assets/landing/about_7.svg" className="w-5 h-5 self-center" /></div>
+              <div className="w-14 h-full flex rounded-[50px] justify-center items-center  bg-white drop-shadow-lg">
+                <div className="h-10 w-10 flex justify-center items-center">
+                  <img
+                    src="/assets/landing/about_7.svg"
+                    className="w-5 h-5 self-center"
+                  />
+                </div>
               </div>
               <div className="flex flex-col gap-4">
-                <div className="text-[1rem] font-semibold text-[#333]">IT Consulting</div>
+                <div className="text-[1rem] font-semibold text-[#333]">
+                  IT Consulting
+                </div>
                 <div className="text-normal-digitze text-left">
                   We can help you develop and execute a clear and strategic IT
                   roadmap with priorities that are closely linked to business
@@ -126,16 +160,7 @@ export default function Digitize() {
         </div>
       </section>
       <section id="contact">
-        <div className="relative p-5 bg-[#ecf2f8] flex justify-center w-full h-[90vh] md:p-10">
-          <div className="w-full flex justify-center">
-            <span className="text-[1.5rem] break-words text-[#0a1f44] text-center font-bold md:text-[2rem] my-2">
-              Have any Questions?
-            </span>
-          </div>
-          <div className="v-center absolute -bottom-[3rem] md:-bottom-[4rem] z-10 p-[1.5rem] md:p-[2rem]">
-            <Contact />
-          </div>
-        </div>
+        <Contact />
       </section>
       <section>
         <Footer />
