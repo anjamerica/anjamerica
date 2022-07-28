@@ -63,14 +63,14 @@ export default function Footer() {
           <div className="flex flex-col px-5 md:px-0">
             <span className="text-white text-[24px] font-semibold">Social</span>
             <div className="flex flex-row gap-2 text-white mt-2 mb-4">
-              <a href="https://www.facebook.com/anjamericadotcom/about/" target="_blank">
+              <a href="https://www.facebook.com/anjamericadotcom/about/" target="_blank" rel="noreferrer">
               <span className="bg-primary-violet h-8 w-8 cursor-pointer rounded-full flex items-center justify-center">
                 <FaFacebookF className="h-fit w-fit" />
               </span></a>
               <span className="bg-primary-violet h-8 w-8 cursor-pointer rounded-full flex items-center justify-center">
                 <FaTwitter className="h-fit w-fit" />
               </span>
-              <a href="https://instagram.com/anj.america?igshid=YmMyMTA2M2Y=" target="_blank">
+              <a href="https://instagram.com/anj.america?igshid=YmMyMTA2M2Y=" target="_blank" rel="noreferrer">
               <span className="bg-primary-violet h-8 w-8 cursor-pointer rounded-full flex items-center justify-center">
                 <FaInstagram className="h-fit w-fit" />
               </span></a>

@@ -105,7 +105,7 @@ export default function LandingScreen() {
                 </span>
               </div>
               <div className="mt-5 xl:mt-10">
-                <button className="w-fit font-semibold text-[14px] md:text-base  uppercase text-white bg-primary-blue px-6 py-[.6rem]  tracking-wide rounded-full hover:text-primary-blue hover:bg-white cursor-pointer transition-all text-center flex items-center justify-center">
+                <button className="w-fit font-semibold text-[14px] md:text-base  uppercase text-white bg-primary-blue px-6 py-[.6rem]  tracking-wide rounded-full hover:bg-blue-800 cursor-pointer transition-all text-center flex items-center justify-center">
                   KNOW MORE
                 </button>
               </div>
@@ -220,7 +220,7 @@ export default function LandingScreen() {
         </div>
       </section>
       <section>
-        <div className=" py-10 flex items-center flex-col gap-4 bg-[#F3F3F3]">
+        <div className=" py-10 flex items-center h-fit flex-col gap-4 bg-[#F3F3F3]">
           <div className="flex flex-col gap-1">
             <div className="text-subheading leading-[3%] text-primary-blue self-center">WHAT WE DO</div>
             <div className="text-[1.5rem] tracking-wide break-words text-center font-bold md:text-[1.5rem] 2xl:text-[3rem]; text-primary-black">
@@ -231,12 +231,12 @@ export default function LandingScreen() {
               industry
             </div>
           </div>
-          <div className="relative flex justify-center w-full">
+          <div className="relative mt-8 flex justify-center w-full">
             <div className="scrollbar-landing" ref={ref}>
-              <div className="flex flex-row w-full justify-between h-fit max-w-[1200px] gap-[50px]">
+              <div className="flex flex-row w-full justify-between items-center h-fit max-w-[1200px] gap-[50px]">
                 <img
                   src="/assets/business/progressive.png"
-                  className="logo-hover-landing"
+                  className="ml-6 logo-hover-landing"
                 />
                 <img
                   src="/assets/business/icici.png"
@@ -285,14 +285,14 @@ export default function LandingScreen() {
               </div>
               <img
                 src="/landing/prev-arrow.svg"
-                className="h-10 v-h-center w-fit select-none absolute top-[40%] bottom-[60%] translate-(-50%,-50%)   left-[3rem] md:left-[7rem] text-primary-gray cursor-pointer"
+                className="h-10  w-fit select-none absolute top-[6px] left-[2rem] md:top-[10px]  md:left-[7rem] text-primary-gray cursor-pointer"
                 onClick={() => {
                   scroll("left");
                 }}
               />
               <img
                 src="/landing/next-arrow.svg"
-                className="h-10 w-fit md:v-h-center select-none absolute top-[40%] bottom-[60%] translate-(-50%,-50%)  right-[2rem] md:right-[6rem] text-primary-gray cursor-pointer"
+                className="h-10 w-fit md:v-h-center select-none absolute right-[2rem] top-[6px]  md:top-[10px] md:right-[6rem] text-primary-gray cursor-pointer"
                 onClick={() => {
                   scroll("right");
                 }}

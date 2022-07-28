@@ -118,7 +118,7 @@ export default function BlogSeven() {
                   </p>
                   <p className="text-[#333] text-xs xl:text-base font-light break-words">
                     The Computing and Technology Industry Association (CompTIA)
-                    is the world's leading industry association for those who
+                    is the world&apos;s leading industry association for those who
                     design, implement, manage and protect technologies that
                     drive our global economy. The technology sector consists of
                     companies selling software, computer products, and
@@ -131,8 +131,8 @@ export default function BlogSeven() {
                     Network and database management is the leading segment in
                     the US software market, accounting for over 40% of total
                     software sales in the US. One might argue that it makes no
-                    sense to call cloud computing companies &amp; "software
-                    companies" but this is an arbitrary separation. The software
+                    sense to call cloud computing companies &amp; &quot;software
+                    companies&quot; but this is an arbitrary separation. The software
                     industry includes software used for cloud-based,
                     premise-based licensing and maintenance, as well as
                     cloud-based applications.

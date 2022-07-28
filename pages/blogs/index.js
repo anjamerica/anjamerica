@@ -269,7 +269,7 @@ export default function index() {
             </p>
             <p className="text-[#4e5d78] text-xs xl:text-base font-light break-words h-fit">
               The evolution and advancement of technology have paved the way to
-              make mankind's life hassle-free! Cloud management is a type of
+              make mankind&apos;s life hassle-free! Cloud management is a type of
               software and technology that ensures seamless
             </p>
             <Link href="/blogs/what-is-cloud-management" passHref>

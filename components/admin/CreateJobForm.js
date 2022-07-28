@@ -16,6 +16,7 @@ import { MdOutlineLogout } from "react-icons/md";
 // import {country_code} from "../common/country-code.json";
 import { currencies } from "currencies.json";
 import DropZone from "../common/DropZone";
+import ButtonLoader from "../layout/ButtonLoader";
 
 export default function CreateJobForm() {
   const [navOpen, setNavOpen] = useState(false);
