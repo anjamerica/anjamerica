@@ -57,10 +57,10 @@ export default function Home() {
     <div className="mx-auto w-full h-full snap-y mb-10">
       <div>
         {/* <Loader /> */}
-        <div className="w-full flex h-[8hv] justify-between px-4 bg-violet-dark  md:px-10 md:py-4 md:items-center md:h-[10vh]">
+        <div className="w-full flex h-[8hv] justify-between px-4 bg-primary-black  md:px-10 md:py-4 md:items-center md:h-[10vh]">
           <Link href="/home">
             <img
-              src="/assets/landing/Logo.png"
+              src="/landing/logo.svg"
               className="h-16 w-40 xl:h-20 xl:w-56 object-contain"
             />
           </Link>
@@ -121,14 +121,14 @@ export default function Home() {
           </div>
           <div>
             <Link href="/applications">
-              <button className="hidden md:w-fit font-medium text-white bg-secondary-green px-4 py-1  rounded-md text-center md:flex items-center justify-center md:text-sm md:cursor-pointer">
+              <button className="hidden md:w-fit font-medium text-white bg-primary-blue px-4 py-1  rounded-md text-center md:flex items-center justify-center md:text-sm md:cursor-pointer">
                 Applications
               </button>
             </Link>
           </div>
           <div>
             <Link href="/newpost">
-              <button className="hidden md:w-fit font-medium text-white bg-secondary-green px-4 py-1  rounded-md text-center md:flex items-center justify-center md:text-sm md:cursor-pointer">
+              <button className="hidden md:w-fit font-medium text-white bg-primary-blue px-4 py-1  rounded-md text-center md:flex items-center justify-center md:text-sm md:cursor-pointer">
                 Add New Post
               </button>
             </Link>

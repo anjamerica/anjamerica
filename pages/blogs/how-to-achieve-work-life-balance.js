@@ -53,7 +53,7 @@ export default function BlogOne() {
               </div>
               <div className="absolute top-[30%] right-[50%] -translate-y-[19%] translate-x-[50%] md:translate-y-[50%]">
                 <div className="flex flex-col text-center">
-                  <span className="text-normal-landing font-semibold">
+                  <span className="text-normal-landing font-semibold text-white">
                     March 2, 2021
                   </span>
                   <span className="text-anim-blog text-white text-[1.2rem] md:text-[2rem] font-semibold">
@@ -115,28 +115,55 @@ export default function BlogOne() {
             Don&apos;t miss these stories;
           </span>
           <div className="p-5 md:p-10 grid grid-cols-1 w-full h-full gap-4 md:gap-4 xl:gap-10 md:grid-cols-3">
+          <div className="rounded-xl w-fit  h-full bg-white drop-shadow-xl">
+              <img
+                src="/blog/blog-7.jpg"
+                className="w-full rounded-t-xl h-[40%]"
+              />
+              <div className="p-5 flex flex-col justify-evenly text-left gap-4">
+                <span className="text-xs  xl:text-sm text-[#5d3eff] xl:font-semibold">
+                  April 29, 2021
+                </span>
+                <p className="text-[#0a1f44] md:text-base xl:text-xl font-bold break-words">
+                  Software and IT Industry In The USA
+                </p>
+                <p className="text-[#4e5d78] text-xs xl:text-base font-light break-words h-fit">
+                  The business intelligence (BI) software industry is rapidly
+                  becoming one of the leading software categories in terms of
+                  market size.
+                </p>
+                <Link
+                  href="/blogs/software-and-it-industry-in-the-usa"
+                  passHref
+                >
+                  <span className="text-[#5d3eff] text-xs underline xl:font-semibold xl:text-sm cursor-pointer">
+                    READ MORE
+                  </span>
+                </Link>
+              </div>
+            </div>
             <div className="rounded-xl w-fit  h-full bg-white drop-shadow-xl">
               <img
                 src="/assets/landing/blog/blog_7.jpg"
                 className="w-full rounded-t-xl h-[40%]"
               />
               <div className="p-5 flex flex-col justify-evenly text-left gap-4">
-                <span className="text-xs  xl:text-sm text-primary-green xl:font-semibold">
-                  March 8, 2021
+                <span className="text-xs  xl:text-sm text-[#5d3eff] xl:font-semibold">
+                  April 12, 2021
                 </span>
                 <p className="text-[#0a1f44] md:text-base xl:text-xl font-bold break-words">
-                  Points To Remember While Updating Your Resume
+                  5 Ways To Learn New Skills To Boost Your CV
                 </p>
                 <p className="text-[#4e5d78] text-xs xl:text-base font-light break-words h-fit">
-                  If there’s a task that one can never quite get acquainted
-                  with, no matter how many times they do it, it has to be
-                  updating a Resume.
+                  When looking for a career change or wanting to get back into
+                  the professional space after a break, it is highly essential
+                  to have your CV updated with the right skills.
                 </p>
                 <Link
-                  href="/blogs/points-to-remember-while-updating-your-resume"
+                  href="/blogs/5-ways-to-learn-new-skills-to-boost-your-cv"
                   passHref
                 >
-                  <span className="text-primary-green text-xs underline xl:font-semibold xl:text-sm cursor-pointer">
+                  <span className="text-[#5d3eff] text-xs underline xl:font-semibold xl:text-sm cursor-pointer">
                     READ MORE
                   </span>
                 </Link>
@@ -144,52 +171,23 @@ export default function BlogOne() {
             </div>
             <div className="rounded-xl w-fit  h-full bg-white drop-shadow-xl">
               <img
-                src="/assets/landing/blog/blog_2.jpg"
+                src="/blog/blog-8.jpg"
                 className="w-full rounded-t-xl h-[40%]"
               />
               <div className="p-5 flex flex-col justify-evenly text-left gap-4">
-                <span className="text-xs xl:text-sm text-primary-green xl:font-semibold">
-                  February 22, 2021
+                <span className="text-xs xl:text-sm text-[#5d3eff] xl:font-semibold">
+                  April 5, 2021
                 </span>
                 <p className="text-[#0a1f44] md:text-base xl:text-xl font-bold break-words">
-                  Is Your Website Ready For A Mobile-First World?
+                  Networking At Your Workplace
                 </p>
                 <p className="text-[#4e5d78] text-xs xl:text-base font-light break-words h-fit">
-                  With the extraordinary increase and usage of smart devices
-                  like mobile phones and tablets, Google has decblogIded to do
-                  an innovative change in the way its search engines work.
+                  Networking at your workplace isn’t far-fetched. After all
+                  “it’s not what you know, it’s whom you know.” How many times
+                  have you heard that being said?
                 </p>
-                <Link
-                  href="/blogs/is-your-website-ready-for-a-mobile-first-world"
-                  passHref
-                >
-                  <span className="text-primary-green text-xs underline xl:font-semibold xl:text-sm cursor-pointer">
-                    READ MORE
-                  </span>
-                </Link>
-              </div>
-            </div>
-            <div className="rounded-xl w-fit  h-full bg-white drop-shadow-xl">
-              <img
-                src="/assets/landing/blog/blog_5.jpg"
-                className="w-full rounded-t-xl h-[40%]"
-              />
-              <div className="p-5 flex flex-col justify-evenly text-left gap-4">
-                <span className="text-xs xl:text-sm text-primary-green xl:font-semibold">
-                  January 30, 2021
-                </span>
-                <p className="text-[#0a1f44] md:text-base xl:text-xl font-bold break-words">
-                  Migrating To The USA? Here Is A ConsolblogIdated Checklist
-                </p>
-                <p className="text-[#4e5d78] text-xs xl:text-base font-light break-words h-fit">
-                  When you are planning to pursue your ‘American Dream’, you
-                  must get a few things ready on your front.
-                </p>
-                <Link
-                  href="/blogs/migrating-to-the-usa-here-is-a-consolidated-checklist"
-                  passHref
-                >
-                  <span className="text-primary-green text-xs underline xl:font-semibold xl:text-sm cursor-pointer">
+                <Link href="/blogs/networking-at-your-workplace" passHref>
+                  <span className="text-[#5d3eff] text-xs underline xl:font-semibold xl:text-sm cursor-pointer">
                     READ MORE
                   </span>
                 </Link>

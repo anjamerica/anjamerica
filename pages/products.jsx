@@ -1,5 +1,5 @@
 import { data } from "autoprefixer";
-import React,{ useState } from "react";
+import React, { useState } from "react";
 import { IoMdCheckmarkCircleOutline } from "react-icons/io";
 import { BsChevronCompactLeft, BsChevronCompactRight } from "react-icons/bs";
 
@@ -17,30 +17,28 @@ export default function Products() {
         "Operational efficiency",
         "Increase profitability",
       ],
-      img:"/assets/landing/product.svg"
+      img: "/assets/landing/product.svg",
     },
     {
       product: "Online Enrollment system",
-      description:
-        "",
+      description: "",
       features: [
         "Simple, Seamless & Secure Plan Selection",
         "Easy Enrolment",
         "All under one roof",
       ],
-      img:"/assets/landing/product_2.svg"
+      img: "/assets/landing/product_2.svg",
     },
     {
       product: "Commission Tracking system",
-      description:
-        "",
+      description: "",
       features: [
         "Accurate Calculations",
         "Unlimited Commission Splits",
         "Email individual Reports at a click",
-        "Agent access to commissions round the clock"
+        "Agent access to commissions round the clock",
       ],
-      img:"/assets/landing/product.svg"
+      img: "/assets/landing/product.svg",
     },
   ];
 
@@ -59,34 +57,36 @@ export default function Products() {
 
   return (
     <div className="relative flex flex-col pt-10 pb-20 md:py-10 bg-white items-center justify-center w-full">
-      <div className="flex flex-col justify-center gap-4">
-        <div className="text-green-medium">WHAT WE DO</div>
-        <div className="text-[#535353] font-bold text-[1.5rem] self-center md:text-[2rem]">
+      <div className="flex flex-col gap-0 self-center justify-center">
+        <div className="text-subheading  text-primary-blue self-center">
+          WHAT WE DO
+        </div>
+        <div className="text-subheading-main  text-primary-black self-center">
           Our Products
         </div>
-        <div className="flex flex-col items-center text-secondary-gray text-sm break-words text-center md:text-base">
+        <div className="text-normal-landing text-[#535353] w-[85%] sm:w-full self-center">
           Lorem Ipsum is simply dummy text of the printing and typesetting
           industry.
         </div>
-        <div className="grid grid-flow-row w-full md:px-10">
+        <div className="grid grid-flow-row w-full px-0 md:p-10">
           {/* {data.map((item, index) => {
             return ( */}
           <div
-            className="flex flex-col w-full md:flex-row-reverse gap-0 md:gap-10"
+            className="flex flex-col w-full md:flex-row-reverse gap-0 md:gap-1 xl:gap-10"
             setCurrentIndex={currentIndex}
           >
             <img
               src={data[currentIndex].img}
-              className="w-[20rem] h-[20rem] md:w-[25rem] md:h-[25rem] mt-0 flex self-center md:self-start  md:mt-0"
+              className="w-[20rem] h-[20rem]  md:w-[20rem] xl:w-[25rem] xl:h-[25rem] object-contain md:h-[20rem] mt-0 flex self-center md:self-start  md:mt-0"
             />
             <div>
-              <p className="text-primary-green  py-4 text-left font-bold break-words mx-[2.5rem] md:mx-0 text-base  md:text-[24px]">
+              <p className="text-primary-blue w-[11rem] sm:w-[17rem] md:w-[17rem]  py-4 text-left font-bold break-words mx-[2.5rem] md:mx-0 text-base sm:text-xl  md:text-[24px]">
                 {data[currentIndex].product}
               </p>
               <p className="flex flex-col items-start text-[#535353] font-semibold text-sm break-words mt-2 text-left mx-[2.5rem] md:mx-0 w-[70%]">
                 {data[currentIndex].description}
               </p>
-              <div className="mt-4 mx-[2.5rem]">
+              <div className="mt-4 mx-[2.5rem] md:mx-0 self-left">
                 <svg
                   width="108"
                   height="3"
@@ -94,15 +94,15 @@ export default function Products() {
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
                 >
-                  <path d="M107.5 0L0 2L107.5 3V0Z" fill="#33B5AF" />
+                  <path d="M107.5 0L0 2L107.5 3V0Z" fill="#07038C" />
                 </svg>
               </div>
               <div className="flex flex-col items-left gap-2 break-words mt-8 mx-[2.5rem] md:mx-0">
-                {data[currentIndex].features.map((feature,i) => {
+                {data[currentIndex].features.map((feature, i) => {
                   return (
                     <div className="flex flex-row gap-2" key={i}>
                       <span>
-                        <IoMdCheckmarkCircleOutline className="h-5 w-5 text-primary-green md:h-7 md:w-7" />
+                        <IoMdCheckmarkCircleOutline className="h-5 w-5 text-primary-blue md:h-7 md:w-7" />
                       </span>
                       <span className="text-secondary-gray text-md text-left">
                         {feature}
@@ -118,8 +118,8 @@ export default function Products() {
                       key={i}
                       className={`rounded-full h-3 w-3 md:w-5 md:h-5 ${
                         i == currentIndex
-                          ? "bg-primary-green"
-                          : "bg-primary-green opacity-[31%]"
+                          ? "bg-primary-blue"
+                          : "bg-primary-blue opacity-[31%]"
                       }`}
                     ></div>
                   );
@@ -129,13 +129,13 @@ export default function Products() {
           </div>
         </div>
         <img
-          src="/assets/landing/left_arrow.svg"
-          className="hidden md:flex md:h-[3rem] md:absolute md:top-[20rem] md:left-[1rem] lg:h-[4rem] lg:left-[1rem] xl:left-[6rem]  w-fit  text-primary-gray cursor-pointer"
+          src="/landing/prev-arrow.svg"
+          className="hidden md:flex md:h-10 md:absolute md:top-[20rem] md:left-[1rem] lg:h-10 lg:left-[1rem] xl:left-[6rem] sm:w-7  xl:w-fit  text-primary-gray cursor-pointer"
           onClick={() => handleOnPrevClick()}
         />
         <img
-          src="/assets/landing/right_arrow.svg"
-          className="hidden md:flex md:h-[3rem] md:absolute md:top-[20rem] md:right-[1rem] lg:h-[4rem] lg:right-[1rem] xl:right-[6rem]  w-fit  text-primary-gray cursor-pointer"
+          src="/landing/next-arrow.svg"
+          className="hidden md:flex md:h-10 md:absolute md:top-[20rem] md:right-[1rem] lg:h-10 lg:right-[1rem] xl:right-[6rem] sm:w-7  xl:w-fit   text-primary-gray cursor-pointer"
           onClick={() => handleOnNextClick()}
         />
       </div>

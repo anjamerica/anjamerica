@@ -43,17 +43,17 @@ export default function Login() {
 
   console.log(formError);
   return (
-    <div className="h-[100vh] w-full bg-primary-green flex flex-col justify-center items-center">
+    <div className="h-screen w-full bg-primary-green flex flex-col justify-center items-center">
       <div className="login-page text-white text-[1.4rem] font-thin tracking-wide	 uppercase">
         WELCOME
       </div>
       <div>
         <img
-          src="/assets/landing/Logo.png"
-          className="w-[15rem]  xl:h-fit mt-4 xl:w-56 object-contain"
+           src="/landing/logo.svg"
+          className="w-[15rem]  xl:h-fit xl:w-[10rem] object-contain"
         />
       </div>
-      <div className="mt-8 w-[85%] md:w-[25%]">
+      <div className="w-[85%] md:w-[25%]">
         <form onSubmit={handleLogin}>
           <div className="login-input flex">
             <img

@@ -14,23 +14,23 @@ export default function Header() {
   }, [router.pathname]);
 
   return (
-    <div className="relative w-full flex justify-between items-center h-[8hv] px-4 bg-white  md:px-10 md:py-4 md:items-center md:h-[10vh]">
+    <div className="relative w-full flex justify-between items-center h-[10hv] shadow-sm px-4  md:px-[2%] md:py-4 md:items-center md:h-[15vh]">
       <div className=" xl:ml-5 w-fit">
         <Link href="/">
           <img
             src="/landing/logo.svg"
-            className="h-16 w-40 xl:h-20 xl:w-56 object-contain cursor-pointer"
+            className="h-20 -ml-6 md:ml-0 w-56 object-contain cursor-pointer"
           />
         </Link>
       </div>
       <div className="hidden lg:flex justify-around gap-1 xl:gap-3 items-center md:mx-4 mr-7">
         <Link href="/about">
           <span
-            className={`cursor-pointer text-center md:text-base mx-2 md:mx-4 ${
+            className={`cursor-pointer text-center md:text-base mx-2 md:mx-4 hover:text-primary-blue ${
               active == "/about" ? "text-[#07038C]" : "text-[#08081E]"
             }`}
           >
-            About
+            Discover
             <span className="w-full flex justify-center transform ease-linear duration-1000">
               {active == "/about" && (
                 <svg
@@ -48,7 +48,7 @@ export default function Header() {
         </Link>
         <Link href="/digitize">
           <span
-            className={`cursor-pointer text-center md:text-base mx-2 md:mx-4 ${
+            className={`cursor-pointer text-center md:text-base mx-2 md:mx-4 hover:text-primary-blue ${
               active == "/digitize" ? "text-[#07038C]" : "text-[#08081E]"
             }`}n
           >
@@ -70,7 +70,7 @@ export default function Header() {
         </Link>
         <Link href="/staffing">
           <span
-            className={`cursor-pointer text-center md:text-base mx-2 md:mx-4 ${
+            className={`cursor-pointer text-center md:text-base mx-2 md:mx-4 hover:text-primary-blue ${
               active == "/staffing" ? "text-[#07038C]" : "text-[#08081E]"
             }`}
           >
@@ -92,7 +92,7 @@ export default function Header() {
         </Link>
         <Link href="/career">
           <span
-            className={`cursor-pointer text-center md:text-base mx-2 md:mx-4 ${
+            className={`cursor-pointer text-center md:text-base mx-2 md:mx-4 hover:text-primary-blue ${
               active == "/career" ? "text-[#07038C]" : "text-[#08081E]"
             }`}
           >
@@ -114,7 +114,7 @@ export default function Header() {
         </Link>
         <Link href="/#products">
           <span
-            className={`cursor-pointer text-center md:text-base mx-2 md:mx-4 ${
+            className={`cursor-pointer text-center md:text-base mx-2 md:mx-4 hover:text-primary-blue ${
               active == "/#products" ? "text-[#07038C]" : "text-[#08081E]"
             }`}
           >
@@ -136,7 +136,7 @@ export default function Header() {
         </Link>
         <Link href="/blogs">
           <span
-            className={`cursor-pointer text-center md:text-base mx-2 md:mx-4 ${
+            className={`cursor-pointer text-center md:text-base mx-2 md:mx-4 hover:text-primary-blue ${
               active == "/blogs" ? "text-[#07038C]" : "text-[#08081E]"
             }`}
           >
@@ -158,7 +158,7 @@ export default function Header() {
         </Link>
         <Link href="/#contact">
           <span
-            className={`cursor-pointer text-center md:text-base mx-2 md:mx-4 ${
+            className={`cursor-pointer text-center md:text-base mx-2 md:mx-4 hover:text-primary-blue ${
               active == "/#contact" ? "text-[#07038C]" : "text-[#08081E]"
             }`}
           >
@@ -183,15 +183,15 @@ export default function Header() {
         className="h-full select-none flex items-center justify-center lg:hidden py-4"
         onClick={() => setNavOpen(!navOpen)}
       >
-        <BsThreeDots className="h-9 w-9 text-white self-center cursor-pointer" />
+        <BsThreeDots className="h-9 w-9 text-[#B4B4BE] rotate-90 self-center cursor-pointer" />
       </div>
       {navOpen && (
-        <div className="absolute top-[4rem] right-[0rem] z-20 w-full md:hidden">
+        <div className="absolute top-[4rem] right-[0rem] z-50 w-full md:hidden">
           <div className="nav-anim w-full p-3 bg-white h-fit">
             <ul>
               <Link href="/about">
                 <li className="text-left py-2 text-primary-blue-dark hover:text-primary-green text-xs font-semibold">
-                  About
+                  Discover
                 </li>
               </Link>
               <Link href="/digitize">

@@ -9,6 +9,7 @@ import Loader from "../layout/Loader";
 import { postMail } from "../../services/postMail";
 import validator from "validator";
 import Dropzone from "../layout/Dropzone";
+import { IoMdClose } from "react-icons/io";
 import { country_code } from "../common/country-code.json";
 
 export default function JobApplyForm({ item, setFormModal }) {
@@ -168,7 +169,7 @@ export default function JobApplyForm({ item, setFormModal }) {
         id="modal"
       >
         <div
-          className="fixed left-0 top-0 bg-black w-full h-full opacity-[0.7]"
+          className="fixed left-0 top-0 bg-black w-full h-full opacity-[20%]"
           onClick={(e) => {
             setFormModal(false);
           }}
@@ -188,9 +189,14 @@ export default function JobApplyForm({ item, setFormModal }) {
               : ""
           }w-full bg-[#F0F0F0] flex flex-col gap-2 p-10 z-50 md:w-[25rem]  md:rounded-xl `}
         >
-          <span className="text-xl md:font-semibold text-center z-10">
-            {item?.job_title}
-          </span>
+          <div className="flex flex-row justify-between w-full">
+            <span className="text-xl md:font-semibold text-center z-10">
+              {item?.job_title}
+            </span>
+            <span className="w-fit h-full" onClick={()=>setFormModal(false)}>
+              <IoMdClose className="w-fit h-8 text-primary-blue" />
+            </span>
+          </div>
           <input
             className="form-input"
             placeholder="Your name"
@@ -280,7 +286,7 @@ export default function JobApplyForm({ item, setFormModal }) {
           </div>
           <span className="text-xs text-red-700">{formError?.file_err}</span>
           <button
-            className="w-full font-semibold text-xs text-white bg-primary-green px-6 py-2  uppercase rounded-md text-center flex items-center justify-center"
+            className="w-full font-semibold text-xs text-white bg-primary-blue px-6 py-2  rounded-md text-center flex items-center justify-center"
             onClick={handleSubmit}
           >
             Submit
