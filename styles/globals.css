@@ -36,8 +36,8 @@ a {
 /* li {
   list-style: none;
 } */
-p{
- user-select: none;
+p {
+  user-select: none;
 }
 .yellow-action-button {
   @apply w-fit font-[800] text-black select-none bg-primary-yellow px-4 py-2  uppercase  rounded-full hover:bg-[#ecd378] transition-all text-center flex items-center justify-center;
@@ -67,7 +67,7 @@ p{
   @apply text-[14px] text-center break-words md:text-[1rem];
 }
 
-.text-normal-digitze{
+.text-normal-digitze {
   @apply text-[.85rem] p-0  text-[#333] break-words md:text-[1rem];
 }
 
@@ -251,7 +251,6 @@ select {
   transition: transform 400ms ease 2s;
 }
 
-
 /* loader */
 .loader-container {
   height: 100vh;
@@ -262,7 +261,7 @@ select {
 .loader {
   border: 16px solid #f3f3f3;
   border-radius: 50%;
-  border-top: 16px solid #07038C;
+  border-top: 16px solid #07038c;
   width: 100px;
   height: 100px;
   -webkit-animation: spin 2s linear infinite; /* Safari */
@@ -292,11 +291,11 @@ select {
   visibility: hidden;
 }
 .custom-file-input::before {
-  content: 'Upload Image';
+  content: "Upload Image";
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #16A59E;
+  background: #16a59e;
   border-radius: 3px;
   padding: 5px 8px;
   outline: none;
@@ -305,15 +304,15 @@ select {
   cursor: pointer;
   font-weight: 400;
   font-size: 1rem;
-  width:fit-content;
-  color:white;
+  width: fit-content;
+  color: white;
 }
 
 /* table fixed row */
 
 .fix {
   position: absolute;
-  *position: relative; 
+  *position: relative;
   width: 100px;
   height: -webkit-fill-available;
 }
@@ -334,68 +333,66 @@ select {
   display: none;
 }
 
-input[type=number]::-webkit-inner-spin-button, 
-input[type=number]::-webkit-outer-spin-button { 
-  -webkit-appearance: none; 
-  margin: 0; 
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
-.slideDown{
-	animation-name: slideDown;
-	-webkit-animation-name: slideDown;	
+.slideDown {
+  animation-name: slideDown;
+  -webkit-animation-name: slideDown;
 
-	animation-duration: 1s;	
-	-webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-duration: 1s;
 
-	animation-timing-function: ease-in;	
-	-webkit-animation-timing-function: ease;	
+  animation-timing-function: ease-in;
+  -webkit-animation-timing-function: ease;
 
-	visibility: visible !important;						
+  visibility: visible !important;
 }
 
 @-webkit-keyframes slideDown {
-	0% {
-		-webkit-transform: translateY(0%);
-	}
-	50%{
-		-webkit-transform: translateY(20%);
-	}
-	100% {
-		-webkit-transform: translateY(0%);
-	}	
+  0% {
+    -webkit-transform: translateY(0%);
+  }
+  50% {
+    -webkit-transform: translateY(20%);
+  }
+  100% {
+    -webkit-transform: translateY(0%);
+  }
 }
 
 /* w-fit font-medium text-white bg-secondary-green px-4 py-2  uppercase  rounded-full hover:bg-[#33b5af] transition-all text-center flex items-center justify-center */
 
-#modal{
+#modal {
   animation: modalBody 300ms ease-in forwards;
 }
 
-#modal-content{
+#modal-content {
   /* animation: modalContent 500ms ease-in forwards; */
-
 }
 
 @keyframes modalBody {
-  0%{
+  0% {
     opacity: 0;
   }
-  100%{
+  100% {
     opacity: 1;
   }
 }
 
 @keyframes modalContent {
-  0%{
+  0% {
     transform: translateY(-200%);
     opacity: 0;
   }
-  100%{
+  100% {
     transform: translateY(0);
     opacity: 1;
   }
 }
-
 
 .scrollbar-table {
   display: flex;
@@ -440,26 +437,27 @@ input[type=number]::-webkit-outer-spin-button {
   background-repeat: no-repeat;
 }
 
-.footer-link{
+.footer-link {
   @apply text-[14px] text-white mt-2 cursor-pointer font-[400];
 }
 
 /* Landing Page */
-.text-subheading{
-  @apply  text-[14px] md:text-[20px] font-[700] uppercase ;
+.text-subheading {
+  @apply text-[14px] md:text-[20px] font-[700] uppercase;
 }
 
-.text-subheading-main{
+.text-subheading-main {
   @apply text-[24px] lg:text-[36px] font-[800];
 }
 
 .contact {
-  background-image: url(../public/assets/landing/contact_bg.png),linear-gradient(90deg, #04c0de, #05fad9);;
+  background-image: url(../public/assets/landing/contact_bg.png),
+    linear-gradient(90deg, #04c0de, #05fad9);
   background-size: auto auto;
 }
 
 .text-anim-services {
-  animation: .2s anim-services ease-out;
+  animation: 0.2s anim-services ease-out;
 }
 @keyframes anim-services {
   0% {
@@ -474,4 +472,7 @@ input[type=number]::-webkit-outer-spin-button {
 
 .service {
   user-select: none !important;
+}
+body{
+  transition-delay: 2s;
 }

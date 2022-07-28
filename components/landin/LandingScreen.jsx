@@ -1,7 +1,7 @@
 import React from "react";
 import Header from "./Header";
 import { BsChevronDoubleLeft } from "react-icons/bs";
-import { useState,useRef } from "react";
+import { useState, useRef } from "react";
 import Products from "../../pages/products";
 import Footer from "./Footer";
 import Link from "next/link";
@@ -62,7 +62,9 @@ export default function LandingScreen() {
   };
   const [serviceActive, setServiceActive] = useState(2);
   return (
-    <main className="mx-auto w-full h-full snap-y ">
+    <main
+      className="mx-auto w-full h-full snap-y scroll-delay"
+    >
       <section className="relative">
         <div
           style={{
@@ -219,83 +221,83 @@ export default function LandingScreen() {
       </section>
       <section>
         <div className=" py-10 flex items-center flex-col gap-4 bg-[#F3F3F3]">
-          <div className="flex flex-col gap-4">
-            <div className="text-green-medium">WHAT WE DO</div>
+          <div className="flex flex-col gap-1">
+            <div className="text-subheading leading-[3%] text-primary-blue self-center">WHAT WE DO</div>
             <div className="text-[1.5rem] tracking-wide break-words text-center font-bold md:text-[1.5rem] 2xl:text-[3rem]; text-primary-black">
               Businesses we&apos;ve aligned with
             </div>
-            <div className="text-normal-landing">
+            <div className="text-normal-landing text-[#535353] w-[85%] sm:w-full self-center">
               Lorem Ipsum is simply dummy text of the printing and typesetting
               industry
             </div>
           </div>
           <div className="relative flex justify-center w-full">
-          <div className="scrollbar-landing"  ref={ref}>
-            <div className="flex flex-row w-full justify-between h-fit max-w-[1200px] gap-[50px]" >
+            <div className="scrollbar-landing" ref={ref}>
+              <div className="flex flex-row w-full justify-between h-fit max-w-[1200px] gap-[50px]">
+                <img
+                  src="/assets/business/progressive.png"
+                  className="logo-hover-landing"
+                />
+                <img
+                  src="/assets/business/icici.png"
+                  className="logo-hover-landing"
+                />
+                <img
+                  src="/assets/business/transamerica.png"
+                  className="logo-hover-landing"
+                />
+                <img
+                  src="/assets/business/nasdaq.png"
+                  className="logo-hover-landing"
+                />
+                <img
+                  src="/assets/business/statefarm.png"
+                  className="logo-hover-landing"
+                />
+                <img
+                  src="/assets/business/nationwide.png"
+                  className="logo-hover-landing"
+                />
+                <img
+                  src="/assets/business/stateauto.png"
+                  className="logo-hover-landing"
+                />
+                <img
+                  src="/assets/business/insight.png"
+                  className="logo-hover-landing"
+                />
+                <img
+                  src="/assets/business/verizon.png"
+                  className="logo-hover-landing"
+                />
+                <img
+                  src="/assets/business/travelers.png"
+                  className="logo-hover-landing"
+                />
+                <img
+                  src="/assets/business/hunginton.png"
+                  className="logo-hover-landing"
+                />
+                <img
+                  src="/assets/business/tata.png"
+                  className="logo-hover-landing"
+                />
+              </div>
               <img
-                src="/assets/business/progressive.png"
-                className="logo-hover-landing"
+                src="/landing/prev-arrow.svg"
+                className="h-10 v-h-center w-fit select-none absolute top-[40%] bottom-[60%] translate-(-50%,-50%)   left-[3rem] md:left-[7rem] text-primary-gray cursor-pointer"
+                onClick={() => {
+                  scroll("left");
+                }}
               />
               <img
-                src="/assets/business/icici.png"
-                className="logo-hover-landing"
-              />
-              <img
-                src="/assets/business/transamerica.png"
-                className="logo-hover-landing"
-              />
-              <img
-                src="/assets/business/nasdaq.png"
-                className="logo-hover-landing"
-              />
-              <img
-                src="/assets/business/statefarm.png"
-                className="logo-hover-landing"
-              />
-              <img
-                src="/assets/business/nationwide.png"
-                className="logo-hover-landing"
-              />
-              <img
-                src="/assets/business/stateauto.png"
-                className="logo-hover-landing"
-              />
-              <img
-                src="/assets/business/insight.png"
-                className="logo-hover-landing"
-              />
-              <img
-                src="/assets/business/verizon.png"
-                className="logo-hover-landing"
-              />
-              <img
-                src="/assets/business/travelers.png"
-                className="logo-hover-landing"
-              />
-              <img
-                src="/assets/business/hunginton.png"
-                className="logo-hover-landing"
-              />
-              <img
-                src="/assets/business/tata.png"
-                className="logo-hover-landing"
+                src="/landing/next-arrow.svg"
+                className="h-10 w-fit md:v-h-center select-none absolute top-[40%] bottom-[60%] translate-(-50%,-50%)  right-[2rem] md:right-[6rem] text-primary-gray cursor-pointer"
+                onClick={() => {
+                  scroll("right");
+                }}
               />
             </div>
-            <img
-              src="/landing/prev-arrow.svg"
-              className="h-10 v-h-center w-fit select-none absolute top-[40%] bottom-[60%] translate-(-50%,-50%)   left-[3rem] md:left-[7rem] text-primary-gray cursor-pointer"
-              onClick={() => {
-                scroll("left");
-              }}
-            />
-            <img
-              src="/landing/next-arrow.svg"
-              className="h-10 w-fit md:v-h-center select-none absolute top-[40%] bottom-[60%] translate-(-50%,-50%)  right-[2rem] md:right-[6rem] text-primary-gray cursor-pointer"
-              onClick={() => {
-                scroll("right");
-              }}
-            />
-          </div>
           </div>
         </div>
       </section>
