@@ -16,19 +16,14 @@ export const getJobDetails = async (req, res) => {
 
     try {
 
-
-
-
-        let { search, page, limit, _id } = req.query
-
+        let { search, page, limit, _id, is_active } = req.query
 
         limit = parseInt(limit)
         page = parseInt(page)
+        if(is_active)is_active = JSON.parse(is_active)
+        
 
-
-
-
-        let searchQuery = [
+        let filterSearchQuery = [
             {
                 "$match": {
 
@@ -45,13 +40,18 @@ export const getJobDetails = async (req, res) => {
                                 "$regex": `${search}`, $options: 'i'
 
                             }
-                        }
+                        },
+
 
 
                     ]
 
                 }
-            }, {
+            },
+            {
+                "$match": { is_active: is_active }
+            },
+            {
 
                 "$skip": page * limit - limit
             },
@@ -59,25 +59,69 @@ export const getJobDetails = async (req, res) => {
                 "$limit": limit
             },
             { $sort: { _id: -1 } },
-            // {
-            //     "$match": {is_active: true}
-            // }
+
 
 
         ]
 
+        let SearchQuery = [
+            {
+                "$match": {
+
+                    "$or": [
+
+                        {
+                            "job_id": {
+                                "$regex": `${search}`, $options: 'i'
+
+                            }
+                        },
+                        {
+                            "job_title": {
+                                "$regex": `${search}`, $options: 'i'
+
+                            }
+                        },
+
+
+
+                    ]
+
+                }
+            },
+            {
+
+                "$skip": page * limit - limit
+            },
+            {
+                "$limit": limit
+            },
+            { $sort: { _id: -1 } },
+
+
+
+        ]
+
+        if (typeof(is_active)=="boolean") {
+
+
+            const searchJobs = await Job.aggregate(filterSearchQuery)
+            const totalCounts = await Job.find().count()
+            return res.status(200).json({ success: "filter jobs", totalCounts: totalCounts, payload: searchJobs })
+
+
+        }
+    
 
         if (search && page && limit || page && limit) {
 
 
-            const searchJobs = await Job.aggregate(searchQuery)
+            const searchJobs = await Job.aggregate(SearchQuery)
             const totalCounts = await Job.find().count()
-            console.log(searchJobs.length);
-            return res.status(200).json({ success: "Get all jobs", totalCounts: totalCounts, payload: searchJobs })
+            return res.status(200).json({ success: "search all jobs", totalCounts: totalCounts, payload: searchJobs })
 
 
         }
-
 
         if (_id) {
 
@@ -92,11 +136,11 @@ export const getJobDetails = async (req, res) => {
 
         const getAllJobs = await Job.aggregate([
             { $sort: { _id: -1 } }, {
-                "$match": {is_active: true}
-        }
+                "$match": { is_active: true }
+            }
         ])
         const totalCounts = await Job.find().count()
-        return res.status(200).json({ success: "List All jobs", totalCounts: totalCounts, payload: getAllJobs })
+        return res.status(200).json({ success: "List active jobs", totalCounts: totalCounts, payload: getAllJobs })
 
 
 
