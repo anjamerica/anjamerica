@@ -34,8 +34,8 @@ const { serverRuntimeConfig } = getConfig()
       if(mobile_number&&description&&message&&first_name&&email){
        
       var mailOptions = {
-        from: 'fayiz@anjamerica.com',
-        to: 'fayizaravankara@gmail.com',
+        from: process.env.MAIL_FROM,
+        to: process.env.MAIL_TO,
         subject: 'Applicant Question',
         text: first_name +' job applied successfully'
       };
@@ -45,8 +45,8 @@ const { serverRuntimeConfig } = getConfig()
     if(name || job_title){
        
       var mailOptions = {
-        from: 'fayiz@anjamerica.com',
-        to: 'fayizaravankara@gmail.com',
+        from: process.env.MAIL_FROM,
+        to: process.env.MAIL_TO,
         subject: 'Applicant for job',
         text: name +' job applied '+job_title+" position"
       };
