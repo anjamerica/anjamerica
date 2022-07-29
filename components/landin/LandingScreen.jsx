@@ -69,9 +69,11 @@ export default function LandingScreen() {
         <div
           style={{
             background: `url(${"/landing/bg.png"})`,
-            objectFit: "contain",
+            objectFit: "cover",
+            backgroundSize:"100%",
+            backgroundRepeat:"no-repeat"
           }}
-          className="w-full h-screen"
+          className="w-full h-[60vh]  md:h-screen"
         >
           <div className="w-full h-fit shadow-sm">
             <Header />
@@ -105,7 +107,7 @@ export default function LandingScreen() {
                 </span>
               </div>
               <div className="mt-5 xl:mt-10">
-                <button className="w-fit font-semibold text-[14px] md:text-base  uppercase text-white bg-primary-blue px-6 py-[.6rem]  tracking-wide rounded-full hover:bg-blue-800 cursor-pointer transition-all text-center flex items-center justify-center">
+                <button className="w-fit font-semibold text-[14px] md:text-base  uppercase text-white bg-primary-blue px-6 py-[.6rem]  tracking-wide rounded-full hover:bg-blue-8 00 cursor-pointer transition-all text-center flex items-center justify-center">
                   KNOW MORE
                 </button>
               </div>
@@ -280,7 +282,7 @@ export default function LandingScreen() {
                 />
                 <img
                   src="/assets/business/tata.png"
-                  className="logo-hover-landing"
+                  className="mr-6 logo-hover-landing"
                 />
               </div>
               <img

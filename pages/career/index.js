@@ -35,11 +35,12 @@ export default function Career() {
       <section className="relative">
         <div
           style={{
-            background: `url(${"/landing/career.png"})`,
+            // background: `url(${"/landing/career.png"})`,
             objectFit: "cover",
-            backgroundRepeat: "no-repeat"
+            backgroundSize:"100%",
+            backgroundRepeat:"no-repeat"
           }}
-          className="w-full h-full"
+          className="w-full lg:h-[20rem] h-full bg-image-mobile sm:bg-image-web-career"
         >
           <div className="w-full h-fit shadow-sm">
             <Header />

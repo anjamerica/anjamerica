@@ -11,8 +11,6 @@ export default function JobCard({ item, getDetails }) {
   const [showAlert, setShowAlert] = useState(false);
   const router = useRouter();
 
-  console.log(item);
-
   // const [popup, setPopup] = useState({
   //   show: false, // initial values set to false and null
   //   id: null,
@@ -72,7 +70,7 @@ export default function JobCard({ item, getDetails }) {
   };
 
   return (
-    <div className="h-fit md:h-[14.9rem] flex flex-row border-[1px]  border-[#E9E9E9] rounded-lg w-full">
+    <div className="h-fit md:h-[16rem] flex flex-row border-[1px]  border-[#E9E9E9] rounded-lg w-full">
       <div
         className=" gap-2 flex flex-col p-4 md:gap-4"
         style={{ width: "inherit" }}
@@ -91,7 +89,7 @@ export default function JobCard({ item, getDetails }) {
           </span>
         </div>
         <div className="flex flex-col md:flex-row bg-[#EFEFEF] px-4 py-2 rounded-md justify-between">
-          <div className="flex flex-col md:flex-row justify-between w-[30%]">
+          <div className="flex flex-col md:flex-row justify-between w-[40%]">
             <span className="text-xs md:text-[14px] text-[#949191] md:font-[400]">
               Training Duration: {item?.training_details?.training_duration} hrs
             </span>
@@ -111,7 +109,7 @@ export default function JobCard({ item, getDetails }) {
           <hr className="bg-[#E7E7E7] absolute -bottom-[.6rem] h-[.5px] w-full" />
         </div>
         <div className="flex flex-col md:flex-row justify-between mt-0 mb-0">
-          <span className="text-xs  text-[#949191] md:font-[400] md:text-[14px] self-center">
+          <span className="text-xs  text-[#949191] md:font-[400] md:text-[14px] self-start my-2">
             Training Location: {item?.job_location?.city}
             {" , "} {item?.job_location?.state} {" , "}{" "}
             {item?.job_location?.country}

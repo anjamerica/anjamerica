@@ -18,7 +18,7 @@ export default function Footer() {
           <input
             type="text"
             placeholder="Subscribe Our Newsletter..."
-            className=" placeholder:text-[#777689] w-full lg:w-[30vw] text-[#777689] bg-transparent outline-none border-[#5A5A5A] border-b-[1px] px-2"
+            className=" placeholder:text-[#777689] w-full lg:w-[30vw] h-fit self-end text-[#777689] bg-transparent outline-none border-[#5A5A5A] border-b-[1px] px-2"
           />
           <button className="w-fit font-[400] self-center mt-10 text-primary-black bg-[#777689] px-8 py-[.6rem]  tracking-wide rounded-full hover:text-primary-blue hover:bg-white cursor-pointer transition-all text-center flex items-center justify-center">
             Subscribe

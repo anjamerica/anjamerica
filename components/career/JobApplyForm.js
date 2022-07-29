@@ -286,7 +286,7 @@ export default function JobApplyForm({ item, setFormModal }) {
           </div>
           <span className="text-xs text-red-700">{formError?.file_err}</span>
           <button
-            className="w-full font-semibold text-xs text-white bg-primary-blue px-6 py-2  rounded-md text-center flex items-center justify-center"
+            className="w-full font-semibold text-xs text-white bg-primary-blue px-6 py-2 hover:bg-blue-800  rounded-md text-center flex items-center justify-center"
             onClick={handleSubmit}
           >
             Submit

@@ -10,16 +10,17 @@ export default function About() {
       <section className="relative">
       <div
           style={{
-            background: `url(${"/landing/career.png"})`,
+            // background: `url(${"/landing/career.png"})`,
             objectFit: "cover",
-            backgroundRepeat: "no-repeat"
+            backgroundSize:"100%",
+            backgroundRepeat:"no-repeat"
           }}
-          className="w-full h-full"
+          className="w-full lg:h-[20rem] h-full bg-image-mobile sm:bg-image-web-career"
         >
           <div className="w-full h-fit shadow-sm">
             <Header />
           </div>
-        <div className=" pt-10 lg:pb-20 lg:h-[35vh]  w-full ">
+        <div className=" pt-10 lg:pb-20 h-[25vh] lg:h-[35vh]  w-full ">
           <div className="text-center flex flex-col">
             <span className="text-primary-blue text-[2rem] uppercase font-extrabold md:text-[2.5rem]">
               About Us
