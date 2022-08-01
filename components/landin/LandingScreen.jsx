@@ -12,7 +12,7 @@ const services = [
     index: "01",
     service: "Lorem Ipsum is simply dummy",
     description:
-      "Hire from the top 2% of software talent in the world. We have an exclusive pool of the top niche Professionals who can be sourced to your project as a full time or a consultant.",
+      "Hire from the top 2% of software talent in the world. We have an exclusive pool of the top Anj America Professionals who can be sourced to your project as a full time or a consultant.",
     link: "/",
   },
   {
@@ -26,21 +26,21 @@ const services = [
     index: "03",
     service: "Hire Right",
     description:
-      "Hire from the top 2% of software talent in the world. We have an exclusive pool of the top niche Professionals who can be sourced to your project as a full time or a consultant.",
+      "Hire from the top 2% of software talent in the world. We have an exclusive pool of the top Anj America Professionals who can be sourced to your project as a full time or a consultant.",
     link: "/staffing",
   },
   {
     index: "04",
     service: "Lorem Ipsum is simply dummy",
     description:
-      "Hire from the top 2% of software talent in the world. We have an exclusive pool of the top niche Professionals who can be sourced to your project as a full time or a consultant.",
+      "Hire from the top 2% of software talent in the world. We have an exclusive pool of the top Anj America Professionals who can be sourced to your project as a full time or a consultant.",
     link: "/",
   },
   {
     index: "05",
     service: "Lorem Ipsum is simply dummy",
     description:
-      "Hire from the top 2% of software talent in the world. We have an exclusive pool of the top niche Professionals who can be sourced to your project as a full time or a consultant.",
+      "Hire from the top 2% of software talent in the world. We have an exclusive pool of the top Anj America Professionals who can be sourced to your project as a full time or a consultant.",
     link: "/",
   },
 ];
@@ -81,15 +81,6 @@ export default function LandingScreen() {
 
           <div className=" h-[60vh] pt-10 pb-20  w-full md:h-[90vh]">
             <div>
-              {/* <img
-              src="/landing/bg.png"
-              // className="hidden md:flex md:absolute md:w-[100%] md:px-10 md:h-[80vh] md:-top-[1rem]"
-              className="hidden md:flex md:absolute md:w-[100%] md:h-[80vh] md:-top-[4rem]"
-            /> */}
-              {/* <img
-              src="/assets/landing/mob_bg_landing.svg"
-              className="absolute w-full h-[45vh] object-contain -top-[2.5rem] px-2 md:hidden"
-            />  */}
             </div>
             <div className=" flex h-full flex-col gap-0 justify-center self-center items-center">
               <div className="flex justify-center">
@@ -309,21 +300,6 @@ export default function LandingScreen() {
       <section id="contact">
         <Contact />
       </section>
-      {/* <section>
-      <section id="contact">
-        <div className="relative p-5 bg-[#ecf2f8] flex justify-center w-full h-[90vh] md:p-10">
-          <div className="w-full flex justify-center">
-            <span className="text-[1.5rem] break-words text-[#0a1f44] text-center font-bold md:text-[2rem] my-2">
-              Have any Questions?
-            </span>
-          </div>
-          <div className="v-center absolute -bottom-[3rem] md:-bottom-[4rem] z-10 p-[1.5rem] md:p-[2rem]">
-            <Contact />
-          </div>
-        </div>
-      </section>
-        <Footer />
-      </section> */}
       <section>
         <Footer />
       </section>

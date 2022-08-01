@@ -85,7 +85,7 @@ export default function Contact() {
                 LOCATE US
               </span>
               <span className="font-thin text-sm text-[#141414]">
-                9253 Centauri Ave Columbus, OH - 43240
+                119 S. Main Street, Suite 500,<br/>Memphis, TN 38103,USA
               </span>
             </div>
             <div className="flex flex-col gap-2">
@@ -93,7 +93,7 @@ export default function Contact() {
                 CALL US
               </span>
               <span className="font-thin text-sm text-[#141414]">
-                (614) 535-5738
+                9016005572
               </span>
             </div>
             <div className="flex flex-col gap-2">
@@ -101,7 +101,7 @@ export default function Contact() {
                 EMAIL US
               </span>
               <span className="font-thin text-sm text-[#141414]">
-                contact@nichetechies.com
+                contact@anjamerica.com
               </span>
             </div>
           </div>

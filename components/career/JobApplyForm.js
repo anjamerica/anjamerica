@@ -165,19 +165,19 @@ export default function JobApplyForm({ item, setFormModal }) {
   return (
     <>
       <div
-        className="fixed left-0 top-0 w-full h-full flex justify-center items-center z-[100]"
+        className="fixed left-0 top-0 w-full h-full flex justify-center items-center"
         id="modal"
       >
-        <div
+        {/* <div
           className="fixed left-0 top-0 bg-black w-full h-full opacity-[20%]"
           onClick={(e) => {
             setFormModal(false);
           }}
-        ></div>
+        ></div> */}
         <div
           className={`${
             router.pathname == "/career" &&
-            "w-full fixed left-0 top-0 bg-black h-full opacity-25 z-50"
+            "w-full fixed left-0 top-0 bg-black h-full opacity-25"
           }`}
           onClick={() => setFormModal(false)}
         ></div>
@@ -187,10 +187,10 @@ export default function JobApplyForm({ item, setFormModal }) {
             router.pathname == "/career"
               ? "fixed top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] "
               : ""
-          }w-full bg-[#F0F0F0] flex flex-col gap-2 p-10 z-50 md:w-[25rem]  md:rounded-xl `}
+          }w-full bg-[#F0F0F0] flex flex-col gap-2 p-10 z-10 md:w-[25rem]  md:rounded-xl`}
         >
           <div className="flex flex-row justify-between w-full">
-            <span className="text-xl md:font-semibold text-center z-10">
+            <span className="text-xl md:font-semibold text-center ">
               {item?.job_title}
             </span>
             <span className="w-fit h-full" onClick={()=>setFormModal(false)}>

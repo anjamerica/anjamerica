@@ -160,7 +160,7 @@ export default function JobCard({ item, getDetails }) {
         </div>
 
         {formModal && (
-          <div className="fixed top-10">
+          <div className="fixed top-10 z-50">
             <JobApplyForm setFormModal={setFormModal} item={item} />
           </div>
         )}

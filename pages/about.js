@@ -64,7 +64,7 @@ export default function About() {
                 unique business needs. We cant afford not to mention about our
                 hybrid agile methodology and our highly skilled and experienced
                 business analysts as they are the foundation of all our success
-                stories. At Nichetech we cherry pick our Project Managers,
+                stories. At Anj America we cherry pick our Project Managers,
                 Architects, Developers and Quality Analysts who have the right
                 mix of Technical knowledge, business insights, and possess great
                 attitude.

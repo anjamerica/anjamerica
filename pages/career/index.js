@@ -37,8 +37,8 @@ export default function Career() {
           style={{
             // background: `url(${"/landing/career.png"})`,
             objectFit: "cover",
-            backgroundSize:"100%",
-            backgroundRepeat:"no-repeat"
+            backgroundSize: "100%",
+            backgroundRepeat: "no-repeat",
           }}
           className="w-full lg:h-[20rem] h-full bg-image-mobile sm:bg-image-web-career"
         >
@@ -49,7 +49,7 @@ export default function Career() {
             <div className="flex h-full flex-col justify-center self-center items-center">
               <div className="flex justify-center">
                 <span className="text-[#FFD700] text-[.85rem] md:text-[16px] font-[700]">
-                  EXPLORE A CAREER AT NICHE TECHIES
+                  EXPLORE A CAREER AT ANJ AMERICA
                 </span>
               </div>
               <div className="text-anim-blog text-[#07038C] uppercase text-[24px] text-center font-[800] sm:text-[34px] xl:text-[36px]">
@@ -81,7 +81,9 @@ export default function Career() {
           </div>
         </div>
       </section>
-      <Footer />
+      <section>
+        <Footer />
+      </section>
     </main>
   );
 }

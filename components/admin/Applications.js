@@ -158,7 +158,7 @@ export default function Applications() {
 
       <div className="w-full p-0 md:px-10">
         <div className="scrollbar-table">
-          <table className="table-fixed w-[60rem] md:w-full border-spacing-y-2">
+          <table className="table-fixed w-[60rem] md:w-full border-spacing-y-2 border-collapse">
             <thead className="overflow-x-auto">
               <tr className="bg-primary-blue text-left">
                 <th className="text-sm  w-40 text-white md:text-md font-normal px-2 py-3  break-words">
@@ -177,7 +177,7 @@ export default function Applications() {
                   Post
                 </th>
                 <th className="sticky right-0 z-10 text-sm w-28 md:w-32 bg-[#33B5AF] md:bg-primary-blue text-center text-white md:text-md font-normal px-2 py-3  break-words">
-                  Resume
+                  Show More
                 </th>
               </tr>
             </thead>
@@ -185,7 +185,14 @@ export default function Applications() {
               {applications &&
                 applications.map((item, i) => {
                   return (
-                    <tr className="bg-[#F9F9F9] w-full" key={i}>
+                    <tr
+                      className={`${
+                        item?.job_details?.is_active === true
+                          ? "bg-[#F9F9F9]"
+                          : "bg-[#DDD]"
+                      } w-full gap-2`}
+                      key={i}
+                    >
                       <td className="text-black  text-sm md:text-md font-normal px-2 py-3 break-words">
                         {item.name}
                       </td>
@@ -216,7 +223,11 @@ export default function Applications() {
                       <td
                         key={i}
                         onClick={() => handleGetCv(item.file)}
-                        className="sticky right-0 z-10 w-28 text-sm bg-[#F2F1F1] md:bg-[#F9F9F9] text-primary-blue text-center font-normal px-2 py-3  break-words"
+                        className={`${
+                          item?.job_details?.is_active === true
+                            ? "bg-[#F2F1F1] md:bg-[#F9F9F9] sticky right-0 z-10 w-28 text-sm  text-primary-blue text-center font-normal px-2 py-3  break-words"
+                            : "bg-[#CCC] sticky right-0 z-10 w-28 text-sm  text-primary-blue text-center font-normal px-2 py-3  break-words"
+                        }`}
                       >
                         VIEW
                       </td>
@@ -236,31 +247,6 @@ export default function Applications() {
             />
           )}
         </div>
-        {/* <table className="w-40">
-          <thead>
-            <tr className="bg-primary-green">
-              <th className="text-sm text-white md:text-md font-thin px-2 py-3  break-words">
-                Resume
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            {applications &&
-              applications.map((item, i) => {
-                return (
-                  <tr className="bg-[#F9F9F9] my-2" key={i}>
-                    <td
-                      key={i}
-                      onClick={() => handleGetCv(item.file)}
-                      className="text-sm text-[#16A59E] md:text-md font-thin px-2 py-3  break-words"
-                    >
-                      VIEW
-                    </td>
-                  </tr>
-                );
-              })}
-          </tbody>
-        </table> */}
       </div>
     </div>
   );
