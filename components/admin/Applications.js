@@ -111,12 +111,12 @@ export default function Applications() {
           <div className="w-fit bg-[#F0F0F0] flex justify-center h-fit">
             <ul>
               <Link href="/newpost">
-                <li className="w-full text-left py-2 px-10 cursor-pointer text-black hover:text-primary-green text-xs">
+                <li className="w-full text-left py-2 px-10 cursor-pointer text-black hover:text-primary-blue text-xs">
                   Add new post
                 </li>
               </Link>
               <li
-                className="w-full text-left py-2 px-10 cursor-pointer text-black hover:text-primary-green text-xs"
+                className="w-full text-left py-2 px-10 cursor-pointer text-black hover:text-primary-blue text-xs"
                 onClick={handleLogout}
               >
                 Logout
@@ -216,7 +216,7 @@ export default function Applications() {
                       <td
                         key={i}
                         onClick={() => handleGetCv(item.file)}
-                        className="sticky right-0 z-10 w-28 text-sm bg-[#F2F1F1] md:bg-[#F9F9F9] text-primary-blue text-center font-normal px-2 py-3  break-words"
+                        className="sticky right-0 z-10 w-28 text-sm bg-[#F2F1F1] md:bg-[#F9F9F9] text-primary-blue text-center font-normal px-2 py-3  break-words hover:text-blue-500 cursor-pointer"
                       >
                         VIEW
                       </td>
