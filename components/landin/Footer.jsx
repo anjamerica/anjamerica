@@ -1,11 +1,11 @@
 import React from "react";
-import { FaFacebookF, FaTwitter, FaInstagram } from "react-icons/fa";
+import { FaFacebookF, FaLinkedinIn, FaInstagram } from "react-icons/fa";
 import { BsEnvelopeFill } from "react-icons/bs";
 import Link from "next/link";
 
 export default function Footer() {
   return (
-    <div className="relative bg-[#07081D] w-full h-fit pt-10 z-0 select-none">
+    <div className="relative bg-[#07081D] w-full h-fit z-10 pt-10 select-none">
       <div className="flex justify-center  flex-col px-5 gap-4">
         <span className="text-white font-bold text-2xl self-center px-3 text-center">
           Get to know us!
@@ -18,7 +18,7 @@ export default function Footer() {
           <input
             type="text"
             placeholder="Subscribe Our Newsletter..."
-            className=" placeholder:text-[#777689] w-full lg:w-[30vw] text-[#777689] bg-transparent outline-none border-[#5A5A5A] border-b-[1px] px-2"
+            className=" placeholder:text-[#777689] w-full lg:w-[30vw] h-fit self-end text-[#777689] bg-transparent outline-none border-[#5A5A5A] border-b-[1px] px-2"
           />
           <button className="w-fit font-[400] self-center mt-10 text-primary-black bg-[#777689] px-8 py-[.6rem]  tracking-wide rounded-full hover:text-primary-blue hover:bg-white cursor-pointer transition-all text-center flex items-center justify-center">
             Subscribe
@@ -26,9 +26,9 @@ export default function Footer() {
         </div>
       </div>
       <div className="flex justify-center mt-14 mb-2 px-20">
-        <div className="w-[60vw] bg-[#777689] h-[.1px] lg:h-[1px]"></div>
+        <div className="w-[60vw] bg-[#222230] h-[.1px]"></div>
       </div>
-      <div className="flex flex-col lg:flex-row md:justify-around py-10 md:p-10">
+      <div className="flex flex-col lg:flex-row md:justify-around gap-4 py-10 md:p-10">
         <div className="flex flex-col md:gap-4">
           <Link href="/">
             <img
@@ -41,9 +41,11 @@ export default function Footer() {
             all the answers you need.
           </span>
         </div>
-        <div className="flex gap-4 flex-col lg:flex-row">
+        <div className="flex gap-4 w-[40vw] justify-between flex-col lg:flex-row">
           <div className="flex flex-col px-5 md:px-0 mt-8 md:mt-0">
-            <span className="text-white text-[24px] font-semibold">Company</span>
+            <span className="text-white text-[24px] font-semibold">
+              Company
+            </span>
             {/* <Link href="/about"> */}
             <Link href="/about">
               <span className="footer-link">About Us</span>
@@ -51,7 +53,9 @@ export default function Footer() {
           </div>
           <div className="flex flex-col px-5 md:px-0">
             <Link href="/#services" passHref>
-              <span className="text-white text-[24px] font-semibold">Services</span>
+              <span className="text-white text-[24px] font-semibold">
+                Services
+              </span>
             </Link>
             <Link href="/digitize" passHref>
               <span className="footer-link">Digitize</span>
@@ -61,22 +65,40 @@ export default function Footer() {
             </Link>
           </div>
           <div className="flex flex-col px-5 md:px-0">
-            <span className="text-white text-[24px] font-semibold">Social</span>
-            <div className="flex flex-row gap-2 text-white mt-2 mb-4">
-              <a href="https://www.facebook.com/anjamericadotcom/about/" target="_blank">
-              <span className="bg-primary-violet h-8 w-8 cursor-pointer rounded-full flex items-center justify-center">
-                <FaFacebookF className="h-fit w-fit" />
-              </span></a>
-              <span className="bg-primary-violet h-8 w-8 cursor-pointer rounded-full flex items-center justify-center">
-                <FaTwitter className="h-fit w-fit" />
-              </span>
-              <a href="https://instagram.com/anj.america?igshid=YmMyMTA2M2Y=" target="_blank">
-              <span className="bg-primary-violet h-8 w-8 cursor-pointer rounded-full flex items-center justify-center">
-                <FaInstagram className="h-fit w-fit" />
-              </span></a>
-              <span className="bg-primary-violet h-8 w-8 cursor-pointer rounded-full flex items-center justify-center">
-                <BsEnvelopeFill className="h-fit w-fit" />
-              </span>
+            {/* <span className="text-white text-[24px] font-semibold">Social</span> */}
+            <div className="flex flex-row gap-2 text-white md:mt-11 mb-4">
+              <a
+                href="https://www.facebook.com/anjamericadotcom/about/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <span className="bg-primary-violet h-8 w-8 cursor-pointer rounded-full flex items-center justify-center">
+                  <FaFacebookF className="h-fit w-fit" />
+                </span>
+              </a>
+              <a
+                href="https://www.linkedin.com/company/anj-america"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <span className="bg-primary-violet h-8 w-8 cursor-pointer rounded-full flex items-center justify-center">
+                  <FaLinkedinIn className="h-fit w-fit" />
+                </span>
+              </a>
+              <a
+                href="https://instagram.com/anj.america?igshid=YmMyMTA2M2Y="
+                target="_blank"
+                rel="noreferrer"
+              >
+                <span className="bg-primary-violet h-8 w-8 cursor-pointer rounded-full flex items-center justify-center">
+                  <FaInstagram className="h-fit w-fit" />
+                </span>
+              </a>
+              <Link href="/#contact">
+                <span className="bg-primary-violet h-8 w-8 cursor-pointer rounded-full flex items-center justify-center">
+                  <BsEnvelopeFill className="h-fit w-fit" />
+                </span>
+              </Link>
             </div>
           </div>
         </div>

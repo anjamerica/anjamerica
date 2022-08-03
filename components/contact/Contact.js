@@ -27,7 +27,10 @@ export default function Contact() {
       if (!details.mobile_number) {
         return setFormError({ number_err: "Number is required" });
       }
-      if (details.mobile_number.length > 12) {
+      if (details.mobile_number.length < 10) {
+        return setFormError({ number_err: "Invalid Phone Number" });
+      }
+      if (details.mobile_number.length > 11) {
         return setFormError({ number_err: "Invalid Phone Number" });
       }
       if (!details.email) {
@@ -73,8 +76,8 @@ export default function Contact() {
       <span className="w-full text-[1.5rem] break-words text-[#0a1f44] text-center font-extrabold md:text-[2rem] my-2">
         Have any Questions?
       </span>
-      <div>
-        <div className="w-full -mb-[3rem] h-fit px-5 md:px-10 py-5 md:p-20 z-0  grid grid-cols-1 gap-8 md:grid-cols-2 contact rounded-xl">
+      <div className="flex justify-center md:px-5">
+        <div className="-mb-[3rem] h-fit w-full px-5 md:px-10 py-5 md:p-20 z-0  grid grid-cols-1 gap-8 md:grid-cols-2 contact rounded-xl">
           {/* <Loader /> */}
           <div className="flex flex-col gap-2 md:gap-8">
             <span className="text-[1.5rem] text-left break-words text-black font-bold md:text-[2rem]">
@@ -85,7 +88,7 @@ export default function Contact() {
                 LOCATE US
               </span>
               <span className="font-thin text-sm text-[#141414]">
-                9253 Centauri Ave Columbus, OH - 43240
+                119 S. Main Street, Suite 500,<br/>Memphis, TN 38103,USA
               </span>
             </div>
             <div className="flex flex-col gap-2">
@@ -93,7 +96,7 @@ export default function Contact() {
                 CALL US
               </span>
               <span className="font-thin text-sm text-[#141414]">
-                (614) 535-5738
+                9016005572
               </span>
             </div>
             <div className="flex flex-col gap-2">
@@ -101,7 +104,7 @@ export default function Contact() {
                 EMAIL US
               </span>
               <span className="font-thin text-sm text-[#141414]">
-                contact@nichetechies.com
+                contact@anjamerica.com
               </span>
             </div>
           </div>

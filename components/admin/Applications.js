@@ -7,6 +7,7 @@ import Loader from "../layout/Loader";
 import { downloadFile } from "../../services/file";
 import { useRouter } from "next/router";
 import { MdOutlineLogout } from "react-icons/md";
+import ApplicationDetails from "./ApplicationDetails";
 
 export default function Applications() {
   const [navOpen, setNavOpen] = useState(false);
@@ -91,7 +92,7 @@ export default function Applications() {
         <Link href="/home">
           <img
             src="/landing/logo.svg"
-            className="h-16 w-40 xl:h-20 xl:w-56 object-contain"
+            className="h-16 --ml-5 md:-ml-12 w-40 xl:h-20 xl:w-56 object-contain"
           />
         </Link>
         <img
@@ -129,7 +130,7 @@ export default function Applications() {
         className="flex flex-col-reverse justify-between p-5 md:p-10 md:flex-row"
         // onClick={() => setNavOpen(!navOpen)}
       >
-        <div className="mt-4 text-base font-semibold md:font-semibold md:mt-0">
+        <div className="mt-4 text-lg font-semibold md:font-semibold md:mt-0">
           Applications
         </div>
         <div className="flex flex-row items-center gap-2">
@@ -158,10 +159,13 @@ export default function Applications() {
 
       <div className="w-full p-0 md:px-10">
         <div className="scrollbar-table">
-          <table className="table-fixed w-[60rem] md:w-full border-spacing-y-2">
+          <table className="table-fixed w-[60rem] md:w-full border-spacing-y-2 border-collapse">
             <thead className="overflow-x-auto">
               <tr className="bg-primary-blue text-left">
-                <th className="text-sm  w-40 text-white md:text-md font-normal px-2 py-3  break-words">
+                <th className="text-sm  w-20 text-white md:text-md font-normal px-5 md:px-3 py-3  break-words">
+                  ID
+                </th>
+                <th className="text-sm   w-40 text-white md:text-md font-normal  px-2 py-3 break-words">
                   Name
                 </th>
                 <th className="text-sm w-40  text-white md:text-md font-normal px-2 py-3  break-words">
@@ -171,19 +175,20 @@ export default function Applications() {
                   Email ID
                 </th>
                 <th className="text-sm w-44 text-white md:text-md font-normal px-2 py-3  break-words">
-                  Linkedin profile link
+                  Application Date
                 </th>
                 <th className="text-sm w-44 text-white md:text-md font-normal px-2 py-3  break-words">
                   Post
                 </th>
-                <th className="sticky right-0 z-10 text-sm w-28 md:w-32 bg-[#33B5AF] md:bg-primary-blue text-center text-white md:text-md font-normal px-2 py-3  break-words">
-                  Resume
+                <th className="sticky right-0 z-10 text-sm w-28 md:w-32 bg-[#262c9c] md:bg-primary-blue text-center text-white md:text-md font-normal px-2 py-3  break-words">
+                  Show More
                 </th>
               </tr>
             </thead>
             <tbody>
-              {applications &&
+              {applications.length > 1 ? (
                 applications.map((item, i) => {
+<<<<<<< HEAD
                   return (
                     <tr className="bg-[#F9F9F9] w-full" key={i}>
                       <td className="text-black  text-sm md:text-md font-normal px-2 py-3 break-words">
@@ -223,6 +228,20 @@ export default function Applications() {
                     </tr>
                   );
                 })}
+=======
+                  return <ApplicationDetails key={i} item={item} />;
+                })
+              ) : (
+                <tr>
+                  <td
+                    colSpan={12}
+                    className="w-full font-semibold text-base flex justify-start text-primary-gray"
+                  >
+                    No Applicants Available
+                  </td>
+                </tr>
+              )}
+>>>>>>> 5993210b218fc1338ffa1fd5677e486031aa39c9
             </tbody>
           </table>
         </div>
@@ -236,31 +255,6 @@ export default function Applications() {
             />
           )}
         </div>
-        {/* <table className="w-40">
-          <thead>
-            <tr className="bg-primary-green">
-              <th className="text-sm text-white md:text-md font-thin px-2 py-3  break-words">
-                Resume
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            {applications &&
-              applications.map((item, i) => {
-                return (
-                  <tr className="bg-[#F9F9F9] my-2" key={i}>
-                    <td
-                      key={i}
-                      onClick={() => handleGetCv(item.file)}
-                      className="text-sm text-[#16A59E] md:text-md font-thin px-2 py-3  break-words"
-                    >
-                      VIEW
-                    </td>
-                  </tr>
-                );
-              })}
-          </tbody>
-        </table> */}
       </div>
     </div>
   );

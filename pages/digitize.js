@@ -22,27 +22,29 @@ export default function Digitize() {
         <div className="w-full flex justify-center mt-0 md:mt-8">
           <img
             src="/assets/landing/about_1.png"
-            className="w-[70vw] md:w-[50vw] h-fit object-contain self-center"
+            className="w-[70vw] md:w-fit h-fit object-contain self-center"
           />
         </div>
         <span className="self-center text-base flex flex-row gap-2 mt-0 md:mt-8">
           Learn about
           <Link href="\digitize#feature">
-            <span className="text-[#7540ee]">all our features</span>
+            <span className="text-[#7540ee] cursor-pointer">
+              all our features
+            </span>
           </Link>
           <BsArrowRight className="w-5 h-4 self-center text-black" />
         </span>
       </section>
       <section id="feature">
         <div className="bg-[#e4fdfc] w-full h-full p-10 flex gap-10 flex-col lg:flex-row">
-          <div className="flex flex-col w-full">
-            <p className="text-md text-primary-black font-semibold">
+          <div className="flex flex-col lg:w-[50%]">
+            <p className="text-md text-primary-blue-dark font-bold ml-5">
               OUR FEATURES
             </p>
-            <p className="text-[30px] leading-[33px] md:text-[42px] md:leading-[45px] font-bold mt-1 text-[#04c0de]">
+            <p className="text-[1.5rem] md:text-[1.8rem] ml-5 font-[900] mt-1 text-[#04c0de]">
               Helping you grow at every Step
             </p>
-            <p className="text-normal-digitze text-left">
+            <p className="text-normal-digitze w-full max-w-[562px] ml-5 text-left">
               We access your business, process, and technology and make
               recommendations to make the same better in a very competitive
               business model that benefits your business. Whether it be Business
@@ -52,104 +54,114 @@ export default function Digitize() {
               invaluable customer satisfaction to your business.
             </p>
             <img
+              alt="logo image"
               src="/assets/landing/about_2.png"
-              className="w-full h-fit object-contain"
+              className="w-full h-fit md:w-[80%] flex self-center object-contain"
             />
           </div>
-          <div>
-            <div className="flex justify-between gap-6 w-full mt-6">
-              <div className="w-14 h-full flex rounded-[50px] justify-center items-center  bg-white drop-shadow-lg">
+          <div className="md:w-[50%]">
+            <div className="flex flex-1 gap-6 w-fit mt-6">
+              <div className="w-fit h-full flex rounded-[50px] justify-center items-center  bg-white drop-shadow-lg">
                 <div className="h-10 w-10 flex justify-center items-center">
                   <img
+                    alt="logo image"
                     src="/assets/landing/about_3.svg"
                     className="w-5 h-5 self-center"
                   />
                 </div>
               </div>
-              <div className="flex flex-col gap-4">
-                <div className="text-[1rem] font-semibold text-[#333]">
+              <div className="flex flex-col gap-4 w-full">
+                <div className="text-[1rem] font-bold text-[#333]">
                   Web Design &#38; Development
                 </div>
-                <div className="text-normal-digitze text-left">
-                  With our years of website production and design experience, we
-                  are able to deliver the ideal web design and development
-                  solutions to you.
+                <div>
+                  <p className="text-normal-digitze break-words md:max-w-[83%] text-left">
+                    With our years of website production and design experience,
+                    we are able to deliver the ideal web design and development
+                    solutions to you.
+                  </p>
                 </div>
               </div>
             </div>
-            <div className="flex justify-between gap-6 w-full mt-6">
-              <div className="w-14 h-full flex rounded-[50px] justify-center items-center  bg-white drop-shadow-lg">
+            <div className="flex flex-1 gap-6 w-fit mt-6">
+              <div className="w-fit h-full flex rounded-[50px] justify-center items-center  bg-white drop-shadow-lg">
                 <div className="h-10 w-10 flex justify-center items-center">
                   <img
+                    alt="logo image"
                     src="/assets/landing/about_4.svg"
                     className="w-5 h-5 self-center"
                   />
                 </div>
               </div>
-              <div className="flex flex-col gap-4">
-                <div className="text-[1rem] font-semibold text-[#333]">
+              <div className="flex flex-col w-full gap-4">
+                <div className="text-[1rem] whitespace-nowrap font-bold text-[#333]">
                   E-Commerce Development
                 </div>
-                <div className="text-normal-digitze text-left">
-                  Enabling businesses to reach a wider customer base with our
-                  ecommerce website development services
+                <div className="w-full">
+                  <p className="text-normal-digitze break-words md:max-w-[83%] text-left">
+                    Enabling businesses to reach a wider customer base with our
+                    ecommerce website development services
+                  </p>
                 </div>
               </div>
             </div>
-            <div className="flex justify-between gap-6 w-full mt-6">
-              <div className="w-14 h-full flex rounded-[50px] justify-center items-center  bg-white drop-shadow-lg">
+            <div className="flex flex-1 gap-6 w-fit mt-6">
+              <div className="w-fit h-full flex rounded-[50px] justify-center items-center  bg-white drop-shadow-lg">
                 <div className="h-10 w-10 flex justify-center items-center">
                   <img
+                    alt="logo image"
                     src="/assets/landing/about_6.svg"
                     className="w-5 h-5 self-center"
                   />
                 </div>
               </div>
               <div className="flex flex-col gap-4">
-                <div className="text-[1rem] font-semibold text-[#333]">
+                <div className="text-[1rem] font-bold w-fit text-[#333]">
                   Mobile Application Development
                 </div>
-                <div className="text-normal-digitze text-left">
+                <div className="text-normal-digitze md:max-w-[85%] break-words text-left">
                   Our experience ranges from membership dashboards development
                   to custom eCommerce integration and business process
                   applications.
                 </div>
               </div>
             </div>
-            <div className="flex justify-between gap-6 w-full mt-6">
-              <div className="w-14 h-full flex rounded-[50px] justify-center items-center  bg-white drop-shadow-lg">
+            <div className="flex flex-1 gap-6 w-fit mt-6">
+              <div className="w-fit h-full flex rounded-[50px] justify-center items-center  bg-white drop-shadow-lg">
                 <div className="h-10 w-10 flex justify-center items-center">
                   <img
+                    alt="logo image"
                     src="/assets/landing/about_7.svg"
                     className="w-5 h-5 self-center"
                   />
                 </div>
               </div>
               <div className="flex flex-col gap-4">
-                <div className="text-[1rem] font-semibold text-[#333]">
+                <div className="text-[1rem] font-bold text-[#333]">
                   Cloud Managed Solution
                 </div>
-                <div className="text-normal-digitze text-left">
+                <div className="text-normal-digitze md:max-w-[80%] break-words text-left">
                   We maintain oversight and administrative control of cloud
                   computing products and services, whether deployed in public,
                   private, or hybrid cloud environments
                 </div>
               </div>
             </div>
-            <div className="flex justify-between gap-6 w-full mt-6">
-              <div className="w-14 h-full flex rounded-[50px] justify-center items-center  bg-white drop-shadow-lg">
+            <div className="flex flex-1 gap-6 w-fit mt-6">
+              <div className="w-fit h-full flex rounded-[50px] justify-center items-center  bg-white drop-shadow-lg">
                 <div className="h-10 w-10 flex justify-center items-center">
                   <img
+                    alt="logo image"
                     src="/assets/landing/about_7.svg"
                     className="w-5 h-5 self-center"
                   />
                 </div>
               </div>
               <div className="flex flex-col gap-4">
-                <div className="text-[1rem] font-semibold text-[#333]">
+                <div className="text-[1rem] font-bold text-[#333]">
                   IT Consulting
                 </div>
-                <div className="text-normal-digitze text-left">
+                <div className="text-normal-digitze md:max-w-[83%] break-words text-left">
                   We can help you develop and execute a clear and strategic IT
                   roadmap with priorities that are closely linked to business
                   goals.

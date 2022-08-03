@@ -61,7 +61,7 @@ export default function Home() {
           <Link href="/home">
             <img
               src="/landing/logo.svg"
-              className="h-16 w-40 xl:h-20 xl:w-56 object-contain"
+              className="h-16 w-40 -ml-5 md:-ml-12 xl:h-20 xl:w-56 object-contain"
             />
           </Link>
           <img
@@ -81,19 +81,19 @@ export default function Home() {
             <div className="w-fit bg-[#F0F0F0] flex justify-center h-fit">
               <ul>
                 <Link href="/applications">
-                  <li className="w-full self-center text-left py-2 px-10 cursor-pointer text-black hover:text-primary-green text-xs border-b-black">
+                  <li className="w-full self-center text-left py-2 px-10 cursor-pointer text-black hover:text-primary-blue text-xs border-b-black">
                     Applications
                   </li>
                 </Link>
                 <hr className="bg-black w-full" />
                 <Link href="/newpost">
-                  <li className="w-full self-center text-left py-2 px-10 cursor-pointer text-black hover:text-primary-green text-xs">
+                  <li className="w-full self-center text-left py-2 px-10 cursor-pointer text-black hover:text-primary-blue text-xs">
                     Add new post
                   </li>
                 </Link>
                 <hr className="bg-black w-full" />
                 <li
-                  className="w-full self-center text-left py-2 px-10 cursor-pointer text-black hover:text-primary-green text-xs"
+                  className="w-full self-center text-left py-2 px-10 cursor-pointer text-black hover:text-primary-blue text-xs"
                   onClick={handleLogout}
                 >
                   Logout
@@ -104,7 +104,7 @@ export default function Home() {
         )}
       </div>
       <div className="flex flex-col-reverse justify-between p-5 md:p-10 md:flex-row">
-        <div className="mt-4 text-base md:font-semibold md:mt-0">Job Posts</div>
+        <div className="mt-4 ml-1 md:ml-0 text-base md:font-semibold md:mt-0">Job Posts</div>
         <div className="flex flex-row items-center gap-2">
           <div className="flex bg-[#F0F0F0] p-1 px-2 w-full justify-between md:w-fit cursor-pointer rounded-md">
             <input

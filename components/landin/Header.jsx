@@ -26,7 +26,7 @@ export default function Header() {
       <div className="hidden lg:flex justify-around gap-1 xl:gap-3 items-center md:mx-4 mr-7">
         <Link href="/about">
           <span
-            className={`cursor-pointer text-center md:text-base mx-2 md:mx-4 hover:text-primary-blue ${
+            className={`cursor-pointer text-center md:text-base mx-2 md:mx-4 font-semibold hover:text-primary-blue ${
               active == "/about" ? "text-[#07038C]" : "text-[#08081E]"
             }`}
           >
@@ -48,9 +48,10 @@ export default function Header() {
         </Link>
         <Link href="/digitize">
           <span
-            className={`cursor-pointer text-center md:text-base mx-2 md:mx-4 hover:text-primary-blue ${
+            className={`cursor-pointer text-center md:text-base mx-2 md:mx-4 font-semibold hover:text-primary-blue ${
               active == "/digitize" ? "text-[#07038C]" : "text-[#08081E]"
-            }`}n
+            }`}
+            n
           >
             Digitize
             <span className="w-full flex justify-center ease-linear duration-1000">
@@ -70,7 +71,7 @@ export default function Header() {
         </Link>
         <Link href="/staffing">
           <span
-            className={`cursor-pointer text-center md:text-base mx-2 md:mx-4 hover:text-primary-blue ${
+            className={`cursor-pointer text-center md:text-base mx-2 md:mx-4 font-semibold hover:text-primary-blue ${
               active == "/staffing" ? "text-[#07038C]" : "text-[#08081E]"
             }`}
           >
@@ -92,7 +93,7 @@ export default function Header() {
         </Link>
         <Link href="/career">
           <span
-            className={`cursor-pointer text-center md:text-base mx-2 md:mx-4 hover:text-primary-blue ${
+            className={`cursor-pointer text-center md:text-base mx-2 md:mx-4 font-semibold hover:text-primary-blue ${
               active == "/career" ? "text-[#07038C]" : "text-[#08081E]"
             }`}
           >
@@ -114,7 +115,7 @@ export default function Header() {
         </Link>
         <Link href="/#products">
           <span
-            className={`cursor-pointer text-center md:text-base mx-2 md:mx-4 hover:text-primary-blue ${
+            className={`cursor-pointer text-center md:text-base mx-2 md:mx-4 font-semibold hover:text-primary-blue ${
               active == "/#products" ? "text-[#07038C]" : "text-[#08081E]"
             }`}
           >
@@ -136,7 +137,7 @@ export default function Header() {
         </Link>
         <Link href="/blogs">
           <span
-            className={`cursor-pointer text-center md:text-base mx-2 md:mx-4 hover:text-primary-blue ${
+            className={`cursor-pointer text-center md:text-base mx-2 md:mx-4 font-semibold hover:text-primary-blue ${
               active == "/blogs" ? "text-[#07038C]" : "text-[#08081E]"
             }`}
           >
@@ -158,7 +159,7 @@ export default function Header() {
         </Link>
         <Link href="/#contact">
           <span
-            className={`cursor-pointer text-center md:text-base mx-2 md:mx-4 hover:text-primary-blue ${
+            className={`cursor-pointer text-center md:text-base mx-2 md:mx-4 font-semibold hover:text-primary-blue ${
               active == "/#contact" ? "text-[#07038C]" : "text-[#08081E]"
             }`}
           >
@@ -179,49 +180,55 @@ export default function Header() {
           </span>
         </Link>
       </div>
-      <div
-        className="h-full select-none flex items-center justify-center lg:hidden py-4"
-        onClick={() => setNavOpen(!navOpen)}
+      <span
+        className="h-full flex items-center justify-center lg:hidden py-4"
+        onClick={(e) => {
+          setNavOpen(!navOpen);
+        }}
       >
         <BsThreeDots className="h-9 w-9 text-[#B4B4BE] rotate-90 self-center cursor-pointer" />
-      </div>
+      </span>
       {navOpen && (
-        <div className="absolute top-[4rem] right-[0rem] z-50 w-full md:hidden">
-          <div className="nav-anim w-full p-3 bg-white h-fit">
+        <div
+          className="absolute top-[4rem] right-[0rem] bg-white z-50 w-full md:hidden"
+          data-aos="fade-down"
+          data-aos-duration="1000"
+        >
+          <div className="nav-anim w-full p-3  h-fit">
             <ul>
               <Link href="/about">
-                <li className="text-left py-2 text-primary-blue-dark hover:text-primary-green text-xs font-semibold">
+                <li className="text-left py-2 text-primary-blue-dark hover:text-blue-800 text-xs font-semibold">
                   Discover
                 </li>
               </Link>
               <Link href="/digitize">
-                <li className="text-left py-2 text-primary-blue-dark hover:text-primary-green text-xs font-semibold">
+                <li className="text-left py-2 text-primary-blue-dark hover:text-blue-800 text-xs font-semibold">
                   Digitize
                 </li>
               </Link>
               <Link href="/staffing">
-                <li className="text-left py-2 text-primary-blue-dark hover:text-primary-green text-xs font-semibold">
+                <li className="text-left py-2 text-primary-blue-dark hover:text-blue-800 text-xs font-semibold">
                   Hire Right
                 </li>
               </Link>
               <Link href="/career">
-                <li className="text-left py-2 text-primary-blue-dark hover:text-primary-green text-xs font-semibold">
+                <li className="text-left py-2 text-primary-blue-dark hover:text-blue-800 text-xs font-semibold">
                   Career
                 </li>
               </Link>
               <Link href="/#products">
-                <li className=" text-left py-2 text-primary-blue-dark hover:text-primary-green text-xs font-semibold">
+                <li className=" text-left py-2 text-primary-blue-dark hover:text-blue-800 text-xs font-semibold">
                   Our Products
                 </li>
               </Link>
 
               <Link href="/blogs">
-                <li className="text-left py-2 text-primary-blue-dark hover:text-primary-green text-xs font-semibold">
+                <li className="text-left py-2 text-primary-blue-dark hover:text-blue-800 text-xs font-semibold">
                   Blog
                 </li>
               </Link>
               <Link href="/#contact">
-                <li className="text-left py-2 text-primary-blue-dark hover:text-primary-green text-xs font-semibold">
+                <li className="text-left py-2 text-primary-blue-dark hover:text-blue-800 text-xs font-semibold">
                   Get in Touch
                 </li>
               </Link>

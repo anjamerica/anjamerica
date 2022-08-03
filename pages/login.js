@@ -50,7 +50,7 @@ export default function Login() {
       <div>
         <img
            src="/landing/logo.svg"
-          className="w-[15rem]  xl:h-fit xl:w-[10rem] object-contain"
+          className="w-[10rem]  xl:h-fit xl:w-[10rem] object-contain"
         />
       </div>
       <div className="w-[85%] md:w-[25%]">

@@ -11,8 +11,6 @@ export default function JobCard({ item, getDetails }) {
   const [showAlert, setShowAlert] = useState(false);
   const router = useRouter();
 
-  console.log(item);
-
   // const [popup, setPopup] = useState({
   //   show: false, // initial values set to false and null
   //   id: null,
@@ -60,39 +58,39 @@ export default function JobCard({ item, getDetails }) {
     }
   }, [formModal]);
 
-  const handleDeleteJob = async () => {
-    try {
-      const headers = { Authorization: localStorage.getItem("token") };
-      const res = await deleteJobDetails(item._id, headers);
-      getDetails();
-      toast.success("Job is deleted successfully");
-    } catch (error) {
-      console.error(error);
-    }
-  };
+  // const handleDeleteJob = async () => {
+  //   try {
+  //     const headers = { Authorization: localStorage.getItem("token") };
+  //     const res = await deleteJobDetails(item._id, headers);
+  //     getDetails();
+  //     toast.success("Job is deleted successfully");
+  //   } catch (error) {
+  //     console.error(error);
+  //   }
+  // };
 
   return (
-    <div className="h-fit md:h-[14.9rem] flex flex-row border-[1px]  border-[#E9E9E9] rounded-lg w-full">
+    <div className="h-fit md:h-[16rem] flex flex-row border-[1px]  border-[#E9E9E9] rounded-lg w-full">
       <div
         className=" gap-2 flex flex-col p-4 md:gap-4"
         style={{ width: "inherit" }}
       >
         <div className="flex justify-between">
           <div className="flex flex-col">
-            <span className="text-[1rem] md:text-base md:font-semibold">
+            <span className="text-[1rem] md:text-base font-semibold">
               {item?.job_title}
             </span>
             <span className="text-[#949191] text-[1rem]">
               Training : {item?.training_details?.training_type}
             </span>
           </div>
-          <span className="text-md md:text-base md:font-semibold">
+          <span className="text-md md:text-base font-semibold">
             {item?.job_id}
           </span>
         </div>
         <div className="flex flex-col md:flex-row bg-[#EFEFEF] px-4 py-2 rounded-md justify-between">
-          <div className="flex flex-col md:flex-row justify-between w-[30%]">
-            <span className="text-xs md:text-[14px] text-[#949191] md:font-[400]">
+          <div className="flex flex-col md:flex-row justify-start md:gap-4 md:w-[50%]">
+            <span className="text-xs  md:text-[14px] text-[#949191] md:font-[400]">
               Training Duration: {item?.training_details?.training_duration} hrs
             </span>
             <span className="text-xs md:text-[14px]  text-[#949191] md:font-[400]">
@@ -111,7 +109,7 @@ export default function JobCard({ item, getDetails }) {
           <hr className="bg-[#E7E7E7] absolute -bottom-[.6rem] h-[.5px] w-full" />
         </div>
         <div className="flex flex-col md:flex-row justify-between mt-0 mb-0">
-          <span className="text-xs  text-[#949191] md:font-[400] md:text-[14px] self-center">
+          <span className="text-xs  text-[#949191] md:font-[400] md:text-[14px] self-start my-2">
             Training Location: {item?.job_location?.city}
             {" , "} {item?.job_location?.state} {" , "}{" "}
             {item?.job_location?.country}
@@ -124,7 +122,7 @@ export default function JobCard({ item, getDetails }) {
                     Edit
                   </button>
                 </Link>
-                <button
+                {/* <button
                   className="w-[4.5rem] font-semibold text-xs text-white bg--green px-4 py-2  bg-primary-red uppercase rounded-full text-center flex items-center justify-center"
                   onClick={() => setShowAlert(true)}
                 >
@@ -139,7 +137,7 @@ export default function JobCard({ item, getDetails }) {
                       setShowAlert(false);
                     }}
                   />
-                )}
+                )} */}
               </>
             ) : (
               <>
@@ -162,7 +160,7 @@ export default function JobCard({ item, getDetails }) {
         </div>
 
         {formModal && (
-          <div className="fixed top-10">
+          <div className="fixed top-10 z-50">
             <JobApplyForm setFormModal={setFormModal} item={item} />
           </div>
         )}

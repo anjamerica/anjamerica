@@ -12,7 +12,7 @@ const services = [
     index: "01",
     service: "Lorem Ipsum is simply dummy",
     description:
-      "Hire from the top 2% of software talent in the world. We have an exclusive pool of the top niche Professionals who can be sourced to your project as a full time or a consultant.",
+      "Hire from the top 2% of software talent in the world. We have an exclusive pool of the top Anj America Professionals who can be sourced to your project as a full time or a consultant.",
     link: "/",
   },
   {
@@ -26,21 +26,21 @@ const services = [
     index: "03",
     service: "Hire Right",
     description:
-      "Hire from the top 2% of software talent in the world. We have an exclusive pool of the top niche Professionals who can be sourced to your project as a full time or a consultant.",
+      "Hire from the top 2% of software talent in the world. We have an exclusive pool of the top Anj America Professionals who can be sourced to your project as a full time or a consultant.",
     link: "/staffing",
   },
   {
     index: "04",
     service: "Lorem Ipsum is simply dummy",
     description:
-      "Hire from the top 2% of software talent in the world. We have an exclusive pool of the top niche Professionals who can be sourced to your project as a full time or a consultant.",
+      "Hire from the top 2% of software talent in the world. We have an exclusive pool of the top Anj America Professionals who can be sourced to your project as a full time or a consultant.",
     link: "/",
   },
   {
     index: "05",
     service: "Lorem Ipsum is simply dummy",
     description:
-      "Hire from the top 2% of software talent in the world. We have an exclusive pool of the top niche Professionals who can be sourced to your project as a full time or a consultant.",
+      "Hire from the top 2% of software talent in the world. We have an exclusive pool of the top Anj America Professionals who can be sourced to your project as a full time or a consultant.",
     link: "/",
   },
 ];
@@ -62,40 +62,30 @@ export default function LandingScreen() {
   };
   const [serviceActive, setServiceActive] = useState(2);
   return (
-    <main
-      className="mx-auto w-full h-full snap-y scroll-delay"
-    >
+    <main className="mx-auto w-full h-full snap-y scroll-delay">
       <section className="relative">
         <div
           style={{
             background: `url(${"/landing/bg.png"})`,
-            objectFit: "contain",
+            objectFit: "cover",
+            backgroundSize: "100%",
+            backgroundRepeat: "no-repeat",
           }}
-          className="w-full h-screen"
+          className="w-full h-[60vh]  md:h-screen"
         >
           <div className="w-full h-fit shadow-sm">
             <Header />
           </div>
 
           <div className=" h-[60vh] pt-10 pb-20  w-full md:h-[90vh]">
-            <div>
-              {/* <img
-              src="/landing/bg.png"
-              // className="hidden md:flex md:absolute md:w-[100%] md:px-10 md:h-[80vh] md:-top-[1rem]"
-              className="hidden md:flex md:absolute md:w-[100%] md:h-[80vh] md:-top-[4rem]"
-            /> */}
-              {/* <img
-              src="/assets/landing/mob_bg_landing.svg"
-              className="absolute w-full h-[45vh] object-contain -top-[2.5rem] px-2 md:hidden"
-            />  */}
-            </div>
+            <div></div>
             <div className=" flex h-full flex-col gap-0 justify-center self-center items-center">
               <div className="flex justify-center">
                 <span className="text-[#FFD700] text-[.85rem] md:text-[20px] font-[700]">
                   LOREM IPSUM IS SIMPLY DUMMY
                 </span>
               </div>
-              <div className="text-anim-blog text-[#07038C] uppercase text-[24px] text-center w-[17rem] font-[800] sm:w-[35rem] xl:w-[70rem] xl:leading-[4rem] sm:text-[34px] xl:text-[60px]">
+              <div className="text-anim-blog text-[#07038C] uppercase text-[24px] text-center w-[17rem] font-bold sm:w-[40rem]  sm:text-[40px] md:text-[45px] md:w-[43rem] xl:text-[60px] xl:w-[57rem]  xl:leading-[4rem]">
                 Digitize your Business today and Grow your Brand...
               </div>
               <div className="text-anim-blog flex items-center text-center justify-center">
@@ -105,9 +95,11 @@ export default function LandingScreen() {
                 </span>
               </div>
               <div className="mt-5 xl:mt-10">
-                <button className="w-fit font-semibold text-[14px] md:text-base  uppercase text-white bg-primary-blue px-6 py-[.6rem]  tracking-wide rounded-full hover:text-primary-blue hover:bg-white cursor-pointer transition-all text-center flex items-center justify-center">
-                  KNOW MORE
-                </button>
+                <Link href="/#products">
+                  <button className="w-fit font-semibold text-[14px] md:text-base  uppercase text-white bg-primary-blue px-6 py-[.6rem]  tracking-wide rounded-full hover:bg-blue-8 00 cursor-pointer transition-all text-center flex items-center justify-center">
+                    KNOW MORE
+                  </button>
+                </Link>
               </div>
               <div className="hidden md:flex md:absolute md:bottom-6 md:self-center md:cursor-pointer">
                 <Link href="/#services">
@@ -179,7 +171,7 @@ export default function LandingScreen() {
                     <div className="pb-2">
                       {serviceActive === index && (
                         <div className="text-anim-services flex flex-col gap-3">
-                          <p className="select-none text-left text-md text-primary-black md:text-base">
+                          <p className="select-none text-left px-5 text-md text-primary-black md:text-base">
                             {item.description}
                           </p>
                           <Link href={item.link}>
@@ -220,10 +212,12 @@ export default function LandingScreen() {
         </div>
       </section>
       <section>
-        <div className=" py-10 flex items-center flex-col gap-4 bg-[#F3F3F3]">
+        <div className=" py-10 flex items-center h-fit flex-col gap-4 bg-[#F3F3F3]">
           <div className="flex flex-col gap-1">
-            <div className="text-subheading leading-[3%] text-primary-blue self-center">WHAT WE DO</div>
-            <div className="text-[1.5rem] tracking-wide break-words text-center font-bold md:text-[1.5rem] 2xl:text-[3rem]; text-primary-black">
+            <div className="text-subheading leading-[3%] text-primary-blue self-center">
+              LOREM IPSUM
+            </div>
+            <div className="text-subheading-main  text-primary-black self-center">
               Businesses we&apos;ve aligned with
             </div>
             <div className="text-normal-landing text-[#535353] w-[85%] sm:w-full self-center">
@@ -231,12 +225,12 @@ export default function LandingScreen() {
               industry
             </div>
           </div>
-          <div className="relative flex justify-center w-full">
+          <div className="relative mt-8 flex justify-center w-full">
             <div className="scrollbar-landing" ref={ref}>
-              <div className="flex flex-row w-full justify-between h-fit max-w-[1200px] gap-[50px]">
+              <div className="flex flex-row w-full justify-between items-center h-fit max-w-[1200px] gap-[50px]">
                 <img
                   src="/assets/business/progressive.png"
-                  className="logo-hover-landing"
+                  className="ml-6 logo-hover-landing"
                 />
                 <img
                   src="/assets/business/icici.png"
@@ -280,19 +274,19 @@ export default function LandingScreen() {
                 />
                 <img
                   src="/assets/business/tata.png"
-                  className="logo-hover-landing"
+                  className="mr-6 logo-hover-landing"
                 />
               </div>
               <img
                 src="/landing/prev-arrow.svg"
-                className="h-10 v-h-center w-fit select-none absolute top-[40%] bottom-[60%] translate-(-50%,-50%)   left-[3rem] md:left-[7rem] text-primary-gray cursor-pointer"
+                className="h-10  w-fit select-none absolute top-[6px] left-[2rem] md:top-[10px]  md:left-[7rem] text-primary-gray cursor-pointer"
                 onClick={() => {
                   scroll("left");
                 }}
               />
               <img
                 src="/landing/next-arrow.svg"
-                className="h-10 w-fit md:v-h-center select-none absolute top-[40%] bottom-[60%] translate-(-50%,-50%)  right-[2rem] md:right-[6rem] text-primary-gray cursor-pointer"
+                className="h-10 w-fit md:v-h-center select-none absolute right-[2rem] top-[6px]  md:top-[10px] md:right-[6rem] text-primary-gray cursor-pointer"
                 onClick={() => {
                   scroll("right");
                 }}
@@ -307,21 +301,6 @@ export default function LandingScreen() {
       <section id="contact">
         <Contact />
       </section>
-      {/* <section>
-      <section id="contact">
-        <div className="relative p-5 bg-[#ecf2f8] flex justify-center w-full h-[90vh] md:p-10">
-          <div className="w-full flex justify-center">
-            <span className="text-[1.5rem] break-words text-[#0a1f44] text-center font-bold md:text-[2rem] my-2">
-              Have any Questions?
-            </span>
-          </div>
-          <div className="v-center absolute -bottom-[3rem] md:-bottom-[4rem] z-10 p-[1.5rem] md:p-[2rem]">
-            <Contact />
-          </div>
-        </div>
-      </section>
-        <Footer />
-      </section> */}
       <section>
         <Footer />
       </section>

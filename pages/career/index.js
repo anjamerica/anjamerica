@@ -35,11 +35,12 @@ export default function Career() {
       <section className="relative">
         <div
           style={{
-            background: `url(${"/landing/career.png"})`,
+            // background: `url(${"/landing/career.png"})`,
             objectFit: "cover",
-            backgroundRepeat: "no-repeat"
+            backgroundSize: "100%",
+            backgroundRepeat: "no-repeat",
           }}
-          className="w-full h-full"
+          className="w-full lg:h-[20rem] h-full bg-image-mobile sm:bg-image-web-career"
         >
           <div className="w-full h-fit shadow-sm">
             <Header />
@@ -48,16 +49,16 @@ export default function Career() {
             <div className="flex h-full flex-col justify-center self-center items-center">
               <div className="flex justify-center">
                 <span className="text-[#FFD700] text-[.85rem] md:text-[16px] font-[700]">
-                  EXPLORE A CAREER AT NICHE TECHIES
+                  EXPLORE A CAREER AT ANJ AMERICA
                 </span>
               </div>
               <div className="text-anim-blog text-[#07038C] uppercase text-[24px] text-center font-[800] sm:text-[34px] xl:text-[36px]">
                 Join us
               </div>
               <div className="flex items-center justify-center">
-                <span className="text-primary-gray  text-[.8rem] text-center  xl:text-[1rem] w-[13rem] sm:w-full ">
-                  Create stunning products, Hire top software profrssionals for
-                  your project.
+                <span className="text-primary-gray  text-[.8rem] text-center  md:text-[18px] w-[13rem] sm:w-full ">
+                  New jobs everyday - Leave us your resume for future
+                  opportunities!
                 </span>
               </div>
             </div>
@@ -80,7 +81,9 @@ export default function Career() {
           </div>
         </div>
       </section>
-      <Footer />
+      <section>
+        <Footer />
+      </section>
     </main>
   );
 }

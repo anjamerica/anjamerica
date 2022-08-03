@@ -34,7 +34,14 @@ module.exports = {
       fontFamily: {
 				sans: ['sans'],
 			},
+      backgroundImage: {
+        'image-mobile': "url('/landing/bg-img-mob.png')",
+        'image-web': "url('/landing/bg.png')",
+        'image-web-career': "url('/landing/career.png')",
+      }
     },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/line-clamp'),
+  ],
 };
