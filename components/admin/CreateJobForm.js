@@ -213,7 +213,7 @@ export default function CreateJobForm() {
     loaderToggler(false);
   };
 
-  const handleSubmitForm = async (e) => {
+  const validations = () => {
     setFormError("");
     if (!jobData.ref_id) {
       return setFormError({ ref_id_err: "Referrel id is required" });
@@ -286,7 +286,12 @@ export default function CreateJobForm() {
     if (!location.city) {
       return setFormError({ city_err: "City is required" });
     }
+  };
 
+  const handleSubmitForm = async (e) => {
+    e.preventDefault();
+    isLoading(true);
+    
     let jobDetails = {
       job_id: id,
       ...jobData,
@@ -301,6 +306,7 @@ export default function CreateJobForm() {
     };
     if (!jobId) {
       try {
+        validations();
         const headers = { Authorization: localStorage.getItem("token") };
         const res = await createJob(jobDetails, headers);
         handleClearForm();
@@ -308,11 +314,12 @@ export default function CreateJobForm() {
         router.push("/home");
       } catch (err) {
         console.error(err?.response);
-        setError(err?.response?.data?.error);
         toast.error("An error occured");
+        isLoading(false)
       }
     } else {
       try {
+        validations();
         const headers = { Authorization: localStorage.getItem("token") };
         const res = await updateJobDetails(jobId, jobDetails, headers);
         toast.success("Job details updated succesfully");
@@ -320,6 +327,7 @@ export default function CreateJobForm() {
       } catch (err) {
         console.error(err?.response);
         toast.error("An error occured");
+        isLoading(false)
       }
     }
   };
@@ -327,24 +335,24 @@ export default function CreateJobForm() {
     <div className="relative mx-auto w-full h-full snap-y pb-10">
       <Loader />
       <div className="w-full flex h-[8hv] justify-between px-4 bg-primary-black  md:px-10 md:py-4 md:items-center md:h-[10vh]">
-          <Link href="/home">
-            <img
-              src="/landing/logo.svg"
-              className="h-16 w-40 xl:h-20 xl:w-56 object-contain"
-            />
-          </Link>
+        <Link href="/home">
           <img
-            src="/admin/menu.svg"
-            className="visible  md:invisible"
-            onClick={() => {
-              setNavOpen(!navOpen);
-            }}
+            src="/landing/logo.svg"
+            className="h-16 w-40 -ml-5 md:-ml-12 xl:h-20 xl:w-56 object-contain"
           />
-          <MdOutlineLogout
-            className="hidden md:flex md:text-white md:h-8 md:w-8 md:cursor-pointer"
-            onClick={handleLogout}
-          />
-        </div>
+        </Link>
+        <img
+          src="/admin/menu.svg"
+          className="visible  md:invisible"
+          onClick={() => {
+            setNavOpen(!navOpen);
+          }}
+        />
+        <MdOutlineLogout
+          className="hidden md:flex md:text-white md:h-8 md:w-8 md:cursor-pointer"
+          onClick={handleLogout}
+        />
+      </div>
       {navOpen && (
         <div className="absolute top-[4rem] right-[0rem] z-10">
           <div className="w-fit bg-[#F0F0F0] flex justify-center h-fit md:hidden">
@@ -368,7 +376,7 @@ export default function CreateJobForm() {
         className="flex flex-row justify-between p-5 md:p-10"
         onClick={() => setNavOpen(!navOpen)}
       >
-        <div className="text-xl">Job Posts</div>
+        <div className="text-xl ml-1 md:ml-0">Job Posts</div>
         <div>
           <div className="flex gap-3">
             <label className="flex items-center cursor-pointer">
@@ -452,7 +460,7 @@ export default function CreateJobForm() {
               {formError.description_err}
             </span>
           </div>
-         
+
           <div className="flex flex-col gap-1">
             <span className="form-text">Qualifications</span>
             <div className="form-input-job outline-none resize-none h-[8.5rem] p-5 overflow-y-auto">
@@ -607,7 +615,7 @@ export default function CreateJobForm() {
         </div>
 
         <div className="flex flex-col gap-4 w-full">
-        <div className="flex flex-col gap-1">
+          <div className="flex flex-col gap-1">
             <span className="form-text">Job Type</span>
             <div className="relative">
               <select
@@ -694,8 +702,8 @@ export default function CreateJobForm() {
                       </div>
                     </div>
                     <button
-                        className="w-fit font-medium text-white bg-[#A9B0B0] px-2 mt-1 py-1 text-xs rounded-md  text-center flex items-center justify-center"
-                        onClick={(e) => removeResponsibility(i)}
+                      className="w-fit font-medium text-white bg-[#A9B0B0] px-2 mt-1 py-1 text-xs rounded-md  text-center flex items-center justify-center"
+                      onClick={(e) => removeResponsibility(i)}
                     >
                       Remove
                     </button>
@@ -772,7 +780,7 @@ export default function CreateJobForm() {
             </div>
           </div>
           <div className="flex flex-col gap-1">
-            <span className="text-lg text-subheading-gray font-semibold">
+            <span className="text-lg md:mt-4 text-subheading-gray font-semibold">
               Training
             </span>
             <div className="grid grid-rows-3 md:grid-cols-3 md:grid-rows-1 gap-4 mt-2">
@@ -888,7 +896,7 @@ export default function CreateJobForm() {
             </div>
           </div>
           <div className="flex flex-col gap-1">
-            <span className="text-lg text-subheading-gray font-semibold">
+            <span className="text-lg mt-4 text-subheading-gray font-semibold">
               Location
             </span>
             <div className="grid grid-rows-3 md:grid-cols-3 md:grid-rows-1 gap-4 mt-2">
@@ -953,14 +961,20 @@ export default function CreateJobForm() {
               </Link>
               <button
                 className="w-32 font-medium text-white bg-primary-blue px-4 py-1 gap-2 uppercase rounded  text-center flex items-center justify-center"
-                onClick={(e)=>handleSubmitForm(e)}
+                onClick={(e) => handleSubmitForm(e)}
                 disabled={loading}
               >
-                {loading ? (<div><ButtonLoader /></div>):(<>Save</>)}
+                {loading ? (
+                  <div>
+                    <ButtonLoader />
+                  </div>
+                ) : (
+                  <>Save</>
+                )}
               </button>
             </div>
           </div>
-        </div>      
+        </div>
       </div>
     </div>
   );

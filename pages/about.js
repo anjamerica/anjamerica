@@ -20,7 +20,7 @@ export default function About() {
           <div className="w-full h-fit shadow-sm">
             <Header />
           </div>
-        <div className=" pt-10 lg:pb-20 h-[25vh] lg:h-[35vh]  w-full ">
+        <div className=" pt-10 lg:pb-20 h-[25vh] lg:h-[30vh]  w-full ">
           <div className="text-center flex flex-col">
             <span className="text-primary-blue text-[2rem] uppercase font-extrabold md:text-[2.5rem]">
               About Us
@@ -32,14 +32,14 @@ export default function About() {
           </div>
         </div>
         </div>
-        <hr className="h-[5px] bg-primary-blue" />
+        {/* <hr className="h-[5px] bg-primary-blue" /> */}
         <section>
-          <div className=" p-6 md:p-10 flex flex-col md:flex-row justify-around w-full">
+          <div className=" p-6 md:px-10 flex flex-col md:flex-row justify-around w-full">
             <div className="flex flex-col text-left mt-8 w-full md:w-[50%]">
               <span className="text-[14px] font-normal text-[#333333] pb-2">
                 OUR PHILOSOPHY
               </span>
-              <span className="w-full text-[25px] md:text-[2.5rem] text-[#04c0de] font-extrabold md:leading-[45px]">
+              <span className="w-full text-[25px] md:text-[38px] text-[#04c0de] font-extrabold md:leading-[45px]">
                 Good business should
                 <br /> know every step of{" "}
                 <span className="text-[#05fad9]">growth.</span>

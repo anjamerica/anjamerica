@@ -26,7 +26,7 @@ export default function Header() {
       <div className="hidden lg:flex justify-around gap-1 xl:gap-3 items-center md:mx-4 mr-7">
         <Link href="/about">
           <span
-            className={`cursor-pointer text-center md:text-base mx-2 md:mx-4 hover:text-primary-blue ${
+            className={`cursor-pointer text-center md:text-base mx-2 md:mx-4 font-semibold hover:text-primary-blue ${
               active == "/about" ? "text-[#07038C]" : "text-[#08081E]"
             }`}
           >
@@ -48,7 +48,7 @@ export default function Header() {
         </Link>
         <Link href="/digitize">
           <span
-            className={`cursor-pointer text-center md:text-base mx-2 md:mx-4 hover:text-primary-blue ${
+            className={`cursor-pointer text-center md:text-base mx-2 md:mx-4 font-semibold hover:text-primary-blue ${
               active == "/digitize" ? "text-[#07038C]" : "text-[#08081E]"
             }`}
             n
@@ -71,7 +71,7 @@ export default function Header() {
         </Link>
         <Link href="/staffing">
           <span
-            className={`cursor-pointer text-center md:text-base mx-2 md:mx-4 hover:text-primary-blue ${
+            className={`cursor-pointer text-center md:text-base mx-2 md:mx-4 font-semibold hover:text-primary-blue ${
               active == "/staffing" ? "text-[#07038C]" : "text-[#08081E]"
             }`}
           >
@@ -93,7 +93,7 @@ export default function Header() {
         </Link>
         <Link href="/career">
           <span
-            className={`cursor-pointer text-center md:text-base mx-2 md:mx-4 hover:text-primary-blue ${
+            className={`cursor-pointer text-center md:text-base mx-2 md:mx-4 font-semibold hover:text-primary-blue ${
               active == "/career" ? "text-[#07038C]" : "text-[#08081E]"
             }`}
           >
@@ -115,7 +115,7 @@ export default function Header() {
         </Link>
         <Link href="/#products">
           <span
-            className={`cursor-pointer text-center md:text-base mx-2 md:mx-4 hover:text-primary-blue ${
+            className={`cursor-pointer text-center md:text-base mx-2 md:mx-4 font-semibold hover:text-primary-blue ${
               active == "/#products" ? "text-[#07038C]" : "text-[#08081E]"
             }`}
           >
@@ -137,7 +137,7 @@ export default function Header() {
         </Link>
         <Link href="/blogs">
           <span
-            className={`cursor-pointer text-center md:text-base mx-2 md:mx-4 hover:text-primary-blue ${
+            className={`cursor-pointer text-center md:text-base mx-2 md:mx-4 font-semibold hover:text-primary-blue ${
               active == "/blogs" ? "text-[#07038C]" : "text-[#08081E]"
             }`}
           >
@@ -159,7 +159,7 @@ export default function Header() {
         </Link>
         <Link href="/#contact">
           <span
-            className={`cursor-pointer text-center md:text-base mx-2 md:mx-4 hover:text-primary-blue ${
+            className={`cursor-pointer text-center md:text-base mx-2 md:mx-4 font-semibold hover:text-primary-blue ${
               active == "/#contact" ? "text-[#07038C]" : "text-[#08081E]"
             }`}
           >

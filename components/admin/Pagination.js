@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { BsArrowLeft, BsArrowRight } from "react-icons/bs"
+import { BsArrowRight } from "react-icons/bs"
+import { AiOutlineLeft } from "react-icons/ai"
 
 
 export default function Pagination({ total, countPerPage = 20, setCurrentPage, currentPage }) {
@@ -26,21 +27,21 @@ export default function Pagination({ total, countPerPage = 20, setCurrentPage, c
 
     for (i = startNumber; i < selected; i++) {
         items.push(
-            <Pagination_Button togglePage={togglePage} toPageNumber={i} key={`pagination ${i}`} extraClass={`bg-transparent hover:bg-gray-200 text-gray-900`}>
+            <Pagination_Button togglePage={togglePage} toPageNumber={i} key={`pagination ${i}`} extraClass={`bg-transparent hover:bg-gray-200 text-gray-700`}>
                 {i}
             </Pagination_Button>
         );
     }
 
     items.push(
-        <Pagination_Button togglePage={togglePage} toPageNumber={i} key={`pagination current`} extraClass="bg-blue-200 p-2 rounded-md hover:bg-blue-300 text-white">
+        <Pagination_Button togglePage={togglePage} toPageNumber={i} key={`pagination current`} extraClass="bg-primary-blue py-2 px-3 rounded-md hover:bg-blue-300 text-white">
             {i}
         </Pagination_Button>
     );
 
     for (i = (selected + 1); i <= EndNumber; i++) {
         items.push(
-            <Pagination_Button togglePage={togglePage} toPageNumber={i} key={`pagination ${i}`} extraClass={`bg-transparent hover:bg-gray-200 text-gray-900`}>
+            <Pagination_Button togglePage={togglePage} toPageNumber={i} key={`pagination ${i}`} extraClass={`bg-transparent hover:bg-gray-200 font-semibold text-gray-700`}>
                 {i}
             </Pagination_Button>
         );
@@ -49,38 +50,25 @@ export default function Pagination({ total, countPerPage = 20, setCurrentPage, c
     return (
         <>
             <div className="flex items-center justify-center py-10 lg:px-0 sm:px-6 px-4">
-                <div className="w-full flex items-center justify-between">
+                <div className="w-fit flex items-center gap-4">
                     <div className="">
                         {selected > 1 ?
-                            <span onClick={() => togglePage(selected - 1)} className="flex items-center pt-3 text-gray-600 hover:text-primary-blue cursor-pointer w-28">
-                                <BsArrowLeft className="w-5 h-5" />
-                                <span className="text-sm font-medium leading-none ">Previous</span>
+                            <span onClick={() => togglePage(selected - 1)} className="flex items-center bg-[#F9F9F9] justify-center cursor-pointer w-8 h-9 rounded-full">
+                                <AiOutlineLeft className="w-5 h-5 text-[#575454]"
+                                 />
                             </span > :
                             <span className="flex items-center w-28"></span >
                         }
                     </div>
-                    <div className="sm:flex hidden">
+                    <div className="flex flex-row bg-[#F9F9F9] px-6 py-1 rounded-full">
                         {items}
-                        {/* {[ ...Array(pageCount) ].map((e, i) => (
-                            <span
-                                key={i}
-                                onClick={() => {
-                                    setSelected(i);
-                                    togglePage(i);
-                                }}
-                                className={`text-sm font-medium leading-none cursor-pointer text-gray-600 hover:text-indigo-700 border-t  hover:border-indigo-300 pt-3 mr-4 px-2 ${selected == i ? "border-indigo-400" : "border-transparent"}`}
-                            >
-                                {i + 1}
-                            </span>
-                        ))} */}
-
                     </div>
                     <div className="">
                         {
                             selected != pageCount ?
-                                <span onClick={() => togglePage(selected + 1)} className="flex items-center pt-3 text-gray-600 hover:text-primary-blue cursor-pointer w-28">
-                                    <span className="text-sm font-medium leading-none">Next</span>
-                                    <BsArrowRight className="w-5 h-5" />
+                                <span onClick={() => togglePage(selected + 1)} className="flex items-center bg-[#F9F9F9] justify-center cursor-pointer w-8 h-9 rounded-full">
+                                    <AiOutlineLeft className="w-5 h-5 text-[#575454] rotate-180"
+                                 />
                                 </span > :
                                 <span className="flex items-center w-28">
                                 </span >
@@ -96,7 +84,7 @@ export default function Pagination({ total, countPerPage = 20, setCurrentPage, c
 const Pagination_Button = ({ toPageNumber, children, activeClass, togglePage, extraClass = "" }) => {
 
     return (
-        <button onClick={() => { togglePage(toPageNumber); }} className={`text-sm font-medium leading-none cursor-pointer text-gray-600 hover:text-indigo-700 border-t  hover:border-indigo-300 pt-3 mr-4 px-2 ${extraClass}`}
+        <button onClick={() => { togglePage(toPageNumber); }} className={`text-sm  leading-none cursor-pointer font-semibold self-center flex justify-center items-center  hover:border-indigo-300  mr-4 px-4 ${extraClass}`}
         >
             {children}
         </button>

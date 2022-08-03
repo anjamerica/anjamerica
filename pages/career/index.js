@@ -56,9 +56,9 @@ export default function Career() {
                 Join us
               </div>
               <div className="flex items-center justify-center">
-                <span className="text-primary-gray  text-[.8rem] text-center  xl:text-[1rem] w-[13rem] sm:w-full ">
-                  Create stunning products, Hire top software profrssionals for
-                  your project.
+                <span className="text-primary-gray  text-[.8rem] text-center  md:text-[18px] w-[13rem] sm:w-full ">
+                  New jobs everyday - Leave us your resume for future
+                  opportunities!
                 </span>
               </div>
             </div>

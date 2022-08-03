@@ -58,16 +58,16 @@ export default function JobCard({ item, getDetails }) {
     }
   }, [formModal]);
 
-  const handleDeleteJob = async () => {
-    try {
-      const headers = { Authorization: localStorage.getItem("token") };
-      const res = await deleteJobDetails(item._id, headers);
-      getDetails();
-      toast.success("Job is deleted successfully");
-    } catch (error) {
-      console.error(error);
-    }
-  };
+  // const handleDeleteJob = async () => {
+  //   try {
+  //     const headers = { Authorization: localStorage.getItem("token") };
+  //     const res = await deleteJobDetails(item._id, headers);
+  //     getDetails();
+  //     toast.success("Job is deleted successfully");
+  //   } catch (error) {
+  //     console.error(error);
+  //   }
+  // };
 
   return (
     <div className="h-fit md:h-[16rem] flex flex-row border-[1px]  border-[#E9E9E9] rounded-lg w-full">
@@ -77,20 +77,20 @@ export default function JobCard({ item, getDetails }) {
       >
         <div className="flex justify-between">
           <div className="flex flex-col">
-            <span className="text-[1rem] md:text-base md:font-semibold">
+            <span className="text-[1rem] md:text-base font-semibold">
               {item?.job_title}
             </span>
             <span className="text-[#949191] text-[1rem]">
               Training : {item?.training_details?.training_type}
             </span>
           </div>
-          <span className="text-md md:text-base md:font-semibold">
+          <span className="text-md md:text-base font-semibold">
             {item?.job_id}
           </span>
         </div>
         <div className="flex flex-col md:flex-row bg-[#EFEFEF] px-4 py-2 rounded-md justify-between">
-          <div className="flex flex-col md:flex-row justify-between w-[40%]">
-            <span className="text-xs md:text-[14px] text-[#949191] md:font-[400]">
+          <div className="flex flex-col md:flex-row justify-start md:gap-4 md:w-[50%]">
+            <span className="text-xs  md:text-[14px] text-[#949191] md:font-[400]">
               Training Duration: {item?.training_details?.training_duration} hrs
             </span>
             <span className="text-xs md:text-[14px]  text-[#949191] md:font-[400]">
@@ -122,7 +122,7 @@ export default function JobCard({ item, getDetails }) {
                     Edit
                   </button>
                 </Link>
-                <button
+                {/* <button
                   className="w-[4.5rem] font-semibold text-xs text-white bg--green px-4 py-2  bg-primary-red uppercase rounded-full text-center flex items-center justify-center"
                   onClick={() => setShowAlert(true)}
                 >
@@ -137,7 +137,7 @@ export default function JobCard({ item, getDetails }) {
                       setShowAlert(false);
                     }}
                   />
-                )}
+                )} */}
               </>
             ) : (
               <>

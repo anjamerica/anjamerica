@@ -1,5 +1,5 @@
 import React from "react";
-import { FaFacebookF, FaTwitter, FaInstagram } from "react-icons/fa";
+import { FaFacebookF, FaLinkedinIn, FaInstagram } from "react-icons/fa";
 import { BsEnvelopeFill } from "react-icons/bs";
 import Link from "next/link";
 
@@ -26,9 +26,9 @@ export default function Footer() {
         </div>
       </div>
       <div className="flex justify-center mt-14 mb-2 px-20">
-        <div className="w-[60vw] bg-[#777689] h-[.1px] lg:h-[1px]"></div>
+        <div className="w-[60vw] bg-[#222230] h-[.1px]"></div>
       </div>
-      <div className="flex flex-col lg:flex-row md:justify-around py-10 md:p-10">
+      <div className="flex flex-col lg:flex-row md:justify-around gap-4 py-10 md:p-10">
         <div className="flex flex-col md:gap-4">
           <Link href="/">
             <img
@@ -41,9 +41,11 @@ export default function Footer() {
             all the answers you need.
           </span>
         </div>
-        <div className="flex gap-4 flex-col lg:flex-row">
+        <div className="flex gap-4 w-[40vw] justify-between flex-col lg:flex-row">
           <div className="flex flex-col px-5 md:px-0 mt-8 md:mt-0">
-            <span className="text-white text-[24px] font-semibold">Company</span>
+            <span className="text-white text-[24px] font-semibold">
+              Company
+            </span>
             {/* <Link href="/about"> */}
             <Link href="/about">
               <span className="footer-link">About Us</span>
@@ -51,7 +53,9 @@ export default function Footer() {
           </div>
           <div className="flex flex-col px-5 md:px-0">
             <Link href="/#services" passHref>
-              <span className="text-white text-[24px] font-semibold">Services</span>
+              <span className="text-white text-[24px] font-semibold">
+                Services
+              </span>
             </Link>
             <Link href="/digitize" passHref>
               <span className="footer-link">Digitize</span>
@@ -61,22 +65,40 @@ export default function Footer() {
             </Link>
           </div>
           <div className="flex flex-col px-5 md:px-0">
-            <span className="text-white text-[24px] font-semibold">Social</span>
-            <div className="flex flex-row gap-2 text-white mt-2 mb-4">
-              <a href="https://www.facebook.com/anjamericadotcom/about/" target="_blank" rel="noreferrer">
-              <span className="bg-primary-violet h-8 w-8 cursor-pointer rounded-full flex items-center justify-center">
-                <FaFacebookF className="h-fit w-fit" />
-              </span></a>
-              <span className="bg-primary-violet h-8 w-8 cursor-pointer rounded-full flex items-center justify-center">
-                <FaTwitter className="h-fit w-fit" />
-              </span>
-              <a href="https://instagram.com/anj.america?igshid=YmMyMTA2M2Y=" target="_blank" rel="noreferrer">
-              <span className="bg-primary-violet h-8 w-8 cursor-pointer rounded-full flex items-center justify-center">
-                <FaInstagram className="h-fit w-fit" />
-              </span></a>
-              <span className="bg-primary-violet h-8 w-8 cursor-pointer rounded-full flex items-center justify-center">
-                <BsEnvelopeFill className="h-fit w-fit" />
-              </span>
+            {/* <span className="text-white text-[24px] font-semibold">Social</span> */}
+            <div className="flex flex-row gap-2 text-white md:mt-11 mb-4">
+              <a
+                href="https://www.facebook.com/anjamericadotcom/about/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <span className="bg-primary-violet h-8 w-8 cursor-pointer rounded-full flex items-center justify-center">
+                  <FaFacebookF className="h-fit w-fit" />
+                </span>
+              </a>
+              <a
+                href="https://www.linkedin.com/company/anj-america"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <span className="bg-primary-violet h-8 w-8 cursor-pointer rounded-full flex items-center justify-center">
+                  <FaLinkedinIn className="h-fit w-fit" />
+                </span>
+              </a>
+              <a
+                href="https://instagram.com/anj.america?igshid=YmMyMTA2M2Y="
+                target="_blank"
+                rel="noreferrer"
+              >
+                <span className="bg-primary-violet h-8 w-8 cursor-pointer rounded-full flex items-center justify-center">
+                  <FaInstagram className="h-fit w-fit" />
+                </span>
+              </a>
+              <Link href="/#contact">
+                <span className="bg-primary-violet h-8 w-8 cursor-pointer rounded-full flex items-center justify-center">
+                  <BsEnvelopeFill className="h-fit w-fit" />
+                </span>
+              </Link>
             </div>
           </div>
         </div>

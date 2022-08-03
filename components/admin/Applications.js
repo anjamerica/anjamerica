@@ -7,6 +7,7 @@ import Loader from "../layout/Loader";
 import { downloadFile } from "../../services/file";
 import { useRouter } from "next/router";
 import { MdOutlineLogout } from "react-icons/md";
+import ApplicationDetails from "./ApplicationDetails";
 
 export default function Applications() {
   const [navOpen, setNavOpen] = useState(false);
@@ -91,7 +92,7 @@ export default function Applications() {
         <Link href="/home">
           <img
             src="/landing/logo.svg"
-            className="h-16 w-40 xl:h-20 xl:w-56 object-contain"
+            className="h-16 --ml-5 md:-ml-12 w-40 xl:h-20 xl:w-56 object-contain"
           />
         </Link>
         <img
@@ -111,12 +112,12 @@ export default function Applications() {
           <div className="w-fit bg-[#F0F0F0] flex justify-center h-fit">
             <ul>
               <Link href="/newpost">
-                <li className="w-full text-left py-2 px-10 cursor-pointer text-black hover:text-primary-green text-xs">
+                <li className="w-full text-left py-2 px-10 cursor-pointer text-black hover:text-primary-blue text-xs">
                   Add new post
                 </li>
               </Link>
               <li
-                className="w-full text-left py-2 px-10 cursor-pointer text-black hover:text-primary-green text-xs"
+                className="w-full text-left py-2 px-10 cursor-pointer text-black hover:text-primary-blue text-xs"
                 onClick={handleLogout}
               >
                 Logout
@@ -129,7 +130,7 @@ export default function Applications() {
         className="flex flex-col-reverse justify-between p-5 md:p-10 md:flex-row"
         // onClick={() => setNavOpen(!navOpen)}
       >
-        <div className="mt-4 text-base font-semibold md:font-semibold md:mt-0">
+        <div className="mt-4 text-lg font-semibold md:font-semibold md:mt-0">
           Applications
         </div>
         <div className="flex flex-row items-center gap-2">
@@ -161,7 +162,10 @@ export default function Applications() {
           <table className="table-fixed w-[60rem] md:w-full border-spacing-y-2 border-collapse">
             <thead className="overflow-x-auto">
               <tr className="bg-primary-blue text-left">
-                <th className="text-sm  w-40 text-white md:text-md font-normal px-2 py-3  break-words">
+                <th className="text-sm  w-20 text-white md:text-md font-normal px-5 md:px-3 py-3  break-words">
+                  ID
+                </th>
+                <th className="text-sm   w-40 text-white md:text-md font-normal  px-2 py-3 break-words">
                   Name
                 </th>
                 <th className="text-sm w-40  text-white md:text-md font-normal px-2 py-3  break-words">
@@ -171,69 +175,31 @@ export default function Applications() {
                   Email ID
                 </th>
                 <th className="text-sm w-44 text-white md:text-md font-normal px-2 py-3  break-words">
-                  Linkedin profile link
+                  Application Date
                 </th>
                 <th className="text-sm w-44 text-white md:text-md font-normal px-2 py-3  break-words">
                   Post
                 </th>
-                <th className="sticky right-0 z-10 text-sm w-28 md:w-32 bg-[#33B5AF] md:bg-primary-blue text-center text-white md:text-md font-normal px-2 py-3  break-words">
+                <th className="sticky right-0 z-10 text-sm w-28 md:w-32 bg-[#262c9c] md:bg-primary-blue text-center text-white md:text-md font-normal px-2 py-3  break-words">
                   Show More
                 </th>
               </tr>
             </thead>
             <tbody>
-              {applications &&
+              {applications.length > 1 ? (
                 applications.map((item, i) => {
-                  return (
-                    <tr
-                      className={`${
-                        item?.job_details?.is_active === true
-                          ? "bg-[#F9F9F9]"
-                          : "bg-[#DDD]"
-                      } w-full gap-2`}
-                      key={i}
-                    >
-                      <td className="text-black  text-sm md:text-md font-normal px-2 py-3 break-words">
-                        {item.name}
-                      </td>
-                      <td className="text-black  text-sm md:text-md font-normal px-2 py-3 break-words">
-                        <span>{item?.phone_number?.country_code}</span>
-                        <span className="ml-2">
-                          {item?.phone_number?.tell_number}
-                        </span>
-                      </td>
-                      <td className="text-black w-40 text-sm md:text-md font-normal px-2 py-3 break-words">
-                        {item.email}
-                      </td>
-
-                      <td className="text-black w-40 text-sm md:text-md font-normal px-2 py-3 hover:text-blue-500 truncate">
-                        <a href={item.link} target="_blank" rel="noreferrer">
-                          {item.link}
-                        </a>
-                      </td>
-                      {item?.job_details?.job_title ? (
-                        <td className="text-black w-40 text-sm md:text-md font-normal px-2 py-3 break-words">
-                          {item?.job_details?.job_title}
-                        </td>
-                      ) : (
-                        <td className="text-black w-40 text-sm md:text-md font-normal px-2 py-3 break-words">
-                          Not Available
-                        </td>
-                      )}
-                      <td
-                        key={i}
-                        onClick={() => handleGetCv(item.file)}
-                        className={`${
-                          item?.job_details?.is_active === true
-                            ? "bg-[#F2F1F1] md:bg-[#F9F9F9] sticky right-0 z-10 w-28 text-sm  text-primary-blue text-center font-normal px-2 py-3  break-words"
-                            : "bg-[#CCC] sticky right-0 z-10 w-28 text-sm  text-primary-blue text-center font-normal px-2 py-3  break-words"
-                        }`}
-                      >
-                        VIEW
-                      </td>
-                    </tr>
-                  );
-                })}
+                  return <ApplicationDetails key={i} item={item} />;
+                })
+              ) : (
+                <tr>
+                  <td
+                    colSpan={12}
+                    className="w-full font-semibold text-base flex justify-start text-primary-gray"
+                  >
+                    No Applicants Available
+                  </td>
+                </tr>
+              )}
             </tbody>
           </table>
         </div>

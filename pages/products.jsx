@@ -53,17 +53,19 @@ export default function Products() {
     setCurrentIndex(count);
   };
 
-  console.log(data[currentIndex].product);
+  setTimeout(function () {
+    handleOnNextClick();
+  }, 10000);
 
   return (
     <div className="relative flex flex-col pt-10 pb-20 md:py-10 bg-white items-center justify-center w-full">
       <div className="flex flex-col gap-0 self-center justify-center">
         <div className="text-subheading  text-primary-blue self-center">
-          WHAT WE DO
+          LOREM IPSUM
         </div>
-        <div className="text-subheading-main  text-primary-black self-center">
+        <p className="text-subheading-main  text-primary-black self-center">
           Our Products
-        </div>
+        </p>
         <div className="text-normal-landing text-[#535353] w-[85%] sm:w-full self-center">
           Lorem Ipsum is simply dummy text of the printing and typesetting
           industry.
@@ -80,7 +82,7 @@ export default function Products() {
               className="w-[20rem] h-[20rem]  md:w-[20rem] xl:w-[25rem] xl:h-[25rem] object-contain md:h-[20rem] mt-0 flex self-center md:self-start  md:mt-0"
             />
             <div>
-              <p className="text-primary-blue w-[11rem] sm:w-[17rem] md:w-[17rem]  py-4 text-left font-bold break-words mx-[2.5rem] md:mx-0 text-base sm:text-xl  md:text-[24px]">
+              <p className="text-primary-blue w-[11rem] sm:w-[17rem] md:w-full py-4 text-left font-bold break-words mx-[2.5rem] md:mx-0 text-base sm:text-xl  md:text-[24px]">
                 {data[currentIndex].product}
               </p>
               <p className="flex flex-col items-start text-[#535353] font-semibold text-sm break-words mt-2 text-left mx-[2.5rem] md:mx-0 w-[70%]">
