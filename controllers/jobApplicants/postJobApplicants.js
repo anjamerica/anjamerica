@@ -1,5 +1,6 @@
 import { NextApiRequest, NextApiResponse } from "next";
 import JobApplicants from "../../models/jobApplicants"
+import { getAppId } from "../../utils/app_idGenerator";
 
 
 
@@ -20,10 +21,8 @@ export const postJobApplicants = async (req, res) => {
 
         console.log(req.body);
         const { name, phone_number, email, description, link,job_id,file_key } = req.body
-        
-
-
-
+        const app_id= await getAppId()
+        console.log(app_id);
 
        // validation
         if (!name) {
@@ -47,6 +46,9 @@ export const postJobApplicants = async (req, res) => {
         if (!job_id) {
             return res.status(400).json({ error: "job_id required", status: 400 });
         }
+        if (!app_id) {
+            return res.status(400).json({ error: "app_id required", status: 400 });
+        }
 
         
         const createJobApplicant = await JobApplicants.create({
@@ -56,7 +58,9 @@ export const postJobApplicants = async (req, res) => {
             description,
             link,
             file:file_key,
-            job_id
+            job_id,
+            app_id,
+
 
         });
 

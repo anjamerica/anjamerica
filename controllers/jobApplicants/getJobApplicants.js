@@ -15,16 +15,26 @@ export const getJobApplicants = async (req, res) => {
 
     try {
 
-
-        let { search, _id, page, limit } = req.query
-
-
+        let { search, _id, page, limit, from, to} = req.query
 
         limit = parseInt(limit)
         page = parseInt(page)
+        const fromDate = from ? new Date(from) : ""
+        const toDate = to ? new Date(new Date(to).setDate((new Date(to).getDate())+1)) : ""
+
+        const dateQuery = fromDate && to ? { "createdAt": { $gte: fromDate, $lt: toDate } } : {}
 
         let searchQuery = [
-
+            {
+                $match:
+                {
+    
+                    $and: [
+                        dateQuery,
+    
+                    ]
+                }
+            },
             {
                 $lookup: {
                     from: "jobdetails",
@@ -80,6 +90,7 @@ export const getJobApplicants = async (req, res) => {
             {
                 "$limit": limit
             },
+            { $sort: { _id: -1 } }
             
 
         ]

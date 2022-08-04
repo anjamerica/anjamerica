@@ -188,47 +188,6 @@ export default function Applications() {
             <tbody>
               {applications.length > 1 ? (
                 applications.map((item, i) => {
-<<<<<<< HEAD
-                  return (
-                    <tr className="bg-[#F9F9F9] w-full" key={i}>
-                      <td className="text-black  text-sm md:text-md font-normal px-2 py-3 break-words">
-                        {item.name}
-                      </td>
-                      <td className="text-black  text-sm md:text-md font-normal px-2 py-3 break-words">
-                        <span>{item?.phone_number?.country_code}</span>
-                        <span className="ml-2">
-                          {item?.phone_number?.tell_number}
-                        </span>
-                      </td>
-                      <td className="text-black w-40 text-sm md:text-md font-normal px-2 py-3 break-words">
-                        {item.email}
-                      </td>
-
-                      <td className="text-black w-40 text-sm md:text-md font-normal px-2 py-3 hover:text-blue-500 truncate">
-                        <a href={item.link} target="_blank" rel="noreferrer">
-                          {item.link}
-                        </a>
-                      </td>
-                      {item?.job_details?.job_title ? (
-                        <td className="text-black w-40 text-sm md:text-md font-normal px-2 py-3 break-words">
-                          {item?.job_details?.job_title}
-                        </td>
-                      ) : (
-                        <td className="text-black w-40 text-sm md:text-md font-normal px-2 py-3 break-words">
-                          Not Available
-                        </td>
-                      )}
-                      <td
-                        key={i}
-                        onClick={() => handleGetCv(item.file)}
-                        className="sticky right-0 z-10 w-28 text-sm bg-[#F2F1F1] md:bg-[#F9F9F9] text-primary-blue text-center font-normal px-2 py-3  break-words hover:text-blue-500 cursor-pointer"
-                      >
-                        VIEW
-                      </td>
-                    </tr>
-                  );
-                })}
-=======
                   return <ApplicationDetails key={i} item={item} />;
                 })
               ) : (
@@ -241,7 +200,6 @@ export default function Applications() {
                   </td>
                 </tr>
               )}
->>>>>>> 5993210b218fc1338ffa1fd5677e486031aa39c9
             </tbody>
           </table>
         </div>
