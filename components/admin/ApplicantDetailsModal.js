@@ -47,20 +47,20 @@ export default function ApplicantDetailsModal({ item, setModal }) {
           <AiOutlineClose className="h-5 w-5 text-black" />
         </div>
         <div className="grid grid-cols-1 md:grid-flow-row md:grid-cols-2">
-          <div className="flex flex-col gap-0 mb-1">
-            <p className="text-[1rem] font-semibold text-black">Name</p>
-            <p className="text-[1rem] font-medium text-[#5A5A5A]">
-              {item.name}
-            </p>
-            <div className="h-[.1px] mt-2 bg-[#545454] opacity-50 w-full" />
-          </div>
-
           <div className="flex flex-col gap-0">
             <p className="text-[1rem] font-semibold text-black">
               Application ID
             </p>
             <p className="text-[1rem] font-medium text-[#5A5A5A]">
               {item?.app_id}
+            </p>
+            <div className="h-[.1px] mt-2 bg-[#545454] opacity-50 w-full" />
+          </div>
+
+          <div className="flex flex-col gap-0 mb-1">
+            <p className="text-[1rem] font-semibold text-black">Name</p>
+            <p className="text-[1rem] font-medium text-[#5A5A5A]">
+              {item.name}
             </p>
             <div className="h-[.1px] mt-2 bg-[#545454] opacity-50 w-full" />
           </div>
@@ -132,10 +132,10 @@ export default function ApplicantDetailsModal({ item, setModal }) {
             <div className="h-[.1px] sm:h-0  mt-2 bg-[#545454] opacity-50 w-full" />
           </div>
           <div className="flex flex-col mt-2 sm:mt-0 gap-0">
-            <p className="text-[1rem] font-semibold text-black">Application Date</p>
-            <p className="text-[1rem] font-medium text-[#5A5A5A]">
-              {date}
+            <p className="text-[1rem] font-semibold text-black">
+              Application Date
             </p>
+            <p className="text-[1rem] font-medium text-[#5A5A5A]">{date}</p>
             <div className="h-[.1px] sm:h-0 mt-2 bg-[#545454] opacity-50 w-full" />
           </div>
         </div>
