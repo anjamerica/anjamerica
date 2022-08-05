@@ -75,6 +75,12 @@ export const getJobApplicants = async (req, res) => {
                                 "$regex": `${search}`, $options: 'i'
 
                             }
+                        },
+                        {
+                            "app-id": {
+                                $regex: `${search}`, $options: 'i'
+
+                            }
                         }
 
 
@@ -83,14 +89,13 @@ export const getJobApplicants = async (req, res) => {
 
                 }
             },
-            { "$sort": { application_date: -1}},
+            { $sort: { _id: -1 } },
             {
                 "$skip": page * limit - limit
             },
             {
                 "$limit": limit
-            },
-            { $sort: { _id: -1 } }
+            }
             
 
         ]
