@@ -19,6 +19,7 @@ export default function Footer() {
         email,
       }
       const res = await Subcribe(data);
+      console.log(res);
       toast.success("Subscribed Successfully");
       setEmail("");
     } catch (error) {
