@@ -52,7 +52,7 @@ export default function Career() {
                   EXPLORE A CAREER AT ANJ AMERICA
                 </span>
               </div>
-              <div className="text-anim-blog text-[#07038C] uppercase text-[24px] text-center font-[800] sm:text-[34px] xl:text-[36px]">
+              <div className="text-anim-blog  text-[24px]  font-[900] sm:text-[34px] xl:text-[36px] text-[#07038C] uppercase heading-main">
                 Join us
               </div>
               <div className="flex items-center justify-center">

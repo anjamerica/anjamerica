@@ -1,9 +1,31 @@
-import React from "react";
+import React, { useState } from "react";
 import { FaFacebookF, FaLinkedinIn, FaInstagram } from "react-icons/fa";
 import { BsEnvelopeFill } from "react-icons/bs";
 import Link from "next/link";
+import validator from "validator";
+import toast from "react-hot-toast";
+import { Subcribe } from "../../services/subscribe";
 
 export default function Footer() {
+  const [email, setEmail] = useState("");
+
+  const handleSubmit = async () => {
+    try {
+      //validations
+      if (!email) return toast.error("Email is required");
+      if (!validator.isEmail(email)) return toast.error("Invalid Email");
+      //post email
+      const data = {
+        email,
+      }
+      const res = await Subcribe(data);
+      toast.success("Subscribed Successfully");
+      setEmail("");
+    } catch (error) {
+      toast.error("An error Occured");
+    }
+  };
+
   return (
     <div className="relative bg-[#07081D] w-full h-fit z-10 pt-10 select-none">
       <div className="flex justify-center  flex-col px-5 gap-4">
@@ -14,13 +36,18 @@ export default function Footer() {
           Lorem Ipsum is simply dummy text of the printing and typesetting
           industry.
         </span>
-        <div className="justify-center flex flex-col mt-4 lg:mt-0 lg:flex-row gap-2 w-full">
+        <div className=" justify-center flex flex-col mt-4 lg:mt-0 sm:flex-row gap-2 w-full">
           <input
             type="text"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
             placeholder="Subscribe Our Newsletter..."
-            className=" placeholder:text-[#777689] w-full lg:w-[30vw] h-fit self-end text-[#777689] bg-transparent outline-none border-[#5A5A5A] border-b-[1px] px-2"
+            className="relative placeholder:text-[#777689] w-full sm:w-[30vw] h-fit self-end text-[#777689] bg-transparent outline-none border-[#5A5A5A] border-b-[1px] px-2"
           />
-          <button className="w-fit font-[400] self-center mt-10 text-primary-black bg-[#777689] px-8 py-[.6rem]  tracking-wide rounded-full hover:text-primary-blue hover:bg-white cursor-pointer transition-all text-center flex items-center justify-center">
+          <button
+            className="w-fit font-[400] self-center mt-10 text-primary-black bg-[#777689] px-8 py-[.6rem]  tracking-wide rounded-full hover:text-primary-blue hover:bg-white cursor-pointer transition-all text-center flex items-center justify-center"
+            onClick={() => handleSubmit()}
+          >
             Subscribe
           </button>
         </div>

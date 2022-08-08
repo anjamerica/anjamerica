@@ -12,6 +12,10 @@
   font-family: sofia-pro;
   src: url(../public/fonts/sofia-pro.otf);
 }
+@font-face {
+  font-family: sofia-pro-bold;
+  src: url(../public//fonts/sofia_pro_bold.ttf);
+}
 
 html,
 body {
@@ -169,6 +173,10 @@ select {
   -moz-appearance: none;
   text-indent: 1px;
   text-overflow: "";
+}
+
+.heading-main {
+  font-family: sofia-pro-bold;
 }
 
 .h-center {
@@ -523,4 +531,8 @@ button:focus {
 
   .scrollbar-staffing::-webkit-scrollbar-thumb {
   }
+}
+
+.blog-title {
+  @apply text-[#0a1f44] heading-main md:text-base xl:text-[28px] xl:leading-[34px] font-bold break-words;
 }

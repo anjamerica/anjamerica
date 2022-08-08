@@ -75,7 +75,7 @@ export default function BlogEight() {
                     We’ve compiled the top five ways to help you gain a fresh
                     skillset.
                   </p>
-                  <p className="text-sm md:text-[1rem] text-[#333] break-words  font-semibold">
+                  <p className="text-sm md:text-[1rem] text-[#333] break-words heading-main font-semibold">
                     Try Taking Up An Online Skills Courses
                   </p>
                   <p className="text-[#333] text-xs xl:text-base font-light break-words">
@@ -86,7 +86,7 @@ export default function BlogEight() {
                     give your CV the cutting edge.
                   </p>
 
-                  <p className="text-sm md:text-[1rem] text-[#333] break-words  font-semibold">
+                  <p className="text-sm md:text-[1rem] text-[#333] break-words heading-main font-semibold">
                     Invest In Online Certifications
                   </p>
                   <p className="text-[#333] text-xs xl:text-base font-light break-words">
@@ -98,7 +98,7 @@ export default function BlogEight() {
                     just a little search on Google.
                   </p>
 
-                  <p className="text-sm md:text-[1rem] text-[#333] break-words  font-semibold">
+                  <p className="text-sm md:text-[1rem] text-[#333] break-words heading-main font-semibold">
                     Take LinkedIn Tests And Get Endorsements
                   </p>
                   <p className="text-[#333] text-xs xl:text-base font-light break-words">
@@ -111,7 +111,7 @@ export default function BlogEight() {
                     hired for. Ask connections to endorse you for the same.
                   </p>
 
-                  <p className="text-sm md:text-[1rem] text-[#333] break-words  font-semibold">
+                  <p className="text-sm md:text-[1rem] text-[#333] break-words heading-main font-semibold">
                     Grow Your Peer-Network
                   </p>
                   <p className="text-[#333] text-xs xl:text-base font-light break-words">
@@ -127,7 +127,7 @@ export default function BlogEight() {
                     media.
                   </p>
 
-                  <p className="text-sm md:text-[1rem] text-[#333] break-words  font-semibold">
+                  <p className="text-sm md:text-[1rem] text-[#333] break-words heading-main font-semibold">
                     Get A Mentor
                   </p>
                   <p className="text-[#333] text-xs xl:text-base font-light break-words">
@@ -161,7 +161,7 @@ export default function BlogEight() {
                 <span className="text-xs  xl:text-sm text-[#5d3eff] xl:font-semibold">
                   April 29, 2021
                 </span>
-                <p className="text-[#0a1f44] md:text-base xl:text-xl font-bold break-words">
+                <p className="blog-title">
                   Software and IT Industry In The USA
                 </p>
                 <p className="text-[#4e5d78] text-xs xl:text-base font-light break-words h-fit">
@@ -188,7 +188,7 @@ export default function BlogEight() {
                 <span className="text-xs xl:text-sm text-[#5d3eff] xl:font-semibold">
                   April 5, 2021
                 </span>
-                <p className="text-[#0a1f44] md:text-base xl:text-xl font-bold break-words">
+                <p className="blog-title">
                   Networking At Your Workplace
                 </p>
                 <p className="text-[#4e5d78] text-xs xl:text-base font-light break-words h-fit">
@@ -212,7 +212,7 @@ export default function BlogEight() {
                 <span className="text-xs xl:text-sm text-[#5d3eff] xl:font-semibold">
                   March 18, 2021
                 </span>
-                <p className="text-[#0a1f44] md:text-base xl:text-xl font-bold break-words">
+                <p className="blog-title">
                   Common Yet Tricky Interview Questions That You Need To Be
                   Cautious About
                 </p>

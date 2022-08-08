@@ -14,11 +14,11 @@ export default function Staffing() {
           <p className="text-[.85rem] text-left font-semibold break-words md:text-[1rem] text-[#04c0de]">
             WORKS WITH TOP LEVEL IT COMPANIES
           </p>
-          <p className="text-anim-blog text-[#33334f] text-[30px] mt-2 leading-[33px] md:text-[42px] md:leading-[45px] font-[900]">
+          <p className="text-anim-blog text-[#33334f] heading-main text-[30px] mt-2 leading-[33px] md:text-[42px] md:leading-[45px] font-[900]">
             Catering to All
             <br /> Staffing Needs
           </p>
-          <p className="text-normal-digitze text-anim-blog">
+          <p className="text-normal-digitze mt-2 text-anim-blog">
             Hire from the top 2% of software talent in the
             <br /> world. We have an exclusive pool of the top Anj
             <br /> America Professionals who can be sourced to
@@ -97,7 +97,7 @@ export default function Staffing() {
           <p className="text-[#33b5af] text-[.85rem] text-left font-semibold break-words md:text-[1rem]">
             OUR SELECTION PROCESS
           </p>
-          <p className="text-[#0a1f44] text-[30px] mt-2 leading-[33px] md:text-[42px] md:leading-[45px] font-bold">
+          <p className="text-[#0a1f44] text-[30px] heading-main mt-2 leading-[33px] md:text-[24px] md:leading-[45px] font-bold">
             Hiring Process
           </p>
           <p className="w-full md:w-[568px] text-[#0a1f44] text-[.85rem] text-left break-words md:text-[1rem]">
