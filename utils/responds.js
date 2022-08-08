@@ -4,7 +4,7 @@ exports.success = (data) => {
             {
                   "status": data.status,
                   "successMessage":data.successMessage,
-                  "data": data.payload
+                  "data": data.data
             }
 
 

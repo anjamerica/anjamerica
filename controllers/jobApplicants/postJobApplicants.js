@@ -22,7 +22,6 @@ export const postJobApplicants = async (req, res) => {
         console.log(req.body);
         const { name, phone_number, email, description, link,job_id,file_key } = req.body
         const app_id= await getAppId()
-        console.log(app_id);
 
        // validation
         if (!name) {

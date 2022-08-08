@@ -188,7 +188,7 @@ export const application =(name,email,link,description,date,job_title,country_co
                         margin-top: 1%;
                       "
                     >
-                      Suhail
+                      ${name}
                     </p>
                     <hr
                       style="
@@ -220,7 +220,7 @@ export const application =(name,email,link,description,date,job_title,country_co
                         margin: 0%;
                       "
                     >
-                      Email
+                      ${email}
                     </p>
                     <p
                       style="
@@ -287,7 +287,7 @@ export const application =(name,email,link,description,date,job_title,country_co
                       margin-top: 1%;
                     "
                   >
-                    +91 98244313121
+                  ${country_code} ${tell_number}
                   </p>
                   <hr
                     style="
@@ -330,7 +330,7 @@ export const application =(name,email,link,description,date,job_title,country_co
                       margin-top: 1%;
                     "
                   >
-                    12/03/2001
+                  ${date}
                   </p>
                   <hr
                     style="
@@ -373,7 +373,7 @@ export const application =(name,email,link,description,date,job_title,country_co
                       margin-top: 1%;
                     "
                   >
-                    alf lkanflkafn lajsnflkjsdnf lkansflkjsa akjbf
+                  ${link}
                   </p>
                   <hr
                     style="
@@ -416,7 +416,7 @@ export const application =(name,email,link,description,date,job_title,country_co
                       margin-top: 1%;
                     "
                   >
-                    Buisiness Analyst
+                  ${job_title}
                   </p>
                   <hr
                     style="
@@ -459,7 +459,7 @@ export const application =(name,email,link,description,date,job_title,country_co
                       margin-top: 1%;
                     "
                   >
-                    zlkjnvka akdnv akdnv aokdsv a nwdidf qw woie
+                  ${description}
                   </p>
                 </td>
               </tr>
