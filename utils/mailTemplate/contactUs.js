@@ -188,7 +188,7 @@ export const contactUs=(first_name,mobile_number,email,description,message)=>{
                         margin-top: 1%;
                       "
                     >
-                      Suhail
+                      ${first_name}
                     </p>
                     <hr
                       style="
@@ -231,7 +231,7 @@ export const contactUs=(first_name,mobile_number,email,description,message)=>{
                         margin-top: 1%;
                       "
                     >
-                      Suhail@gmail.com
+                    ${email}
                     </p>
                     <hr
                       style="
@@ -331,7 +331,7 @@ export const contactUs=(first_name,mobile_number,email,description,message)=>{
                       margin-top: 1%;
                     "
                   >
-                    Suhail@gmail.com
+                    ${first_name}
                   </p>
                   <hr
                     style="
@@ -374,7 +374,7 @@ export const contactUs=(first_name,mobile_number,email,description,message)=>{
                       margin-top: 1%;
                     "
                   >
-                    +91 98244313121
+                  ${mobile_number}
                   </p>
                   <hr
                     style="
@@ -417,7 +417,7 @@ export const contactUs=(first_name,mobile_number,email,description,message)=>{
                       margin-top: 1%;
                     "
                   >
-                    alf lkanflkafn lajsnflkjsdnf lkansflkjsa akjbf
+                    ${description}
                   </p>
                   <hr
                     style="
@@ -460,7 +460,7 @@ export const contactUs=(first_name,mobile_number,email,description,message)=>{
                       margin-top: 1%;
                     "
                   >
-                    aldkjv anfja ajflkasnf lajnfkjasnfjkas
+                  ${message}
                   </p>
                 </td>
               </tr>
