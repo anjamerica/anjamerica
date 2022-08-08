@@ -86,12 +86,14 @@ export default function BlogOne() {
                               {count++}.
                             </span>{" "}
                             &nbsp; &nbsp;
-                            <p className="text-sm md:text-[1rem] text-[#333] break-words  font-semibold">
-                              {data.header}{" "}
+                            <div className="flex flex-col">
+                              <p className="text-sm md:text-[1rem] text-[#333] break-words heading-main  font-semibold">
+                                {data.header}{" "}
+                              </p>
                               <span className="text-[#333] text-xs xl:text-base font-light break-words">
                                 {data.content}
                               </span>
-                            </p>
+                            </div>
                           </div>
                         </div>
                       );
@@ -115,7 +117,7 @@ export default function BlogOne() {
             Don&apos;t miss these stories;
           </span>
           <div className="p-5 md:p-10 grid grid-cols-1 w-full h-full gap-4 md:gap-4 xl:gap-10 md:grid-cols-3">
-          <div className="rounded-xl w-fit  h-full bg-white drop-shadow-xl">
+            <div className="rounded-xl w-fit  h-full bg-white drop-shadow-xl">
               <img
                 src="/blog/blog-7.jpg"
                 className="w-full rounded-t-xl h-[40%]"
@@ -124,7 +126,7 @@ export default function BlogOne() {
                 <span className="text-xs  xl:text-sm text-[#5d3eff] xl:font-semibold">
                   April 29, 2021
                 </span>
-                <p className="text-[#0a1f44] md:text-base xl:text-xl font-bold break-words">
+                <p className="blog-title">
                   Software and IT Industry In The USA
                 </p>
                 <p className="text-[#4e5d78] text-xs xl:text-base font-light break-words h-fit">
@@ -151,7 +153,7 @@ export default function BlogOne() {
                 <span className="text-xs  xl:text-sm text-[#5d3eff] xl:font-semibold">
                   April 12, 2021
                 </span>
-                <p className="text-[#0a1f44] md:text-base xl:text-xl font-bold break-words">
+                <p className="blog-title">
                   5 Ways To Learn New Skills To Boost Your CV
                 </p>
                 <p className="text-[#4e5d78] text-xs xl:text-base font-light break-words h-fit">
@@ -178,7 +180,7 @@ export default function BlogOne() {
                 <span className="text-xs xl:text-sm text-[#5d3eff] xl:font-semibold">
                   April 5, 2021
                 </span>
-                <p className="text-[#0a1f44] md:text-base xl:text-xl font-bold break-words">
+                <p className="blog-title">
                   Networking At Your Workplace
                 </p>
                 <p className="text-[#4e5d78] text-xs xl:text-base font-light break-words h-fit">

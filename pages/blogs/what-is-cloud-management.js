@@ -50,7 +50,7 @@ export default function BlogSix() {
             <div className="-mt-[15%] md:-mt-[8%] p-5 md:p-10 w-full">
               <div className="w-full h-fit bg-white rounded-sm md:rounded-md drop-shadow-lg p-5 md:p-10">
                 <div className="flex flex-col gap-4">
-                  <p className="text-sm md:text-[1rem] text-[#333] break-words  font-semibold">
+                  <p className="text-sm md:text-[1rem] text-[#333] heading-main break-words  font-semibold">
                     What is Cloud Management?
                   </p>
                   <p className="text-[#333] text-xs xl:text-base font-light break-words">
@@ -63,7 +63,7 @@ export default function BlogSix() {
                     life. Examples include Google Drive and iCloud for Apple
                     Devices.
                   </p>
-                  <p className="text-sm md:text-[1rem] text-[#333] break-words  font-semibold">
+                  <p className="text-sm md:text-[1rem] heading-main text-[#333] break-words  font-semibold">
                     Benefits of Cloud Management Services
                   </p>
 
@@ -76,18 +76,20 @@ export default function BlogSix() {
                               {count++}.
                             </span>{" "}
                             &nbsp; &nbsp;
-                            <p className="text-sm md:text-[1rem] text-[#333] break-words  font-semibold">
-                              {data.header}{" "}
+                            <div>
+                              <p className="text-sm md:text-[1rem] heading-main text-[#333] break-words  font-semibold">
+                                {data.header}{" "}
+                              </p>
                               <span className="text-[#333] text-xs xl:text-base font-light break-words">
                                 {data.content}
                               </span>
-                            </p>
+                            </div>
                           </div>
                         </div>
                       );
                     })}
                   </div>
-                  <p className="text-sm md:text-[1rem] text-[#333] break-words  font-semibold">
+                  <p className="text-sm md:text-[1rem] heading-main text-[#333] break-words  font-semibold">
                     Consequences when you do not have CMS
                   </p>
                   <div className="ml-12">
@@ -125,8 +127,8 @@ export default function BlogSix() {
                     </ol>
                   </div>
                   <div className="flex flex-col gap-2 my-4">
-                    <p className="text-[1rem] text-[#333] break-words  font-semibold">
-                      Don&apos;t fret&semi; ANJ America&apos;s got your back
+                    <p className="text-[1rem] heading-main text-[#333] break-words  font-semibold">
+                      Don&apos;t fret; ANJ America&apos;s got your back
                     </p>
                     <span className="text-[#333] text-xs xl:text-base font-light break-words">
                       ANJ America is absolutely customer-driven as we focus on
@@ -160,7 +162,7 @@ export default function BlogSix() {
                 <span className="text-xs  xl:text-sm text-[#5d3eff] xl:font-semibold">
                   April 29, 2021
                 </span>
-                <p className="text-[#0a1f44] md:text-base xl:text-xl font-bold break-words">
+                <p className="blog-title">
                   Software and IT Industry In The USA
                 </p>
                 <p className="text-[#4e5d78] text-xs xl:text-base font-light break-words h-fit">
@@ -187,7 +189,7 @@ export default function BlogSix() {
                 <span className="text-xs  xl:text-sm text-[#5d3eff] xl:font-semibold">
                   April 12, 2021
                 </span>
-                <p className="text-[#0a1f44] md:text-base xl:text-xl font-bold break-words">
+                <p className="blog-title">
                   5 Ways To Learn New Skills To Boost Your CV
                 </p>
                 <p className="text-[#4e5d78] text-xs xl:text-base font-light break-words h-fit">
@@ -214,9 +216,7 @@ export default function BlogSix() {
                 <span className="text-xs xl:text-sm text-[#5d3eff] xl:font-semibold">
                   April 5, 2021
                 </span>
-                <p className="text-[#0a1f44] md:text-base xl:text-xl font-bold break-words">
-                  Networking At Your Workplace
-                </p>
+                <p className="blog-title">Networking At Your Workplace</p>
                 <p className="text-[#4e5d78] text-xs xl:text-base font-light break-words h-fit">
                   Networking at your workplace isn’t far-fetched. After all
                   “it’s not what you know, it’s whom you know.” How many times

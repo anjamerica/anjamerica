@@ -85,7 +85,7 @@ export default function LandingScreen() {
                   LOREM IPSUM IS SIMPLY DUMMY
                 </span>
               </div>
-              <div className="text-anim-blog text-[#07038C] uppercase text-[24px] text-center w-[17rem] font-bold sm:w-[40rem]  sm:text-[40px] md:text-[45px] md:w-[43rem] xl:text-[60px] xl:w-[57rem]  xl:leading-[4rem]">
+              <div className="text-anim-blog heading-main text-[#07038C] uppercase text-[24px] text-center w-[18rem] font-bold sm:w-[40rem] md:w-[44rem] xl:w-[60rem] sm:text-[40px] md:text-[45px] xl:text-[60px]   xl:leading-[4rem]">
                 Digitize your Business today and Grow your Brand...
               </div>
               <div className="text-anim-blog flex items-center text-center justify-center">

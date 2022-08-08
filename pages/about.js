@@ -21,7 +21,7 @@ export default function About() {
           </div>
           <div className=" pt-10 lg:pb-20 h-[25vh] lg:h-[30vh]  w-full ">
             <div className="text-center flex flex-col">
-              <span className="text-primary-blue text-[2rem] uppercase font-extrabold md:text-[2.5rem]">
+              <span className="text-primary-blue text-[2rem] heading-main uppercase font-extrabold md:text-[2.5rem]">
                 About Us
               </span>
               <span className="text-[.8rem] px-5 w-[80%] sm:w-full font-normal tracking-wide text-primary-gray self-center md:text-[1rem]">

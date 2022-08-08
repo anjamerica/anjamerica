@@ -10,7 +10,7 @@ export default function Digitize() {
     <main className="mx-auto w-full h-full snap-y">
       <Header />
       <section className="relative p-5 md:p-10 flex justify-center flex-col">
-        <p className="text-anim-blog  w-full text-[1.5rem] font-extrabold md:text-[2.5rem]  leading-[33px]  md:leading-[45px]  text-[#0a1f44] text-center mt-4 sm:mt-10">
+        <p className="text-anim-blog  w-full heading-main text-[1.5rem] font-extrabold md:text-[2.5rem]  leading-[33px]  md:leading-[45px]  text-[#0a1f44] text-center mt-4 sm:mt-10">
           We Provide Software Solution
         </p>
         <div className="w-full flex justify-center">

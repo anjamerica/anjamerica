@@ -169,7 +169,7 @@ const data = [
     blogId: "105",
     img: "/assets/landing/blog/blog_5.jpg",
     date: "January 30, 2021",
-    header: "Migrating To The USA? Here Is A ConsolblogIdated Checklist",
+    header: "Migrating To The USA? Here Is A Consolidated Checklist",
     content:
       "When you are planning to pursue your ‘American Dream’, you must get a few things ready on your front.",
     contentFull: "When you are planning to pursue your ‘American Dream’, you must get a few things ready on your front. Before you get onto your flight to America, take a look at this checklist, and prepare yourself accordingly:",

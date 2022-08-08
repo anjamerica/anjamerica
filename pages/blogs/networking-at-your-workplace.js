@@ -99,12 +99,14 @@ export default function BlogNine() {
                               {count++}.
                             </span>{" "}
                             &nbsp; &nbsp;
-                            <p className="text-sm md:text-[1rem] text-[#333] break-words  font-semibold">
-                              {data.header}{" "}
-                              <span className="text-[#333] text-xs xl:text-base font-light break-words">
+                            <div className="flex flex-col">
+                              <span className="text-sm md:text-[1rem] heading-main text-[#333] break-words  font-semibold">
+                                {data.header}
+                              </span>
+                              <span className="text-[#333]  text-xs xl:text-base font-light break-words">
                                 {data.content}
                               </span>
-                            </p>
+                            </div>
                           </div>
                         </div>
                       );
@@ -138,7 +140,7 @@ export default function BlogNine() {
                 <span className="text-xs  xl:text-sm text-[#5d3eff] xl:font-semibold">
                   April 29, 2021
                 </span>
-                <p className="text-[#0a1f44] md:text-base xl:text-xl font-bold break-words">
+                <p className="blog-title">
                   Software and IT Industry In The USA
                 </p>
                 <p className="text-[#4e5d78] text-xs xl:text-base font-light break-words h-fit">
@@ -165,7 +167,7 @@ export default function BlogNine() {
                 <span className="text-xs  xl:text-sm text-[#5d3eff] xl:font-semibold">
                   April 12, 2021
                 </span>
-                <p className="text-[#0a1f44] md:text-base xl:text-xl font-bold break-words">
+                <p className="blog-title">
                   5 Ways To Learn New Skills To Boost Your CV
                 </p>
                 <p className="text-[#4e5d78] text-xs xl:text-base font-light break-words h-fit">
@@ -192,7 +194,7 @@ export default function BlogNine() {
                 <span className="text-xs xl:text-sm text-[#5d3eff] xl:font-semibold">
                   March 18, 2021
                 </span>
-                <p className="text-[#0a1f44] md:text-base xl:text-xl font-bold break-words">
+                <p className="blog-title">
                   Common Yet Tricky Interview Questions That You Need To Be
                   Cautious About
                 </p>

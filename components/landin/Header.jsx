@@ -19,7 +19,7 @@ export default function Header() {
         <Link href="/">
           <img
             src="/landing/logo.svg"
-            className="h-20 -ml-6 md:ml-0 w-56 object-contain cursor-pointer"
+            className="h-20 -ml-6 -md:ml-10 w-56 object-contain cursor-pointer"
           />
         </Link>
       </div>
