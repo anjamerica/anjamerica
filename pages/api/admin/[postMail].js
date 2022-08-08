@@ -4,8 +4,8 @@ import API from "../../../utils/apiRoute";
 
 const apiRoute = API
 
-apiRoute.post('/api/admin/',applicationMailController )
-apiRoute.post('/api/admin/contactapplicationMailUsMail',contactUsMailController )
+apiRoute.post('/api/admin/applicationMail',applicationMailController )
+apiRoute.post('/api/admin/contactUsMail',contactUsMailController )
 
 export default apiRoute
 
