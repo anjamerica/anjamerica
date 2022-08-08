@@ -5,8 +5,7 @@ export const postSubscribers = async (req, res) => {
     try {
         const { email, status } = req.body
         if (!email) { return res.status(400).json({ error: "email required", status: 400 }); }
-        if (!status) { return res.status(400).json({ error: "status required", status: 400 }); }
-        const createSubscriber = await subscriber.create({ email, status })
+        const createSubscriber = await subscriber.create({ email })
         res.status(200).json({ success: "successfully created", status: 200,payload:createSubscriber })
     } catch (error) {
         console.log(error);
