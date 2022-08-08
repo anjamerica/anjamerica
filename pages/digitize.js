@@ -22,7 +22,7 @@ export default function Digitize() {
         <div className="w-full flex justify-center mt-0 md:mt-8">
           <img
             src="/assets/landing/about_1.png"
-            className="w-[70vw] md:w-fit h-fit object-contain self-center"
+            className="w-[70vw] md:max-w-[600px]  object-contain self-center"
           />
         </div>
         <span className="self-center text-base flex flex-row gap-2 mt-0 md:mt-8">

@@ -38,62 +38,62 @@ export default function Staffing() {
               BUSINESSES WE&apos;VE ALIGNED WITH
             </div>
           </div>
-          <div className="scrollbar-landing">
-            <div className="grid grid-cols-1 max-w-[1000px] gap-0 md:gap-[46px] md:grid-cols-4 xl:grid-cols-6">
+          <div className="scrollbar-staffing px-10 md:px-20">
+            <div className="grid grid-cols-1 w-full gap-0 md:gap-[46px] md:grid-cols-4 xl:grid-cols-6">
               <img
                 src="/assets/business/transamerica.png"
-                className="logo-hover-color"
+                className="logo-hover-staffing"
               />
               <img
                 src="/assets/business/tata.png"
-                className="logo-hover-color"
+                className="logo-hover-staffing"
               />
               <img
                 src="/assets/business/travelers.png"
-                className="logo-hover-color"
+                className="logo-hover-staffing"
               />
               <img
                 src="/assets/business/progressive.png"
-                className="logo-hover-color"
+                className="logo-hover-staffing mt-2"
               />
               <img
                 src="/assets/business/stateauto.png"
-                className="logo-hover-color"
+                className="logo-hover-staffing"
               />
               <img
                 src="/assets/business/icici.png"
-                className="logo-hover-color"
+                className="logo-hover-staffing"
               />
               <img
                 src="/assets/business/insight.png"
-                className="logo-hover-color"
+                className="logo-hover-staffing mt-2"
               />
               <img
                 src="/assets/business/hunginton.png"
-                className="logo-hover-color"
+                className="logo-hover-staffing mt-2"
               />
               <img
                 src="/assets/business/nationwide.png"
-                className="logo-hover-color"
+                className="logo-hover-staffing"
               />
               <img
                 src="/assets/business/nasdaq.png"
-                className="logo-hover-color"
+                className="logo-hover-staffing"
               />
               <img
                 src="/assets/business/verizon.png"
-                className="logo-hover-color"
+                className="logo-hover-staffing"
               />
               <img
                 src="/assets/business/statefarm.png"
-                className="logo-hover-color"
+                className="logo-hover-staffing mt-2"
               />
             </div>
           </div>
         </div>
       </section>
       <section id="hiring">
-        <div className="px-10 py-20">
+        <div className="px-10 md:px-20  py-20">
           <p className="text-[#33b5af] text-[.85rem] text-left font-semibold break-words md:text-[1rem]">
             OUR SELECTION PROCESS
           </p>

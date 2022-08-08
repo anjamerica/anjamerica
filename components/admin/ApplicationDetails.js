@@ -15,7 +15,7 @@ export default function ApplicationDetails({ item }) {
             : "bg-[#daf0e0] w-full"
         }`}
       >
-        <td className="text-black  text-sm md:text-md font-normal px-2 py-3 break-words">
+        <td className="text-black  text-sm md:text-md font-normal px-5 md:px-3 break-words">
           {item.app_id}
         </td>
         <td className="text-black  text-sm md:text-md font-normal px-2 py-3 break-words">

@@ -68,18 +68,30 @@ export default function Career() {
       <hr className="h-[5px] bg-primary-blue" />
       <section id="career">
         <Loader />
-        <div className="flex flex-col justify-center items-center py-10 gap-4">
-          <div className="px-5 w-full flex flex-col gap-8 md:px-10">
-            {jobData &&
-              jobData.map((item, i) => {
-                return (
-                  <div key={i}>
-                    <JobCard item={item} />
-                  </div>
-                );
-              })}
+        {jobData.length > 0 ? (
+          <div className="flex flex-col justify-center items-center py-10 gap-4">
+            <div className="px-5 w-full flex flex-col gap-8 md:px-10">
+              {jobData &&
+                jobData.map((item, i) => {
+                  return (
+                    <div key={i}>
+                      <JobCard item={item} />
+                    </div>
+                  );
+                })}
+            </div>
           </div>
-        </div>
+        ) : (
+          <div className="w-full h-fit pb-10 flex flex-col justify-start md:justify-center">
+            <img
+              src="/admin/no_content.png"
+              className="w-96 h-[15rem] md:h-[20rem] md:self-center object-contain"
+            />
+            <p className="font-semibold  text-primary-gray self-center">
+              No Jobs Available
+            </p>
+          </div>
+        )}
       </section>
       <section>
         <Footer />

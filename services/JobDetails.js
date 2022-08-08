@@ -6,9 +6,9 @@ export async function createJob(jobData, headers) {
   });
 }
 
-export const getJobDetails = async function (searchText,page,limit) {
+export const getJobDetails = async function (searchText,page,limit,activeState) {
   console.log(page);
-  return API.get(`/api/admin/jobDetails?search=${searchText || ""}&page=${page || ""}&limit=${limit || ""}`).then((response) => response);
+  return API.get(`/api/admin/jobDetails?search=${searchText || ""}&page=${page || ""}&limit=${limit || ""}&is_active=${activeState || ""}`).then((response) => response);
 };
 
 

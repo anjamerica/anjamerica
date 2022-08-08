@@ -72,12 +72,12 @@ a {
   @apply text-[.85rem] p-0  text-[#333] break-words md:text-[1rem];
 }
 
-.logo-hover-color {
+.logo-hover-landing {
   @apply w-[10rem] h-[4rem] md:w-fit md:h-fit grayscale opacity-100 hover:opacity-100 hover:grayscale-0;
 }
 
-.logo-hover-landing {
-  @apply w-[12rem] h-fit object-contain md:w-[9.5rem]  md:h-fit grayscale opacity-70 hover:opacity-100 hover:grayscale-0;
+.logo-hover-staffing {
+  @apply w-[12rem] h-fit object-contain md:w-fit md:h-fit grayscale opacity-70 hover:opacity-100 hover:grayscale-0;
 }
 
 .scrollbar-landing {
@@ -481,4 +481,46 @@ body{
 
 button:focus {
   outline: 0;
+}
+
+
+.scrollbar-staffing {
+  display: flex;
+  justify-content: center;
+  /* height: 190px; */
+  overflow-y: scroll;
+  width: 100%;
+}
+
+.scrollbar-staffing::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+  right: 0px;
+}
+
+.scrollbar-staffing::-webkit-scrollbar-track {
+  /* border-radius: 100vh;
+  background: #212135; */
+}
+
+.scrollbar-staffing::-webkit-scrollbar-thumb {
+  /* background: #33b5af;
+  border-radius: 100vh; */
+}
+
+@media only screen and (min-width: 768px) {
+  .scrollbar-staffing {
+    height: fit-content;
+    overflow-y: none;
+  }
+  .scrollbar-staffing::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+  }
+
+  .scrollbar-staffing::-webkit-scrollbar-track {
+  }
+
+  .scrollbar-staffing::-webkit-scrollbar-thumb {
+  }
 }
