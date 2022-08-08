@@ -5,10 +5,12 @@ import { deleteJobDetails } from "../../services/JobDetails";
 import JobApplyForm from "./JobApplyForm";
 import ConfirmAlert from "../common/ConfirmAlert";
 import { toast } from "react-hot-toast";
+import { DateFormatter } from "../common/DateFormatter";
 
 export default function JobCard({ item, getDetails }) {
   const [formModal, setFormModal] = useState(false);
   const [showAlert, setShowAlert] = useState(false);
+  const date = DateFormatter(item.createdAt);
   const router = useRouter();
 
   // const [popup, setPopup] = useState({
@@ -70,32 +72,75 @@ export default function JobCard({ item, getDetails }) {
   // };
 
   return (
-    <div className="h-fit md:h-[16rem] flex flex-row border-[1px]  border-[#E9E9E9] rounded-lg w-full">
+    <div className="relative h-fit md:h-[16rem] flex flex-row border-[1px]  border-[#E9E9E9] rounded-lg w-full">
       <div
         className=" gap-2 flex flex-col p-4 md:gap-4"
         style={{ width: "inherit" }}
       >
-        <div className="flex justify-between">
-          <div className="flex flex-col">
-            <span className="text-[1rem] md:text-base font-semibold">
-              {item?.job_title}
-            </span>
-            <span className="text-[#949191] text-[1rem]">
-              Training : {item?.training_details?.training_type}
-            </span>
+        {router.pathname === "/home" && (
+          <div className="absolute top-4 right-4 ">
+            <p
+              className={`${
+                item?.is_active === true
+                  ? "bg-[#159234] z-10"
+                  : "bg-primary-red z-10"
+              }text-[.8rem] rounded-full flex justify-center items-center text-white h-fit w-[4.5rem] p-0 md:w-[5rem] md:py-0`}
+            >
+              {item?.is_active === true ? "Active" : "Inactive"}
+            </p>
           </div>
-          <span className="text-md md:text-base font-semibold">
-            {item?.job_id}
+        )}
+
+        <div
+          className={`${
+            router.pathname === "/home"
+              ? "flex flex-col lg:flex-row -mb-2 justify-between sm:w-[85%] xl:w-[90%] h-fit items-start"
+              : "flex flex-row  -mb-2 justify-between w-full h-fit items-start"
+          }`}
+        >
+          <span className="text-[1rem] self-start md:text-base font-semibold">
+            {item?.job_title}
+          </span>
+
+          <span className="flex flex-row self-start h-fit w-fit items-center gap-2 md:gap-4">
+            {router.pathname == "/home" ? (
+              <>
+                {item?.ref_id && (
+                  <p className="text-[.8rem] md:text-[1rem] md:text-base font-semibold">
+                    Ref ID: {item?.ref_id}
+                  </p>
+                )}
+                <span className="text-primary-blue font-semibold">|</span>
+                <p className="text-[.8rem] md:text-[1rem] md:text-base font-semibold">
+                  Job ID: {item?.job_id}
+                </p>
+              </>
+            ) : (
+              <>
+                <span className="text-[1rem] md:text-base font-semibold">
+                  {item?.job_id}
+                </span>
+              </>
+            )}
+          </span>
+        </div>
+
+        <div>
+          <span className="text-[#949191] text-[1rem]">
+            Training : {item?.training_details?.training_type}
           </span>
         </div>
         <div className="flex flex-col md:flex-row bg-[#EFEFEF] px-4 py-2 rounded-md justify-between">
-          <div className="flex flex-col md:flex-row justify-start md:gap-4 md:w-[50%]">
+          <div className="flex flex-col md:flex-row justify-start md:gap-4 md:w-[90%]">
             <span className="text-xs  md:text-[14px] text-[#949191] md:font-[400]">
               Training Duration: {item?.training_details?.training_duration} hrs
             </span>
             <span className="text-xs md:text-[14px]  text-[#949191] md:font-[400]">
               Training Fee: {item?.training_details?.training_fee?.training_fee}{" "}
               {item?.training_details?.training_fee?.currency}
+            </span>
+            <span className="text-xs  md:text-[14px] text-[#949191] md:font-[400]">
+              Posted Date : {date}
             </span>
           </div>
           <span className="text-xs  text-[#07038C] md:font-[400]">

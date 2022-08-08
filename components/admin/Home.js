@@ -8,6 +8,7 @@ import Pagination from "./Pagination";
 import { MdOutlineLogout } from "react-icons/md";
 import { Router } from "react-router-dom";
 import { useRouter } from "next/router";
+import { TbAdjustmentsHorizontal } from "react-icons/tb";
 
 export default function Home() {
   const { loaderToggler } = useContext(loadingContext);
@@ -17,6 +18,7 @@ export default function Home() {
   const [page, setPage] = useState(1);
   const [totalItems, setTotalItems] = useState(0);
   const [countPerPage, setCountPerPage] = useState(10);
+  const [activeJobs, setActiveJobs] = useState("");
 
   const router = useRouter();
 
@@ -31,7 +33,12 @@ export default function Home() {
     try {
       loaderToggler(true);
       //get job details
-      const response = await getJobDetails(searchText, page, countPerPage);
+      const response = await getJobDetails(
+        searchText,
+        page,
+        countPerPage,
+        activeJobs
+      );
       setTotalItems(response.data.totalCounts);
       console.log(response);
       setJobData(response.data.payload);
@@ -44,7 +51,7 @@ export default function Home() {
 
   useEffect(() => {
     getDetails();
-  }, [searchText, page]);
+  }, [searchText, page, activeJobs]);
 
   const handleLogout = () => {
     loaderToggler(true);
@@ -104,7 +111,9 @@ export default function Home() {
         )}
       </div>
       <div className="flex flex-col-reverse justify-between p-5 md:p-10 md:flex-row">
-        <div className="mt-4 ml-1 md:ml-0 text-base md:font-semibold md:mt-0">Job Posts</div>
+        <div className="mt-4 ml-1 md:ml-0 text-base md:font-semibold md:mt-0">
+          Job Posts
+        </div>
         <div className="flex flex-row items-center gap-2">
           <div className="flex bg-[#F0F0F0] p-1 px-2 w-full justify-between md:w-fit cursor-pointer rounded-md">
             <input
@@ -121,38 +130,82 @@ export default function Home() {
           </div>
           <div>
             <Link href="/applications">
-              <button className="hidden md:w-fit font-medium text-white bg-primary-blue px-4 py-1  rounded-md text-center md:flex items-center justify-center md:text-sm md:cursor-pointer">
+              <button className="hidden md:w-fit font-medium text-white hover:bg-blue-800 bg-primary-blue px-4 py-1  rounded-md text-center md:flex items-center justify-center md:text-sm md:cursor-pointer">
                 Applications
               </button>
             </Link>
           </div>
           <div>
             <Link href="/newpost">
-              <button className="hidden md:w-fit font-medium text-white bg-primary-blue px-4 py-1  rounded-md text-center md:flex items-center justify-center md:text-sm md:cursor-pointer">
+              <button className="hidden md:w-fit font-medium text-white hover:bg-blue-800 bg-primary-blue px-4 py-1  rounded-md text-center md:flex items-center justify-center md:text-sm md:cursor-pointer">
                 Add New Post
               </button>
             </Link>
           </div>
+          <div className="w-fit h-fit relative">
+            <select
+              id="sel"
+              className=" bg-primary-blue pr-8 hover:bg-blue-800 text-xs text-white focus:outline-none md:text-sm md:cursor-pointer  px-4 py-[.5rem] md:py-1  rounded-md"
+              onChange={(e) => setActiveJobs(e.target.value)}
+            >
+              <option
+                className="bg-white text-black"
+                defaultValue=""
+                value=""
+                disabled
+              >
+                Filter
+              </option>
+              <option className="bg-white text-black" defaultValue="" value="">
+                All
+              </option>
+              <option className="bg-white text-black" value="true">
+                Active
+              </option>
+              <option className="bg-white text-black" value="false">
+                Inactive
+              </option>
+            </select>
+
+            <TbAdjustmentsHorizontal className="absolute text-white font-light v-h-center right-0" />
+          </div>
         </div>
       </div>
-      <JobDataView jobData={jobData} page={page} setPage={setPage} totalItems={totalItems} getDetails={getDetails}/>
+      <JobDataView
+        jobData={jobData}
+        page={page}
+        setPage={setPage}
+        totalItems={totalItems}
+        getDetails={getDetails}
+      />
     </div>
   );
 }
 
-const JobDataView = ({jobData, page, setPage, totalItems, getDetails}) => {
+const JobDataView = ({ jobData, page, setPage, totalItems, getDetails }) => {
   return (
     <>
       <Loader />
       <div className="px-5 flex flex-col gap-8 md:px-10">
-        {jobData &&
+        {jobData.length > 0 ? (
           jobData.map((item, i) => {
             return (
               <div key={i}>
                 <JobCard item={item} getDetails={getDetails} />
               </div>
             );
-          })}
+          })
+        ) : (
+          <div className="w-full h-fit flex flex-col justify-start md:justify-center">
+            <img
+              src="/admin/no_content.png"
+              className="w-96 h-[15rem] md:h-[20rem] md:self-center object-contain"
+            />
+            <p className="font-semibold  text-primary-gray self-center">
+              No Jobs Available
+            </p>
+          </div>
+        )}
       </div>
       <div>
         {(totalItems && totalItems) > 0 && (

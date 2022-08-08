@@ -92,7 +92,7 @@ export default function Applications() {
         <Link href="/home">
           <img
             src="/landing/logo.svg"
-            className="h-16 --ml-5 md:-ml-12 w-40 xl:h-20 xl:w-56 object-contain"
+            className="h-16 -ml-5 md:-ml-12 w-40 xl:h-20 xl:w-56 object-contain"
           />
         </Link>
         <img
@@ -186,17 +186,22 @@ export default function Applications() {
               </tr>
             </thead>
             <tbody>
-              {applications.length > 1 ? (
+              {applications.length > 0 ? (
                 applications.map((item, i) => {
                   return <ApplicationDetails key={i} item={item} />;
                 })
               ) : (
-                <tr>
-                  <td
-                    colSpan={12}
-                    className="w-full font-semibold text-base flex justify-start text-primary-gray"
-                  >
-                    No Applicants Available
+                <tr className="col-span-12">
+                  <td className="" colSpan={7}>
+                    <div className="w-full h-fit flex flex-col justify-start md:justify-center">
+                      <img
+                        src="/admin/no_content.png"
+                        className="w-96 h-[15rem] md:h-[20rem] md:self-center object-contain"
+                      />
+                      <p className="font-semibold ml-28 md:ml-0 text-primary-gray md:self-center">
+                        No Applicants Available
+                      </p>
+                    </div>
                   </td>
                 </tr>
               )}

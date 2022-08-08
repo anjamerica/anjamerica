@@ -6,31 +6,30 @@ import Contact from "../components/contact/Contact";
 export default function About() {
   return (
     <main className="mx-auto w-full h-full snap-y">
-      
       <section className="relative">
-      <div
+        <div
           style={{
             // background: `url(${"/landing/career.png"})`,
             objectFit: "cover",
-            backgroundSize:"100%",
-            backgroundRepeat:"no-repeat"
+            backgroundSize: "100%",
+            backgroundRepeat: "no-repeat",
           }}
           className="w-full lg:h-[20rem] h-full bg-image-mobile sm:bg-image-web-career"
         >
           <div className="w-full h-fit shadow-sm">
             <Header />
           </div>
-        <div className=" pt-10 lg:pb-20 h-[25vh] lg:h-[30vh]  w-full ">
-          <div className="text-center flex flex-col">
-            <span className="text-primary-blue text-[2rem] uppercase font-extrabold md:text-[2.5rem]">
-              About Us
-            </span>
-            <span className="text-[.8rem] px-5 w-[80%] sm:w-full font-normal tracking-wide text-primary-gray self-center md:text-[1rem]">
-              We offer a wide range of services from Software Development ,
-              Mobile <br /> Application Development and much more.
-            </span>
+          <div className=" pt-10 lg:pb-20 h-[25vh] lg:h-[30vh]  w-full ">
+            <div className="text-center flex flex-col">
+              <span className="text-primary-blue text-[2rem] uppercase font-extrabold md:text-[2.5rem]">
+                About Us
+              </span>
+              <span className="text-[.8rem] px-5 w-[80%] sm:w-full font-normal tracking-wide text-primary-gray self-center md:text-[1rem]">
+                We offer a wide range of services from Software Development ,
+                Mobile <br /> Application Development and much more.
+              </span>
+            </div>
           </div>
-        </div>
         </div>
         {/* <hr className="h-[5px] bg-primary-blue" /> */}
         <section>
@@ -80,55 +79,55 @@ export default function About() {
               BUSINESSES WE&apos;VE ALIGNED WITH
             </div>
           </div>
-          <div className="scrollbar-landing">
-            <div className="grid grid-cols-1 max-w-[1000px] gap-0 md:gap-[46px] md:grid-cols-4 xl:grid-cols-6">
+          <div className="scrollbar-staffing px-10 md:px-20">
+            <div className="grid grid-cols-1 w-full gap-0 md:gap-[46px] md:grid-cols-4 xl:grid-cols-6">
               <img
                 src="/assets/business/transamerica.png"
-                className="logo-hover-color"
+                className="logo-hover-staffing"
               />
               <img
                 src="/assets/business/tata.png"
-                className="logo-hover-color"
+                className="logo-hover-staffing"
               />
               <img
                 src="/assets/business/travelers.png"
-                className="logo-hover-color"
+                className="logo-hover-staffing"
               />
               <img
                 src="/assets/business/progressive.png"
-                className="logo-hover-color"
+                className="logo-hover-staffing mt-2"
               />
               <img
                 src="/assets/business/stateauto.png"
-                className="logo-hover-color"
+                className="logo-hover-staffing"
               />
               <img
                 src="/assets/business/icici.png"
-                className="logo-hover-color"
+                className="logo-hover-staffing"
               />
               <img
                 src="/assets/business/insight.png"
-                className="logo-hover-color"
+                className="logo-hover-staffing mt-2"
               />
               <img
                 src="/assets/business/hunginton.png"
-                className="logo-hover-color"
+                className="logo-hover-staffing mt-2"
               />
               <img
                 src="/assets/business/nationwide.png"
-                className="logo-hover-color"
+                className="logo-hover-staffing"
               />
               <img
                 src="/assets/business/nasdaq.png"
-                className="logo-hover-color"
+                className="logo-hover-staffing"
               />
               <img
                 src="/assets/business/verizon.png"
-                className="logo-hover-color"
+                className="logo-hover-staffing"
               />
               <img
                 src="/assets/business/statefarm.png"
-                className="logo-hover-color"
+                className="logo-hover-staffing mt-2"
               />
             </div>
           </div>
@@ -161,7 +160,7 @@ export default function About() {
         </div>
       </div>
       <section>
-        <Contact/>
+        <Contact />
         <Footer />
       </section>
     </main>

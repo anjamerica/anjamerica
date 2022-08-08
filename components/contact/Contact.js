@@ -77,14 +77,14 @@ export default function Contact() {
         Have any Questions?
       </span>
       <div className="flex justify-center md:px-5">
-        <div className="-mb-[3rem] h-fit w-full px-5 md:px-10 py-5 md:p-20 z-0  grid grid-cols-1 gap-8 md:grid-cols-2 contact rounded-xl">
+        <div className="-mb-[3rem] h-fit w-full px-5 md:px-10 py-5 md:p-20 z-0 grid grid-cols-1 gap-8 md:grid-cols-2 contact rounded-xl">
           {/* <Loader /> */}
           <div className="flex flex-col gap-2 md:gap-8">
             <span className="text-[1.5rem] text-left break-words text-black font-bold md:text-[2rem]">
               Get in touch with us
             </span>
             <div className="flex flex-col gap-2">
-              <span className="text-[12px] font-semibold text-[#141414]">
+              <span className="text-[12px] font-[900] text-[#141414]">
                 LOCATE US
               </span>
               <span className="font-thin text-sm text-[#141414]">
@@ -92,7 +92,7 @@ export default function Contact() {
               </span>
             </div>
             <div className="flex flex-col gap-2">
-              <span className="text-[12px] font-semibold text-[#141414]">
+              <span className="text-[12px] font-[900] text-[#141414]">
                 CALL US
               </span>
               <span className="font-thin text-sm text-[#141414]">
@@ -100,7 +100,7 @@ export default function Contact() {
               </span>
             </div>
             <div className="flex flex-col gap-2">
-              <span className="text-[12px] font-semibold text-[#141414]">
+              <span className="text-[12px] font-[900] text-[#141414]">
                 EMAIL US
               </span>
               <span className="font-thin text-sm text-[#141414]">
@@ -108,7 +108,7 @@ export default function Contact() {
               </span>
             </div>
           </div>
-          <div className="flex flex-col gap-2 w-full">
+          <div className="flex flex-col gap-2 md:p-[30px] w-full">
             <div className="grid grid-cols-2 gap-2">
               <div>
                 <input
@@ -167,10 +167,11 @@ export default function Contact() {
             </div>
             <div>
               <textarea
-                className="form-input resize-none"
+                className="form-input resize-none overflow-y-auto h-[100px]"
                 placeholder="Your message..."
                 value={details.message}
                 onChange={(e) => handleInputChange("message", e.target.value)}
+                maxLength="5000"
               />
               <span className="text-xs text-red-600">
                 {formError.message_err}

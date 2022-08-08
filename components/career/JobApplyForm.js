@@ -116,7 +116,7 @@ export default function JobApplyForm({ item, setFormModal }) {
             const res = await createJobApplicants(applicantDetails);
             handleClearForm();
             setFormModal(false);
-            toast.success("Submitted succesfully");
+            toast.success("Submitted successfully");
             console.log(res);
             console.log(res);
             if (res.data.status === 200) {
