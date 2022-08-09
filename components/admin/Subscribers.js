@@ -125,7 +125,7 @@ export default function Subscribers() {
 
       <div className="w-full p-0 md:px-10">
         <div className="scrollbar-table">
-          <table className="table-fixed w-[40rem] md:w-full border-spacing-y-2 border-collapse">
+          <table className="table-fixed w-[40rem]  md:w-full border-spacing-y-2 border-collapse">
             <thead className="overflow-x-auto">
               <tr className="bg-primary-blue">
                 <th className="text-sm text-left  text-white md:text-md font-normal px-5 md:px-3 py-3  break-words">
