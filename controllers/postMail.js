@@ -1,13 +1,11 @@
-const nodemailer = require('nodemailer');
 import getConfig from 'next/config'
 import { contactUs } from '../utils/mailTemplate/contactUs';
 import { application } from '../utils/mailTemplate/application';
 import validator from 'validator';
 import { errors, success } from '../utils/responds';
-import subscriber from "../models/subscribers";
 import subscribers from '../models/subscribers';
 
-
+const nodemailer = require('nodemailer');
 const { serverRuntimeConfig } = getConfig()
 var transporter = nodemailer.createTransport({
   host: process.env.MAIL_HOST,

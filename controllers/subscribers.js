@@ -23,7 +23,8 @@ export const getSubscribers = async (req, res) => {
             { "$skip": page * limit - limit },
             { "$limit": limit }]
         const Subscribers = await subscriber.aggregate(paginationQuerry)
-        res.status(200).json({ success: "get all subscribers", status: 200, payload: Subscribers })
+        const totalSubscribers = await subscriber.find().count()
+        res.status(200).json({ success: "get all subscribers", totalSubscribers, status: 200, payload: Subscribers })
     } catch (error) {
         console.log(error);
         res.status(500).json({ status: 500, error: "internal server error", errorMessage: error.message })
