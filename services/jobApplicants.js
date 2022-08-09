@@ -1,6 +1,6 @@
 import API from "./api";
 
-export const getJobApplicants = async function (searchQuery, page, limit) {
+export const getJobApplicants = async function (searchQuery, page, limit,from,to,headers) {
   console.log(
     `/api/user/jobApplicants?search=${searchQuery || ""}&page=${
       page || ""
