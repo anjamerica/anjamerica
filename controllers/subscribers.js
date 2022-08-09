@@ -14,10 +14,16 @@ export const postSubscribers = async (req, res) => {
 
 }
 export const getSubscribers = async (req, res) => {
-
     try {
-        const getSubscribers = await subscriber.find()
-        res.status(200).json({ success: "get all subscribers", status: 200, payload: getSubscribers })
+        let { page, limit } = req.query
+        limit = parseInt(limit)
+        page = parseInt(page)
+        let paginationQuerry = [
+            { $sort: { _id: -1 } },
+            { "$skip": page * limit - limit },
+            { "$limit": limit }]
+        const Subscribers = await subscriber.aggregate(paginationQuerry)
+        res.status(200).json({ success: "get all subscribers", status: 200, payload: Subscribers })
     } catch (error) {
         console.log(error);
         res.status(500).json({ status: 500, error: "internal server error", errorMessage: error.message })
