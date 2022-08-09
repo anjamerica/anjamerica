@@ -5,7 +5,7 @@ export async function Subcribe(email) {
 }
 
 export async function getSubscribers(page,limit,headers) {
-  return await API.get(`/api/user/subscribers&page=${page}&limit=${limit}`, {
+  return await API.get(`/api/user/subscribers?page=${page}&limit=${limit}`, {
     headers,
   });
 }
