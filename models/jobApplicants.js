@@ -41,9 +41,10 @@ const jobApplicantsSchema = mongoose.Schema({
         type: String,
         required:true,
     },
-    application_date: {
-        type: Date,
-        default: Date.now
+    app_id: {
+        type: String,
+        required: true,
+
     },
     job_id: {
         ref: 'jobDetails',
@@ -51,6 +52,7 @@ const jobApplicantsSchema = mongoose.Schema({
         required: true,
         trim: true,
     }
+    
 }, {
     timestamps: true
 }
