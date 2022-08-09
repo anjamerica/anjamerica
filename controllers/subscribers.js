@@ -9,7 +9,7 @@ export const postSubscribers = async (req, res) => {
         res.status(200).json({ success: "successfully created", status: 200,payload:createSubscriber })
     } catch (error) {
         console.log(error);
-        res.status(200).json({ status: 500, error: "internal server error", errorMessage: error.message })
+        res.status(500).json({ status: 500, error: "internal server error", errorMessage: error.message })
     }
 
 }
@@ -20,7 +20,7 @@ export const getSubscribers = async (req, res) => {
         res.status(200).json({ success: "get all subscribers", status: 200,payload:getSubscribers })
     } catch (error) {
         console.log(error);
-        res.status(200).json({ status: 500, error: "internal server error", errorMessage: error.message })
+        res.status(500).json({ status: 500, error: "internal server error", errorMessage: error.message })
     }
 
 }
