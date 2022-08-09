@@ -13,8 +13,9 @@ export default function Subscribers() {
   const [page, setPage] = useState(1);
   const [totalItems, setTotalItems] = useState(0);
   const router = useRouter();
-
   var siNo = 1;
+
+  console.log(totalItems);
 
   const handleLogout = () => {
     loaderToggler(true);
@@ -28,8 +29,8 @@ export default function Subscribers() {
     const getSubscriber = async () => {
       try {
         const res = await getSubscribers(page, 10, headers);
-        console.log(res.data.payload);
         setSubscribers(res.data.payload);
+        setTotalItems(subcribers.length)
       } catch (error) {
         console.log(error.messsage);
       }

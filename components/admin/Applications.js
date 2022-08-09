@@ -126,6 +126,13 @@ export default function Applications() {
                   Add new post
                 </li>
               </Link>
+              <hr className="bg-black w-full" />
+              <Link href="/subcribers">
+                <li className="w-full self-center text-left py-2 px-10 cursor-pointer text-black hover:text-primary-blue text-xs">
+                  Subscribers
+                </li>
+              </Link>
+              <hr className="bg-black w-full" />
               <li
                 className="w-full text-left py-2 px-10 cursor-pointer text-black hover:text-primary-blue text-xs"
                 onClick={handleLogout}
@@ -156,6 +163,13 @@ export default function Applications() {
               src="/assets/landing/search_icon.svg"
               className="w-fit h-fit"
             />
+          </div>
+          <div>
+            <Link href="/subscribers">
+              <button className="hidden md:w-fit font-medium text-white hover:bg-blue-800 bg-primary-blue px-4 py-1  rounded-md text-center md:flex items-center justify-center md:text-sm md:cursor-pointer">
+                Subscribers
+              </button>
+            </Link>
           </div>
           <div>
             <Link href="/newpost">
