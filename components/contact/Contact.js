@@ -73,18 +73,18 @@ export default function Contact() {
 
   return (
     <div className=" relative p-5 md:px-20 bg-[#ecf2f8] flex flex-col z-20 justify-center w-full h-fit">
-      <span className="w-full text-[1.5rem] break-words text-[#0a1f44] text-center font-extrabold md:text-[2rem] my-2">
+      <span className="w-full text-[1.5rem] break-words heading-main text-[#0a1f44] text-center font-extrabold md:text-[2rem] my-2">
         Have any Questions?
       </span>
       <div className="flex justify-center md:px-5">
         <div className="-mb-[3rem] h-fit w-full px-5 md:px-10 py-5 md:p-20 z-0 grid grid-cols-1 gap-8 md:grid-cols-2 contact rounded-xl">
           {/* <Loader /> */}
           <div className="flex flex-col gap-2 md:gap-8">
-            <span className="text-[1.5rem] text-left break-words text-black font-bold md:text-[2rem]">
+            <span className="text-[1.5rem] text-left heading-main break-words text-black font-bold md:text-[2rem]">
               Get in touch with us
             </span>
             <div className="flex flex-col gap-2">
-              <span className="text-[12px] font-[900] text-[#141414]">
+              <span className="text-[12px] heading-main font-[900] text-[#141414]">
                 LOCATE US
               </span>
               <span className="font-thin text-sm text-[#141414]">
@@ -92,7 +92,7 @@ export default function Contact() {
               </span>
             </div>
             <div className="flex flex-col gap-2">
-              <span className="text-[12px] font-[900] text-[#141414]">
+              <span className="text-[12px] heading-main font-[900] text-[#141414]">
                 CALL US
               </span>
               <span className="font-thin text-sm text-[#141414]">
@@ -100,7 +100,7 @@ export default function Contact() {
               </span>
             </div>
             <div className="flex flex-col gap-2">
-              <span className="text-[12px] font-[900] text-[#141414]">
+              <span className="text-[12px] heading-main font-[900] text-[#141414]">
                 EMAIL US
               </span>
               <span className="font-thin text-sm text-[#141414]">

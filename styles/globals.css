@@ -420,7 +420,7 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 .scrollbar-table::-webkit-scrollbar-thumb {
-  background: #07038C;
+  background: #07038c;
   border-radius: 100vh;
 }
 
@@ -483,14 +483,13 @@ input[type="number"]::-webkit-outer-spin-button {
 .service {
   user-select: none !important;
 }
-body{
+body {
   transition-delay: 2s;
 }
 
 button:focus {
   outline: 0;
 }
-
 
 .scrollbar-staffing {
   display: flex;
@@ -535,4 +534,15 @@ button:focus {
 
 .blog-title {
   @apply text-[#0a1f44] heading-main md:text-base xl:text-[28px] xl:leading-[34px] font-bold break-words;
+}
+
+.filter-component {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }

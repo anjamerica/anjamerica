@@ -8,6 +8,8 @@ import { downloadFile } from "../../services/file";
 import { useRouter } from "next/router";
 import { MdOutlineLogout } from "react-icons/md";
 import ApplicationDetails from "./ApplicationDetails";
+import { FilterComponent } from "../common/FilterComponent";
+import { TbAdjustmentsHorizontal } from "react-icons/tb";
 
 export default function Applications() {
   const [navOpen, setNavOpen] = useState(false);
@@ -16,10 +18,10 @@ export default function Applications() {
   const [fileKey, setFileKey] = useState("");
   const [page, setPage] = useState(1);
   const [totalItems, setTotalItems] = useState(0);
-  const [url, setUrl] = useState("");
-
-  const { loaderToggler } = useContext(loadingContext);
+  const [filter, setFilter] = useState(false);
   const router = useRouter();
+  const { from, to } = router.query;
+  const { loaderToggler } = useContext(loadingContext);
 
   // useEffect(() => {
   //   const getCv = async () => {
@@ -44,10 +46,18 @@ export default function Applications() {
 
   //get all applications
   useEffect(() => {
+    const headers = { Authorization: localStorage.getItem("token") };
     const getApplication = async () => {
       try {
         loaderToggler(true);
-        const response = await getJobApplicants(searchQuery, page, 10);
+        const response = await getJobApplicants(
+          searchQuery,
+          page,
+          10,
+          router.query.from,
+          router.query.to,
+          headers
+        );
         setApplications(response?.data?.payload);
         setTotalItems(response?.data?.totalCount);
         console.log(response?.data?.payload?.job_id?.job_title);
@@ -61,7 +71,7 @@ export default function Applications() {
       }
     };
     getApplication();
-  }, [searchQuery, page]);
+  }, [searchQuery, page, router.query]);
 
   console.log(totalItems);
 
@@ -154,6 +164,34 @@ export default function Applications() {
               </button>
             </Link>
           </div>
+          <div className="w-fit">
+            {!from && !to ? (
+              <button
+                className=" md:w-fit text-[14px] font-medium  text-white bg-primary-blue px-4 py-1.5  rounded-md text-center flex flex-row gap-2 items-center justify-center md:text-sm md:cursor-pointer"
+                onClick={() => setFilter(!filter)}
+              >
+                Filter
+                <TbAdjustmentsHorizontal />
+              </button>
+            ) : (
+              <div onClick={() => router.push("/applications")}>
+                <button
+                  className=" md:w-fit text-[14px] font-medium  text-white bg-primary-blue px-2 whitespace-nowrap md:px-4 py-1.5  rounded-md text-center flex flex-row gap-2 items-center justify-center md:text-sm md:cursor-pointer"
+                  onClick={() => {
+                    router.push("/applications");
+                  }}
+                >
+                  Close Filter
+                  <TbAdjustmentsHorizontal />
+                </button>
+              </div>
+            )}
+          </div>
+          {filter && (
+            <div>
+              <FilterComponent setFilter={setFilter} />
+            </div>
+          )}
         </div>
       </div>
 
@@ -209,7 +247,7 @@ export default function Applications() {
           </table>
         </div>
         <div>
-          {(totalItems && totalItems) > 0 && (
+          {totalItems > 0 && (
             <Pagination
               currentPage={page}
               setCurrentPage={setPage}
