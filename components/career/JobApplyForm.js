@@ -3,9 +3,8 @@ import React, { useState, useContext, useEffect } from "react";
 import { loadingContext } from "../../hooks/loadingContext";
 import { createJobApplicants } from "../../services/jobApplicants";
 import { toast } from "react-hot-toast";
-import { uploadImage } from "../../services/file";
 import API from "../../services/api";
-import Loader from "../layout/Loader";
+import ButtonLoader from "../layout/ButtonLoader";
 import { postMail } from "../../services/postMail";
 import validator from "validator";
 import Dropzone from "../layout/Dropzone";
@@ -21,12 +20,16 @@ export default function JobApplyForm({ item, setFormModal }) {
   const [formError, setFormError] = useState({});
   const [file, setFile] = useState();
   const [fileKey, setFileKey] = useState();
+  const [loading, isLoading] = useState(false);
   const country_codes = country_code;
 
   var allowedFiles = [".doc", ".docx", ".pdf"];
   var regex = new RegExp(
     "([a-zA-Z0-9s_\\.-:])+(" + allowedFiles.join("|") + ")$"
   );
+
+  const maxSize = 2048;
+  const fileSize = Math.round(file?.size / 1024);
 
   const handleDetailsChange = (key, value) => {
     setDetails({
@@ -51,43 +54,59 @@ export default function JobApplyForm({ item, setFormModal }) {
     setFile(e.target.files[0]);
   };
 
+  const validations = () => {
+    //validations
+    if (!details.name) {
+      return setFormError({ name_err: "Name is required" });
+    }
+    if (!phone.country_code) {
+      return setFormError({ country_code_err: "Country code is required" });
+    }
+    if (!phone.tell_number) {
+      return setFormError({ number_err: "Phone Number required" });
+    }
+    console.log(phone.tell_number.length);
+    if (phone.tell_number.length < 9) {
+      return setFormError({ number_err: "Invalid Phone Number" });
+    }
+    if (phone.tell_number.length >= 15) {
+      return setFormError({ number_err: "Invalid Phone Number" });
+    }
+    if (!details.email) {
+      return setFormError({ email_err: "Email is required" });
+    }
+    if (!validator.isEmail(details.email)) {
+      return setFormError({ email_err: "Email is not valid" });
+    }
+    if (!details.description) {
+      return setFormError({ description_err: "Description is required" });
+    }
+    if (!details.link) {
+      return setFormError({ link_err: "Link is required" });
+    }
+    if (!validator.isURL(details.link)) {
+      return setFormError({ link_err: "Invalid link" });
+    }
+    if (!file) {
+      return setFormError({ file_err: "select a file" });
+    }
+    // if (file > maxSize) {
+    //   return (
+    //     setFormError({ file_err: "Please select a file less than 2mb" }),
+    //     toast.error("File size exceeded")
+    //   );
+    // }
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      //validations
-      if (!details.name) {
-        return setFormError({ name_err: "Name is required" });
-      }
-      if (!phone.country_code) {
-        return setFormError({ country_code_err: "Country code is required" });
-      }
-      if (!phone.tell_number) {
-        return setFormError({ number_err: "Phone Number required" });
-      }
-      console.log(phone.tell_number.length);
-      if (phone.tell_number.length < 9) {
-        return setFormError({ number_err: "Invalid Phone Number" });
-      }
-      if (phone.tell_number.length >= 15) {
-        return setFormError({ number_err: "Invalid Phone Number" });
-      }
-      if (!details.email) {
-        return setFormError({ email_err: "Email is required" });
-      }
-      if (!validator.isEmail(details.email)) {
-        return setFormError({ email_err: "Email is not valid" });
-      }
-      if (!details.description) {
-        return setFormError({ description_err: "Description is required" });
-      }
-      if (!details.link) {
-        return setFormError({ link_err: "Link is required" });
-      }
-      if (!validator.isURL(details.link)) {
-        return setFormError({ link_err: "Invalid link" });
-      }
-      if (!file) {
-        return setFormError({ file_err: "select a file" });
+      setFormError(null);
+      isLoading(true);
+      validations();
+      if (formError) {
+        isLoading(false);
+        return;
       }
 
       const url = "/api/admin/cvUpload";
@@ -134,6 +153,7 @@ export default function JobApplyForm({ item, setFormModal }) {
     } catch (error) {
       console.error(error);
       loaderToggler(false);
+      isLoading(false)
     }
   };
 
@@ -193,7 +213,7 @@ export default function JobApplyForm({ item, setFormModal }) {
             <span className="text-xl md:font-semibold text-center ">
               {item?.job_title}
             </span>
-            <span className="w-fit h-full" onClick={()=>setFormModal(false)}>
+            <span className="w-fit h-full" onClick={() => setFormModal(false)}>
               <IoMdClose className="w-fit h-8 text-primary-blue" />
             </span>
           </div>
@@ -257,7 +277,7 @@ export default function JobApplyForm({ item, setFormModal }) {
             {formError?.description_err}
           </span>
           <input
-            className="form-input"
+            className="form-input w-[95%] truncate"
             placeholder="Enter your linkedIn profile link."
             value={details.link}
             onChange={(e) => handleDetailsChange("link", e.target.value)}
@@ -289,7 +309,13 @@ export default function JobApplyForm({ item, setFormModal }) {
             className="w-full font-semibold text-xs text-white bg-primary-blue px-6 py-2 hover:bg-blue-800  rounded-md text-center flex items-center justify-center"
             onClick={handleSubmit}
           >
-            Submit
+            {loading ? (
+              <div>
+                <ButtonLoader />
+              </div>
+            ) : (
+              <>Submit</>
+            )}
           </button>
         </div>
       </div>
