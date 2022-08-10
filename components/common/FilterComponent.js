@@ -46,7 +46,7 @@ export const FilterComponent = ({ setFilter }) => {
               From date
             </label>
             <input
-              className=" w-full h-full py-2 focus:outline-none text-primary-blue "
+              className=" w-full h-full py-2 focus:outline-none text-[#214ED1] "
               id="username"
               type="date"
               value={fromDate}
@@ -103,7 +103,7 @@ export const FilterComponent = ({ setFilter }) => {
         <div className="col-span-12 grid place-items-end">
           <div className="flex  w-full justify-end">
             <button
-              className="w-fit  font-medium text-white bg-primary-blue px-4 md:px-5 py-1 md:py-2 self-end  rounded-md text-center flex items-center justify-center"
+              className="w-fit  font-medium text-white bg-[#214ED1] px-4 md:px-5 py-1 md:py-2 self-end  rounded-md text-center flex items-center justify-center"
               onClick={()=>handleSearch().then(setFilter(false))}
             >
               Search
