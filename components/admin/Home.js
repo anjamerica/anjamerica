@@ -1,6 +1,6 @@
 import Link from "next/link";
 import React, { useState, useContext, useEffect } from "react";
-import JobCard from "../career/JobCard";
+import JobCardAdmin from "../career/JobCardAdmin";
 import { getJobDetails } from "../../services/JobDetails";
 import { loadingContext } from "../../hooks/loadingContext";
 import Loader from "../layout/Loader";
@@ -64,27 +64,27 @@ export default function Home() {
     <div className="mx-auto w-full h-full snap-y mb-10">
       <div>
         {/* <Loader /> */}
-        <div className="w-full flex h-[8hv] justify-between px-4 bg-primary-black  md:px-10 md:py-4 md:items-center md:h-[10vh]">
+        <div className="w-full flex h-[74px] justify-between px-5 bg-white box-shadow   md:px-10 md:py-4 md:items-center md:h-[10vh]">
           <Link href="/home">
             <img
-              src="/landing/logo.svg"
-              className="h-16 w-40 -ml-5 md:-ml-12 xl:h-20 xl:w-56 object-contain"
+              src="/assets/landing/anj_logo.svg"
+              className="h-16 w-40 ml-1 md:ml-0 xl:h-20 xl:w-56 self-center object-contain"
             />
           </Link>
           <img
             src="/admin/menu.svg"
-            className="visible  md:invisible"
+            className="visible h-5 w-fit self-center  md:invisible"
             onClick={() => {
               setNavOpen(!navOpen);
             }}
           />
           <MdOutlineLogout
-            className="hidden md:flex md:text-white md:h-8 md:w-8 md:cursor-pointer"
+            className="hidden md:flex md:text-black md:h-8 md:w-8 md:cursor-pointer"
             onClick={handleLogout}
           />
         </div>
         {navOpen && (
-          <div className="absolute top-[4.1rem] right-[0rem] z-10 md:hidden">
+          <div className="absolute top-[4.6rem] right-[0rem] z-10 md:hidden">
             <div className="w-fit bg-[#F0F0F0] flex justify-center h-fit">
               <ul>
                 <Link href="/applications">
@@ -99,7 +99,7 @@ export default function Home() {
                   </li>
                 </Link>
                 <hr className="bg-black w-full" />
-                <Link href="/subcribers">
+                <Link href="/subscribers">
                   <li className="w-full self-center text-left py-2 px-10 cursor-pointer text-black hover:text-primary-blue text-xs">
                     Subscribers
                   </li>
@@ -116,8 +116,11 @@ export default function Home() {
           </div>
         )}
       </div>
-      <div className="flex flex-col-reverse justify-between p-5 md:p-10 md:flex-row">
-        <div className="mt-4 ml-1 md:ml-0 text-base md:font-semibold md:mt-0">
+      <div className="flex flex-col-reverse justify-between p-5 md:px-10 md:flex-row">
+        <div
+          className="mt-4 ml-1 md:ml-0 md:invisible lg:visible text-[20px] md:text-[24px] lg:self-center
+         font-semibold md:mt-0"
+        >
           Job Posts
         </div>
         <div className="flex flex-row items-center gap-2">
@@ -136,21 +139,21 @@ export default function Home() {
           </div>
           <div>
             <Link href="/subscribers">
-              <button className="hidden md:w-fit font-medium text-white hover:bg-blue-800 bg-primary-blue px-4 py-1  rounded-md text-center md:flex items-center justify-center md:text-sm md:cursor-pointer">
+              <button className="hidden md:w-fit font-medium text-white hover:bg-blue-800 bg-[#214ED1] px-4 py-1  rounded-md text-center md:flex items-center justify-center md:text-sm md:cursor-pointer">
                 Subscribers
               </button>
             </Link>
           </div>
           <div>
             <Link href="/applications">
-              <button className="hidden md:w-fit font-medium text-white hover:bg-blue-800 bg-primary-blue px-4 py-1  rounded-md text-center md:flex items-center justify-center md:text-sm md:cursor-pointer">
+              <button className="hidden md:w-fit font-medium text-white hover:bg-blue-800 bg-[#214ED1] px-4 py-1  rounded-md text-center md:flex items-center justify-center md:text-sm md:cursor-pointer">
                 Applications
               </button>
             </Link>
           </div>
           <div>
             <Link href="/newpost">
-              <button className="hidden md:w-fit font-medium text-white hover:bg-blue-800 bg-primary-blue px-4 py-1  rounded-md text-center md:flex items-center justify-center md:text-sm md:cursor-pointer">
+              <button className="hidden md:w-fit font-medium whitespace-nowrap text-white hover:bg-blue-800 bg-[#214ED1] px-4 py-1  rounded-md text-center md:flex items-center justify-center md:text-sm md:cursor-pointer">
                 Add New Post
               </button>
             </Link>
@@ -158,7 +161,7 @@ export default function Home() {
           <div className="w-fit h-fit relative">
             <select
               id="sel"
-              className=" bg-primary-blue pr-8 hover:bg-blue-800 text-xs text-white focus:outline-none md:text-sm md:cursor-pointer  px-4 py-[.5rem] md:py-1  rounded-md"
+              className=" bg-[#214ED1] pr-8 hover:bg-blue-800 text-xs text-white focus:outline-none md:text-sm md:cursor-pointer  px-4 py-[.5rem] md:py-1  rounded-md"
               onChange={(e) => setActiveJobs(e.target.value)}
             >
               <option
@@ -184,6 +187,10 @@ export default function Home() {
           </div>
         </div>
       </div>
+      <div className="p-0 w-fit md:px-10 md:pb-4 hidden text-[24px] md:flex lg:hidden  text-base md:font-semibold ">
+        Job Posts
+      </div>
+
       <JobDataView
         jobData={jobData}
         page={page}
@@ -204,7 +211,7 @@ const JobDataView = ({ jobData, page, setPage, totalItems, getDetails }) => {
           jobData.map((item, i) => {
             return (
               <div key={i}>
-                <JobCard item={item} getDetails={getDetails} />
+                <JobCardAdmin item={item} getDetails={getDetails} />
               </div>
             );
           })

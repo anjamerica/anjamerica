@@ -77,51 +77,15 @@ export default function JobCard({ item, getDetails }) {
         className=" gap-2 flex flex-col p-4 md:gap-4"
         style={{ width: "inherit" }}
       >
-        {router.pathname === "/home" && (
-          <div className="absolute top-4 right-4 ">
-            <p
-              className={`${
-                item?.is_active === true
-                  ? "bg-[#159234] z-10"
-                  : "bg-primary-red z-10"
-              }text-[.8rem] rounded-full flex justify-center items-center text-white h-fit w-[4.5rem] p-0 md:w-[5rem] md:py-0`}
-            >
-              {item?.is_active === true ? "Active" : "Inactive"}
-            </p>
-          </div>
-        )}
-
-        <div
-          className={`${
-            router.pathname === "/home"
-              ? "flex flex-col lg:flex-row -mb-2 justify-between sm:w-[85%] xl:w-[90%] h-fit items-start"
-              : "flex flex-row  -mb-2 justify-between w-full h-fit items-start"
-          }`}
-        >
+        <div className="flex flex-row  -mb-2 justify-between w-full h-fit items-start">
           <span className="text-[1rem] self-start md:text-base font-semibold">
             {item?.job_title}
           </span>
 
           <span className="flex flex-row self-start h-fit w-fit items-center gap-2 md:gap-4">
-            {router.pathname == "/home" ? (
-              <>
-                {item?.ref_id && (
-                  <p className="text-[.8rem] md:text-[1rem] md:text-base font-semibold">
-                    Ref ID: {item?.ref_id}
-                  </p>
-                )}
-                <span className="text-primary-blue font-semibold">|</span>
-                <p className="text-[.8rem] md:text-[1rem] md:text-base font-semibold">
-                  Job ID: {item?.job_id}
-                </p>
-              </>
-            ) : (
-              <>
-                <span className="text-[1rem] md:text-base font-semibold">
-                  {item?.job_id}
-                </span>
-              </>
-            )}
+            <span className="text-[1rem] md:text-base font-semibold">
+              {item?.job_id}
+            </span>
           </span>
         </div>
 
@@ -160,47 +124,19 @@ export default function JobCard({ item, getDetails }) {
             {item?.job_location?.country}
           </span>
           <div className="flex flex-row gap-4">
-            {router.pathname == "/home" ? (
-              <>
-                <Link href={`home/${item._id}`}>
-                  <button className="w-[4.5rem] font-semibold text-xs text-white bg-primary-blue px-4 py-2  uppercase rounded-full text-center flex items-center justify-center">
-                    Edit
-                  </button>
-                </Link>
-                {/* <button
-                  className="w-[4.5rem] font-semibold text-xs text-white bg--green px-4 py-2  bg-primary-red uppercase rounded-full text-center flex items-center justify-center"
-                  onClick={() => setShowAlert(true)}
-                >
-                  Delete
-                </button>
-                {showAlert && (
-                  <ConfirmAlert
-                    content={`Are you sure?`}
-                    handleCancel={() => setShowAlert(false)}
-                    handleConfirm={async () => {
-                      await handleDeleteJob();
-                      setShowAlert(false);
-                    }}
-                  />
-                )} */}
-              </>
-            ) : (
-              <>
-                <Link href={`career/${item._id}`}>
-                  <button className="w-fit font-semibold text-xs text-white bg-primary-blue px-3 py-2  uppercase rounded-full text-center flex items-center justify-center">
-                    READ MORE
-                  </button>
-                </Link>
-                <button
-                  className="w-fit font-semibold text-xs text-white bg-primary-blue px-3 py-2  uppercase rounded-full text-center flex items-center justify-center"
-                  onClick={() => {
-                    setFormModal(!formModal);
-                  }}
-                >
-                  APPLY NOW
-                </button>
-              </>
-            )}
+            <Link href={`career/${item._id}`}>
+              <button className="w-fit font-semibold text-xs text-white bg-primary-blue px-3 py-2  uppercase rounded-full text-center flex items-center justify-center">
+                READ MORE
+              </button>
+            </Link>
+            <button
+              className="w-fit font-semibold text-xs text-white bg-primary-blue px-3 py-2  uppercase rounded-full text-center flex items-center justify-center"
+              onClick={() => {
+                setFormModal(!formModal);
+              }}
+            >
+              APPLY NOW
+            </button>
           </div>
         </div>
 

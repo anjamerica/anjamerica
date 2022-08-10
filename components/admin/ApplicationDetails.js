@@ -12,7 +12,7 @@ export default function ApplicationDetails({ item }) {
         className={`${
           item?.job_details?.is_active === true
             ? "bg-[#F9F9F9] w-full"
-            : "bg-[#daf0e0] w-full"
+            : "bg-[#E7E7E7] w-full"
         }`}
       >
         <td className="text-black  text-sm md:text-md font-normal px-5 md:px-3 break-words">
@@ -49,8 +49,8 @@ export default function ApplicationDetails({ item }) {
           }}
           className={`${
             item?.job_details?.is_active === true
-              ? "bg-[#F9F9F9] sticky right-0  w-28 text-sm  md:bg-[#F9F9F9] text-primary-blue text-center font-normal px-2 py-3  break-words cursor-pointer"
-              : "bg-[#c1e6cb] md:bg-[#daf0e0]   sticky right-0  w-28 text-sm  text-primary-blue text-center font-normal px-2 py-3  break-words cursor-pointer"
+              ? "bg-[#F9F9F9] sticky right-0  w-28 text-sm  md:bg-[#F9F9F9] text-[#214ED1] text-center font-normal px-2 py-3  break-words cursor-pointer"
+              : "bg-[#dcdcdc] md:bg-[#E7E7E7]   sticky right-0  w-28 text-sm  text-[#214ED1] text-center font-normal px-2 py-3  break-words cursor-pointer"
           }`}
         >
           VIEW

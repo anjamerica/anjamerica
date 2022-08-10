@@ -98,27 +98,27 @@ export default function Applications() {
 
   return (
     <div className="mx-auto w-full h-full snap-y">
-      <div className="w-full flex h-[8hv] justify-between px-4 bg-primary-black  md:px-10 md:py-4 md:items-center md:h-[10vh]">
+      <div className="w-full flex h-[74px] justify-between px-5 bg-white box-shadow  md:px-10 md:py-4 md:items-center md:h-[10vh]">
         <Link href="/home">
           <img
-            src="/landing/logo.svg"
-            className="h-16 -ml-5 md:-ml-12 w-40 xl:h-20 xl:w-56 object-contain"
+            src="/assets/landing/anj_logo.svg"
+            className="h-16  w-40  xl:h-20 xl:w-56 self-center object-contain"
           />
         </Link>
         <img
           src="/admin/menu.svg"
-          className="visible  md:invisible"
+          className="visible h-5 w-fit mr-1 self-center  md:invisible"
           onClick={() => {
             setNavOpen(!navOpen);
           }}
         />
         <MdOutlineLogout
-          className="hidden md:flex md:text-white md:h-8 md:w-8 md:cursor-pointer"
+          className="hidden md:flex md:text-black md:h-8 md:w-8 md:cursor-pointer"
           onClick={handleLogout}
         />
       </div>
       {navOpen && (
-        <div className="absolute top-[4rem] right-[0rem] z-10 md:hidden">
+        <div className="absolute top-[4.6rem] right-[0rem] z-10 md:hidden">
           <div className="w-fit bg-[#F0F0F0] flex justify-center h-fit">
             <ul>
               <Link href="/newpost">
@@ -127,7 +127,7 @@ export default function Applications() {
                 </li>
               </Link>
               <hr className="bg-black w-full" />
-              <Link href="/subcribers">
+              <Link href="/subscribers">
                 <li className="w-full self-center text-left py-2 px-10 cursor-pointer text-black hover:text-primary-blue text-xs">
                   Subscribers
                 </li>
@@ -166,14 +166,14 @@ export default function Applications() {
           </div>
           <div>
             <Link href="/subscribers">
-              <button className="hidden md:w-fit font-medium text-white hover:bg-blue-800 bg-primary-blue px-4 py-1  rounded-md text-center md:flex items-center justify-center md:text-sm md:cursor-pointer">
+              <button className="hidden md:w-fit font-medium text-white hover:bg-blue-800 bg-[#214ED1] px-4 py-1  rounded-md text-center md:flex items-center justify-center md:text-sm md:cursor-pointer">
                 Subscribers
               </button>
             </Link>
           </div>
           <div>
             <Link href="/newpost">
-              <button className="hidden md:w-fit font-medium text-white bg-primary-blue px-4 py-1  rounded-md text-center md:flex items-center justify-center md:text-sm md:cursor-pointer">
+              <button className="hidden md:w-fit font-medium text-white bg-[#214ED1] px-4 py-1  rounded-md text-center md:flex items-center justify-center md:text-sm md:cursor-pointer">
                 Add New Post
               </button>
             </Link>
@@ -181,7 +181,7 @@ export default function Applications() {
           <div className="w-fit">
             {!from && !to ? (
               <button
-                className=" md:w-fit text-[14px] font-medium  text-white bg-primary-blue px-4 py-1.5  rounded-md text-center flex flex-row gap-2 items-center justify-center md:text-sm md:cursor-pointer"
+                className=" md:w-fit text-[14px] font-medium  text-white bg-[#214ED1] px-4 py-1.5  rounded-md text-center flex flex-row gap-2 items-center justify-center md:text-sm md:cursor-pointer"
                 onClick={() => setFilter(!filter)}
               >
                 Filter
@@ -190,7 +190,7 @@ export default function Applications() {
             ) : (
               <div onClick={() => router.push("/applications")}>
                 <button
-                  className=" md:w-fit text-[14px] font-medium  text-white bg-primary-blue px-2 whitespace-nowrap md:px-4 py-1.5  rounded-md text-center flex flex-row gap-2 items-center justify-center md:text-sm md:cursor-pointer"
+                  className=" md:w-fit text-[14px] font-medium  text-white bg-[#214ED1] px-2 whitespace-nowrap md:px-4 py-1.5  rounded-md text-center flex flex-row gap-2 items-center justify-center md:text-sm md:cursor-pointer"
                   onClick={() => {
                     router.push("/applications");
                   }}
@@ -211,9 +211,9 @@ export default function Applications() {
 
       <div className="w-full p-0 md:px-10">
         <div className="scrollbar-table">
-          <table className="table-fixed w-[60rem] md:w-full border-spacing-y-2 border-collapse">
+          <table className="table-fixed w-[60rem] md:w-full border-separate border-spacing-y-1">
             <thead className="overflow-x-auto">
-              <tr className="bg-primary-blue text-left">
+              <tr className="bg-[#214ED1] text-left">
                 <th className="text-sm  w-20 text-white md:text-md font-normal px-5 md:px-3 py-3  break-words">
                   ID
                 </th>
@@ -232,7 +232,7 @@ export default function Applications() {
                 <th className="text-sm w-44 text-white md:text-md font-normal px-2 py-3  break-words">
                   Post
                 </th>
-                <th className="sticky right-0 z-10 text-sm w-28 md:w-32 bg-[#262c9c] md:bg-primary-blue text-center text-white md:text-md font-normal px-2 py-3  break-words">
+                <th className="sticky right-0 z-10 text-sm w-28 md:w-32 bg-[#1741c0] md:bg-[#214ED1] text-center text-white md:text-md font-normal px-2 py-3  break-words">
                   Show More
                 </th>
               </tr>

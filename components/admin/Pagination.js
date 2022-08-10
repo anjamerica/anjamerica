@@ -34,7 +34,7 @@ export default function Pagination({ total, countPerPage = 20, setCurrentPage, c
     }
 
     items.push(
-        <Pagination_Button togglePage={togglePage} toPageNumber={i} key={`pagination current`} extraClass="bg-primary-blue py-2 px-3 rounded-md hover:bg-blue-300 text-white">
+        <Pagination_Button togglePage={togglePage} toPageNumber={i} key={`pagination current`} extraClass="bg-[#214ED1] py-2 px-3 rounded-md hover:bg-blue-300 text-white">
             {i}
         </Pagination_Button>
     );
@@ -49,7 +49,7 @@ export default function Pagination({ total, countPerPage = 20, setCurrentPage, c
 
     return (
         <>
-            <div className="flex items-center justify-center py-10 lg:px-0 sm:px-6 px-4">
+            <div className="w-full flex items-center justify-center  py-10 lg:px-0 sm:px-6 px-4">
                 <div className="w-fit flex items-center gap-4">
                     <div className="">
                         {selected > 1 ?
@@ -57,7 +57,7 @@ export default function Pagination({ total, countPerPage = 20, setCurrentPage, c
                                 <AiOutlineLeft className="w-5 h-5 text-[#575454]"
                                  />
                             </span > :
-                            <span className="flex items-center w-28"></span >
+                            <span ></span >
                         }
                     </div>
                     <div className="flex flex-row bg-[#F9F9F9] px-6 py-1 rounded-full">
@@ -70,7 +70,7 @@ export default function Pagination({ total, countPerPage = 20, setCurrentPage, c
                                     <AiOutlineLeft className="w-5 h-5 text-[#575454] rotate-180"
                                  />
                                 </span > :
-                                <span className="flex items-center w-28">
+                                <span >
                                 </span >
                         }
                     </div>
