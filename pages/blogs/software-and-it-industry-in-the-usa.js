@@ -79,7 +79,7 @@ export default function BlogSeven() {
                     offerings provided by programming services and software
                     products as well as large software vendors.
                   </p>
-                  <p className="text-sm md:text-[1rem] text-[#333] break-words  font-semibold">
+                  <p className="text-sm md:text-[1rem] heading-main text-[#333] break-words  font-semibold">
                     How IT and Software Sectors Have Grown In The US
                   </p>
                   <p className="text-[#333] text-xs xl:text-base font-light break-words">
@@ -104,7 +104,7 @@ export default function BlogSeven() {
                     Together, IT software and services represent a significant
                     share of the entire IT industry in the US market.
                   </p>
-                  <p className="text-sm md:text-[1rem] text-[#333] break-words  font-semibold">
+                  <p className="text-sm md:text-[1rem]  heading-main text-[#333] break-words  font-semibold">
                     What To Look Forward To
                   </p>
                   <p className="text-[#333] text-xs xl:text-base font-light break-words">
@@ -145,7 +145,7 @@ export default function BlogSeven() {
                     computer systems, computers, and other computer components,
                     as well as packaging products.
                   </p>
-                  <p className="text-sm md:text-[1rem] text-[#333] break-words  font-semibold">
+                  <p className="text-sm md:text-[1rem]  heading-main text-[#333] break-words  font-semibold">
                     In Conclusion
                   </p>
                   <p className="text-[#333] text-xs xl:text-base font-light break-words">
@@ -185,7 +185,7 @@ export default function BlogSeven() {
                 <span className="text-xs  xl:text-sm text-[#5d3eff] xl:font-semibold">
                   April 12, 2021
                 </span>
-                <p className="text-[#0a1f44] md:text-base xl:text-xl font-bold break-words">
+                <p className="blog-title">
                   5 Ways To Learn New Skills To Boost Your CV
                 </p>
                 <p className="text-[#4e5d78] text-xs xl:text-base font-light break-words h-fit">
@@ -212,7 +212,7 @@ export default function BlogSeven() {
                 <span className="text-xs xl:text-sm text-[#5d3eff] xl:font-semibold">
                   April 5, 2021
                 </span>
-                <p className="text-[#0a1f44] md:text-base xl:text-xl font-bold break-words">
+                <p className="blog-title">
                   Networking At Your Workplace
                 </p>
                 <p className="text-[#4e5d78] text-xs xl:text-base font-light break-words h-fit">
@@ -236,7 +236,7 @@ export default function BlogSeven() {
                 <span className="text-xs xl:text-sm text-[#5d3eff] xl:font-semibold">
                   March 18, 2021
                 </span>
-                <p className="text-[#0a1f44] md:text-base xl:text-xl font-bold break-words">
+                <p className="blog-title">
                   Common Yet Tricky Interview Questions That You Need To Be
                   Cautious About
                 </p>

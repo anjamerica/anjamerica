@@ -30,7 +30,7 @@ export default function Subscribers() {
       try {
         const res = await getSubscribers(page, 10, headers);
         setSubscribers(res.data.payload);
-        setTotalItems(subcribers.length)
+        setTotalItems(res.data.totalSubscribers);
       } catch (error) {
         console.log(error.messsage);
       }
@@ -40,43 +40,45 @@ export default function Subscribers() {
 
   console.log(subcribers);
 
+  console.log(page);
+
   return (
     <div className="mx-auto w-full h-full snap-y">
-      <div className="w-full flex h-[8hv] justify-between px-4 bg-primary-black  md:px-10 md:py-4 md:items-center md:h-[10vh]">
+      <div className="w-full flex h-[74px] justify-between px-5 bg-white box-shadow  md:px-10 md:py-4 md:items-center md:h-[10vh]">
         <Link href="/home">
           <img
-            src="/landing/logo.svg"
-            className="h-16 -ml-5 md:-ml-12 w-40 xl:h-20 xl:w-56 object-contain"
+            src="/assets/landing/anj_logo.svg"
+            className="h-16  w-40 xl:h-20 xl:w-56 self-center object-contain"
           />
         </Link>
         <img
           src="/admin/menu.svg"
-          className="visible  md:invisible"
+          className="visible h-5 w-fit self-center  md:invisible"
           onClick={() => {
             setNavOpen(!navOpen);
           }}
         />
         <MdOutlineLogout
-          className="hidden md:flex md:text-white md:h-8 md:w-8 md:cursor-pointer"
+          className="hidden md:flex md:text-black md:h-8 md:w-8 md:cursor-pointer"
           onClick={handleLogout}
         />
       </div>
       {navOpen && (
-        <div className="absolute top-[4rem] right-[0rem] z-10 md:hidden">
+        <div className="absolute top-[4.6rem] right-[0rem] z-10 md:hidden">
           <div className="w-fit bg-[#F0F0F0] flex justify-center h-fit">
             <ul>
               <Link href="/newpost">
-                <li className="w-full text-left py-2 px-10 cursor-pointer text-black hover:text-primary-blue text-xs">
+                <li className="w-full text-left py-2 px-10 cursor-pointer text-black hover:text-[#214ED1] text-xs">
                   Add new post
                 </li>
               </Link>
               <Link href="/applications">
-                <li className="w-full text-left py-2 px-10 cursor-pointer text-black hover:text-primary-blue text-xs">
+                <li className="w-full text-left py-2 px-10 cursor-pointer text-black hover:text-[#214ED1] text-xs">
                   Applications
                 </li>
               </Link>
               <li
-                className="w-full text-left py-2 px-10 cursor-pointer text-black hover:text-primary-blue text-xs"
+                className="w-full text-left py-2 px-10 cursor-pointer text-black hover:text-[#214ED1] text-xs"
                 onClick={handleLogout}
               >
                 Logout
@@ -108,14 +110,14 @@ export default function Subscribers() {
           </div>
           <div>
             <Link href="/newpost">
-              <button className="hidden md:w-fit font-medium text-white bg-primary-blue px-4 py-1  rounded-md text-center md:flex items-center justify-center md:text-sm md:cursor-pointer">
+              <button className="hidden md:w-fit font-medium text-white bg-[#214ED1] px-4 py-1  rounded-md text-center md:flex items-center justify-center md:text-sm md:cursor-pointer">
                 Add New Post
               </button>
             </Link>
           </div>
           <div>
             <Link href="/applications">
-              <button className="hidden md:w-fit font-medium text-white bg-primary-blue px-4 py-1  rounded-md text-center md:flex items-center justify-center md:text-sm md:cursor-pointer">
+              <button className="hidden md:w-fit font-medium text-white bg-[#214ED1] px-4 py-1  rounded-md text-center md:flex items-center justify-center md:text-sm md:cursor-pointer">
                 Applications
               </button>
             </Link>
@@ -125,10 +127,10 @@ export default function Subscribers() {
 
       <div className="w-full p-0 md:px-10">
         <div className="scrollbar-table">
-          <table className="table-fixed w-[40rem]  md:w-full border-spacing-y-2 border-collapse">
+          <table className="table-fixed w-[40rem]  md:w-full border-separate border-spacing-y-1">
             <thead className="overflow-x-auto">
-              <tr className="bg-primary-blue">
-                <th className="text-sm text-left  text-white md:text-md font-normal px-5 md:px-3 py-3  break-words">
+              <tr className="bg-[#214ED1]">
+                <th className="text-sm text-left w-20 md:w-40 text-white md:text-md font-normal px-5 md:px-3 py-3  break-words">
                   Si No
                 </th>
                 <th className="text-sm  text-left  text-white md:text-md font-normal  px-2 py-3 break-words">
@@ -145,7 +147,7 @@ export default function Subscribers() {
                   return (
                     <tr className="bg-[#F9F9F9] " key={i}>
                       <td className="text-black self-start   text-sm md:text-md font-normal px-5 md:px-3 break-words">
-                        {siNo++}
+                        {(page - 1) * 10 + i+1}
                       </td>
                       <td className="text-black self-start  text-sm md:text-md  font-normal px-2 py-3 break-words">
                         {item.email}

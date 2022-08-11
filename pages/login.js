@@ -43,14 +43,14 @@ export default function Login() {
 
   console.log(formError);
   return (
-    <div className="h-screen w-full bg-primary-green flex flex-col justify-center items-center">
-      <div className="login-page text-white text-[1.4rem] font-thin tracking-wide	 uppercase">
+    <div className="h-screen w-full bg-white flex flex-col justify-center items-center">
+      <div className="login-page text-primary-blue text-[1.4rem] font-thin tracking-wide	 uppercase">
         WELCOME
       </div>
       <div>
         <img
-           src="/landing/logo.svg"
-          className="w-[10rem]  xl:h-fit xl:w-[10rem] object-contain"
+           src="/assets/landing/anj_logo.svg"
+          className="w-[10rem] my-8  xl:h-fit xl:w-[10rem] object-contain"
         />
       </div>
       <div className="w-[85%] md:w-[25%]">
@@ -58,29 +58,29 @@ export default function Login() {
           <div className="login-input flex">
             <img
               className="w-[20px] h-[20px]"
-              src="/assets/landing/login_user.svg"
+              src="/assets/landing/user_login.svg"
             />
             <input
               type="text"
               placeholder="EMAIL"
               value={email} onChange={e => setEmail(e.target.value)}
-              className="flex-1 text-white select-none outline-none bg-transparent text-sm placeholder:text-white ml-3 text-input-white"
+              className="flex-1 text-primary-blue select-none outline-none bg-transparent text-sm placeholder:text-primary-blue ml-3 text-input-primary-blue"
             />
           </div>
           <div className="login-input flex mt-4">
             <img
               className="w-[20px] h-[20px]"
-              src="/assets/landing/user_password.svg"
+              src="/assets/landing/password_user.svg"
             />
             <input
               type="password"
               placeholder="PASSWORD"
               value={password} onChange={e => setPassword(e.target.value)}
-              className="flex-1 text-white select-none outline-none bg-transparent text-sm placeholder:text-white ml-3 text-input-white"
+              className="flex-1 text-primary-blue select-none outline-none bg-transparent text-sm placeholder:text-primary-blue ml-3 text-input-primary-blue"
             />
           </div>
           <p className="text-xs text-red-600">{formError}</p> 
-          <button className="w-full rounded bg-white px-3 py-3 uppercase text-sm text-primary-green mt-8">
+          <button className="w-full rounded bg-[#214ED1] px-3 py-3  text-sm text-white uppercase font-[600] mt-8">
             LOGIN
           </button>
         </form>
