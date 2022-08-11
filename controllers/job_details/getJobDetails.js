@@ -41,11 +41,13 @@ export const getJobDetails = async (req, res) => {
 
                             }
                         },
+                        {
+                            "ref_id": {
+                                "$regex": `${search}`, $options: 'i'
 
-
-
+                            }
+                        }
                     ]
-
                 }
             },
             {
