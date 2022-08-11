@@ -18,8 +18,8 @@ export default function Header() {
       <div className=" xl:ml-5 w-fit">
         <Link href="/">
           <img
-            src="/landing/logo.svg"
-            className="h-20 -ml-6 -md:ml-10 w-56 object-contain cursor-pointer"
+            src="/landing/Anj-logo.svg"
+            className="w-fit h-[40px] md:h-[50px] ml-1 md:-ml-2 object-contain cursor-pointer"
           />
         </Link>
       </div>

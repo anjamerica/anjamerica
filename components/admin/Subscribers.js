@@ -30,7 +30,7 @@ export default function Subscribers() {
       try {
         const res = await getSubscribers(page, 10, headers);
         setSubscribers(res.data.payload);
-        setTotalItems(subcribers.length);
+        setTotalItems(res.data.totalSubscribers);
       } catch (error) {
         console.log(error.messsage);
       }
@@ -39,6 +39,8 @@ export default function Subscribers() {
   }, [page]);
 
   console.log(subcribers);
+
+  console.log(page);
 
   return (
     <div className="mx-auto w-full h-full snap-y">
@@ -125,10 +127,10 @@ export default function Subscribers() {
 
       <div className="w-full p-0 md:px-10">
         <div className="scrollbar-table">
-          <table className="table-fixed w-[40rem]  md:w-full border-spacing-y-2 border-collapse">
+          <table className="table-fixed w-[40rem]  md:w-full border-separate border-spacing-y-1">
             <thead className="overflow-x-auto">
               <tr className="bg-[#214ED1]">
-                <th className="text-sm text-left  text-white md:text-md font-normal px-5 md:px-3 py-3  break-words">
+                <th className="text-sm text-left w-20 md:w-40 text-white md:text-md font-normal px-5 md:px-3 py-3  break-words">
                   Si No
                 </th>
                 <th className="text-sm  text-left  text-white md:text-md font-normal  px-2 py-3 break-words">
@@ -145,7 +147,7 @@ export default function Subscribers() {
                   return (
                     <tr className="bg-[#F9F9F9] " key={i}>
                       <td className="text-black self-start   text-sm md:text-md font-normal px-5 md:px-3 break-words">
-                        {siNo++}
+                        {(page - 1) * 10 + i+1}
                       </td>
                       <td className="text-black self-start  text-sm md:text-md  font-normal px-2 py-3 break-words">
                         {item.email}

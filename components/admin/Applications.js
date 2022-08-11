@@ -232,7 +232,7 @@ export default function Applications() {
                 <th className="text-sm w-44 text-white md:text-md font-normal px-2 py-3  break-words">
                   Post
                 </th>
-                <th className="sticky right-0 z-10 text-sm w-28 md:w-32 bg-[#1741c0] md:bg-[#214ED1] text-center text-white md:text-md font-normal px-2 py-3  break-words">
+                <th className="sticky right-0 z-10 text-sm w-28 md:w-32 bg-[#046AC8] md:bg-[#214ED1] text-center text-white md:text-md font-normal px-2 py-3  break-words">
                   Show More
                 </th>
               </tr>
