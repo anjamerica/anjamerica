@@ -143,7 +143,7 @@ export default function LandingScreen() {
                         <div
                           className={`${
                             serviceActive === index
-                              ? "flex items-center justify-center select-none text-white p-4 text-lg h-10 w-10 rounded-full bg-primary-blue"
+                              ? "flex items-center justify-center select-none self-center text-white p-4 text-lg h-10 w-10 rounded-full bg-primary-blue"
                               : "flex items-center select-none  text-primary-gray text-md md:text-base"
                           }`}
                         >
