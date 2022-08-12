@@ -277,7 +277,8 @@ select {
 }
 
 .loader {
-  border: 16px solid #f3f3f3;
+  border: 16px solid #07038c;
+  z-index: 999;
   border-radius: 50%;
   border-top: 16px solid #07038c;
   width: 100px;
@@ -554,3 +555,4 @@ button:focus {
   -o-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
+

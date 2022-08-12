@@ -32,6 +32,7 @@ export default function BlogSix() {
             <div className="relative">
               <div className="img-gradient">
                 <img
+                  alt="cover image"
                   src="/assets/landing/blog/blog_6.jpg"
                   className="w-full h-[45vh] md:h-[80vh] object-cover"
                 />
@@ -53,7 +54,7 @@ export default function BlogSix() {
                   <p className="text-sm md:text-[1rem] text-[#333] heading-main break-words  font-semibold">
                     What is Cloud Management?
                   </p>
-                  <p className="text-[#333] text-xs xl:text-base font-light break-words">
+                  <p className="text-[#333] text-xs xl:text-base font-normal break-words">
                     The evolution and advancement of technology have paved the
                     way to make mankind&apos;s life hassle-free! Cloud
                     management is a type of software and technology that ensures
@@ -72,7 +73,7 @@ export default function BlogSix() {
                       return (
                         <div className="gap-4 flex" key={i}>
                           <div className="flex flex-row my-2 ml-8 gap-1">
-                            <span className="text-[#333] text-xs xl:text-base font-light ">
+                            <span className="text-[#333] text-xs xl:text-base font-normal ">
                               {count++}.
                             </span>{" "}
                             &nbsp; &nbsp;
@@ -80,7 +81,7 @@ export default function BlogSix() {
                               <p className="text-sm md:text-[1rem] heading-main text-[#333] break-words  font-semibold">
                                 {data.header}{" "}
                               </p>
-                              <span className="text-[#333] text-xs xl:text-base font-light break-words">
+                              <span className="text-[#333] text-xs xl:text-base font-normal break-words">
                                 {data.content}
                               </span>
                             </div>
@@ -94,29 +95,29 @@ export default function BlogSix() {
                   </p>
                   <div className="ml-12">
                     <ol className="list-decimal">
-                      <li className="my-1 text-[#333] text-xs xl:text-base font-light break-words">
+                      <li className="my-1 text-[#333] text-xs xl:text-base font-normal break-words">
                         Your team is absolutely sick of manual labor when you
                         think about it! One of the keys to success is,
                         “Don&apos;t work harder, work smarter.”
                       </li>
-                      <li className="px-[10px] py-[5px] text-[#333] text-xs xl:text-base font-light break-words">
+                      <li className="px-[10px] py-[5px] text-[#333] text-xs xl:text-base font-normal break-words">
                         Not wearing a bulletproof vest and going into battle is
                         an analogy to a firm not having a cloud management
                         system.
                       </li>
-                      <li className="px-[10px] py-[5px] text-[#333] text-xs xl:text-base font-light break-words">
+                      <li className="px-[10px] py-[5px] text-[#333] text-xs xl:text-base font-normal break-words">
                         Think about it! Your infrastructure is not immune to
                         disasters pertaining to the advanced and developed
                         world.
                       </li>
-                      <li className="px-[10px] py-[5px] text-[#333] text-xs xl:text-base font-light break-words">
+                      <li className="px-[10px] py-[5px] text-[#333] text-xs xl:text-base font-normal break-words">
                         This could be one of those instances when departments
                         are not transparent. This would lead to internal
                         challenges and issues, which can be solved if everyone
                         is just in sync. The cloud helps you do that! And
                         finally,
                       </li>
-                      <li className="px-[10px] py-[5px] text-[#333] text-xs xl:text-base font-light break-words">
+                      <li className="px-[10px] py-[5px] text-[#333] text-xs xl:text-base font-normal break-words">
                         You’re always anxious about budgeting and costs. The
                         implementation of cloud system management would help
                         save on costs. Through CMS, we can track unused and
@@ -130,7 +131,7 @@ export default function BlogSix() {
                     <p className="text-[1rem] heading-main text-[#333] break-words  font-semibold">
                       Don&apos;t fret; ANJ America&apos;s got your back
                     </p>
-                    <span className="text-[#333] text-xs xl:text-base font-light break-words">
+                    <span className="text-[#333] text-xs xl:text-base font-normal break-words">
                       ANJ America is absolutely customer-driven as we focus on
                       building the infrastructure for your success. One of ANJ’s
                       key services is Cloud Management Services. We wish to
@@ -155,6 +156,7 @@ export default function BlogSix() {
           <div className="p-5 md:p-10 grid grid-cols-1 w-full h-full gap-4 md:gap-4 xl:gap-10 md:grid-cols-3">
             <div className="rounded-xl w-fit  h-full bg-white drop-shadow-xl">
               <img
+                alt="cover image"
                 src="/blog/blog-7.jpg"
                 className="w-full rounded-t-xl h-[40%]"
               />
@@ -165,7 +167,7 @@ export default function BlogSix() {
                 <p className="blog-title">
                   Software and IT Industry In The USA
                 </p>
-                <p className="text-[#4e5d78] text-xs xl:text-base font-light break-words h-fit">
+                <p className="text-[#4e5d78] text-xs xl:text-base font-normal break-words h-fit">
                   The business intelligence (BI) software industry is rapidly
                   becoming one of the leading software categories in terms of
                   market size.
@@ -182,6 +184,7 @@ export default function BlogSix() {
             </div>
             <div className="rounded-xl w-fit  h-full bg-white drop-shadow-xl">
               <img
+                alt="cover image"
                 src="/assets/landing/blog/blog_7.jpg"
                 className="w-full rounded-t-xl h-[40%]"
               />
@@ -192,7 +195,7 @@ export default function BlogSix() {
                 <p className="blog-title">
                   5 Ways To Learn New Skills To Boost Your CV
                 </p>
-                <p className="text-[#4e5d78] text-xs xl:text-base font-light break-words h-fit">
+                <p className="text-[#4e5d78] text-xs xl:text-base font-normal break-words h-fit">
                   When looking for a career change or wanting to get back into
                   the professional space after a break, it is highly essential
                   to have your CV updated with the right skills.
@@ -209,6 +212,7 @@ export default function BlogSix() {
             </div>
             <div className="rounded-xl w-fit  h-full bg-white drop-shadow-xl">
               <img
+                alt="cover image"
                 src="/blog/blog-8.jpg"
                 className="w-full rounded-t-xl h-[40%]"
               />
@@ -217,7 +221,7 @@ export default function BlogSix() {
                   April 5, 2021
                 </span>
                 <p className="blog-title">Networking At Your Workplace</p>
-                <p className="text-[#4e5d78] text-xs xl:text-base font-light break-words h-fit">
+                <p className="text-[#4e5d78] text-xs xl:text-base font-normal break-words h-fit">
                   Networking at your workplace isn’t far-fetched. After all
                   “it’s not what you know, it’s whom you know.” How many times
                   have you heard that being said?

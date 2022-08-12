@@ -14,10 +14,17 @@ export default function Header() {
   }, [router.pathname]);
 
   return (
-    <div className="relative w-full flex justify-between items-center h-[10hv] shadow-sm px-4  md:px-[2%] md:py-4 md:items-center md:h-[15vh]">
+    <div
+      className={`${
+        router.pathname === ("/home" || "/about" || "/digitize" || "/staffing")
+          ? "relative w-full flex justify-between items-center h-[10hv] shadow-sm px-4  md:px-[2%] md:py-4 md:items-center md:h-[15vh]"
+          : "relative w-full flex bg-white  justify-between items-center h-[10hv] shadow-sm px-4  md:px-[2%] md:py-4 md:items-center md:h-[15vh]"
+      }`}
+    >
       <div className=" xl:ml-5 w-fit">
         <Link href="/">
           <img
+            alt="logo image"
             src="/landing/Anj-logo.svg"
             className="w-fit h-[40px] md:h-[50px] ml-1 md:-ml-2 object-contain cursor-pointer"
           />

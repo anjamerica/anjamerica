@@ -41,50 +41,62 @@ export default function Staffing() {
           <div className="scrollbar-staffing px-10 md:px-20">
             <div className="grid grid-cols-1 w-full gap-0 md:gap-[46px] md:grid-cols-4 xl:grid-cols-6">
               <img
+                alt="logo icon"
                 src="/assets/business/transamerica.png"
                 className="logo-hover-staffing"
               />
               <img
+                alt="logo icon"
                 src="/assets/business/tata.png"
                 className="logo-hover-staffing"
               />
               <img
+                alt="logo icon"
                 src="/assets/business/travelers.png"
                 className="logo-hover-staffing"
               />
               <img
+                alt="logo icon"
                 src="/assets/business/progressive.png"
                 className="logo-hover-staffing mt-2"
               />
               <img
+                alt="logo icon"
                 src="/assets/business/stateauto.png"
                 className="logo-hover-staffing"
               />
               <img
+                alt="logo icon"
                 src="/assets/business/icici.png"
                 className="logo-hover-staffing"
               />
               <img
+                alt="logo icon"
                 src="/assets/business/insight.png"
                 className="logo-hover-staffing mt-2"
               />
               <img
+                alt="logo icon"
                 src="/assets/business/hunginton.png"
                 className="logo-hover-staffing mt-2"
               />
               <img
+                alt="logo icon"
                 src="/assets/business/nationwide.png"
                 className="logo-hover-staffing"
               />
               <img
+                alt="logo icon"
                 src="/assets/business/nasdaq.png"
                 className="logo-hover-staffing"
               />
               <img
+                alt="logo icon"
                 src="/assets/business/verizon.png"
                 className="logo-hover-staffing"
               />
               <img
+                alt="logo icon"
                 src="/assets/business/statefarm.png"
                 className="logo-hover-staffing mt-2"
               />

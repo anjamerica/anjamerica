@@ -41,6 +41,7 @@ export default function BlogSeven() {
             <div className="relative">
               <div className="img-gradient">
                 <img
+                  alt="cover image"
                   src="/blog/blog-7.jpg"
                   className="w-full h-[45vh] md:h-[80vh] object-cover"
                 />
@@ -59,21 +60,21 @@ export default function BlogSeven() {
             <div className="-mt-[15%] md:-mt-[8%] p-5 md:p-10 w-full">
               <div className="w-full h-fit bg-white rounded-sm md:rounded-md drop-shadow-lg p-5 md:p-10">
                 <div className="flex flex-col gap-4">
-                  <p className="text-[#333] text-xs xl:text-base font-light break-words">
+                  <p className="text-[#333] text-xs xl:text-base font-normal break-words">
                     The business intelligence (BI) software industry is rapidly
                     becoming one of the leading software categories in terms of
                     market size. According to industry analysts at Gartner, the
                     size of the global software industry was about $3.5 billion
                     in 2013, up from $2.2 billion in 2012.
                   </p>
-                  <p className="text-[#333] text-xs xl:text-base font-light break-words">
+                  <p className="text-[#333] text-xs xl:text-base font-normal break-words">
                     According to Global Industry Analysts, Software as a Service
                     (SaaS) is a huge growth driver, growing by 20 percent
                     annually. If you are interested in a position in high
                     technology, you need to focus on Software as a Service
                     (SaaS) and Business Intelligence (BI) software.
                   </p>
-                  <p className="text-[#333] text-xs xl:text-base font-light break-words">
+                  <p className="text-[#333] text-xs xl:text-base font-normal break-words">
                     It should be noted that the software industry is not limited
                     to independent software vendors, but also includes hardware
                     offerings provided by programming services and software
@@ -82,7 +83,7 @@ export default function BlogSeven() {
                   <p className="text-sm md:text-[1rem] heading-main text-[#333] break-words  font-semibold">
                     How IT and Software Sectors Have Grown In The US
                   </p>
-                  <p className="text-[#333] text-xs xl:text-base font-light break-words">
+                  <p className="text-[#333] text-xs xl:text-base font-normal break-words">
                     The economic crisis has had a significant impact on the IT
                     software sector compared to other segments of the IT
                     industry. In 2017, more than one-third of successful visa
@@ -92,7 +93,7 @@ export default function BlogSeven() {
                     computer science, engineering, mathematics and computer
                     programming, and computer systems technology.
                   </p>
-                  <p className="text-[#333] text-xs xl:text-base font-light break-words">
+                  <p className="text-[#333] text-xs xl:text-base font-normal break-words">
                     According to a report by the American Enterprise Institute
                     (AEI) and the Carolina Institute of Technology (CEI),
                     software value-added in the United States has increased by
@@ -107,7 +108,7 @@ export default function BlogSeven() {
                   <p className="text-sm md:text-[1rem]  heading-main text-[#333] break-words  font-semibold">
                     What To Look Forward To
                   </p>
-                  <p className="text-[#333] text-xs xl:text-base font-light break-words">
+                  <p className="text-[#333] text-xs xl:text-base font-normal break-words">
                     IT software development companies have become stronger, with
                     technology services and software accounting for more than
                     80% of the total US software market. For example, software
@@ -116,10 +117,10 @@ export default function BlogSeven() {
                     as health care, education, transportation, energy, and
                     infrastructure.
                   </p>
-                  <p className="text-[#333] text-xs xl:text-base font-light break-words">
+                  <p className="text-[#333] text-xs xl:text-base font-normal break-words">
                     The Computing and Technology Industry Association (CompTIA)
-                    is the world&apos;s leading industry association for those who
-                    design, implement, manage and protect technologies that
+                    is the world&apos;s leading industry association for those
+                    who design, implement, manage and protect technologies that
                     drive our global economy. The technology sector consists of
                     companies selling software, computer products, and
                     information technology (IT) related services. This sector
@@ -127,17 +128,17 @@ export default function BlogSeven() {
                     sale, and marketing of software, computer products, and
                     service-related information technologies.
                   </p>
-                  <p className="text-[#333] text-xs xl:text-base font-light break-words">
+                  <p className="text-[#333] text-xs xl:text-base font-normal break-words">
                     Network and database management is the leading segment in
                     the US software market, accounting for over 40% of total
                     software sales in the US. One might argue that it makes no
                     sense to call cloud computing companies &amp; &quot;software
-                    companies&quot; but this is an arbitrary separation. The software
-                    industry includes software used for cloud-based,
+                    companies&quot; but this is an arbitrary separation. The
+                    software industry includes software used for cloud-based,
                     premise-based licensing and maintenance, as well as
                     cloud-based applications.
                   </p>
-                  <p className="text-[#333] text-xs xl:text-base font-light break-words">
+                  <p className="text-[#333] text-xs xl:text-base font-normal break-words">
                     The software industry is classified as a service industry
                     and manufactures packaged products such as software,
                     hardware, software, and software services. It is
@@ -148,7 +149,7 @@ export default function BlogSeven() {
                   <p className="text-sm md:text-[1rem]  heading-main text-[#333] break-words  font-semibold">
                     In Conclusion
                   </p>
-                  <p className="text-[#333] text-xs xl:text-base font-light break-words">
+                  <p className="text-[#333] text-xs xl:text-base font-normal break-words">
                     The NYSE - listed IBM - has the most employees and the
                     second-largest share of its workforce in the industry. More
                     than 99% of software employees in the USA work for top
@@ -158,7 +159,7 @@ export default function BlogSeven() {
                     United States and the second- highest percentage of IT
                     employees in America.
                   </p>
-                  <p className="text-[#333] text-xs xl:text-base font-light break-words">
+                  <p className="text-[#333] text-xs xl:text-base font-normal break-words">
                     If you are looking to get into the software and IT services
                     industry in the USA, you’re future couldn’t look brighter.
                     We can help direct you to the right companies. Check out our
@@ -178,6 +179,7 @@ export default function BlogSeven() {
           <div className="p-5 md:p-10 grid grid-cols-1 w-full h-full gap-4 md:gap-4 xl:gap-10 md:grid-cols-3">
             <div className="rounded-xl w-fit  h-full bg-white drop-shadow-xl">
               <img
+                alt="cover image"
                 src="/assets/landing/blog/blog_7.jpg"
                 className="w-full rounded-t-xl h-[40%]"
               />
@@ -188,7 +190,7 @@ export default function BlogSeven() {
                 <p className="blog-title">
                   5 Ways To Learn New Skills To Boost Your CV
                 </p>
-                <p className="text-[#4e5d78] text-xs xl:text-base font-light break-words h-fit">
+                <p className="text-[#4e5d78] text-xs xl:text-base font-normal break-words h-fit">
                   When looking for a career change or wanting to get back into
                   the professional space after a break, it is highly essential
                   to have your CV updated with the right skills.
@@ -205,6 +207,7 @@ export default function BlogSeven() {
             </div>
             <div className="rounded-xl w-fit  h-full bg-white drop-shadow-xl">
               <img
+                alt="cover image"
                 src="/blog/blog-8.jpg"
                 className="w-full rounded-t-xl h-[40%]"
               />
@@ -212,10 +215,8 @@ export default function BlogSeven() {
                 <span className="text-xs xl:text-sm text-[#5d3eff] xl:font-semibold">
                   April 5, 2021
                 </span>
-                <p className="blog-title">
-                  Networking At Your Workplace
-                </p>
-                <p className="text-[#4e5d78] text-xs xl:text-base font-light break-words h-fit">
+                <p className="blog-title">Networking At Your Workplace</p>
+                <p className="text-[#4e5d78] text-xs xl:text-base font-normal break-words h-fit">
                   Networking at your workplace isn’t far-fetched. After all
                   “it’s not what you know, it’s whom you know.” How many times
                   have you heard that being said?
@@ -229,6 +230,7 @@ export default function BlogSeven() {
             </div>
             <div className="rounded-xl w-fit  h-full bg-white drop-shadow-xl">
               <img
+                alt="cover image"
                 src="/blog/blog-9.jpg"
                 className="w-full rounded-t-xl h-[40%]"
               />
@@ -240,7 +242,7 @@ export default function BlogSeven() {
                   Common Yet Tricky Interview Questions That You Need To Be
                   Cautious About
                 </p>
-                <p className="text-[#4e5d78] text-xs xl:text-base font-light break-words h-fit">
+                <p className="text-[#4e5d78] text-xs xl:text-base font-normal break-words h-fit">
                   Interviews can be stressful. Every question that the hiring
                   manager asks may seem intended to churn out information that
                   will put you in a disadvantageous position. How do you tackle

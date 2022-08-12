@@ -4,7 +4,7 @@ import React from "react";
 import { useState } from "react";
 import Loader from "../components/layout/Loader";
 import { useAuth } from "../hooks/useAuth";
-import {useAuthPageHook} from "../hooks/useRequireAuth"
+import { useAuthPageHook } from "../hooks/useRequireAuth";
 
 export default function Login() {
   //form states
@@ -35,8 +35,8 @@ export default function Login() {
       }
     } catch (e) {
       setLoginLoading(false);
-      let  {response}  = e;
-      if(e?.response?.data?.status==401)setFormError("Admin not found")
+      let { response } = e;
+      if (e?.response?.data?.status == 401) setFormError("Admin not found");
       console.log();
     }
   }
@@ -49,7 +49,8 @@ export default function Login() {
       </div>
       <div>
         <img
-           src="/assets/landing/anj_logo.svg"
+          alt="logo image"
+          src="/assets/landing/anj_logo.svg"
           className="w-[10rem] my-8  xl:h-fit xl:w-[10rem] object-contain"
         />
       </div>
@@ -57,29 +58,33 @@ export default function Login() {
         <form onSubmit={handleLogin}>
           <div className="login-input flex">
             <img
+              alt="user icon"
               className="w-[20px] h-[20px]"
               src="/assets/landing/user_login.svg"
             />
             <input
               type="text"
               placeholder="EMAIL"
-              value={email} onChange={e => setEmail(e.target.value)}
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
               className="flex-1 text-primary-blue select-none outline-none bg-transparent text-sm placeholder:text-primary-blue ml-3 text-input-primary-blue"
             />
           </div>
           <div className="login-input flex mt-4">
             <img
+              alt="password icon"
               className="w-[20px] h-[20px]"
               src="/assets/landing/password_user.svg"
             />
             <input
               type="password"
               placeholder="PASSWORD"
-              value={password} onChange={e => setPassword(e.target.value)}
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
               className="flex-1 text-primary-blue select-none outline-none bg-transparent text-sm placeholder:text-primary-blue ml-3 text-input-primary-blue"
             />
           </div>
-          <p className="text-xs text-red-600">{formError}</p> 
+          <p className="text-xs text-red-600">{formError}</p>
           <button className="w-full rounded bg-[#214ED1] px-3 py-3  text-sm text-white uppercase font-[600] mt-8">
             LOGIN
           </button>
@@ -90,20 +95,11 @@ export default function Login() {
 }
 
 Login.getLayout = function LoginLayout({ children }) {
-
-
   let { isAuthenticated, loading } = useAuthPageHook();
 
-
   if (!isAuthenticated === null || loading) {
-    return <Loader />
+    return <Loader />;
   }
-  
-  return (
-    <>
-      {
-        children
-      }
-    </>
-  )
-}
+
+  return <>{children}</>;
+};
