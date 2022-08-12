@@ -16,10 +16,11 @@ export default function Header() {
   return (
     <div
       className={`${
-        router.pathname === ("/home" || "/about" || "/digitize" || "/staffing")
+        router.pathname ===  ("/home" || "/about" || "/digitize" || "/staffing")
           ? "relative w-full flex justify-between items-center h-[10hv] shadow-sm px-4  md:px-[2%] md:py-4 md:items-center md:h-[15vh]"
-          : "relative w-full flex bg-white  justify-between items-center h-[10hv] shadow-sm px-4  md:px-[2%] md:py-4 md:items-center md:h-[15vh]"
+          : "relative w-full bg-white flex justify-between items-center h-[10hv] shadow-sm px-4  md:px-[2%] md:py-4 md:items-center md:h-[15vh]"
       }`}
+
     >
       <div className=" xl:ml-5 w-fit">
         <Link href="/">

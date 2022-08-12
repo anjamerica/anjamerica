@@ -39,7 +39,7 @@ export default function Staffing() {
             </div>
           </div>
           <div className="scrollbar-staffing px-10 md:px-20">
-            <div className="grid grid-cols-1 w-full gap-0 md:gap-[46px] md:grid-cols-4 xl:grid-cols-6">
+            <div className="grid grid-cols-3 gap-[20px]  w-full md:gap-[46px] sm:grid-cols-4 xl:grid-cols-6">
               <img
                 alt="logo icon"
                 src="/assets/business/transamerica.png"

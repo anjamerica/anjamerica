@@ -85,11 +85,11 @@ a {
 }
 
 .logo-hover-landing {
-  @apply w-[10rem] h-[4rem] md:w-fit md:h-fit grayscale opacity-100 hover:opacity-100 hover:grayscale-0;
+  @apply w-[5rem] h-[2rem] md:w-fit md:h-fit grayscale opacity-100 hover:opacity-100 hover:grayscale-0;
 }
 
 .logo-hover-staffing {
-  @apply w-[12rem] h-fit object-contain md:w-fit md:h-fit grayscale opacity-70 hover:opacity-100 hover:grayscale-0;
+  @apply w-[5rem] h-fit object-contain md:w-[8rem] md:h-fit grayscale opacity-70 hover:opacity-100 hover:grayscale-0;
 }
 
 .scrollbar-landing {
