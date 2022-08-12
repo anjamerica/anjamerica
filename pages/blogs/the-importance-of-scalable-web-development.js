@@ -13,6 +13,7 @@ export default function BlogFour() {
             <div className="relative">
               <div className="img-gradient">
                 <img
+                  alt="cover image"
                   src="/assets/landing/blog/blog_4.jpg"
                   className="w-full h-[45vh] md:h-[80vh] object-cover"
                 />
@@ -31,7 +32,7 @@ export default function BlogFour() {
             <div className="-mt-[15%] md:-mt-[8%] p-5 md:p-10 w-full">
               <div className="w-full h-fit bg-white rounded-sm md:rounded-md drop-shadow-lg p-5 md:p-10">
                 <div className="flex flex-col gap-4">
-                  <p className="text-[#333] text-xs xl:text-base font-light break-words">
+                  <p className="text-[#333] text-xs xl:text-base font-normal break-words">
                     Scalable Web Development refers to the ability of a system,
                     network, and the process of using the website to handle the
                     workload that would increase as time passes by.
@@ -61,13 +62,13 @@ export default function BlogFour() {
                     <br />
                     <div className="ml-[3rem]">
                       <ul className="list-disc">
-                        <li className="px-[10px] py-[5px] text-[#333] text-xs xl:text-base font-light break-words">
+                        <li className="px-[10px] py-[5px] text-[#333] text-xs xl:text-base font-normal break-words">
                           The web page not loading
                         </li>
-                        <li className="px-[10px] py-[5px] text-[#333] text-xs xl:text-base font-light break-words">
+                        <li className="px-[10px] py-[5px] text-[#333] text-xs xl:text-base font-normal break-words">
                           Taking a lot of time to load
                         </li>
-                        <li className="px-[10px] py-[5px] text-[#333] text-xs xl:text-base font-light break-words">
+                        <li className="px-[10px] py-[5px] text-[#333] text-xs xl:text-base font-normal break-words">
                           Not being able to produce relevant data, due to a high
                           number of people using the page, and much more.
                         </li>
@@ -95,17 +96,17 @@ export default function BlogFour() {
                     <br />
                     <div className="ml-[3rem]">
                       <ul className="list-disc">
-                        <li className="px-[10px] py-[5px] text-[#333] text-xs xl:text-base font-light break-words">
+                        <li className="px-[10px] py-[5px] text-[#333] text-xs xl:text-base font-normal break-words">
                           Update the site.
                         </li>
-                        <li className="px-[10px] py-[5px] text-[#333] text-xs xl:text-base font-light break-words">
+                        <li className="px-[10px] py-[5px] text-[#333] text-xs xl:text-base font-normal break-words">
                           Improve the user experience
                         </li>
-                        <li className="px-[10px] py-[5px] text-[#333] text-xs xl:text-base font-light break-words">
+                        <li className="px-[10px] py-[5px] text-[#333] text-xs xl:text-base font-normal break-words">
                           Extend the life cycle of the services or products
                           offered
                         </li>
-                        <li className="px-[10px] py-[5px] text-[#333] text-xs xl:text-base font-light break-words">
+                        <li className="px-[10px] py-[5px] text-[#333] text-xs xl:text-base font-normal break-words">
                           As a positive externality, increase sales and brand
                           loyalty.
                         </li>
@@ -117,7 +118,7 @@ export default function BlogFour() {
                   <p className="text-[1rem] text-[#333] heading-main break-words  font-semibold">
                     How can ANJ America help?
                   </p>
-                  <span className="text-[#333] text-xs xl:text-base font-light break-words">
+                  <span className="text-[#333] text-xs xl:text-base font-normal break-words">
                     Our team of well-experienced and tech-savvy individuals is
                     here to make your life easier. We offer cutting-edge web
                     development services that are customized for every business
@@ -150,8 +151,9 @@ export default function BlogFour() {
             Don&apos;t miss these stories;
           </span>
           <div className="p-5 md:p-10 grid grid-cols-1 w-full h-full gap-4 md:gap-4 xl:gap-10 md:grid-cols-3">
-          <div className="rounded-xl w-fit  h-full bg-white drop-shadow-xl">
+            <div className="rounded-xl w-fit  h-full bg-white drop-shadow-xl">
               <img
+                alt="cover image"
                 src="/blog/blog-7.jpg"
                 className="w-full rounded-t-xl h-[40%]"
               />
@@ -162,7 +164,7 @@ export default function BlogFour() {
                 <p className="blog-title">
                   Software and IT Industry In The USA
                 </p>
-                <p className="text-[#4e5d78] text-xs xl:text-base font-light break-words h-fit">
+                <p className="text-[#4e5d78] text-xs xl:text-base font-normal break-words h-fit">
                   The business intelligence (BI) software industry is rapidly
                   becoming one of the leading software categories in terms of
                   market size.
@@ -179,6 +181,7 @@ export default function BlogFour() {
             </div>
             <div className="rounded-xl w-fit  h-full bg-white drop-shadow-xl">
               <img
+                alt="cover image"
                 src="/assets/landing/blog/blog_7.jpg"
                 className="w-full rounded-t-xl h-[40%]"
               />
@@ -189,7 +192,7 @@ export default function BlogFour() {
                 <p className="blog-title">
                   5 Ways To Learn New Skills To Boost Your CV
                 </p>
-                <p className="text-[#4e5d78] text-xs xl:text-base font-light break-words h-fit">
+                <p className="text-[#4e5d78] text-xs xl:text-base font-normal break-words h-fit">
                   When looking for a career change or wanting to get back into
                   the professional space after a break, it is highly essential
                   to have your CV updated with the right skills.
@@ -206,6 +209,7 @@ export default function BlogFour() {
             </div>
             <div className="rounded-xl w-fit  h-full bg-white drop-shadow-xl">
               <img
+                alt="cover image"
                 src="/blog/blog-8.jpg"
                 className="w-full rounded-t-xl h-[40%]"
               />
@@ -213,10 +217,8 @@ export default function BlogFour() {
                 <span className="text-xs xl:text-sm text-[#5d3eff] xl:font-semibold">
                   April 5, 2021
                 </span>
-                <p className="blog-title">
-                  Networking At Your Workplace
-                </p>
-                <p className="text-[#4e5d78] text-xs xl:text-base font-light break-words h-fit">
+                <p className="blog-title">Networking At Your Workplace</p>
+                <p className="text-[#4e5d78] text-xs xl:text-base font-normal break-words h-fit">
                   Networking at your workplace isn’t far-fetched. After all
                   “it’s not what you know, it’s whom you know.” How many times
                   have you heard that being said?

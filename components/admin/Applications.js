@@ -2,54 +2,31 @@ import Link from "next/link";
 import React, { useState, useEffect, useContext } from "react";
 import Pagination from "./Pagination";
 import { getJobApplicants } from "../../services/jobApplicants";
-import { loadingContext } from "../../hooks/loadingContext";
 import Loader from "../layout/Loader";
-import { downloadFile } from "../../services/file";
 import { useRouter } from "next/router";
 import { MdOutlineLogout } from "react-icons/md";
 import ApplicationDetails from "./ApplicationDetails";
 import { FilterComponent } from "../common/FilterComponent";
 import { TbAdjustmentsHorizontal } from "react-icons/tb";
+import ButtonLoader from "../layout/ButtonLoader";
 
 export default function Applications() {
   const [navOpen, setNavOpen] = useState(false);
   const [applications, setApplications] = useState([]);
   const [searchQuery, setSearchQuery] = useState("");
-  const [fileKey, setFileKey] = useState("");
   const [page, setPage] = useState(1);
   const [totalItems, setTotalItems] = useState(0);
   const [filter, setFilter] = useState(false);
   const router = useRouter();
   const { from, to } = router.query;
-  const { loaderToggler } = useContext(loadingContext);
-
-  // useEffect(() => {
-  //   const getCv = async () => {
-  //     try {
-  //       const response = await downloadFile(fileKey);
-  //     } catch (error) {
-  //       console.error(error);
-  //     }
-  //   };
-  //   getCv();
-  // },[]);
-
-  useEffect(() => {
-    const getOneData = async () => {
-      try {
-        const response = await get;
-      } catch (error) {
-        console.log(error);
-      }
-    };
-  }, []);
+  const [loading, setLoading] = useState(false);
 
   //get all applications
   useEffect(() => {
     const headers = { Authorization: localStorage.getItem("token") };
     const getApplication = async () => {
       try {
-        loaderToggler(true);
+        setLoading(true);
         const response = await getJobApplicants(
           searchQuery,
           page,
@@ -60,14 +37,10 @@ export default function Applications() {
         );
         setApplications(response?.data?.payload);
         setTotalItems(response?.data?.totalCount);
-        console.log(response?.data?.payload?.job_id?.job_title);
-        // setFileKey(response?.data?.file);
-        // console.log(response.file);
-        console.log(response?.data);
-        loaderToggler(false);
+        setLoading(false);
       } catch (err) {
+        setLoading(false);
         console.log(err);
-        loaderToggler(false);
       }
     };
     getApplication();
@@ -75,25 +48,11 @@ export default function Applications() {
 
   console.log(totalItems);
 
-  const handleGetCv = async (file) => {
-    try {
-      loaderToggler(true);
-      const response = await downloadFile(file);
-      loaderToggler(false);
-      router.push(`/${response.config.url}`);
-      // window.open(`/${response.config.url}`,"_blank")
-      console.log(response);
-    } catch (error) {
-      console.error(error);
-      loaderToggler(false);
-    }
-  };
-
   const handleLogout = () => {
-    loaderToggler(true);
+    setLoading(true);
     localStorage.removeItem("token");
     router.push("/login");
-    loaderToggler(false);
+    setLoading(false);
   };
 
   return (
@@ -101,11 +60,13 @@ export default function Applications() {
       <div className="w-full flex h-[74px] justify-between px-5 bg-white box-shadow  md:px-10 md:py-4 md:items-center md:h-[10vh]">
         <Link href="/home">
           <img
+            alt="logo image"
             src="/assets/landing/anj_logo.svg"
             className="h-16  w-40  xl:h-20 xl:w-56 self-center object-contain"
           />
         </Link>
         <img
+          alt="menu icon"
           src="/admin/menu.svg"
           className="visible h-5 w-fit mr-1 self-center  md:invisible"
           onClick={() => {
@@ -143,10 +104,7 @@ export default function Applications() {
           </div>
         </div>
       )}
-      <div
-        className="flex flex-col-reverse justify-between p-5 md:p-10 md:flex-row"
-        // onClick={() => setNavOpen(!navOpen)}
-      >
+      <div className="flex flex-col-reverse justify-between p-5 md:p-10 md:flex-row">
         <div className="mt-4 text-lg font-semibold md:font-semibold md:mt-0">
           Applications
         </div>
@@ -160,6 +118,7 @@ export default function Applications() {
               onChange={(e) => setSearchQuery(e.target.value)}
             />
             <img
+              alt="search icon"
               src="/assets/landing/search_icon.svg"
               className="w-fit h-fit"
             />
@@ -181,16 +140,16 @@ export default function Applications() {
           <div className="w-fit">
             {!from && !to ? (
               <button
-                className=" md:w-fit text-[14px] font-medium  text-white bg-[#214ED1] px-4 py-1.5  rounded-md text-center flex flex-row gap-2 items-center justify-center md:text-sm md:cursor-pointer"
+                className=" md:w-fit text-sm font-medium  text-white bg-[#214ED1] px-4 py-1  rounded-md text-center flex flex-row gap-2 items-center justify-center md:text-sm md:cursor-pointer"
                 onClick={() => setFilter(!filter)}
               >
                 Filter
-                <TbAdjustmentsHorizontal />
+                <TbAdjustmentsHorizontal className="w-fit h-fit" />
               </button>
             ) : (
               <div onClick={() => router.push("/applications")}>
                 <button
-                  className=" md:w-fit text-[14px] font-medium  text-white bg-[#214ED1] px-2 whitespace-nowrap md:px-4 py-1.5  rounded-md text-center flex flex-row gap-2 items-center justify-center md:text-sm md:cursor-pointer"
+                  className=" md:w-fit text-sm font-medium  text-white bg-[#214ED1] px-2 whitespace-nowrap md:px-4 py-1  rounded-md text-center flex flex-row gap-2 items-center justify-center md:text-sm md:cursor-pointer"
                   onClick={() => {
                     router.push("/applications");
                   }}
@@ -240,20 +199,37 @@ export default function Applications() {
             <tbody>
               {applications.length > 0 ? (
                 applications.map((item, i) => {
-                  return <ApplicationDetails key={i} item={item} />;
+                  return (
+                    <>
+                      {loading ? (
+                        <tr className="col-span-12 z-50">
+                          <td className="" colSpan={7} rowSpan={10}>
+                            <ButtonLoader />
+                          </td>
+                        </tr>
+                      ) : (
+                        <ApplicationDetails key={i} item={item} />
+                      )}
+                    </>
+                  );
                 })
               ) : (
                 <tr className="col-span-12">
                   <td className="" colSpan={7}>
-                    <div className="w-full h-fit flex flex-col justify-start md:justify-center">
-                      <img
-                        src="/admin/no_content.png"
-                        className="w-96 h-[15rem] md:h-[20rem] md:self-center object-contain"
-                      />
-                      <p className="font-semibold ml-28 md:ml-0 text-primary-gray md:self-center">
-                        No Applicants Available
-                      </p>
-                    </div>
+                    {loading ? (
+                      <Loader />
+                    ) : (
+                      <div className="w-full h-fit flex flex-col justify-start md:justify-center">
+                        <img
+                          alt="no data"
+                          src="/admin/no_content.png"
+                          className="w-96 h-[15rem] md:h-[20rem] md:self-center object-contain"
+                        />
+                        <p className="font-semibold ml-28 md:ml-0 text-primary-gray md:self-center">
+                          No Applicants Available
+                        </p>
+                      </div>
+                    )}
                   </td>
                 </tr>
               )}

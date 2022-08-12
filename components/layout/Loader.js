@@ -7,7 +7,7 @@ function Loader() {
   return (
     <>
       {isLoading && (
-        <div className='loader-container'>
+        <div className='loader-container z-50'>
         <div className='loader'></div>
       </div>
       )}

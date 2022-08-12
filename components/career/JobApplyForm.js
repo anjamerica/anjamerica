@@ -153,7 +153,7 @@ export default function JobApplyForm({ item, setFormModal }) {
     } catch (error) {
       console.error(error);
       loaderToggler(false);
-      isLoading(false)
+      isLoading(false);
     }
   };
 
@@ -243,7 +243,11 @@ export default function JobApplyForm({ item, setFormModal }) {
                 })}
             </select>
             <div className="absolute top-[1rem] left-[2.5rem]">
-              <img src="/admin/dropdown.svg" className="w-fit h-fit" />
+              <img
+                src="/admin/dropdown.svg"
+                alt="dropdown icon"
+                className="w-fit h-fit"
+              />
             </div>
             <input
               className="focus:outline-none border-none py-3 truncate px-2 xl:px-3"

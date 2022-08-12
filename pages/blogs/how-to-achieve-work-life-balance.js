@@ -47,6 +47,7 @@ export default function BlogOne() {
             <div className="relative">
               <div className="img-gradient">
                 <img
+                  alt="cover image"
                   src="/assets/landing/blog/blog_1.jpg"
                   className="w-full h-[45vh] md:h-[80vh]"
                 />
@@ -65,7 +66,7 @@ export default function BlogOne() {
             <div className="-mt-[15%] md:-mt-[8%] p-5 md:p-10 w-full">
               <div className="w-full h-fit bg-white rounded-sm md:rounded-md drop-shadow-lg p-5 md:p-10">
                 <div className="flex flex-col gap-4">
-                  <p className="text-[#333] text-xs xl:text-base font-light break-words">
+                  <p className="text-[#333] text-xs xl:text-base font-normal break-words">
                     Achieving work-life balance isn’t intangible or even
                     impossible. It’s simply being able to handle the stress of
                     your work and personal life on the go. The ultimate goal is
@@ -82,7 +83,7 @@ export default function BlogOne() {
                       return (
                         <div className="gap-4 flex" key={i}>
                           <div className="flex flex-row my-2 ml-8 gap-1">
-                            <span className="text-[#333] text-xs xl:text-base font-light ">
+                            <span className="text-[#333] text-xs xl:text-base font-normal ">
                               {count++}.
                             </span>{" "}
                             &nbsp; &nbsp;
@@ -90,7 +91,7 @@ export default function BlogOne() {
                               <p className="text-sm md:text-[1rem] text-[#333] break-words heading-main  font-semibold">
                                 {data.header}{" "}
                               </p>
-                              <span className="text-[#333] text-xs xl:text-base font-light break-words">
+                              <span className="text-[#333] text-xs xl:text-base font-normal break-words">
                                 {data.content}
                               </span>
                             </div>
@@ -99,7 +100,7 @@ export default function BlogOne() {
                       );
                     })}
                   </div>
-                  <div className="text-[#333] text-xs xl:text-base font-light break-words">
+                  <div className="text-[#333] text-xs xl:text-base font-normal break-words">
                     Achieving the perfect work-life balance solely depends on
                     you knowing your priorities. Be passionate about the job you
                     do and the people in your life. Appreciate both and you’ll
@@ -119,6 +120,7 @@ export default function BlogOne() {
           <div className="p-5 md:p-10 grid grid-cols-1 w-full h-full gap-4 md:gap-4 xl:gap-10 md:grid-cols-3">
             <div className="rounded-xl w-fit  h-full bg-white drop-shadow-xl">
               <img
+                alt="cover image"
                 src="/blog/blog-7.jpg"
                 className="w-full rounded-t-xl h-[40%]"
               />
@@ -129,7 +131,7 @@ export default function BlogOne() {
                 <p className="blog-title">
                   Software and IT Industry In The USA
                 </p>
-                <p className="text-[#4e5d78] text-xs xl:text-base font-light break-words h-fit">
+                <p className="text-[#4e5d78] text-xs xl:text-base font-normal break-words h-fit">
                   The business intelligence (BI) software industry is rapidly
                   becoming one of the leading software categories in terms of
                   market size.
@@ -146,6 +148,7 @@ export default function BlogOne() {
             </div>
             <div className="rounded-xl w-fit  h-full bg-white drop-shadow-xl">
               <img
+                alt="cover image"
                 src="/assets/landing/blog/blog_7.jpg"
                 className="w-full rounded-t-xl h-[40%]"
               />
@@ -156,7 +159,7 @@ export default function BlogOne() {
                 <p className="blog-title">
                   5 Ways To Learn New Skills To Boost Your CV
                 </p>
-                <p className="text-[#4e5d78] text-xs xl:text-base font-light break-words h-fit">
+                <p className="text-[#4e5d78] text-xs xl:text-base font-normal break-words h-fit">
                   When looking for a career change or wanting to get back into
                   the professional space after a break, it is highly essential
                   to have your CV updated with the right skills.
@@ -173,6 +176,7 @@ export default function BlogOne() {
             </div>
             <div className="rounded-xl w-fit  h-full bg-white drop-shadow-xl">
               <img
+                alt="cover image"
                 src="/blog/blog-8.jpg"
                 className="w-full rounded-t-xl h-[40%]"
               />
@@ -180,10 +184,8 @@ export default function BlogOne() {
                 <span className="text-xs xl:text-sm text-[#5d3eff] xl:font-semibold">
                   April 5, 2021
                 </span>
-                <p className="blog-title">
-                  Networking At Your Workplace
-                </p>
-                <p className="text-[#4e5d78] text-xs xl:text-base font-light break-words h-fit">
+                <p className="blog-title">Networking At Your Workplace</p>
+                <p className="text-[#4e5d78] text-xs xl:text-base font-normal break-words h-fit">
                   Networking at your workplace isn’t far-fetched. After all
                   “it’s not what you know, it’s whom you know.” How many times
                   have you heard that being said?

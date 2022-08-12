@@ -82,6 +82,7 @@ export default function BlogThree() {
             <div className="relative">
               <div className="img-gradient">
                 <img
+                  alt="cover image"
                   src="/assets/landing/blog/blog_3.jpg"
                   className="w-full h-[45vh] md:h-[80vh] object-cover"
                 />
@@ -118,7 +119,7 @@ export default function BlogThree() {
                       return (
                         <div className="gap-4 flex" key={i}>
                           <div className="flex flex-row my-2 ml-8 gap-1">
-                            <span className="text-[#333] text-xs xl:text-base font-light ">
+                            <span className="text-[#333] text-xs xl:text-base font-normal ">
                               {count++}.
                             </span>{" "}
                             &nbsp; &nbsp;
@@ -156,6 +157,7 @@ export default function BlogThree() {
           <div className="p-5 md:p-10 grid grid-cols-1 w-full h-full gap-4 md:gap-4 xl:gap-10 md:grid-cols-3">
             <div className="rounded-xl w-fit  h-full bg-white drop-shadow-xl">
               <img
+                alt="cover image"
                 src="/blog/blog-7.jpg"
                 className="w-full rounded-t-xl h-[40%]"
               />
@@ -183,6 +185,7 @@ export default function BlogThree() {
             </div>
             <div className="rounded-xl w-fit  h-full bg-white drop-shadow-xl">
               <img
+                alt="cover image"
                 src="/assets/landing/blog/blog_7.jpg"
                 className="w-full rounded-t-xl h-[40%]"
               />
@@ -210,6 +213,7 @@ export default function BlogThree() {
             </div>
             <div className="rounded-xl w-fit  h-full bg-white drop-shadow-xl">
               <img
+                alt="cover image"
                 src="/blog/blog-8.jpg"
                 className="w-full rounded-t-xl h-[40%]"
               />
@@ -217,9 +221,7 @@ export default function BlogThree() {
                 <span className="text-xs xl:text-sm text-[#5d3eff] xl:font-semibold">
                   April 5, 2021
                 </span>
-                <p className="blog-title">
-                  Networking At Your Workplace
-                </p>
+                <p className="blog-title">Networking At Your Workplace</p>
                 <p className="text-[#4e5d78] text-xs xl:text-base font-light break-words h-fit">
                   Networking at your workplace isn’t far-fetched. After all
                   “it’s not what you know, it’s whom you know.” How many times
