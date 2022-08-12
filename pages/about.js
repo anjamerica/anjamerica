@@ -35,10 +35,10 @@ export default function About() {
         <section>
           <div className=" p-6 md:px-10 flex flex-col md:flex-row justify-around w-full">
             <div className="flex flex-col text-left mt-8 w-full md:w-[50%]">
-              <span className="text-[14px] font-normal text-[#333333] pb-2">
+              <span className="text-[14px] font-semibold text-[#333333] pb-2">
                 OUR PHILOSOPHY
               </span>
-              <span className="w-full text-[25px] md:text-[38px] text-[#04c0de] font-extrabold md:leading-[45px]">
+              <span className="w-full text-[25px] md:text-[38px] heading-main text-[#04c0de] font-extrabold md:leading-[45px]">
                 Good business should
                 <br /> know every step of{" "}
                 <span className="text-[#05fad9]">growth.</span>
@@ -80,7 +80,7 @@ export default function About() {
             </div>
           </div>
           <div className="scrollbar-staffing px-10 md:px-20">
-            <div className="grid grid-cols-1 w-full gap-0 md:gap-[46px] md:grid-cols-4 xl:grid-cols-6">
+            <div className="grid grid-cols-3 gap-[20px]  w-full md:gap-[46px] sm:grid-cols-4 xl:grid-cols-6">
               <img
                 alt="logo icon"
                 src="/assets/business/transamerica.png"
@@ -147,7 +147,7 @@ export default function About() {
       </section>
       <div className="bg-[#04c0de] h-full md:h-[11rem] py-10 gap-2 md:py-0 md:gap-0 flex flex-col md:flex-row justify-evenly ">
         <div className="flex flex-col justify-center">
-          <span className="md:text-[50px] text-[55px] font-[940] text-white text-center">
+          <span className="md:text-[50px] text-[55px] heading-main font-[940] text-white text-center">
             &#36;15M+
           </span>
           <span className="text-[15px] text-white font-semibold text-center">
@@ -155,7 +155,7 @@ export default function About() {
           </span>
         </div>
         <div className="flex flex-col justify-center">
-          <span className="md:text-[50px] text-[55px] font-[940] text-white text-center">
+          <span className="md:text-[50px] text-[55px] heading-main font-[940] text-white text-center">
             20
           </span>
           <span className="text-[15px] text-white font-semibold text-center">
@@ -163,7 +163,7 @@ export default function About() {
           </span>
         </div>
         <div className="flex flex-col justify-center">
-          <span className="md:text-[50px] text-[55px] font-[940] text-white text-center">
+          <span className="md:text-[50px] text-[55px] heading-main font-[940] text-white text-center">
             50
           </span>
           <span className="text-[15px] text-white font-semibold text-center">

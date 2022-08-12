@@ -36,12 +36,12 @@ export default function Digitize() {
         </span>
       </section>
       <section id="feature">
-        <div className="bg-[#e4fdfc] w-full h-full p-10 flex gap-10 flex-col lg:flex-row">
+        <div className="bg-[#e4fdfc] w-full h-full p-5 md:p-10 flex gap-10 flex-col lg:flex-row">
           <div className="flex flex-col lg:w-[50%]">
             <p className="text-md text-primary-blue-dark font-bold ml-5">
               OUR FEATURES
             </p>
-            <p className="text-[1.5rem] md:text-[1.8rem] ml-5 font-[900] mt-1 text-[#04c0de]">
+            <p className="text-[1.5rem] md:text-[1.8rem] heading-main ml-5 font-[900] mt-1 text-[#04c0de]">
               Helping you grow at every Step
             </p>
             <p className="text-normal-digitze w-full max-w-[562px] ml-5 text-left">

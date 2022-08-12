@@ -1,13 +1,14 @@
 import React, { useState, useContext } from "react";
 import { loadingContext } from "../../hooks/loadingContext";
 import { postMail } from "../../services/postMail";
-import Loader from "../layout/Loader";
 import validator from "validator";
 import toast from "react-hot-toast";
+import ReCAPTCHA from "react-google-recaptcha";
 
 export default function Contact() {
   const [details, setDetails] = useState({});
   const [formError, setFormError] = useState({});
+  const [captchaValue, setCaptchaValue] = useState("");
   const { loaderToggler } = useContext(loadingContext);
 
   const handleInputChange = (key, value) => {
@@ -17,9 +18,12 @@ export default function Contact() {
     });
   };
 
+  function onCaptchaChange(value) {
+    setCaptchaValue(value);
+  }
+
   const handleSubmit = async () => {
     try {
-      // loaderToggler(true);
       //validations
       if (!details.first_name) {
         return setFormError({ name_err: "First name is required" });
@@ -45,15 +49,13 @@ export default function Contact() {
       if (!details.message) {
         return setFormError({ message_err: "Message is required" });
       }
-
+      if (!captchaValue) {
+        return setFormError({ captcha_err: "Please verify the captcha" });
+      }
       const Details = {
         ...details,
       };
-
-      console.log(Details);
-
       const res = await postMail(Details);
-      console.log(res);
       toast.success("Message send successfully");
       setDetails({
         first_name: "",
@@ -88,7 +90,9 @@ export default function Contact() {
                 LOCATE US
               </span>
               <span className="font-thin text-sm text-[#141414]">
-                119 S. Main Street, Suite 500,<br/>Memphis, TN 38103,USA
+                119 S. Main Street, Suite 500,
+                <br />
+                Memphis, TN 38103,USA
               </span>
             </div>
             <div className="flex flex-col gap-2">
@@ -177,6 +181,14 @@ export default function Contact() {
                 {formError.message_err}
               </span>
             </div>
+            <ReCAPTCHA
+              size="normal"
+              sitekey="6Ldiw20hAAAAAOjNOr_kmwFlaSa1j3STi8jzRGBp"
+              onChange={onCaptchaChange}
+            />
+            <span className="text-xs text-red-600">
+              {formError.captcha_err}
+            </span>
             <hr />
             <button
               className="font-medium mt-2 text-white bg-[#04c0de] px-4 py-3 hover:bg-white hover:text-[#04c0de] transition-all  select-none rounded-md text-center flex items-center justify-center text-xs w-full"

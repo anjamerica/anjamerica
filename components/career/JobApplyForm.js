@@ -5,9 +5,8 @@ import { createJobApplicants } from "../../services/jobApplicants";
 import { toast } from "react-hot-toast";
 import API from "../../services/api";
 import ButtonLoader from "../layout/ButtonLoader";
-import { postMail } from "../../services/postMail";
+import { jobUpdatesPostMail } from "../../services/postMail";
 import validator from "validator";
-import Dropzone from "../layout/Dropzone";
 import { IoMdClose } from "react-icons/io";
 import { country_code } from "../common/country-code.json";
 
@@ -139,7 +138,7 @@ export default function JobApplyForm({ item, setFormModal }) {
             console.log(res);
             console.log(res);
             if (res.data.status === 200) {
-              const res = await postMail(applicantDetails);
+              const res = await jobUpdatesPostMail(applicantDetails);
               console.log(res);
             }
           } catch (err) {
@@ -207,7 +206,7 @@ export default function JobApplyForm({ item, setFormModal }) {
             router.pathname == "/career"
               ? "fixed top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] "
               : ""
-          }w-full bg-[#F0F0F0] flex flex-col gap-2 p-10 z-10 md:w-[25rem]  md:rounded-xl`}
+          }w-full bg-[#F0F0F0] flex flex-col gap-2 p-10 z-10 sm:w-[25rem]  sm:rounded-xl`}
         >
           <div className="flex flex-row justify-between w-full">
             <span className="text-xl md:font-semibold text-center ">
