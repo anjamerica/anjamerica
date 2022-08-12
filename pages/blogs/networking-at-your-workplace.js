@@ -47,6 +47,7 @@ export default function BlogNine() {
             <div className="relative">
               <div className="img-gradient">
                 <img
+                  alt="cover image"
                   src="/blog/blog-8.jpg"
                   className="w-full h-[45vh] md:h-[80vh] object-cover"
                 />
@@ -65,12 +66,12 @@ export default function BlogNine() {
             <div className="-mt-[15%] md:-mt-[8%] p-5 md:p-10 w-full">
               <div className="w-full h-fit bg-white rounded-sm md:rounded-md drop-shadow-lg p-5 md:p-10">
                 <div className="flex flex-col gap-4">
-                  <p className="text-[#333] text-xs xl:text-base font-light break-words">
+                  <p className="text-[#333] text-xs xl:text-base font-normal break-words">
                     Networking at your workplace isn’t far fetched. After all
                     “it’s not what you know, it’s whom you know.” How many times
                     have you heard that being said?
                   </p>
-                  <p className="text-[#333] text-xs xl:text-base font-light break-words">
+                  <p className="text-[#333] text-xs xl:text-base font-normal break-words">
                     Although this sentence is overrated, its essence is true.
                     Professional networking leads you to people who may know a
                     great opportunity that you’re interested in or they may just
@@ -78,16 +79,16 @@ export default function BlogNine() {
                     professional rapport with people, you can tap into their
                     network and meet experts in the industry you are pursuing
                   </p>
-                  <p className="text-[#333] text-xs xl:text-base font-light break-words">
+                  <p className="text-[#333] text-xs xl:text-base font-normal break-words">
                     We’ve compiled the top five ways to help you gain a fresh
                     skillset.
                   </p>
 
-                  <p className="text-[#333] text-xs xl:text-base font-light break-words">
+                  <p className="text-[#333] text-xs xl:text-base font-normal break-words">
                     or wish to pursue a career in.
                   </p>
 
-                  <p className="text-[#333] text-xs xl:text-base font-light break-words">
+                  <p className="text-[#333] text-xs xl:text-base font-normal break-words">
                     Where to begin? Your office.
                   </p>
                   <div>
@@ -95,7 +96,7 @@ export default function BlogNine() {
                       return (
                         <div className="gap-4 flex" key={i}>
                           <div className="flex flex-row my-2 ml-8 gap-1">
-                            <span className="text-[#333] text-xs xl:text-base font-light ">
+                            <span className="text-[#333] text-xs xl:text-base font-normal ">
                               {count++}.
                             </span>{" "}
                             &nbsp; &nbsp;
@@ -103,7 +104,7 @@ export default function BlogNine() {
                               <span className="text-sm md:text-[1rem] heading-main text-[#333] break-words  font-semibold">
                                 {data.header}
                               </span>
-                              <span className="text-[#333]  text-xs xl:text-base font-light break-words">
+                              <span className="text-[#333]  text-xs xl:text-base font-normal break-words">
                                 {data.content}
                               </span>
                             </div>
@@ -112,7 +113,7 @@ export default function BlogNine() {
                       );
                     })}
                   </div>
-                  <p className="text-[#333] text-xs xl:text-base font-light break-words">
+                  <p className="text-[#333] text-xs xl:text-base font-normal break-words">
                     Professional networking is more than just a formal handshake
                     or handing out your business card to someone. It’s about
                     making real connections with people so that you can help
@@ -133,6 +134,7 @@ export default function BlogNine() {
           <div className="p-5 md:p-10 grid grid-cols-1 w-full h-full gap-4 md:gap-4 xl:gap-10 md:grid-cols-3">
             <div className="rounded-xl w-fit  h-full bg-white drop-shadow-xl">
               <img
+                alt="cover image"
                 src="/blog/blog-7.jpg"
                 className="w-full rounded-t-xl h-[40%]"
               />
@@ -143,7 +145,7 @@ export default function BlogNine() {
                 <p className="blog-title">
                   Software and IT Industry In The USA
                 </p>
-                <p className="text-[#4e5d78] text-xs xl:text-base font-light break-words h-fit">
+                <p className="text-[#4e5d78] text-xs xl:text-base font-normal break-words h-fit">
                   The business intelligence (BI) software industry is rapidly
                   becoming one of the leading software categories in terms of
                   market size.
@@ -160,6 +162,7 @@ export default function BlogNine() {
             </div>
             <div className="rounded-xl w-fit  h-full bg-white drop-shadow-xl">
               <img
+                alt="cover image"
                 src="/assets/landing/blog/blog_7.jpg"
                 className="w-full rounded-t-xl h-[40%]"
               />
@@ -170,7 +173,7 @@ export default function BlogNine() {
                 <p className="blog-title">
                   5 Ways To Learn New Skills To Boost Your CV
                 </p>
-                <p className="text-[#4e5d78] text-xs xl:text-base font-light break-words h-fit">
+                <p className="text-[#4e5d78] text-xs xl:text-base font-normal break-words h-fit">
                   When looking for a career change or wanting to get back into
                   the professional space after a break, it is highly essential
                   to have your CV updated with the right skills.
@@ -187,6 +190,7 @@ export default function BlogNine() {
             </div>
             <div className="rounded-xl w-fit  h-full bg-white drop-shadow-xl">
               <img
+                alt="cover image"
                 src="/blog/blog-9.jpg"
                 className="w-full rounded-t-xl h-[40%]"
               />
@@ -198,7 +202,7 @@ export default function BlogNine() {
                   Common Yet Tricky Interview Questions That You Need To Be
                   Cautious About
                 </p>
-                <p className="text-[#4e5d78] text-xs xl:text-base font-light break-words h-fit">
+                <p className="text-[#4e5d78] text-xs xl:text-base font-normal break-words h-fit">
                   Interviews can be stressful. Every question that the hiring
                   manager asks may seem intended to churn out information that
                   will put you in a disadvantageous position. How do you tackle

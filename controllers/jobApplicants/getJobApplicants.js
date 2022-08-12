@@ -1,8 +1,5 @@
 import { NextApiRequest, NextApiResponse } from "next";
 import JobApplicants from "../../models/jobApplicants"
-
-
-
 /**
  * @method GET
  * @description To get JOB APPLICANTS FOR USER
@@ -10,20 +7,14 @@ import JobApplicants from "../../models/jobApplicants"
  * @param {NextApiResponse} res 
 
  */
-
 export const getJobApplicants = async (req, res) => {
-
     try {
-
         let { search, _id, page, limit, from, to} = req.query
-
         limit = parseInt(limit)
         page = parseInt(page)
         const fromDate = from ? new Date(from) : ""
         const toDate = to ? new Date(new Date(to).setDate((new Date(to).getDate())+1)) : ""
-
         const dateQuery = fromDate && to ? { "createdAt": { $gte: fromDate, $lt: toDate } } : {}
-
         let searchQuery = [
             {
                 $match:
@@ -77,11 +68,11 @@ export const getJobApplicants = async (req, res) => {
                             }
                         },
                         {
-                            "app-id": {
-                                $regex: `${search}`, $options: 'i'
+                            "app_id": {
+                                "$regex": `${search}`, $options: 'i'
 
                             }
-                        }
+                        },
 
 
 
@@ -96,46 +87,21 @@ export const getJobApplicants = async (req, res) => {
             {
                 "$limit": limit
             }
-            
-
         ]
-
-
-
-       
         if (_id) {
-
-
             const getOneJob = await JobApplicants.findOne({ _id: _id })
             return res.status(200).json({ success: "One job", payload: getOneJob })
-
-
         }
-
         if (search && page && limit || limit && page) {
-
-
             const searchJobs = await JobApplicants.aggregate(searchQuery)
             const totalCounts = await JobApplicants.find().count()
-
-
             return res.status(200).json({ success: "Get search applicants", totalCount: totalCounts, payload: searchJobs })
-
         }
-
-
-
         const jobApplicants = await JobApplicants.find({}).populate("job_id")
         const totalCounts = await JobApplicants.find().count()
-
         res.status(200).json({ success: "get all jobApplicants", totalCount: totalCounts, status: 200, payload: jobApplicants })
-
     } catch (error) {
-
-
         console.log(error);
         res.status(500).json({ error: error })
-
     }
-
 }

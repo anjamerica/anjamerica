@@ -78,6 +78,7 @@ export default function Products() {
             setCurrentIndex={currentIndex}
           >
             <img
+              alt="product image"
               src={data[currentIndex].img}
               className="w-[20rem] h-[20rem]  md:w-[20rem] xl:w-[25rem] xl:h-[25rem] object-contain md:h-[20rem] mt-0 flex self-center md:self-start  md:mt-0"
             />
@@ -131,11 +132,13 @@ export default function Products() {
           </div>
         </div>
         <img
+          alt="prev arrow"
           src="/landing/prev-arrow.svg"
           className="hidden md:flex md:h-10 md:absolute md:top-[20rem] md:left-[1rem] lg:h-10 lg:left-[1rem] xl:left-[6rem] sm:w-7  xl:w-fit  text-primary-gray cursor-pointer"
           onClick={() => handleOnPrevClick()}
         />
         <img
+          alt="next arrow"
           src="/landing/next-arrow.svg"
           className="hidden md:flex md:h-10 md:absolute md:top-[20rem] md:right-[1rem] lg:h-10 lg:right-[1rem] xl:right-[6rem] sm:w-7  xl:w-fit   text-primary-gray cursor-pointer"
           onClick={() => handleOnNextClick()}

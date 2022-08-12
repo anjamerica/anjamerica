@@ -104,6 +104,7 @@ export default function LandingScreen() {
               <div className="hidden md:flex md:absolute md:bottom-6 md:self-center md:cursor-pointer">
                 <Link href="/#services">
                   <img
+                    alt="arrow button"
                     className="w-fit h-fit md:w-[3rem] md:h-[3rem]"
                     src="/assets/landing/down_arrow_btn.svg"
                   />
@@ -143,7 +144,7 @@ export default function LandingScreen() {
                         <div
                           className={`${
                             serviceActive === index
-                              ? "flex items-center justify-center select-none text-white p-4 text-lg h-10 w-10 rounded-full bg-primary-blue"
+                              ? "flex items-center justify-center select-none self-center text-white p-4 text-lg h-10 w-10 rounded-full bg-primary-blue"
                               : "flex items-center select-none  text-primary-gray text-md md:text-base"
                           }`}
                         >
@@ -159,6 +160,7 @@ export default function LandingScreen() {
                           {item.service}
                         </span>
                         <img
+                          alt="right arrow"
                           src="/assets/landing/right-arrow.svg"
                           className={`${
                             serviceActive === index
@@ -229,55 +231,68 @@ export default function LandingScreen() {
             <div className="scrollbar-landing" ref={ref}>
               <div className="flex flex-row w-full justify-between items-center h-fit max-w-[1200px] gap-[50px]">
                 <img
+                  alt="logo icon"
                   src="/assets/business/progressive.png"
                   className="ml-6 logo-hover-landing"
                 />
                 <img
+                  alt="logo icon"
                   src="/assets/business/icici.png"
                   className="logo-hover-landing"
                 />
                 <img
+                  alt="logo icon"
                   src="/assets/business/transamerica.png"
                   className="logo-hover-landing"
                 />
                 <img
+                  alt="logo icon"
                   src="/assets/business/nasdaq.png"
                   className="logo-hover-landing"
                 />
                 <img
+                  alt="logo icon"
                   src="/assets/business/statefarm.png"
                   className="logo-hover-landing"
                 />
                 <img
+                  alt="logo icon"
                   src="/assets/business/nationwide.png"
                   className="logo-hover-landing"
                 />
                 <img
+                  alt="logo icon"
                   src="/assets/business/stateauto.png"
                   className="logo-hover-landing"
                 />
                 <img
+                  alt="logo icon"
                   src="/assets/business/insight.png"
                   className="logo-hover-landing"
                 />
                 <img
+                  alt="logo icon"
                   src="/assets/business/verizon.png"
                   className="logo-hover-landing"
                 />
                 <img
+                  alt="logo icon"
                   src="/assets/business/travelers.png"
                   className="logo-hover-landing"
                 />
                 <img
+                  alt="logo icon"
                   src="/assets/business/hunginton.png"
                   className="logo-hover-landing"
                 />
                 <img
+                  alt="logo icon"
                   src="/assets/business/tata.png"
                   className="mr-6 logo-hover-landing"
                 />
               </div>
               <img
+                alt="left arrow"
                 src="/landing/prev-arrow.svg"
                 className="h-10  w-fit select-none absolute top-[6px] left-[2rem] md:top-[10px]  md:left-[7rem] text-primary-gray cursor-pointer"
                 onClick={() => {
@@ -285,6 +300,7 @@ export default function LandingScreen() {
                 }}
               />
               <img
+                alt="right arrow"
                 src="/landing/next-arrow.svg"
                 className="h-10 w-fit md:v-h-center select-none absolute right-[2rem] top-[6px]  md:top-[10px] md:right-[6rem] text-primary-gray cursor-pointer"
                 onClick={() => {

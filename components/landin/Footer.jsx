@@ -17,7 +17,7 @@ export default function Footer() {
       //post email
       const data = {
         email,
-      }
+      };
       const res = await Subcribe(data);
       console.log(res);
       toast.success("Subscribed Successfully");
@@ -60,6 +60,7 @@ export default function Footer() {
         <div className="flex flex-col md:gap-4">
           <Link href="/">
             <img
+              alt="logo img"
               src="/landing/logo.svg"
               className="h-fit w-[13rem] xl:h-fit md:w-[192px] -ml-3 -mb-6 md:h-fit object-contain p-5 md:p-0"
             />
@@ -69,7 +70,7 @@ export default function Footer() {
             all the answers you need.
           </span>
         </div>
-        <div className="flex gap-4 md:gap-10 w-[40vw] justify-between flex-col lg:flex-row">
+        <div className="flex gap-4 md:gap-10 md:w-[40vw] justify-between flex-col lg:flex-row">
           <div className="flex flex-col px-5 md:px-0 mt-8 md:mt-0">
             <span className="text-white text-[24px] font-semibold">
               Company

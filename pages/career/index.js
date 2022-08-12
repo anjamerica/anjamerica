@@ -84,6 +84,7 @@ export default function Career() {
         ) : (
           <div className="w-full h-fit pb-10 flex flex-col justify-start md:justify-center">
             <img
+              alt="no data"
               src="/admin/no_content.png"
               className="w-96 h-[15rem] md:h-[20rem] md:self-center object-contain"
             />

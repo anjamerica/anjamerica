@@ -67,11 +67,13 @@ export default function Home() {
         <div className="w-full flex h-[74px] justify-between px-5 bg-white box-shadow   md:px-10 md:py-4 md:items-center md:h-[10vh]">
           <Link href="/home">
             <img
+              alt="logo image"
               src="/assets/landing/anj_logo.svg"
               className="h-16 w-40 ml-1 md:ml-0 xl:h-20 xl:w-56 self-center object-contain"
             />
           </Link>
           <img
+            alt="menu icon"
             src="/admin/menu.svg"
             className="visible h-5 w-fit self-center  md:invisible"
             onClick={() => {
@@ -133,6 +135,7 @@ export default function Home() {
               onChange={(e) => setSearchText(e.target.value)}
             />
             <img
+              alt="search icon"
               src="/assets/landing/search_icon.svg"
               className="w-fit h-fit"
             />
@@ -218,6 +221,7 @@ const JobDataView = ({ jobData, page, setPage, totalItems, getDetails }) => {
         ) : (
           <div className="w-full h-fit flex flex-col justify-start md:justify-center">
             <img
+              alt="no data"
               src="/admin/no_content.png"
               className="w-96 h-[15rem] md:h-[20rem] md:self-center object-contain"
             />

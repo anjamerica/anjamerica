@@ -337,11 +337,13 @@ export default function CreateJobForm() {
       <div className="w-full flex h-[74px] justify-between px-5 bg-white box-shadow   md:px-10 md:py-4 md:items-center md:h-[10vh]">
         <Link href="/home">
           <img
+            alt="logo image"
             src="/assets/landing/anj_logo.svg"
             className="h-16 w-40  xl:h-20 xl:w-56 self-center object-contain"
           />
         </Link>
         <img
+          alt="menu image"
           src="/admin/menu.svg"
           className="visible h-5 w-fit mr-1 self-center  md:invisible"
           onClick={() => {
@@ -553,7 +555,11 @@ export default function CreateJobForm() {
                   </select>
 
                   <div className="absolute top-[1rem] left-[1.6rem] md:left-[1.6rem] xl:left-[1.8rem]">
-                    <img src="/admin/dropdown.svg" className="w-fit h-fit" />
+                    <img
+                      src="/admin/dropdown.svg"
+                      alt="drop down img"
+                      className="w-fit h-fit"
+                    />
                   </div>
                   <input
                     className="focus:outline-none text-[#74777B] border-none py-3 truncate px-2 xl:px-3"
@@ -593,7 +599,11 @@ export default function CreateJobForm() {
                       })}
                   </select>
                   <div className="absolute top-[1rem] left-[1.6rem] md:left-[1.6rem] xl:left-[1.8rem]">
-                    <img src="/admin/dropdown.svg" className="w-fit h-fit" />
+                    <img
+                      src="/admin/dropdown.svg"
+                      alt="drop down img"
+                      className="w-fit h-fit"
+                    />
                   </div>
                   <input
                     className="focus:outline-none text-[#74777B] border-none py-3 px-2 xl:px-3 truncate"
@@ -876,7 +886,11 @@ export default function CreateJobForm() {
                   </select>
 
                   <div className="absolute top-[1rem] left-[1.6rem] md:left-[1.6rem] xl:left-[1.7rem]">
-                    <img src="/admin/dropdown.svg" className="w-fit h-fit" />
+                    <img
+                      src="/admin/dropdown.svg"
+                      alt="drop down img"
+                      className="w-fit h-fit"
+                    />
                   </div>
                   <input
                     className="focus:outline-none border-none py-3 text-secondary-gray truncate px-2 xl:px-3"
