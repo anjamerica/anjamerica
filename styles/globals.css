@@ -168,7 +168,7 @@ a {
 }
 
 .login-input {
-  @apply border-primary-blue border-2 focus:outline-none  rounded w-full py-3 px-2 xl:px-3 leading-tight bg-transparent;
+  @apply border-[#214ED1] border-[1px] md:border-2 focus:outline-none  rounded w-full py-3 px-2 xl:px-3 leading-tight bg-transparent;
 }
 
 input:checked ~ .dot {
