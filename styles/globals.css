@@ -277,10 +277,9 @@ select {
 }
 
 .loader {
-  border: 16px solid #07038c;
-  z-index: 999;
+  border: 16px solid #f3f3f3;
   border-radius: 50%;
-  border-top: 16px solid #07038c;
+  border-top: 16px solid #046AC8;
   width: 100px;
   height: 100px;
   -webkit-animation: spin 2s linear infinite; /* Safari */
