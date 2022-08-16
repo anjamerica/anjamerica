@@ -456,7 +456,7 @@ export default function CreateJobForm() {
             <textarea
               type="text"
               className="form-input-job outline-none resize-none h-[8.5rem] p-2"
-              placeholder="Write your message..."
+              placeholder="Type Your Description"
               value={jobData.description}
               onChange={(e) => handleInputChange("description", e.target.value)}
             />

@@ -20,10 +20,10 @@ export default function Subscribers() {
   console.log(totalItems);
 
   const handleLogout = () => {
-    loaderToggler(true);
+    setLoading(true);
     localStorage.removeItem("token");
     router.push("/login");
-    loaderToggler(false);
+    setLoading(false);
   };
 
   useEffect(() => {
