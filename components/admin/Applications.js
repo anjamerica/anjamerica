@@ -180,19 +180,19 @@ export default function Applications() {
                   Name
                 </th>
                 <th className="text-sm w-40  text-white md:text-md font-normal px-2 py-3  break-words">
-                  Phone Number
+                  Phone number
                 </th>
                 <th className="text-sm w-40 text-white md:text-md font-normal px-2 py-3  break-words">
                   Email ID
                 </th>
                 <th className="text-sm w-44 text-white md:text-md font-normal px-2 py-3  break-words">
-                  Application Date
+                  Application date
                 </th>
                 <th className="text-sm w-44 text-white md:text-md font-normal px-2 py-3  break-words">
                   Post
                 </th>
                 <th className="sticky right-0 z-10 text-sm w-28 md:w-32 bg-[#046AC8] md:bg-[#214ED1] text-center text-white md:text-md font-normal px-2 py-3  break-words">
-                  Show More
+                  Show more
                 </th>
               </tr>
             </thead>

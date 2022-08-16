@@ -429,7 +429,7 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 .scrollbar-table::-webkit-scrollbar-thumb {
-  background: #214ED1;
+  background: #214ed1;
   border-radius: 100vh;
 }
 
@@ -556,3 +556,12 @@ button:focus {
   transform: translate(-50%, -50%);
 }
 
+@media screen and (max-height: 767px) {
+  #rc-imageselect,
+  .g-recaptcha {
+    transform: scale(0.77);
+    -webkit-transform: scale(0.77);
+    transform-origin: 0 0;
+    -webkit-transform-origin: 0 0;
+  }
+}
