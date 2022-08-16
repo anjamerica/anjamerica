@@ -42,7 +42,6 @@ export default function BlogEight() {
               <div className="img-gradient">
                 <img
                   alt="cover image"
-                  alt="cover image"
                   src="/assets/landing/blog/blog_7.jpg"
                   className="w-full h-[45vh] md:h-[80vh] object-cover"
                 />
