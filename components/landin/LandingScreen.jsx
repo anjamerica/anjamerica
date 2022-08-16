@@ -9,39 +9,18 @@ import Contact from "../contact/Contact";
 
 const services = [
   {
-    index: "01",
-    service: "Lorem Ipsum is simply dummy",
-    description:
-      "Hire from the top 2% of software talent in the world. We have an exclusive pool of the top Anj America Professionals who can be sourced to your project as a full time or a consultant.",
-    link: "/",
-  },
-  {
-    index: "02",
+    index: "1",
     service: "Digitize",
     description:
       "Nitchetechies provides creative software solutions to bridge the gap between execution of your daily businesses and the many evolving technologies.",
     link: "/digitize",
   },
   {
-    index: "03",
+    index: "2",
     service: "Hire Right",
     description:
-      "Hire from the top 2% of software talent in the world. We have an exclusive pool of the top Anj America Professionals who can be sourced to your project as a full time or a consultant.",
+      "Hire from the top 2% of software talent in the world. We have an exclusive pool of the top niche Professionals who can be sourced to your project as a full time or a consultant.",
     link: "/staffing",
-  },
-  {
-    index: "04",
-    service: "Lorem Ipsum is simply dummy",
-    description:
-      "Hire from the top 2% of software talent in the world. We have an exclusive pool of the top Anj America Professionals who can be sourced to your project as a full time or a consultant.",
-    link: "/",
-  },
-  {
-    index: "05",
-    service: "Lorem Ipsum is simply dummy",
-    description:
-      "Hire from the top 2% of software talent in the world. We have an exclusive pool of the top Anj America Professionals who can be sourced to your project as a full time or a consultant.",
-    link: "/",
   },
 ];
 
@@ -60,7 +39,7 @@ export default function LandingScreen() {
         break;
     }
   };
-  const [serviceActive, setServiceActive] = useState(2);
+  const [serviceActive, setServiceActive] = useState(1);
   return (
     <main className="mx-auto w-full h-full snap-y scroll-delay">
       <section className="relative">
@@ -80,11 +59,6 @@ export default function LandingScreen() {
           <div className=" h-[60vh] pt-10 pb-20  w-full md:h-[90vh]">
             <div></div>
             <div className=" flex h-full flex-col gap-0 justify-center self-center items-center">
-              <div className="flex justify-center">
-                <span className="text-[#FFD700] text-[.85rem] md:text-[20px] font-[700]">
-                  LOREM IPSUM IS SIMPLY DUMMY
-                </span>
-              </div>
               <div className="text-anim-blog heading-main text-[#07038C] uppercase text-[24px] text-center w-[18rem] font-bold sm:w-[40rem] md:w-[44rem] xl:w-[60rem] sm:text-[40px] md:text-[45px] xl:text-[60px]   xl:leading-[4rem]">
                 Digitize your Business today and Grow your Brand...
               </div>
@@ -216,15 +190,8 @@ export default function LandingScreen() {
       <section>
         <div className=" py-10 flex items-center h-fit flex-col gap-4 bg-[#F3F3F3]">
           <div className="flex flex-col gap-1">
-            <div className="text-subheading leading-[3%] text-primary-blue self-center">
-              LOREM IPSUM
-            </div>
             <div className="text-subheading-main  text-primary-black self-center">
               Businesses we&apos;ve aligned with
-            </div>
-            <div className="text-normal-landing text-[#535353] w-[85%] sm:w-full self-center">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry
             </div>
           </div>
           <div className="relative mt-8 flex justify-center w-full">

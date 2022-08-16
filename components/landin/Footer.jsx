@@ -33,10 +33,6 @@ export default function Footer() {
         <span className="text-white font-bold text-2xl self-center px-3 text-center">
           Get to know us!
         </span>
-        <span className="flex flex-col items-left text-[#787878] text-[1rem] break-words text-center px-2">
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry.
-        </span>
         <div className=" justify-center flex flex-col mt-4 lg:mt-0 sm:flex-row gap-2 w-full">
           <input
             type="text"

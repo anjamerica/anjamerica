@@ -62,16 +62,9 @@ export default function Products() {
   return (
     <div className="relative flex flex-col pt-10 pb-20 md:py-10 bg-white items-center justify-center w-full">
       <div className="flex flex-col gap-0 self-center justify-center">
-        <div className="text-subheading  text-primary-blue self-center">
-          LOREM IPSUM
-        </div>
         <p className="text-subheading-main  text-primary-black self-center">
           Our Products
         </p>
-        <div className="text-normal-landing text-[#535353] w-[85%] sm:w-full self-center">
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry.
-        </div>
         <div className="grid grid-flow-row w-full px-0 md:p-10">
           {/* {data.map((item, index) => {
             return ( */}
