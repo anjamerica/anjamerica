@@ -44,7 +44,7 @@ export default function Login() {
   console.log(formError);
   return (
     <div className="h-screen w-full bg-white flex flex-col justify-center items-center">
-      <div className="login-page text-primary-blue text-[1.4rem] font-thin tracking-wide	 uppercase">
+      <div className="login-page text-[#214ED1] text-[1.4rem] font-[300] tracking-wide	 uppercase">
         WELCOME
       </div>
       <div>
