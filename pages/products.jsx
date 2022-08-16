@@ -1,5 +1,5 @@
 import { data } from "autoprefixer";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { IoMdCheckmarkCircleOutline } from "react-icons/io";
 import { BsChevronCompactLeft, BsChevronCompactRight } from "react-icons/bs";
 
@@ -53,9 +53,11 @@ export default function Products() {
     setCurrentIndex(count);
   };
 
-  setTimeout(function () {
-    handleOnNextClick();
-  }, 10000);
+  useEffect(() => {
+    setInterval(function () {
+      handleOnNextClick();
+    }, 5000);
+  }, []);
 
   return (
     <div className="relative flex flex-col pt-10 pb-20 md:py-10 bg-white items-center justify-center w-full">
