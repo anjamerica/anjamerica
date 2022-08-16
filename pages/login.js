@@ -44,7 +44,7 @@ export default function Login() {
   console.log(formError);
   return (
     <div className="h-screen w-full bg-white flex flex-col justify-center items-center">
-      <div className="login-page text-primary-blue text-[1.4rem] font-thin tracking-wide	 uppercase">
+      <div className="login-page text-[#214ED1] text-[1.4rem] font-[300] tracking-wide	 uppercase">
         WELCOME
       </div>
       <div>
@@ -67,7 +67,7 @@ export default function Login() {
               placeholder="EMAIL"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="flex-1 text-primary-blue select-none outline-none bg-transparent text-sm placeholder:text-primary-blue ml-3 text-input-primary-blue"
+              className="flex-1 text-primary-blue select-none outline-none bg-transparent text-sm placeholder:text-[#214ED1] ml-3 text-input-primary-blue"
             />
           </div>
           <div className="login-input flex mt-4">
@@ -81,7 +81,7 @@ export default function Login() {
               placeholder="PASSWORD"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              className="flex-1 text-primary-blue select-none outline-none bg-transparent text-sm placeholder:text-primary-blue ml-3 text-input-primary-blue"
+              className="flex-1 text-primary-blue select-none outline-none bg-transparent text-sm placeholder:text-[#214ED1] ml-3 text-input-primary-blue"
             />
           </div>
           <p className="text-xs text-red-600">{formError}</p>
