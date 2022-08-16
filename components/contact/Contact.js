@@ -181,14 +181,19 @@ export default function Contact() {
                 {formError.message_err}
               </span>
             </div>
-            <ReCAPTCHA
-              size="normal"
-              sitekey="6Ldiw20hAAAAAOjNOr_kmwFlaSa1j3STi8jzRGBp"
-              onChange={onCaptchaChange}
-            />
-            <span className="text-xs text-red-600">
-              {formError.captcha_err}
-            </span>
+            <div className="w-fit">
+              <ReCAPTCHA
+                size="normal"
+                class="g-recaptcha"
+                sitekey="6Ldiw20hAAAAAOjNOr_kmwFlaSa1j3STi8jzRGBp"
+                onChange={onCaptchaChange}
+                style={{}}
+              />
+              <span className="text-xs text-red-600">
+                {formError.captcha_err}
+              </span>
+            </div>
+
             <hr />
             <button
               className="font-medium mt-2 text-white bg-[#04c0de] px-4 py-3 hover:bg-white hover:text-[#04c0de] transition-all  select-none rounded-md text-center flex items-center justify-center text-xs w-full"
