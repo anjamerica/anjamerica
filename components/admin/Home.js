@@ -1,17 +1,14 @@
 import Link from "next/link";
-import React, { useState, useContext, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import JobCardAdmin from "../career/JobCardAdmin";
 import { getJobDetails } from "../../services/JobDetails";
-import { loadingContext } from "../../hooks/loadingContext";
-import Loader from "../layout/Loader";
 import Pagination from "./Pagination";
 import { MdOutlineLogout } from "react-icons/md";
-import { Router } from "react-router-dom";
 import { useRouter } from "next/router";
 import { TbAdjustmentsHorizontal } from "react-icons/tb";
+import ApplicationLoader from "../layout/ApplicationLoader";
 
 export default function Home() {
-  const { loaderToggler } = useContext(loadingContext);
   const [navOpen, setNavOpen] = useState(false);
   const [jobData, setJobData] = useState([]);
   const [searchText, setSearchText] = useState("");
@@ -19,6 +16,7 @@ export default function Home() {
   const [totalItems, setTotalItems] = useState(0);
   const [countPerPage, setCountPerPage] = useState(10);
   const [activeJobs, setActiveJobs] = useState("");
+  const [loading, setLoading] = useState(false);
 
   const router = useRouter();
 
@@ -31,7 +29,7 @@ export default function Home() {
 
   const getDetails = async () => {
     try {
-      loaderToggler(true);
+      setLoading(true);
       //get job details
       const response = await getJobDetails(
         searchText,
@@ -42,10 +40,10 @@ export default function Home() {
       setTotalItems(response.data.totalCounts);
       console.log(response);
       setJobData(response.data.payload);
-      loaderToggler(false);
+      setLoading(false);
     } catch (err) {
       console.error(err?.response?.data?.message);
-      loaderToggler(false);
+      setLoading(false);
     }
   };
 
@@ -54,16 +52,15 @@ export default function Home() {
   }, [searchText, page, activeJobs]);
 
   const handleLogout = () => {
-    loaderToggler(true);
+    setLoading(true);
     localStorage.removeItem("token");
     router.push("/login");
-    loaderToggler(false);
+    setLoading(false);
   };
 
   return (
     <div className="mx-auto w-full h-full snap-y mb-10">
       <div>
-        {/* <Loader /> */}
         <div className="w-full flex h-[74px] justify-between px-5 bg-white box-shadow   md:px-10 md:py-4 md:items-center md:h-[10vh]">
           <Link href="/home">
             <img
@@ -200,37 +197,46 @@ export default function Home() {
         setPage={setPage}
         totalItems={totalItems}
         getDetails={getDetails}
+        loading={loading}
       />
     </div>
   );
 }
 
-const JobDataView = ({ jobData, page, setPage, totalItems, getDetails }) => {
+const JobDataView = ({ jobData, page, setPage, totalItems, getDetails,loading }) => {
   return (
     <>
-      <Loader />
-      <div className="px-5 flex flex-col gap-8 md:px-10">
-        {jobData.length > 0 ? (
-          jobData.map((item, i) => {
-            return (
-              <div key={i}>
-                <JobCardAdmin item={item} getDetails={getDetails} />
+      {loading ? (
+        <div className="w-full h-fit flex flex-col justify-start md:justify-center">
+          <ApplicationLoader />
+        </div>
+      ) : (
+        <>
+          <div className="px-5 flex flex-col gap-8 md:px-10">
+            {jobData.length > 0 ? (
+              jobData.map((item, i) => {
+                return (
+                  <div key={i}>
+                    <JobCardAdmin item={item} getDetails={getDetails} />
+                  </div>
+                );
+              })
+            ) : (
+              <div className="w-full h-fit flex flex-col justify-start md:justify-center">
+                <img
+                  alt="no data"
+                  src="/admin/no_content.png"
+                  className="w-96 h-[15rem] md:h-[20rem] md:self-center object-contain"
+                />
+                <p className="font-semibold  text-primary-gray self-center">
+                  No Jobs Available
+                </p>
               </div>
-            );
-          })
-        ) : (
-          <div className="w-full h-fit flex flex-col justify-start md:justify-center">
-            <img
-              alt="no data"
-              src="/admin/no_content.png"
-              className="w-96 h-[15rem] md:h-[20rem] md:self-center object-contain"
-            />
-            <p className="font-semibold  text-primary-gray self-center">
-              No Jobs Available
-            </p>
+            )}
           </div>
-        )}
-      </div>
+        </>
+      )}
+
       <div>
         {(totalItems && totalItems) > 0 && (
           <Pagination

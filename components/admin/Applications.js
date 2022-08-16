@@ -9,6 +9,7 @@ import ApplicationDetails from "./ApplicationDetails";
 import { FilterComponent } from "../common/FilterComponent";
 import { TbAdjustmentsHorizontal } from "react-icons/tb";
 import ButtonLoader from "../layout/ButtonLoader";
+import ApplicationLoader from "../layout/ApplicationLoader";
 
 export default function Applications() {
   const [navOpen, setNavOpen] = useState(false);
@@ -197,41 +198,41 @@ export default function Applications() {
               </tr>
             </thead>
             <tbody>
-              {applications.length > 0 ? (
-                applications.map((item, i) => {
-                  return (
-                    <>
-                      {loading ? (
-                        <tr className="col-span-12 z-50">
-                          <td className="" colSpan={7} rowSpan={10}>
-                            <ButtonLoader />
-                          </td>
-                        </tr>
-                      ) : (
-                        <ApplicationDetails key={i} item={item} />
-                      )}
-                    </>
-                  );
-                })
-              ) : (
+              {loading ? (
                 <tr className="col-span-12">
                   <td className="" colSpan={7}>
-                    {loading ? (
-                      <Loader />
-                    ) : (
-                      <div className="w-full h-fit flex flex-col justify-start md:justify-center">
-                        <img
-                          alt="no data"
-                          src="/admin/no_content.png"
-                          className="w-96 h-[15rem] md:h-[20rem] md:self-center object-contain"
-                        />
-                        <p className="font-semibold ml-28 md:ml-0 text-primary-gray md:self-center">
-                          No Applicants Available
-                        </p>
-                      </div>
-                    )}
+                    <div className="w-full h-fit flex flex-col justify-start md:justify-center">
+                      <ApplicationLoader />
+                    </div>
                   </td>
                 </tr>
+              ) : (
+                <>
+                  {applications.length > 0 ? (
+                    applications.map((item, i) => {
+                      return (
+                        <>
+                          <ApplicationDetails key={i} item={item} />
+                        </>
+                      );
+                    })
+                  ) : (
+                    <tr className="col-span-12">
+                      <td className="" colSpan={7}>
+                        <div className="w-full h-fit flex flex-col justify-start md:justify-center">
+                          <img
+                            alt="no data"
+                            src="/admin/no_content.png"
+                            className="w-96 h-[15rem] md:h-[20rem] md:self-center object-contain"
+                          />
+                          <p className="font-semibold ml-28 md:ml-0 text-primary-gray md:self-center">
+                            No Applicants Available
+                          </p>
+                        </div>
+                      </td>
+                    </tr>
+                  )}
+                </>
               )}
             </tbody>
           </table>
