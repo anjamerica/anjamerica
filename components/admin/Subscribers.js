@@ -5,6 +5,7 @@ import { MdOutlineLogout } from "react-icons/md";
 import { useRouter } from "next/router";
 import { getSubscribers } from "../../services/subscribe";
 import { DateFormatter } from "../common/DateFormatter";
+import ApplicationLoader from "../layout/ApplicationLoader";
 
 export default function Subscribers() {
   const [navOpen, setNavOpen] = useState(false);
@@ -13,6 +14,7 @@ export default function Subscribers() {
   const [page, setPage] = useState(1);
   const [totalItems, setTotalItems] = useState(0);
   const router = useRouter();
+  const [loading, setLoading] = useState(false);
   var siNo = 1;
 
   console.log(totalItems);
@@ -28,11 +30,14 @@ export default function Subscribers() {
     const headers = { Authorization: localStorage.getItem("token") };
     const getSubscriber = async () => {
       try {
+        setLoading(true);
         const res = await getSubscribers(page, 10, headers);
         setSubscribers(res.data.payload);
         setTotalItems(res.data.totalSubscribers);
+        setLoading(false);
       } catch (error) {
         console.log(error.messsage);
+        setLoading(true);
       }
     };
     getSubscriber();
@@ -145,37 +150,49 @@ export default function Subscribers() {
               </tr>
             </thead>
             <tbody>
-              {subcribers.length > 0 ? (
-                subcribers.map((item, i) => {
-                  return (
-                    <tr className="bg-[#F9F9F9] " key={i}>
-                      <td className="text-black self-start   text-sm md:text-md font-normal px-5 md:px-3 break-words">
-                        {(page - 1) * 10 + i + 1}
-                      </td>
-                      <td className="text-black self-start  text-sm md:text-md  font-normal px-2 py-3 break-words">
-                        {item.email}
-                      </td>
-                      <td className="text-black self-start text-sm md:text-md  font-normal px-2 py-3 break-words">
-                        {DateFormatter(item.createdAt)}
-                      </td>
-                    </tr>
-                  );
-                })
-              ) : (
+              {loading ? (
                 <tr className="col-span-12">
-                  <td className="" colSpan={7}>
+                  <td className="" colSpan={3}>
                     <div className="w-full h-fit flex flex-col justify-start md:justify-center">
-                      <img
-                        alt="no data"
-                        src="/admin/no_content.png"
-                        className="w-96 h-[15rem] md:h-[20rem] md:self-center object-contain"
-                      />
-                      <p className="font-semibold ml-28 md:ml-0 text-primary-gray md:self-center">
-                        No Subscribers Available
-                      </p>
+                      <ApplicationLoader />
                     </div>
                   </td>
                 </tr>
+              ) : (
+                <>
+                  {subcribers.length > 0 ? (
+                    subcribers.map((item, i) => {
+                      return (
+                        <tr className="bg-[#F9F9F9] " key={i}>
+                          <td className="text-black self-start   text-sm md:text-md font-normal px-5 md:px-3 break-words">
+                            {(page - 1) * 10 + i + 1}
+                          </td>
+                          <td className="text-black self-start  text-sm md:text-md  font-normal px-2 py-3 break-words">
+                            {item.email}
+                          </td>
+                          <td className="text-black self-start text-sm md:text-md  font-normal px-2 py-3 break-words">
+                            {DateFormatter(item.createdAt)}
+                          </td>
+                        </tr>
+                      );
+                    })
+                  ) : (
+                    <tr className="col-span-12">
+                      <td className="" colSpan={7}>
+                        <div className="w-full h-fit flex flex-col justify-start md:justify-center">
+                          <img
+                            alt="no data"
+                            src="/admin/no_content.png"
+                            className="w-96 h-[15rem] md:h-[20rem] md:self-center object-contain"
+                          />
+                          <p className="font-semibold ml-28 md:ml-0 text-primary-gray md:self-center">
+                            No Subscribers Available
+                          </p>
+                        </div>
+                      </td>
+                    </tr>
+                  )}
+                </>
               )}
             </tbody>
           </table>
