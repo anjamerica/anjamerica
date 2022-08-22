@@ -105,7 +105,7 @@ export default function Applications() {
           </div>
         </div>
       )}
-      <div className="flex flex-col-reverse justify-between p-5 md:p-10 md:flex-row">
+      <div className="flex flex-col-reverse justify-between p-5 md:px-10 md:flex-row">
         <div className="mt-4 text-lg font-semibold md:font-semibold md:mt-0">
           Applications
         </div>
@@ -192,7 +192,7 @@ export default function Applications() {
                 <th className="text-sm w-44 text-white md:text-md font-normal px-2 py-3  break-words">
                   Post
                 </th>
-                <th className="sticky right-0 z-10 text-sm w-28 md:w-32 bg-[#046AC8] md:bg-[#214ED1] text-center text-white md:text-md font-normal px-2 py-3  break-words">
+                <th className={`${filter?" right-0 z-10 text-sm w-28 md:w-32 bg-[#046AC8] md:bg-[#214ED1] text-center text-white md:text-md font-normal px-2 py-3  break-words":"sticky right-0 z-10 text-sm w-28 md:w-32 bg-[#046AC8] md:bg-[#214ED1] text-center text-white md:text-md font-normal px-2 py-3  break-words"}`}>
                   Show more
                 </th>
               </tr>
@@ -212,7 +212,7 @@ export default function Applications() {
                     applications.map((item, i) => {
                       return (
                         <>
-                          <ApplicationDetails key={i} item={item} />
+                          <ApplicationDetails key={i} item={item} filter={filter}/>
                         </>
                       );
                     })

@@ -95,7 +95,7 @@ export default function Subscribers() {
         </div>
       )}
       <div
-        className="flex flex-col-reverse justify-between p-5 md:p-10 md:flex-row"
+        className="flex flex-col-reverse justify-between p-5 md:px-10 md:flex-row"
         // onClick={() => setNavOpen(!navOpen)}
       >
         <div className="mt-4 text-lg font-semibold md:font-semibold md:mt-0">
@@ -139,10 +139,10 @@ export default function Subscribers() {
             <thead className="overflow-x-auto">
               <tr className="bg-[#214ED1]">
                 <th className="text-sm text-left w-20 md:w-40 text-white md:text-md font-normal px-5 md:px-3 py-3  break-words">
-                  Si No
+                  Serial No
                 </th>
                 <th className="text-sm  text-left  text-white md:text-md font-normal  px-2 py-3 break-words">
-                  Email
+                  Email address
                 </th>
                 <th className="text-sm text-left text-white md:text-md font-normal px-2 py-3  break-words">
                   Subcribed Date

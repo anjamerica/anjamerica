@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { DateFormatter } from "../common/DateFormatter";
 import ApplicantDetailsModal from "./ApplicantDetailsModal";
 
-export default function ApplicationDetails({ item }) {
+export default function ApplicationDetails({ item, filter }) {
   const [modal, setModal] = useState(false);
   const date = DateFormatter(item.createdAt);
 
@@ -43,15 +43,15 @@ export default function ApplicationDetails({ item }) {
         )}
 
         <td
-          // onClick={() => handleGetCv(item.file)}
           onClick={() => {
             setModal(!modal);
           }}
           className={`${
             item?.job_details?.is_active === true
-              ? "bg-[#F9F9F9] sticky right-0  w-28 text-sm  md:bg-[#F9F9F9] text-[#214ED1] text-center font-normal px-2 py-3  break-words cursor-pointer"
+              ? "bg-[#F9F9F9] sticky right-0  w-28 text-sm   md:bg-[#F9F9F9] text-[#214ED1] text-center font-normal px-2 py-3  break-words cursor-pointer"
               : "bg-[#D0CFCF] md:bg-[#E7E7E7]   sticky right-0  w-28 text-sm  text-[#214ED1] text-center font-normal px-2 py-3  break-words cursor-pointer"
           }`}
+          style={filter ? { display: "flex",width:"112px",justifyContent:"center" } : { position: "sticky" }}
         >
           VIEW
         </td>

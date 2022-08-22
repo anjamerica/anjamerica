@@ -24,7 +24,7 @@ export default function About() {
               <span className="text-primary-blue text-[2rem] heading-main uppercase font-extrabold md:text-[2.5rem]">
                 About Us
               </span>
-              <span className="text-[.8rem] px-5 w-[80%] sm:w-full font-normal tracking-wide text-primary-gray self-center md:text-[1rem]">
+              <span className="text-[.8rem] px-5 w-[80%] sm:mt-4 sm:w-full font-normal tracking-wide text-primary-gray self-center md:text-[1rem]">
                 We offer a wide range of services from Software Development ,
                 Mobile <br /> Application Development and much more.
               </span>
