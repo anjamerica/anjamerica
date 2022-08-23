@@ -13,7 +13,6 @@ import Loader from "../layout/Loader";
 import { toast } from "react-hot-toast";
 import API from "../../services/api";
 import { MdOutlineLogout } from "react-icons/md";
-// import {country_code} from "../common/country-code.json";
 import { currencies } from "currencies.json";
 import DropZone from "../common/DropZone";
 import ButtonLoader from "../layout/ButtonLoader";
@@ -466,6 +465,45 @@ export default function CreateJobForm() {
           </div>
 
           <div className="flex flex-col gap-1">
+            <span className="form-text">Job Type</span>
+            <div className="relative">
+              <select
+                className="form-input-job"
+                value={jobData.job_type}
+                onChange={(e) => handleInputChange("job_type", e.target.value)}
+                defaultValue=""
+              >
+                <option className="text-sm" value="" disabled>
+                  Select Job Type
+                </option>
+                <option className="'text-sm" value="Contract">
+                  Contract
+                </option>
+                <option className="'text-sm" value="Direct">
+                  Direct
+                </option>
+              </select>
+              <div className="absolute top-[1rem] right-[.5rem]">
+                <svg
+                  width="13"
+                  height="10"
+                  viewBox="0 0 13 10"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M6.5 9.85718L0.00480938 0.214322L12.9952 0.214322L6.5 9.85718Z"
+                    fill="#C7C8CB"
+                  />
+                </svg>
+              </div>
+            </div>
+            <span className="text-xs text-red-600">
+              {formError.job_type_err}
+            </span>
+          </div>
+
+          <div className="flex flex-col gap-1">
             <span className="form-text">Qualifications</span>
             <div className="form-input-job outline-none resize-none h-[8.5rem] p-5 overflow-y-auto">
               <div className="flex justify-between gap-2">
@@ -538,7 +576,7 @@ export default function CreateJobForm() {
                 <span className="form-text">Vendor</span>
                 <div className="relative flex flex-1 focus:outline-none border border-[#565962] border-opacity-[33%] rounded w-full leading-tight bg-[#FFFFFF]">
                   <select
-                    className="min-w-10 w-10 focus:outline-none border-r text-xs truncate text-secondary-gray flex justify-center items-center bg-transparent px-1"
+                    className="min-w-10 w-12 focus:outline-none border-r text-xs truncate text-secondary-gray flex justify-center items-center bg-transparent px-1"
                     value={vendorSalary.currency}
                     onChange={(e) => {
                       handleInputVendorRateChange("currency", e.target.value);
@@ -554,7 +592,7 @@ export default function CreateJobForm() {
                       })}
                   </select>
 
-                  <div className="absolute top-[1rem] left-[1.6rem] md:left-[1.6rem] xl:left-[1.8rem]">
+                  <div className="absolute top-[1rem] left-[1.9rem] md:left-[30px]">
                     <img
                       src="/admin/dropdown.svg"
                       alt="drop down img"
@@ -583,7 +621,7 @@ export default function CreateJobForm() {
                 <span className="form-text">Client</span>
                 <div className="relative flex flex-1 focus:outline-none border border-[#565962] border-opacity-[33%] rounded w-full leading-tight bg-[#FFFFFF]">
                   <select
-                    className="w-10 focus:outline-none border-r text-xs truncate text-secondary-gray flex justify-center items-center bg-transparent px-1"
+                    className="min-w-10 w-12 focus:outline-none border-r text-xs truncate text-secondary-gray flex justify-center items-center bg-transparent px-1"
                     value={clientSalary.currency}
                     onChange={(e) => {
                       handleInputClientRateChange("currency", e.target.value);
@@ -598,7 +636,7 @@ export default function CreateJobForm() {
                         );
                       })}
                   </select>
-                  <div className="absolute top-[1rem] left-[1.6rem] md:left-[1.6rem] xl:left-[1.8rem]">
+                  <div className="absolute top-[1rem] left-[1.9rem] md:left-[30px]">
                     <img
                       src="/admin/dropdown.svg"
                       alt="drop down img"
@@ -627,44 +665,6 @@ export default function CreateJobForm() {
         </div>
 
         <div className="flex flex-col gap-4 w-full">
-          <div className="flex flex-col gap-1">
-            <span className="form-text">Job Type</span>
-            <div className="relative">
-              <select
-                className="form-input-job"
-                value={jobData.job_type}
-                onChange={(e) => handleInputChange("job_type", e.target.value)}
-                defaultValue=""
-              >
-                <option className="text-sm" value="" disabled>
-                  Select Job Type
-                </option>
-                <option className="'text-sm" value="Contract">
-                  Contract
-                </option>
-                <option className="'text-sm" value="Direct">
-                  Direct
-                </option>
-              </select>
-              <div className="absolute top-[1rem] right-[.5rem]">
-                <svg
-                  width="13"
-                  height="10"
-                  viewBox="0 0 13 10"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M6.5 9.85718L0.00480938 0.214322L12.9952 0.214322L6.5 9.85718Z"
-                    fill="#C7C8CB"
-                  />
-                </svg>
-              </div>
-            </div>
-            <span className="text-xs text-red-600">
-              {formError.job_type_err}
-            </span>
-          </div>
           <div className="flex flex-col gap-1">
             <span className="form-text">Responsibilities</span>
             <div className="form-input-job outline-none resize-none h-[8.5rem] p-5  overflow-y-auto">

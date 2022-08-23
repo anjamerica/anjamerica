@@ -164,11 +164,12 @@ export default function Home() {
               className=" bg-[#214ED1] pr-8 hover:bg-blue-800 text-xs text-white focus:outline-none md:text-sm md:cursor-pointer  px-4 py-[.5rem] md:py-1  rounded-md"
               onChange={(e) => setActiveJobs(e.target.value)}
             >
-              <option
+             <option
                 className="bg-white text-black"
                 defaultValue=""
                 value=""
                 disabled
+                selected
               >
                 Filter
               </option>

@@ -43,11 +43,11 @@ export default function JobCardAdmin({ item, getDetails }) {
         style={{ width: "inherit" }}
       >
         <div className="flex flex-col gap-0">
-          <div className="flex flex-col lg:flex-row -mb-2 justify-between sm:w-[85%] xl:w-[90%] h-fit items-start">
+          <div className="flex flex-col lg:flex-row -mb-2 justify-between sm:w-[90%] h-fit items-start">
             <span className="text-[1rem] self-start md:text-base font-semibold">
               {item?.job_title}
             </span>
-            <span className="flex flex-row self-start h-fit w-fit items-center gap-2 md:gap-4">
+            <span className="flex flex-row self-start h-fit w-fit items-center gap-[4px] md:gap-1">
               {item?.ref_id && (
                 <p className="text-[.8rem] md:text-[1rem] md:text-base font-semibold">
                   Ref ID: {item?.ref_id}
@@ -81,7 +81,7 @@ export default function JobCardAdmin({ item, getDetails }) {
             {item?.description}
           </p>
         </div>
-        <div className="flex flex-col mt-2 gap-2 justify-between md:flex-row md:mt-0">
+        <div className="flex flex-col mt-2 w-fit gap-2 md:gap-[64px] justify-between md:flex-row md:mt-0">
           <span className="text-xs  text-[#046AC8] md:font-semibold">
             Training : {item?.training_details?.training_type}
           </span>

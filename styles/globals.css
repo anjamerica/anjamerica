@@ -564,3 +564,13 @@ button:focus {
     -webkit-transform-origin: 0 0;
   }
 }
+
+.cstm-icn::-webkit-calendar-picker-indicator  {
+  color: rgba(255, 255, 255, 0);
+  opacity: 1;
+  display: block;
+  background: rgba(255, 255, 255, 0);
+  width: 0;
+  height: 0;
+  border-width: thin;
+}

@@ -71,7 +71,7 @@ export default function ApplicantDetailsModal({ item, setModal }) {
             <div className="h-[.1px] mt-2 bg-[#545454] opacity-50 w-full" />
           </div>
           <div className="flex flex-col gap-0 mt-2 md:mt-0">
-            <p className="text-[1rem] font-semibold text-black">Email</p>
+            <p className="text-[1rem] font-semibold text-black">Email ID</p>
             <p className="text-[1rem] font-medium text-[#5A5A5A]">
               {item.email}
             </p>
