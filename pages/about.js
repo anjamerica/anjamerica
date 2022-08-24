@@ -21,10 +21,10 @@ export default function About() {
           </div>
           <div className=" pt-10 lg:pb-20 h-[25vh] lg:h-[30vh]  w-full ">
             <div className="text-center flex flex-col">
-              <span className="text-primary-blue text-[2rem] heading-main uppercase font-extrabold md:text-[2.5rem]">
+              <span className="text-primary-blue text-[2rem] heading-main uppercase font-extrabold md:text-[34px] md:leading-[41px]">
                 About Us
               </span>
-              <span className="text-[.8rem] px-5 w-[80%] sm:mt-4 sm:w-full font-normal tracking-wide text-primary-gray self-center md:text-[1rem]">
+              <span className="text-[.8rem] px-5 w-[80%] sm:mt-4 sm:w-full font-normal tracking-wide text-primary-gray self-center md:text-[18px]">
                 We offer a wide range of services from Software Development ,
                 Mobile <br /> Application Development and much more.
               </span>
@@ -33,7 +33,7 @@ export default function About() {
         </div>
         {/* <hr className="h-[5px] bg-primary-blue" /> */}
         <section>
-          <div className=" p-6 md:px-10 flex flex-col md:flex-row justify-around w-full">
+          <div className=" p-6 md:px-[7.5%] flex flex-col md:flex-row justify-around w-full">
             <div className="flex flex-col text-left mt-8 w-full md:w-[50%]">
               <span className="text-[14px] font-semibold text-[#333333] pb-2">
                 OUR PHILOSOPHY

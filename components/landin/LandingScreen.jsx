@@ -9,14 +9,14 @@ import Contact from "../contact/Contact";
 
 const services = [
   {
-    index: "1",
+    index: "01",
     service: "Digitize",
     description:
       "Nitchetechies provides creative software solutions to bridge the gap between execution of your daily businesses and the many evolving technologies.",
     link: "/digitize",
   },
   {
-    index: "2",
+    index: "02",
     service: "Hire Right",
     description:
       "Hire from the top 2% of software talent in the world. We have an exclusive pool of the top niche Professionals who can be sourced to your project as a full time or a consultant.",
@@ -70,7 +70,7 @@ export default function LandingScreen() {
               </div>
               <div className="mt-5 xl:mt-10">
                 <Link href="/#products">
-                  <button className="w-fit font-semibold text-[14px] md:text-base  uppercase text-white bg-primary-blue px-6 py-[.6rem]  tracking-wide rounded-full hover:bg-blue-8 00 cursor-pointer transition-all text-center flex items-center justify-center">
+                  <button className="w-fit sm:w-[143px] sm:h-[43px] font-semibold text-[14px] md:text-base  uppercase text-white bg-primary-blue px-6 py-[.6rem] sm:p-0  tracking-wide rounded-full hover:bg-blue-800 cursor-pointer transition-all text-center flex items-center justify-center">
                     KNOW MORE
                   </button>
                 </Link>
@@ -119,7 +119,7 @@ export default function LandingScreen() {
                           className={`${
                             serviceActive === index
                               ? "flex items-center justify-center select-none self-center text-white p-4 text-lg h-10 w-10 rounded-full bg-primary-blue"
-                              : "flex items-center select-none  text-primary-gray text-md md:text-base"
+                              : "flex items-center select-none  text-primary-gray text-md md:text-base p-4"
                           }`}
                         >
                           {item.index}
@@ -147,11 +147,11 @@ export default function LandingScreen() {
                     <div className="pb-2">
                       {serviceActive === index && (
                         <div className="text-anim-services flex flex-col gap-3">
-                          <p className="select-none text-left px-5 text-md text-primary-black md:text-base">
+                          <p className="select-none font-[500] text-left px-5 text-md text-primary-black md:text-base">
                             {item.description}
                           </p>
                           <Link href={item.link}>
-                            <button className="w-fit font-semibold text-xs md:text-md  uppercase text-white bg-primary-blue px-4 py-2 sm:px-6 sm:py-3  tracking-wide rounded-full  hover:bg-blue-800 cursor-pointer transition-all text-center flex items-center justify-center">
+                            <button className="w-fit font-semibold mx-5 text-xs md:text-md  uppercase text-white bg-primary-blue px-4 py-2 sm:px-6 sm:py-3  tracking-wide rounded-full  hover:bg-blue-800 cursor-pointer transition-all text-center flex items-center justify-center">
                               READ MORE
                             </button>
                           </Link>
@@ -190,7 +190,7 @@ export default function LandingScreen() {
       <section>
         <div className=" py-10 flex items-center h-fit flex-col gap-4 bg-[#F3F3F3]">
           <div className="flex flex-col gap-1">
-            <div className="text-subheading-main  text-primary-black self-center">
+            <div className="text-[24px] lg:text-[36px] font-[800] heading-main  text-primary-black self-center">
               Businesses we&apos;ve aligned with
             </div>
           </div>

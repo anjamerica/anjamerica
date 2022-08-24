@@ -29,11 +29,11 @@ export default function Footer() {
 
   return (
     <div className="relative bg-[#07081D] w-full h-fit z-10 pt-10 select-none">
-      <div className="flex justify-center  flex-col px-5 gap-4">
+      <div className="flex justify-center  flex-col px-5 gap-1">
         <span className="text-white font-bold text-2xl self-center px-3 text-center">
           Get to know us!
         </span>
-        <div className=" justify-center flex flex-col mt-4 lg:mt-0 sm:flex-row gap-2 w-full">
+        <div className=" justify-center flex flex-col mt-4 lg:mt-0 h-fit sm:flex-row gap-2 w-full">
           <input
             type="text"
             value={email}
@@ -66,7 +66,7 @@ export default function Footer() {
             all the answers you need.
           </span>
         </div>
-        <div className="flex gap-4 md:gap-10 md:w-[40vw] justify-between flex-col lg:flex-row">
+        <div className="flex gap-4 md:gap-10 md:w-[40vw] justify-between flex-col mt-[45px] lg:flex-row">
           <div className="flex flex-col px-5 md:px-0 mt-8 md:mt-0">
             <span className="text-white text-[24px] font-semibold">
               Company

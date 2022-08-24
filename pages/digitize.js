@@ -13,7 +13,7 @@ export default function Digitize() {
         <p className="text-anim-blog  w-full heading-main text-[1.5rem] font-extrabold md:text-[2.5rem]  leading-[33px]  md:leading-[45px]  text-[#0a1f44] text-center mt-4 sm:mt-10">
           We Provide Software Solution
         </p>
-        <div className="w-full flex justify-center">
+        <div className="w-full flex justify-center ">
           <p className="text-anim-blog text-normal-digitze w-[90%] sm:w-[48%] sm:mt-8 leading-[24px] tracking-wide text-center">
             Our goal is to help you focus on your business while we integrate
             highly competitive technology to help your business grow faster.
@@ -36,15 +36,15 @@ export default function Digitize() {
         </span>
       </section>
       <section id="feature">
-        <div className="bg-[#e4fdfc] w-full h-full p-5 md:p-10 flex gap-10 flex-col lg:flex-row">
+        <div className="bg-[#f7f9ff] w-full h-full p-5 md:p-10 flex gap-10 flex-col lg:flex-row">
           <div className="flex flex-col lg:w-[50%]">
-            <p className="text-md text-primary-blue-dark font-bold ml-5">
+            <p className="text-[15px] text-[#141414] font-bold ml-5">
               OUR FEATURES
             </p>
-            <p className="text-[1.5rem] md:text-[1.8rem] heading-main ml-5 font-[900] mt-1 text-[#04c0de]">
+            <p className="text-[1.5rem] md:text-[32px] heading-main ml-5 font-[900] mt-1 text-[#04c0de]">
               Helping you grow at every Step
             </p>
-            <p className="text-normal-digitze w-full max-w-[562px] ml-5 text-left">
+            <p className="text-normal-digitze w-full max-w-[562px] ml-5 mt-4 text-left">
               We access your business, process, and technology and make
               recommendations to make the same better in a very competitive
               business model that benefits your business. Whether it be Business
@@ -60,7 +60,7 @@ export default function Digitize() {
             />
           </div>
           <div className="md:w-[50%]">
-            <div className="flex flex-1 gap-6 w-fit mt-6">
+            <div className="flex flex-1 gap-6 w-fit mt-8">
               <div className="w-fit h-full flex rounded-[50px] justify-center items-center  bg-white drop-shadow-lg">
                 <div className="h-10 w-10 flex justify-center items-center">
                   <img
@@ -71,7 +71,7 @@ export default function Digitize() {
                 </div>
               </div>
               <div className="flex flex-col gap-4 w-full">
-                <div className="text-[1rem] font-bold text-[#333]">
+                <div className="text-digitize-heading">
                   Web Design &#38; Development
                 </div>
                 <div>
@@ -94,7 +94,7 @@ export default function Digitize() {
                 </div>
               </div>
               <div className="flex flex-col w-full gap-4">
-                <div className="text-[1rem] whitespace-nowrap font-bold text-[#333]">
+                <div className="text-digitize-heading">
                   E-Commerce Development
                 </div>
                 <div className="w-full">
@@ -116,7 +116,7 @@ export default function Digitize() {
                 </div>
               </div>
               <div className="flex flex-col gap-4">
-                <div className="text-[1rem] font-bold w-fit text-[#333]">
+                <div className="text-digitize-heading">
                   Mobile Application Development
                 </div>
                 <div className="text-normal-digitze md:max-w-[85%] break-words text-left">
@@ -137,7 +137,7 @@ export default function Digitize() {
                 </div>
               </div>
               <div className="flex flex-col gap-4">
-                <div className="text-[1rem] font-bold text-[#333]">
+                <div className="text-digitize-heading">
                   Cloud Managed Solution
                 </div>
                 <div className="text-normal-digitze md:max-w-[80%] break-words text-left">
@@ -158,7 +158,7 @@ export default function Digitize() {
                 </div>
               </div>
               <div className="flex flex-col gap-4">
-                <div className="text-[1rem] font-bold text-[#333]">
+                <div className="text-digitize-heading">
                   IT Consulting
                 </div>
                 <div className="text-normal-digitze md:max-w-[83%] break-words text-left">
