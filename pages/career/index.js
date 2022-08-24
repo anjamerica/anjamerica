@@ -45,8 +45,8 @@ export default function Career() {
           <div className="w-full h-fit shadow-sm">
             <Header />
           </div>
-          <div className=" h-[35vh] pt-10 pb-20  w-full">
-            <div className="flex h-full flex-col justify-center self-center items-center">
+          <div className=" h-[224px] sm:h-[227px]  pt-10 pb-20  w-full">
+            <div className="flex h-full flex-col justify-center mt-[20px] self-center items-center">
               <div className="flex justify-center">
                 <span className="text-[#FFD700] text-[.85rem] md:text-[16px] font-[700]">
                   EXPLORE A CAREER AT ANJ AMERICA
@@ -55,8 +55,8 @@ export default function Career() {
               <div className="text-anim-blog  text-[24px]  font-[900] sm:text-[34px] xl:text-[36px] text-[#07038C] uppercase heading-main">
                 Join us
               </div>
-              <div className="flex items-center justify-center">
-                <span className="text-primary-gray  text-[.8rem] text-center  md:text-[18px] w-[13rem] sm:w-full ">
+              <div className="flex items-center justify-center mt-2">
+                <span className="text-primary-gray  text-[16px] text-center  md:text-[18px] w-[13rem] sm:w-full ">
                   New jobs everyday - Leave us your resume for future
                   opportunities!
                 </span>

@@ -106,13 +106,13 @@ export default function Staffing() {
       </section>
       <section id="hiring">
         <div className="px-10 md:px-20  py-20">
-          <p className="text-[#33b5af] text-[.85rem] text-left font-semibold break-words md:text-[1rem]">
+          <p className="text-[#33b5af] text-[.85rem] text-left font-semibold break-words md:text-[15px]">
             OUR SELECTION PROCESS
           </p>
-          <p className="text-[#0a1f44] text-[30px] heading-main mt-2 leading-[33px] md:text-[24px] md:leading-[45px] font-bold">
+          <p className="text-[#0a1f44] text-[30px] heading-main mt-1 leading-[33px] md:text-[24px] md:leading-[45px] font-bold">
             Hiring Process
           </p>
-          <p className="w-full md:w-[568px] text-[#0a1f44] text-[.85rem] text-left break-words md:text-[1rem]">
+          <p className="w-full md:w-[568px] text-[#0a1f44] mt-2 text-[.85rem] text-left break-words md:text-[1rem]">
             Our hiring process includes various levels for screening and a hard
             background check which takes weeks and sometimes months to cherry
             pick the right candidate. Top Corporates rely on Niche resources for
@@ -121,15 +121,15 @@ export default function Staffing() {
             technology, and interpersonal skills which brings great business
             value to your clients.
           </p>
-          <div className="flex flex-col lg:flex-row lg:gap-4 justify-between w-full mt-8">
+          <div className="flex flex-col lg:flex-row lg:gap-4 justify-between w-full mt-10">
             <div className="relative flex flex-col gap-2">
-              <p className=" text-[#333] text-[16px] font-bold leading-[30px] text-base mt-6 z-10">
+              <p className=" text-[#333] text-[16px] md:text-[20px] font-bold heading-main leading-[30px] text-base mt-6 z-10">
                 Multiple Level of Screening
               </p>
-              <span className="absolute top-0 left-0 z-0 text-[#e1e5f0] text-[50px] opacity-30">
+              <span className="absolute top-0 left-0 z-0 text-[#e1e5f0] font-[900] text-[60px] opacity-30">
                 01
               </span>
-              <p className=" max-w-[334px] text-[#0a1f44] text-[.85rem] text-left break-words md:text-[1rem]">
+              <p className=" max-w-[334px] text-normal-digitze">
                 Sorting through the noise and finding all-star performers among
                 your candidates can be rather daunting. We screen the candidates
                 through our extensive process to being out the diamond from the
@@ -137,13 +137,13 @@ export default function Staffing() {
               </p>
             </div>
             <div className="relative flex flex-col gap-2">
-              <p className=" text-[#333] text-[16px] font-bold leading-[30px] z-10 text-base mt-6">
+              <p className=" text-[#333] text-[16px] font-bold md:text-[20px] heading-main leading-[30px] z-10 text-base mt-6">
                 Hard Background checks
               </p>
-              <span className="absolute top-0 left-0 z-0 text-[#e1e5f0] text-[50px] opacity-30">
+              <span className="absolute top-0 left-0 z-0 text-[#e1e5f0] font-[900] text-[60px] opacity-30">
                 02
               </span>
-              <p className=" max-w-[334px] text-[#0a1f44] text-[.85rem] text-left break-words md:text-[1rem]">
+              <p className=" max-w-[334px] text-normal-digitze">
                 We Deploy a hard background check to verify that an individual
                 is who they claim to be, and this provides an opportunity to
                 check and confirm the validity of someone&apos;s criminal
@@ -152,13 +152,13 @@ export default function Staffing() {
               </p>
             </div>
             <div className="relative flex flex-col gap-2">
-              <p className=" text-[#333] text-[16px] font-bold z-10 leading-[30px] text-base mt-6">
+              <p className=" text-[#333] text-[16px] font-bold md:text-[20px] heading-main z-10 leading-[30px] text-base mt-6">
                 One on One Interviews
               </p>
-              <span className="absolute top-0 left-0 z-0 text-[#e1e5f0] text-[50px] opacity-30">
+              <span className="absolute top-0 left-0 z-0 text-[#e1e5f0] font-[900] text-[60px] opacity-30">
                 03
               </span>
-              <p className=" max-w-[339px] text-[#0a1f44] text-[.85rem] text-left break-words md:text-[1rem]">
+              <p className=" max-w-[339px] text-normal-digitze">
                 One on one interviews are the best way to understand the
                 candidates outside their resume and documents. This gives us a
                 deeper understanding of the candidate.

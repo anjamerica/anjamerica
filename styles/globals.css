@@ -214,6 +214,7 @@ select {
   right: 5%;
   transform: translate(-50%, -50%);
 }
+
 .img-gradient::after {
   content: "";
   position: absolute;
@@ -221,10 +222,12 @@ select {
   top: 0;
   bottom: 0;
   width: 100%;
-  height: 100%;
+  min-height: 541px;
+  height: 541px;
   z-index: 0;
   border-radius: inherit;
-  background: linear-gradient(transparent, rgba(0, 0, 0, 0.53));
+  background: #000000;
+  opacity: 0.5;
 }
 
 .text-anim-blog {
@@ -578,4 +581,40 @@ button:focus {
   width: 0;
   height: 0;
   border-width: thin;
+}
+
+
+/* blog page */
+
+.blog-card {
+  @apply rounded-xl w-fit h-[650px]  sm:h-[600px] bg-white drop-shadow-xl;
+}
+
+.text-blog-date {
+  @apply text-xs md:text-[15px] text-[#5d3eff] font-semibold;
+}
+
+.text-blog-content {
+  @apply text-[14px] leading-[25px]  text-[#4e5d78] break-words md:text-[16px];
+}
+
+
+.blog-paragraph {
+  @apply text-[#333] font-[500] text-xs md:text-[16px] leading-[1.6rem]  break-words;
+}
+
+.heading-blog-content {
+  @apply text-anim-blog text-white text-[1.2rem] z-10 md:text-[46px] font-semibold;
+}
+
+.text-date-blog {
+  @apply text-[.85rem] text-white text-center break-words md:text-[17px] z-10 font-semibold;
+}
+
+.blog-subheading {
+  @apply text-sm md:text-[1rem] text-[#333] break-words  font-semibold heading-main;
+}
+
+.read-more{
+  @apply text-[#5d3eff] text-xs underline uppercase heading-main font-bold  cursor-pointer hover:text-black;
 }
