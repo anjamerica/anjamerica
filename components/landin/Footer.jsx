@@ -42,7 +42,7 @@ export default function Footer() {
             className="relative placeholder:text-[#777689] w-full sm:w-[30vw] h-fit self-end text-[#777689] bg-transparent outline-none border-[#5A5A5A] border-b-[1px] px-2"
           />
           <button
-            className="w-fit font-[400] self-center mt-10 text-primary-black bg-[#777689] px-8 py-[.6rem]  tracking-wide rounded-full hover:text-primary-blue hover:bg-white cursor-pointer transition-all text-center flex items-center justify-center"
+            className="w-fit font-[400] self-center mt-3 sm:mt-10 text-primary-black bg-[#777689] px-8 py-[.6rem]  tracking-wide rounded-full hover:text-primary-blue hover:bg-white cursor-pointer transition-all text-center flex items-center justify-center"
             onClick={() => handleSubmit()}
           >
             Subscribe
@@ -50,9 +50,9 @@ export default function Footer() {
         </div>
       </div>
       <div className="flex justify-center mt-14 mb-2 px-20">
-        <div className="w-[60vw] bg-[#222230] h-[.1px]"></div>
+        <div className="w-[60vw] bg-[#222230] h-[1px]"></div>
       </div>
-      <div className="flex flex-col lg:flex-row md:justify-around gap-4 py-10 md:p-10">
+      <div className="flex flex-col lg:flex-row md:justify-around sm:gap-4 py-10  md:px-10">
         <div className="flex flex-col md:gap-4">
           <Link href="/">
             <img
@@ -66,7 +66,7 @@ export default function Footer() {
             all the answers you need.
           </span>
         </div>
-        <div className="flex gap-4 md:gap-10 md:w-[40vw] justify-between flex-col mt-[45px] lg:flex-row">
+        <div className="flex gap-4 md:gap-10 md:w-[40vw] justify-between flex-col sm:mt-[45px] lg:flex-row">
           <div className="flex flex-col px-5 md:px-0 mt-8 md:mt-0">
             <span className="text-white text-[24px] font-semibold">
               Company

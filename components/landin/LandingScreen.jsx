@@ -45,12 +45,11 @@ export default function LandingScreen() {
       <section className="relative">
         <div
           style={{
-            background: `url(${"/landing/bg.png"})`,
             objectFit: "cover",
             backgroundSize: "100%",
             backgroundRepeat: "no-repeat",
           }}
-          className="w-full h-[60vh]  md:h-screen"
+          className="w-full h-[60vh]  md:h-screen bg-landing-image-mob  sm:bg-landing-image-web"
         >
           <div className="w-full h-fit shadow-sm">
             <Header />
@@ -63,7 +62,7 @@ export default function LandingScreen() {
                 Digitize your Business today and Grow your Brand...
               </div>
               <div className="text-anim-blog flex items-center text-center justify-center">
-                <span className="text-primary-gray  text-[.8rem]  xl:text-[1rem] w-[13rem] sm:w-full ">
+                <span className="text-primary-gray  text-[.8rem] mt-2  xl:text-[1rem] w-[13rem] sm:w-full ">
                   Create stunning products, Hire top software professionals for
                   your project.
                 </span>
@@ -95,7 +94,7 @@ export default function LandingScreen() {
             <span className="text-subheading leading-[3%] text-primary-blue self-center">
               WHAT WE DO
             </span>
-            <span className="text-subheading-main  text-primary-black self-center">
+            <span className="text-subheading-main mt-2 text-primary-black self-center">
               Services
             </span>
             <span className="text-normal-landing mt-2 text-primary-black self-center">
@@ -118,8 +117,8 @@ export default function LandingScreen() {
                         <div
                           className={`${
                             serviceActive === index
-                              ? "flex items-center justify-center select-none self-center text-white p-4 text-lg h-10 w-10 rounded-full bg-primary-blue"
-                              : "flex items-center select-none  text-primary-gray text-md md:text-base p-4"
+                              ? "flex items-center justify-center select-none self-center text-white p-4 text-[16px] h-10 w-10 rounded-full bg-primary-blue"
+                              : "flex items-center select-none  text-primary-gray text-md text-[16px] p-2"
                           }`}
                         >
                           {item.index}

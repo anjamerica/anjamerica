@@ -38,6 +38,8 @@ module.exports = {
         'image-mobile': "url('/landing/bg-img-mob.png')",
         'image-web': "url('/landing/bg.png')",
         'image-web-career': "url('/landing/career.png')",
+        'landing-image-mob':"url('/landing/bg_landing.svg')",
+        'landing-image-web':"url('/landing/bg.png')",
       }
     },
   },
