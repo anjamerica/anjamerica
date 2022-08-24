@@ -78,7 +78,7 @@ export default function Products() {
               className="w-[20rem] h-[20rem]  md:w-[20rem] xl:w-[25rem] xl:h-[25rem] object-contain md:h-[20rem] mt-0 flex self-center md:self-start  md:mt-0"
             />
             <div>
-              <p className="text-primary-blue w-[11rem] sm:w-[17rem] md:w-full py-4 text-left font-bold break-words mx-[2.5rem] md:mx-0 text-base sm:text-xl  md:text-[24px]">
+              <p className="text-primary-blue w-[11rem] heading-main sm:w-[17rem] md:w-full py-4 text-left font-bold break-words mx-[2.5rem] md:mx-0 text-base sm:text-xl  md:text-[24px]">
                 {data[currentIndex].product}
               </p>
               <p className="flex flex-col items-start text-[#535353] font-semibold text-sm break-words mt-2 text-left mx-[2.5rem] md:mx-0 w-[70%]">

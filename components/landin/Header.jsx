@@ -17,8 +17,8 @@ export default function Header() {
     <div
       className={`${
         router.pathname ===  ("/home" || "/about" || "/digitize" || "/staffing")
-          ? "relative w-full flex justify-between items-center h-[10hv] shadow-sm px-4  md:px-[2%] md:py-4 md:items-center md:h-[15vh]"
-          : "relative w-full bg-white flex justify-between items-center h-[10hv] shadow-sm px-4  md:px-[2%] md:py-4 md:items-center md:h-[15vh]"
+          ? "relative w-full flex justify-between items-center h-[80px] shadow-sm px-4  md:px-[2%] md:py-4 md:items-center md:h-[80px]"
+          : "relative w-full bg-white flex justify-between items-center h-[80px] shadow-sm px-4  md:px-[2%] md:py-4 md:items-center md:h-[80px]"
       }`}
 
     >
@@ -27,7 +27,7 @@ export default function Header() {
           <img
             alt="logo image"
             src="/landing/Anj-logo.svg"
-            className="w-fit h-[40px] md:h-[50px] ml-1 md:-ml-2 object-contain cursor-pointer"
+            className="w-fit h-[40px] md:w-[154px] ml-1 md:ml-6 object-contain cursor-pointer"
           />
         </Link>
       </div>

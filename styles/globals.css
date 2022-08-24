@@ -81,7 +81,7 @@ a {
 }
 
 .text-normal-digitze {
-  @apply text-[.85rem] p-0  text-[#333] break-words md:text-[1rem];
+  @apply text-[14px] p-0 leading-[1.8rem]  text-[#333] break-words md:text-[16px];
 }
 
 .logo-hover-landing {
@@ -120,6 +120,7 @@ a {
   .scrollbar-landing {
     height: fit-content;
     overflow-y: none;
+    width: 67%;
   }
   .scrollbar-landing::-webkit-scrollbar {
     width: 0px;
@@ -138,6 +139,10 @@ a {
       #000000 100%
     );
   }
+}
+
+.text-digitize-heading {
+  @apply text-[18px] leading-[25px] mt-[5px] font-bold text-[#333] heading-main;
 }
 
 .carousel {
@@ -442,7 +447,7 @@ input[type="number"]::-webkit-outer-spin-button {
   display: flex;
   overflow: hidden;
   height: 100vh;
-  min-height: 800px;
+  min-height: 500px;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
