@@ -14,7 +14,7 @@ export default function Digitize() {
           We Provide Software Solution
         </p>
         <div className="w-full flex justify-center ">
-          <p className="text-anim-blog text-normal-digitze w-[90%] sm:w-[48%] sm:mt-8 leading-[24px] tracking-wide text-center">
+          <p className="text-anim-blog text-normal-digitze w-[90%] sm:w-[48%] mt-4 sm:mt-8 leading-[24px] tracking-wide text-center">
             Our goal is to help you focus on your business while we integrate
             highly competitive technology to help your business grow faster.
           </p>

@@ -46,10 +46,10 @@ export default function LandingScreen() {
         <div
           style={{
             objectFit: "cover",
-            backgroundSize: "100%",
+            backgroundSize: "100% 100%",
             backgroundRepeat: "no-repeat",
           }}
-          className="w-full h-[60vh]  md:h-screen bg-landing-image-mob  sm:bg-landing-image-web"
+          className="w-full h-[60vh]  md:min-h-screen bg-landing-image-mob  sm:bg-landing-image-web"
         >
           <div className="w-full h-fit shadow-sm">
             <Header />
@@ -94,7 +94,7 @@ export default function LandingScreen() {
             <span className="text-subheading leading-[3%] text-primary-blue self-center">
               WHAT WE DO
             </span>
-            <span className="text-subheading-main mt-2 text-primary-black self-center">
+            <span className="text-subheading-main mt-2 heading-main text-primary-black self-center">
               Services
             </span>
             <span className="text-normal-landing mt-2 text-primary-black self-center">
@@ -146,7 +146,7 @@ export default function LandingScreen() {
                     <div className="pb-2">
                       {serviceActive === index && (
                         <div className="text-anim-services flex flex-col gap-3">
-                          <p className="select-none font-[500] text-left px-5 text-md text-primary-black md:text-base">
+                          <p className="select-none font-[500]  text-left px-5 text-md text-primary-black md:text-base">
                             {item.description}
                           </p>
                           <Link href={item.link}>

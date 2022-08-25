@@ -81,7 +81,7 @@ a {
 }
 
 .text-normal-digitze {
-  @apply text-[14px] p-0 leading-[1.8rem]  text-[#333] break-words md:text-[16px];
+  @apply text-[14px] p-0 leading-[1.8rem]  text-[#222] break-words md:text-[16px];
 }
 
 .logo-hover-landing {
@@ -549,7 +549,7 @@ button:focus {
 }
 
 .blog-title {
-  @apply text-[#0a1f44] heading-main md:text-base xl:text-[28px] xl:leading-[34px] font-bold break-words;
+  @apply text-[#0a1f44] heading-main text-[28px] xl:leading-[34px] font-bold break-words;
 }
 
 .filter-component {
@@ -587,7 +587,7 @@ button:focus {
 /* blog page */
 
 .blog-card {
-  @apply rounded-xl w-fit h-[650px]  sm:h-[600px] bg-white drop-shadow-xl;
+  @apply rounded-xl w-fit h-[650px]  sm:h-[650px] lg:h-[600px] lg:max-w-[400px] bg-white drop-shadow-xl;
 }
 
 .text-blog-date {
@@ -600,7 +600,7 @@ button:focus {
 
 
 .blog-paragraph {
-  @apply text-[#333] font-[500] text-xs md:text-[16px] leading-[1.6rem]  break-words;
+  @apply text-[#333] font-[500] text-[15px] md:text-[16px] leading-[1.6rem]  break-words;
 }
 
 .heading-blog-content {
@@ -616,5 +616,5 @@ button:focus {
 }
 
 .read-more{
-  @apply text-[#5d3eff] text-xs underline uppercase heading-main font-bold  cursor-pointer hover:text-black;
+  @apply text-[#5d3eff] text-xs underline uppercase heading-main font-bold mt-2 cursor-pointer hover:text-black;
 }

@@ -49,10 +49,10 @@ export default function Footer() {
           </button>
         </div>
       </div>
-      <div className="flex justify-center mt-14 mb-2 px-20">
+      <div className="flex justify-center mt-8 sm:mt-12 mb-2 px-20">
         <div className="w-[60vw] bg-[#222230] h-[1px]"></div>
       </div>
-      <div className="flex flex-col lg:flex-row md:justify-around sm:gap-4 py-10  md:px-10">
+      <div className="flex flex-col lg:flex-row md:justify-around sm:gap-4 pb-10  md:px-10">
         <div className="flex flex-col md:gap-4">
           <Link href="/">
             <img
@@ -67,7 +67,7 @@ export default function Footer() {
           </span>
         </div>
         <div className="flex gap-4 md:gap-10 md:w-[40vw] justify-between flex-col sm:mt-[45px] lg:flex-row">
-          <div className="flex flex-col px-5 md:px-0 mt-8 md:mt-0">
+          <div className="flex flex-col px-5 md:px-0 mt-4 md:mt-0">
             <span className="text-white text-[24px] font-semibold">
               Company
             </span>
