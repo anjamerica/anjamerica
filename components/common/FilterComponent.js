@@ -2,6 +2,7 @@ import { useRouter } from "next/router";
 import { useState, useRef } from "react";
 import toast from "react-hot-toast";
 import { BiSearchAlt2 } from "react-icons/bi";
+import DatePicker from "./DatePicker";
 
 export const FilterComponent = ({ setFilter }) => {
   const router = useRouter();
@@ -33,36 +34,25 @@ export const FilterComponent = ({ setFilter }) => {
         }}
       ></div>
       <div
-        className={`filter-component bg-white grid grid-cols-11 gap-4 p-4  z-50 w-full sm:w-[379px] sm:h-[222px] shadow rounded-md`}
-      >
+        className={`filter-component bg-white grid grid-cols-11 sm:gap-4 p-4  z-50 w-[312px] h-[200px] sm:w-[379px] sm:h-[222px] shadow rounded-md`}
+        >
         <div className="col-span-11">
           <div className="flex-col w-full text-[#2B3131 text-lg] sm:text-[24px] font-normal sm:text-2xl">
             Select date
           </div>
         </div>
         <div className="col-span-5 relative">
-          <div className="flex-col  w-full">
+          <div className="flex-col  w-full self-start">
             <span
-              className="text-[12px] sm:absolute sm:top-0 sm:left-0 text-[#ADB3BC] font-[400] "
+              className="text-[12px]  text-[#ADB3BC] font-[400] "
               htmlFor="Company name"
             >
               From date
             </span>
-            <input
-              className=" w-full sm:mt-[10px] cstm-icn h-full py-2 focus:outline-none  text-[14px] font-[500] text-[#214ED1]"
-              ref={fromD}
-              type="date"
+            <DatePicker
               value={fromDate}
-              placeholder="mm-dd-yyy"
-              onChange={(e) => setFromDate(e.target.value)}
-            />
-            <img
-              alt="calender icon"
-              src="/admin/calender_icon.svg"
-              className=" invisible sm:visible  cursor-pointer w-fit h-fit absolute top-3 right-2"
-              onClick={() => {
-                fromD.current.showPicker();
-              }}
+              setValue={setFromDate}
+              textColor="#214ED1"
             />
           </div>
         </div>
@@ -72,46 +62,16 @@ export const FilterComponent = ({ setFilter }) => {
         <div className="col-span-5">
           <div className="flex-col  w-full relative">
             <label
-              className="text-[12px] sm:absolute sm:top-0 sm:left-0 text-[#ADB3BC] font-[400]"
+              className="text-[12px]  text-[#ADB3BC] font-[400]"
               htmlFor="Website"
             >
               To date
             </label>
-            <input
-              className="w-full h-full py-2 sm:mt-[10px] cstm-icn focus:outline-none text-[14px] font-[500] text-primary-gray "
-              ref={toD}
-              type="date"
+
+            <DatePicker
               value={toDate}
-              laceholder="mm-dd-yyy"
-              onChange={(e) => setToDate(e.target.value)}
-              max={
-                new Date().getFullYear() +
-                "-" +
-                (new Date().getMonth() + 1 < 10
-                  ? "0" + (new Date().getMonth() + 1)
-                  : new Date().getMonth() + 1) +
-                "-" +
-                (new Date().getDate() < 10
-                  ? new Date().getDate()
-                  : new Date().getDate())
-              }
-              min={
-                new Date(fromDate).getFullYear() +
-                "-" +
-                (new Date(fromDate).getMonth() + 1 < 10
-                  ? "0" + (new Date(fromDate).getMonth() + 1)
-                  : new Date(fromDate).getMonth() + 1) +
-                "-" +
-                (new Date(fromDate).getDate() < 10
-                  ? new Date(fromDate).getDate()
-                  : new Date(fromDate).getDate())
-              }
-            />
-            <img
-              alt="calender icon"
-              src="/admin/calender_icon.svg"
-              className="invisible sm:visible cursor-pointer  w-fit h-fit absolute top-3 right-2"
-              onClick={() => toD.current.showPicker()}
+              setValue={setToDate}
+              textColor="#949495"
             />
           </div>
         </div>

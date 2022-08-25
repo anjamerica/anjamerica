@@ -19,7 +19,7 @@ export default function index() {
             <span className="text-blog-date">
               April 29, 2021
             </span>
-            <p className="text-[#0a1f44] heading-main md:text-[34px] xl:leading-[41px] md:w-[90%] font-bold break-words">
+            <p className="text-[#0a1f44] heading-main text-[28px] md:text-[34px] xl:leading-[41px] md:w-[90%] font-bold break-words">
               Software and IT Industry In The USA
             </p>
             <p className="text-blog-content w-[97%]">

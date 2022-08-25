@@ -143,8 +143,7 @@ export const contactUs=(first_name,mobile_number,email,description,message)=>{
                   <img
                   src="https://www.linkpicture.com/q/Anj-logo.png"
                     width="160"
-                    height="10"
-                    style="display: block; border: 0px; align-self: center"
+                    style="display: block; border: 0px; align-self: center;height:auto;"
                   />
                 </td>
               </tr>
