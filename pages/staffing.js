@@ -11,14 +11,14 @@ export default function Staffing() {
       <Header />
       <section className="staffing-bg">
         <div className="flex flex-col w-full px-10 md:px-20 mt-24">
-          <p className="text-[.85rem] text-left font-semibold break-words md:text-[14px] text-[#04c0de]">
+          <p className="text-[.85rem] text-left font-semibold break-words tracking-[1px] md:text-[14px] text-[#04c0de]">
             WORKS WITH TOP LEVEL IT COMPANIES
           </p>
           <p className="text-anim-blog text-[#33334f] heading-main text-[30px] mt-2 leading-[33px] md:text-[52px] md:leading-[58px] font-[900]">
             Catering to All
             <br /> Staffing Needs
           </p>
-          <p className="text-[14px] p-0 leading-[1.8rem]  max-w-[410px] break-words md:text-[18px] md:leading-[1.8rem] text-[#0a1f44] mt-2 text-anim-blog">
+          <p className="text-[14px] p-0 leading-[1.8rem]  max-w-[410px] break-words md:text-[18px] md:leading-[1.8rem] text-[#0a1f44] mt-6 text-anim-blog">
             Hire from the top 2% of software talent in the
             <br /> world. We have an exclusive pool of the top Anj
             <br /> America Professionals who can be sourced to
@@ -106,13 +106,13 @@ export default function Staffing() {
       </section>
       <section id="hiring">
         <div className="px-10 md:px-20  py-20">
-          <p className="text-[#33b5af] text-[.85rem] text-left font-semibold break-words md:text-[15px]">
+          <p className="text-[#33b5af] text-[.85rem] text-left font-semibold tracking-[1px] break-words md:text-[15px]">
             OUR SELECTION PROCESS
           </p>
           <p className="text-[#0a1f44] text-[30px] heading-main mt-1 leading-[33px] md:text-[24px] md:leading-[45px] font-bold">
             Hiring Process
           </p>
-          <p className="w-full md:w-[568px] text-[#0a1f44] mt-2 text-[.85rem] text-left break-words md:text-[1rem]">
+          <p className="w-full md:w-[568px] text-[#0a1f44] mt-4 text-[.85rem] text-left break-words md:text-[1rem]">
             Our hiring process includes various levels for screening and a hard
             background check which takes weeks and sometimes months to cherry
             pick the right candidate. Top Corporates rely on Niche resources for

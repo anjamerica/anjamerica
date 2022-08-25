@@ -192,7 +192,13 @@ export default function Applications() {
                 <th className="text-sm w-44 text-white md:text-md font-normal px-2 py-3  break-words">
                   Post
                 </th>
-                <th className={`${filter?" right-0 z-10 text-sm w-28 md:w-32 bg-[#046AC8] md:bg-[#214ED1] text-center text-white md:text-md font-normal px-2 py-3  break-words":"sticky right-0 z-10 text-sm w-28 md:w-32 bg-[#046AC8] md:bg-[#214ED1] text-center text-white md:text-md font-normal px-2 py-3  break-words"}`}>
+                <th
+                  className={`${
+                    filter
+                      ? " right-0 z-10 text-sm w-28 md:w-32 bg-[#046AC8] md:bg-[#214ED1] text-center text-white md:text-md font-normal px-2 py-3  break-words"
+                      : "sticky right-0 z-10 text-sm w-28 md:w-32 bg-[#046AC8] md:bg-[#214ED1] text-center text-white md:text-md font-normal px-2 py-3  break-words"
+                  }`}
+                >
                   Show more
                 </th>
               </tr>
@@ -212,7 +218,11 @@ export default function Applications() {
                     applications.map((item, i) => {
                       return (
                         <>
-                          <ApplicationDetails key={i} item={item} filter={filter}/>
+                          <ApplicationDetails
+                            key={i}
+                            item={item}
+                            filter={filter}
+                          />
                         </>
                       );
                     })
@@ -237,8 +247,8 @@ export default function Applications() {
             </tbody>
           </table>
         </div>
-        <div>
-          {totalItems > 0 && (
+        <div className="w-full flex justify-center items-center self-center">
+          {(totalItems && totalItems) > 0 && (
             <Pagination
               currentPage={page}
               setCurrentPage={setPage}

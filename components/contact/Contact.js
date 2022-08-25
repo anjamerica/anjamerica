@@ -74,7 +74,7 @@ export default function Contact() {
   };
 
   return (
-    <div className=" relative p-5 md:px-20 bg-white flex flex-col z-20 justify-center w-full h-fit">
+    <div className=" relative p-5 md:px-20 pt-[90px] bg-white flex flex-col z-20 justify-center w-full h-fit">
       <span className="w-full text-[1.5rem] break-words heading-main text-[#0a1f44] text-center font-extrabold md:text-[38px] md:leading-[42px] my-5">
         Have any Questions?
       </span>
