@@ -143,8 +143,7 @@ export const application =(name,email,link,description,date,job_title,country_co
                   <img
                     src="https://www.linkpicture.com/q/Anj-logo.png"
                     width="160"
-                    height="10"
-                    style="display: block; border: 0px; align-self: center"
+                    style="display: block; border: 0px; align-self: center";height:auto;
                   />
                 </td>
               </tr>
@@ -220,7 +219,7 @@ export const application =(name,email,link,description,date,job_title,country_co
                         margin: 0%;
                       "
                     >
-                      ${email}
+                      Email
                     </p>
                     <p
                       style="
@@ -231,7 +230,7 @@ export const application =(name,email,link,description,date,job_title,country_co
                         margin-top: 1%;
                       "
                     >
-                      Suhail@gmail.com
+                    ${email}
                     </p>
                     <hr
                       style="
