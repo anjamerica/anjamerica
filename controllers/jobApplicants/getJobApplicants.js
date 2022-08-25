@@ -88,6 +88,7 @@ export const getJobApplicants = async (req, res) => {
                 "$limit": limit
             }
         ]
+        const filterCount=searchQuery.length
         if (_id) {
             const getOneJob = await JobApplicants.findOne({ _id: _id })
             return res.status(200).json({ success: "One job", payload: getOneJob })
@@ -95,7 +96,7 @@ export const getJobApplicants = async (req, res) => {
         if (search && page && limit || limit && page) {
             const searchJobs = await JobApplicants.aggregate(searchQuery)
             const totalCounts = await JobApplicants.find().count()
-            return res.status(200).json({ success: "Get search applicants", totalCount: totalCounts, payload: searchJobs })
+            return res.status(200).json({ success: "Get search applicants",filterCount, totalCount: totalCounts, payload: searchJobs })
         }
         const jobApplicants = await JobApplicants.find({}).populate("job_id")
         const totalCounts = await JobApplicants.find().count()
