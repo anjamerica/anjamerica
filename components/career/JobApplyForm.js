@@ -16,7 +16,7 @@ export default function JobApplyForm({ item, setFormModal }) {
   const [details, setDetails] = useState({});
   const [phone, setPhone] = useState({ country_code: "+91" });
   const { loaderToggler } = useContext(loadingContext);
-  const [formError, setFormError] = useState({});
+  const [formError, setFormError] = useState(null);
   const [file, setFile] = useState();
   const [fileKey, setFileKey] = useState();
   const [loading, isLoading] = useState(false);
@@ -56,39 +56,48 @@ export default function JobApplyForm({ item, setFormModal }) {
   const validations = () => {
     //validations
     if (!details.name) {
-      return setFormError({ name_err: "Name is required" });
+       setFormError({ name_err: "Name is required" });
     }
     if (!phone.country_code) {
-      return setFormError({ country_code_err: "Country code is required" });
+       setFormError({ country_code_err: "Country code is required" });
     }
     if (!phone.tell_number) {
-      return setFormError({ number_err: "Phone Number required" });
+       setFormError({ number_err: "Phone Number required" });
     }
     console.log(phone.tell_number.length);
     if (phone.tell_number.length < 9) {
-      return setFormError({ number_err: "Invalid Phone Number" });
+       setFormError({ number_err: "Invalid Phone Number" });
+       return false
     }
     if (phone.tell_number.length >= 15) {
-      return setFormError({ number_err: "Invalid Phone Number" });
+       setFormError({ number_err: "Invalid Phone Number" });
+       return false
     }
     if (!details.email) {
-      return setFormError({ email_err: "Email is required" });
+       setFormError({ email_err: "Email is required" });
+       return false
     }
     if (!validator.isEmail(details.email)) {
-      return setFormError({ email_err: "Email is not valid" });
+       setFormError({ email_err: "Email is not valid" });
+       return false
     }
     if (!details.description) {
-      return setFormError({ description_err: "Description is required" });
+       setFormError({ description_err: "Description is required" });
+       return false
     }
     if (!details.link) {
-      return setFormError({ link_err: "Link is required" });
+       setFormError({ link_err: "Link is required" });
+       return false
     }
     if (!validator.isURL(details.link)) {
-      return setFormError({ link_err: "Invalid link" });
+       setFormError({ link_err: "Invalid link" });
+       return false
     }
     if (!file) {
-      return setFormError({ file_err: "select a file" });
+       setFormError({ file_err: "select a file" });
+       return false
     }
+    return true
     // if (file > maxSize) {
     //   return (
     //     setFormError({ file_err: "Please select a file less than 2mb" }),
@@ -102,12 +111,12 @@ export default function JobApplyForm({ item, setFormModal }) {
     try {
       setFormError(null);
       isLoading(true);
-      validations();
-      if (formError) {
+      const result =   validations();
+      console.log(formError,"hhhhh");
+      if (!result) {
         isLoading(false);
         return;
       }
-
       const url = "/api/admin/cvUpload";
       const formData = new FormData();
       formData.append("file", file);
