@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 
-function DatePicker({ value, setValue = () => {},textColor }) {
+function DatePicker({ value, setValue = () => {}, textColor }) {
   const dateRef = useRef(null);
 
   const handleDate = () => {
@@ -16,7 +16,12 @@ function DatePicker({ value, setValue = () => {},textColor }) {
         ref={dateRef}
         className="invisible w-0"
       />
-      <span className="text-[14px] font-[500]" style={{color:textColor}}>{value || "dd/mm/yyy"}</span>
+      {value && (
+        <span className="text-[14px] font-[500] text-[#214ED1]">{value}</span>
+      )}
+      {!value && (
+        <span className="text-[14px] font-[500] text-[#96ABC6]">dd/mm/yyy</span>
+      )}
       <img
         src="/admin/calender_icon.svg"
         className="ml-[26px] w-[25px] h-[25px] sm:w-[27px] md:h-[27px] "

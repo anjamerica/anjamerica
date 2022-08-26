@@ -80,7 +80,10 @@ export const getJobApplicants = async (req, res) => {
 
                 }
             },
-            { $sort: { _id: -1 } },
+            { $sort: { _id: -1 } }
+        ]
+        const filterQUery =[
+            ...searchQuery,
             {
                 "$skip": page * limit - limit
             },
@@ -88,13 +91,13 @@ export const getJobApplicants = async (req, res) => {
                 "$limit": limit
             }
         ]
-        const filterCount=searchQuery.length
         if (_id) {
             const getOneJob = await JobApplicants.findOne({ _id: _id })
             return res.status(200).json({ success: "One job", payload: getOneJob })
         }
         if (search && page && limit || limit && page) {
-            const searchJobs = await JobApplicants.aggregate(searchQuery)
+            const filterCount=await (await JobApplicants.aggregate(searchQuery)).length
+            const searchJobs = await JobApplicants.aggregate(filterQUery)
             const totalCounts = await JobApplicants.find().count()
             return res.status(200).json({ success: "Get search applicants",filterCount, totalCount: totalCounts, payload: searchJobs })
         }
