@@ -621,3 +621,13 @@ button:focus {
 .read-more{
   @apply text-[#5d3eff] text-xs underline uppercase heading-main font-bold mt-2 cursor-pointer hover:text-black;
 }
+
+
+input.file {
+	position: relative;
+	text-align: right;
+	-moz-opacity:0 ;
+	filter:alpha(opacity: 0);
+	opacity: 0;
+	z-index: 2;
+}
