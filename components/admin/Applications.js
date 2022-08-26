@@ -39,7 +39,6 @@ export default function Applications() {
         setApplications(response?.data?.payload);
         setTotalItems(response?.data?.filterCount);
         setLoading(false);
-        console.log(response?.data);
       } catch (err) {
         setLoading(false);
         console.log(err);
