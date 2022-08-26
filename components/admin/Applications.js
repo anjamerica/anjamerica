@@ -145,7 +145,7 @@ export default function Applications() {
                 onClick={() => setFilter(!filter)}
               >
                 Filter
-                <TbAdjustmentsHorizontal className="w-10 h-10" />
+                <TbAdjustmentsHorizontal className="w-5 h-5" />
               </button>
             ) : (
               <div onClick={() => router.push("/applications")}>
@@ -156,7 +156,7 @@ export default function Applications() {
                   }}
                 >
                   Close Filter
-                  <TbAdjustmentsHorizontal  className="w-10 h-10"/>
+                  <TbAdjustmentsHorizontal  className="w-5 h-5"/>
                 </button>
               </div>
             )}
