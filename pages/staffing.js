@@ -10,19 +10,19 @@ export default function Staffing() {
     <main className="mx-auto w-full h-full snap-y">
       <Header />
       <section className="staffing-bg">
-        <div className="flex flex-col w-full px-10 md:px-20 mt-24">
+        <div className="flex flex-col w-full px-10 md:px-20 self-center mt-8">
           <p className="text-[.85rem] text-left font-semibold break-words tracking-[1px] md:text-[14px] text-[#04c0de]">
             WORKS WITH TOP LEVEL IT COMPANIES
           </p>
-          <p className="text-anim-blog text-[#33334f] heading-main text-[30px] mt-2 leading-[33px] md:text-[52px] md:leading-[58px] font-[900]">
+          <p className="text-anim-blog text-[#33334f] heading-main text-[45px] mt-2 leading-[48px] md:text-[52px] md:leading-[58px] font-[900]">
             Catering to All
             <br /> Staffing Needs
           </p>
-          <p className="text-[14px] p-0 leading-[1.8rem]  max-w-[410px] break-words md:text-[18px] md:leading-[1.8rem] text-[#0a1f44] mt-6 text-anim-blog">
+          <p className="text-[16px] p-0 leading-[1.8rem]  max-w-[410px] break-words md:text-[18px] md:leading-[1.8rem] text-[#0a1f44] mt-6 text-anim-blog">
             Hire from the top 2% of software talent in the
-            <br /> world. We have an exclusive pool of the top Anj
-            <br /> America Professionals who can be sourced to
-            <br /> your project as a full time or a consultant.
+            world. We have an exclusive pool of the top Anj
+            America Professionals who can be sourced to
+            your project as a full time or a consultant.
           </p>
           <Link href="/staffing#hiring">
             <button className="w-fit font-semibold text-[13px] text-white bg-[#04c0de] px-6 md:px-[40px] py-3 md:py-[13px] tracking-wide mt-4 md:mt-6  rounded-full hover:bg-[#33b5af] transition-all text-center flex items-center justify-center">

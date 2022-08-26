@@ -56,7 +56,7 @@ export default function Products() {
   useEffect(() => {
     setInterval(function () {
       handleOnNextClick();
-    }, 5000);
+    }, 6000);
   }, []);
 
   return (
@@ -65,23 +65,23 @@ export default function Products() {
         <p className="text-subheading-main heading-main text-primary-black self-center">
           Our Products
         </p>
-        <div className="grid grid-flow-row w-full px-0 md:p-10">
+        <div className="grid grid-flow-row w-full px-0 md:py-10 sm:px-[50px] lg:px-[80px] xl:px-[150px]">
           {/* {data.map((item, index) => {
             return ( */}
           <div
-            className="flex flex-col w-full md:flex-row-reverse gap-0 md:gap-1 xl:gap-10"
+            className="flex flex-col w-full lg:flex-row-reverse gap-0 md:gap-10"
             setCurrentIndex={currentIndex}
           >
             <img
               alt="product image"
               src={data[currentIndex].img}
-              className="w-[20rem] h-[20rem]  md:w-[20rem] xl:w-[25rem] xl:h-[25rem] object-contain md:h-[20rem] mt-0 flex self-center md:self-start  md:mt-0"
+              className="w-[20rem] h-[20rem]  md:w-[25rem] md:h-[25rem] mt-0 flex self-center lg:self-start  md:mt-0"
             />
             <div>
-              <p className="text-primary-blue w-[11rem] heading-main sm:w-[17rem] md:w-full py-4 text-left font-bold break-words mx-[2.5rem] md:mx-0 text-base sm:text-xl  md:text-[24px]">
+              <p className="text-primary-blue  heading-main  md:w-full py-4 text-left font-bold break-words mx-[2.5rem] md:mx-0 text-base text-[24px]">
                 {data[currentIndex].product}
               </p>
-              <p className="flex flex-col items-start text-[#535353] font-semibold text-sm break-words mt-2 text-left mx-[2.5rem] md:mx-0 w-[70%]">
+              <p className="flex flex-col items-start text-[#535353] heading-main font-semibold text-[16px] sm:text-[24px] break-words mt-2 text-left mx-[2.5rem] md:mx-0 ">
                 {data[currentIndex].description}
               </p>
               <div className="mt-4 mx-[2.5rem] md:mx-0 self-left">
@@ -102,7 +102,7 @@ export default function Products() {
                       <span>
                         <IoMdCheckmarkCircleOutline className="h-5 w-5 text-primary-blue md:h-7 md:w-7" />
                       </span>
-                      <span className="text-secondary-gray text-md text-left">
+                      <span className="text-[#222] text-[16px] text-left">
                         {feature}
                       </span>
                     </div>
@@ -129,13 +129,13 @@ export default function Products() {
         <img
           alt="prev arrow"
           src="/landing/prev-arrow.svg"
-          className="hidden md:flex md:h-10 md:absolute md:top-[20rem] md:left-[1rem] lg:h-10 lg:left-[1rem] xl:left-[6rem] sm:w-7  xl:w-fit  text-primary-gray cursor-pointer"
+          className="hidden md:flex md:h-10 md:absolute md:top-[20rem] md:left-[17px] lg:h-10 lg:left-[17px] xl:left-[24px] sm:w-7  xl:w-fit  text-primary-gray cursor-pointer"
           onClick={() => handleOnPrevClick()}
         />
         <img
           alt="next arrow"
           src="/landing/next-arrow.svg"
-          className="hidden md:flex md:h-10 md:absolute md:top-[20rem] md:right-[1rem] lg:h-10 lg:right-[1rem] xl:right-[6rem] sm:w-7  xl:w-fit   text-primary-gray cursor-pointer"
+          className="hidden md:flex md:h-10 md:absolute md:top-[20rem] md:right-[17px] lg:h-10 lg:right-[17px] xl:right-[24px] sm:w-7  xl:w-fit   text-primary-gray cursor-pointer"
           onClick={() => handleOnNextClick()}
         />
       </div>
