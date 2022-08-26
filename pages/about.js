@@ -145,7 +145,7 @@ export default function About() {
           </div>
         </div>
       </section>
-      <div className="bg-[#04c0de] h-full md:h-[11rem] py-[100px] gap-2 md:py-0 md:gap-0 flex flex-col md:flex-row justify-evenly ">
+      <div className="bg-[#04c0de] h-full md:h-[11rem] py-[100px] lg:px-[100px] gap-2 md:py-0 md:gap-0 flex flex-col md:flex-row justify-evenly ">
         <div className="flex flex-col justify-center">
           <span className="md:text-[50px] text-[55px] heading-main font-[900] text-white text-center">
             &#36;15M+

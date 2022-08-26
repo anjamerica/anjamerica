@@ -23,7 +23,7 @@ body {
   margin: 0;
   font-family: "sofia-pro", sans-serif;
   min-width: 350px;
-  min-height: 100%;
+  min-height:900px;
   -webkit-tap-highlight-color: transparent;
 }
 
@@ -44,6 +44,12 @@ a {
 /* p {
   user-select: none;
 } */
+
+
+.heading-main {
+  font-family: sofia-pro-bold;
+}
+
 .yellow-action-button {
   @apply w-fit font-[800] text-black select-none bg-primary-yellow px-4 py-2  uppercase  rounded-full hover:bg-[#ecd378] transition-all text-center flex items-center justify-center;
 }
@@ -161,7 +167,7 @@ a {
 }
 
 .form-text {
-  @apply text-base text-subheading-gray;
+  @apply text-base  text-subheading-gray;
 }
 
 .form-input-job {
@@ -188,9 +194,6 @@ select {
   text-overflow: "";
 }
 
-.heading-main {
-  font-family: sofia-pro-bold;
-}
 
 .h-center {
   position: absolute;
@@ -464,16 +467,16 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 .footer-link {
-  @apply text-[14px] text-white mt-2 cursor-pointer font-[400];
+  @apply text-[14px] text-white mt-2 cursor-pointer font-bold;
 }
 
 /* Landing Page */
 .text-subheading {
-  @apply text-[14px] md:text-[16px] font-[700] uppercase;
+  @apply text-[14px] md:text-[16px] heading-main font-[800] uppercase;
 }
 
 .text-subheading-main {
-  @apply text-[24px] lg:text-[36px] font-[800];
+  @apply text-[24px] lg:text-[36px] font-[900] heading-main;
 }
 
 .contact {
