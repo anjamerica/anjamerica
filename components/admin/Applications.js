@@ -37,7 +37,7 @@ export default function Applications() {
           headers
         );
         setApplications(response?.data?.payload);
-        setTotalItems(response?.data?.totalCount);
+        setTotalItems(response?.data?.filterCount);
         setLoading(false);
       } catch (err) {
         setLoading(false);
