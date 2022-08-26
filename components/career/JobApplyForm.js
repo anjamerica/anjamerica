@@ -294,15 +294,25 @@ export default function JobApplyForm({ item, setFormModal }) {
           >
             <input
               type="file"
-              className="file-selector-button self-center w-full h-full z-10 pl-3 pt-1"
+              className="file-selector-button file self-center w-full h-full z-10 pl-3 pt-1"
               accept=".pdf"
               multiple={false}
               onChange={handleCvUpload}
               // onChange={(e)=>console.log(e.target.files[0])}
             />
             {!file && (
-              <span className="drop-zone-center self-center text-primary-gray cursor-pointer">
+              <span className="invisible md:visible drop-zone-center self-center text-primary-gray cursor-pointer">
                 Drop your CV here
+              </span>
+            )}
+            {!file && (
+              <span className="visible md:invisible absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 whitespace-nowrap item-center flex justify-center self-center text-primary-gray cursor-pointer">
+                Click here to attach your cv
+              </span>
+            )}
+            {file && (
+              <span className="text-primary-gray absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                {file.name}
               </span>
             )}
             {/* <Dropzone/> */}

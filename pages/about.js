@@ -19,9 +19,9 @@ export default function About() {
           <div className="w-full h-fit shadow-sm">
             <Header />
           </div>
-          <div className=" pt-10 lg:pb-20 h-[25vh] lg:h-[30vh]  w-full ">
+          <div className=" pt-10 lg:pb-20 h-[25vh] md:h-[40vh]  w-full ">
             <div className="text-center flex flex-col">
-              <span className="text-primary-blue text-[2rem] heading-main uppercase font-extrabold md:text-[34px] md:leading-[41px]">
+              <span className="text-primary-blue text-[2rem] md:mt-4 heading-main uppercase font-extrabold md:text-[34px] md:leading-[41px]">
                 About Us
               </span>
               <span className="text-[.8rem] px-5 w-[80%] sm:mt-4 sm:w-full font-normal leading-[1.8rem] tracking-wide text-[#222] self-center md:text-[18px]">
@@ -35,7 +35,7 @@ export default function About() {
         <section>
           <div className=" p-6 md:px-[7.5%] flex flex-col md:flex-row justify-around w-full">
             <div className="flex flex-col text-left mt-8 w-full md:w-[50%]">
-              <span className="text-[14px] font-semibold leading-[1px] text-[#333333] pb-2">
+              <span className="text-[14px] font-semibold leading-[1px] text-[#141414] pb-2">
                 OUR PHILOSOPHY
               </span>
               <span className="w-full text-[25px] md:text-[38px] heading-main text-[#04c0de] font-extrabold md:leading-[45px]">
@@ -73,18 +73,18 @@ export default function About() {
         </section>
       </section>
       <section>
-        <div className="py-10 flex items-center w-full flex-col gap-4 bg-white">
-          <div className="flex flex-col gap-4 pb-8">
+        <div className="py-10 mt-2 flex items-center w-full flex-col gap-4 md:mt-[90px] bg-white">
+          <div className="flex flex-col gap-4 pb-4">
             <div className="text-green-medium">
               BUSINESSES WE&apos;VE ALIGNED WITH
             </div>
           </div>
-          <div className="scrollbar-staffing px-10 md:px-20">
-            <div className="grid grid-cols-3 gap-[20px]  w-full md:gap-[46px] sm:grid-cols-4 xl:grid-cols-6">
+          <div className="scrollbar-staffing px-10 md:pb-20 md:px-20">
+            <div className="grid grid-cols-3 gap-[20px] space-y-[46px] items-center  w-full md:gap-[46px] sm:grid-cols-4 xl:grid-cols-6">
               <img
                 alt="logo icon"
                 src="/assets/business/transamerica.png"
-                className="logo-hover-staffing"
+                className="logo-hover-staffing mt-8"
               />
               <img
                 alt="logo icon"
