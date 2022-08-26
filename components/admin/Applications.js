@@ -37,7 +37,7 @@ export default function Applications() {
           headers
         );
         setApplications(response?.data?.payload);
-        setTotalItems(response?.data?.totalCount);
+        setTotalItems(response?.data?.filterCount);
         setLoading(false);
       } catch (err) {
         setLoading(false);
@@ -47,7 +47,7 @@ export default function Applications() {
     getApplication();
   }, [searchQuery, page, router.query]);
 
-  console.log(totalItems);
+  console.log(response?.data?.filterCount);
 
   const handleLogout = () => {
     setLoading(true);
