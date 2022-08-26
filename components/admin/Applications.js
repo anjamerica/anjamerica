@@ -183,7 +183,7 @@ export default function Applications() {
                 <th className="text-sm w-40  text-white md:text-md font-normal px-2 py-3  break-words">
                   Phone number
                 </th>
-                <th className="text-sm w-40 text-white md:text-md font-normal px-2 py-3  break-words">
+                <th className="text-sm w-44 text-white md:text-md font-normal px-2 py-3  break-words">
                   Email ID
                 </th>
                 <th className="text-sm w-44 text-white md:text-md font-normal px-2 py-3  break-words">

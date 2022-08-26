@@ -89,7 +89,7 @@ export default function Footer() {
               <span className="footer-link">Hire Right</span>
             </Link>
           </div>
-          <div className="flex flex-col px-5 md:px-0">
+          <div className="flex flex-col p-5 md:px-0">
             {/* <span className="text-white text-[24px] font-semibold">Social</span> */}
             <div className="flex flex-row gap-2 text-white mt-0 md:mt-11 mb-4">
               <a
