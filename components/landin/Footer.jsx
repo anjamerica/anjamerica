@@ -98,7 +98,7 @@ export default function Footer() {
                 rel="noreferrer"
               >
                 <span className="bg-primary-violet h-8 w-8 cursor-pointer rounded-full flex items-center justify-center">
-                  <FaFacebookF className="h-fit w-fit" />
+                  <FaFacebookF className="h-full  w-full p-2 " />
                 </span>
               </a>
               <a
@@ -107,7 +107,7 @@ export default function Footer() {
                 rel="noreferrer"
               >
                 <span className="bg-primary-violet h-8 w-8 cursor-pointer rounded-full flex items-center justify-center">
-                  <FaLinkedinIn className="h-fit w-fit" />
+                  <FaLinkedinIn className="h-full  w-full p-2 " />
                 </span>
               </a>
               <a
@@ -116,12 +116,12 @@ export default function Footer() {
                 rel="noreferrer"
               >
                 <span className="bg-primary-violet h-8 w-8 cursor-pointer rounded-full flex items-center justify-center">
-                  <FaInstagram className="h-fit w-fit" />
+                  <FaInstagram className="h-full  w-full p-2 " />
                 </span>
               </a>
               <Link href="/#contact">
                 <span className="bg-primary-violet h-8 w-8 cursor-pointer rounded-full flex items-center justify-center">
-                  <BsEnvelopeFill className="h-fit w-fit" />
+                  <BsEnvelopeFill className="h-full  w-full p-2 " />
                 </span>
               </Link>
             </div>
