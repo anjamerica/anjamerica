@@ -52,7 +52,6 @@ export const FilterComponent = ({ setFilter }) => {
             <DatePicker
               value={fromDate}
               setValue={setFromDate}
-              textColor="#214ED1"
             />
           </div>
         </div>
@@ -71,7 +70,6 @@ export const FilterComponent = ({ setFilter }) => {
             <DatePicker
               value={toDate}
               setValue={setToDate}
-              textColor="#949495"
             />
           </div>
         </div>

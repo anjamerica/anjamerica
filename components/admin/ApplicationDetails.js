@@ -49,7 +49,7 @@ export default function ApplicationDetails({ item, filter }) {
           className={`${
             item?.job_details?.is_active === true
               ? "bg-[#F2F1F1] sticky right-0  w-28 text-sm  lg:bg-[#F9F9F9]   text-[#214ED1] text-center font-normal px-2 py-3  break-words cursor-pointer"
-              : "bg-[#D0CFCF] md:bg-[#D0CFCF]   sticky right-0  w-28 text-sm  text-[#214ED1] text-center font-normal px-2 py-3  break-words cursor-pointer"
+              : "bg-[#D0CFCF] md:bg-[#E7E7E7]   sticky right-0  w-28 text-sm  text-[#214ED1] text-center font-normal px-2 py-3  break-words cursor-pointer"
           }`}
           style={filter ? { display: "flex",width:"112px",justifyContent:"center",zIndex:"-10" } : { position: "sticky" }}
         >
