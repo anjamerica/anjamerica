@@ -66,7 +66,7 @@ export default function Footer() {
             all the answers you need.
           </span>
         </div>
-        <div className="flex gap-4 md:gap-10 md:w-[40vw] justify-between flex-col sm:mt-[45px] lg:flex-row">
+        <div className="flex gap-4 md:gap-10 md:w-[45vw] justify-between flex-col sm:mt-[45px] lg:flex-row">
           <div className="flex flex-col px-5 md:px-0 mt-4 md:mt-0">
             <span className="text-white text-[24px] font-semibold">
               Company
