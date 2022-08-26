@@ -25,7 +25,7 @@ export default function Digitize() {
             className="w-[70vw] md:max-w-[600px]  object-contain self-center"
           />
         </div>
-        <span className="self-center text-base flex flex-row gap-2 mt-0 md:mt-8">
+        <span className="self-center text-base flex flex-row gap-2 mt-0 ">
           Learn about
           <Link href="\digitize#feature">
             <span className="text-[#7540ee] cursor-pointer">
