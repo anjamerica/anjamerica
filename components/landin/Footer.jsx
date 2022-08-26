@@ -89,9 +89,9 @@ export default function Footer() {
               <span className="footer-link">Hire Right</span>
             </Link>
           </div>
-          <div className="flex flex-col p-5 md:px-0">
+          <div className="flex flex-col px-5 md:px-0">
             {/* <span className="text-white text-[24px] font-semibold">Social</span> */}
-            <div className="flex flex-row gap-2 text-white mt-0 md:mt-11 mb-4">
+            <div className="flex flex-row gap-2 text-white mt-0 md:mt-11 sm:mb-4">
               <a
                 href="https://www.facebook.com/anjamericadotcom/about/"
                 target="_blank"
@@ -128,7 +128,7 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      <div className="flex justify-center items-center h-[4rem] lg:h-[5.5rem] mt-5 border-t-[1px] border-[#222230]">
+      <div className="flex justify-center items-center h-[4rem] lg:h-[5.5rem] sm:mt-5 border-t-[1px] border-[#222230]">
         <span className="text-xs md:text-[1rem] font-[400] text-white self-center">
           &copy;2021 Anj America - All Rights Reserved
         </span>
