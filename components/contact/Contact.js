@@ -89,17 +89,24 @@ export default function Contact() {
               <span className="text-[12px] heading-main font-[900] text-[#141414]">
                 LOCATE US
               </span>
-              <span className="font-thin text-sm text-[#141414]">
+              <span className="font-thin text-[16px] text-[#141414]">
                 119 S. Main Street, Suite 500,
+                <br /> Memphis, TN 38103,USA
+              </span>
+              <span className="font-thin text-[16px] text-[#141414]">
+                Devonshire House, 582 Honeypot Lane Stanmore
                 <br />
-                Memphis, TN 38103,USA
+                United Kingdom
+              </span>
+              <span className="font-thin text-[16px] text-[#141414]" z>
+                10 Billiter Road, L7A4G8, Brampton, Canada
               </span>
             </div>
             <div className="flex flex-col gap-2">
               <span className="text-[12px] heading-main font-[900] text-[#141414]">
                 CALL US
               </span>
-              <span className="font-thin text-sm text-[#141414]">
+              <span className="font-thin text-[16px] text-[#141414]">
                 9016005572
               </span>
             </div>
@@ -107,7 +114,7 @@ export default function Contact() {
               <span className="text-[12px] heading-main font-[900] text-[#141414]">
                 EMAIL US
               </span>
-              <span className="font-thin text-sm text-[#141414]">
+              <span className="font-thin text-[16px] text-[#141414]">
                 contact@anjamerica.com
               </span>
             </div>

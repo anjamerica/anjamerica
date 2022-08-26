@@ -35,7 +35,7 @@ export default function About() {
         <section>
           <div className=" p-6 md:px-[7.5%] flex flex-col md:flex-row justify-around w-full">
             <div className="flex flex-col text-left mt-8 w-full md:w-[50%]">
-              <span className="text-[14px] font-semibold leading-[1px] text-[#141414] pb-2">
+              <span className="text-[14px] font-semibold leading-[1px] mb-[8px] text-[#141414] pb-2">
                 OUR PHILOSOPHY
               </span>
               <span className="w-full text-[25px] md:text-[38px] heading-main text-[#04c0de] font-extrabold md:leading-[45px]">
