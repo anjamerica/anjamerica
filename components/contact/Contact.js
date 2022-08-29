@@ -194,7 +194,7 @@ export default function Contact() {
               <ReCAPTCHA
                 size="normal"
                 class="g-recaptcha"
-                sitekey="6Ldiw20hAAAAAOjNOr_kmwFlaSa1j3STi8jzRGBp"
+                sitekey="6Lf_GLchAAAAADi1FwEaV9VEB-s7b9Chb8bJ2pW5"
                 onChange={onCaptchaChange}
                 style={{}}
               />
