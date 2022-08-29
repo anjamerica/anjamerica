@@ -85,7 +85,7 @@ export default function Contact() {
             <span className="text-[1.5rem] text-left heading-main break-words text-black font-bold md:text-[2rem]">
               Get in touch with us
             </span>
-            <div className="flex flex-col gap-2">
+            <div className="flex flex-col mt-2 sm:mt-2 gap-2">
               <span className="text-[12px] heading-main font-[900] text-[#141414]">
                 LOCATE US
               </span>
@@ -93,16 +93,18 @@ export default function Contact() {
                 119 S. Main Street, Suite 500,
                 <br /> Memphis, TN 38103,USA
               </span>
+              <div className="bg-[#7de3f3] sm:w-[90%] h-[1px] my-[10px]"/>
               <span className="font-thin text-[16px] text-[#141414]">
                 Devonshire House, 582 Honeypot Lane Stanmore
                 <br />
                 United Kingdom
               </span>
+              <div className="bg-[#7de3f3] sm:w-[90%] h-[1px] my-[10px]"/>
               <span className="font-thin text-[16px] text-[#141414]" z>
                 10 Billiter Road, L7A4G8, Brampton, Canada
               </span>
             </div>
-            <div className="flex flex-col gap-2">
+            <div className="flex flex-col mt-2 sm:mt-2 gap-2">
               <span className="text-[12px] heading-main font-[900] text-[#141414]">
                 CALL US
               </span>
@@ -110,7 +112,7 @@ export default function Contact() {
                 9016005572
               </span>
             </div>
-            <div className="flex flex-col gap-2">
+            <div className="flex flex-col mt-2 sm:mt-2 gap-2">
               <span className="text-[12px] heading-main font-[900] text-[#141414]">
                 EMAIL US
               </span>
