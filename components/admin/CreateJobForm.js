@@ -885,7 +885,7 @@ export default function CreateJobForm() {
                       })}
                   </select>
 
-                  <div className="absolute top-[1rem] left-[1.6rem] md:left-[1.6rem] xl:left-[1.7rem]">
+                  <div className="absolute top-[1rem] left-[33px] sm:left-[29px]">
                     <img
                       src="/admin/dropdown.svg"
                       alt="drop down img"
