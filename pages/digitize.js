@@ -8,7 +8,9 @@ import Footer from "../components/landin/Footer";
 export default function Digitize() {
   return (
     <main className="mx-auto w-full h-full snap-y">
-      <Header />
+      <div className="w-full h-fit bg-white shadow-sm sticky top-0 left-0 z-50">
+        <Header />
+      </div>
       <section className="relative p-5 md:p-10 flex justify-center flex-col">
         <p className="text-anim-blog  w-full heading-main text-[1.5rem] font-extrabold md:text-[2.5rem]  leading-[33px]  md:leading-[45px]  text-[#0a1f44] text-center mt-4 sm:mt-10">
           We Provide Software Solution
@@ -25,7 +27,7 @@ export default function Digitize() {
             className="w-[70vw] md:max-w-[600px]  object-contain self-center"
           />
         </div>
-        <span className="self-center text-base flex flex-row gap-2 mt-0 ">
+        <span className="self-center text-base 2xl:text-[20px] flex flex-row gap-2 mt-0 ">
           Learn about
           <Link href="\digitize#feature">
             <span className="text-[#7540ee] cursor-pointer">
@@ -38,10 +40,10 @@ export default function Digitize() {
       <section id="feature">
         <div className="bg-[#f7f9ff] w-full h-full p-5 md:p-10 flex gap-10 flex-col lg:flex-row">
           <div className="flex flex-col lg:w-[50%]">
-            <p className="text-[15px] text-[#141414] font-bold ml-5">
+            <p className="text-[15px] text-[#141414] 2xl:text-[20px] font-bold ml-5">
               OUR FEATURES
             </p>
-            <p className="text-[1.5rem] md:text-[32px] heading-main ml-5 font-[900] mt-1 text-[#04c0de]">
+            <p className="text-[1.5rem] md:text-[32px] 2xl:text-[38px] heading-main ml-5 font-[900] mt-1 text-[#04c0de]">
               Helping you grow at every Step
             </p>
             <p className="text-normal-digitze w-full max-w-[562px] ml-5 mt-4 text-left">
@@ -158,9 +160,7 @@ export default function Digitize() {
                 </div>
               </div>
               <div className="flex flex-col gap-4">
-                <div className="text-digitize-heading">
-                  IT Consulting
-                </div>
+                <div className="text-digitize-heading">IT Consulting</div>
                 <div className="text-normal-digitze md:max-w-[83%] break-words text-left">
                   We can help you develop and execute a clear and strategic IT
                   roadmap with priorities that are closely linked to business

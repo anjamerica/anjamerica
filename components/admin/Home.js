@@ -59,9 +59,9 @@ export default function Home() {
   };
 
   return (
-    <div className="mx-auto w-full h-full snap-y mb-10">
-      <div>
-        <div className="w-full flex h-[74px] justify-between px-5 bg-white box-shadow   md:px-10 md:py-4 md:items-center md:h-[10vh]">
+    <div className="relative mx-auto w-full h-full snap-y mb-10">
+      <div className="sticky top-0 left-0 z-10">
+        <div className=" w-full flex h-[74px] justify-between px-5 bg-white box-shadow   md:px-10 md:py-4 md:items-center md:h-[10vh]">
           <Link href="/home">
             <img
               alt="logo image"
@@ -117,7 +117,7 @@ export default function Home() {
       </div>
       <div className="flex flex-col-reverse justify-between p-5 md:px-10 md:flex-row">
         <div
-          className="mt-4 ml-1 md:ml-0 md:invisible lg:visible text-[20px] md:text-[24px] lg:self-center
+          className="mt-4 ml-1 md:ml-0 md:invisible lg:visible text-[20px] md:text-[24px] 2xl:text-[30px] lg:self-center
          font-semibold md:mt-0"
         >
           Job Posts

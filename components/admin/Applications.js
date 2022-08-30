@@ -57,7 +57,7 @@ export default function Applications() {
 
   return (
     <div className="mx-auto w-full h-full snap-y">
-      <div className="w-full flex h-[74px] justify-between px-5 bg-white box-shadow  md:px-10 md:py-4 md:items-center md:h-[10vh]">
+      <div className="sticky top-0 left-0 z-50 w-full flex h-[74px] justify-between px-5 bg-white box-shadow  md:px-10 md:py-4 md:items-center md:h-[10vh]">
         <Link href="/home">
           <img
             alt="logo image"
@@ -173,22 +173,22 @@ export default function Applications() {
           <table className="table-fixed w-[60rem] md:w-full border-separate border-spacing-y-1">
             <thead className="overflow-x-auto">
               <tr className="bg-[#214ED1] text-left">
-                <th className="text-sm  w-20 text-white md:text-md font-normal px-5 md:px-3 py-3  break-words">
+                <th className="text-sm 2xl:text-[18px]  w-20 text-white md:text-md font-normal px-5 md:px-3 py-3  break-words">
                   ID
                 </th>
-                <th className="text-sm   w-40 text-white md:text-md font-normal  px-2 py-3 break-words">
+                <th className="text-sm 2xl:text-[18px]  w-40 text-white md:text-md font-normal  px-2 py-3 break-words">
                   Name
                 </th>
-                <th className="text-sm w-40  text-white md:text-md font-normal px-2 py-3  break-words">
+                <th className="text-sm 2xl:text-[18px]  w-40  text-white md:text-md font-normal px-2 py-3  break-words">
                   Phone number
                 </th>
-                <th className="text-sm w-44 text-white md:text-md font-normal px-2 py-3  break-words">
+                <th className="text-sm 2xl:text-[18px]  w-44 text-white md:text-md font-normal px-2 py-3  break-words">
                   Email ID
                 </th>
-                <th className="text-sm w-44 text-white md:text-md font-normal px-2 py-3  break-words">
+                <th className="text-sm 2xl:text-[18px]  w-44 text-white md:text-md font-normal px-2 py-3  break-words">
                   Application date
                 </th>
-                <th className="text-sm w-44 text-white md:text-md font-normal px-2 py-3  break-words">
+                <th className="text-sm 2xl:text-[18px]  w-44 text-white md:text-md font-normal px-2 py-3  break-words">
                   Post
                 </th>
                 <th

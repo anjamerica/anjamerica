@@ -61,14 +61,14 @@ export default function Footer() {
               className="h-fit w-[13rem] xl:h-fit md:w-[192px] -ml-3 -mb-6 md:h-fit object-contain p-5 md:p-0"
             />
           </Link>
-          <span className="flex flex-col w-[22rem] items-left font-[400] text-white text-[14px] lg:text-[18px]  break-words text-left px-5 md:w-[24rem] md:px-0">
+          <span className="flex flex-col w-[22rem] items-left font-[400] text-white text-[14px] lg:text-[18px] 2xl:text-[24px] break-words text-left px-5 md:w-[24rem] md:px-0">
             Have questions about how we work and what you get? We&apos;ve got
             all the answers you need.
           </span>
         </div>
         <div className="flex gap-4 md:gap-10 md:w-[45vw] justify-between flex-col sm:mt-[45px] lg:flex-row">
           <div className="flex flex-col px-5 md:px-0 mt-4 md:mt-0">
-            <span className="text-white text-[24px] font-semibold">
+            <span className="text-white text-[24px] 2xl:text-[30px] font-semibold">
               Company
             </span>
             {/* <Link href="/about"> */}
@@ -78,7 +78,7 @@ export default function Footer() {
           </div>
           <div className="flex flex-col px-5 md:px-0">
             <Link href="/#services" passHref>
-              <span className="text-white text-[24px] font-semibold">
+              <span className="text-white text-[24px] 2xl:text-[30px] font-semibold">
                 Services
               </span>
             </Link>
@@ -97,7 +97,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noreferrer"
               >
-                <span className="bg-primary-violet h-8 w-8 cursor-pointer rounded-full flex items-center justify-center">
+                <span className="bg-primary-violet h-8 w-8 hover:bg-violet-900 cursor-pointer rounded-full flex items-center justify-center">
                   <FaFacebookF className="h-full  w-full p-2 " />
                 </span>
               </a>
@@ -106,7 +106,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noreferrer"
               >
-                <span className="bg-primary-violet h-8 w-8 cursor-pointer rounded-full flex items-center justify-center">
+                <span className="bg-primary-violet h-8 w-8 hover:bg-violet-900 cursor-pointer rounded-full flex items-center justify-center">
                   <FaLinkedinIn className="h-full  w-full p-2 " />
                 </span>
               </a>
@@ -115,12 +115,12 @@ export default function Footer() {
                 target="_blank"
                 rel="noreferrer"
               >
-                <span className="bg-primary-violet h-8 w-8 cursor-pointer rounded-full flex items-center justify-center">
+                <span className="bg-primary-violet h-8 w-8 hover:bg-violet-900 cursor-pointer rounded-full flex items-center justify-center">
                   <FaInstagram className="h-full  w-full p-2 " />
                 </span>
               </a>
               <Link href="/#contact">
-                <span className="bg-primary-violet h-8 w-8 cursor-pointer rounded-full flex items-center justify-center">
+                <span className="bg-primary-violet h-8 w-8 hover:bg-violet-900 cursor-pointer rounded-full flex items-center justify-center">
                   <BsEnvelopeFill className="h-full  w-full p-2 " />
                 </span>
               </Link>
