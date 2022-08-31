@@ -76,7 +76,7 @@ export default function LandingScreen() {
               </div>
               <div className="mt-5 xl:mt-10">
                 <Link href="/#products">
-                  <button className="w-fit shw sm:w-[143px] sm:h-[43px] z-10 font-semibold text-[14px] md:text-base  uppercase text-white bg-primary-blue px-6 py-[.6rem] sm:p-0  tracking-wide rounded-full hover:bg-blue-800 cursor-pointer transition-all text-center flex items-center justify-center">
+                  <button className="w-fit shw sm:w-[143px] sm:h-[43px] z-10 font-semibold text-[14px] md:text-base  uppercase text-white bg-primary-blue px-6 py-[.6rem] sm:p-0  tracking-wide rounded-full hover:bg-blue-800 cursor-pointer transition-all text-center flex items-center justify-center" data-aos="zoom-in">
                     KNOW MORE
                   </button>
                 </Link>
@@ -95,7 +95,7 @@ export default function LandingScreen() {
         </div>
       </section>
       <hr className="h-[5px] bg-primary-blue" />
-      <section id="services">
+      <section id="services" >
         <div className="bg-white flex flex-col h-fit justify-center py-10 select-none">
           <div className="flex flex-col gap-1 self-center justify-center">
             <span className="text-subheading leading-[3%] text-primary-blue self-center">
@@ -157,7 +157,7 @@ export default function LandingScreen() {
                             {item.description}
                           </p>
                           <Link href={item.link}>
-                            <button className="w-fit shw font-semibold mx-5 text-xs md:text-md  uppercase text-white bg-primary-blue px-4 py-2 sm:px-6 sm:py-3  tracking-wide rounded-full  hover:bg-blue-800 cursor-pointer transition-all text-center flex items-center justify-center">
+                            <button data-aos="zoom-in" className="w-fit shw font-semibold mx-5 text-xs md:text-md  uppercase text-white bg-primary-blue px-4 py-2 sm:px-6 sm:py-3  tracking-wide rounded-full  hover:bg-blue-800 cursor-pointer transition-all text-center flex items-center justify-center">
                               READ MORE
                             </button>
                           </Link>
