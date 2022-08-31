@@ -39,6 +39,9 @@ export default function Index() {
 
   return (
     <main className="mx-auto w-full h-full snap-y">
+      <div className="w-full h-fit bg-white shadow-sm sticky top-0 left-0 z-50">
+        <Header />
+      </div>
       <Loader />
       <section className="relative">
         <div
@@ -48,21 +51,18 @@ export default function Index() {
             backgroundSize: "100%",
             backgroundRepeat: "no-repeat",
           }}
-          className="w-full lg:h-fit h-full bg-image-mobile sm:bg-image-web-career"
+          className="w-full lg:h-[15rem] h-full bg-image-mobile sm:bg-image-web-career"
         >
-          <div className="w-full h-fit shadow-sm">
-            <Header />
-          </div>
           <div className=" h-fit pt-10 pb-10  w-full">
             <div className="flex h-full flex-col gap-2 justify-center self-center items-center md:gap-4">
               <div className="text-[1.5rem] break-words text-primary-blue text-center font-bold md:text-[2.5rem] tracking-wide">
                 {item?.job_title}
               </div>
-              <div className="flex items-center justify-center md:h-fit">
-                <p className="hidden md:flex md:text-base md:text-[#333333] md:text-center  md:w-[80vw] md:pb-5">
+              {/* <div className="flex items-center justify-center md:h-fit">
+                <p className="hidden md:flex md:text-base 2xl:text-[20px]  md:text-[#333333] md:text-center  md:w-[80vw] md:pb-5">
                   {item?.description}
                 </p>
-              </div>
+              </div> */}
               <div className="flex items-center justify-center">
                 <div className="flex flex-row gap-2">
                   <span className="self-center">
@@ -97,11 +97,11 @@ export default function Index() {
       <hr className="h-[5px] bg-primary-blue" />
       <section className="">
         <div className="md:p-10 relative">
-          <p className="p-5 text-md text-primary-black break-words text-left w-full md:p-0">
+          <p className="p-5 text-md 2xl:text-[20px] text-primary-black break-words  text-left w-full md:p-0">
             {item?.description}
           </p>
           <div className="px-5 md:p-0 mt-5 md:mt-10">
-            <p className="text-base font-semibold mb-4 md:font-semibold text-primary-black text-left w-full">
+            <p className="text-base 2xl:text-[20px] font-semibold mb-4 md:font-semibold text-primary-black text-left w-full">
               Qualifications
             </p>
             {item &&
@@ -125,13 +125,15 @@ export default function Index() {
                         />
                       </svg>
                     </div>
-                    <p className="text-[#444348] text-md self-center">{item}</p>
+                    <p className="text-[#444348] text-md 2xl:text-[20px]  self-center">
+                      {item}
+                    </p>
                   </div>
                 );
               })}
           </div>
           <div className="px-5 md:p-0 mt-5 md:mt-10">
-            <p className="text-base font-semibold mb-4 md:font-semibold text-primary-black text-left w-full">
+            <p className="text-base  font-semibold mb-4 md:font-semibold 2xl:text-[20px] text-primary-black text-left w-full">
               Key Responsibilities
             </p>
             {item &&
@@ -155,13 +157,15 @@ export default function Index() {
                         />
                       </svg>
                     </div>
-                    <p className="text-[#444348] text-md self-center">{item}</p>
+                    <p className="text-[#444348] text-md  2xl:text-[20px] self-center">
+                      {item}
+                    </p>
                   </div>
                 );
               })}
           </div>
           <div className="px-5 md:p-0 mt-5 md:mt-10">
-            <p className="text-base font-semibold mb-4 md:font-semibold text-primary-black text-left w-full">
+            <p className="text-base 2xl:text-[20px] font-semibold mb-4 md:font-semibold text-primary-black text-left w-full">
               License and Certifications
             </p>
             {item &&
@@ -185,13 +189,15 @@ export default function Index() {
                         />
                       </svg>
                     </div>
-                    <p className="text-[#444348] text-md self-center">{item}</p>
+                    <p className="text-[#444348] text-md 2xl:text-[20px] self-center">
+                      {item}
+                    </p>
                   </div>
                 );
               })}
           </div>
           <div className="px-5 md:p-0 mt-5 md:mt-10">
-            <p className="text-base font-semibold mb-4 md:font-semibold text-primary-black text-left w-full">
+            <p className="text-base 2xl:text-[20px] font-semibold mb-4 md:font-semibold text-primary-black text-left w-full">
               Job Type
             </p>
             <div className="gap-3 flex flex-1 items-center">
@@ -212,13 +218,13 @@ export default function Index() {
                   />
                 </svg>
               </div>
-              <p className="text-[#444348] text-md self-center">
+              <p className="text-[#444348] text-md 2xl:text-[20px] self-center">
                 {item?.job_type}
               </p>
             </div>
           </div>
           <div className="p-5 md:p-0 mt-5 md:mt-10">
-            <p className="text-md mb-4 md:font-semibold text-primary-black text-left w-full">
+            <p className="text-md 2xl:text-[20px] mb-4 md:font-semibold text-primary-black text-left w-full">
               Training
             </p>
 
@@ -241,7 +247,7 @@ export default function Index() {
                     />
                   </svg>
                 </div>
-                <p className="text-[#444348] text-md self-center">
+                <p className="text-[#444348] text-md 2xl:text-[20px] self-center">
                   Training Duration: {"  "}{" "}
                   {item?.training_details?.training_duration}
                 </p>
@@ -264,7 +270,7 @@ export default function Index() {
                     />
                   </svg>
                 </div>
-                <p className="text-[#444348] text-md self-center">
+                <p className="text-[#444348] text-md 2xl:text-[20px] self-center">
                   Training Duration: {"  "}{" "}
                   {item?.training_details?.training_fee?.training_fee}{" "}
                   {item?.training_details?.training_fee?.currency}
@@ -288,7 +294,7 @@ export default function Index() {
                     />
                   </svg>
                 </div>
-                <p className="text-[#444348] text-md self-center">
+                <p className="text-[#444348] text-md 2xl:text-[20px] self-center">
                   Training Duration: {"  "}{" "}
                   {item?.training_details?.training_type}
                 </p>
@@ -298,7 +304,7 @@ export default function Index() {
           <button
             className={
               !modal
-                ? "sticky bottom-4 mb-4 right-4 float-right w-fit font-medium text-white bg-primary-blue px-4 py-2  uppercase  rounded-full hover:bg-blue-800 transition-all text-center items-center gap-2 flex flex-row justify-between"
+                ? "button-wiggle sticky bottom-4 mb-4 right-4 float-right w-fit font-medium text-white bg-primary-blue px-4 py-2  uppercase  rounded-full hover:bg-blue-800 transition-all text-center items-center gap-2 flex flex-row justify-between"
                 : "sticky bottom-4 mb-4 float-right right-4 w-fit font-medium text-white bg-red-600 px-4 py-2  uppercase  rounded-full hover:bg-red-400 transition-all text-center items-center gap-2 flex flex-row justify-between"
             }
             onClick={() => setModal(!modal)}
@@ -308,7 +314,7 @@ export default function Index() {
               <AiOutlineDoubleRight
                 className={
                   !modal
-                    ? "w-7 h-7 rounded-full bg-white text-primary-blue p-1"
+                    ? "button-wiggle w-7 h-7 rounded-full bg-white text-primary-blue p-1"
                     : "w-7 h-7 rounded-full bg-white text-red-600 p-1"
                 }
               />
@@ -316,7 +322,7 @@ export default function Index() {
           </button>
 
           {modal && (
-            <div className="w-fit md:absolute md:left-[45%] md:top-[3rem]">
+            <div className="w-fit md:absolute md:left-[45%] md:top-[3rem] z-50">
               <JobApplyForm item={item} setFormModal={setModal} />
             </div>
           )}

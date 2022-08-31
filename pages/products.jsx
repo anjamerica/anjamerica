@@ -2,6 +2,7 @@ import { data } from "autoprefixer";
 import React, { useEffect, useState } from "react";
 import { IoMdCheckmarkCircleOutline } from "react-icons/io";
 import { BsChevronCompactLeft, BsChevronCompactRight } from "react-icons/bs";
+import ProductCard from "../components/products/ProductCard";
 
 let count = 0;
 
@@ -56,7 +57,7 @@ export default function Products() {
   useEffect(() => {
     setInterval(function () {
       handleOnNextClick();
-    }, 6000);
+    }, 10000);
   }, []);
 
   return (
@@ -65,71 +66,16 @@ export default function Products() {
         <p className="text-subheading-main heading-main text-primary-black self-center">
           Our Products
         </p>
-        <div className="grid grid-flow-row w-full px-0 md:py-10 sm:px-[50px] lg:px-[80px] xl:px-[150px]">
-          {/* {data.map((item, index) => {
-            return ( */}
-          <div
-            className="flex flex-col w-full lg:flex-row-reverse gap-0 md:gap-10"
-            setCurrentIndex={currentIndex}
-          >
-            <img
-              alt="product image"
-              src={data[currentIndex].img}
-              className="w-[20rem] h-[20rem]  md:w-[25rem] md:h-[25rem] mt-0 flex self-center lg:self-start  md:mt-0"
-            />
-            <div>
-              <p className="text-primary-blue  heading-main  md:w-full py-4 text-left font-bold break-words mx-[2.5rem] md:mx-0 text-base text-[24px]">
-                {data[currentIndex].product}
-              </p>
-              <p className="flex flex-col items-start text-[#535353] heading-main font-semibold text-[16px] sm:text-[24px] break-words mt-2 text-left mx-[2.5rem] md:mx-0 ">
-                {data[currentIndex].description}
-              </p>
-              <div className="mt-4 mx-[2.5rem] md:mx-0 self-left">
-                <svg
-                  width="108"
-                  height="3"
-                  viewBox="0 0 108 3"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path d="M107.5 0L0 2L107.5 3V0Z" fill="#07038C" />
-                </svg>
-              </div>
-              <div className="flex flex-col items-left gap-2 break-words mt-8 mx-[2.5rem] md:mx-0">
-                {data[currentIndex].features.map((feature, i) => {
-                  return (
-                    <div className="flex flex-row gap-2" key={i}>
-                      <span>
-                        <IoMdCheckmarkCircleOutline className="h-5 w-5 text-primary-blue md:h-7 md:w-7" />
-                      </span>
-                      <span className="text-[#222] text-[16px] text-left">
-                        {feature}
-                      </span>
-                    </div>
-                  );
-                })}
-              </div>
-              <div className="h-center absolute bottom-[2.5rem] md:bottom-[3.5rem] flex flex-row gap-2">
-                {data.map((item, i) => {
-                  return (
-                    <div
-                      key={i}
-                      className={`rounded-full h-3 w-3 md:w-5 md:h-5 ${
-                        i == currentIndex
-                          ? "bg-primary-blue"
-                          : "bg-primary-blue opacity-[31%]"
-                      }`}
-                    ></div>
-                  );
-                })}
-              </div>
-            </div>
-          </div>
+        <div
+          className="grid grid-flow-row w-full px-0 md:py-10 sm:px-[50px] lg:px-[80px] xl:px-[150px]"
+          
+        >
+          <ProductCard data={data} currentIndex={currentIndex} />
         </div>
         <img
           alt="prev arrow"
           src="/landing/prev-arrow.svg"
-          className="hidden md:flex md:h-10 md:absolute md:top-[20rem] md:left-[17px] lg:h-10 lg:left-[17px] xl:left-[24px] sm:w-7  xl:w-fit  text-primary-gray cursor-pointer"
+          className="hidden md:flex  md:h-10 md:absolute md:top-[20rem] md:left-[17px] lg:h-10 lg:left-[17px] xl:left-[24px] sm:w-7  xl:w-fit  text-primary-gray cursor-pointer"
           onClick={() => handleOnPrevClick()}
         />
         <img

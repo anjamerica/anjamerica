@@ -17,8 +17,8 @@ export default function Header() {
     <div
       className={`${
         router.pathname ===  ("/blogs" || "/about" || "/digitize" || "/staffing")
-          ? "relative w-full flex bg-white justify-between items-center h-[80px] shadow-sm px-4  md:px-[2%] md:py-4 md:items-center md:h-[80px]"
-          : "relative w-full  flex justify-between items-center h-[80px] shadow-sm px-4  md:px-[2%] md:py-4 md:items-center md:h-[80px]"
+          ? "relative w-full flex bg-white justify-between items-center h-[80px]  px-4  md:px-[2%] md:py-4 md:items-center md:h-[80px] sh"
+          : "relative w-full  flex justify-between items-center h-[80px]  px-4  md:px-[2%] md:py-4 md:items-center md:h-[80px] sh"
       }`}
 
     >
@@ -34,7 +34,7 @@ export default function Header() {
       <div className="hidden lg:flex justify-around gap-1 xl:gap-3 items-center md:mx-4 mr-7">
         <Link href="/about">
           <span
-            className={`cursor-pointer text-center md:text-base mx-2 md:mx-4 font-semibold hover:text-primary-blue ${
+            className={`cursor-pointer text-center md:text-base 2xl:text-[20px] mx-2 md:mx-4 font-semibold hover:text-primary-blue ${
               active == "/about" ? "text-[#07038C]" : "text-[#08081E]"
             }`}
           >
@@ -56,7 +56,7 @@ export default function Header() {
         </Link>
         <Link href="/digitize">
           <span
-            className={`cursor-pointer text-center md:text-base mx-2 md:mx-4 font-semibold hover:text-primary-blue ${
+            className={`cursor-pointer text-center md:text-base 2xl:text-[20px] mx-2 md:mx-4 font-semibold hover:text-primary-blue ${
               active == "/digitize" ? "text-[#07038C]" : "text-[#08081E]"
             }`}
             n
@@ -79,7 +79,7 @@ export default function Header() {
         </Link>
         <Link href="/staffing">
           <span
-            className={`cursor-pointer text-center md:text-base mx-2 md:mx-4 font-semibold hover:text-primary-blue ${
+            className={`cursor-pointer text-center md:text-base 2xl:text-[20px] mx-2 md:mx-4 font-semibold hover:text-primary-blue ${
               active == "/staffing" ? "text-[#07038C]" : "text-[#08081E]"
             }`}
           >
@@ -101,7 +101,7 @@ export default function Header() {
         </Link>
         <Link href="/career">
           <span
-            className={`cursor-pointer text-center md:text-base mx-2 md:mx-4 font-semibold hover:text-primary-blue ${
+            className={`cursor-pointer text-center md:text-base 2xl:text-[20px] mx-2 md:mx-4 font-semibold hover:text-primary-blue ${
               active == "/career" ? "text-[#07038C]" : "text-[#08081E]"
             }`}
           >
@@ -123,7 +123,7 @@ export default function Header() {
         </Link>
         <Link href="/#products">
           <span
-            className={`cursor-pointer text-center md:text-base mx-2 md:mx-4 font-semibold hover:text-primary-blue ${
+            className={`cursor-pointer text-center md:text-base 2xl:text-[20px] mx-2 md:mx-4 font-semibold hover:text-primary-blue ${
               active == "/#products" ? "text-[#07038C]" : "text-[#08081E]"
             }`}
           >
@@ -145,7 +145,7 @@ export default function Header() {
         </Link>
         <Link href="/blogs">
           <span
-            className={`cursor-pointer text-center md:text-base mx-2 md:mx-4 font-semibold hover:text-primary-blue ${
+            className={`cursor-pointer text-center md:text-base 2xl:text-[20px] mx-2 md:mx-4 font-semibold hover:text-primary-blue ${
               active == "/blogs" ? "text-[#07038C]" : "text-[#08081E]"
             }`}
           >
@@ -167,7 +167,7 @@ export default function Header() {
         </Link>
         <Link href="/#contact">
           <span
-            className={`cursor-pointer text-center md:text-base mx-2 md:mx-4 font-semibold hover:text-primary-blue ${
+            className={`cursor-pointer text-center md:text-base 2xl:text-[20px] mx-2 md:mx-4 font-semibold hover:text-primary-blue ${
               active == "/#contact" ? "text-[#07038C]" : "text-[#08081E]"
             }`}
           >

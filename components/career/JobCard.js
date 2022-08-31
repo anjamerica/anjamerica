@@ -72,65 +72,65 @@ export default function JobCard({ item, getDetails }) {
   // };
 
   return (
-    <div className="relative h-fit md:h-[16rem] flex flex-row border-[1px]  border-[#E9E9E9] rounded-lg w-full">
+    <div className="relative h-fit md:h-[16rem] 2xl:h-[17rem] flex flex-row border-[1px]  border-[#E9E9E9] rounded-lg w-full">
       <div
         className=" gap-2 flex flex-col p-4 md:gap-4"
         style={{ width: "inherit" }}
       >
         <div className="flex flex-row  -mb-2 justify-between w-full h-fit items-start">
-          <span className="text-[1rem] self-start md:text-base font-semibold">
+          <span className="text-[16px] self-start md:text-base 2xl:text-[20px] font-semibold">
             {item?.job_title}
           </span>
 
           <span className="flex flex-row self-start h-fit w-fit items-center gap-2 md:gap-4">
-            <span className="text-[1rem] md:text-base font-semibold">
+            <span className="text-[16px] md:text-base 2xl:text-[20px] font-semibold">
               {item?.job_id}
             </span>
           </span>
         </div>
 
         <div>
-          <span className="text-[#949191] text-[1rem]">
+          <span className="text-[#949191] text-[16px] 2xl:text-[20px]">
             Training : {item?.training_details?.training_type}
           </span>
         </div>
         <div className="flex flex-col md:flex-row bg-[#EFEFEF] px-4 py-2 rounded-md justify-between">
           <div className="flex flex-col md:flex-row justify-start md:gap-4 md:w-[90%]">
-            <span className="text-xs  md:text-[14px] text-[#949191] md:font-[400]">
+            <span className="text-xs  md:text-[14px] 2xl:text-[20px] text-[#949191] md:font-[400]">
               Training Duration: {item?.training_details?.training_duration} hrs
             </span>
-            <span className="text-xs md:text-[14px]  text-[#949191] md:font-[400]">
+            <span className="text-xs md:text-[14px] 2xl:text-[20px] text-[#949191] md:font-[400]">
               Training Fee: {item?.training_details?.training_fee?.training_fee}{" "}
               {item?.training_details?.training_fee?.currency}
             </span>
-            <span className="text-xs  md:text-[14px] text-[#949191] md:font-[400]">
+            <span className="text-xs  md:text-[14px] 2xl:text-[20px] text-[#949191] md:font-[400]">
               Posted Date : {date}
             </span>
           </div>
-          <span className="text-xs  text-[#07038C] md:font-[400]">
+          <span className="text-xs 2xl:text-[16px]  text-[#07038C] md:font-[400]">
             Pay : {item?.client_rate?.client_rate} {item?.client_rate?.currency}
           </span>
         </div>
         <div className="relative">
-          <p className="text-xs max-h-[3rem] text-[#464545] md:text-[14px] font-light break-words overflow-y-hidden text-justify md:px-4">
+          <p className="text-xs max-h-[3rem] text-[#464545] md:text-[14px] 2xl:text-[20px] 2xl:max-h-[4rem] 2xl:leading-[22px] font-light break-words overflow-y-hidden text-justify md:px-4">
             {item?.description}
           </p>
           <hr className="bg-[#E7E7E7] absolute -bottom-[.6rem] h-[.5px] w-full" />
         </div>
         <div className="flex flex-col md:flex-row justify-between mt-0 mb-0">
-          <span className="text-xs  text-[#949191] md:font-[400] md:text-[14px] self-start my-2">
+          <span className="text-xs  text-[#949191] md:font-[400] md:text-[14px] 2xl:text-[20px] self-start my-2">
             Training Location: {item?.job_location?.city}
             {" , "} {item?.job_location?.state} {" , "}{" "}
             {item?.job_location?.country}
           </span>
           <div className="flex flex-row gap-4">
             <Link href={`career/${item._id}`}>
-              <button className="w-fit font-semibold text-xs text-white bg-primary-blue px-3 py-2  uppercase rounded-full text-center flex items-center justify-center">
+              <button className="btn-1 w-fit font-semibold text-xs text-white bg-primary-blue px-3 py-2  uppercase rounded-full text-center flex items-center justify-center">
                 READ MORE
               </button>
             </Link>
             <button
-              className="w-fit font-semibold text-xs text-white bg-primary-blue px-3 py-2  uppercase rounded-full text-center flex items-center justify-center"
+              className="btn-1 w-fit font-semibold text-xs text-white bg-primary-blue px-3 py-2  uppercase rounded-full text-center flex items-center justify-center"
               onClick={() => {
                 setFormModal(!formModal);
               }}

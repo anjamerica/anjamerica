@@ -31,7 +31,10 @@ export default function Career() {
   console.log(jobData);
 
   return (
-    <main className="mx-auto w-full h-full snap-y">
+    <main className="relative mx-auto w-full h-full snap-y">
+      <div className="w-full h-fit bg-white shadow-sm sticky top-0 left-0 z-50">
+        <Header />
+      </div>
       <section className="relative">
         <div
           style={{
@@ -40,23 +43,20 @@ export default function Career() {
             backgroundSize: "100%",
             backgroundRepeat: "no-repeat",
           }}
-          className="w-full lg:h-[20rem] h-full bg-image-mobile sm:bg-image-web-career"
+          className="w-full lg:h-[18rem] h-full bg-image-mobile sm:bg-image-web-career"
         >
-          <div className="w-full h-fit shadow-sm">
-            <Header />
-          </div>
           <div className=" h-[224px] sm:h-[227px]  pt-10 pb-20  w-full">
             <div className="flex h-full flex-col justify-center mt-[20px] self-center items-center">
               <div className="flex justify-center">
-                <span className="text-[#FFD700] text-[.85rem] md:text-[16px] font-[700]">
+                <span className="text-[#FFD700] text-[.85rem] md:text-[16px] 2xl:text-[20px] font-[700]">
                   EXPLORE A CAREER AT ANJ AMERICA
                 </span>
               </div>
-              <div className="text-anim-blog  text-[24px]  font-[900] sm:text-[34px] xl:text-[36px] text-[#07038C] uppercase heading-main">
+              <div className="text-anim-blog  text-[24px]  font-[900] sm:text-[34px] xl:text-[36px] 2xl:text-[42px] text-[#07038C] uppercase heading-main">
                 Join us
               </div>
               <div className="flex items-center justify-center mt-2">
-                <span className="text-primary-gray  text-[16px] text-center  md:text-[18px] w-[13rem] sm:w-full ">
+                <span className="text-primary-gray  text-[16px] text-center  md:text-[18px] 2xl:text-[20px] w-[13rem] sm:w-full ">
                   New jobs everyday - Leave us your resume for future
                   opportunities!
                 </span>
@@ -70,7 +70,10 @@ export default function Career() {
         <Loader />
         {jobData.length > 0 ? (
           <div className="flex flex-col justify-center items-center py-10 gap-4">
-            <div className="px-5 w-full flex flex-col gap-8 md:px-10">
+            <div
+              className="px-5 w-full flex flex-col gap-8 md:px-10"
+              data-aos="fade-down"
+            >
               {jobData &&
                 jobData.map((item, i) => {
                   return (
