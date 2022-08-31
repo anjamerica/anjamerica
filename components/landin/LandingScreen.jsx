@@ -56,8 +56,10 @@ export default function LandingScreen() {
         >
           <div className=" h-[60vh] pt-10 pb-20  w-full md:h-[90vh]">
             <div className="hidden lg:flex c1 absolute lg:mt-[80px] top-[30px]  left-[400px]"></div>
+            <div className="hidden lg:flex c8 absolute lg:mt-[80px] top-[30px]  left-[400px]"></div>
             <div className="c2 absolute lg:mt-[80px] top-[100px] right-[204px]"></div>
             <div className="c3 absolute lg:mt-[80px] top-[350px] right-[150px]"></div>
+            <div className="c9 absolute lg:mt-[80px] top-[350px] right-[150px]"></div>
             <div className="c4 absolute lg:mt-[80px] top-[80px] right-[400px]"></div>
             <div className="hidden lg:flex c5 absolute lg:mt-[80px] bottom-[101px] right-[312px]"></div>
             <div className="hidden lg:flex c7 absolute lg:mt-[80px] bottom-[101px] right-[312px]"></div>

@@ -686,14 +686,39 @@ input.file {
 .c1 {
   width: 74px;
   height: 74px;
+  background: transparent;
+  border-radius: 50%;
+  border-width: 20px;
+  border-color: #cdcde8;
+  border-style: solid;
+  transition: width 2s, height 4s;
+  animation: zoom-in-zoom-out 3s ease infinite;
+}
+
+.c8 {
+  width: 74px;
+  height: 74px;
+  background: transparent;
+  border-radius: 50%;
+  border-width: 1px;
+  border-color: #cdcde8;
+  border-style: solid;
+  transition: width 2s, height 4s;
+  animation: out 3s ease infinite;
+}
+
+.c3 {
+  width: 43px;
+  height: 43px;
   background: white;
   border-radius: 50%;
   border-width: 10px;
   border-color: #cdcde8;
   border-style: solid;
   transition: width 2s, height 4s;
-  animation: zoom-in-zoom-out 3s ease infinite;
+  animation: out 3s ease infinite;
 }
+
 
 .c2 {
   width: 47px;
@@ -718,6 +743,20 @@ input.file {
   animation: zoom-in-zoom-out 3s ease infinite;
 }
 
+@keyframes out {
+  0% {
+    transform: scale(0.5,.5);
+    opacity: 0;
+  }
+  50% {
+    opacity: .71;
+  }
+  100% {
+    transform: scale(1.1, 1.1);
+    opacity: 0;
+  }
+}
+
 @keyframes zoom-in-zoom-out {
   0% {
     transform: scale(0.5, 0.5);
@@ -739,18 +778,22 @@ input.file {
   0% {
     bottom: 50px;
     left: 150px;
+    opacity: .7;
   }
   33% {
-    bottom: 80px;
-    left: 165px;
+    bottom: 150px;
+    left: 300px;
+    opacity: .4;
   }
   66% {
     bottom: 50px;
-    left: 180px;
+    left: 450px;
+    opacity:.8;
   }
   100% {
     bottom: 50px;
     left: 150px;
+    opacity: 1;
   }
 }
 
@@ -758,37 +801,45 @@ input.file {
   0% {
     top: 80px;
     right: 300px;
+    opacity: .7;
   }
   33% {
-    top: 110px;
-    right: 315px;
+    top: 160px;
+    right: 500px;
+    opacity: .4;
   }
   66% {
     top: 80px;
-    right: 330px;
+    right: 700px;
+    opacity: .8;
   }
   100% {
     top: 80px;
     right: 300px;
+    opacity: 1;
   }
 }
 
 @keyframes mymove2 {
   0% {
     bottom: 100px;
-    right: 300px;
+    right: 200px;
+    opacity: .7;
   }
   33% {
-    bottom: 130px;
-    right: 315px;
+    bottom: 200px;
+    right: 300px;
+    opacity: .4;
   }
   66% {
     bottom: 100px;
-    right: 330px;
+    right: 400px;
+    opacity: .8;
   }
   100% {
     bottom: 100px;
-    right: 300px;
+    right: 200px;
+    opacity: 1;
   }
 }
 
@@ -798,7 +849,7 @@ input.file {
   background-color: #0339d980;
   opacity: 50%;
   border-radius: 50%;
-  animation: mymove1 5s infinite;
+  animation: mymove1 15s infinite;
   opacity: 1;
 }
 
@@ -808,7 +859,7 @@ input.file {
   background-color: #ffd70080;
   opacity: 50%;
   border-radius: 50%;
-  animation: mymove2 5s infinite;
+  animation: mymove2 15s infinite;
   opacity: 1;
 }
 
@@ -831,7 +882,7 @@ input.file {
   height: 106px;
   background-color: #CDCDE8;
   border-radius: 50%;
-  animation: mymove 5s infinite;
+  animation: mymove 15s infinite;
   opacity: 1;
 }
 
