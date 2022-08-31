@@ -26,7 +26,7 @@ export default function Staffing() {
             sourced to your project as a full time or a consultant.
           </p>
           <Link href="/staffing#hiring">
-            <button className="w-fit font-semibold text-[13px] text-white bg-[#04c0de] px-6 md:px-[40px] py-3 md:py-[13px] tracking-wide mt-4 md:mt-6  rounded-full hover:bg-[#33b5af] transition-all text-center flex items-center justify-center">
+            <button className="button-pulse w-fit font-semibold text-[13px] text-white bg-[#04c0de] px-6 md:px-[40px] py-3 md:py-[13px] tracking-wide mt-4 md:mt-6  rounded-full hover:bg-[#33b5af] transition-all text-center flex items-center justify-center">
               Learn More
             </button>
           </Link>

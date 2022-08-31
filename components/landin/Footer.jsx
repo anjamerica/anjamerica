@@ -30,7 +30,7 @@ export default function Footer() {
   return (
     <div className="relative bg-[#07081D] w-full h-fit z-10 pt-10 select-none">
       <div className="flex justify-center  flex-col px-5 gap-1">
-        <span className="text-white font-bold text-2xl self-center px-3 text-center">
+        <span className="text-white heading-main font-bold text-2xl self-center px-3 text-center">
           Get to know us!
         </span>
         <div className=" justify-center flex flex-col mt-4 lg:mt-0 h-fit sm:flex-row gap-2 w-full">
@@ -42,7 +42,7 @@ export default function Footer() {
             className="relative placeholder:text-[#777689] w-full sm:w-[30vw] h-fit self-end text-[#777689] bg-transparent outline-none border-[#5A5A5A] border-b-[1px] px-2"
           />
           <button
-            className="w-fit font-[400] self-center mt-3 sm:mt-10 text-primary-black bg-[#777689] px-8 py-[.6rem]  tracking-wide rounded-full hover:text-primary-blue hover:bg-white cursor-pointer transition-all text-center flex items-center justify-center"
+            className="button-wiggle w-fit font-[400] self-center mt-3 sm:mt-10 text-primary-black bg-[#777689] px-8 py-[.6rem]  tracking-wide rounded-full hover:text-primary-blue hover:bg-white cursor-pointer transition-all text-center flex items-center justify-center"
             onClick={() => handleSubmit()}
           >
             Subscribe
@@ -97,7 +97,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noreferrer"
               >
-                <span className="bg-primary-violet h-8 w-8 hover:bg-violet-900 cursor-pointer rounded-full flex items-center justify-center">
+                <span className="bg-primary-violet h-8 w-8 shw hover:bg-[#4B0082] cursor-pointer rounded-full flex items-center justify-center">
                   <FaFacebookF className="h-full  w-full p-2 " />
                 </span>
               </a>
@@ -106,21 +106,21 @@ export default function Footer() {
                 target="_blank"
                 rel="noreferrer"
               >
-                <span className="bg-primary-violet h-8 w-8 hover:bg-violet-900 cursor-pointer rounded-full flex items-center justify-center">
+                <span className="bg-primary-violet h-8 w-8 shw hover:bg-[#4B0082] cursor-pointer rounded-full flex items-center justify-center">
                   <FaLinkedinIn className="h-full  w-full p-2 " />
                 </span>
               </a>
               <a
-                href="https://instagram.com/anj.america?igshid=YmMyMTA2M2Y="
+                href="https://instagram.com/anj.america?igshwid=YmMyMTA2M2Y="
                 target="_blank"
                 rel="noreferrer"
               >
-                <span className="bg-primary-violet h-8 w-8 hover:bg-violet-900 cursor-pointer rounded-full flex items-center justify-center">
+                <span className="bg-primary-violet h-8 w-8 shw hover:bg-[#4B0082] cursor-pointer rounded-full flex items-center justify-center">
                   <FaInstagram className="h-full  w-full p-2 " />
                 </span>
               </a>
               <Link href="/#contact">
-                <span className="bg-primary-violet h-8 w-8 hover:bg-violet-900 cursor-pointer rounded-full flex items-center justify-center">
+                <span className="bg-primary-violet h-8 w-8 shw hover:bg-[#4B0082] cursor-pointer rounded-full flex items-center justify-center">
                   <BsEnvelopeFill className="h-full  w-full p-2 " />
                 </span>
               </Link>

@@ -52,17 +52,17 @@ export default function LandingScreen() {
             backgroundSize: "100% ",
             backgroundRepeat: "no-repeat",
           }}
-          className="relative w-full h-[60vh] md:min-h-screen bg-landing-image-mob  sm:bg-landing-image-web"
+          className="relative w-full h-[60vh] md:min-h-screen lg:-mt-[80px] bg-landing-image-mob  sm:bg-landing-image-web"
         >
           <div className=" h-[60vh] pt-10 pb-20  w-full md:h-[90vh]">
-            <div className="hidden lg:flex c1 absolute top-[30px] left-[400px]"></div>
-            <div className="c2 absolute top-[100px] right-[204px]"></div>
-            <div className="c3 absolute top-[350px] right-[150px]"></div>
-            <div className="c4 absolute top-[80px] right-[400px]"></div>
-            <div className="hidden lg:flex c5 absolute bottom-[101px] right-[312px]"></div>
-            <div className="hidden lg:flex c6 absolute bottom-[41px] left-[340px]"></div>
-            <div className=" flex h-full flex-col gap-0 justify-center self-center items-center">
-              <div className="text-anim-blog heading-main z-10 text-[#07038C] uppercase text-[24px] text-center w-[18rem] font-extrabold sm:w-[40rem] md:w-[44rem] xl:w-[60rem] sm:text-[40px] md:text-[45px] xl:text-[60px] 2xl:text-[85px] 2xl:w-[85rem] 2xl:leading-[90px]   lg:leading-[70px]">
+            <div className="hidden lg:flex c1 absolute lg:mt-[80px] top-[30px] left-[400px]"></div>
+            <div className="c2 absolute lg:mt-[80px] top-[100px] right-[204px]"></div>
+            <div className="c3 absolute lg:mt-[80px] top-[350px] right-[150px]"></div>
+            <div className="c4 absolute lg:mt-[80px] top-[80px] right-[400px]"></div>
+            <div className="hidden lg:flex c5 absolute lg:mt-[80px] bottom-[101px] right-[312px]"></div>
+            <div className="hidden lg:flex c6 absolute lg:mt-[80px] bottom-[200px] -left-[90px]"></div>
+            <div className=" flex h-full lg:mt-[80px] flex-col gap-0 justify-center self-center items-center">
+              <div className="text-anim-blog heading-main  z-10 text-[#07038C] uppercase text-[24px] text-center w-[18rem] font-extrabold sm:w-[40rem] md:w-[44rem] xl:w-[60rem] sm:text-[40px] md:text-[45px] xl:text-[60px] 2xl:text-[85px] 2xl:w-[85rem] 2xl:leading-[90px]   lg:leading-[70px]">
                 Digitize your Business today and Grow your Brand...
               </div>
               <div className="text-anim-blog flex items-center text-center justify-center">
@@ -73,7 +73,7 @@ export default function LandingScreen() {
               </div>
               <div className="mt-5 xl:mt-10">
                 <Link href="/#products">
-                  <button className="w-fit sm:w-[143px] sm:h-[43px] z-10 font-semibold text-[14px] md:text-base  uppercase text-white bg-primary-blue px-6 py-[.6rem] sm:p-0  tracking-wide rounded-full hover:bg-blue-800 cursor-pointer transition-all text-center flex items-center justify-center">
+                  <button className="w-fit shw sm:w-[143px] sm:h-[43px] z-10 font-semibold text-[14px] md:text-base  uppercase text-white bg-primary-blue px-6 py-[.6rem] sm:p-0  tracking-wide rounded-full hover:bg-blue-800 cursor-pointer transition-all text-center flex items-center justify-center">
                     KNOW MORE
                   </button>
                 </Link>
@@ -154,7 +154,7 @@ export default function LandingScreen() {
                             {item.description}
                           </p>
                           <Link href={item.link}>
-                            <button className="w-fit font-semibold mx-5 text-xs md:text-md  uppercase text-white bg-primary-blue px-4 py-2 sm:px-6 sm:py-3  tracking-wide rounded-full  hover:bg-blue-800 cursor-pointer transition-all text-center flex items-center justify-center">
+                            <button className="w-fit shw font-semibold mx-5 text-xs md:text-md  uppercase text-white bg-primary-blue px-4 py-2 sm:px-6 sm:py-3  tracking-wide rounded-full  hover:bg-blue-800 cursor-pointer transition-all text-center flex items-center justify-center">
                               READ MORE
                             </button>
                           </Link>
@@ -185,7 +185,7 @@ export default function LandingScreen() {
           </div>
           <div>
             <Link href="/career">
-              <button className="yellow-action-button">Explore Career</button>
+              <button className="yellow-action-button shw">Explore Career</button>
             </Link>
           </div>
         </div>

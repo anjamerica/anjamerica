@@ -125,12 +125,12 @@ export default function JobCard({ item, getDetails }) {
           </span>
           <div className="flex flex-row gap-4">
             <Link href={`career/${item._id}`}>
-              <button className="w-fit font-semibold text-xs text-white bg-primary-blue px-3 py-2  uppercase rounded-full text-center flex items-center justify-center">
+              <button className="btn-1 w-fit font-semibold text-xs text-white bg-primary-blue px-3 py-2  uppercase rounded-full text-center flex items-center justify-center">
                 READ MORE
               </button>
             </Link>
             <button
-              className="w-fit font-semibold text-xs text-white bg-primary-blue px-3 py-2  uppercase rounded-full text-center flex items-center justify-center"
+              className="btn-1 w-fit font-semibold text-xs text-white bg-primary-blue px-3 py-2  uppercase rounded-full text-center flex items-center justify-center"
               onClick={() => {
                 setFormModal(!formModal);
               }}

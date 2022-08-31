@@ -304,7 +304,7 @@ export default function Index() {
           <button
             className={
               !modal
-                ? "sticky bottom-4 mb-4 right-4 float-right w-fit font-medium text-white bg-primary-blue px-4 py-2  uppercase  rounded-full hover:bg-blue-800 transition-all text-center items-center gap-2 flex flex-row justify-between"
+                ? "button-wiggle sticky bottom-4 mb-4 right-4 float-right w-fit font-medium text-white bg-primary-blue px-4 py-2  uppercase  rounded-full hover:bg-blue-800 transition-all text-center items-center gap-2 flex flex-row justify-between"
                 : "sticky bottom-4 mb-4 float-right right-4 w-fit font-medium text-white bg-red-600 px-4 py-2  uppercase  rounded-full hover:bg-red-400 transition-all text-center items-center gap-2 flex flex-row justify-between"
             }
             onClick={() => setModal(!modal)}
@@ -314,7 +314,7 @@ export default function Index() {
               <AiOutlineDoubleRight
                 className={
                   !modal
-                    ? "w-7 h-7 rounded-full bg-white text-primary-blue p-1"
+                    ? "button-wiggle w-7 h-7 rounded-full bg-white text-primary-blue p-1"
                     : "w-7 h-7 rounded-full bg-white text-red-600 p-1"
                 }
               />

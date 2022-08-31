@@ -17,8 +17,8 @@ export default function Header() {
     <div
       className={`${
         router.pathname ===  ("/blogs" || "/about" || "/digitize" || "/staffing")
-          ? "relative w-full flex bg-white justify-between items-center h-[80px] shadow-sm px-4  md:px-[2%] md:py-4 md:items-center md:h-[80px]"
-          : "relative w-full  flex justify-between items-center h-[80px] shadow-sm px-4  md:px-[2%] md:py-4 md:items-center md:h-[80px]"
+          ? "relative w-full flex bg-white justify-between items-center h-[80px]  px-4  md:px-[2%] md:py-4 md:items-center md:h-[80px] sh"
+          : "relative w-full  flex justify-between items-center h-[80px]  px-4  md:px-[2%] md:py-4 md:items-center md:h-[80px] sh"
       }`}
 
     >

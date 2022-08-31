@@ -75,7 +75,7 @@ export default function Products() {
         <img
           alt="prev arrow"
           src="/landing/prev-arrow.svg"
-          className="hidden md:flex md:h-10 md:absolute md:top-[20rem] md:left-[17px] lg:h-10 lg:left-[17px] xl:left-[24px] sm:w-7  xl:w-fit  text-primary-gray cursor-pointer"
+          className="hidden md:flex  md:h-10 md:absolute md:top-[20rem] md:left-[17px] lg:h-10 lg:left-[17px] xl:left-[24px] sm:w-7  xl:w-fit  text-primary-gray cursor-pointer"
           onClick={() => handleOnPrevClick()}
         />
         <img
