@@ -55,11 +55,12 @@ export default function LandingScreen() {
           className="relative w-full h-[60vh] md:min-h-screen lg:-mt-[80px] bg-landing-image-mob  sm:bg-landing-image-web"
         >
           <div className=" h-[60vh] pt-10 pb-20  w-full md:h-[90vh]">
-            <div className="hidden lg:flex c1 absolute lg:mt-[80px] top-[30px] left-[400px]"></div>
+            <div className="hidden lg:flex c1 absolute lg:mt-[80px] top-[30px]  left-[400px]"></div>
             <div className="c2 absolute lg:mt-[80px] top-[100px] right-[204px]"></div>
             <div className="c3 absolute lg:mt-[80px] top-[350px] right-[150px]"></div>
             <div className="c4 absolute lg:mt-[80px] top-[80px] right-[400px]"></div>
             <div className="hidden lg:flex c5 absolute lg:mt-[80px] bottom-[101px] right-[312px]"></div>
+            <div className="hidden lg:flex c7 absolute lg:mt-[80px] bottom-[101px] right-[312px]"></div>
             <div className="hidden lg:flex c6 absolute lg:mt-[80px] bottom-[200px] -left-[90px]"></div>
             <div className=" flex h-full lg:mt-[80px] flex-col gap-0 justify-center self-center items-center">
               <div className="text-anim-blog heading-main  z-10 text-[#07038C] uppercase text-[24px] text-center w-[18rem] font-extrabold sm:w-[40rem] md:w-[44rem] xl:w-[60rem] sm:text-[40px] md:text-[45px] xl:text-[60px] 2xl:text-[85px] 2xl:w-[85rem] 2xl:leading-[90px]   lg:leading-[70px]">
@@ -106,7 +107,7 @@ export default function LandingScreen() {
             </span>
           </div>
           <div className="flex flex-col px-[2rem] pt-[2rem] md:p-[5rem]">
-            <div className="relative  flex flex-col items-start justify-start gap-[.5rem] md:gap-[1.5rem] 2xl:gap-[3rem]">
+            <div className="relative  flex flex-col items-start justify-start gap-[.5rem] md:gap-[2rem] 2xl:gap-[3rem]">
               {services.map((item, index) => {
                 return (
                   <li
@@ -150,7 +151,7 @@ export default function LandingScreen() {
                     <div className="pb-2">
                       {serviceActive === index && (
                         <div className="text-anim-services flex flex-col gap-3">
-                          <p className="select-none font-[500] 2xl:text-[24px] text-left px-5 text-md text-primary-black md:text-base">
+                          <p className="select-none font-[500] 2xl:text-[24px] text-left px-5 text-md md:leading-[38px] text-primary-black md:text-base">
                             {item.description}
                           </p>
                           <Link href={item.link}>
