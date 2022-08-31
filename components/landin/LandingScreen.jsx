@@ -41,35 +41,39 @@ export default function LandingScreen() {
   };
   const [serviceActive, setServiceActive] = useState(1);
   return (
-    <main className="mx-auto w-full h-full snap-y scroll-delay">
-      <section className="relative">
+    <main className="relative mx-auto w-full h-full snap-y scroll-delay">
+        <div className="w-full h-fit bg-white shadow-sm sticky top-0 left-0 z-50">
+          <Header />
+        </div>
+      <section>
         <div
           style={{
             objectFit: "cover",
-            backgroundSize: "100% 100%",
+            backgroundSize: "100% ",
             backgroundRepeat: "no-repeat",
           }}
-          className="w-full h-[60vh]  md:min-h-screen bg-landing-image-mob  sm:bg-landing-image-web"
+          className="relative w-full h-[60vh] md:min-h-screen lg:-mt-[80px] bg-landing-image-mob  sm:bg-landing-image-web"
         >
-          <div className="w-full h-fit shadow-sm">
-            <Header />
-          </div>
-
           <div className=" h-[60vh] pt-10 pb-20  w-full md:h-[90vh]">
-            <div></div>
-            <div className=" flex h-full flex-col gap-0 justify-center self-center items-center">
-              <div className="text-anim-blog heading-main text-[#07038C] uppercase text-[24px] text-center w-[18rem] font-bold sm:w-[40rem] md:w-[44rem] xl:w-[60rem] sm:text-[40px] md:text-[45px] xl:text-[60px]   xl:leading-[4rem]">
+            <div className="hidden lg:flex c1 absolute lg:mt-[80px] top-[30px] left-[400px]"></div>
+            <div className="c2 absolute lg:mt-[80px] top-[100px] right-[204px]"></div>
+            <div className="c3 absolute lg:mt-[80px] top-[350px] right-[150px]"></div>
+            <div className="c4 absolute lg:mt-[80px] top-[80px] right-[400px]"></div>
+            <div className="hidden lg:flex c5 absolute lg:mt-[80px] bottom-[101px] right-[312px]"></div>
+            <div className="hidden lg:flex c6 absolute lg:mt-[80px] bottom-[200px] -left-[90px]"></div>
+            <div className=" flex h-full lg:mt-[80px] flex-col gap-0 justify-center self-center items-center">
+              <div className="text-anim-blog heading-main  z-10 text-[#07038C] uppercase text-[24px] text-center w-[18rem] font-extrabold sm:w-[40rem] md:w-[44rem] xl:w-[60rem] sm:text-[40px] md:text-[45px] xl:text-[60px] 2xl:text-[85px] 2xl:w-[85rem] 2xl:leading-[90px]   lg:leading-[70px]">
                 Digitize your Business today and Grow your Brand...
               </div>
               <div className="text-anim-blog flex items-center text-center justify-center">
-                <span className="text-primary-gray  text-[.8rem] mt-2  xl:text-[1rem] w-[13rem] sm:w-full ">
+                <span className="text-primary-gray z-10 text-[.8rem] mt-2  xl:text-[16px] w-[13rem] 2xl:text-[20px] sm:w-full ">
                   Create stunning products, Hire top software professionals for
                   your project.
                 </span>
               </div>
               <div className="mt-5 xl:mt-10">
                 <Link href="/#products">
-                  <button className="w-fit sm:w-[143px] sm:h-[43px] font-semibold text-[14px] md:text-base  uppercase text-white bg-primary-blue px-6 py-[.6rem] sm:p-0  tracking-wide rounded-full hover:bg-blue-800 cursor-pointer transition-all text-center flex items-center justify-center">
+                  <button className="w-fit shw sm:w-[143px] sm:h-[43px] z-10 font-semibold text-[14px] md:text-base  uppercase text-white bg-primary-blue px-6 py-[.6rem] sm:p-0  tracking-wide rounded-full hover:bg-blue-800 cursor-pointer transition-all text-center flex items-center justify-center">
                     KNOW MORE
                   </button>
                 </Link>
@@ -78,7 +82,7 @@ export default function LandingScreen() {
                 <Link href="/#services">
                   <img
                     alt="arrow button"
-                    className="w-fit h-fit md:w-[3rem] md:h-[3rem]"
+                    className="bounce w-fit h-fit md:w-[3rem] md:h-[3rem]"
                     src="/assets/landing/down_arrow_btn.svg"
                   />
                 </Link>
@@ -102,7 +106,7 @@ export default function LandingScreen() {
             </span>
           </div>
           <div className="flex flex-col px-[2rem] pt-[2rem] md:p-[5rem]">
-            <div className="relative  flex flex-col items-start justify-start gap-[.5rem] md:gap-[1.5rem]">
+            <div className="relative  flex flex-col items-start justify-start gap-[.5rem] md:gap-[1.5rem] 2xl:gap-[3rem]">
               {services.map((item, index) => {
                 return (
                   <li
@@ -117,8 +121,8 @@ export default function LandingScreen() {
                         <div
                           className={`${
                             serviceActive === index
-                              ? "flex items-center justify-center select-none self-center text-white p-4 text-[16px] h-10 w-10 rounded-full bg-primary-blue"
-                              : "flex items-center select-none  text-primary-gray text-md text-[16px] p-2"
+                              ? "flex items-center justify-center select-none self-center text-white p-4 text-[16px] 2xl:text-[24px] h-10 w-10 rounded-full bg-primary-blue"
+                              : "flex items-center select-none  text-primary-gray text-md text-[16px] 2xl:text-[24px] p-2"
                           }`}
                         >
                           {item.index}
@@ -126,8 +130,8 @@ export default function LandingScreen() {
                         <span
                           className={`${
                             serviceActive === index
-                              ? "service cursor-pointer select-none flex break-words w-[85%] sm:w-full items-center text-primary-blue py-3 text-lg"
-                              : "cursor-pointer select-none flex items-center text-primary-gray text-md md:text-base"
+                              ? "service cursor-pointer select-none flex break-words w-[85%] sm:w-full items-center 2xl:text-[24px] text-primary-blue py-3 text-lg"
+                              : "cursor-pointer select-none flex items-center text-primary-gray 2xl:text-[24px] text-md md:text-base"
                           }`}
                         >
                           {item.service}
@@ -137,8 +141,8 @@ export default function LandingScreen() {
                           src="/assets/landing/right-arrow.svg"
                           className={`${
                             serviceActive === index
-                              ? "rotate-90 absolute top-0 right-0 w-fit h-5 self-end"
-                              : "rotate-0 absolute top-0 right-0 w-fit h-5 self-end"
+                              ? "rotate-90 absolute top-0 right-0 w-fit h-5 2xl:w-10 self-end"
+                              : "rotate-0 absolute top-0 right-0 w-fit h-5 2xl:w-10 self-end"
                           }`}
                         />
                       </div>
@@ -146,11 +150,11 @@ export default function LandingScreen() {
                     <div className="pb-2">
                       {serviceActive === index && (
                         <div className="text-anim-services flex flex-col gap-3">
-                          <p className="select-none font-[500]  text-left px-5 text-md text-primary-black md:text-base">
+                          <p className="select-none font-[500] 2xl:text-[24px] text-left px-5 text-md text-primary-black md:text-base">
                             {item.description}
                           </p>
                           <Link href={item.link}>
-                            <button className="w-fit font-semibold mx-5 text-xs md:text-md  uppercase text-white bg-primary-blue px-4 py-2 sm:px-6 sm:py-3  tracking-wide rounded-full  hover:bg-blue-800 cursor-pointer transition-all text-center flex items-center justify-center">
+                            <button className="w-fit shw font-semibold mx-5 text-xs md:text-md  uppercase text-white bg-primary-blue px-4 py-2 sm:px-6 sm:py-3  tracking-wide rounded-full  hover:bg-blue-800 cursor-pointer transition-all text-center flex items-center justify-center">
                               READ MORE
                             </button>
                           </Link>
@@ -181,7 +185,7 @@ export default function LandingScreen() {
           </div>
           <div>
             <Link href="/career">
-              <button className="yellow-action-button">Explore Career</button>
+              <button className="yellow-action-button shw">Explore Career</button>
             </Link>
           </div>
         </div>
@@ -189,7 +193,7 @@ export default function LandingScreen() {
       <section>
         <div className=" py-10 flex items-center h-fit flex-col gap-4 bg-[#F3F3F3]">
           <div className="flex flex-col gap-1">
-            <div className="text-[24px] lg:text-[36px] font-[800] heading-main  text-primary-black self-center">
+            <div className="text-subheading-main mt-2 heading-main text-primary-black self-center">
               Businesses we&apos;ve aligned with
             </div>
           </div>

@@ -49,7 +49,7 @@ export default function Subscribers() {
 
   return (
     <div className="mx-auto w-full h-full snap-y">
-      <div className="w-full flex h-[74px] justify-between px-5 bg-white box-shadow  md:px-10 md:py-4 md:items-center md:h-[10vh]">
+      <div className="sticky top-0 left-0 z-50 w-full flex h-[74px] justify-between px-5 bg-white box-shadow  md:px-10 md:py-4 md:items-center md:h-[10vh]">
         <Link href="/home">
           <img
             alt="logo image"
@@ -138,13 +138,13 @@ export default function Subscribers() {
           <table className="table-fixed w-[40rem]  md:w-full border-separate border-spacing-y-1">
             <thead className="overflow-x-auto">
               <tr className="bg-[#214ED1]">
-                <th className="text-sm text-left w-20 md:w-40 text-white md:text-md font-normal px-5 md:px-3 py-3  break-words">
+                <th className="text-sm 2xl:text-[18px] text-left w-20 md:w-40 text-white md:text-md font-normal px-5 md:px-3 py-3  break-words">
                   Serial No
                 </th>
-                <th className="text-sm  text-left  text-white md:text-md font-normal  px-2 py-3 break-words">
+                <th className="text-sm 2xl:text-[18px]  text-left  text-white md:text-md font-normal  px-2 py-3 break-words">
                   Email address
                 </th>
-                <th className="text-sm text-left text-white md:text-md font-normal px-2 py-3  break-words">
+                <th className="text-sm 2xl:text-[18px] text-left text-white md:text-md font-normal px-2 py-3  break-words">
                   Subcribed Date
                 </th>
               </tr>
@@ -164,13 +164,13 @@ export default function Subscribers() {
                     subcribers.map((item, i) => {
                       return (
                         <tr className="bg-[#F9F9F9] " key={i}>
-                          <td className="text-black self-start   text-sm md:text-md font-normal px-5 md:px-3 break-words">
+                          <td className="text-black self-start   text-sm  md:text-md 2xl:text-[18px] font-normal px-5 md:px-3 break-words">
                             {(page - 1) * 10 + i + 1}
                           </td>
-                          <td className="text-black self-start  text-sm md:text-md  font-normal px-2 py-3 break-words">
+                          <td className="text-black self-start  text-sm  md:text-md 2xl:text-[18px]  font-normal px-2 py-3 break-words">
                             {item.email}
                           </td>
-                          <td className="text-black self-start text-sm md:text-md  font-normal px-2 py-3 break-words">
+                          <td className="text-black self-start text-sm  md:text-md 2xl:text-[18px]  font-normal px-2 py-3 break-words">
                             {DateFormatter(item.createdAt)}
                           </td>
                         </tr>

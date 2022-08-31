@@ -6,25 +6,17 @@ import Contact from "../components/contact/Contact";
 export default function About() {
   return (
     <main className="mx-auto w-full h-full snap-y">
+      <div className="w-full h-fit bg-white shadow-sm sticky top-0 left-0 z-50">
+        <Header />
+      </div>
       <section className="relative">
-        <div
-          style={{
-            // background: `url(${"/landing/career.png"})`,
-            objectFit: "cover",
-            backgroundSize: "100%",
-            backgroundRepeat: "no-repeat",
-          }}
-          className="w-full lg:h-[20rem] h-full bg-image-mobile sm:bg-image-web-career"
-        >
-          <div className="w-full h-fit shadow-sm">
-            <Header />
-          </div>
+        <div className="w-full lg:h-[20rem] h-full">
           <div className=" pt-10 lg:pb-20 h-[25vh] md:h-[40vh]  w-full ">
             <div className="text-center flex flex-col">
-              <span className="text-primary-blue text-[2rem] md:mt-4 heading-main uppercase font-extrabold md:text-[34px] md:leading-[41px]">
+              <span className="text-primary-blue text-[2rem] md:mt-4 heading-main uppercase font-extrabold md:text-[34px] 2xl:text-[40px] md:leading-[41px]">
                 About Us
               </span>
-              <span className="text-[.8rem] px-5 w-[80%] sm:mt-4 sm:w-full font-normal leading-[1.8rem] tracking-wide text-[#222] self-center md:text-[18px]">
+              <span className="text-[.8rem] px-5 w-[80%] sm:mt-4 sm:w-full font-normal leading-[1.8rem] tracking-wide text-[#222] self-center md:text-[18px] 2xl:text-[24px]">
                 We offer a wide range of services from Software Development ,
                 Mobile <br /> Application Development and much more.
               </span>
@@ -35,10 +27,10 @@ export default function About() {
         <section>
           <div className=" p-6 md:px-[7.5%] flex flex-col md:flex-row justify-around w-full">
             <div className="flex flex-col text-left mt-8 w-full md:w-[50%]">
-              <span className="text-[14px] font-semibold leading-[1px] mb-[8px] text-[#141414] pb-2">
+              <span className="text-[14px] 2xl:text-[20px] font-semibold leading-[1px] mb-[8px] text-[#141414] pb-2">
                 OUR PHILOSOPHY
               </span>
-              <span className="w-full text-[25px] md:text-[38px] heading-main text-[#04c0de] font-extrabold md:leading-[45px]">
+              <span className="w-full text-[25px] md:text-[38px] 2xl:text-[34px] heading-main text-[#04c0de] font-extrabold md:leading-[45px]">
                 Good business should
                 <br /> know every step of{" "}
                 <span className="text-[#05fad9]">growth.</span>
@@ -46,7 +38,7 @@ export default function About() {
               </span>
             </div>
             <div className="h-full pt-8 w-full md:w-[50%]">
-              <p className="text-[16px] text-[#333333] text-left leading-[30px]">
+              <p className="text-[16px] text-[#333333] text-left leading-[30px] 2xl:text-[20px]">
                 We believe in transparency and would like to maintain a sense of
                 fairness in what we deliver in terms of quality and deadlines.
                 Our major focus is to empower our client&apos;s end to end
@@ -56,7 +48,7 @@ export default function About() {
                 customer-specific customized Digital Marketing Methodology,
                 Techniques, Artificial Intelligence and other Tools.
               </p>
-              <p className="text-[16px] text-[#333333] text-left leading-[30px] mt-2">
+              <p className="text-[16px] text-[#333333] text-left leading-[30px] 2xl:text-[20px] mt-2">
                 Yes, we are the biggest advocates of customer satisfaction;
                 hence we always thrive to develop efficient and cost-effective
                 software solutions for our clients by help them achieve their
@@ -150,7 +142,7 @@ export default function About() {
           <span className="md:text-[50px] text-[55px] heading-main font-[900] text-white text-center">
             &#36;15M+
           </span>
-          <span className="text-[15px] text-white font-semibold text-center">
+          <span className="text-[15px] 2xl:text-[20px] text-white font-semibold text-center">
             Revenue Achieved
           </span>
         </div>
@@ -158,7 +150,7 @@ export default function About() {
           <span className="md:text-[50px] text-[55px] heading-main font-[940] text-white text-center">
             20
           </span>
-          <span className="text-[15px] text-white font-semibold text-center">
+          <span className="text-[15px] 2xl:text-[20px] text-white font-semibold text-center">
             Countries supported
           </span>
         </div>
@@ -166,7 +158,7 @@ export default function About() {
           <span className="md:text-[50px] text-[55px] heading-main font-[940] text-white text-center">
             50
           </span>
-          <span className="text-[15px] text-white font-semibold text-center">
+          <span className="text-[15px] 2xl:text-[20px] text-white font-semibold text-center">
             Staff Members
           </span>
         </div>

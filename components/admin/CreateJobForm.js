@@ -333,7 +333,7 @@ export default function CreateJobForm() {
   return (
     <div className="relative mx-auto w-full h-full snap-y pb-10">
       <Loader />
-      <div className="w-full flex h-[74px] justify-between px-5 bg-white box-shadow   md:px-10 md:py-4 md:items-center md:h-[10vh]">
+      <div className="sticky top-0 left-0 z-50 w-full flex h-[74px] justify-between px-5 bg-white box-shadow   md:px-10 md:py-4 md:items-center md:h-[10vh]">
         <Link href="/home">
           <img
             alt="logo image"

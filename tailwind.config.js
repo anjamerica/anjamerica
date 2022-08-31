@@ -39,7 +39,7 @@ module.exports = {
         'image-web': "url('/landing/bg.png')",
         'image-web-career': "url('/landing/career.png')",
         'landing-image-mob':"url('/landing/bg_landing.svg')",
-        'landing-image-web':"url('/landing/bg.png')",
+        'landing-image-web':"url('/landing/bg_web.png')",
       }
     },
   },
