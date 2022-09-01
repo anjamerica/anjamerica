@@ -719,7 +719,6 @@ input.file {
   animation: out 3s ease infinite;
 }
 
-
 .c2 {
   width: 47px;
   height: 47px;
@@ -729,7 +728,8 @@ input.file {
   border-color: #cdcde8;
   border-style: solid;
   transition: width 2s, height 4s;
-  animation: zoom-in-zoom-out 3s ease infinite;}
+  animation: zoom-in-zoom-out 3s ease infinite;
+}
 
 .c3 {
   width: 43px;
@@ -745,11 +745,11 @@ input.file {
 
 @keyframes out {
   0% {
-    transform: scale(0.5,.5);
+    transform: scale(0.5, 0.5);
     opacity: 0;
   }
   50% {
-    opacity: .71;
+    opacity: 0.71;
   }
   100% {
     transform: scale(1.1, 1.1);
@@ -774,72 +774,96 @@ input.file {
 
 /* animation: mymove 5s infinite; */
 
-@keyframes mymove {
+/* @keyframes mymove {
   0% {
-    bottom: 50px;
-    left: 150px;
+    bottom: 100px;
+    left: 0px;
     opacity: .4;
   }
-  33% {
-    bottom: 400px;
-    left: 300px;
-    opacity: .7;
+  25% {
+    top: 80px;
+    right: 100px;
+    opacity: .6;
   }
-  66% {
-    bottom: 50px;
-    left: 450px;
+  50% {
+    top: 100px;
+    right: 0px;
     opacity:.4;
   }
-  100% {
-    bottom: 50px;
-    left: 150px;
+  75% {
+    bottom: 0px;
+    left:100px;
     opacity: .7;
+  }
+  100% {
+    bottom: 100px;
+    left: 0px;
+    opacity: .4;
+  }
+} */
+
+@keyframes mymove {
+  0% {
+    transform: translate(0px,0px);
+    opacity: 1;
+  }
+  33% {
+    transform: translate(400px,-350px);
+    opacity: 0;
+  }
+  66% {
+    transform: translate(800px,100px);
+    opacity: .9;
+  }
+  100% {
+    transform: translate(0px,0px);
+    opacity: 0;
   }
 }
 
 @keyframes mymove1 {
   0% {
-    top: 80px;
+    top: 0px;
     right: 300px;
-    opacity: .6;
+    opacity: 0.6;
   }
   33% {
-    top: 500px;
-    right: 500px;
-    opacity: .5;
+    top: 550px;
+    right: 900px;
+    opacity: 0.5;
   }
   66% {
-    top: 400px;
-    right: 700px;
-    opacity: .4;
+    top: 0px;
+    right: 1000px;
+    opacity: 0.4;
   }
   100% {
     top: 80px;
     right: 300px;
-    opacity: 7;
+    opacity: 0;
   }
 }
 
 @keyframes mymove2 {
   0% {
     bottom: 100px;
-    right: 200px;
-    opacity: .7;
+    right: 0px;
+    opacity: 0.7;
   }
   33% {
     bottom: 200px;
-    right: 300px;
-    opacity: .4;
+    right: 900px;
+    opacity: 0;
   }
   66% {
-    bottom: 100px;
-    right: 400px;
-    opacity: .8;
+    bottom: 0px;
+    right: 100px;
+    opacity: 0.8;
   }
   100% {
     bottom: 100px;
     right: 200px;
-    opacity: 1;
+    opacity: 0;
   }
 }
 
@@ -849,7 +873,7 @@ input.file {
   background-color: #0339d980;
   opacity: 50%;
   border-radius: 50%;
-  animation: mymove1 15s infinite;
+  animation: mymove1 60s infinite;
   opacity: 1;
 }
 
@@ -859,7 +883,7 @@ input.file {
   background-color: #ffd70080;
   opacity: 50%;
   border-radius: 50%;
-  animation: mymove2 15s infinite;
+  animation: mymove2 60s infinite;
   opacity: 1;
 }
 
@@ -880,10 +904,11 @@ input.file {
 .c7 {
   width: 106px;
   height: 106px;
-  background-color: #CDCDE8;
+  background-color: #cdcde8;
   border-radius: 50%;
-  animation: mymove 15s infinite;
+  animation: mymove 60s infinite;
   opacity: 1;
+  bottom: 100px;
 }
 
 .bounce {
