@@ -1,7 +1,4 @@
-import { data } from "autoprefixer";
 import React, { useEffect, useState } from "react";
-import { IoMdCheckmarkCircleOutline } from "react-icons/io";
-import { BsChevronCompactLeft, BsChevronCompactRight } from "react-icons/bs";
 import ProductCard from "../components/products/ProductCard";
 
 let count = 0;
@@ -68,9 +65,9 @@ export default function Products() {
         </p>
         <div
           className="grid grid-flow-row w-full px-0 md:py-10 sm:px-[50px] lg:px-[80px] xl:px-[150px]"
-          
         >
-          <ProductCard data={data} currentIndex={currentIndex} />
+         
+            <ProductCard data={data} currentIndex={currentIndex} />
         </div>
         <img
           alt="prev arrow"

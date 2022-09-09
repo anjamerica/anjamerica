@@ -42,7 +42,7 @@ export default function Footer() {
             className="relative placeholder:text-[#777689] w-full sm:w-[30vw] h-fit self-end text-[#777689] bg-transparent outline-none border-[#5A5A5A] border-b-[1px] px-2"
           />
           <button
-            className="button-wiggle w-fit font-[400] self-center mt-3 sm:mt-10 text-primary-black bg-[#777689] px-8 py-[.6rem]  tracking-wide rounded-full hover:text-primary-blue hover:bg-white cursor-pointer transition-all text-center flex items-center justify-center"
+            className=" w-fit font-[400] self-center mt-3 sm:mt-10 text-primary-black bg-[#777689] px-8 py-[.6rem]  tracking-wide rounded-full hover:text-primary-blue hover:bg-white cursor-pointer transition-all text-center flex items-center justify-center"
             onClick={() => handleSubmit()}
           >
             Subscribe
@@ -91,7 +91,7 @@ export default function Footer() {
           </div>
           <div className="flex flex-col mt-[30px] mb-2 px-5 md:px-0">
             {/* <span className="text-white text-[24px] font-semibold">Social</span> */}
-            <div className="flex flex-row gap-2 text-white mt-0 md:mt-11 sm:mb-4">
+            <div className="flex flex-row gap-2 text-white mt-0 md:mt-4 sm:mb-4">
               <a
                 href="https://www.facebook.com/anjamericadotcom/about/"
                 target="_blank"
