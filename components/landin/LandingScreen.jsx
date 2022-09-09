@@ -25,6 +25,7 @@ const services = [
 ];
 
 export default function LandingScreen() {
+  const [serviceActive, setServiceActive] = useState(1);
   const ref = useRef(null);
   const scroll = (dir) => {
     switch (dir) {
@@ -39,7 +40,7 @@ export default function LandingScreen() {
         break;
     }
   };
-  const [serviceActive, setServiceActive] = useState(1);
+   
   return (
     <main className="relative mx-auto w-full h-full snap-y scroll-delay">
         <div className="w-full h-fit bg-white shadow-sm sticky top-0 left-0 z-50">
