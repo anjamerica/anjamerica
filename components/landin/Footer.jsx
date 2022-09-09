@@ -91,7 +91,7 @@ export default function Footer() {
           </div>
           <div className="flex flex-col mt-[30px] mb-2 px-5 md:px-0">
             {/* <span className="text-white text-[24px] font-semibold">Social</span> */}
-            <div className="flex flex-row gap-2 text-white mt-0 md:mt-11 sm:mb-4">
+            <div className="flex flex-row gap-2 text-white mt-0 md:mt-4 sm:mb-4">
               <a
                 href="https://www.facebook.com/anjamericadotcom/about/"
                 target="_blank"
