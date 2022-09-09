@@ -16,11 +16,11 @@ export default function Staffing() {
           <p className="text-[.85rem] text-left font-semibold break-words tracking-[1px] md:text-[14px] 2xl:text-[20px] text-[#04c0de]">
             WORKS WITH TOP LEVEL IT COMPANIES
           </p>
-          <p className="text-anim-blog text-[#33334f] heading-main text-[45px] mt-2 leading-[48px] md:text-[52px]  md:leading-[58px] font-[900]">
+          <p className="text-anim-blog text-[#1048a9] md:text-[#33334f] heading-main text-[45px] mt-2 leading-[48px] md:text-[52px]  md:leading-[58px] font-[900]">
             Catering to All
             <br /> Staffing Needs
           </p>
-          <p className="text-[16px] p-0 leading-[1.8rem]  max-w-[410px] 2xl:text-[20px] break-words md:text-[18px] md:leading-[1.8rem] text-[#0a1f44] mt-6 text-anim-blog">
+          <p className="text-[16px] p-0 leading-[1.8rem]  max-w-[410px] 2xl:text-[20px] break-words md:text-[18px] md:leading-[1.8rem] text-[#1048a9] md:text-[#0a1f44] mt-6 text-anim-blog">
             Hire from the top 2% of software talent in the world. We have an
             exclusive pool of the top Anj America Professionals who can be
             sourced to your project as a full time or a consultant.

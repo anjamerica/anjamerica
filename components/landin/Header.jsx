@@ -223,9 +223,9 @@ export default function Header() {
         </span>
         {navOpen && (
           <div
-            className="absolute top-[4rem] right-[0rem] bg-white z-50 w-full md:hidden"
+            className="absolute top-[4rem] right-[0rem] shadow-md bg-white z-50 w-full md:hidden"
             data-aos="fade-down"
-            data-aos-duration="1000"
+            // data-aos-duration="1000"
           >
             <div className="nav-anim w-full p-3  h-fit">
               <ul>
