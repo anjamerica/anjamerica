@@ -804,19 +804,19 @@ input.file {
 
 @keyframes mymove {
   0% {
-    transform: translate(0px,0px);
+    transform: translate(0px, 0px);
     opacity: 1;
   }
   33% {
-    transform: translate(400px,-350px);
+    transform: translate(400px, -350px);
     opacity: 0;
   }
   66% {
-    transform: translate(800px,100px);
-    opacity: .9;
+    transform: translate(800px, 100px);
+    opacity: 0.9;
   }
   100% {
-    transform: translate(0px,0px);
+    transform: translate(0px, 0px);
     opacity: 0;
   }
 }
@@ -973,5 +973,21 @@ input.file {
   100% {
     transform: scale(1.1, 1.1);
     opacity: 1;
+  }
+}
+
+.nav-modal-anim {
+  animation: slideIn 1s ease-in;
+}
+
+@keyframes slideIn {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
   }
 }
