@@ -6,6 +6,7 @@ import Products from "../../pages/products";
 import Footer from "./Footer";
 import Link from "next/link";
 import Contact from "../contact/Contact";
+// import Cards from "../products/Cards";
 
 const services = [
   {
@@ -268,7 +269,7 @@ export default function LandingScreen() {
               <img
                 alt="left arrow"
                 src="/landing/prev-arrow.svg"
-                className="h-10  w-fit select-none absolute top-[6px] left-[2rem] md:top-[10px]  md:left-[7rem] text-primary-gray cursor-pointer"
+                className="h-10  w-fit select-none absolute top-[6px] left-[2rem] md:top-[10px]  md:left-[5rem] text-primary-gray cursor-pointer"
                 onClick={() => {
                   scroll("left");
                 }}
@@ -276,7 +277,7 @@ export default function LandingScreen() {
               <img
                 alt="right arrow"
                 src="/landing/next-arrow.svg"
-                className="h-10 w-fit md:v-h-center select-none absolute right-[2rem] top-[6px]  md:top-[10px] md:right-[6rem] text-primary-gray cursor-pointer"
+                className="h-10 w-fit md:v-h-center select-none absolute right-[2rem] top-[6px]  md:top-[10px] md:right-[5rem] text-primary-gray cursor-pointer"
                 onClick={() => {
                   scroll("right");
                 }}
@@ -288,6 +289,9 @@ export default function LandingScreen() {
       <section id="products">
         <Products />
       </section>
+      {/* <section id="products">
+        <Cards />
+      </section> */}
       <section id="contact">
         <Contact />
       </section>
