@@ -223,11 +223,10 @@ export default function Header() {
         </span>
         {navOpen && (
           <div
-            className="absolute top-[4rem] right-[0rem] bg-white z-50 w-full md:hidden"
-            data-aos="fade-down"
-            data-aos-duration="1000"
+            className="absolute top-[4rem] right-[0rem] shadow-md bg-white z-50 w-full md:hidden"
+            data-aos="fade-right"
           >
-            <div className="nav-anim w-full p-3  h-fit">
+            <div className=" w-full p-3  h-fit">
               <ul>
                 <Link href="/about">
                   <li className="text-left py-2 text-primary-blue-dark hover:text-blue-800 text-xs font-semibold">
