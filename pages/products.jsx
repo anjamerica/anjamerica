@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import ProductCard from "../components/products/ProductCard";
 
 let count = 0;
+let timer=null
 
 export default function Products() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -40,21 +41,31 @@ export default function Products() {
     },
   ];
 
-  const handleOnPrevClick = () => {
+  const handleOnPrevClick = (fromTimer) => {
     const len = data.length;
     count = (currentIndex + len - 1) % len;
     setCurrentIndex(count);
+    if(fromTimer) return;
+    clearTimeout(timer);
+    createTimer();
   };
 
-  const handleOnNextClick = () => {
+  const handleOnNextClick = (fromTimer) => {
     count = (count + 1) % data.length;
     setCurrentIndex(count);
+    if(fromTimer) return;
+    clearTimeout(timer);
+    createTimer();
   };
 
+  const createTimer=()=>{
+    timer=setInterval(function () {
+      handleOnNextClick(true)
+    }, 4000);
+  }
+
   useEffect(() => {
-    setInterval(function () {
-      handleOnNextClick();
-    }, 10000);
+    createTimer();
   }, []);
 
   return (
@@ -63,22 +74,19 @@ export default function Products() {
         <p className="text-subheading-main heading-main text-primary-black self-center">
           Our Products
         </p>
-        <div
-          className="grid grid-flow-row w-full px-0 md:py-10 sm:px-[50px] lg:px-[80px] xl:px-[150px]"
-        >
-         
-            <ProductCard data={data} currentIndex={currentIndex} />
+        <div className="grid grid-flow-row w-full px-0 md:py-10 sm:px-[50px] lg:px-[80px] xl:px-[150px]">
+          <ProductCard data={data} currentIndex={currentIndex} />
         </div>
         <img
           alt="prev arrow"
           src="/landing/prev-arrow.svg"
-          className="hidden md:flex  md:h-10 md:absolute md:top-[20rem] md:left-[17px] lg:h-10 lg:left-[17px] xl:left-[24px] sm:w-7  xl:w-fit  text-primary-gray cursor-pointer"
+          className="h-6 left-[10px]  md:h-10 absolute md:top-[20rem] md:left-[17px] lg:h-10 lg:left-[17px] xl:left-[24px] sm:w-7  xl:w-fit  text-primary-gray cursor-pointer"
           onClick={() => handleOnPrevClick()}
         />
         <img
           alt="next arrow"
           src="/landing/next-arrow.svg"
-          className="hidden md:flex md:h-10 md:absolute md:top-[20rem] md:right-[17px] lg:h-10 lg:right-[17px] xl:right-[24px] sm:w-7  xl:w-fit   text-primary-gray cursor-pointer"
+          className="h-6 right-[10px] md:h-10 absolute md:top-[20rem] md:right-[17px] lg:h-10 lg:right-[17px] xl:right-[24px] sm:w-7  xl:w-fit   text-primary-gray cursor-pointer"
           onClick={() => handleOnNextClick()}
         />
       </div>
