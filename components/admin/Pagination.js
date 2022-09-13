@@ -18,6 +18,7 @@ export default function Pagination({
   const togglePage = (num) => {
     setCurrentPage(num);
     setSelected(num);
+    scroll(0,0);
   };
 
   let items = [];
