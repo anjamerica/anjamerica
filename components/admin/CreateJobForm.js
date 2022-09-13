@@ -313,7 +313,7 @@ export default function CreateJobForm() {
         router.push("/home");
       } catch (err) {
         console.error(err?.response);
-        toast.error("An error occured");
+        toast.error("An error occurred");
         isLoading(false);
       }
     } else {
@@ -321,11 +321,11 @@ export default function CreateJobForm() {
         validations();
         const headers = { Authorization: localStorage.getItem("token") };
         const res = await updateJobDetails(jobId, jobDetails, headers);
-        toast.success("Job details updated succesfully");
+        toast.success("Job details updated successfully");
         router.push("/home");
       } catch (err) {
         console.error(err?.response);
-        toast.error("An error occured");
+        toast.error("An error occurred");
         isLoading(false);
       }
     }
@@ -869,7 +869,7 @@ export default function CreateJobForm() {
                 <span className="form-text">Fee</span>
                 <div className="relative flex flex-1 focus:outline-none border border-[#565962] border-opacity-[33%] rounded w-full leading-tight bg-[#FFFFFF]">
                   <select
-                    className="min-w-10 w-10 focus:outline-none border-r text-xs truncate text-[#74777B] flex justify-center items-center bg-transparent px-1"
+                    className="min-w-10 w-12 sm:w-14 focus:outline-none border-r text-xs truncate text-[#74777B] flex justify-center items-center bg-transparent px-1"
                     value={trainingDetails.currency}
                     onChange={(e) => {
                       handleTrainingDetailsChange("currency", e.target.value);

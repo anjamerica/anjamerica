@@ -213,17 +213,17 @@ export default function Header() {
             </span>
           </Link>
         </div>
-        <span
-          className="h-full flex items-center justify-center lg:hidden py-4"
-          onClick={(e) => {
+        <button
+          className="h-9 w-9 flex items-center justify-center lg:hidden py-4"
+          onClick={() => {
             setNavOpen(!navOpen);
           }}
         >
           <BsThreeDots className="h-9 w-9 text-[#B4B4BE] rotate-90 self-center cursor-pointer" />
-        </span>
+        </button>
         {navOpen && (
           <div
-            className="absolute top-[4rem] right-[0rem] shadow-md bg-white z-50 w-full md:hidden"
+            className="absolute top-[4rem] right-[0rem] shadow-md bg-white z-50 w-full lg:hidden"
           >
             <div className=" w-full p-3  h-fit">
               <ul>

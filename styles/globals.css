@@ -556,7 +556,7 @@ button:focus {
 }
 
 .blog-title {
-  @apply text-[#0a1f44] heading-main text-[28px] xl:leading-[34px] font-bold break-words;
+  @apply text-[#0a1f44] heading-main text-[28px] leading-[32px] xl:leading-[34px] font-bold break-words;
 }
 
 .filter-component {
@@ -593,7 +593,7 @@ button:focus {
 /* blog page */
 
 .blog-card {
-  @apply rounded-xl w-fit h-[650px]  sm:h-[650px] lg:h-[600px] lg:max-w-[400px] bg-white drop-shadow-xl;
+  @apply rounded-xl w-full h-[650px] sm:h-[700px] xl:h-[600px] bg-white drop-shadow-xl;
 }
 
 .text-blog-date {
