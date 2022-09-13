@@ -123,7 +123,7 @@ export default function Staffing() {
             value to your clients.
           </p>
           <div className="flex flex-col lg:flex-row lg:gap-4 justify-between w-full mt-10">
-            <div className="relative flex flex-col gap-2">
+            <div className="relative flex flex-col gap-2 sm:gap-4">
               <p className=" text-[#333] text-[16px] md:text-[20px] 2xl:text-[24px] font-bold heading-main leading-[30px] text-base mt-6 z-10">
                 Multiple Level of Screening
               </p>
