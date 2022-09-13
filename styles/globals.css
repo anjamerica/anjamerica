@@ -186,6 +186,12 @@ input:checked ~ .dot {
   background-color: #ffffff;
 }
 
+@media screen and (min-width: 1400px) {
+  input:checked ~ .dot {
+    transform: translateX(4rem);
+  }
+}
+
 select {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -993,9 +999,9 @@ input.file {
 }
 
 .swiper-button-prev {
-  color: red; 
+  color: red;
 }
 
 .swiper-button-next {
-  color: #000; 
+  color: #000;
 }

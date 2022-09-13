@@ -67,7 +67,7 @@ export default function Login() {
               placeholder="EMAIL"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="flex-1 text-primary-blue select-none outline-none bg-transparent text-sm placeholder:text-[#214ED1] ml-3 text-input-primary-blue"
+              className="flex-1 text-primary-blue outline-none bg-transparent text-sm placeholder:text-[#214ED1] ml-3 text-input-primary-blue"
             />
           </div>
           <div className="login-input flex mt-4">
@@ -81,7 +81,7 @@ export default function Login() {
               placeholder="PASSWORD"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              className="flex-1 text-primary-blue select-none outline-none bg-transparent text-sm placeholder:text-[#214ED1] ml-3 text-input-primary-blue"
+              className="flex-1 text-primary-blue outline-none bg-transparent text-sm placeholder:text-[#214ED1] ml-3 text-input-primary-blue"
             />
           </div>
           <p className="text-xs text-red-600">{formError}</p>

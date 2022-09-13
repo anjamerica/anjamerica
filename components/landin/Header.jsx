@@ -224,7 +224,6 @@ export default function Header() {
         {navOpen && (
           <div
             className="absolute top-[4rem] right-[0rem] shadow-md bg-white z-50 w-full md:hidden"
-            data-aos="fade-right"
           >
             <div className=" w-full p-3  h-fit">
               <ul>

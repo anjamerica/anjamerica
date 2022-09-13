@@ -11,7 +11,7 @@ export default function About() {
       </div>
       <section className="relative">
         <div className="w-full lg:h-[20rem] h-full">
-          <div className=" pt-10 lg:pb-20 h-[25vh] md:h-[40vh]  w-full ">
+          <div className=" pt-10 lg:pb-20 h-[25vh] sm:h-[30vh] md:h-[40vh]  w-full ">
             <div className="text-center flex flex-col">
               <span className="text-primary-blue text-[2rem] md:mt-4 heading-main uppercase font-extrabold md:text-[34px] 2xl:text-[40px] md:leading-[41px]">
                 About Us
