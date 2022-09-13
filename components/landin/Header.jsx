@@ -214,7 +214,7 @@ export default function Header() {
           </Link>
         </div>
         <button
-          className="h-full flex items-center justify-center lg:hidden py-4"
+          className="h-9 w-9 flex items-center justify-center lg:hidden py-4"
           onClick={() => {
             setNavOpen(!navOpen);
           }}
@@ -223,7 +223,7 @@ export default function Header() {
         </button>
         {navOpen && (
           <div
-            className="absolute top-[4rem] right-[0rem] shadow-md bg-white z-50 w-full md:hidden"
+            className="absolute top-[4rem] right-[0rem] shadow-md bg-white z-50 w-full lg:hidden"
           >
             <div className=" w-full p-3  h-fit">
               <ul>

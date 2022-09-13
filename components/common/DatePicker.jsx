@@ -4,7 +4,11 @@ function DatePicker({ value, setValue = () => {}, textColor }) {
   const dateRef = useRef(null);
 
   const handleDate = () => {
-    dateRef.current.showPicker();
+    try{
+      dateRef.current.showPicker();
+    }catch{
+      
+    }
   };
 
   return (
