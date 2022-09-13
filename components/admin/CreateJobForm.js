@@ -313,7 +313,7 @@ export default function CreateJobForm() {
         router.push("/home");
       } catch (err) {
         console.error(err?.response);
-        toast.error("An error occured");
+        toast.error("An error occurred");
         isLoading(false);
       }
     } else {
@@ -325,7 +325,7 @@ export default function CreateJobForm() {
         router.push("/home");
       } catch (err) {
         console.error(err?.response);
-        toast.error("An error occured");
+        toast.error("An error occurred");
         isLoading(false);
       }
     }

@@ -58,6 +58,8 @@ export default function Home() {
     setLoading(false);
   };
 
+  
+
   return (
     <div className="relative mx-auto w-full h-full snap-y mb-10">
       <div className="sticky top-0 left-0 z-10">

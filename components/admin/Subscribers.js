@@ -145,7 +145,7 @@ export default function Subscribers() {
                   Email address
                 </th>
                 <th className="text-sm 2xl:text-[18px] text-left text-white md:text-md font-normal px-2 py-3  break-words">
-                  Subcribed Date
+                  Subscribed Date
                 </th>
               </tr>
             </thead>
