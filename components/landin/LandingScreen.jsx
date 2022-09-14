@@ -13,14 +13,14 @@ const services = [
     index: "01",
     service: "Digitize",
     description:
-      "Nitchetechies provides creative software solutions to bridge the gap between execution of your daily businesses and the many evolving technologies.",
+      "Anj america provides creative software solutions to bridge the gap between execution of your daily businesses and the many evolving technologies.",
     link: "/digitize",
   },
   {
     index: "02",
     service: "Hire Right",
     description:
-      "Hire from the top 2% of software talent in the world. We have an exclusive pool of the top niche Professionals who can be sourced to your project as a full time or a consultant.",
+      "Hire from the top 2% of software talent in the world. We have an exclusive pool of the top anj Professionals who can be sourced to your project as a full time or a consultant.",
     link: "/staffing",
   },
 ];
