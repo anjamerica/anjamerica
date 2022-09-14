@@ -33,7 +33,7 @@ export default function CreateJobForm() {
   const [location, setLocation] = useState({});
   const [formError, setFormError] = useState({});
   const [id, setId] = useState("");
-  const [loading, isLoading] = useState(false);
+  const [loading, setLoading] = useState(false);
   const router = useRouter();
   const { loaderToggler } = useContext(loadingContext);
   const formRef = useRef();
@@ -289,7 +289,6 @@ export default function CreateJobForm() {
 
   const handleSubmitForm = async (e) => {
     e.preventDefault();
-    isLoading(true);
 
     let jobDetails = {
       job_id: id,
@@ -305,31 +304,37 @@ export default function CreateJobForm() {
     };
     if (!jobId) {
       try {
+        setLoading(true);
         validations();
         const headers = { Authorization: localStorage.getItem("token") };
         const res = await createJob(jobDetails, headers);
         handleClearForm();
         toast.success("Job created successfully");
         router.push("/home");
+        setLoading(false);
       } catch (err) {
         console.error(err?.response);
         toast.error("An error occurred");
-        isLoading(false);
+        setLoading(false);
       }
     } else {
       try {
+        setLoading(true);
         validations();
         const headers = { Authorization: localStorage.getItem("token") };
         const res = await updateJobDetails(jobId, jobDetails, headers);
         toast.success("Job details updated successfully");
         router.push("/home");
+        setLoading(false);
       } catch (err) {
         console.error(err?.response);
         toast.error("An error occurred");
-        isLoading(false);
+        setLoading(false);
       }
     }
   };
+
+
   return (
     <div className="relative mx-auto w-full h-full snap-y pb-10">
       <Loader />
