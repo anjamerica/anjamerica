@@ -116,7 +116,7 @@ export default function Staffing() {
           <p className="w-full md:w-[568px] text-[#0a1f44] mt-4 text-[.85rem] text-left break-words md:text-[16px] 2xl:text-[20px]">
             Our hiring process includes various levels for screening and a hard
             background check which takes weeks and sometimes months to cherry
-            pick the right candidate. Top Corporates rely on Niche resources for
+            pick the right candidate. Top Corporates rely on Anj resources for
             their most important and critical fixed bid as well as Time and
             Material project needs. Our staff has the right blend of culture,
             technology, and interpersonal skills which brings great business
