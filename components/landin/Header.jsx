@@ -16,6 +16,7 @@ export default function Header() {
     setActive(router.pathname);
   }, [router.pathname]);
 
+  console.log(router.pathname)
   useEffect(() => {
     window.onscroll = function (e) {
       let scroll = this.scrollY;
