@@ -28,7 +28,7 @@ function DatePicker({ value, setValue = () => {}, textColor }) {
       )}
       <img
         src="/admin/calender_icon.svg"
-        className="ml-[26px] w-[25px] h-[25px] sm:w-[27px] md:h-[27px] "
+        className="ml-[26px] w-[25px] h-[25px] sm:w-[27px] md:h-[27px] select-all"
         onClick={handleDate}
       />
     </div>
