@@ -593,7 +593,7 @@ button:focus {
 /* blog page */
 
 .blog-card {
-  @apply rounded-xl w-full h-[650px] sm:h-[700px] xl:h-[600px] 2xl:h-[650px] bg-white drop-shadow-xl;
+  @apply rounded-xl w-full h-[650px] sm:h-[700px] xl:h-[650px] bg-white drop-shadow-xl;
 }
 
 .text-blog-date {
