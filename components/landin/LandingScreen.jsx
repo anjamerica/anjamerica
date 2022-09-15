@@ -20,7 +20,7 @@ const services = [
     index: "02",
     service: "Hire Right",
     description:
-      "Hire from the top 2% of software talent in the world. We have an exclusive pool of the top anj Professionals who can be sourced to your project as a full time or a consultant.",
+      "Hire from the top 2% of software talent in the world. We have an exclusive pool of the top Anj professionals who can be sourced to your project as a full time or a consultant.",
     link: "/staffing",
   },
 ];
