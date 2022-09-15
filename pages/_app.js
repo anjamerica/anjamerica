@@ -6,6 +6,8 @@ import { AuthContextProvider } from "../hooks/useAuth";
 import LoadingProvider from "../hooks/loadingContext";
 import { Toaster } from "react-hot-toast";
 import { useEffect } from "react";
+import Layout from "../components/layout/Layout";
+import Header from "../components/landin/Header";
 
 function MyApp({ Component, pageProps }) {
   useEffect(() => {
@@ -42,7 +44,14 @@ function MyApp({ Component, pageProps }) {
 }
 
 const DefaultLayout = ({ children }) => {
-  return <>{children}</>;
+  return (
+    <main className="relative mx-auto w-full h-full snap-y scroll-delay">
+      <div className="w-full h-fit bg-white shadow-sm sticky left-0 top-0 z-[999]">
+        <Header />
+      </div>
+      <div className="lg:mt-[80px]">{children}</div>
+    </main>
+  );
 };
 
 export default MyApp;

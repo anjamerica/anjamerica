@@ -6,10 +6,7 @@ import Header from "../../components/landin/Header";
 
 export default function index() {
   return (
-    <main className="mx-auto w-full h-full snap-y bg-[#F4F4F4]">
-      <div className="w-full h-fit bg-white shadow-sm sticky top-0 left-0 z-50">
-        <Header />
-      </div>
+    <main className="mx-auto w-full h-full snap-y bg-[#F4F4F4] lg:-mt-[80px]">
       <div className="w-full px-5 pt-5 md:pt-[60px] md:px-[6.3%] bg-white">
         <div className="rounded-xl flex flex-col md:flex-row w-full md:min-h-[510px]  h-full bg-[#FFF] drop-shadow-xl">
           <img

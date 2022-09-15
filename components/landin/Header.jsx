@@ -14,7 +14,7 @@ export default function Header() {
   const router = useRouter();
   useEffect(() => {
     setActive(router.asPath);
-  }, [router.asPaths]);
+  }, [router.asPath]);
 
   console.log(router.asPath)
   useEffect(() => {
