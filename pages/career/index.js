@@ -1,7 +1,5 @@
-import Link from "next/link";
 import React, { useState, useEffect, useContext } from "react";
 import JobCard from "../../components/career/JobCard";
-import Contact from "../../components/contact/Contact";
 import Footer from "../../components/landin/Footer";
 import Header from "../../components/landin/Header";
 import Loader from "../../components/layout/Loader";
@@ -32,9 +30,6 @@ export default function Career() {
 
   return (
     <main className="relative mx-auto w-full h-full snap-y">
-      <div className="w-full h-fit bg-white shadow-sm sticky top-0 left-0 z-50">
-        <Header />
-      </div>
       <section className="relative">
         <div
           style={{
@@ -43,7 +38,7 @@ export default function Career() {
             backgroundSize: "100%",
             backgroundRepeat: "no-repeat",
           }}
-          className="w-full lg:h-[18rem] h-full bg-image-mobile sm:bg-image-web-career"
+          className="w-full lg:h-[18rem] h-full bg-image-mobile lg:-mt-[80px] sm:bg-image-web-career"
         >
           <div className=" h-[224px] sm:h-[227px]  pt-10 pb-20  w-full">
             <div className="flex h-full flex-col justify-center mt-[20px] self-center items-center">

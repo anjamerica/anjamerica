@@ -8,10 +8,7 @@ import Footer from "../components/landin/Footer";
 export default function Digitize() {
   return (
     <main className="mx-auto w-full h-full snap-y">
-      <div className="w-full h-fit bg-white shadow-sm sticky top-0 left-0 z-50">
-        <Header />
-      </div>
-      <section className="relative p-5 md:p-10 flex justify-center flex-col">
+      <section className="relative p-5 md:p-10 flex justify-center flex-col lg:-mt-[80px]">
         <p className="text-anim-blog  w-full heading-main text-[1.5rem] font-extrabold md:text-[2.5rem]  leading-[33px]  md:leading-[45px]  text-[#0a1f44] text-center mt-4 sm:mt-10">
           We Provide Software Solution
         </p>

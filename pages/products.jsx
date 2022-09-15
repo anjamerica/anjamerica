@@ -68,6 +68,8 @@ export default function Products() {
     createTimer();
   }, []);
 
+  
+
   return (
     <div className="relative flex flex-col pt-10 pb-20 md:py-10 bg-white items-center justify-center w-full">
       <div className="flex flex-col gap-0 self-center justify-center">

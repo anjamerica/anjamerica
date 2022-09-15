@@ -8,10 +8,7 @@ import Footer from "../components/landin/Footer";
 export default function Staffing() {
   return (
     <main className="mx-auto w-full h-full snap-y">
-      <div className="w-full h-fit bg-white shadow-sm sticky top-0 left-0 z-50">
-        <Header />
-      </div>
-      <section className="staffing-bg">
+      <section className="staffing-bg lg:-mt-[80px]">
         <div className="flex flex-col w-full px-10 md:px-20 self-center mt-8">
           <p className="text-[.85rem] text-left font-semibold break-words tracking-[1px] md:text-[14px] 2xl:text-[20px] text-[#04c0de]">
             WORKS WITH TOP LEVEL IT COMPANIES
