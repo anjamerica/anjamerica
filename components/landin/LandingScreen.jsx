@@ -289,6 +289,7 @@ export default function LandingScreen() {
               />
             </div>
           </div>
+          <div className="h-[5px]" id="products"/>
         </div>
       </section>
       <section>
