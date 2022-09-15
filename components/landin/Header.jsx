@@ -13,20 +13,16 @@ export default function Header() {
   const headRef = useRef(null);
   const router = useRouter();
   useEffect(() => {
-    setActive(router.pathname);
-  }, [router.pathname]);
+    setActive(router.asPath);
+  }, [router.asPaths]);
 
-  console.log(router.pathname)
+  console.log(router.asPath)
   useEffect(() => {
     window.onscroll = function (e) {
       let scroll = this.scrollY;
       if (scroll >= 50) {
-        // headRef.current.style.height = "70px";
-        // logoRef.current.style.width = "130px"
         headRef.current.style.transform="scale(0.98)";
       } else {
-        // headRef.current.style.height = "80px";
-        // logoRef.current.style.width = "154px"
         headRef.current.style.transform="scale(1)";
       }
     };
