@@ -46,7 +46,7 @@ function MyApp({ Component, pageProps }) {
 const DefaultLayout = ({ children }) => {
   return (
     <main className="relative mx-auto w-full h-full snap-y scroll-delay">
-      <div className="w-full h-fit bg-white shadow-sm sticky left-0 top-0 z-[999]">
+      <div className="bg-white shadow-sm sticky left-0 top-0 z-[999]">
         <Header />
       </div>
       <div className="lg:mt-[80px]">{children}</div>
