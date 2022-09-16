@@ -39,9 +39,6 @@ export default function Header() {
             ? "relative transition-all w-full flex bg-white justify-between items-center h-[80px]  px-4  md:px-[2%] md:py-4 md:items-center md:h-[80px] sh"
             : "relative w-full  flex justify-between items-center h-[80px]  px-4  md:px-[2%] md:py-4 md:items-center md:h-[80px] sh"
         }`}
-        data-aos="fade-down"
-        data-aos-easing="linear"
-        data-aos-duration="1500"
       >
         <div className=" xl:ml-5 w-fit">
           <Link href="/">
