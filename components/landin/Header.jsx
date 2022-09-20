@@ -41,7 +41,7 @@ export default function Header() {
         }`}
       >
         <div className=" xl:ml-5 w-fit">
-          <Link href="/">
+          <Link href="/" passHref>
             <img
               ref={logoRef}
               alt="logo image"
@@ -51,7 +51,7 @@ export default function Header() {
           </Link>
         </div>
         <div className="hidden lg:flex justify-around gap-1 xl:gap-3 items-center md:mx-4 mr-7">
-          <Link href="/about">
+          <Link href="/about" passHref>
             <span
               className={`cursor-pointer text-center md:text-base 2xl:text-[20px] mx-2 md:mx-4 font-semibold hover:text-primary-blue ${
                 active == "/about" ? "text-[#07038C]" : "text-[#08081E]"
