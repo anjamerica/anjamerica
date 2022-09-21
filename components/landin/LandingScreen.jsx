@@ -26,7 +26,7 @@ const services = [
 ];
 
 export default function LandingScreen() {
-  const [serviceActive, setServiceActive] = useState(1);
+  const [serviceActive, setServiceActive] = useState(0);
   const ref = useRef(null);
   const scroll = (dir) => {
     switch (dir) {
