@@ -25,10 +25,9 @@ export default function BlogSix() {
   var count = 1;
   return (
     <main className="mx-auto w-full h-full snap-y bg-[#F4F4F4]">
-      <Header />
       <section>
         <div>
-          <div className="relative w-full h-full">
+          <div className="relative w-full h-full lg:-mt-[80px]">
             <div
               style={{
                 background: `url(${"/assets/landing/blog/blog_6.jpg"})`,

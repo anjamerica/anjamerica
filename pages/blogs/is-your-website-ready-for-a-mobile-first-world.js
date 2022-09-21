@@ -38,10 +38,9 @@ export default function BlogTwo() {
   var count = 1;
   return (
     <main className="mx-auto w-full h-full snap-y bg-[#F4F4F4]">
-      <Header />
       <section>
         <div>
-          <div className="relative w-full h-full">
+          <div className="relative w-full h-full lg:-mt-[80px]">
            
 
             <div
