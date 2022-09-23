@@ -39,8 +39,7 @@ export default function Index() {
 
   return (
     <main className="mx-auto w-full h-full snap-y">
-      <div className="w-full h-fit bg-white shadow-sm sticky top-0 left-0 z-50">
-        <Header />
+      <div className="w-full h-fit bg-white shadow-sm sticky top-0 left-0 z-50 lg:-mt-[80px]">
       </div>
       <Loader />
       <section className="relative">

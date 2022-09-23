@@ -98,7 +98,7 @@ export default function LandingScreen() {
       </section>
       <hr className="h-[5px] bg-primary-blue" />
       <section id="services">
-        <div className="bg-white flex flex-col h-fit justify-center py-10 select-none">
+        <div className="bg-white flex flex-col h-fit justify-center py-10">
           <div className="flex flex-col gap-1 self-center justify-center">
             <span className="text-subheading leading-[3%] text-primary-blue self-center">
               WHAT WE DO
@@ -122,12 +122,12 @@ export default function LandingScreen() {
                     key={index}
                   >
                     <div className="relative flex flex-1 justify-between">
-                      <div className="flex flex-row gap-[.5rem] md:gap-[1rem] select-none">
+                      <div className="flex flex-row gap-[.5rem] md:gap-[1rem]">
                         <div
                           className={`${
                             serviceActive === index
-                              ? "flex items-center justify-center select-none self-center text-white p-4 text-[16px] 2xl:text-[24px] h-10 w-10 rounded-full bg-primary-blue"
-                              : "flex items-center select-none  text-primary-gray text-md text-[16px] 2xl:text-[24px] p-2"
+                              ? "flex items-center justify-center  self-center text-white p-4 text-[16px] 2xl:text-[24px] h-10 w-10 rounded-full bg-primary-blue"
+                              : "flex items-center text-primary-gray text-md text-[16px] 2xl:text-[24px] p-2"
                           }`}
                         >
                           {item.index}
@@ -135,8 +135,8 @@ export default function LandingScreen() {
                         <span
                           className={`${
                             serviceActive === index
-                              ? "service cursor-pointer select-none flex break-words w-[85%] sm:w-full items-center 2xl:text-[24px] text-primary-blue py-3 text-lg"
-                              : "cursor-pointer select-none flex items-center text-primary-gray 2xl:text-[24px] text-md md:text-base"
+                              ? "service cursor-pointer  flex break-words w-[85%] sm:w-full items-center 2xl:text-[24px] text-primary-blue py-3 text-lg"
+                              : "cursor-pointer flex items-center text-primary-gray 2xl:text-[24px] text-md md:text-base"
                           }`}
                         >
                           {item.service}
@@ -155,7 +155,7 @@ export default function LandingScreen() {
                     <div className="pb-2">
                       {serviceActive === index && (
                         <div className="text-anim-services flex flex-col gap-3">
-                          <p className="select-none font-[500] 2xl:text-[24px] text-left px-5 text-md md:leading-[38px] text-primary-black md:text-base">
+                          <p className=" font-[500] 2xl:text-[24px] text-left px-5 text-md md:leading-[38px] text-primary-black md:text-base">
                             {item.description}
                           </p>
                           <Link href={item.link}>
@@ -274,7 +274,7 @@ export default function LandingScreen() {
               <img
                 alt="left arrow"
                 src="/landing/prev-arrow.svg"
-                className="h-10  w-fit select-none absolute top-[6px] left-[2rem] md:top-[10px]  md:left-[5rem] text-primary-gray cursor-pointer"
+                className="h-10  w-fit  absolute top-[6px] left-[2rem] md:top-[10px]  md:left-[5rem] text-primary-gray cursor-pointer"
                 onClick={() => {
                   scroll("left");
                 }}
@@ -282,14 +282,14 @@ export default function LandingScreen() {
               <img
                 alt="right arrow"
                 src="/landing/next-arrow.svg"
-                className="h-10 w-fit md:v-h-center select-none absolute right-[2rem] top-[6px]  md:top-[10px] md:right-[5rem] text-primary-gray cursor-pointer"
+                className="h-10 w-fit md:v-h-center  absolute right-[2rem] top-[6px]  md:top-[10px] md:right-[5rem] text-primary-gray cursor-pointer"
                 onClick={() => {
                   scroll("right");
                 }}
               />
             </div>
           </div>
-          <div className="h-[5px]" id="products"/>
+          <div className="h-[5px]" id="products" />
         </div>
       </section>
       <section>

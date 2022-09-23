@@ -37,7 +37,7 @@ export default function JobCardAdmin({ item, getDetails }) {
   // };
 
   return (
-    <div className="relative h-fit md:h-fit lg:h-[15rem] 2xl:h-[16rem] flex flex-row select-none flex-1 bg-[#F0F0F0] rounded-lg w-full">
+    <div className="relative h-fit md:h-fit lg:h-[15rem] 2xl:h-[16rem] flex flex-row flex-1 bg-[#F0F0F0] rounded-lg w-full">
       <div
         className=" gap-2 flex flex-col p-4 md:gap-4"
         style={{ width: "inherit" }}

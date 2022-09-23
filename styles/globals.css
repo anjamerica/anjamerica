@@ -50,7 +50,7 @@ a {
 }
 
 .yellow-action-button {
-  @apply w-fit font-[800] text-black select-none bg-primary-yellow px-4 py-2  uppercase  rounded-full hover:bg-[#ecd378] transition-all text-center flex items-center justify-center;
+  @apply w-fit font-[800] text-black  bg-primary-yellow px-4 py-2  uppercase  rounded-full hover:bg-[#ecd378] transition-all text-center flex items-center justify-center;
 }
 
 .box-shadow {
@@ -1004,4 +1004,36 @@ input.file {
 
 .swiper-button-next {
   color: #000;
+}
+
+.anim-product-img {
+  animation: anim-product 1s ease-in;
+}
+
+@keyframes anim-product {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.form-scroll {
+  overflow-y: auto;
+}
+
+.form-scroll::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+}
+
+.form-scroll::-webkit-scrollbar-track {
+  width: 0px;
+  background: transparent;
+}
+
+.form-scroll::-webkit-scrollbar-thumb {
+  width: 0px;
+  background: transparent;
 }
