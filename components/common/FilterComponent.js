@@ -35,7 +35,7 @@ export const FilterComponent = ({ setFilter }) => {
       ></div>
       <div
         className={`filter-component bg-white grid grid-cols-11 sm:gap-4 p-4  z-50 w-[312px] h-[200px] sm:w-[379px] sm:h-[222px] shadow rounded-md`}
-        >
+      >
         <div className="col-span-11">
           <div className="flex-col w-full text-[#2B3131 text-lg] sm:text-[24px] font-normal sm:text-2xl">
             Select date
@@ -49,10 +49,9 @@ export const FilterComponent = ({ setFilter }) => {
             >
               From date
             </span>
-            <DatePicker
-              value={fromDate}
-              setValue={setFromDate}
-            />
+            <div>
+              <DatePicker value={fromDate} setValue={setFromDate} />
+            </div>
           </div>
         </div>
         <div className="w-full col-span-1 place-items-center flex justify-center items-center h-full">
@@ -66,11 +65,9 @@ export const FilterComponent = ({ setFilter }) => {
             >
               To date
             </label>
-
-            <DatePicker
-              value={toDate}
-              setValue={setToDate}
-            />
+            <div>
+              <DatePicker value={toDate} setValue={setToDate} />
+            </div>
           </div>
         </div>
 
