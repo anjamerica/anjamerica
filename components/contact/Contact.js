@@ -205,7 +205,7 @@ export default function Contact() {
 
             <hr />
             <button
-              className="font-medium mt-2 text-white bg-[#04c0de] px-4 py-3 hover:bg-white hover:text-[#04c0de] transition-all  select-none rounded-md text-center flex items-center justify-center text-xs w-full"
+              className="font-medium mt-2 text-white bg-[#04c0de] px-4 py-3 hover:bg-white hover:text-[#04c0de] transition-all rounded-md text-center flex items-center justify-center text-xs w-full"
               onClick={handleSubmit}
             >
               Submit
