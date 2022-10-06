@@ -15,11 +15,8 @@ module.exports = {
         "bg-light-grey":"#EFEFEFE", 
         "secondary-gray":"#464545",
 
-
-        "primary-blue-dark": "#05061A",
-        "primary-green": "#04c0de",
-        "secondary-green": "#16A59E",     
-        "primary-violet": "#252244",     
+        "gray-medium":"#3A3A48",
+        "primary-blue-dark": "#05061A",    
         "secondary-gray": "#535353",
         "violet-dark": "#0A0726",
         "primary-red":"#E70911",
@@ -40,6 +37,7 @@ module.exports = {
         'image-web-career': "url('/landing/career.png')",
         'landing-image-mob':"url('/landing/bg_landing.svg')",
         'landing-image-web':"url('/landing/bg_web.png')",
+        'polygon-image':"url('/assets/landing/polygon.svg')",
       }
     },
   },

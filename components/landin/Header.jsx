@@ -36,8 +36,8 @@ export default function Header() {
         className={`${
           router.pathname ===
           ("/blogs" || "/about" || "/digitize" || "/staffing")
-            ? "relative transition-all w-full flex bg-white justify-between items-center h-[80px]  px-4  md:px-[2%] md:py-4 md:items-center md:h-[80px] sh"
-            : "relative w-full  flex justify-between items-center h-[80px]  px-4  md:px-[2%] md:py-4 md:items-center md:h-[80px] sh"
+            ? "relative transition-all w-full flex bg-white justify-between items-center h-[80px]  px-4  md:px-[2%] md:py-4 md:items-center  sh"
+            : "relative w-full  flex justify-between items-center h-[80px]  px-4  md:px-[2%] md:py-4 md:items-center  sh"
         }`}
       >
         <div className=" xl:ml-5 w-fit">
@@ -118,7 +118,7 @@ export default function Header() {
               </span>
             </span>
           </Link>
-          <Link href="/career">
+          {/* <Link href="/career">
             <span
               className={`cursor-pointer text-center md:text-base 2xl:text-[20px] mx-2 md:mx-4 font-semibold hover:text-primary-blue ${
                 active == "/career" ? "text-[#07038C]" : "text-[#08081E]"
@@ -139,7 +139,7 @@ export default function Header() {
                 )}
               </span>
             </span>
-          </Link>
+          </Link> */}
           <Link href="/#products">
             <span
               className={`cursor-pointer text-center md:text-base 2xl:text-[20px] mx-2 md:mx-4 font-semibold hover:text-primary-blue ${
@@ -236,11 +236,11 @@ export default function Header() {
                     Hire Right
                   </li>
                 </Link>
-                <Link href="/career">
+                {/* <Link href="/career">
                   <li className="text-left py-2 text-primary-blue-dark hover:text-blue-800 text-xs font-semibold">
                     Career
                   </li>
-                </Link>
+                </Link> */}
                 <Link href="/#products">
                   <li className=" text-left py-2 text-primary-blue-dark hover:text-blue-800 text-xs font-semibold">
                     Our Products

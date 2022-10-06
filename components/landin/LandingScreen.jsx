@@ -6,22 +6,25 @@ import Products from "../../pages/products";
 import Footer from "./Footer";
 import Link from "next/link";
 import Contact from "../contact/Contact";
-// import Cards from "../products/Cards";
+import { PeopleIcon, SettingsIcon } from "../common/icons";
+import Card from "./Card";
 
 const services = [
   {
-    index: "01",
-    service: "Digitize",
+    icon: <PeopleIcon />,
+    subTitlte: "Works with top level IT Companies",
+    title: "Catering to All Staffing Needs",
     description:
-      "Anj america provides creative software solutions to bridge the gap between execution of your daily businesses and the many evolving technologies.",
-    link: "/digitize",
+      "Hire from top 2% of software talent in the world. We have an exclusive pool of the top ANJ America Professionals who can be sourced to your project as a full time or a consultant.",
+    link: "/staffing",
   },
   {
-    index: "02",
-    service: "Hire Right",
+    icon: <SettingsIcon />,
+    subTitlte: "",
+    title: "We Provide Software Solution",
     description:
-      "Hire from the top 2% of software talent in the world. We have an exclusive pool of the top Anj professionals who can be sourced to your project as a full time or a consultant.",
-    link: "/staffing",
+      "Our goal is to help you focus on your business while we integrate highly competitive technology to help your business grow faster.",
+    link: "/digitize",
   },
 ];
 
@@ -48,10 +51,10 @@ export default function LandingScreen() {
         <div
           style={{
             objectFit: "cover",
-            backgroundSize: "100% ",
+            backgroundSize: "100% 110%",
             backgroundRepeat: "no-repeat",
           }}
-          className="relative w-full h-[60vh] md:min-h-screen bg-landing-image-mob lg:-mt-[80px] sm:bg-landing-image-web"
+          className="relative w-full h-[80vh] md:min-h-[75vh] flex justify-center items-center bg-landing-image-mob lg:-mt-[80px] sm:bg-landing-image-web"
         >
           <div className=" h-[60vh] pt-10 pb-20  w-full md:h-[90vh]">
             <div className="hidden lg:flex c1 absolute lg:mt-[80px] top-[30px]  left-[400px]"></div>
@@ -83,7 +86,7 @@ export default function LandingScreen() {
                   </button>
                 </Link>
               </div>
-              <div className="hidden md:flex md:absolute md:bottom-6 md:self-center md:cursor-pointer">
+              <div className="flex absolute bottom-6 self-center cursor-pointer">
                 <Link href="/#services">
                   <img
                     alt="arrow button"
@@ -110,93 +113,46 @@ export default function LandingScreen() {
               Services to help drive your business to success.
             </span>
           </div>
-          <div className="flex flex-col px-[2rem] pt-[2rem] md:p-[5rem]">
-            <div className="relative  flex flex-col items-start justify-start gap-[.5rem] md:gap-[2rem] 2xl:gap-[3rem]">
-              {services.map((item, index) => {
+          <div className="flex flex-col sm:flex-row justify-center gap-4 md:gap-8 px-10 md:px-8 lg:px-10 pt-[2rem] md:p-[5rem] ">
+            {services &&
+              services.map((item, i) => {
                 return (
-                  <li
-                    onClick={() => {
-                      setServiceActive(index);
-                    }}
-                    className="w-full flex flex-col"
-                    key={index}
-                  >
-                    <div className="relative flex flex-1 justify-between">
-                      <div className="flex flex-row gap-[.5rem] md:gap-[1rem]">
-                        <div
-                          className={`${
-                            serviceActive === index
-                              ? "flex items-center justify-center  self-center text-white p-4 text-[16px] 2xl:text-[24px] h-10 w-10 rounded-full bg-primary-blue"
-                              : "flex items-center text-primary-gray text-md text-[16px] 2xl:text-[24px] p-2"
-                          }`}
-                        >
-                          {item.index}
-                        </div>
-                        <span
-                          className={`${
-                            serviceActive === index
-                              ? "service cursor-pointer  flex break-words w-[85%] sm:w-full items-center 2xl:text-[24px] text-primary-blue py-3 text-lg"
-                              : "cursor-pointer flex items-center text-primary-gray 2xl:text-[24px] text-md md:text-base"
-                          }`}
-                        >
-                          {item.service}
-                        </span>
-                        <img
-                          alt="right arrow"
-                          src="/assets/landing/right-arrow.svg"
-                          className={`${
-                            serviceActive === index
-                              ? "rotate-90 absolute top-0 right-0 w-fit h-5 2xl:w-10 self-end"
-                              : "rotate-0 absolute top-0 right-0 w-fit h-5 2xl:w-10 self-end"
-                          }`}
-                        />
-                      </div>
-                    </div>
-                    <div className="pb-2">
-                      {serviceActive === index && (
-                        <div className="text-anim-services flex flex-col gap-3">
-                          <p className=" font-[500] 2xl:text-[24px] text-left px-5 text-md md:leading-[38px] text-primary-black md:text-base">
-                            {item.description}
-                          </p>
-                          <Link href={item.link}>
-                            <button
-                              data-aos="zoom-in"
-                              className="w-fit shw font-semibold mx-5 text-xs md:text-md  uppercase text-white bg-primary-blue px-4 py-2 sm:px-6 sm:py-3  tracking-wide rounded-full  hover:bg-blue-800 cursor-pointer transition-all text-center flex items-center justify-center"
-                            >
-                              READ MORE
-                            </button>
-                          </Link>
-                        </div>
-                      )}
-                    </div>
-                    <hr className="bg-[#E7E7E7] h-[.1px]" />
-                  </li>
+                  <Card
+                    icon={item?.icon}
+                    subTitle={item?.subTitlte}
+                    title={item?.title}
+                    description={item?.description}
+                    link={item?.link}
+                    key={i}
+                  />
                 );
               })}
-            </div>
           </div>
         </div>
       </section>
       <section>
-        <div
-          className="flex flex-col justify-center items-center py-10 gap-4"
-          style={{
-            background: `url(${"/landing/career-section.png"})`,
-            backgroundSize: "100% 100%",
-          }}
-        >
-          <div className="text-subheading text-white">
-            FIND THAT PERFECT FIT
-          </div>
-          <div className="flex flex-col w-[70%] items-center text-center text-white text-[24px] md:text-[48px] font-semibold break-words">
-            New jobs everyday - Leave us your resume for future opportunities!
-          </div>
+        <div className="flex flex-col md:flex-row justify-center items-center bg-gradient-career h-[100vh] sm:h-[90vh] md:px-10">
           <div>
-            <Link href="/career">
-              <button className="yellow-action-button shw">
-                Explore Career
-              </button>
-            </Link>
+            <img
+              className="w-[90vw] h-[40vh]  xl:w-[35vw] md:h-fit object-contain"
+              src="/assets/landing/career-section-vector.png"
+              alt="career section image vector"
+            />
+          </div>
+          <div className="flex flex-col gap-4 xl:w-[50vw] justify-center items-center md:ml-16 xl:pl-10 md:items-start">
+            <div className="text-subheading text-base xl:text-2xl uppercase text-[#444444]">
+              FIND THAT PERFECT FIT
+            </div>
+            <div className="flex flex-col xl:w-[80%] items-center text-[#444444] text-center md:text-start  px-3 sm:px-5 md:px-0 text-[24px] md:text-[38px] xl:text-[48px] font-bold break-words">
+              New jobs everyday - Leave us your resume for future opportunities!
+            </div>
+            <div>
+              <Link href="/#contact">
+                <button className="yellow-action-blue shw">
+                  Explore Career
+                </button>
+              </Link>
+            </div>
           </div>
         </div>
       </section>

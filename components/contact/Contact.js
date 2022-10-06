@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useRef } from "react";
 import { loadingContext } from "../../hooks/loadingContext";
 import { postMail } from "../../services/postMail";
 import validator from "validator";
@@ -10,6 +10,8 @@ export default function Contact() {
   const [formError, setFormError] = useState({});
   const [captchaValue, setCaptchaValue] = useState("");
   const { loaderToggler } = useContext(loadingContext);
+  const [file, setFile] = useState({});
+  const formRef = useRef();
 
   const handleInputChange = (key, value) => {
     setDetails({
@@ -21,6 +23,10 @@ export default function Contact() {
   function onCaptchaChange(value) {
     setCaptchaValue(value);
   }
+
+  const handleImageChange = (e) => {
+    setFile(e.target.files[0]);
+  };
 
   const handleSubmit = async () => {
     try {
@@ -102,14 +108,20 @@ export default function Contact() {
               <span className="font-thin text-[16px] 2xl:text-[20px] text-[#141414]">
                 10 Billiter Road, L7A4G8, Brampton, Canada
               </span>
-              
+              <div className="bg-[#7de3f3] sm:w-[90%] h-[1px] my-[10px]" />
+              <span className="font-thin text-[16px] 2xl:text-[20px] text-[#141414]">
+                119 South Main Street, Memphis, TN 38013
+              </span>
             </div>
             <div className="flex flex-col mt-2 sm:mt-2 gap-2">
               <span className="text-[12px] 2xl:text-[16px] heading-main font-[900] text-[#141414]">
                 CALL US
               </span>
               <span className="font-thin text-[16px] 2xl:text-[20px] text-[#141414]">
-                9016005572
+                +1 901 310 0451 (USA & Canada)
+              </span>
+              <span className="font-thin text-[16px] mt-2 2xl:text-[20px] text-[#141414]">
+                +44 7988 782024 (United Kingdom)
               </span>
             </div>
             <div className="flex flex-col mt-2 sm:mt-2 gap-2">
@@ -164,6 +176,28 @@ export default function Contact() {
               <span className="text-xs text-red-600">
                 {formError.email_err}
               </span>
+            </div>
+            <div className="w-full flex justify-between items-center text-white">
+              {file?.name && (
+                <span className="text-xs md:text-sm truncate w-fit">
+                  {file?.name}
+                </span>
+              )}
+              <label
+                htmlFor="file-input"
+                className=" p-2 cursor-pointer text-xs md:text-md 2xl:text-[18px]  bg-[#04c0de] rounded-[.25rem] whitespace-nowrap text-white text-center leading-normal"
+              >
+                Upload
+              </label>
+              <input
+                id="file-input"
+                type="file"
+                name="file"
+                ref={formRef}
+                style={{ display: "none" }}
+                accept=".pdf"
+                onChange={(e) => handleImageChange(e)}
+              />
             </div>
             <div>
               <input
