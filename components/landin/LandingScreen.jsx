@@ -157,14 +157,14 @@ export default function LandingScreen() {
         </div>
       </section>
       <section>
-        <div className=" py-10 flex items-center h-fit flex-col gap-4 bg-[#F3F3F3]">
+        <div className="hidden sm:flex sm:py-10  sm:items-center sm:h-fit sm:flex-col sm:gap-4 bg-[#F3F3F3]">
           <div className="flex flex-col gap-1">
             <div className="text-subheading-main mt-2 heading-main text-primary-black self-center">
               Businesses we&apos;ve aligned with
             </div>
           </div>
           <div className="relative mt-8 flex justify-center w-full">
-            <div className="scrollbar-landing" ref={ref}>
+            <div className="scrollbar-desktop" ref={ref}>
               <div className="flex flex-row w-full justify-between items-center h-fit max-w-[1200px] gap-[50px]">
                 <img
                   alt="logo icon"
@@ -247,6 +247,81 @@ export default function LandingScreen() {
           </div>
           <div className="h-[5px]" id="products" />
         </div>
+
+        <div className="h-screen py-10 flex items-center justify-center flex-col gap-4 bg-[#EAF2FF]  sm:hidden">
+          <div className="flex flex-col gap-1 md:gap-4 pb-8">
+            <div className="text-[.8rem] uppercase font-semibold self-center md:text-[16px] 2xl:text-[20px] text-primary-blue">WHAT WE DO</div>
+            <div className="tracking-wide break-words heading-main text-center font-bold text-[1.5rem] 2xl:text-[30px] text-black">
+              Businesses we&apos;ve aligned with
+            </div>
+          </div>
+          <div className="scrollbar-landing">
+            <div className="grid grid-cols-1 gap-y-[30px]">
+              <img
+                alt="logo image"
+                src="/assets/business/progressive.png"
+                className="logo-hover-color mt-2"
+              />
+              <img
+                alt="logo image"
+                src="/assets/business/icici.png"
+                className="logo-hover-color"
+              />
+              <img
+                alt="logo image"
+                src="/assets/business/transamerica.png"
+                className="logo-hover-color"
+              />
+              <img
+                alt="logo image"
+                src="/assets/business/nasdaq.png"
+                className="logo-hover-color"
+              />
+              <img
+                alt="logo image"
+                src="/assets/business/statefarm.png"
+                className="logo-hover-color mt-2"
+              />
+              <img
+                alt="logo image"
+                src="/assets/business/nationwide.png"
+                className="logo-hover-color"
+              />
+              <img
+                alt="logo image"
+                src="/assets/business/stateauto.png"
+                className="logo-hover-color"
+              />
+              <img
+                alt="logo image"
+                src="/assets/business/insight.png"
+                className="logo-hover-color"
+              />
+              <img
+                alt="logo image"
+                src="/assets/business/verizon.png"
+                className="logo-hover-color"
+              />
+              <img
+                alt="logo image"
+                src="/assets/business/travelers.png"
+                className="logo-hover-color"
+              />
+              <img
+                alt="logo image"
+                src="/assets/business/hunginton.png"
+                className="logo-hover-color mt-2"
+              />
+              <img
+                alt="logo image"
+                src="/assets/business/tata.png"
+                className="logo-hover-color"
+              />
+            </div>
+          </div>
+          <div className="5px bg-white" id="products" />
+        </div>
+
       </section>
       <section>
         <Products />
