@@ -9,7 +9,7 @@ import API from "../../services/api";
 export default function Contact() {
   const [details, setDetails] = useState({});
   const [formError, setFormError] = useState({});
-  // const [captchaValue, setCaptchaValue] = useState("");
+  const [captchaValue, setCaptchaValue] = useState("");
   const [fileLocation, setFileLocation] = useState("");
   const { loaderToggler } = useContext(loadingContext);
   const [file, setFile] = useState({});
@@ -22,9 +22,9 @@ export default function Contact() {
     });
   };
 
-  // function onCaptchaChange(value) {
-  //   setCaptchaValue(value);
-  // }
+  function onCaptchaChange(value) {
+    setCaptchaValue(value);
+  }
 
   const handleImageChange = (e) => {
     setFile(e.target.files[0]);
@@ -57,9 +57,9 @@ export default function Contact() {
       if (!details.message) {
         return setFormError({ message_err: "Message is required" });
       }
-      // if (!captchaValue) {
-      //   return setFormError({ captcha_err: "Please verify the captcha" });
-      // }
+      if (!captchaValue) {
+        return setFormError({ captcha_err: "Please verify the captcha" });
+      }
 
       let loc = " ";
 
@@ -74,11 +74,8 @@ export default function Contact() {
           },
         };
         const response = await API.post(url, formData, config);
-        console.log(response?.data?.payload?.file_location);
         loc = response?.data?.payload?.file_location;
       }
-
-      console.log(loc);
 
       const Details = {
         ...details,
@@ -250,7 +247,7 @@ export default function Contact() {
               </span>
             </div>
             <div className="w-fit">
-              {/* <ReCAPTCHA
+              <ReCAPTCHA
                 size="normal"
                 class="g-recaptcha"
                 sitekey="6Lf_GLchAAAAADi1FwEaV9VEB-s7b9Chb8bJ2pW5"
@@ -259,7 +256,7 @@ export default function Contact() {
               />
               <span className="text-xs text-red-600">
                 {formError.captcha_err}
-              </span> */}
+              </span>
             </div>
 
             <hr />
