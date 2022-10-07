@@ -4,11 +4,13 @@ import { postMail } from "../../services/postMail";
 import validator from "validator";
 import toast from "react-hot-toast";
 import ReCAPTCHA from "react-google-recaptcha";
+import API from "../../services/api";
 
 export default function Contact() {
   const [details, setDetails] = useState({});
   const [formError, setFormError] = useState({});
-  const [captchaValue, setCaptchaValue] = useState("");
+  // const [captchaValue, setCaptchaValue] = useState("");
+  const [fileLocation, setFileLocation] = useState("");
   const { loaderToggler } = useContext(loadingContext);
   const [file, setFile] = useState({});
   const formRef = useRef();
@@ -20,9 +22,9 @@ export default function Contact() {
     });
   };
 
-  function onCaptchaChange(value) {
-    setCaptchaValue(value);
-  }
+  // function onCaptchaChange(value) {
+  //   setCaptchaValue(value);
+  // }
 
   const handleImageChange = (e) => {
     setFile(e.target.files[0]);
@@ -55,12 +57,34 @@ export default function Contact() {
       if (!details.message) {
         return setFormError({ message_err: "Message is required" });
       }
-      if (!captchaValue) {
-        return setFormError({ captcha_err: "Please verify the captcha" });
+      // if (!captchaValue) {
+      //   return setFormError({ captcha_err: "Please verify the captcha" });
+      // }
+
+      let loc = " ";
+
+      if (file) {
+        const url = "/api/admin/fileUpload";
+        const formData = new FormData();
+        formData.append("file", file);
+        formData.append("fileName", file.name);
+        const config = {
+          headers: {
+            "content-type": "multipart/form-data",
+          },
+        };
+        const response = await API.post(url, formData, config);
+        console.log(response?.data?.payload?.file_location);
+        loc = response?.data?.payload?.file_location;
       }
+
+      console.log(loc);
+
       const Details = {
         ...details,
+        file_location: loc,
       };
+
       const res = await postMail(Details);
       toast.success("Message send successfully");
       setDetails({
@@ -70,6 +94,7 @@ export default function Contact() {
         description: "",
         message: "",
       });
+      setFile("");
       setFormError("");
 
       loaderToggler(false);
@@ -225,7 +250,7 @@ export default function Contact() {
               </span>
             </div>
             <div className="w-fit">
-              <ReCAPTCHA
+              {/* <ReCAPTCHA
                 size="normal"
                 class="g-recaptcha"
                 sitekey="6Lf_GLchAAAAADi1FwEaV9VEB-s7b9Chb8bJ2pW5"
@@ -234,7 +259,7 @@ export default function Contact() {
               />
               <span className="text-xs text-red-600">
                 {formError.captcha_err}
-              </span>
+              </span> */}
             </div>
 
             <hr />

@@ -29,25 +29,25 @@ export const uploadImage = async function (formData) {
   }
 };
 
-// export const uploadCv = async function (formData) {
-//   try {
-//     const config = {
-//       Headers: {
-//         "content-type": "multipart/form-data",
-//       },
-//       onUploadProgress: (event) => {
-//         setProgress(Math.round((event.loaded * 320) / event.total));
-//       },
-//     };
-//     const url = `/api/admin/fileUpload`;
+export const uploadCv = async function (formData) {
+  try {
+    const config = {
+      Headers: {
+        "content-type": "multipart/form-data",
+      },
+      onUploadProgress: (event) => {
+        setProgress(Math.round((event.loaded * 320) / event.total));
+      },
+    };
+    const url = `api/admin/fileUpload`;
 
-//     if (!url) alert(error);
+    if (!url) alert(error);
 
-//     const res = await API.post(url, formData, config);
-//     if (res.status === 200) {
-//       return { status: true, data: res.data };
-//     }
-//   } catch (error) {
-//     console.log(error);
-//   }
-// };
+    const res = await API.post(url, formData, config);
+    if (res.status === 200) {
+      return { status: true, data: res.data };
+    }
+  } catch (error) {
+    console.log(error);
+  }
+};
