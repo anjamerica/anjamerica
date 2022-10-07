@@ -21,17 +21,28 @@ var transporter = nodemailer.createTransport({
 });
 
 export const contactUsMailController = (req, res) => {
-  let { first_name, description, mobile_number, email, message } = req.body
+  let { first_name, description, mobile_number, email, message,file_location } = req.body
+  console.log("file",file_location)
   const result = validator.isMobilePhone(mobile_number)
   if (result == false) res.status(400).json(errors({ status: 400, errorMessage: 'phone_number validation error' }))
   const contactMail = contactUs(first_name, mobile_number, email, description, message)
+  
+  if(!file_location){
+    var mailOptions = {
+      from: process.env.MAIL_FROM,
+      to: process.env.MAIL_TO,
+      subject: 'Applicant Contact Information from anj america website',
+      html: contactMail
+    };
+  }
+
   var mailOptions = {
     from: process.env.MAIL_FROM,
     to: process.env.MAIL_TO,
-    subject: 'Applicant Contact Information',
+    subject: 'Resume from upload from anj america website',
     html: contactMail
   };
-
+ 
 transporter.sendMail(mailOptions, function (error, info) {
   if (error) {
     console.log(error);
