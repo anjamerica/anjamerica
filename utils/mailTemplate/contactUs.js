@@ -436,51 +436,6 @@ export const contactUs = (
                 </td>
               </tr>
               <tr>
-              <td
-                bgcolor="#F9F9F9"
-                align="left"
-                style="
-                  padding: 0px 30px 0px 30px;
-                  color: #666666;
-                  font-family: 'Poppins', sans-serif;
-                "
-              >
-                <p
-                  style="
-                    color: #000000;
-                    font-weight: 600;
-                    font-style: normal;
-                    font-size: 14px;
-                    margin: 0%;
-                  "
-                >
-                  Resume
-                </p>
-                <a href="">
-                <p
-                  style="
-                    color: #07038C;
-                    font-weight: 400;
-                    font-style: normal;
-                    font-size: 14px;
-                    margin-top: 1%;
-                  "
-                >
-                click here to view resume
-                </p>
-                </a>
-                <hr
-                  style="
-                    color: #949495;
-                    height: 0.1px;
-                    width: 100%;
-                    opacity: 22%;
-                    margin-top: 1%;
-                  "
-                />
-              </td>
-            </tr>
-              <tr>
                 <td
                   bgcolor="#F9F9F9"
                   align="left"

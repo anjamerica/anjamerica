@@ -4,6 +4,7 @@ import { application } from '../utils/mailTemplate/application';
 import validator from 'validator';
 import { errors, success } from '../utils/responds';
 import subscribers from '../models/subscribers';
+import { ResumeContactUs } from '../utils/mailTemplate/cvContactUs';
 
 const nodemailer = require('nodemailer');
 const { serverRuntimeConfig } = getConfig()
@@ -22,11 +23,18 @@ var transporter = nodemailer.createTransport({
 
 export const contactUsMailController = (req, res) => {
   let { first_name, description, mobile_number, email, message,file_location } = req.body
-  console.log("file",file_location)
   const result = validator.isMobilePhone(mobile_number)
   if (result == false) res.status(400).json(errors({ status: 400, errorMessage: 'phone_number validation error' }))
   const contactMail = contactUs(first_name, mobile_number, email, description, message)
-  
+  const resumeContactMAil=ResumeContactUs(first_name, mobile_number, email, description, message,file_location)
+
+  var mailOptions = {
+    from: process.env.MAIL_FROM,
+    to: process.env.MAIL_TO,
+    subject: 'Resume from upload from anj america website',
+    html: resumeContactMAil
+  };
+
   if(!file_location){
     var mailOptions = {
       from: process.env.MAIL_FROM,
@@ -35,13 +43,6 @@ export const contactUsMailController = (req, res) => {
       html: contactMail
     };
   }
-
-  var mailOptions = {
-    from: process.env.MAIL_FROM,
-    to: process.env.MAIL_TO,
-    subject: 'Resume from upload from anj america website',
-    html: contactMail
-  };
  
 transporter.sendMail(mailOptions, function (error, info) {
   if (error) {
