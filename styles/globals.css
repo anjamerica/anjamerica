@@ -102,7 +102,7 @@ a {
   @apply w-[5rem] h-fit object-contain md:w-[8rem] md:h-fit grayscale opacity-70 hover:opacity-100 hover:grayscale-0;
 }
 
-.scrollbar-landing {
+.scrollbar-desktop {
   display: flex;
   justify-content: center;
   /* height: 190px; */
@@ -110,37 +110,37 @@ a {
   width: 60%;
 }
 
-.scrollbar-landing::-webkit-scrollbar {
+.scrollbar-desktop::-webkit-scrollbar {
   width: 0px;
   height: 0px;
   right: 0px;
 }
 
-.scrollbar-landing::-webkit-scrollbar-track {
+.scrollbar-desktop::-webkit-scrollbar-track {
   /* border-radius: 100vh;
   background: #212135; */
 }
 
-.scrollbar-landing::-webkit-scrollbar-thumb {
+.scrollbar-desktop::-webkit-scrollbar-thumb {
   /* background: #33b5af;
   border-radius: 100vh; */
 }
 
 @media only screen and (min-width: 768px) {
-  .scrollbar-landing {
+  .scrollbar-desktop {
     height: fit-content;
     overflow-y: none;
     width: 67%;
   }
-  .scrollbar-landing::-webkit-scrollbar {
+  .scrollbar-desktop::-webkit-scrollbar {
     width: 0px;
     height: 0px;
   }
 
-  .scrollbar-landing::-webkit-scrollbar-track {
+  .scrollbar-desktop::-webkit-scrollbar-track {
   }
 
-  .scrollbar-landing::-webkit-scrollbar-thumb {
+  .scrollbar-desktop::-webkit-scrollbar-thumb {
   }
   .footer {
     background-color: radial-gradient(
@@ -150,6 +150,15 @@ a {
     );
   }
 }
+
+.bg-gradient-business{
+  background: radial-gradient(50% 50% at 50% 50%, #0A0726 0%, #07081D 100%);
+}
+
+.logo-hover-color {
+  @apply w-[10rem] object-contain md:w-fit md:h-fit grayscale hover:grayscale-0;
+}
+
 
 .text-digitize-heading {
   @apply text-[18px] leading-[25px] mt-[5px] font-bold text-[#333] hover:text-[20px] hover:2xl:text-[26px] hover:animate-pulse hover:transition-all 2xl:text-[24px] heading-main;
@@ -1045,4 +1054,39 @@ input.file {
 
 .bg-gradient-career {
   background: linear-gradient(180deg, #eaf2ff 0%, rgba(234, 242, 255, 0) 100%);
+}
+
+
+.scrollbar-landing {
+  display: flex;
+  justify-content: center;
+  height: 47vh;
+  overflow-y: scroll;
+  width: 60%;
+}
+.scrollbar-landing::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+  right: 10px;
+}
+
+.scrollbar-landing::-webkit-scrollbar-track {
+  border-radius: 100vh;
+  background: #e0e0e0;
+}
+
+.scrollbar-landing::-webkit-scrollbar-thumb {
+  background: #83baea;
+  border-radius: 100vh;
+}
+
+@media only screen and (min-width: 768px) {
+  .scrollbar-landing {
+    height: 100%;
+    overflow-y: none;
+  }
+  .scrollbar-landing::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+  }
 }
