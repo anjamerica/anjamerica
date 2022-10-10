@@ -17,6 +17,7 @@ const services = [
     description:
       "Hire from top 2% of software talent in the world. We have an exclusive pool of the top ANJ America Professionals who can be sourced to your project as a full time or a consultant.",
     link: "/staffing",
+    si_no: "1",
   },
   {
     icon: <SettingsIcon />,
@@ -25,6 +26,7 @@ const services = [
     description:
       "Our goal is to help you focus on your business while we integrate highly competitive technology to help your business grow faster.",
     link: "/digitize",
+    si_no: "2",
   },
 ];
 
@@ -54,7 +56,7 @@ export default function LandingScreen() {
             backgroundSize: "100% 110%",
             backgroundRepeat: "no-repeat",
           }}
-          className="relative w-full h-[80vh] md:min-h-[75vh] flex justify-center items-center bg-landing-image-mob lg:-mt-[80px] sm:bg-landing-image-web"
+          className="relative w-full h-[80vh] md:min-h-[100vh] flex justify-center items-center bg-landing-image-mob  sm:bg-landing-image-web"
         >
           <div className=" h-[60vh] pt-10 pb-20  w-full md:h-[90vh]">
             <div className="hidden lg:flex c1 absolute lg:mt-[80px] top-[30px]  left-[400px]"></div>
@@ -113,7 +115,7 @@ export default function LandingScreen() {
               Services to help drive your business to success.
             </span>
           </div>
-          <div className="flex flex-col sm:flex-row justify-center gap-4 md:gap-8 px-10 md:px-8 lg:px-10 pt-[2rem] md:p-[5rem] ">
+          <div className="flex flex-col md:flex-row justify-center gap-8 px-10 md:px-8 lg:px-20 pt-[2rem] md:p-[5rem] ">
             {services &&
               services.map((item, i) => {
                 return (
@@ -124,6 +126,7 @@ export default function LandingScreen() {
                     description={item?.description}
                     link={item?.link}
                     key={i}
+                    si_no={item?.si_no}
                   />
                 );
               })}
@@ -139,14 +142,14 @@ export default function LandingScreen() {
               alt="career section image vector"
             />
           </div>
-          <div className="flex flex-col gap-4 xl:w-[50vw] justify-center items-center md:ml-16 xl:pl-10 md:items-start">
+          <div className="flex flex-col xl:w-[50vw] justify-center items-center md:ml-16 xl:pl-10 md:items-start">
             <div className="text-subheading text-base xl:text-2xl uppercase text-[#444444]">
               FIND THAT PERFECT FIT
             </div>
-            <div className="flex flex-col xl:w-[80%] items-center text-[#444444] text-center md:text-start  px-3 sm:px-5 md:px-0 text-[24px] md:text-[38px] xl:text-[48px] font-bold break-words">
+            <div className="raleway-font  flex flex-col xl:w-[80%] items-center text-[#444444] md:leading-[55px] text-center md:text-start  px-3 sm:px-5 md:px-0 text-[24px] md:text-[38px] xl:text-[48px] font-bold break-words">
               New jobs everyday - Leave us your resume for future opportunities!
             </div>
-            <div>
+            <div className="mt-8">
               <Link href="/#contact">
                 <button className="yellow-action-blue shw">
                   Explore Career
@@ -157,7 +160,7 @@ export default function LandingScreen() {
         </div>
       </section>
       <section>
-        <div className="hidden sm:flex sm:py-10  sm:items-center sm:h-fit sm:flex-col sm:gap-4 bg-[#F3F3F3]">
+        <div className="hidden sm:flex sm:py-10 mb-10 sm:items-center sm:h-fit sm:flex-col sm:gap-4 bg-[#F3F3F3]">
           <div className="flex flex-col gap-1">
             <div className="text-subheading-main mt-2 heading-main text-primary-black self-center">
               Businesses we&apos;ve aligned with
@@ -250,7 +253,9 @@ export default function LandingScreen() {
 
         <div className="h-screen py-10 flex items-center justify-center flex-col gap-4 bg-[#EAF2FF]  sm:hidden">
           <div className="flex flex-col gap-1 md:gap-4 pb-8">
-            <div className="text-[.8rem] uppercase font-semibold self-center md:text-[16px] 2xl:text-[20px] text-primary-blue">WHAT WE DO</div>
+            <div className="text-[.8rem] uppercase font-semibold self-center md:text-[16px] 2xl:text-[20px] text-primary-blue">
+              WHAT WE DO
+            </div>
             <div className="tracking-wide break-words heading-main text-center font-bold text-[1.5rem] 2xl:text-[30px] text-black">
               Businesses we&apos;ve aligned with
             </div>
@@ -321,7 +326,6 @@ export default function LandingScreen() {
           </div>
           <div className="5px bg-white" id="products" />
         </div>
-
       </section>
       <section>
         <Products />

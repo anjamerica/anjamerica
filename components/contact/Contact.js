@@ -109,53 +109,50 @@ export default function Contact() {
         <div className="-mb-[3rem] h-fit w-full px-5 md:px-10 py-5 md:p-20 z-0 grid grid-cols-1 gap-8 md:grid-cols-2 contact rounded-xl">
           {/* <Loader /> */}
           <div className="flex flex-col gap-2 md:gap-8">
-            <span className="text-[1.5rem] text-left heading-main break-words text-black font-bold md:text-[2rem]">
-              Get in touch with us
-            </span>
             <div className="flex flex-col mt-2 sm:mt-2 gap-2">
-              <span className="text-[12px] 2xl:text-[16px] heading-main font-[900] text-[#141414]">
-                LOCATE US
+              <span className="text-[1.5rem] text-left heading-main break-words text-black font-bold md:text-[2rem]">
+                Get in touch with us
               </span>
-              <span className="font-thin text-[16px] 2xl:text-[20px] text-[#141414]">
+              <span className="font-[600] text-[16px] 2xl:text-[20px] text-[#141414]">
                 8425 Pulsar Pl, Suite 280 Columbus, OH 43240
               </span>
-              <div className="bg-[#7de3f3] sm:w-[90%] h-[1px] my-[10px]" />
-              <span className="font-thin text-[16px] 2xl:text-[20px] text-[#141414]">
+              <div className="h-r" />
+              <span className="font-[600] text-[16px] 2xl:text-[20px] text-[#141414]">
                 Devonshire House, 582 Honeypot Lane Stanmore
                 <br />
                 United Kingdom
               </span>
-              <div className="bg-[#7de3f3] sm:w-[90%] h-[1px] my-[10px]" />
-              <span className="font-thin text-[16px] 2xl:text-[20px] text-[#141414]">
+              <div className="h-r" />
+              <span className="font-[600] text-[16px] 2xl:text-[20px] text-[#141414]">
                 10 Billiter Road, L7A4G8, Brampton, Canada
               </span>
-              <div className="bg-[#7de3f3] sm:w-[90%] h-[1px] my-[10px]" />
-              <span className="font-thin text-[16px] 2xl:text-[20px] text-[#141414]">
+              <div className="h-r" />
+              <span className="font-[600] text-[16px] 2xl:text-[20px] text-[#141414]">
                 119 South Main Street, Memphis, TN 38013
               </span>
             </div>
             <div className="flex flex-col mt-2 sm:mt-2 gap-2">
-              <span className="text-[12px] 2xl:text-[16px] heading-main font-[900] text-[#141414]">
-                CALL US
+              <span className="text-[16px] heading-main font-[900] text-[#141414]">
+                Call Us
               </span>
-              <span className="font-thin text-[16px] 2xl:text-[20px] text-[#141414]">
+              <span className="font-[600] text-[16px] 2xl:text-[20px] text-[#141414]">
                 +1 901 310 0451 (USA & Canada)
               </span>
-              <span className="font-thin text-[16px] mt-2 2xl:text-[20px] text-[#141414]">
+              <span className="font-[600] text-[16px] mt-2 2xl:text-[20px] text-[#141414]">
                 +44 7988 782024 (United Kingdom)
               </span>
             </div>
             <div className="flex flex-col mt-2 sm:mt-2 gap-2">
-              <span className="text-[12px] 2xl:text-[16px] heading-main font-[900] text-[#141414]">
-                EMAIL US
+              <span className="text-[16px] heading-main font-[900] text-[#141414]">
+                Email Us
               </span>
-              <span className="font-thin text-[16px] 2xl:text-[20px] text-[#141414]">
+              <span className="font-[600] text-[16px] 2xl:text-[20px] text-[#141414]">
                 contact@anjamerica.com
               </span>
             </div>
           </div>
-          <div className="flex flex-col gap-2 md:p-[30px] w-full">
-            <div className="grid grid-cols-2 gap-2">
+          <div className="flex flex-col gap-2 md:px-[30px] md:py-[25px] w-full">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
               <div>
                 <input
                   className="form-input col-span-1"
@@ -190,7 +187,7 @@ export default function Contact() {
             <div>
               <input
                 className="form-input"
-                placeholder="Email Address"
+                placeholder="Email"
                 value={details.email}
                 onChange={(e) => handleInputChange("email", e.target.value)}
               />
@@ -223,7 +220,7 @@ export default function Contact() {
             <div>
               <input
                 className="form-input"
-                placeholder="Short Description"
+                placeholder="Description"
                 value={details.description}
                 onChange={(e) =>
                   handleInputChange("description", e.target.value)
@@ -236,7 +233,7 @@ export default function Contact() {
             <div>
               <textarea
                 className="form-input resize-none overflow-y-auto h-[100px]"
-                placeholder="Your message..."
+                placeholder="Your message"
                 value={details.message}
                 onChange={(e) => handleInputChange("message", e.target.value)}
                 maxLength="5000"

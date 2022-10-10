@@ -14,6 +14,7 @@ module.exports = {
         "blue-dark":"#07081D",        
         "bg-light-grey":"#EFEFEFE", 
         "secondary-gray":"#464545",
+        "primary-violet":"#252244",
 
         "gray-medium":"#3A3A48",
         "primary-blue-dark": "#05061A",    
