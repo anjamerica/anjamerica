@@ -5,8 +5,7 @@ import { useState } from "react";
 import { useRouter } from "next/router";
 import { useEffect } from "react";
 
-export default function Header() {
-  const [navOpen, setNavOpen] = useState(false);
+export default function Header({navOpen, setNavOpen}) {
   const [active, setActive] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const logoRef = useRef(null)

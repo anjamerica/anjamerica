@@ -8,6 +8,7 @@ import Link from "next/link";
 import Contact from "../contact/Contact";
 import { PeopleIcon, SettingsIcon } from "../common/icons";
 import Card from "./Card";
+import { useRouter } from "next/router";
 
 const services = [
   {
@@ -32,7 +33,10 @@ const services = [
 
 export default function LandingScreen() {
   const [serviceActive, setServiceActive] = useState(0);
+  const router = useRouter();
+
   const ref = useRef(null);
+
   const scroll = (dir) => {
     switch (dir) {
       case "left":
@@ -56,7 +60,7 @@ export default function LandingScreen() {
             backgroundSize: "100% 110%",
             backgroundRepeat: "no-repeat",
           }}
-          className="relative w-full h-[80vh] md:min-h-[100vh] flex justify-center items-center bg-landing-image-mob  sm:bg-landing-image-web"
+          className="relative w-full h-[80vh] md:min-h-[100vh] flex justify-center items-center bg-landing-image-mob lg:-mt-[80px]  sm:bg-landing-image-web"
         >
           <div className=" h-[60vh] pt-10 pb-20  w-full md:h-[90vh]">
             <div className="hidden lg:flex c1 absolute lg:mt-[80px] top-[30px]  left-[400px]"></div>
@@ -68,7 +72,7 @@ export default function LandingScreen() {
             <div className="hidden lg:flex c5 absolute "></div>
             <div className="hidden lg:flex c7 absolute"></div>
             <div className="hidden lg:flex c6 absolute lg:mt-[80px] bottom-[200px] -left-[90px]"></div>
-            <div className=" flex h-full lg:mt-[80px] flex-col gap-0 justify-center self-center items-center">
+            <div className=" flex h-full flex-col gap-0 justify-center self-center items-center">
               <div className="text-anim-blog heading-main  z-10 text-[#07038C] uppercase text-[24px] text-center w-[18rem] font-extrabold sm:w-[40rem] md:w-[44rem] xl:w-[60rem] sm:text-[40px] md:text-[45px] xl:text-[60px] 2xl:text-[85px] 2xl:w-[85rem] 2xl:leading-[90px]   lg:leading-[70px]">
                 Digitize your Business today and Grow your Brand...
               </div>
@@ -79,14 +83,17 @@ export default function LandingScreen() {
                 </span>
               </div>
               <div className="mt-5 xl:mt-10">
-                <Link href="/#products">
-                  <button
-                    className="w-fit shw sm:w-[143px] sm:h-[43px] z-10 font-semibold text-[14px] md:text-base  uppercase text-white bg-primary-blue px-6 py-[.6rem] sm:p-0  tracking-wide rounded-full hover:bg-blue-800 cursor-pointer transition-all text-center flex items-center justify-center"
-                    data-aos="zoom-in"
-                  >
-                    KNOW MORE
-                  </button>
-                </Link>
+                {/* <Link href="/#products" passHref> */}
+                  {/* <a href="/#products" passHref> */}
+                    <button
+                      className="btn-know-more"
+                      data-aos="zoom-in"
+                      onClick={()=>{router.push('/#products')}}
+                    >
+                      KNOW MORE
+                    </button>
+                  {/* </a> */}
+                {/* </Link> */}
               </div>
               <div className="flex absolute bottom-6 self-center cursor-pointer">
                 <Link href="/#services">
@@ -146,7 +153,7 @@ export default function LandingScreen() {
             <div className="text-subheading text-base xl:text-2xl uppercase text-[#444444]">
               FIND THAT PERFECT FIT
             </div>
-            <div className="raleway-font  flex flex-col xl:w-[80%] items-center text-[#444444] md:leading-[55px] text-center md:text-start  px-3 sm:px-5 md:px-0 text-[24px] md:text-[38px] xl:text-[48px] font-bold break-words">
+            <div className=" f-roboto md:raleway-font  flex flex-col xl:w-[80%] items-center text-[#444444] md:leading-[55px] text-center md:text-start  px-3 sm:px-5 md:px-0 text-[24px] md:text-[38px] xl:text-[48px] md:font-bold break-words">
               New jobs everyday - Leave us your resume for future opportunities!
             </div>
             <div className="mt-8">

@@ -1111,3 +1111,7 @@ input.file {
   margin-top: 3px;
   margin-bottom: 3px;
 }
+
+.btn-know-more {
+  @apply w-fit shw sm:w-[143px] sm:h-[43px]  z-10 font-semibold text-[14px] md:text-base  uppercase text-white bg-primary-blue px-6 py-[.6rem] sm:p-0  tracking-wide rounded-full hover:bg-blue-800 cursor-pointer transition-all text-center flex items-center justify-center;
+}
