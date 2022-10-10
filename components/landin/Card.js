@@ -36,7 +36,7 @@ export default function Card({
         <p className={`text-base 2xl:text-lg text-[#809AEA] text-center`}>
           {subTitle}
         </p>
-        <p className="heading-main font-bold text-gray-medium text-center text-xl 2xl:text-3xl">
+        <p className="f-roboto font-[800] tracking-tighter text-gray-medium text-center text-xl 2xl:text-3xl">
           {title}
         </p>
         <p className="text-center mt-2 2xl:text-lg text-gray-medium text-base  sm:px-10 md:px-5 xl:px-10">

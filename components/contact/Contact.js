@@ -188,7 +188,7 @@ export default function Contact() {
             <div>
               <input
                 className="form-input"
-                placeholder="Email Address"
+                placeholder="Email"
                 value={details.email}
                 onChange={(e) => handleInputChange("email", e.target.value)}
               />

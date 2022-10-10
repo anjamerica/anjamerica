@@ -56,7 +56,7 @@ export default function LandingScreen() {
             backgroundSize: "100% 110%",
             backgroundRepeat: "no-repeat",
           }}
-          className="relative w-full h-[80vh] md:min-h-[100vh] flex justify-center items-center bg-landing-image-mob lg:-mt-[80px] sm:bg-landing-image-web"
+          className="relative w-full h-[80vh] md:min-h-[100vh] flex justify-center items-center bg-landing-image-mob  sm:bg-landing-image-web"
         >
           <div className=" h-[60vh] pt-10 pb-20  w-full md:h-[90vh]">
             <div className="hidden lg:flex c1 absolute lg:mt-[80px] top-[30px]  left-[400px]"></div>
@@ -115,7 +115,7 @@ export default function LandingScreen() {
               Services to help drive your business to success.
             </span>
           </div>
-          <div className="flex flex-col md:flex-row justify-center gap-8 px-10 md:px-8 lg:px-12 pt-[2rem] md:p-[5rem] ">
+          <div className="flex flex-col md:flex-row justify-center gap-8 px-10 md:px-8 lg:px-20 pt-[2rem] md:p-[5rem] ">
             {services &&
               services.map((item, i) => {
                 return (
