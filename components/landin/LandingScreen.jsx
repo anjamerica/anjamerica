@@ -83,17 +83,17 @@ export default function LandingScreen() {
                 </span>
               </div>
               <div className="mt-5 xl:mt-10">
-                {/* <Link href="/#products" passHref> */}
+                <Link href="/#products" passHref>
                   {/* <a href="/#products" passHref> */}
-                    <button
-                      className="btn-know-more"
-                      data-aos="zoom-in"
-                      onClick={()=>{router.push('/#products')}}
-                    >
-                      KNOW MORE
-                    </button>
+                  <button
+                    className="btn-know-more"
+                    data-aos="zoom-in"
+                    // onClick={()=>{router.push('/#products')}}
+                  >
+                    KNOW MORE
+                  </button>
                   {/* </a> */}
-                {/* </Link> */}
+                </Link>
               </div>
               <div className="flex absolute bottom-6 self-center cursor-pointer">
                 <Link href="/#services">
@@ -122,7 +122,7 @@ export default function LandingScreen() {
               Services to help drive your business to success.
             </span>
           </div>
-          <div className="flex flex-col md:flex-row justify-center gap-8 px-10 md:px-8 lg:px-20 pt-[2rem] md:p-[5rem] ">
+          <div className="flex flex-col md:flex-row justify-center gap-8 px-10 md:px-8 lg:px-28  pt-[2rem] md:p-[5rem] ">
             {services &&
               services.map((item, i) => {
                 return (
@@ -255,7 +255,6 @@ export default function LandingScreen() {
               />
             </div>
           </div>
-          <div className="h-[5px]" id="products" />
         </div>
 
         <div className="h-screen py-10 flex items-center justify-center flex-col gap-4 bg-[#EAF2FF]  sm:hidden">
@@ -331,11 +330,14 @@ export default function LandingScreen() {
               />
             </div>
           </div>
-          <div className="5px bg-white" id="products" />
+          <div className="h-[0px]" />
+          {/* <section className="5px bg-white" id="products" ></section> */}
         </div>
       </section>
-      <section>
-        <Products />
+      <section id="products">
+        <div className="py-[40px]">
+          <Products />
+        </div>
       </section>
       {/* <section id="products">
         <Cards />

@@ -71,7 +71,7 @@ export default function Products() {
   
 
   return (
-    <div className="relative flex flex-col pt-10 pb-20 md:py-10 bg-white items-center justify-center w-full">
+    <div className="relative flex flex-col pt-10 pb-20 bg-white items-center justify-center w-full">
       <div className="flex flex-col gap-0 self-center justify-center">
         <p className="text-subheading-main font-[900] heading-main text-primary-black self-center">
           Our Products
