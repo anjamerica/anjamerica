@@ -153,7 +153,7 @@ export default function LandingScreen() {
             <div className="text-subheading text-base xl:text-2xl uppercase text-[#444444]">
               FIND THAT PERFECT FIT
             </div>
-            <div className=" f-roboto md:raleway-font  flex flex-col xl:w-[80%] items-center text-[#444444] md:leading-[55px] text-center md:text-start  px-3 sm:px-5 md:px-0 text-[24px] md:text-[38px] xl:text-[48px] md:font-bold break-words">
+            <div className="f-roboto md:raleway-font  flex flex-col xl:w-[100%] items-center text-[#444444] md:leading-[55px] text-center md:text-start  px-3 sm:px-5 md:px-0 text-[24px] md:text-[38px] xl:text-[48px] md:font-bold break-words">
               New jobs everyday - Leave us your resume for future opportunities!
             </div>
             <div className="mt-8">
