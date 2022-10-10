@@ -71,7 +71,7 @@ a {
 }
 
 .yellow-action-blue {
-  @apply w-fit font-[800] text-white md:text-black  bg-primary-blue md:bg-primary-yellow px-4 py-2  uppercase  rounded-full hover:bg-[#ecd378] transition-all text-center flex items-center justify-center;
+  @apply w-fit font-[800] text-white md:text-black  bg-primary-blue md:bg-primary-yellow px-4 py-2  uppercase  rounded-full md:hover:bg-[#ecd378] transition-all text-center flex items-center justify-center;
 }
 
 .box-shadow {

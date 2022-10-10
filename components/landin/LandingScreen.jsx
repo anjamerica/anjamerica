@@ -53,7 +53,7 @@ export default function LandingScreen() {
 
   return (
     <main className="relative mx-auto w-full h-full snap-y scroll-delay">
-      <section>
+      <section id="/">
         <div
           style={{
             objectFit: "cover",
