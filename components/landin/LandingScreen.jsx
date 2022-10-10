@@ -95,6 +95,7 @@ export default function LandingScreen() {
                   {/* </a> */}
                 </Link>
               </div>
+              <div className="absolute bottom-[80px] h-[0px]"  id="services"/>
               <div className="flex absolute bottom-6 self-center cursor-pointer">
                 <Link href="/#services">
                   <img
@@ -109,7 +110,7 @@ export default function LandingScreen() {
         </div>
       </section>
       <hr className="h-[5px] bg-primary-blue" />
-      <section id="services">
+      <section>
         <div className="bg-white flex flex-col h-fit justify-center py-10">
           <div className="flex flex-col gap-1 self-center justify-center">
             <span className="text-subheading leading-[3%] text-primary-blue self-center">
@@ -167,7 +168,7 @@ export default function LandingScreen() {
         </div>
       </section>
       <section>
-        <div className="hidden sm:flex sm:py-10 mb-10 sm:items-center sm:h-fit sm:flex-col sm:gap-4 bg-[#F3F3F3]">
+        <div className="relative hidden sm:flex sm:py-10 mb-10 sm:items-center sm:h-fit sm:flex-col sm:gap-4 bg-[#F3F3F3]">
           <div className="flex flex-col gap-1">
             <div className="text-subheading-main mt-2 heading-main text-primary-black self-center">
               Businesses we&apos;ve aligned with
@@ -257,7 +258,8 @@ export default function LandingScreen() {
           </div>
         </div>
 
-        <div className="h-screen py-10 flex items-center justify-center flex-col gap-4 bg-[#EAF2FF]  sm:hidden">
+        <div className="relative h-screen py-10 flex items-center justify-center flex-col gap-4 bg-[#EAF2FF]  sm:hidden">
+        <div className="h-0 absolute bottom-[80px]" id="products" ></div>
           <div className="flex flex-col gap-1 md:gap-4 pb-8">
             <div className="text-[.8rem] uppercase font-semibold self-center md:text-[16px] 2xl:text-[20px] text-primary-blue">
               WHAT WE DO
@@ -329,12 +331,13 @@ export default function LandingScreen() {
                 className="logo-hover-color"
               />
             </div>
+         
           </div>
-          <div className="h-[0px]" />
           {/* <section className="5px bg-white" id="products" ></section> */}
         </div>
+       
       </section>
-      <section id="products">
+      <section>
         <div className="py-[40px]">
           <Products />
         </div>
