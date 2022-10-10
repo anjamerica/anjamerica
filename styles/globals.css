@@ -8,13 +8,21 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins&family=Raleway:wght@700&display=swap");
+
 @font-face {
   font-family: sofia-pro;
   src: url(../public/fonts/sofia-pro.otf);
 }
+
 @font-face {
   font-family: sofia-pro-bold;
   src: url(../public//fonts/sofia_pro_bold.ttf);
+}
+
+@font-face {
+  font-family: raleway-bold;
+  src: url(../public//fonts/Raleway-Bold.ttf);
 }
 
 html,
@@ -49,6 +57,11 @@ a {
   font-family: sofia-pro-bold;
 }
 
+.raleway-font {
+  font-family: raleway-bold;
+}
+
+
 .yellow-action-button {
   @apply w-fit font-[800] text-black  bg-primary-yellow px-4 py-2  uppercase  rounded-full hover:bg-[#ecd378] transition-all text-center flex items-center justify-center;
 }
@@ -56,7 +69,6 @@ a {
 .yellow-action-blue {
   @apply w-fit font-[800] text-white md:text-black  bg-primary-blue md:bg-primary-yellow px-4 py-2  uppercase  rounded-full hover:bg-[#ecd378] transition-all text-center flex items-center justify-center;
 }
-
 
 .box-shadow {
   box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.08);
@@ -151,14 +163,13 @@ a {
   }
 }
 
-.bg-gradient-business{
-  background: radial-gradient(50% 50% at 50% 50%, #0A0726 0%, #07081D 100%);
+.bg-gradient-business {
+  background: radial-gradient(50% 50% at 50% 50%, #0a0726 0%, #07081d 100%);
 }
 
 .logo-hover-color {
   @apply w-[10rem] object-contain md:w-fit md:h-fit grayscale hover:grayscale-0;
 }
-
 
 .text-digitize-heading {
   @apply text-[18px] leading-[25px] mt-[5px] font-bold text-[#333] hover:text-[20px] hover:2xl:text-[26px] hover:animate-pulse hover:transition-all 2xl:text-[24px] heading-main;
@@ -1056,7 +1067,6 @@ input.file {
   background: linear-gradient(180deg, #eaf2ff 0%, rgba(234, 242, 255, 0) 100%);
 }
 
-
 .scrollbar-landing {
   display: flex;
   justify-content: center;
@@ -1089,4 +1099,11 @@ input.file {
     width: 0px;
     height: 0px;
   }
+}
+
+.h-r {
+  background: linear-gradient(180deg, #05F6DA 0%, #05F8DA 100%);
+  height: 1px;
+  margin-top: 3px;
+  margin-bottom: 3px;
 }
