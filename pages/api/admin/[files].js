@@ -1,6 +1,7 @@
 import { cvMiddle, getCvStream } from '../../../midddlewares/cv';
 import { publicFileMIddle } from '../../../midddlewares/file';
 import API from "../../../utils/apiRoute";
+import { errors } from '../../../utils/responds';
 
 const apiRoute = API
 
