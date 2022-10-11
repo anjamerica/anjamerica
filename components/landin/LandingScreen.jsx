@@ -169,6 +169,7 @@ export default function LandingScreen() {
       </section>
       <section>
         <div className="relative hidden sm:flex sm:py-10 mb-10 sm:items-center sm:h-fit sm:flex-col sm:gap-4 bg-[#F3F3F3]">
+        <div className="h-0 absolute bottom-[0px]" id="products" ></div>
           <div className="flex flex-col gap-1">
             <div className="text-subheading-main mt-2 heading-main text-primary-black self-center">
               Businesses we&apos;ve aligned with
