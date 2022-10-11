@@ -115,40 +115,39 @@ export default function Contact() {
               <span className="text-[1.5rem] text-left heading-main break-words text-black font-bold md:text-[2rem]">
                 Get in touch with us
               </span>
-              <span className="font-[600] text-[16px] 2xl:text-[20px] text-[#141414]">
+              <span className="font-[600] text-[14px] sm:text-[16px] 2xl:text-[20px] text-[#141414]">
                 8425 Pulsar Pl, Suite 280 Columbus, OH 43240
               </span>
               <div className="h-r" />
-              <span className="font-[600] text-[16px] 2xl:text-[20px] text-[#141414]">
+              <span className="font-[600] text-[14px] sm:text-[16px] 2xl:text-[20px] text-[#141414]">
                 Devonshire House, 582 Honeypot Lane Stanmore
-                <br />
                 United Kingdom
               </span>
               <div className="h-r" />
-              <span className="font-[600] text-[16px] 2xl:text-[20px] text-[#141414]">
+              <span className="font-[600] text-[14px] sm:text-[16px] 2xl:text-[20px] text-[#141414]">
                 10 Billiter Road, L7A4G8, Brampton, Canada
               </span>
               <div className="h-r" />
-              <span className="font-[600] text-[16px] 2xl:text-[20px] text-[#141414]">
+              <span className="font-[600] text-[14px] sm:text-[16px] 2xl:text-[20px] text-[#141414]">
                 119 South Main Street, Memphis, TN 38013
               </span>
             </div>
-            <div className="flex flex-col mt-2 sm:mt-2 gap-2">
+            <div className="flex flex-col mt-1 sm:mt-2 gap-2">
               <span className="text-[16px] heading-main font-[900] text-[#141414]">
                 Call Us
               </span>
-              <span className="font-[600] text-[16px] 2xl:text-[20px] text-[#141414]">
+              <span className="font-[600] text-[14px] md:text-[16px] 2xl:text-[20px] text-[#141414]">
                 +1 901 310 0451 (USA & Canada)
               </span>
-              <span className="font-[600] text-[16px] mt-2 2xl:text-[20px] text-[#141414]">
+              <span className="font-[600] text-[14px] md:text-[16px] mt-0 sm:mt-2 2xl:text-[20px] text-[#141414]">
                 +44 7988 782024 (United Kingdom)
               </span>
             </div>
-            <div className="flex flex-col mt-2 sm:mt-2 gap-2">
+            <div className="flex flex-col mt-1 sm:mt-2 gap-2">
               <span className="text-[16px] heading-main font-[900] text-[#141414]">
                 Email Us
               </span>
-              <span className="font-[600] text-[16px] 2xl:text-[20px] text-[#141414]">
+              <span className="font-[600] text-[14px] md:text-[16px] 2xl:text-[20px] text-[#141414]">
                 contact@anjamerica.com
               </span>
             </div>
