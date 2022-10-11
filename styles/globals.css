@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+
 * {
   scroll-behavior: smooth;
 }
@@ -71,7 +72,7 @@ a {
 }
 
 .yellow-action-blue {
-  @apply w-fit font-[800] text-white md:text-black  bg-primary-blue md:bg-primary-yellow px-4 py-2  uppercase  rounded-full hover:bg-[#ecd378] transition-all text-center flex items-center justify-center;
+  @apply w-fit font-[800] text-white md:text-black  bg-primary-blue md:bg-primary-yellow px-4 py-2  uppercase  rounded-full md:hover:bg-[#ecd378] transition-all text-center flex items-center justify-center;
 }
 
 .box-shadow {
@@ -1074,7 +1075,7 @@ input.file {
 .scrollbar-landing {
   display: flex;
   justify-content: center;
-  height: 47vh;
+  height: 52vh;
   overflow-y: scroll;
   width: 60%;
 }
@@ -1110,4 +1111,20 @@ input.file {
   height: 1px;
   margin-top: 3px;
   margin-bottom: 3px;
+}
+
+.btn-know-more {
+  @apply w-fit shw sm:w-[143px] sm:h-[43px]  z-10 font-semibold text-[14px] md:text-base  uppercase text-white bg-primary-blue px-6 py-[.6rem] sm:p-0  tracking-wide rounded-full hover:bg-blue-800 cursor-pointer transition-all text-center flex items-center justify-center;
+}
+
+.section {
+  scroll-snap-align: start
+}
+
+.main {
+  scroll-snap-type: y mandatory;
+}
+
+.section {
+  scroll-snap-align: center;
 }

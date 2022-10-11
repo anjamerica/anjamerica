@@ -5,11 +5,10 @@ import { useState } from "react";
 import { useRouter } from "next/router";
 import { useEffect } from "react";
 
-export default function Header() {
-  const [navOpen, setNavOpen] = useState(false);
+export default function Header({ navOpen, setNavOpen }) {
   const [active, setActive] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const logoRef = useRef(null)
+  const logoRef = useRef(null);
   const headRef = useRef(null);
   const router = useRouter();
   useEffect(() => {
@@ -20,18 +19,20 @@ export default function Header() {
     window.onscroll = function (e) {
       let scroll = this.scrollY;
       if (scroll >= 50) {
-        headRef.current.style.transform="scale(0.98)";
+        headRef.current.style.transform = "scale(0.98)";
       } else {
-        headRef.current.style.transform="scale(1)";
+        headRef.current.style.transform = "scale(1)";
       }
     };
   }, []);
+
+
 
   return (
     <div>
       <div
         ref={headRef}
-        style={{ transition: ".3s", transform:"scale(1)", boxShadow:"none" }}
+        style={{ transition: ".3s", transform: "scale(1)", boxShadow: "none" }}
         className={`${
           router.pathname ===
           ("/blogs" || "/about" || "/digitize" || "/staffing")
@@ -215,44 +216,42 @@ export default function Header() {
           <BsThreeDots className="h-9 w-9 text-[#B4B4BE] rotate-90 self-center cursor-pointer" />
         </button>
         {navOpen && (
-          <div
-            className="absolute top-[4rem] right-[0rem] shadow-md bg-white z-50 w-full lg:hidden"
-          >
+          <div className="absolute top-[4rem] right-[0rem] shadow-md bg-white z-50 w-full lg:hidden">
             <div className=" w-full p-3  h-fit">
-              <ul>
-                <Link href="/about">
-                  <li className="text-left py-2 text-primary-blue-dark hover:text-blue-800 text-xs font-semibold">
+              <ul className="menu">
+                <Link href="/about" >
+                  <li onClick={()=>setNavOpen(false)} className="text-left py-2 text-primary-blue-dark hover:text-blue-800 text-xs font-semibold">
                     Discover
                   </li>
                 </Link>
                 <Link href="/digitize">
-                  <li className="text-left py-2 text-primary-blue-dark hover:text-blue-800 text-xs font-semibold">
+                  <li onClick={()=>setNavOpen(false)} className="text-left py-2 text-primary-blue-dark hover:text-blue-800 text-xs font-semibold">
                     Digitize
                   </li>
                 </Link>
                 <Link href="/staffing">
-                  <li className="text-left py-2 text-primary-blue-dark hover:text-blue-800 text-xs font-semibold">
+                  <li onClick={()=>setNavOpen(false)} className="text-left py-2 text-primary-blue-dark hover:text-blue-800 text-xs font-semibold">
                     Hire Right
                   </li>
                 </Link>
                 {/* <Link href="/career">
-                  <li className="text-left py-2 text-primary-blue-dark hover:text-blue-800 text-xs font-semibold">
+                  <li onClick={()=>setNavOpen(false)} className="text-left py-2 text-primary-blue-dark hover:text-blue-800 text-xs font-semibold">
                     Career
                   </li>
                 </Link> */}
                 <Link href="/#products">
-                  <li className=" text-left py-2 text-primary-blue-dark hover:text-blue-800 text-xs font-semibold">
+                  <li onClick={()=>setNavOpen(false)} className=" text-left py-2 text-primary-blue-dark hover:text-blue-800 text-xs font-semibold">
                     Our Products
                   </li>
                 </Link>
 
                 <Link href="/blogs">
-                  <li className="text-left py-2 text-primary-blue-dark hover:text-blue-800 text-xs font-semibold">
+                  <li onClick={()=>setNavOpen(false)} className="text-left py-2 text-primary-blue-dark hover:text-blue-800 text-xs font-semibold">
                     Blog
                   </li>
                 </Link>
                 <Link href="/#contact">
-                  <li className="text-left py-2 text-primary-blue-dark hover:text-blue-800 text-xs font-semibold">
+                  <li onClick={()=>setNavOpen(false)} className="text-left py-2 text-primary-blue-dark hover:text-blue-800 text-xs font-semibold">
                     Get in Touch
                   </li>
                 </Link>

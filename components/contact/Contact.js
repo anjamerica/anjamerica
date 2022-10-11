@@ -101,7 +101,8 @@ export default function Contact() {
   };
 
   return (
-    <div className=" relative p-5 md:px-20 pt-[90px] bg-white flex flex-col z-20 justify-center w-full h-fit">
+    <div className=" relative p-5 md:px-20  bg-white flex flex-col z-20 justify-center w-full h-fit">
+      <div id="contact" className="absolute -top-[80px] h-0"/>
       <span className="w-full text-[1.5rem] break-words heading-main text-[#0a1f44] text-center font-extrabold md:text-[38px] 2xl:text-[40px] md:leading-[42px] my-5">
         Have any Questions?
       </span>
@@ -113,40 +114,39 @@ export default function Contact() {
               <span className="text-[1.5rem] text-left heading-main break-words text-black font-bold md:text-[2rem]">
                 Get in touch with us
               </span>
-              <span className="font-[600] text-[16px] 2xl:text-[20px] text-[#141414]">
+              <span className="font-[600] text-[14px] sm:text-[16px] 2xl:text-[20px] text-[#141414]">
                 8425 Pulsar Pl, Suite 280 Columbus, OH 43240
               </span>
               <div className="h-r" />
-              <span className="font-[600] text-[16px] 2xl:text-[20px] text-[#141414]">
+              <span className="font-[600] text-[14px] sm:text-[16px] 2xl:text-[20px] text-[#141414]">
                 Devonshire House, 582 Honeypot Lane Stanmore
-                <br />
                 United Kingdom
               </span>
               <div className="h-r" />
-              <span className="font-[600] text-[16px] 2xl:text-[20px] text-[#141414]">
+              <span className="font-[600] text-[14px] sm:text-[16px] 2xl:text-[20px] text-[#141414]">
                 10 Billiter Road, L7A4G8, Brampton, Canada
               </span>
               <div className="h-r" />
-              <span className="font-[600] text-[16px] 2xl:text-[20px] text-[#141414]">
+              <span className="font-[600] text-[14px] sm:text-[16px] 2xl:text-[20px] text-[#141414]">
                 119 South Main Street, Memphis, TN 38013
               </span>
             </div>
-            <div className="flex flex-col mt-2 sm:mt-2 gap-2">
+            <div className="flex flex-col mt-1 sm:mt-2 gap-2">
               <span className="text-[16px] heading-main font-[900] text-[#141414]">
                 Call Us
               </span>
-              <span className="font-[600] text-[16px] 2xl:text-[20px] text-[#141414]">
+              <span className="font-[600] text-[14px] md:text-[16px] 2xl:text-[20px] text-[#141414]">
                 +1 901 310 0451 (USA & Canada)
               </span>
-              <span className="font-[600] text-[16px] mt-2 2xl:text-[20px] text-[#141414]">
+              <span className="font-[600] text-[14px] md:text-[16px] mt-0 sm:mt-2 2xl:text-[20px] text-[#141414]">
                 +44 7988 782024 (United Kingdom)
               </span>
             </div>
-            <div className="flex flex-col mt-2 sm:mt-2 gap-2">
+            <div className="flex flex-col mt-1 sm:mt-2 gap-2">
               <span className="text-[16px] heading-main font-[900] text-[#141414]">
                 Email Us
               </span>
-              <span className="font-[600] text-[16px] 2xl:text-[20px] text-[#141414]">
+              <span className="font-[600] text-[14px] md:text-[16px] 2xl:text-[20px] text-[#141414]">
                 contact@anjamerica.com
               </span>
             </div>
@@ -255,7 +255,7 @@ export default function Contact() {
               </span>
             </div>
 
-            <hr />
+            <hr className="hidden md:flex"/>
             <button
               className="font-medium mt-2 text-white bg-[#04c0de] px-4 py-3 hover:bg-white hover:text-[#04c0de] transition-all rounded-md text-center flex items-center justify-center text-xs w-full"
               onClick={handleSubmit}

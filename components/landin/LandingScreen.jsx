@@ -8,6 +8,7 @@ import Link from "next/link";
 import Contact from "../contact/Contact";
 import { PeopleIcon, SettingsIcon } from "../common/icons";
 import Card from "./Card";
+import { useRouter } from "next/router";
 
 const services = [
   {
@@ -32,7 +33,10 @@ const services = [
 
 export default function LandingScreen() {
   const [serviceActive, setServiceActive] = useState(0);
+  const router = useRouter();
+
   const ref = useRef(null);
+
   const scroll = (dir) => {
     switch (dir) {
       case "left":
@@ -49,14 +53,14 @@ export default function LandingScreen() {
 
   return (
     <main className="relative mx-auto w-full h-full snap-y scroll-delay">
-      <section>
+      <section id="/">
         <div
           style={{
             objectFit: "cover",
             backgroundSize: "100% 110%",
             backgroundRepeat: "no-repeat",
           }}
-          className="relative w-full h-[80vh] md:min-h-[100vh] flex justify-center items-center bg-landing-image-mob  sm:bg-landing-image-web"
+          className="relative w-full h-[80vh] md:min-h-[100vh] flex justify-center items-center bg-landing-image-mob lg:-mt-[80px]  sm:bg-landing-image-web"
         >
           <div className=" h-[60vh] pt-10 pb-20  w-full md:h-[90vh]">
             <div className="hidden lg:flex c1 absolute lg:mt-[80px] top-[30px]  left-[400px]"></div>
@@ -68,7 +72,7 @@ export default function LandingScreen() {
             <div className="hidden lg:flex c5 absolute "></div>
             <div className="hidden lg:flex c7 absolute"></div>
             <div className="hidden lg:flex c6 absolute lg:mt-[80px] bottom-[200px] -left-[90px]"></div>
-            <div className=" flex h-full lg:mt-[80px] flex-col gap-0 justify-center self-center items-center">
+            <div className=" flex h-full flex-col gap-0 justify-center self-center items-center">
               <div className="text-anim-blog heading-main  z-10 text-[#07038C] uppercase text-[24px] text-center w-[18rem] font-extrabold sm:w-[40rem] md:w-[44rem] xl:w-[60rem] sm:text-[40px] md:text-[45px] xl:text-[60px] 2xl:text-[85px] 2xl:w-[85rem] 2xl:leading-[90px]   lg:leading-[70px]">
                 Digitize your Business today and Grow your Brand...
               </div>
@@ -79,15 +83,19 @@ export default function LandingScreen() {
                 </span>
               </div>
               <div className="mt-5 xl:mt-10">
-                <Link href="/#products">
+                <Link href="/#products" passHref>
+                  {/* <a href="/#products" passHref> */}
                   <button
-                    className="w-fit shw sm:w-[143px] sm:h-[43px] z-10 font-semibold text-[14px] md:text-base  uppercase text-white bg-primary-blue px-6 py-[.6rem] sm:p-0  tracking-wide rounded-full hover:bg-blue-800 cursor-pointer transition-all text-center flex items-center justify-center"
+                    className="btn-know-more"
                     data-aos="zoom-in"
+                    // onClick={()=>{router.push('/#products')}}
                   >
                     KNOW MORE
                   </button>
+                  {/* </a> */}
                 </Link>
               </div>
+              <div className="absolute bottom-[74px] h-[0px]"  id="services"/>
               <div className="flex absolute bottom-6 self-center cursor-pointer">
                 <Link href="/#services">
                   <img
@@ -102,20 +110,20 @@ export default function LandingScreen() {
         </div>
       </section>
       <hr className="h-[5px] bg-primary-blue" />
-      <section id="services">
-        <div className="bg-white flex flex-col h-fit justify-center py-10">
-          <div className="flex flex-col gap-1 self-center justify-center">
+      <section>
+        <div className="bg-white flex flex-col min-h-[calc(100vh-80px)] justify-center py-10">
+          <div className="flex flex-col sm:gap-1 self-center justify-center">
             <span className="text-subheading leading-[3%] text-primary-blue self-center">
               WHAT WE DO
             </span>
-            <span className="text-subheading-main mt-2 heading-main text-primary-black self-center">
+            <span className="text-subheading-main mt-1 sm:mt-2 heading-main text-primary-black self-center">
               Services
             </span>
-            <span className="text-normal-landing mt-2 text-primary-black self-center">
+            <span className="text-normal-landing mt-1 sm:mt-2 text-primary-black self-center">
               Services to help drive your business to success.
             </span>
           </div>
-          <div className="flex flex-col md:flex-row justify-center gap-8 px-10 md:px-8 lg:px-20 pt-[2rem] md:p-[5rem] ">
+          <div className="flex flex-col md:flex-row justify-center gap-4 md:gap-8 px-5 md:px-8 lg:px-28  pt-[1rem] md:pt-[2rem] md:p-[5rem] ">
             {services &&
               services.map((item, i) => {
                 return (
@@ -146,7 +154,7 @@ export default function LandingScreen() {
             <div className="text-subheading text-base xl:text-2xl uppercase text-[#444444]">
               FIND THAT PERFECT FIT
             </div>
-            <div className="raleway-font  flex flex-col xl:w-[80%] items-center text-[#444444] md:leading-[55px] text-center md:text-start  px-3 sm:px-5 md:px-0 text-[24px] md:text-[38px] xl:text-[48px] font-bold break-words">
+            <div className="f-roboto md:raleway-font  flex flex-col xl:w-[100%] items-center text-[#444444] md:leading-[55px] text-center md:text-start  px-3 sm:px-5 md:px-0 text-[24px] md:text-[38px] xl:text-[48px] md:font-bold break-words">
               New jobs everyday - Leave us your resume for future opportunities!
             </div>
             <div className="mt-8">
@@ -160,7 +168,7 @@ export default function LandingScreen() {
         </div>
       </section>
       <section>
-        <div className="hidden sm:flex sm:py-10 mb-10 sm:items-center sm:h-fit sm:flex-col sm:gap-4 bg-[#F3F3F3]">
+        <div className="relative hidden sm:flex sm:py-10 mb-10 sm:items-center sm:h-fit sm:flex-col sm:gap-4 bg-[#F3F3F3]">
           <div className="flex flex-col gap-1">
             <div className="text-subheading-main mt-2 heading-main text-primary-black self-center">
               Businesses we&apos;ve aligned with
@@ -248,10 +256,10 @@ export default function LandingScreen() {
               />
             </div>
           </div>
-          <div className="h-[5px]" id="products" />
         </div>
 
-        <div className="h-screen py-10 flex items-center justify-center flex-col gap-4 bg-[#EAF2FF]  sm:hidden">
+        <div className="relative h-screen py-10 flex items-center justify-center flex-col gap-4 bg-[#EAF2FF]  sm:hidden">
+        <div className="h-0 absolute bottom-[80px]" id="products" ></div>
           <div className="flex flex-col gap-1 md:gap-4 pb-8">
             <div className="text-[.8rem] uppercase font-semibold self-center md:text-[16px] 2xl:text-[20px] text-primary-blue">
               WHAT WE DO
@@ -323,17 +331,21 @@ export default function LandingScreen() {
                 className="logo-hover-color"
               />
             </div>
+         
           </div>
-          <div className="5px bg-white" id="products" />
+          {/* <section className="5px bg-white" id="products" ></section> */}
         </div>
+       
       </section>
       <section>
-        <Products />
+        <div className="py-[40px]">
+          <Products />
+        </div>
       </section>
       {/* <section id="products">
         <Cards />
       </section> */}
-      <section id="contact">
+      <section>
         <Contact />
       </section>
       <section>
