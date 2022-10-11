@@ -95,7 +95,7 @@ export default function LandingScreen() {
                   {/* </a> */}
                 </Link>
               </div>
-              <div className="absolute bottom-[80px] h-[0px]"  id="services"/>
+              <div className="absolute bottom-[74px] h-[0px]"  id="services"/>
               <div className="flex absolute bottom-6 self-center cursor-pointer">
                 <Link href="/#services">
                   <img
@@ -345,7 +345,7 @@ export default function LandingScreen() {
       {/* <section id="products">
         <Cards />
       </section> */}
-      <section id="contact">
+      <section>
         <Contact />
       </section>
       <section>

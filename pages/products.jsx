@@ -92,6 +92,7 @@ export default function Products() {
           onClick={() => handleOnNextClick()}
         />
       </div>
+      <div id="contact" className="h-0"/>
     </div>
   );
 }
