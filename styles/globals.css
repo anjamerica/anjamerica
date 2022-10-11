@@ -1075,7 +1075,7 @@ input.file {
 .scrollbar-landing {
   display: flex;
   justify-content: center;
-  height: 47vh;
+  height: 52vh;
   overflow-y: scroll;
   width: 60%;
 }

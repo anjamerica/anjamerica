@@ -111,19 +111,19 @@ export default function LandingScreen() {
       </section>
       <hr className="h-[5px] bg-primary-blue" />
       <section>
-        <div className="bg-white flex flex-col h-fit justify-center py-10">
-          <div className="flex flex-col gap-1 self-center justify-center">
+        <div className="bg-white flex flex-col min-h-[calc(100vh-80px)] justify-center py-10">
+          <div className="flex flex-col sm:gap-1 self-center justify-center">
             <span className="text-subheading leading-[3%] text-primary-blue self-center">
               WHAT WE DO
             </span>
-            <span className="text-subheading-main mt-2 heading-main text-primary-black self-center">
+            <span className="text-subheading-main mt-1 sm:mt-2 heading-main text-primary-black self-center">
               Services
             </span>
-            <span className="text-normal-landing mt-2 text-primary-black self-center">
+            <span className="text-normal-landing mt-1 sm:mt-2 text-primary-black self-center">
               Services to help drive your business to success.
             </span>
           </div>
-          <div className="flex flex-col md:flex-row justify-center gap-8 px-10 md:px-8 lg:px-28  pt-[2rem] md:p-[5rem] ">
+          <div className="flex flex-col md:flex-row justify-center gap-4 md:gap-8 px-5 md:px-8 lg:px-28  pt-[1rem] md:pt-[2rem] md:p-[5rem] ">
             {services &&
               services.map((item, i) => {
                 return (

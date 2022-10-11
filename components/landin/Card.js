@@ -12,7 +12,7 @@ export default function Card({
   const router = useRouter();
   return (
     <div
-      className="relative flex flex-col justify-center items-center  p-5 rounded-2xl shadow-xl bg-[#EAF2FF] w-full h-[400px] md:h-[460px]  lg:w-[600px] lg:h-[450px] 2xl:w-[650px] 2xl:h-[500px]"
+      className="relative flex flex-col justify-center items-center  p-5 rounded-2xl shadow-xl bg-[#EAF2FF] w-full h-fit md:h-[460px]  lg:w-[600px] lg:h-[450px] 2xl:w-[650px] 2xl:h-[500px]"
       onClick={() => {
         console.log(si_no);
       }}
@@ -33,18 +33,18 @@ export default function Card({
         </div>
       </div>
       <div className="md:mt-8">
-        <p className={`text-base 2xl:text-lg text-[#809AEA] text-center`}>
+        <p className={`text-[15px] md:text-base 2xl:text-lg text-[#809AEA] text-center`}>
           {subTitle}
         </p>
-        <p className="f-roboto font-[600] tracking-tighter text-gray-medium text-center text-xl 2xl:text-3xl">
+        <p className="f-roboto font-[600] tracking-tighter text-gray-medium text-center text-lg md:text-xl 2xl:text-3xl">
           {title}
         </p>
-        <p className="text-center mt-2 2xl:text-lg text-gray-medium text-base  sm:px-10 md:px-5 xl:px-10">
+        <p className="text-center mt-2 text-[15px] md:text-base  2xl:text-lg text-gray-medium  sm:px-10 md:px-5 xl:px-10">
           {description}
         </p>
       </div>
       <div
-        className="absolute  left-1/2 -translate-x-1/2 bottom-10"
+        className="mt-2 md:mt-0 md:absolute  md:left-1/2 md:-translate-x-1/2 bottom-6 md:bottom-10"
         style={
           {
             // position: "absolute",
@@ -55,7 +55,7 @@ export default function Card({
         }
       >
         <button
-          className="w-36 mt-2 md:mt-4 flex justify-center items-center bg-primary-blue font-semibold py-2 text-white uppercase rounded-full"
+          className="w-32 md:w-36 mt-2 md:mt-4 flex justify-center text-[14px] md:text-base items-center bg-primary-blue font-semibold py-2 text-white uppercase rounded-full"
           onClick={() => {
             router.push(`${link}`);
           }}
