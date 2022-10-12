@@ -119,8 +119,7 @@ export default function Contact() {
               </span>
               <div className="h-r" />
               <span className="font-[600] text-[14px] sm:text-[16px] 2xl:text-[20px] text-[#141414]">
-                Devonshire House, 582 Honeypot Lane Stanmore
-                United Kingdom
+                119 South Main Street, Memphis, TN 38013
               </span>
               <div className="h-r" />
               <span className="font-[600] text-[14px] sm:text-[16px] 2xl:text-[20px] text-[#141414]">
@@ -128,7 +127,8 @@ export default function Contact() {
               </span>
               <div className="h-r" />
               <span className="font-[600] text-[14px] sm:text-[16px] 2xl:text-[20px] text-[#141414]">
-                119 South Main Street, Memphis, TN 38013
+                Devonshire House, 582 Honeypot Lane Stanmore
+                United Kingdom
               </span>
             </div>
             <div className="flex flex-col mt-1 sm:mt-2 gap-2">
@@ -203,7 +203,7 @@ export default function Contact() {
               )}
               <label
                 htmlFor="file-input"
-                className=" p-2 cursor-pointer text-xs md:text-md 2xl:text-[18px]  bg-[#04c0de] rounded-[.25rem] whitespace-nowrap text-white text-center leading-normal"
+                className=" p-2 cursor-pointer text-xs md:text-md 2xl:text-[18px]  bg-primary-yellow rounded-[.25rem] whitespace-nowrap text-black text-center leading-normal"
               >
                 Upload
               </label>
