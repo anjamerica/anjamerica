@@ -204,7 +204,7 @@ export default function Contact() {
               )}
               <label
                 htmlFor="file-input"
-                className=" p-2 cursor-pointer text-xs md:text-md 2xl:text-[18px]  bg-[#04c0de] rounded-[.25rem] whitespace-nowrap text-white text-center leading-normal"
+                className=" p-2 cursor-pointer text-xs md:text-md 2xl:text-[18px]  bg-primary-yellow rounded-[.25rem] whitespace-nowrap text-black text-center leading-normal"
               >
                 Upload
               </label>
