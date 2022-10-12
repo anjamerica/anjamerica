@@ -120,8 +120,7 @@ export default function Contact() {
               </span>
               <div className="h-r" />
               <span className="font-[600] text-[14px] sm:text-[16px] 2xl:text-[20px] text-[#141414]">
-                Devonshire House, 582 Honeypot Lane Stanmore
-                United Kingdom
+                119 South Main Street, Memphis, TN 38013
               </span>
               <div className="h-r" />
               <span className="font-[600] text-[14px] sm:text-[16px] 2xl:text-[20px] text-[#141414]">
@@ -129,7 +128,8 @@ export default function Contact() {
               </span>
               <div className="h-r" />
               <span className="font-[600] text-[14px] sm:text-[16px] 2xl:text-[20px] text-[#141414]">
-                119 South Main Street, Memphis, TN 38013
+                Devonshire House, 582 Honeypot Lane Stanmore
+                United Kingdom
               </span>
             </div>
             <div className="flex flex-col mt-1 sm:mt-2 gap-2">
