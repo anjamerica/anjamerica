@@ -244,7 +244,7 @@ export default function Contact() {
             </div>
             <div className="w-full flex justify-between items-center text-white">
               {file?.name && (
-                <span className="text-xs md:text-sm truncate w-fit">
+                <span className="text-xs text-black md:text-sm truncate w-fit">
                   {file?.name}
                 </span>
               )}
