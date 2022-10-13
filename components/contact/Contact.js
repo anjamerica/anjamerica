@@ -109,7 +109,7 @@ export default function Contact() {
         Have any Questions?
       </span>
       <div className="flex justify-center md:px-5">
-        <div className="-mb-[3rem] h-fit w-full px-5 md:px-10 py-5 md:p-20 z-0 grid grid-cols-1 gap-8 md:grid-cols-2 contact rounded-xl">
+        <div className="-mb-[3rem] h-fit w-full px-5 md:px-10 py-5 lg:p-20 z-0 grid grid-cols-1 gap-8 md:grid-cols-2 contact rounded-xl">
           {/* <Loader /> */}
           <div className="flex flex-col gap-2 md:gap-8">
             <div className="flex flex-col mt-2 sm:mt-2 gap-2">
@@ -175,6 +175,7 @@ export default function Contact() {
                 </span>
               </p>
             </div>
+            <div className="flex flex-col w-full lg:flex-row">
             <div className="flex flex-col mt-1 sm:mt-2 gap-2">
               <span className="text-[16px] heading-main font-[900] text-[#141414]">
                 Call Us
@@ -182,14 +183,14 @@ export default function Contact() {
               <span className="font-[600] text-[14px] md:text-[16px] 2xl:text-[20px] text-[#141414]">
                 +1 901 371 7302 (USA)
               </span>
-              <span className="font-[600] text-[14px] md:text-[16px] mt-0 sm:mt-2 2xl:text-[20px] text-[#141414]">
+              <span className="font-[600] text-[14px] md:text-[16px] mt-0  2xl:text-[20px] text-[#141414]">
                 +1 (901) 310 0451(Canada)
               </span>
-              <span className="font-[600] text-[14px] md:text-[16px] mt-0 sm:mt-2 2xl:text-[20px] text-[#141414]">
+              <span className="font-[600] text-[14px] md:text-[16px] mt-0  2xl:text-[20px] text-[#141414]">
                 +44 798 878 2024 (United Kingdom)
               </span>
             </div>
-            <div className="flex flex-col mt-1 sm:mt-2 gap-2">
+            <div className="flex flex-col mt-2 md:mt-0 gap-2">
               <span className="text-[16px] heading-main font-[900] text-[#141414]">
                 Email Us
               </span>
@@ -197,8 +198,9 @@ export default function Contact() {
                 contact@anjamerica.com
               </span>
             </div>
+            </div>
           </div>
-          <div className="flex flex-col gap-2 md:px-[30px] md:py-[25px] w-full">
+          <div className="flex flex-col gap-2 lg:px-[30px] md:py-[25px] w-full">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
               <div>
                 <input
@@ -244,7 +246,7 @@ export default function Contact() {
             </div>
             <div className="w-full flex justify-between items-center text-white">
               {file?.name && (
-                <span className="text-xs text-black md:text-sm truncate w-fit">
+                <span className="text-xs md:text-sm truncate w-fit">
                   {file?.name}
                 </span>
               )}
@@ -304,7 +306,7 @@ export default function Contact() {
 
             <hr className="hidden md:flex" />
             <button
-              className="font-medium mt-2 text-white bg-[#04c0de] px-4 py-3 hover:bg-white hover:text-[#04c0de] transition-all rounded-md text-center flex items-center justify-center text-xs w-full"
+              className="font-medium mt-2 text-black bg-[#04c0de] md:text-base px-4 py-3 hover:bg-white hover:text-[#04c0de] transition-all rounded-md text-center flex items-center justify-center text-md w-full"
               onClick={handleSubmit}
             >
               Submit
