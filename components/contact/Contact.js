@@ -5,6 +5,7 @@ import validator from "validator";
 import toast from "react-hot-toast";
 import ReCAPTCHA from "react-google-recaptcha";
 import API from "../../services/api";
+import { LocationIcon } from "../common/icons";
 
 export default function Contact() {
   const [details, setDetails] = useState({});
@@ -103,7 +104,7 @@ export default function Contact() {
 
   return (
     <div className=" relative p-5 md:px-20  bg-white flex flex-col z-20 justify-center w-full h-fit">
-      <div id="contact" className="absolute -top-[80px] h-0"/>
+      <div id="contact" className="absolute -top-[80px] h-0" />
       <span className="w-full text-[1.5rem] break-words heading-main text-[#0a1f44] text-center font-extrabold md:text-[38px] 2xl:text-[40px] md:leading-[42px] my-5">
         Have any Questions?
       </span>
@@ -115,32 +116,77 @@ export default function Contact() {
               <span className="text-[1.5rem] text-left heading-main break-words text-black font-bold md:text-[2rem]">
                 Get in touch with us
               </span>
-              <span className="font-[600] text-[14px] sm:text-[16px] 2xl:text-[20px] text-[#141414]">
-                8425 Pulsar Pl, Suite 280 Columbus, OH 43240
-              </span>
+              <p className="font-[600] flex gap-2 items-start text-[14px] sm:text-[16px] 2xl:text-[20px] text-[#141414]">
+                <span>
+                  <LocationIcon />
+                </span>
+                <span>8425 Pulsar Pl, Suite 280 Columbus, OH 43240</span>
+              </p>
               <div className="h-r" />
-              <span className="font-[600] text-[14px] sm:text-[16px] 2xl:text-[20px] text-[#141414]">
-                119 South Main Street, Memphis, TN 38013
-              </span>
+              <p className="font-[600] flex gap-2 items-start text-[14px] sm:text-[16px] 2xl:text-[20px] text-[#141414]">
+                <span>
+                  <LocationIcon />
+                </span>
+                <span>119 South Main Street, Memphis, TN 38013</span>
+              </p>
               <div className="h-r" />
-              <span className="font-[600] text-[14px] sm:text-[16px] 2xl:text-[20px] text-[#141414]">
-                10 Billiter Road, L7A4G8, Brampton, Canada
-              </span>
+              <p className="font-[600] flex gap-2 items-start text-[14px] sm:text-[16px] 2xl:text-[20px] text-[#141414]">
+                <span>
+                  <LocationIcon />
+                </span>
+                <span>10 Billiter Road, L7A4G8, Brampton, Canada</span>
+              </p>
               <div className="h-r" />
-              <span className="font-[600] text-[14px] sm:text-[16px] 2xl:text-[20px] text-[#141414]">
-                Devonshire House, 582 Honeypot Lane Stanmore
-                United Kingdom
-              </span>
+              <p className="font-[600] flex gap-2 items-start text-[14px] sm:text-[16px] 2xl:text-[20px] text-[#141414]">
+                <span>
+                  <LocationIcon />
+                </span>
+                <span>
+                  Devonshire House, 582 Honeypot Lane Stanmore United Kingdom
+                </span>
+              </p>
+              <div className="h-r" />
+              <p className="font-[600] flex gap-2 items-start text-[14px] sm:text-[16px] 2xl:text-[20px] text-[#141414]">
+                <span>
+                  <LocationIcon />
+                </span>
+                <span>
+                  4th Floor, Teepeeyem Square, MG Road, Opposite Cochin
+                  Shipyard, Ravipuram, Kochi - 682015
+                </span>
+              </p>
+              <div className="h-r" />
+              <p className="font-[600] flex gap-2 items-start text-[14px] sm:text-[16px] 2xl:text-[20px] text-[#141414]">
+                <span>
+                  <LocationIcon />
+                </span>
+                <span>
+                  TC79/342(5), 2nd Floor, CPS Plaza, Opp KIA Motors NH Bypass,
+                  Venpalavattom, P.O, Anayara, Thiruvananthapuram, Kerala 695029
+                </span>
+              </p>
+              <div className="h-r" />
+              <p className="font-[600] flex gap-2 items-start text-[14px] sm:text-[16px] 2xl:text-[20px] text-[#141414]">
+                <span>
+                  <LocationIcon />
+                </span>
+                <span>
+                  Old No.3 ; New No.20, Pycrofts Garden Road, Chennai - 600006
+                </span>
+              </p>
             </div>
             <div className="flex flex-col mt-1 sm:mt-2 gap-2">
               <span className="text-[16px] heading-main font-[900] text-[#141414]">
                 Call Us
               </span>
               <span className="font-[600] text-[14px] md:text-[16px] 2xl:text-[20px] text-[#141414]">
-                +1 901 310 0451 (USA & Canada)
+                +1 901 371 7302 (USA)
               </span>
               <span className="font-[600] text-[14px] md:text-[16px] mt-0 sm:mt-2 2xl:text-[20px] text-[#141414]">
-                +44 7988 782024 (United Kingdom)
+                +1 (901) 310 0451(Canada)
+              </span>
+              <span className="font-[600] text-[14px] md:text-[16px] mt-0 sm:mt-2 2xl:text-[20px] text-[#141414]">
+                +44 798 878 2024 (United Kingdom)
               </span>
             </div>
             <div className="flex flex-col mt-1 sm:mt-2 gap-2">
@@ -256,7 +302,7 @@ export default function Contact() {
               </span>
             </div>
 
-            <hr className="hidden md:flex"/>
+            <hr className="hidden md:flex" />
             <button
               className="font-medium mt-2 text-white bg-[#04c0de] px-4 py-3 hover:bg-white hover:text-[#04c0de] transition-all rounded-md text-center flex items-center justify-center text-xs w-full"
               onClick={handleSubmit}
