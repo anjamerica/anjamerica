@@ -180,13 +180,13 @@ export default function Contact() {
               <span className="text-[16px] heading-main font-[900] text-[#141414]">
                 Call Us
               </span>
-              <span className="font-[600] text-[14px] md:text-[16px] 2xl:text-[20px] text-[#141414]">
+              <span className="font-[600] text-[14px] whitespace-nowrap md:text-[16px] 2xl:text-[20px] text-[#141414]">
                 +1 901 371 7302 (USA)
               </span>
-              <span className="font-[600] text-[14px] md:text-[16px] mt-0  2xl:text-[20px] text-[#141414]">
+              <span className="font-[600] text-[14px] whitespace-nowrap md:text-[16px] mt-0  2xl:text-[20px] text-[#141414]">
                 +1 (901) 310 0451(Canada)
               </span>
-              <span className="font-[600] text-[14px] md:text-[16px] mt-0  2xl:text-[20px] text-[#141414]">
+              <span className="font-[600] text-[14px] whitespace-nowrap md:text-[16px] mt-0  2xl:text-[20px] text-[#141414]">
                 +44 798 878 2024 (United Kingdom)
               </span>
             </div>
@@ -200,7 +200,7 @@ export default function Contact() {
             </div>
             </div>
           </div>
-          <div className="flex flex-col gap-2 lg:px-[30px] md:py-[25px] w-full">
+          <div className="flex flex-col gap-2 xl:px-[30px] md:py-[25px] w-full">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
               <div>
                 <input
