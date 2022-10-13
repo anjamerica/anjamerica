@@ -116,13 +116,13 @@ export default function Contact() {
               <span className="text-[1.5rem] text-left heading-main break-words text-black font-bold md:text-[2rem]">
                 Get in touch with us
               </span>
-              <p className="font-[600] flex gap-2 items-start text-[14px] sm:text-[16px] 2xl:text-[20px] text-[#141414]">
+              {/* <p className="font-[600] flex gap-2 items-start text-[14px] sm:text-[16px] 2xl:text-[20px] text-[#141414]">
                 <span>
                   <LocationIcon />
                 </span>
                 <span>8425 Pulsar Pl, Suite 280 Columbus, OH 43240</span>
-              </p>
-              <div className="h-r" />
+              </p> */}
+              {/* <div className="h-r" /> */}
               <p className="font-[600] flex gap-2 items-start text-[14px] sm:text-[16px] 2xl:text-[20px] text-[#141414]">
                 <span>
                   <LocationIcon />
