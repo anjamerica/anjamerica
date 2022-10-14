@@ -200,7 +200,7 @@ export default function Contact() {
             </div>
             </div>
           </div>
-          <div className="flex flex-col gap-2 xl:px-[30px] md:py-[25px] w-full">
+          <div className="flex flex-col justify-center gap-2 xl:px-[30px] md:py-[25px] w-full">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
               <div>
                 <input
