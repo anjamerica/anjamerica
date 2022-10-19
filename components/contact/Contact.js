@@ -181,10 +181,10 @@ export default function Contact() {
                 Call Us
               </span>
               <span className="font-[600] text-[14px] whitespace-nowrap md:text-[16px] 2xl:text-[20px] text-[#141414]">
-                +1 901 371 7302 (USA)
+                +1 (901) 371 7302 (USA)
               </span>
               <span className="font-[600] text-[14px] whitespace-nowrap md:text-[16px] mt-0  2xl:text-[20px] text-[#141414]">
-                +1 (901) 310 0451(Canada)
+                +1 (901) 310 0451 (Canada)
               </span>
               <span className="font-[600] text-[14px] whitespace-nowrap md:text-[16px] mt-0  2xl:text-[20px] text-[#141414]">
                 +44 798 878 2024 (United Kingdom)
@@ -291,13 +291,13 @@ export default function Contact() {
                 {formError.message_err}
               </span>
             </div>
-            <div className="w-fit">
+            <div className="w-fit max-w-40">
               <ReCAPTCHA
                 size="normal"
                 class="g-recaptcha"
                 sitekey="6Lf_GLchAAAAADi1FwEaV9VEB-s7b9Chb8bJ2pW5"
                 onChange={onCaptchaChange}
-                style={{}}
+                
               />
               <span className="text-xs text-red-600">
                 {formError.captcha_err}
