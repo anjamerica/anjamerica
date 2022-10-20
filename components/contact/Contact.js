@@ -162,7 +162,7 @@ export default function Contact() {
                 </span>
                 <span>
                   TC79/342(5), 2nd Floor, CPS Plaza, Opp KIA Motors NH Bypass,
-                  Venpalavattom, P.O, Anayara, Thiruvananthapuram, Kerala 695029
+                  Venpalavattom, Anayara (P.O), Thiruvananthapuram, Kerala 695029
                 </span>
               </p>
               <div className="h-r" />
