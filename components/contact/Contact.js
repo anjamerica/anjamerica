@@ -127,7 +127,7 @@ export default function Contact() {
                 <span>
                   <LocationIcon />
                 </span>
-                <span>119 South Main Street, Memphis, TN 38013</span>
+                <span>119 South Main Street, Memphis, TN 38013, USA</span>
               </p>
               <div className="h-r" />
               <p className="font-[600] flex gap-2 items-start text-[14px] sm:text-[16px] 2xl:text-[20px] text-[#141414]">
@@ -142,7 +142,7 @@ export default function Contact() {
                   <LocationIcon />
                 </span>
                 <span>
-                  Devonshire House, 582 Honeypot Lane Stanmore United Kingdom
+                  Devonshire House, 582 Honeypot Lane Stanmore, United Kingdom
                 </span>
               </p>
               <div className="h-r" />
@@ -152,7 +152,7 @@ export default function Contact() {
                 </span>
                 <span>
                   4th Floor, Teepeeyem Square, MG Road, Opposite Cochin
-                  Shipyard, Ravipuram, Kochi - 682015
+                  Shipyard, Ravipuram, Kochi - 682015, Kerala, India
                 </span>
               </p>
               <div className="h-r" />
@@ -162,7 +162,7 @@ export default function Contact() {
                 </span>
                 <span>
                   TC79/342(5), 2nd Floor, CPS Plaza, Opp KIA Motors NH Bypass,
-                  Venpalavattom, Anayara (P.O), Thiruvananthapuram, Kerala 695029
+                  Venpalavattom, Anayara (P.O) 695029, Thiruvananthapuram, Kerala, India  
                 </span>
               </p>
               <div className="h-r" />
@@ -171,7 +171,7 @@ export default function Contact() {
                   <LocationIcon />
                 </span>
                 <span>
-                  Old No.3 ; New No.20, Pycrofts Garden Road, Chennai - 600006
+                  Old No.3, New No.20, Pycrofts Garden Road, Chennai - 600006, Tamil Nadu, India
                 </span>
               </p>
             </div>
