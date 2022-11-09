@@ -5,6 +5,7 @@ import validator from "validator";
 import toast from "react-hot-toast";
 import ReCAPTCHA from "react-google-recaptcha";
 import API from "../../services/api";
+import { LocationIcon } from "../common/icons";
 
 export default function Contact() {
   const [details, setDetails] = useState({});
@@ -102,47 +103,93 @@ export default function Contact() {
 
   return (
     <div className=" relative p-5 md:px-20  bg-white flex flex-col z-20 justify-center w-full h-fit">
-      <div id="contact" className="absolute -top-[80px] h-0"/>
+      <div id="contact" className="absolute -top-[80px] h-0" />
       <span className="w-full text-[1.5rem] break-words heading-main text-[#0a1f44] text-center font-extrabold md:text-[38px] 2xl:text-[40px] md:leading-[42px] my-5">
         Have any Questions?
       </span>
       <div className="flex justify-center md:px-5">
-        <div className="-mb-[3rem] h-fit w-full px-5 md:px-10 py-5 md:p-20 z-0 grid grid-cols-1 gap-8 md:grid-cols-2 contact rounded-xl">
+        <div className="-mb-[3rem] h-fit w-full px-5 md:px-10 py-5 lg:p-20 z-0 grid grid-cols-1 gap-8 md:grid-cols-2 contact rounded-xl">
           {/* <Loader /> */}
           <div className="flex flex-col gap-2 md:gap-8">
             <div className="flex flex-col mt-2 sm:mt-2 gap-2">
               <span className="text-[1.5rem] text-left heading-main break-words text-black font-bold md:text-[2rem]">
                 Get in touch with us
               </span>
-              <span className="font-[600] text-[14px] sm:text-[16px] 2xl:text-[20px] text-[#141414]">
-                8425 Pulsar Pl, Suite 280 Columbus, OH 43240
-              </span>
+              {/* <p className="font-[600] flex gap-2 items-start text-[14px] sm:text-[16px] 2xl:text-[20px] text-[#141414]">
+                <span>
+                  <LocationIcon />
+                </span>
+                <span>8425 Pulsar Pl, Suite 280 Columbus, OH 43240</span>
+              </p> */}
+              {/* <div className="h-r" /> */}
+              <p className="font-[600] flex gap-2 items-start text-[14px] sm:text-[16px] 2xl:text-[20px] text-[#141414]">
+                <span>
+                  <LocationIcon />
+                </span>
+                <span>119 South Main Street, Memphis, TN 38013, USA</span>
+              </p>
               <div className="h-r" />
-              <span className="font-[600] text-[14px] sm:text-[16px] 2xl:text-[20px] text-[#141414]">
-                119 South Main Street, Memphis, TN 38013
-              </span>
+              <p className="font-[600] flex gap-2 items-start text-[14px] sm:text-[16px] 2xl:text-[20px] text-[#141414]">
+                <span>
+                  <LocationIcon />
+                </span>
+                <span>10 Billiter Road, L7A4G8, Brampton, Canada</span>
+              </p>
               <div className="h-r" />
-              <span className="font-[600] text-[14px] sm:text-[16px] 2xl:text-[20px] text-[#141414]">
-                10 Billiter Road, L7A4G8, Brampton, Canada
-              </span>
+              <p className="font-[600] flex gap-2 items-start text-[14px] sm:text-[16px] 2xl:text-[20px] text-[#141414]">
+                <span>
+                  <LocationIcon />
+                </span>
+                <span>
+                  Devonshire House, 582 Honeypot Lane Stanmore, United Kingdom
+                </span>
+              </p>
               <div className="h-r" />
-              <span className="font-[600] text-[14px] sm:text-[16px] 2xl:text-[20px] text-[#141414]">
-                Devonshire House, 582 Honeypot Lane Stanmore
-                United Kingdom
-              </span>
+              <p className="font-[600] flex gap-2 items-start text-[14px] sm:text-[16px] 2xl:text-[20px] text-[#141414]">
+                <span>
+                  <LocationIcon />
+                </span>
+                <span>
+                  4th Floor, Teepeeyem Square, MG Road, Opposite Cochin
+                  Shipyard, Ravipuram, Kochi - 682015, Kerala, India
+                </span>
+              </p>
+              <div className="h-r" />
+              <p className="font-[600] flex gap-2 items-start text-[14px] sm:text-[16px] 2xl:text-[20px] text-[#141414]">
+                <span>
+                  <LocationIcon />
+                </span>
+                <span>
+                  TC79/342(5), 2nd Floor, CPS Plaza, Opp KIA Motors NH Bypass,
+                  Venpalavattom, Anayara (P.O) 695029, Thiruvananthapuram, Kerala, India  
+                </span>
+              </p>
+              <div className="h-r" />
+              <p className="font-[600] flex gap-2 items-start text-[14px] sm:text-[16px] 2xl:text-[20px] text-[#141414]">
+                <span>
+                  <LocationIcon />
+                </span>
+                <span>
+                  Old No.3, New No.20, Pycrofts Garden Road, Chennai - 600006, Tamil Nadu, India
+                </span>
+              </p>
             </div>
+            <div className="flex flex-col w-full lg:flex-row">
             <div className="flex flex-col mt-1 sm:mt-2 gap-2">
               <span className="text-[16px] heading-main font-[900] text-[#141414]">
                 Call Us
               </span>
-              <span className="font-[600] text-[14px] md:text-[16px] 2xl:text-[20px] text-[#141414]">
-                +1 901 310 0451 (USA & Canada)
+              <span className="font-[600] text-[14px] whitespace-nowrap md:text-[16px] 2xl:text-[20px] text-[#141414]">
+                +1 (901) 371 7302 (USA)
               </span>
-              <span className="font-[600] text-[14px] md:text-[16px] mt-0 sm:mt-2 2xl:text-[20px] text-[#141414]">
-                +44 7988 782024 (United Kingdom)
+              <span className="font-[600] text-[14px] whitespace-nowrap md:text-[16px] mt-0  2xl:text-[20px] text-[#141414]">
+                +1 (901) 310 0451 (Canada)
+              </span>
+              <span className="font-[600] text-[14px] whitespace-nowrap md:text-[16px] mt-0  2xl:text-[20px] text-[#141414]">
+                +44 798 878 2024 (United Kingdom)
               </span>
             </div>
-            <div className="flex flex-col mt-1 sm:mt-2 gap-2">
+            <div className="flex flex-col mt-2 md:mt-0 gap-2">
               <span className="text-[16px] heading-main font-[900] text-[#141414]">
                 Email Us
               </span>
@@ -150,8 +197,9 @@ export default function Contact() {
                 contact@anjamerica.com
               </span>
             </div>
+            </div>
           </div>
-          <div className="flex flex-col gap-2 md:px-[30px] md:py-[25px] w-full">
+          <div className="flex flex-col justify-center gap-2 xl:px-[30px] md:py-[25px] w-full">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
               <div>
                 <input
@@ -242,22 +290,22 @@ export default function Contact() {
                 {formError.message_err}
               </span>
             </div>
-            <div className="w-fit">
+            <div className="w-fit max-w-40">
               <ReCAPTCHA
                 size="normal"
                 class="g-recaptcha"
                 sitekey="6Lf_GLchAAAAADi1FwEaV9VEB-s7b9Chb8bJ2pW5"
                 onChange={onCaptchaChange}
-                style={{}}
+                
               />
               <span className="text-xs text-red-600">
                 {formError.captcha_err}
               </span>
             </div>
 
-            <hr className="hidden md:flex"/>
+            <hr className="hidden md:flex" />
             <button
-              className="font-medium mt-2 text-white bg-[#04c0de] px-4 py-3 hover:bg-white hover:text-[#04c0de] transition-all rounded-md text-center flex items-center justify-center text-xs w-full"
+              className="font-medium mt-2 text-black bg-[#04c0de] md:text-base px-4 py-3 hover:bg-white hover:text-[#04c0de] transition-all rounded-md text-center flex items-center justify-center text-md w-full"
               onClick={handleSubmit}
             >
               Submit
