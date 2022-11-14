@@ -95,7 +95,7 @@ export default function LandingScreen() {
                   {/* </a> */}
                 </Link>
               </div>
-              <div className="absolute bottom-[74px] h-[0px]"  id="services"/>
+              <div className="absolute bottom-[74px] h-[0px]" id="services" />
               <div className="flex absolute bottom-6 self-center cursor-pointer">
                 <Link href="/#services">
                   <img
@@ -169,10 +169,10 @@ export default function LandingScreen() {
       </section>
       <section>
         <div className="relative hidden sm:flex sm:py-14 mb-10 sm:items-center sm:justify-center sm:h-fit sm:flex-col sm:gap-4 bg-[#F3F3F3]">
-        <div className="h-0 absolute bottom-[0px]" id="products" ></div>
+          <div className="h-0 absolute bottom-[0px]" id="products"></div>
           <div className="flex flex-col gap-1">
             <div className="text-subheading-main mt-2 heading-main text-primary-black self-center">
-              Businesses we&apos;ve aligned with
+              Client&apos;s that Trust Us
             </div>
           </div>
           <div className="relative mt-8 flex justify-center w-full">
@@ -260,7 +260,7 @@ export default function LandingScreen() {
         </div>
 
         <div className="relative h-screen py-10 flex items-center justify-center flex-col gap-4 bg-[#EAF2FF]  sm:hidden">
-        <div className="h-0 absolute bottom-[80px]" id="products" ></div>
+          <div className="h-0 absolute bottom-[80px]" id="products"></div>
           <div className="flex flex-col gap-1 md:gap-4 pb-8">
             <div className="text-[.8rem] uppercase font-semibold self-center md:text-[16px] 2xl:text-[20px] text-primary-blue">
               WHAT WE DO
@@ -332,11 +332,9 @@ export default function LandingScreen() {
                 className="logo-hover-color"
               />
             </div>
-         
           </div>
           {/* <section className="5px bg-white" id="products" ></section> */}
         </div>
-       
       </section>
       <section>
         <div className="py-[40px]">
