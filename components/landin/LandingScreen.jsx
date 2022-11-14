@@ -168,13 +168,13 @@ export default function LandingScreen() {
         </div>
       </section>
       <section>
-        <div className="relative hidden sm:flex sm:py-14 mb-10 sm:items-center sm:justify-center sm:h-fit sm:flex-col sm:gap-4 bg-[#F3F3F3]">
+        <div className="relative flex py-14 sm:py-14 mb-10 items-center justify-center sm:h-fit flex-col sm:gap-4 bg-[#EAF2FF]">
           <div className="h-0 absolute bottom-[0px]" id="products"></div>
-          <div className="flex flex-col gap-1">
-            <div className="text-subheading-main mt-2 heading-main text-primary-black self-center">
+          {/* <div className="flex flex-col gap-1"> */}
+            <div className="text-subheading-main sm:mt-2 heading-main text-primary-black self-center">
               Client&apos;s that Trust Us
             </div>
-          </div>
+          {/* </div> */}
           <div className="relative mt-8 flex justify-center w-full">
             <div className="scrollbar-desktop" ref={ref}>
               <div className="flex flex-row w-full justify-between items-center h-fit max-w-[1200px] gap-[50px]">
@@ -242,7 +242,7 @@ export default function LandingScreen() {
               <img
                 alt="left arrow"
                 src="/landing/prev-arrow.svg"
-                className="h-10  w-fit  absolute top-[6px] left-[2rem] md:top-[10px]  md:left-[5rem] text-primary-gray cursor-pointer"
+                className="w-8 h-8 sm:h-10 sm:w-10  absolute top-[6px] left-[2rem] md:top-[10px]  md:left-[5rem] text-primary-gray cursor-pointer"
                 onClick={() => {
                   scroll("left");
                 }}
@@ -250,7 +250,7 @@ export default function LandingScreen() {
               <img
                 alt="right arrow"
                 src="/landing/next-arrow.svg"
-                className="h-10 w-fit md:v-h-center  absolute right-[2rem] top-[6px]  md:top-[10px] md:right-[5rem] text-primary-gray cursor-pointer"
+                className="w-8 h-8 sm:h-10 sm:w-10 md:v-h-center  absolute right-[2rem] top-[6px]  md:top-[10px] md:right-[5rem] text-primary-gray cursor-pointer"
                 onClick={() => {
                   scroll("right");
                 }}
@@ -259,7 +259,7 @@ export default function LandingScreen() {
           </div>
         </div>
 
-        <div className="relative h-screen py-10 flex items-center justify-center flex-col gap-4 bg-[#EAF2FF]  sm:hidden">
+        {/* <div className="relative h-screen py-10 flex items-center justify-center flex-col gap-4 bg-[#EAF2FF]  sm:hidden">
           <div className="h-0 absolute bottom-[80px]" id="products"></div>
           <div className="flex flex-col gap-1 md:gap-4 pb-8">
             <div className="text-[.8rem] uppercase font-semibold self-center md:text-[16px] 2xl:text-[20px] text-primary-blue">
@@ -332,9 +332,9 @@ export default function LandingScreen() {
                 className="logo-hover-color"
               />
             </div>
-          </div>
+          </div> */}
           {/* <section className="5px bg-white" id="products" ></section> */}
-        </div>
+        {/* </div> */}
       </section>
       <section>
         <div className="py-[40px]">
