@@ -127,7 +127,7 @@ export default function Contact() {
                 <span>
                   <LocationIcon />
                 </span>
-                <span>119 South Main Street, Memphis, TN 38013, USA</span>
+                <span>119 South Main Street, Memphis, TN 38103, USA</span>
               </p>
               <div className="h-r" />
               <p className="font-[600] flex gap-2 items-start text-[14px] sm:text-[16px] 2xl:text-[20px] text-[#141414]">
