@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Header from "./Header";
 import { BsChevronDoubleLeft } from "react-icons/bs";
 import { useState, useRef } from "react";
@@ -9,6 +9,10 @@ import Contact from "../contact/Contact";
 import { PeopleIcon, SettingsIcon } from "../common/icons";
 import Card from "./Card";
 import { useRouter } from "next/router";
+import { images } from "../common/images";
+
+let currentScroll = null;
+let prevScroll = null;
 
 const services = [
   {
@@ -31,24 +35,53 @@ const services = [
   },
 ];
 
+let i = 1;
+
 export default function LandingScreen() {
-  const [serviceActive, setServiceActive] = useState(0);
+  const [pos, setPos] = useState(1);
   const router = useRouter();
 
   const ref = useRef(null);
 
+  console.log(images);
+
+  useEffect(() => {
+    setInterval(handleScroll, 2000);
+  }, []);
+
+  const handleScroll = () => {
+    if (currentScroll === null) scroll("right");
+    else if (prevScroll === 0 && currentScroll === 0) scroll("right");
+    else if (prevScroll === currentScroll) scroll("left");
+    else if (prevScroll > currentScroll) scroll("left");
+    else scroll("right");
+  };
+
+  useEffect(() => {
+    const handleImageChange = () => {
+      if (pos >= images.length - 1) return setPos(0);
+      setPos(pos + 1);
+    };
+    const interval = setInterval(() => {
+      handleImageChange();
+    }, 1000);
+    return () => clearInterval(interval);
+  }, [pos]);
+
   const scroll = (dir) => {
+    prevScroll = !currentScroll ? null : currentScroll;
     switch (dir) {
       case "left":
-        ref.current.scrollLeft -= 230;
+        ref.current.scrollLeft -= ref.current.clientWidth;
         ref.current.style.animation = "mynewmove 1s	";
 
         break;
       case "right":
-        ref.current.scrollLeft += 230;
+        ref.current.scrollLeft += ref.current.clientWidth;
         ref.current.style.animation = "mynewmove 1s	";
         break;
     }
+    currentScroll = ref.current.scrollLeft;
   };
 
   return (
@@ -171,17 +204,77 @@ export default function LandingScreen() {
         <div className="relative flex py-14 sm:py-14 mb-10 items-center justify-center sm:h-fit flex-col sm:gap-4 bg-[#EAF2FF]">
           <div className="h-0 absolute bottom-[0px]" id="products"></div>
           {/* <div className="flex flex-col gap-1"> */}
-            <div className="text-subheading-main sm:mt-2 heading-main text-primary-black self-center">
-              Client&apos;s that Trust Us
-            </div>
+          <div className="text-subheading-main sm:mt-2 heading-main text-primary-black self-center">
+            Client&apos;s that Trust Us
+          </div>
           {/* </div> */}
           <div className="relative mt-8 flex justify-center w-full">
             <div className="scrollbar-desktop" ref={ref}>
-              <div className="flex flex-row w-full justify-between items-center h-fit max-w-[1200px] gap-[50px]">
+              <div className="hidden sm:flex flex-row w-full justify-between items-center h-14 max-w-[1200px] gap-[50px]">
+                <img
+                  alt="logo icon"
+                  src="/assets/business/barclays.png"
+                  className="ml-2 sm:ml-8 logo-hover-landing"
+                />
+                <img
+                  alt="logo icon"
+                  src="/assets/business/cts-logo.svg"
+                  className="logo-hover-landing"
+                />
+                <img
+                  alt="logo icon"
+                  src="/assets/business/delta.png"
+                  className="logo-hover-landing"
+                />
+                <img
+                  alt="logo icon"
+                  src="/assets/business/fannie.png"
+                  className="logo-hover-landing"
+                />
+                <img
+                  alt="logo icon"
+                  src="/assets/business/osolot.png"
+                  className="logo-hover-landing"
+                />
+                <img
+                  alt="logo icon"
+                  src="/assets/business/pacific.png"
+                  className="logo-hover-landing"
+                />
+                <img
+                  alt="logo icon"
+                  src="/assets/business/planet.png"
+                  className="logo-hover-landing"
+                />
+                <img
+                  alt="logo icon"
+                  src="/assets/business/prakria.png"
+                  className="logo-hover-landing"
+                />
+                <img
+                  alt="logo icon"
+                  src="/assets/business/purplepatch.png"
+                  className="logo-hover-landing"
+                />
+                <img
+                  alt="logo icon"
+                  src="/assets/business/spectrum.png"
+                  className="logo-hover-landing"
+                />
+                <img
+                  alt="logo icon"
+                  src="/assets/business/spinta.png"
+                  className="logo-hover-landing"
+                />
+                <img
+                  alt="logo icon"
+                  src="/assets/business/vita.svg"
+                  className="logo-hover-landing"
+                />
                 <img
                   alt="logo icon"
                   src="/assets/business/progressive.png"
-                  className="ml-6 logo-hover-landing"
+                  className="logo-hover-landing"
                 />
                 <img
                   alt="logo icon"
@@ -239,10 +332,17 @@ export default function LandingScreen() {
                   className="mr-6 logo-hover-landing"
                 />
               </div>
+              <div className="flex sm:hidden">
+                <img
+                  alt="logo icon"
+                  src={images[pos].src}
+                  className="mr-6 transition-all logo-hover-landing"
+                />
+              </div>
               <img
                 alt="left arrow"
                 src="/landing/prev-arrow.svg"
-                className="w-8 h-8 sm:h-10 sm:w-10  absolute top-[6px] left-[2rem] md:top-[10px]  md:left-[5rem] text-primary-gray cursor-pointer"
+                className="hidden sm:flex w-8 h-8 sm:h-10 sm:w-10  absolute top-[6px] left-[2rem] md:top-[10px]  md:left-[5rem] text-primary-gray cursor-pointer"
                 onClick={() => {
                   scroll("left");
                 }}
@@ -250,7 +350,7 @@ export default function LandingScreen() {
               <img
                 alt="right arrow"
                 src="/landing/next-arrow.svg"
-                className="w-8 h-8 sm:h-10 sm:w-10 md:v-h-center  absolute right-[2rem] top-[6px]  md:top-[10px] md:right-[5rem] text-primary-gray cursor-pointer"
+                className="hidden sm:flex w-8 h-8 sm:h-10 sm:w-10 md:v-h-center  absolute right-[2rem] top-[6px]  md:top-[10px] md:right-[5rem] text-primary-gray cursor-pointer"
                 onClick={() => {
                   scroll("right");
                 }}
@@ -333,7 +433,7 @@ export default function LandingScreen() {
               />
             </div>
           </div> */}
-          {/* <section className="5px bg-white" id="products" ></section> */}
+        {/* <section className="5px bg-white" id="products" ></section> */}
         {/* </div> */}
       </section>
       <section>

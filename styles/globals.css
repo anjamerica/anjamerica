@@ -112,7 +112,7 @@ a {
 }
 
 .logo-hover-landing {
-  @apply w-[5rem] h-[2rem] sm:w-[5rem] object-contain sm:h-[2rem] md:w-fit md:h-fit grayscale opacity-100 hover:opacity-100 hover:grayscale-0;
+  @apply w-full h-[3rem]  min-w-[190px] flex justify-center items-center object-contain  grayscale opacity-100 hover:grayscale-0;
 }
 
 .logo-hover-staffing {
@@ -126,6 +126,7 @@ a {
   overflow-y: scroll;
   width: 60%;
   background: transparent;
+  scroll-behavior: unset;
 }
 
 .scrollbar-desktop::-webkit-scrollbar {
