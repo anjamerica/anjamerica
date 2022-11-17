@@ -112,7 +112,7 @@ a {
 }
 
 .logo-hover-landing {
-  @apply w-full h-[3rem]  min-w-[190px] flex justify-center items-center object-contain  grayscale opacity-100 hover:grayscale-0;
+  @apply w-full h-[3rem]  min-w-[190px] flex justify-center items-center object-contain  grayscale opacity-100;
 }
 
 .logo-hover-staffing {

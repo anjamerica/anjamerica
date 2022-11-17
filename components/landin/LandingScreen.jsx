@@ -218,7 +218,7 @@ export default function LandingScreen() {
                 />
                 <img
                   alt="logo icon"
-                  src="/assets/business/cts-logo.svg"
+                  src="/assets/business/cts-logo-grey.png"
                   className="logo-hover-landing"
                 />
                 <img
@@ -243,7 +243,7 @@ export default function LandingScreen() {
                 />
                 <img
                   alt="logo icon"
-                  src="/assets/business/planet.png"
+                  src="/assets/business/planet_grey.png"
                   className="logo-hover-landing"
                 />
                 <img
@@ -263,7 +263,7 @@ export default function LandingScreen() {
                 />
                 <img
                   alt="logo icon"
-                  src="/assets/business/spinta.png"
+                  src="/assets/business/spinta_grey.png"
                   className="logo-hover-landing"
                 />
                 <img
