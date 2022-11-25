@@ -249,6 +249,7 @@ export default function LandingScreen() {
                         alt="logo icon"
                         src={item?.src}
                         className="mr-6 transition-all logo-hover-landing"
+                        key={i}
                       />
                     );
                   })}
