@@ -10,6 +10,7 @@ import { PeopleIcon, SettingsIcon } from "../common/icons";
 import Card from "./Card";
 import { useRouter } from "next/router";
 import { images } from "../common/images";
+import { getMatchMedia } from "../common/mediaQuery";
 
 let currentScroll = null;
 let prevScroll = null;
@@ -37,16 +38,46 @@ const services = [
 
 let i = 1;
 
+// let pos=0;
+
 export default function LandingScreen() {
-  const [pos, setPos] = useState(1);
+  // const [count, setCount] = useState(0);
+  const [previewImages, setPreviewImages] = useState([]);
+  const [width, setWidth] = useState(0);
+  const pos = useRef(0);
+  const count=useRef(0);
   const router = useRouter();
 
   const ref = useRef(null);
 
-  console.log(images);
+  useEffect(() => {}, []);
+
+  // console.log(Document);
+  // useEffect(() => {
+  //   setInterval(handleScroll, 2000);
+  // }, []);
+
+  const handleResize=()=>{
+    if (getMatchMedia("400px").matches) count.current=1;
+    else if (getMatchMedia("850px").matches) count.current=2;
+    else if (getMatchMedia("1100px").matches) count.current=3;
+    else count.current=4;
+  }
 
   useEffect(() => {
-    setInterval(handleScroll, 2000);
+    handleResize();
+
+    const handleImageController = () => {
+      if (pos.current >= images.length) pos.current = 0;
+      setPreviewImages(images.slice(pos.current, pos.current + count.current));
+      pos.current += count.current;
+    };
+
+
+    window.addEventListener("resize", handleResize);
+    const intreval = setInterval(handleImageController, 1000);
+
+    return () => clearInterval(intreval);
   }, []);
 
   const handleScroll = () => {
@@ -57,16 +88,16 @@ export default function LandingScreen() {
     else scroll("right");
   };
 
-  useEffect(() => {
-    const handleImageChange = () => {
-      if (pos >= images.length - 1) return setPos(0);
-      setPos(pos + 1);
-    };
-    const interval = setInterval(() => {
-      handleImageChange();
-    }, 1000);
-    return () => clearInterval(interval);
-  }, [pos]);
+  // useEffect(() => {
+  //   const handleImageChange = () => {
+  //     if (pos >= images.length - 1) return setPos(0);
+  //     setPos(pos + 1);
+  //   };
+  //   const interval = setInterval(() => {
+  //     handleImageChange();
+  //   }, 1000);
+  //   return () => clearInterval(interval);
+  // }, [pos]);
 
   const scroll = (dir) => {
     prevScroll = !currentScroll ? null : currentScroll;
@@ -209,135 +240,18 @@ export default function LandingScreen() {
           </div>
           {/* </div> */}
           <div className="relative mt-8 flex justify-center w-full">
-            <div className="scrollbar-desktop" ref={ref}>
-              <div className="hidden sm:flex flex-row w-full justify-between items-center h-14 max-w-[1200px] gap-[50px]">
-                <img
-                  alt="logo icon"
-                  src="/assets/business/barclays.png"
-                  className="ml-2 sm:ml-8 logo-hover-landing"
-                />
-                <img
-                  alt="logo icon"
-                  src="/assets/business/cts-logo-grey.png"
-                  className="logo-hover-landing"
-                />
-                <img
-                  alt="logo icon"
-                  src="/assets/business/delta.png"
-                  className="logo-hover-landing"
-                />
-                <img
-                  alt="logo icon"
-                  src="/assets/business/fannie.png"
-                  className="logo-hover-landing"
-                />
-                <img
-                  alt="logo icon"
-                  src="/assets/business/osolot.png"
-                  className="logo-hover-landing"
-                />
-                <img
-                  alt="logo icon"
-                  src="/assets/business/pacific.png"
-                  className="logo-hover-landing"
-                />
-                <img
-                  alt="logo icon"
-                  src="/assets/business/planet_grey.png"
-                  className="logo-hover-landing"
-                />
-                <img
-                  alt="logo icon"
-                  src="/assets/business/prakria.png"
-                  className="logo-hover-landing"
-                />
-                <img
-                  alt="logo icon"
-                  src="/assets/business/purplepatch.png"
-                  className="logo-hover-landing"
-                />
-                <img
-                  alt="logo icon"
-                  src="/assets/business/spectrum.png"
-                  className="logo-hover-landing"
-                />
-                <img
-                  alt="logo icon"
-                  src="/assets/business/spinta_grey.png"
-                  className="logo-hover-landing"
-                />
-                <img
-                  alt="logo icon"
-                  src="/assets/business/vita.svg"
-                  className="logo-hover-landing"
-                />
-                <img
-                  alt="logo icon"
-                  src="/assets/business/progressive.png"
-                  className="logo-hover-landing"
-                />
-                <img
-                  alt="logo icon"
-                  src="/assets/business/icici.png"
-                  className="logo-hover-landing"
-                />
-                <img
-                  alt="logo icon"
-                  src="/assets/business/transamerica.png"
-                  className="logo-hover-landing"
-                />
-                <img
-                  alt="logo icon"
-                  src="/assets/business/nasdaq.png"
-                  className="logo-hover-landing"
-                />
-                <img
-                  alt="logo icon"
-                  src="/assets/business/statefarm.png"
-                  className="logo-hover-landing"
-                />
-                <img
-                  alt="logo icon"
-                  src="/assets/business/nationwide.png"
-                  className="logo-hover-landing"
-                />
-                <img
-                  alt="logo icon"
-                  src="/assets/business/stateauto.png"
-                  className="logo-hover-landing"
-                />
-                <img
-                  alt="logo icon"
-                  src="/assets/business/insight.png"
-                  className="logo-hover-landing"
-                />
-                <img
-                  alt="logo icon"
-                  src="/assets/business/verizon.png"
-                  className="logo-hover-landing"
-                />
-                <img
-                  alt="logo icon"
-                  src="/assets/business/travelers.png"
-                  className="logo-hover-landing"
-                />
-                <img
-                  alt="logo icon"
-                  src="/assets/business/hunginton.png"
-                  className="logo-hover-landing"
-                />
-                <img
-                  alt="logo icon"
-                  src="/assets/business/tata.png"
-                  className="mr-6 logo-hover-landing"
-                />
-              </div>
-              <div className="flex sm:hidden">
-                <img
-                  alt="logo icon"
-                  src={images[pos].src}
-                  className="mr-6 transition-all logo-hover-landing"
-                />
+            <div className="md:scrollbar-desktop" ref={ref}>
+              <div className="flex flex-row w-full justify-between">
+                {previewImages &&
+                  previewImages.map((item, i) => {
+                    return (
+                      <img
+                        alt="logo icon"
+                        src={item?.src}
+                        className="mr-6 transition-all logo-hover-landing"
+                      />
+                    );
+                  })}
               </div>
               <img
                 alt="left arrow"
@@ -358,92 +272,12 @@ export default function LandingScreen() {
             </div>
           </div>
         </div>
-
-        {/* <div className="relative h-screen py-10 flex items-center justify-center flex-col gap-4 bg-[#EAF2FF]  sm:hidden">
-          <div className="h-0 absolute bottom-[80px]" id="products"></div>
-          <div className="flex flex-col gap-1 md:gap-4 pb-8">
-            <div className="text-[.8rem] uppercase font-semibold self-center md:text-[16px] 2xl:text-[20px] text-primary-blue">
-              WHAT WE DO
-            </div>
-            <div className="tracking-wide break-words heading-main text-center font-bold text-[1.5rem] 2xl:text-[30px] text-black">
-              Businesses we&apos;ve aligned with
-            </div>
-          </div>
-          <div className="scrollbar-landing">
-            <div className="grid grid-cols-1 gap-y-[30px]">
-              <img
-                alt="logo image"
-                src="/assets/business/progressive.png"
-                className="logo-hover-color mt-2"
-              />
-              <img
-                alt="logo image"
-                src="/assets/business/icici.png"
-                className="logo-hover-color"
-              />
-              <img
-                alt="logo image"
-                src="/assets/business/transamerica.png"
-                className="logo-hover-color"
-              />
-              <img
-                alt="logo image"
-                src="/assets/business/nasdaq.png"
-                className="logo-hover-color"
-              />
-              <img
-                alt="logo image"
-                src="/assets/business/statefarm.png"
-                className="logo-hover-color mt-2"
-              />
-              <img
-                alt="logo image"
-                src="/assets/business/nationwide.png"
-                className="logo-hover-color"
-              />
-              <img
-                alt="logo image"
-                src="/assets/business/stateauto.png"
-                className="logo-hover-color"
-              />
-              <img
-                alt="logo image"
-                src="/assets/business/insight.png"
-                className="logo-hover-color"
-              />
-              <img
-                alt="logo image"
-                src="/assets/business/verizon.png"
-                className="logo-hover-color"
-              />
-              <img
-                alt="logo image"
-                src="/assets/business/travelers.png"
-                className="logo-hover-color"
-              />
-              <img
-                alt="logo image"
-                src="/assets/business/hunginton.png"
-                className="logo-hover-color mt-2"
-              />
-              <img
-                alt="logo image"
-                src="/assets/business/tata.png"
-                className="logo-hover-color"
-              />
-            </div>
-          </div> */}
-        {/* <section className="5px bg-white" id="products" ></section> */}
-        {/* </div> */}
       </section>
       <section>
         <div className="py-[40px]">
           <Products />
         </div>
       </section>
-      {/* <section id="products">
-        <Cards />
-      </section> */}
       <section>
         <Contact />
       </section>
