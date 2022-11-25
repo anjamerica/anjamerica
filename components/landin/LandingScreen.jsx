@@ -75,7 +75,7 @@ export default function LandingScreen() {
 
 
     window.addEventListener("resize", handleResize);
-    const intreval = setInterval(handleImageController, 1000);
+    const intreval = setInterval(handleImageController, 2000);
 
     return () => clearInterval(intreval);
   }, []);
