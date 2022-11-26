@@ -5,7 +5,7 @@ export const images = [
   },
   {
     id: 2,
-    src: "/assets/business/cts-logo.svg",
+    src: "/assets/business/cts-logo-grey.png",
   },
   {
     id: 3,
@@ -25,7 +25,7 @@ export const images = [
   },
   {
     id: 7,
-    src: "/assets/business/planet.png",
+    src: "/assets/business/planet_grey.png",
   },
   {
     id: 8,
@@ -41,7 +41,7 @@ export const images = [
   },
   {
     id: 11,
-    src: "/assets/business/spinta.png",
+    src: "/assets/business/spinta_grey.png",
   },
   {
     id: 12,
