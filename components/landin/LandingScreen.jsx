@@ -45,7 +45,7 @@ export default function LandingScreen() {
   const [previewImages, setPreviewImages] = useState([]);
   const [width, setWidth] = useState(0);
   const pos = useRef(0);
-  const count=useRef(0);
+  const count = useRef(0);
   const router = useRouter();
 
   const ref = useRef(null);
@@ -57,12 +57,12 @@ export default function LandingScreen() {
   //   setInterval(handleScroll, 2000);
   // }, []);
 
-  const handleResize=()=>{
-    if (getMatchMedia("400px").matches) count.current=1;
-    else if (getMatchMedia("850px").matches) count.current=2;
-    else if (getMatchMedia("1100px").matches) count.current=3;
-    else count.current=4;
-  }
+  const handleResize = () => {
+    if (getMatchMedia("400px").matches) count.current = 1;
+    else if (getMatchMedia("850px").matches) count.current = 2;
+    else if (getMatchMedia("1300px").matches) count.current = 3;
+    else count.current = 4;
+  };
 
   useEffect(() => {
     handleResize();
@@ -72,7 +72,6 @@ export default function LandingScreen() {
       setPreviewImages(images.slice(pos.current, pos.current + count.current));
       pos.current += count.current;
     };
-
 
     window.addEventListener("resize", handleResize);
     const intreval = setInterval(handleImageController, 5000);
@@ -234,21 +233,19 @@ export default function LandingScreen() {
       <section>
         <div className="relative flex py-14 sm:py-14 mb-10 items-center justify-center sm:h-fit flex-col sm:gap-4 bg-[#EAF2FF]">
           <div className="h-0 absolute bottom-[0px]" id="products"></div>
-          {/* <div className="flex flex-col gap-1"> */}
           <div className="text-subheading-main sm:mt-2 heading-main text-primary-black self-center">
             Client&apos;s that Trust Us
           </div>
-          {/* </div> */}
           <div className="relative mt-8 flex justify-center w-full">
-            <div className="md:scrollbar-desktop" ref={ref}>
-              <div className="flex flex-row w-full justify-between">
+            <div className="md:scrollbar-desktop w-[70%]" ref={ref}>
+              <div className="flex flex-row w-full justify-around xl:justify-between">
                 {previewImages &&
                   previewImages.map((item, i) => {
                     return (
                       <img
                         alt="logo icon"
                         src={item?.src}
-                        className="mr-6 transition-all logo-hover-landing"
+                        className=" transition-all logo-hover-landing"
                         key={i}
                       />
                     );
@@ -257,15 +254,13 @@ export default function LandingScreen() {
               <img
                 alt="left arrow"
                 src="/landing/prev-arrow.svg"
-                className="hidden sm:flex w-8 h-8 sm:h-10 sm:w-10  absolute top-[6px] left-[2rem] md:top-[10px]  md:left-[5rem] text-primary-gray cursor-pointer"
-                onClick={() => {
-                  scroll("left");
-                }}
+                className="hidden sm:flex w-8 h-8 sm:h-10 sm:w-10  absolute top-[6px] left-[2rem] md:top-[0px]  md:left-[5rem] text-primary-gray cursor-pointer"
+                onClick={() => scroll("left")}
               />
               <img
                 alt="right arrow"
                 src="/landing/next-arrow.svg"
-                className="hidden sm:flex w-8 h-8 sm:h-10 sm:w-10 md:v-h-center  absolute right-[2rem] top-[6px]  md:top-[10px] md:right-[5rem] text-primary-gray cursor-pointer"
+                className="hidden sm:flex w-8 h-8 sm:h-10 sm:w-10 md:v-h-center  absolute right-[2rem] top-[6px]  md:top-[0px] md:right-[5rem] text-primary-gray cursor-pointer"
                 onClick={() => {
                   scroll("right");
                 }}

@@ -124,7 +124,7 @@ a {
   justify-content: center;
   /* height: 190px; */
   overflow-y: scroll;
-  width: 60%;
+  width: 80%;
   background: transparent;
   scroll-behavior: unset;
 }
