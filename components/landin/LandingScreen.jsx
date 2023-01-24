@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Header from "./Header";
 import { BsChevronDoubleLeft } from "react-icons/bs";
 import { useState, useRef } from "react";
@@ -9,6 +9,11 @@ import Contact from "../contact/Contact";
 import { PeopleIcon, SettingsIcon } from "../common/icons";
 import Card from "./Card";
 import { useRouter } from "next/router";
+import { images } from "../common/images";
+import { getMatchMedia } from "../common/mediaQuery";
+
+let currentScroll = null;
+let prevScroll = null;
 
 const services = [
   {
@@ -31,24 +36,82 @@ const services = [
   },
 ];
 
+let i = 1;
+
+// let pos=0;
+
 export default function LandingScreen() {
-  const [serviceActive, setServiceActive] = useState(0);
+  // const [count, setCount] = useState(0);
+  const [previewImages, setPreviewImages] = useState([]);
+  const [width, setWidth] = useState(0);
+  const pos = useRef(0);
+  const count = useRef(0);
   const router = useRouter();
 
   const ref = useRef(null);
 
+  useEffect(() => {}, []);
+
+  // console.log(Document);
+  // useEffect(() => {
+  //   setInterval(handleScroll, 2000);
+  // }, []);
+
+  const handleResize = () => {
+    if (getMatchMedia("400px").matches) count.current = 1;
+    else if (getMatchMedia("850px").matches) count.current = 2;
+    else if (getMatchMedia("1300px").matches) count.current = 3;
+    else count.current = 4;
+  };
+
+  useEffect(() => {
+    handleResize();
+
+    const handleImageController = () => {
+      if (pos.current >= images.length) pos.current = 0;
+      setPreviewImages(images.slice(pos.current, pos.current + count.current));
+      pos.current += count.current;
+    };
+
+    window.addEventListener("resize", handleResize);
+    const intreval = setInterval(handleImageController, 5000);
+
+    return () => clearInterval(intreval);
+  }, []);
+
+  const handleScroll = () => {
+    if (currentScroll === null) scroll("right");
+    else if (prevScroll === 0 && currentScroll === 0) scroll("right");
+    else if (prevScroll === currentScroll) scroll("left");
+    else if (prevScroll > currentScroll) scroll("left");
+    else scroll("right");
+  };
+
+  // useEffect(() => {
+  //   const handleImageChange = () => {
+  //     if (pos >= images.length - 1) return setPos(0);
+  //     setPos(pos + 1);
+  //   };
+  //   const interval = setInterval(() => {
+  //     handleImageChange();
+  //   }, 1000);
+  //   return () => clearInterval(interval);
+  // }, [pos]);
+
   const scroll = (dir) => {
+    prevScroll = !currentScroll ? null : currentScroll;
     switch (dir) {
       case "left":
-        ref.current.scrollLeft -= 230;
+        ref.current.scrollLeft -= ref.current.clientWidth;
         ref.current.style.animation = "mynewmove 1s	";
 
         break;
       case "right":
-        ref.current.scrollLeft += 230;
+        ref.current.scrollLeft += ref.current.clientWidth;
         ref.current.style.animation = "mynewmove 1s	";
         break;
     }
+    currentScroll = ref.current.scrollLeft;
   };
 
   return (
@@ -95,7 +158,7 @@ export default function LandingScreen() {
                   {/* </a> */}
                 </Link>
               </div>
-              <div className="absolute bottom-[74px] h-[0px]"  id="services"/>
+              <div className="absolute bottom-[74px] h-[0px]" id="services" />
               <div className="flex absolute bottom-6 self-center cursor-pointer">
                 <Link href="/#services">
                   <img
@@ -168,89 +231,36 @@ export default function LandingScreen() {
         </div>
       </section>
       <section>
-        <div className="relative hidden sm:flex sm:py-10 mb-10 sm:items-center sm:h-fit sm:flex-col sm:gap-4 bg-[#F3F3F3]">
-        <div className="h-0 absolute bottom-[0px]" id="products" ></div>
-          <div className="flex flex-col gap-1">
-            <div className="text-subheading-main mt-2 heading-main text-primary-black self-center">
-              Businesses we&apos;ve aligned with
-            </div>
+        <div className="relative flex py-14 sm:py-14 mb-10 items-center justify-center sm:h-fit flex-col sm:gap-4 bg-[#EAF2FF]">
+          <div className="h-0 absolute bottom-[0px]" id="products"></div>
+          <div className="text-subheading-main sm:mt-2 heading-main text-primary-black self-center">
+            Client&apos;s that Trust Us
           </div>
           <div className="relative mt-8 flex justify-center w-full">
-            <div className="scrollbar-desktop" ref={ref}>
-              <div className="flex flex-row w-full justify-between items-center h-fit max-w-[1200px] gap-[50px]">
-                <img
-                  alt="logo icon"
-                  src="/assets/business/progressive.png"
-                  className="ml-6 logo-hover-landing"
-                />
-                <img
-                  alt="logo icon"
-                  src="/assets/business/icici.png"
-                  className="logo-hover-landing"
-                />
-                <img
-                  alt="logo icon"
-                  src="/assets/business/transamerica.png"
-                  className="logo-hover-landing"
-                />
-                <img
-                  alt="logo icon"
-                  src="/assets/business/nasdaq.png"
-                  className="logo-hover-landing"
-                />
-                <img
-                  alt="logo icon"
-                  src="/assets/business/statefarm.png"
-                  className="logo-hover-landing"
-                />
-                <img
-                  alt="logo icon"
-                  src="/assets/business/nationwide.png"
-                  className="logo-hover-landing"
-                />
-                <img
-                  alt="logo icon"
-                  src="/assets/business/stateauto.png"
-                  className="logo-hover-landing"
-                />
-                <img
-                  alt="logo icon"
-                  src="/assets/business/insight.png"
-                  className="logo-hover-landing"
-                />
-                <img
-                  alt="logo icon"
-                  src="/assets/business/verizon.png"
-                  className="logo-hover-landing"
-                />
-                <img
-                  alt="logo icon"
-                  src="/assets/business/travelers.png"
-                  className="logo-hover-landing"
-                />
-                <img
-                  alt="logo icon"
-                  src="/assets/business/hunginton.png"
-                  className="logo-hover-landing"
-                />
-                <img
-                  alt="logo icon"
-                  src="/assets/business/tata.png"
-                  className="mr-6 logo-hover-landing"
-                />
+            <div className="md:scrollbar-desktop w-[70%]" ref={ref}>
+              <div className="flex flex-row w-full justify-around xl:justify-between">
+                {previewImages &&
+                  previewImages.map((item, i) => {
+                    return (
+                      <img
+                        alt="logo icon"
+                        src={item?.src}
+                        className=" transition-all logo-hover-landing"
+                        key={i}
+                      />
+                    );
+                  })}
               </div>
               <img
                 alt="left arrow"
                 src="/landing/prev-arrow.svg"
-                className="h-10  w-fit  absolute top-[6px] left-[2rem] md:top-[10px]  md:left-[5rem] text-primary-gray cursor-pointer"
-                onClick={() => {
-                  scroll("left");
-                }}
+                className="hidden sm:flex w-8 h-8 sm:h-10 sm:w-10  absolute top-[6px] left-[2rem] md:top-[0px]  md:left-[5rem] text-primary-gray cursor-pointer"
+                onClick={() => scroll("left")}
               />
               <img
                 alt="right arrow"
                 src="/landing/next-arrow.svg"
-                className="h-10 w-fit md:v-h-center  absolute right-[2rem] top-[6px]  md:top-[10px] md:right-[5rem] text-primary-gray cursor-pointer"
+                className="hidden sm:flex w-8 h-8 sm:h-10 sm:w-10 md:v-h-center  absolute right-[2rem] top-[6px]  md:top-[0px] md:right-[5rem] text-primary-gray cursor-pointer"
                 onClick={() => {
                   scroll("right");
                 }}
@@ -258,94 +268,12 @@ export default function LandingScreen() {
             </div>
           </div>
         </div>
-
-        <div className="relative h-screen py-10 flex items-center justify-center flex-col gap-4 bg-[#EAF2FF]  sm:hidden">
-        <div className="h-0 absolute bottom-[80px]" id="products" ></div>
-          <div className="flex flex-col gap-1 md:gap-4 pb-8">
-            <div className="text-[.8rem] uppercase font-semibold self-center md:text-[16px] 2xl:text-[20px] text-primary-blue">
-              WHAT WE DO
-            </div>
-            <div className="tracking-wide break-words heading-main text-center font-bold text-[1.5rem] 2xl:text-[30px] text-black">
-              Businesses we&apos;ve aligned with
-            </div>
-          </div>
-          <div className="scrollbar-landing">
-            <div className="grid grid-cols-1 gap-y-[30px]">
-              <img
-                alt="logo image"
-                src="/assets/business/progressive.png"
-                className="logo-hover-color mt-2"
-              />
-              <img
-                alt="logo image"
-                src="/assets/business/icici.png"
-                className="logo-hover-color"
-              />
-              <img
-                alt="logo image"
-                src="/assets/business/transamerica.png"
-                className="logo-hover-color"
-              />
-              <img
-                alt="logo image"
-                src="/assets/business/nasdaq.png"
-                className="logo-hover-color"
-              />
-              <img
-                alt="logo image"
-                src="/assets/business/statefarm.png"
-                className="logo-hover-color mt-2"
-              />
-              <img
-                alt="logo image"
-                src="/assets/business/nationwide.png"
-                className="logo-hover-color"
-              />
-              <img
-                alt="logo image"
-                src="/assets/business/stateauto.png"
-                className="logo-hover-color"
-              />
-              <img
-                alt="logo image"
-                src="/assets/business/insight.png"
-                className="logo-hover-color"
-              />
-              <img
-                alt="logo image"
-                src="/assets/business/verizon.png"
-                className="logo-hover-color"
-              />
-              <img
-                alt="logo image"
-                src="/assets/business/travelers.png"
-                className="logo-hover-color"
-              />
-              <img
-                alt="logo image"
-                src="/assets/business/hunginton.png"
-                className="logo-hover-color mt-2"
-              />
-              <img
-                alt="logo image"
-                src="/assets/business/tata.png"
-                className="logo-hover-color"
-              />
-            </div>
-         
-          </div>
-          {/* <section className="5px bg-white" id="products" ></section> */}
-        </div>
-       
       </section>
       <section>
         <div className="py-[40px]">
           <Products />
         </div>
       </section>
-      {/* <section id="products">
-        <Cards />
-      </section> */}
       <section>
         <Contact />
       </section>

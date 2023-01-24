@@ -82,13 +82,13 @@ export default function Products() {
         <img
           alt="prev arrow"
           src="/landing/prev-arrow.svg"
-          className="h-6 left-[10px]  md:h-10 absolute md:top-[20rem] md:left-[17px] lg:h-10 lg:left-[17px] xl:left-[24px] sm:w-7  xl:w-fit  text-primary-gray cursor-pointer"
+          className="h-8 left-[10px]  md:h-10 absolute md:top-[20rem] md:left-[17px] lg:h-10 lg:left-[17px] xl:left-[24px] sm:w-7  xl:w-fit  text-primary-gray cursor-pointer"
           onClick={() => handleOnPrevClick()}
         />
         <img
           alt="next arrow"
           src="/landing/next-arrow.svg"
-          className="h-6 right-[10px] md:h-10 absolute md:top-[20rem] md:right-[17px] lg:h-10 lg:right-[17px] xl:right-[24px] sm:w-7  xl:w-fit   text-primary-gray cursor-pointer"
+          className="h-8 right-[10px] md:h-10 absolute md:top-[20rem] md:right-[17px] lg:h-10 lg:right-[17px] xl:right-[24px] sm:w-7  xl:w-fit   text-primary-gray cursor-pointer"
           onClick={() => handleOnNextClick()}
         />
       </div>

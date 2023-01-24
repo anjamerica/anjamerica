@@ -112,7 +112,7 @@ a {
 }
 
 .logo-hover-landing {
-  @apply w-[5rem] h-[2rem] md:w-fit md:h-fit grayscale opacity-100 hover:opacity-100 hover:grayscale-0;
+  @apply w-[180px] h-[35px]  flex justify-center items-center object-contain  grayscale opacity-100;
 }
 
 .logo-hover-staffing {
@@ -124,7 +124,9 @@ a {
   justify-content: center;
   /* height: 190px; */
   overflow-y: scroll;
-  width: 60%;
+  width: 80%;
+  background: transparent;
+  scroll-behavior: unset;
 }
 
 .scrollbar-desktop::-webkit-scrollbar {
@@ -136,11 +138,14 @@ a {
 .scrollbar-desktop::-webkit-scrollbar-track {
   /* border-radius: 100vh;
   background: #212135; */
+  background: transparent;
 }
 
 .scrollbar-desktop::-webkit-scrollbar-thumb {
   /* background: #33b5af;
   border-radius: 100vh; */
+  background: transparent;
+  scrollbar-width: none;
 }
 
 @media only screen and (min-width: 768px) {
@@ -148,16 +153,22 @@ a {
     height: fit-content;
     overflow-y: none;
     width: 67%;
+    background: transparent;
+    scrollbar-width: none;
   }
   .scrollbar-desktop::-webkit-scrollbar {
     width: 0px;
     height: 0px;
+    background: transparent;
   }
 
   .scrollbar-desktop::-webkit-scrollbar-track {
+    background: transparent;
+    background: transparent;
   }
 
   .scrollbar-desktop::-webkit-scrollbar-thumb {
+    background: transparent;
   }
   .footer {
     background-color: radial-gradient(
