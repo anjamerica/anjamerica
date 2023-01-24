@@ -180,11 +180,11 @@ export default function Contact() {
               <span className="text-[16px] heading-main font-[900] text-[#141414]">
                 Call Us
               </span>
-              <span className="font-[600] text-[14px] whitespace-nowrap md:text-[16px] 2xl:text-[20px] text-[#141414]">
+              {/* <span className="font-[600] text-[14px] whitespace-nowrap md:text-[16px] 2xl:text-[20px] text-[#141414]">
                 +1 (901) 371 7302 (USA)
-              </span>
+              </span> */}
               <span className="font-[600] text-[14px] whitespace-nowrap md:text-[16px] mt-0  2xl:text-[20px] text-[#141414]">
-                +1 (901) 310 0451 (Canada)
+                +1 (901) 310 0451 (USA)
               </span>
               <span className="font-[600] text-[14px] whitespace-nowrap md:text-[16px] mt-0  2xl:text-[20px] text-[#141414]">
                 +44 798 878 2024 (United Kingdom)
