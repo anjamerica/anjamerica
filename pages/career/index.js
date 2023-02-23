@@ -44,10 +44,10 @@
 //             <div className="flex h-full flex-col justify-center mt-[20px] self-center items-center">
 //               <div className="flex justify-center">
 //                 <span className="text-[#FFD700] text-[.85rem] md:text-[16px] 2xl:text-[20px] font-[700]">
-//                   EXPLORE A CAREER AT ANJ AMERICA
+//                   EXPLORE A CAREER AT Future Forward
 //                 </span>
 //               </div>
-//               <div className="text-anim-blog  text-[24px]  font-[900] sm:text-[34px] xl:text-[36px] 2xl:text-[42px] text-[#07038C] uppercase heading-main">
+//               <div className="text-anim-blog  text-[24px]  font-[900] sm:text-[34px] xl:text-[36px] 2xl:text-[42px] text-[#0339D9] uppercase heading-main">
 //                 Join us
 //               </div>
 //               <div className="flex items-center justify-center mt-2">

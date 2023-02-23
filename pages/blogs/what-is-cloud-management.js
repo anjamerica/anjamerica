@@ -125,17 +125,17 @@ export default function BlogSix() {
                   </div>
                   <div className="flex flex-col gap-2 my-4">
                     <p className="text-[1rem] heading-main text-[#333] break-words  font-semibold">
-                      Don&apos;t fret; ANJ America&apos;s got your back
+                      Don&apos;t fret; Future Forward&apos;s got your back
                     </p>
                     <span className="blog-paragraph">
-                      ANJ America is absolutely customer-driven as we focus on
-                      building the infrastructure for your success. One of ANJ’s
+                      Future Forward is absolutely customer-driven as we focus on
+                      building the infrastructure for your success. One of Future Forward’s
                       key services is Cloud Management Services. We wish to
                       create a world where managing the Cloud system is simple,
                       without any complexity. We insist on transforming cloud
                       systems for enterprises by improving performance, adding
                       new capabilities and driving down costs. When you think
-                      CMS, you think ANJ America!
+                      CMS, you think Future Forward!
                     </span>
                   </div>
                 </div>

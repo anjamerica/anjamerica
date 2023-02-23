@@ -28,9 +28,9 @@ const paragraph = [
       "Businesses will have to shift to mobile-first thinking in everything they do—design, development, UI, UX, and then worry about desktop viewing later. If there is no change in mindset, you will still persist in designing and developing for desktop viewing and then think about converting it to mobile. Just because a website is responsive, it doesn’t mean it is optimized for mobile. Start today and make the decision to leave your desktop behind. Make a mark digitally by basing all your discussions around the mobile experience. Here is an opportunity to embrace the mobile-first world that your competitors are racing into. Driving organizational change is not easy, but it’s totally worth it.",
   },
   {
-    header: "Get Scalable Websites with ANJ America",
+    header: "Get Scalable Websites with Future Forward",
     content:
-      "ANJ America can help your company build a mobile-responsive website. We offer cutting-edge web development services that are customized for every business need to create engaging websites built with high-responsiveness, scalability, minimalistic design, and aximum cyber resilience.",
+      "Future Forward can help your company build a mobile-responsive website. We offer cutting-edge web development services that are customized for every business need to create engaging websites built with high-responsiveness, scalability, minimalistic design, and aximum cyber resilience.",
   },
 ];
 
@@ -41,7 +41,7 @@ export default function BlogTwo() {
       <section>
         <div>
           <div className="relative w-full h-full lg:-mt-[80px]">
-           
+
 
             <div
               style={{
@@ -56,7 +56,7 @@ export default function BlogTwo() {
                 <div className="flex flex-col text-center justify-center md:w-[80%] xl:w-[70%]">
                   <span className="text-date-blog">February 22, 2021</span>
                   <span className="heading-blog-content w-full max-w-[960px]">
-                  Is Your Website Ready For A Mobile-First World?
+                    Is Your Website Ready For A Mobile-First World?
                   </span>
                 </div>
               </div>

@@ -65,7 +65,7 @@
 //             fill="none"
 //             xmlns="http://www.w3.org/2000/svg"
 //           >
-//             <path d="M107.5 0L0 2L107.5 3V0Z" fill="#07038C" />
+//             <path d="M107.5 0L0 2L107.5 3V0Z" fill="#0339D9" />
 //           </svg>
 //         </div>
 //         <div className="flex flex-col items-left gap-2 2xl:gap-4 break-words mt-8 mx-[2.5rem] md:mx-0">
@@ -123,7 +123,7 @@
 //             fill="none"
 //             xmlns="http://www.w3.org/2000/svg"
 //           >
-//             <path d="M107.5 0L0 2L107.5 3V0Z" fill="#07038C" />
+//             <path d="M107.5 0L0 2L107.5 3V0Z" fill="#0339D9" />
 //           </svg>
 //         </div>
 //         <div className="flex flex-col items-left gap-2 2xl:gap-4 break-words mt-8 mx-[2.5rem] md:mx-0">
@@ -181,7 +181,7 @@
 //             fill="none"
 //             xmlns="http://www.w3.org/2000/svg"
 //           >
-//             <path d="M107.5 0L0 2L107.5 3V0Z" fill="#07038C" />
+//             <path d="M107.5 0L0 2L107.5 3V0Z" fill="#0339D9" />
 //           </svg>
 //         </div>
 //         <div className="flex flex-col items-left gap-2 2xl:gap-4 break-words mt-8 mx-[2.5rem] md:mx-0">

@@ -77,11 +77,11 @@ const data = [
         content: "Businesses will have to shift to mobile-first thinking in everything they do—design, development, UI, UX, and then worry about desktop viewing later. If there is no change in mindset, you will still persist in designing and developing for desktop viewing and then think about converting it to mobile. Just because a website is responsive, it doesn’t mean it is optimized for mobile. Start today and make the decision to leave your desktop behind. Make a mark digitally by basing all your discussions around the mobile experience. Here is an opportunity to embrace the mobile-first world that your competitors are racing into. Driving organizational change is not easy, but it’s totally worth it.",
       },
       {
-        header: "Get Scalable Websites with ANJ America",
-        content: "ANJ America can help your company build a mobile-responsive website. We offer cutting-edge web development services that are customized for every business need to create engaging websites built with high-responsiveness, scalability, minimalistic design, and aximum cyber resilience.",
+        header: "Get Scalable Websites with Future Forward",
+        content: "Future Forward can help your company build a mobile-responsive website. We offer cutting-edge web development services that are customized for every business need to create engaging websites built with high-responsiveness, scalability, minimalistic design, and aximum cyber resilience.",
       },
     ],
-    conclution:""
+    conclution: ""
   },
   {
     blogId: "103",
@@ -91,7 +91,7 @@ const data = [
     content:
       "The world-famous animator, Walt Disney told, “All of our dreams come true if we have the courage to pursue them.”",
     contentFull: "The world-famous animator, Walt Disney told, “All of our dreams come true, if we have the courage to pursue them.” For many, working in the United States of America is their life’s dream. They aspire to study in the USA, work there, and some wish to complete their graduate studies from their home country and migrate for work.",
-    subHeader:"There are various occupations available for immigrants in the United States of America. Few of the most sought after jobs are:-",
+    subHeader: "There are various occupations available for immigrants in the United States of America. Few of the most sought after jobs are:-",
     subContent: [
       {
         header: "Military - ",
@@ -157,13 +157,13 @@ const data = [
     content:
       "Scalable Web Development refers to the ability of a system, network, and the process of using the website to handle the workload that would increase as time passes by.",
     contentFull: "Scalable Web Development refers to the ability of a system, network, and the process of using the website to handle the workload that would increase as time passes by.This is usually calculated, to help the Operations' ; team to assess, evaluate, and ensure the process does not go out of hand. It is calculated through the ratio of the increase in system performance to the rise in resources used.It must be understood that building scalable websites helps in high productivity and it would further improve the working style of the company. When we look at websites of well-established and renowned companies, most of us don&#39;t realize the kind of workload that these websites can withstand.This is why, when small businesses wish to develop a website, they must have a buffer stock and must consider the number of customers who might visit their website at once. This would help their customers to not experience any obstacles like:For e-commerce websites, expansion of the product range negatively affects the page load time; updating the inventory of an e-commerce shop also becomes problematic, Changing the code structure becomes dangerous and overcomplicated. Adding a new product or service takes too much time and becomes expensive. Do all websites inevitably face such problems?To a certain extent, yes. Websites do face complex issues during every step of the development process. It completely depends on how well they have improvised with the current trends and technology advancements.If certain rules are followed concerning the application setup, it would pave the way to:",
-    paragraph:[
+    paragraph: [
       {
-        header:"How can ANJ America help?",
-        content:"Our team of well-experienced and tech-savvy individuals is here to make your life easier. We offer cutting-edge web development services that are customized for every business need to create engaging websites built with high-responsiveness, scalability, minimalistic design, and maximum cyber resilience.We understand that there's only one boss, and it is our customer. Fulfilling your needs and requirements is our top priority. We would like your business to prosper and succeed, preferably without any obstacles in the way. We would pave the way to ensure your customers have an optimized journey while viewing your website."
+        header: "How can Future Forward help?",
+        content: "Our team of well-experienced and tech-savvy individuals is here to make your life easier. We offer cutting-edge web development services that are customized for every business need to create engaging websites built with high-responsiveness, scalability, minimalistic design, and maximum cyber resilience.We understand that there's only one boss, and it is our customer. Fulfilling your needs and requirements is our top priority. We would like your business to prosper and succeed, preferably without any obstacles in the way. We would pave the way to ensure your customers have an optimized journey while viewing your website."
       }
     ],
-    conclution:"Leave your challenges to us, we always have end-to-end solutions! Visit our website at https://anjamerica.com/ to schedule a consult. "
+    conclution: "Leave your challenges to us, we always have end-to-end solutions! Visit our website at https://futureforwards.in/ to schedule a consult. "
   },
   {
     blogId: "105",
@@ -251,9 +251,9 @@ const data = [
     header: "What is Cloud Management?",
     content:
       "The evolution and advancement of technology have paved the way to make mankind's life hassle-free! Cloud management is a type of software and technology that ensures seamless",
-    contentHeading:"What is Cloud Management?",  
+    contentHeading: "What is Cloud Management?",
     contentFull: "The evolution and advancement of technology have paved the way to make mankind's life hassle-free! Cloud management is a type of software and technology that ensures seamless, compilation, storage, and management of data that can be done in the blink of an eye! Cloud management can be used for all industries, during one's everyday way of life. Examples include Google Drive and iCloud for Apple Devices.",
-    subHeader:"Benefits of Cloud Management Services.",
+    subHeader: "Benefits of Cloud Management Services.",
     subContent: [
       {
         header: "Be provided with a simple view - ",
@@ -268,17 +268,17 @@ const data = [
         content: "Assessments have been made, and various sources have said that the portion of cloud spending wasted through inefficiency is at 35 percent or higher. When we think about it, there is an opportunity here! We can cause a positive impact, without having an adverse effect. Let&#39;s say that in an organization that wastes 35 percent of an annual $1 million in cloud spending through inefficiency, the same organization could implement cloud management systems that could nearly save $200,000 in savings every year! Effective cloud management helps organizations get rid of unneeded cloud expenses and optimize cloud resources, resulting in better results for less money.",
       },
     ],
-    paragraph:[
+    paragraph: [
       {
-        header:"Consequences when you do not have CMS",
-        content:"Your team is absolutely sick of manual labor when you think about it! One of the keys to success is, “Don't work harder, work smarter.Not wearing a bulletproof vest and going into battle is an analogy to a firm not having a cloud management system.Think about it! Your infrastructure is not immune to disasters pertaining to the advanced and developed world.This could be one of those instances when departments are not transparent. This would lead to internal challenges and issues, which can be solved if everyone is just in sync. The cloud helps you do that! And finally,You’re always anxious about budgeting and costs. The implementation of cloud system management would help save on costs. Through CMS, we can track unused and underused resources. We should be able to put our capital on resources where it&#39;s required. Recurring costs certainly requires our attention.",
+        header: "Consequences when you do not have CMS",
+        content: "Your team is absolutely sick of manual labor when you think about it! One of the keys to success is, “Don't work harder, work smarter.Not wearing a bulletproof vest and going into battle is an analogy to a firm not having a cloud management system.Think about it! Your infrastructure is not immune to disasters pertaining to the advanced and developed world.This could be one of those instances when departments are not transparent. This would lead to internal challenges and issues, which can be solved if everyone is just in sync. The cloud helps you do that! And finally,You’re always anxious about budgeting and costs. The implementation of cloud system management would help save on costs. Through CMS, we can track unused and underused resources. We should be able to put our capital on resources where it&#39;s required. Recurring costs certainly requires our attention.",
       },
       {
-        header:"Don't fret; ANJ America's got your back",
-        content:"ANJ America is absolutely customer-driven as we focus on building the infrastructure for your success. One of ANJ’s key services is Cloud Management Services. We wish to create a world where managing the Cloud system is simple, without any complexity. We insist on transforming cloud systems for enterprises by improving performance, adding new capabilities and driving down costs. When you think CMS, you think ANJ America!"
+        header: "Don't fret; Future Forward's got your back",
+        content: "Future Forward is absolutely customer-driven as we focus on building the infrastructure for your success. One of Future Forward’s key services is Cloud Management Services.We wish to create a world where managing the Cloud system is simple, without any complexity.We insist on transforming cloud systems for enterprises by improving performance, adding new capabilities and driving down costs.When you think CMS, you think Future Forward!"
       }
     ],
-    conclution:""
+    conclution: ""
   },
 ];
 

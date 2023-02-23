@@ -8,8 +8,8 @@ import { toast } from "react-hot-toast";
 import { DateFormatter } from "../common/DateFormatter";
 
 export default function JobCard({ item, getDetails }) {
-  const [formModal, setFormModal] = useState(false);
-  const [showAlert, setShowAlert] = useState(false);
+  const [ formModal, setFormModal ] = useState(false);
+  const [ showAlert, setShowAlert ] = useState(false);
   const date = DateFormatter(item.createdAt);
   const router = useRouter();
 
@@ -58,7 +58,7 @@ export default function JobCard({ item, getDetails }) {
     } else {
       document.body.style.overflowY = "scroll";
     }
-  }, [formModal]);
+  }, [ formModal ]);
 
   // const handleDeleteJob = async () => {
   //   try {
@@ -107,7 +107,7 @@ export default function JobCard({ item, getDetails }) {
               Posted Date : {date}
             </span>
           </div>
-          <span className="text-xs 2xl:text-[16px]  text-[#07038C] md:font-[400]">
+          <span className="text-xs 2xl:text-[16px]  text-[#0339D9] md:font-[400]">
             Pay : {item?.client_rate?.client_rate} {item?.client_rate?.currency}
           </span>
         </div>

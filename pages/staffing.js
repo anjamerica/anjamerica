@@ -19,7 +19,7 @@ export default function Staffing() {
           </p>
           <p className="text-[16px] p-0 leading-[1.8rem]  max-w-[410px] 2xl:text-[20px] break-words md:text-[18px] md:leading-[1.8rem] text-[#1048a9] md:text-[#0a1f44] mt-6 text-anim-blog">
             Hire from the top 2% of software talent in the world. We have an
-            exclusive pool of the top Anj America Professionals who can be
+            exclusive pool of the top Future Forward Professionals who can be
             sourced to your project as a full time or a consultant.
           </p>
           <Link href="/staffing#hiring">
@@ -113,7 +113,7 @@ export default function Staffing() {
           <p className="w-full md:w-[568px] text-[#0a1f44] mt-4 text-[.85rem] text-left break-words md:text-[16px] 2xl:text-[20px]">
             Our hiring process includes various levels for screening and a hard
             background check which takes weeks and sometimes months to cherry
-            pick the right candidate. Top Corporates rely on Anj resources for
+            pick the right candidate. Top Corporates rely on future foward resources for
             their most important and critical fixed bid as well as Time and
             Material project needs. Our staff has the right blend of culture,
             technology, and interpersonal skills which brings great business

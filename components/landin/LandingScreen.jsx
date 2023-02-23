@@ -21,7 +21,7 @@ const services = [
     subTitlte: "Works with top level IT Companies",
     title: "Catering to All Staffing Needs",
     description:
-      "Hire from top 2% of software talent in the world. We have an exclusive pool of the top ANJ America Professionals who can be sourced to your project as a full time or a consultant.",
+      "Hire from top 2% of software talent in the world. We have an exclusive pool of the top Future Forward Professionals who can be sourced to your project as a full time or a consultant.",
     link: "/staffing",
     si_no: "1",
   },
@@ -42,15 +42,15 @@ let i = 1;
 
 export default function LandingScreen() {
   // const [count, setCount] = useState(0);
-  const [previewImages, setPreviewImages] = useState([]);
-  const [width, setWidth] = useState(0);
+  const [ previewImages, setPreviewImages ] = useState([]);
+  const [ width, setWidth ] = useState(0);
   const pos = useRef(0);
   const count = useRef(0);
   const router = useRouter();
 
   const ref = useRef(null);
 
-  useEffect(() => {}, []);
+  useEffect(() => { }, []);
 
   // console.log(Document);
   // useEffect(() => {
@@ -136,7 +136,7 @@ export default function LandingScreen() {
             <div className="hidden lg:flex c7 absolute"></div>
             <div className="hidden lg:flex c6 absolute lg:mt-[80px] bottom-[200px] -left-[90px]"></div>
             <div className=" flex h-full flex-col gap-0 justify-center self-center items-center">
-              <div className="text-anim-blog heading-main  z-10 text-[#07038C] uppercase text-[24px] text-center w-[18rem] font-extrabold sm:w-[40rem] md:w-[44rem] xl:w-[60rem] sm:text-[40px] md:text-[45px] xl:text-[60px] 2xl:text-[85px] 2xl:w-[85rem] 2xl:leading-[90px]   lg:leading-[70px]">
+              <div className="text-anim-blog heading-main  z-10 text-[#0339D9] uppercase text-[24px] text-center w-[18rem] font-extrabold sm:w-[40rem] md:w-[44rem] xl:w-[60rem] sm:text-[40px] md:text-[45px] xl:text-[60px] 2xl:text-[85px] 2xl:w-[85rem] 2xl:leading-[90px]   lg:leading-[70px]">
                 Digitize your Business today and Grow your Brand...
               </div>
               <div className="text-anim-blog flex items-center text-center justify-center">
@@ -151,7 +151,7 @@ export default function LandingScreen() {
                   <button
                     className="btn-know-more"
                     data-aos="zoom-in"
-                    // onClick={()=>{router.push('/#products')}}
+                  // onClick={()=>{router.push('/#products')}}
                   >
                     KNOW MORE
                   </button>

@@ -7,7 +7,7 @@ import toast from "react-hot-toast";
 import { Subcribe } from "../../services/subscribe";
 
 export default function Footer() {
-  const [email, setEmail] = useState("");
+  const [ email, setEmail ] = useState("");
 
   const handleSubmit = async () => {
     try {
@@ -53,12 +53,12 @@ export default function Footer() {
         <div className="w-[60vw] bg-[#222230] h-[1px]"></div>
       </div>
       <div className="flex flex-col lg:flex-row md:justify-around sm:gap-4 pb-10  md:px-10">
-        <div className="flex flex-col md:gap-4">
+        <div className="flex flex-col gap-4 md:mt-3 lg:mt-4">
           <Link href="/">
             <img
               alt="logo img"
-              src="/landing/logo.svg"
-              className="h-fit w-[13rem] xl:h-fit md:w-[192px] -ml-3 -mb-6 md:h-fit object-contain p-5 md:p-0"
+              src="/assets/landing/ff-white-logo.png"
+              className="h-[93px] w-[13rem] xl:h-fit md:w-[192px] -ml-3 xl:ml-0 -mb-6 md:h-[63px] object-contain p-5 md:p-0 md:mb-0"
             />
           </Link>
           <span className="flex flex-col w-[22rem] items-left font-[400] text-white text-[14px] lg:text-[18px] 2xl:text-[24px] break-words text-left px-5 md:w-[24rem] md:px-0">
@@ -130,7 +130,7 @@ export default function Footer() {
       </div>
       <div className="flex justify-center items-center h-[4rem] lg:h-[5.5rem] sm:mt-5 border-t-[1px] border-[#222230]">
         <span className="text-xs md:text-[1rem] font-[400] text-white self-center">
-          &copy;2021 Anj America - All Rights Reserved
+          &copy;2023 Future Forward - All Rights Reserved
         </span>
       </div>
     </div>

@@ -8,18 +8,18 @@ import API from "../../services/api";
 import { LocationIcon } from "../common/icons";
 
 export default function Contact() {
-  const [details, setDetails] = useState({});
-  const [formError, setFormError] = useState({});
-  const [captchaValue, setCaptchaValue] = useState("");
-  const [fileLocation, setFileLocation] = useState("");
+  const [ details, setDetails ] = useState({});
+  const [ formError, setFormError ] = useState({});
+  const [ captchaValue, setCaptchaValue ] = useState("");
+  const [ fileLocation, setFileLocation ] = useState("");
   const { loaderToggler } = useContext(loadingContext);
-  const [file, setFile] = useState(false);
+  const [ file, setFile ] = useState(false);
   const formRef = useRef();
 
   const handleInputChange = (key, value) => {
     setDetails({
       ...details,
-      [key]: value,
+      [ key ]: value,
     });
   };
 
@@ -28,7 +28,7 @@ export default function Contact() {
   }
 
   const handleImageChange = (e) => {
-    setFile(e.target.files[0]);
+    setFile(e.target.files[ 0 ]);
   };
 
   const handleSubmit = async () => {
@@ -161,7 +161,7 @@ export default function Contact() {
                 </span>
                 <span>
                   TC79/342(5), 2nd Floor, CPS Plaza, Opp KIA Motors NH Bypass,
-                  Venpalavattom, Anayara (P.O) 695029, Thiruvananthapuram, Kerala, India  
+                  Venpalavattom, Anayara (P.O) 695029, Thiruvananthapuram, Kerala, India
                 </span>
               </p>
               <div className="h-r" />
@@ -175,28 +175,28 @@ export default function Contact() {
               </p>
             </div>
             <div className="flex flex-col w-full lg:flex-row">
-            <div className="flex flex-col mt-1 sm:mt-2 gap-2">
-              <span className="text-[16px] heading-main font-[900] text-[#141414]">
-                Call Us
-              </span>
-              {/* <span className="font-[600] text-[14px] whitespace-nowrap md:text-[16px] 2xl:text-[20px] text-[#141414]">
+              <div className="flex flex-col mt-1 sm:mt-2 gap-2">
+                <span className="text-[16px] heading-main font-[900] text-[#141414]">
+                  Call Us
+                </span>
+                {/* <span className="font-[600] text-[14px] whitespace-nowrap md:text-[16px] 2xl:text-[20px] text-[#141414]">
                 +1 (901) 371 7302 (USA)
               </span> */}
-              <span className="font-[600] text-[14px] whitespace-nowrap md:text-[16px] mt-0  2xl:text-[20px] text-[#141414]">
-                +1 (901) 310 0451 (USA)
-              </span>
-              <span className="font-[600] text-[14px] whitespace-nowrap md:text-[16px] mt-0  2xl:text-[20px] text-[#141414]">
-                +44 798 878 2024 (United Kingdom)
-              </span>
-            </div>
-            <div className="flex flex-col mt-2 md:mt-0 gap-2">
-              <span className="text-[16px] heading-main font-[900] text-[#141414]">
-                Email Us
-              </span>
-              <span className="font-[600] text-[14px] md:text-[16px] 2xl:text-[20px] text-[#141414]">
-                contact@anjamerica.com
-              </span>
-            </div>
+                <span className="font-[600] text-[14px] whitespace-nowrap md:text-[16px] mt-0  2xl:text-[20px] text-[#141414]">
+                  +1 (901) 310 0451 (USA)
+                </span>
+                <span className="font-[600] text-[14px] whitespace-nowrap md:text-[16px] mt-0  2xl:text-[20px] text-[#141414]">
+                  +44 798 878 2024 (United Kingdom)
+                </span>
+              </div>
+              <div className="flex flex-col mt-2 md:mt-0 gap-2">
+                <span className="text-[16px] heading-main font-[900] text-[#141414]">
+                  Email Us
+                </span>
+                <span className="font-[600] text-[14px] md:text-[16px] 2xl:text-[20px] text-[#141414]">
+                  contact@futureforwards.in
+                </span>
+              </div>
             </div>
           </div>
           <div className="flex flex-col justify-center gap-2 xl:px-[30px] md:py-[25px] w-full">
@@ -296,7 +296,7 @@ export default function Contact() {
                 class="g-recaptcha"
                 sitekey="6Lf_GLchAAAAADi1FwEaV9VEB-s7b9Chb8bJ2pW5"
                 onChange={onCaptchaChange}
-                
+
               />
               <span className="text-xs text-red-600">
                 {formError.captcha_err}

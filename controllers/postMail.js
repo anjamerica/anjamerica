@@ -22,37 +22,37 @@ var transporter = nodemailer.createTransport({
 });
 
 export const contactUsMailController = (req, res) => {
-  let { first_name, description, mobile_number, email, message,file_location } = req.body
+  let { first_name, description, mobile_number, email, message, file_location } = req.body
   const result = validator.isMobilePhone(mobile_number)
   if (result == false) res.status(400).json(errors({ status: 400, errorMessage: 'phone_number validation error' }))
   const contactMail = contactUs(first_name, mobile_number, email, description, message)
-  const resumeContactMAil=ResumeContactUs(first_name, mobile_number, email, description, message,file_location)
+  const resumeContactMAil = ResumeContactUs(first_name, mobile_number, email, description, message, file_location)
 
   var mailOptions = {
     from: process.env.MAIL_FROM,
     to: process.env.MAIL_TO,
-    subject: 'Resume from upload from anj america website',
+    subject: 'Resume from upload from Future Forward website',
     html: resumeContactMAil
   };
-  
-  if(file_location==""){
+
+  if (file_location == "") {
     var mailOptions = {
       from: process.env.MAIL_FROM,
       to: process.env.MAIL_TO,
-      subject: 'Applicant Contact Information from anj america website',
+      subject: 'Applicant Contact Information from Future Forward website',
       html: contactMail
     };
   }
- 
-transporter.sendMail(mailOptions, function (error, info) {
-  if (error) {
-    console.log(error);
-    return res.status(500).json(error({ status: 500, errorMessage: 'Internal Server Error', error: error.message }))
-  } else {
-    console.log('Email sent: ' + info.response);
-    return res.status(200).json(success({ successMessage: "Email Sent Successfully", status: 200 }))
-  }
-})
+
+  transporter.sendMail(mailOptions, function (error, info) {
+    if (error) {
+      console.log(error);
+      return res.status(500).json(error({ status: 500, errorMessage: 'Internal Server Error', error: error.message }))
+    } else {
+      console.log('Email sent: ' + info.response);
+      return res.status(200).json(success({ successMessage: "Email Sent Successfully", status: 200 }))
+    }
+  })
 }
 
 export const applicationMailController = (req, res) => {
@@ -60,7 +60,7 @@ export const applicationMailController = (req, res) => {
   let { country_code, tell_number } = req.body.phone_number
   const result = validator.isMobilePhone(tell_number)
   if (result == false) res.status(400).json(errors({ status: 400, errorMessage: 'phone_number validation error' }))
-  const date = new Date().toLocaleString('en-US').split(",")[0]
+  const date = new Date().toLocaleString('en-US').split(",")[ 0 ]
   const applicationMail = application(name, email, link, description, date, job_title, country_code, tell_number)
   var mailOptions = {
     from: process.env.MAIL_FROM,
@@ -79,33 +79,33 @@ export const applicationMailController = (req, res) => {
     }
   })
 }
-export const neawsLetterMail=async (req,res)=>{
-  const query=[
-    { $project : { email : 1,_id:0 }}
+export const neawsLetterMail = async (req, res) => {
+  const query = [
+    { $project: { email: 1, _id: 0 } }
   ]
-  const emails=await subscribers.aggregate(query)
- // console.log(typeof(emails));
+  const emails = await subscribers.aggregate(query)
+  // console.log(typeof(emails));
   emails.forEach(email => {
     for (let key in email) {
-        console.log(email[key]);
-        var mailOptions = {
-          from: process.env.MAIL_FROM,
-          to: email[key],
-          subject: 'Neaws Letter',
-          text: "hhhh"
-        };
-        transporter.sendMail(mailOptions, function (error, info) {
-          if (error) {
-            console.log(error);
-            return res.status(500).json(errors({ status: 500, errorMessage: 'Internal Server Error', error: error.message }))
-          } else {
-            console.log('Email sent: ' + info.response);
-            return res.status(200).json(success({ successMessage: "Email Sent Successfully", status: 200 }))
-          }
-        })
+      console.log(email[ key ]);
+      var mailOptions = {
+        from: process.env.MAIL_FROM,
+        to: email[ key ],
+        subject: 'Neaws Letter',
+        text: "hhhh"
+      };
+      transporter.sendMail(mailOptions, function (error, info) {
+        if (error) {
+          console.log(error);
+          return res.status(500).json(errors({ status: 500, errorMessage: 'Internal Server Error', error: error.message }))
+        } else {
+          console.log('Email sent: ' + info.response);
+          return res.status(200).json(success({ successMessage: "Email Sent Successfully", status: 200 }))
+        }
+      })
     }
   });
- 
-    
+
+
 
 }

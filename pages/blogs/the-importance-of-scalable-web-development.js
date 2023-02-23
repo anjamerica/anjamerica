@@ -115,7 +115,7 @@ export default function BlogFour() {
                 </div>
                 <div className="flex flex-col gap-2 my-4">
                   <p className="blog-subheading">
-                    How can ANJ America help?
+                    How can Future Forward help?
                   </p>
                   <span className="blog-paragraph">
                     Our team of well-experienced and tech-savvy individuals is

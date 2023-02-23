@@ -1,6 +1,6 @@
-export const application =(name,email,link,description,date,job_title,country_code,tell_number)=>{
+export const application = (name, email, link, description, date, job_title, country_code, tell_number) => {
 
-    return `<html>
+  return `<html>
     <head>
       <title></title>
       <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -96,7 +96,7 @@ export const application =(name,email,link,description,date,job_title,country_co
       ></div>
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
-          <td bgcolor="#07038C" align="center">
+          <td bgcolor="#0339D9" align="center">
             <table
               border="0"
               cellpadding="0"
@@ -116,7 +116,7 @@ export const application =(name,email,link,description,date,job_title,country_co
         </tr>
   
         <tr>
-          <td bgcolor="#07038C" align="center" style="padding: 0px 5px 0px 5px">
+          <td bgcolor="#0339D9" align="center" style="padding: 0px 5px 0px 5px">
             <table
               border="0"
               cellpadding="0"
@@ -464,7 +464,7 @@ export const application =(name,email,link,description,date,job_title,country_co
               </tr>
               <tr>
                 <td
-                  bgcolor="#07038C"
+                  bgcolor="#0339D9"
                   align="left"
                   style="
                     padding: 20px 30px 40px 30px;
@@ -481,7 +481,7 @@ export const application =(name,email,link,description,date,job_title,country_co
     </body>
   </html>
   `
-  
+
 
 
 
