@@ -1,6 +1,6 @@
 
 const mongoose = require("mongoose");
-mongoose.connect(process.env.MONGODB_URL,{
+mongoose.connect(process.env.MONGODB_URL, {
 
   useNewUrlParser: true,
   useUnifiedTopology: true,
@@ -19,18 +19,17 @@ mongoose.connect(process.env.MONGODB_URL,{
 
 
 module.exports = {
-  
+
   serverRuntimeConfig: {
 
     // Will only be available on the server side
     // mySecret: 'secret',
     mySecret: process.env.mySecret,
     MONGODB_URL: process.env.MONGODB_URL,
-    
-
   },
 
   publicRuntimeConfig: {
-    API_URL:process.env.API_URL
+    API_URL: process.env.API_URL,
+    RECAPTCHA_SITE_KEY: process.env.RECAPTCHA_SITE_KEY
   },
 }

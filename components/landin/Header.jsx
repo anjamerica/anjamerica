@@ -44,8 +44,8 @@ export default function Header({ navOpen, setNavOpen }) {
             <img
               ref={logoRef}
               alt="logo image"
-              src="/assets/landing/ff-logo.png"
-              className="w-fit h-[50px] md:h-[65px] md:w-[200px] ml-1 md:ml-6 object-contain cursor-pointer"
+              src="ff-icon.png"
+              className="w-fit h-[45px] md:h-[65px] md:w-[200px] ml-1 md:ml-6 object-contain cursor-pointer"
             />
           </Link>
         </div>

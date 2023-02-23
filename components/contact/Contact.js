@@ -6,6 +6,9 @@ import toast from "react-hot-toast";
 import ReCAPTCHA from "react-google-recaptcha";
 import API from "../../services/api";
 import { LocationIcon } from "../common/icons";
+import getConfig from "next/config";
+const { publicRuntimeConfig } = getConfig()
+
 
 export default function Contact() {
   const [ details, setDetails ] = useState({});
@@ -100,7 +103,6 @@ export default function Contact() {
       loaderToggler(false);
     }
   };
-
   return (
     <div className=" relative p-5 md:px-20  bg-white flex flex-col z-20 justify-center w-full h-fit">
       <div id="contact" className="absolute -top-[80px] h-0" />
@@ -294,7 +296,7 @@ export default function Contact() {
               <ReCAPTCHA
                 size="normal"
                 class="g-recaptcha"
-                sitekey="6Lf_GLchAAAAADi1FwEaV9VEB-s7b9Chb8bJ2pW5"
+                sitekey={publicRuntimeConfig.RECAPTCHA_SITE_KEY}
                 onChange={onCaptchaChange}
 
               />
