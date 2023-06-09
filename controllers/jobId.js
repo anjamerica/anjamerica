@@ -22,7 +22,7 @@ export const getJobId = async (req, res) => {
         console.log(jobId);
 
         if (jobId?.length<1) {
-            let jobId = "NT1"
+            let jobId = "ANJ1"
            return res.status(200).json({ message: "success", data: jobId })
         }
 
@@ -30,7 +30,7 @@ export const getJobId = async (req, res) => {
 
             const a = jobId[0].job_id.split("T")[1]
             const value = parseInt(a) + 1
-            jobId = "NT" + value
+            jobId = "ANJ" + value
 
            return res.status(200).json({ message: "success", data: jobId })
        

@@ -90,24 +90,24 @@ export default function JobCard({ item, getDetails }) {
         </div>
 
         <div>
-          <span className="text-[#949191] text-[16px] 2xl:text-[20px]">
+          <span className="text-gray-dark text-[16px] 2xl:text-[20px]">
             Training : {item?.training_details?.training_type}
           </span>
         </div>
         <div className="flex flex-col md:flex-row bg-[#EFEFEF] px-4 py-2 rounded-md justify-between">
           <div className="flex flex-col md:flex-row justify-start md:gap-4 md:w-[90%]">
-            <span className="text-xs  md:text-[14px] 2xl:text-[20px] text-[#949191] md:font-[400]">
+            <span className="text-xs  md:text-[14px] 2xl:text-[20px] text-gray-dark md:font-semibold">
               Training Duration: {item?.training_details?.training_duration} hrs
             </span>
-            <span className="text-xs md:text-[14px] 2xl:text-[20px] text-[#949191] md:font-[400]">
+            <span className="text-xs md:text-[14px] 2xl:text-[20px] text-gray-dark md:font-semibold">
               Training Fee: {item?.training_details?.training_fee?.training_fee}{" "}
               {item?.training_details?.training_fee?.currency}
             </span>
-            <span className="text-xs  md:text-[14px] 2xl:text-[20px] text-[#949191] md:font-[400]">
+            <span className="text-xs  md:text-[14px] 2xl:text-[20px] text-gray-dark md:font-semibold">
               Posted Date : {date}
             </span>
           </div>
-          <span className="text-xs 2xl:text-[16px]  text-[#07038C] md:font-[400]">
+          <span className="text-xs 2xl:text-[16px]  text-[#07038C] md:font-semibold">
             Pay : {item?.client_rate?.client_rate} {item?.client_rate?.currency}
           </span>
         </div>
@@ -118,7 +118,7 @@ export default function JobCard({ item, getDetails }) {
           <hr className="bg-[#E7E7E7] absolute -bottom-[.6rem] h-[.5px] w-full" />
         </div>
         <div className="flex flex-col md:flex-row justify-between mt-0 mb-0">
-          <span className="text-xs  text-[#949191] md:font-[400] md:text-[14px] 2xl:text-[20px] self-start my-2">
+          <span className="text-xs  text-gray-dark md:font-semibold md:text-[14px] 2xl:text-[20px] self-start my-2">
             Training Location: {item?.job_location?.city}
             {" , "} {item?.job_location?.state} {" , "}{" "}
             {item?.job_location?.country}

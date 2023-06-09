@@ -118,13 +118,13 @@ export default function Header({ navOpen, setNavOpen }) {
               </span>
             </span>
           </Link>
-          {/* <Link href="/career">
+          <Link href="/career">
             <span
               className={`cursor-pointer text-center md:text-base 2xl:text-[20px] mx-2 md:mx-4 font-semibold hover:text-primary-blue ${
                 active == "/career" ? "text-[#07038C]" : "text-[#08081E]"
               }`}
             >
-              Career
+              Careers
               <span className="w-full flex justify-center ease-linear duration-1000">
                 {active == "/career" && (
                   <svg
@@ -139,7 +139,7 @@ export default function Header({ navOpen, setNavOpen }) {
                 )}
               </span>
             </span>
-          </Link> */}
+          </Link>
           <Link href="/#products">
             <span
               className={`cursor-pointer text-center md:text-base 2xl:text-[20px] mx-2 md:mx-4 font-semibold hover:text-primary-blue ${
@@ -184,6 +184,7 @@ export default function Header({ navOpen, setNavOpen }) {
               </span>
             </span>
           </Link>
+         
           <Link href="/#contact">
             <span
               className={`cursor-pointer text-center md:text-base 2xl:text-[20px] mx-2 md:mx-4 font-semibold hover:text-primary-blue ${
@@ -234,11 +235,11 @@ export default function Header({ navOpen, setNavOpen }) {
                     Hire Right
                   </li>
                 </Link>
-                {/* <Link href="/career">
+                <Link href="/career">
                   <li onClick={()=>setNavOpen(false)} className="text-left py-2 text-primary-blue-dark hover:text-blue-800 text-xs font-semibold">
-                    Career
+                    Careers
                   </li>
-                </Link> */}
+                </Link>
                 <Link href="/#products">
                   <li onClick={()=>setNavOpen(false)} className=" text-left py-2 text-primary-blue-dark hover:text-blue-800 text-xs font-semibold">
                     Our Products

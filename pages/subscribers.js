@@ -6,3 +6,5 @@ export default function subscribers() {
     <div><Subscribers/></div>
   )
 }
+
+subscribers.getLayout=AuthLayout;

@@ -215,7 +215,7 @@ export default function JobApplyForm({ item, setFormModal }) {
             router.pathname == "/career"
               ? "fixed top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] "
               : ""
-          }w-full bg-[#F0F0F0] max-h-[520px] 2xl:max-h-full  overflow-auto form-scroll flex flex-col gap-2 p-10 z-10 sm:w-[25rem] mt-[80px] sm:rounded-xl`}
+          }w-full bg-[#F0F0F0] max-h-[520px] 2xl:max-h-full  overflow-auto form-scroll flex flex-col gap-2 p-10 z-10 sm:w-[25rem] mt-[38px] sm:rounded-xl`}
         >
           <div className="flex flex-row justify-between w-full">
             <span className="text-xl md:font-semibold text-center ">

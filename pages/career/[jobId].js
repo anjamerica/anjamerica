@@ -2,7 +2,6 @@ import { useRouter } from "next/router";
 import React, { useState, useEffect, useContext } from "react";
 import JobApplyForm from "../../components/career/JobApplyForm";
 import Footer from "../../components/landin/Footer";
-import Header from "../../components/landin/Header";
 import Loader from "../../components/layout/Loader";
 import { loadingContext } from "../../hooks/loadingContext";
 import { getJobDetailsById } from "../../services/JobDetails";

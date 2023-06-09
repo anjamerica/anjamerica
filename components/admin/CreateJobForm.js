@@ -94,6 +94,8 @@ export default function CreateJobForm() {
     getId();
   }, []);
 
+  console.log(id);
+
   useEffect(() => {
     const getJobDetails = async () => {
       try {
@@ -425,7 +427,7 @@ export default function CreateJobForm() {
             <input
               className="form-input-job"
               type="text"
-              placeholder="NT001"
+              placeholder="ANJ001"
               value={id}
               disabled={true}
             />
