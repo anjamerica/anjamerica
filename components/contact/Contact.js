@@ -13,7 +13,7 @@ export default function Contact() {
   const [captchaValue, setCaptchaValue] = useState("");
   const [fileLocation, setFileLocation] = useState("");
   const { loaderToggler } = useContext(loadingContext);
-  const [file, setFile] = useState({});
+  const [file, setFile] = useState(false);
   const formRef = useRef();
 
   const handleInputChange = (key, value) => {
@@ -62,8 +62,7 @@ export default function Contact() {
         return setFormError({ captcha_err: "Please verify the captcha" });
       }
 
-      let loc = " ";
-
+      let loc = "";
       if (file) {
         const url = "/api/admin/fileUpload";
         const formData = new FormData();

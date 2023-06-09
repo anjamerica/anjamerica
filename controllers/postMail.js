@@ -34,8 +34,8 @@ export const contactUsMailController = (req, res) => {
     subject: 'Resume from upload from anj america website',
     html: resumeContactMAil
   };
-
-  if(!file_location){
+  
+  if(file_location==""){
     var mailOptions = {
       from: process.env.MAIL_FROM,
       to: process.env.MAIL_TO,
@@ -54,7 +54,6 @@ transporter.sendMail(mailOptions, function (error, info) {
   }
 })
 }
-
 
 export const applicationMailController = (req, res) => {
   let { name, email, link, description, job_title } = req.body
