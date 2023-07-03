@@ -173,6 +173,15 @@ export default function Contact() {
                   Old No.3, New No.20, Pycrofts Garden Road, Chennai - 600006, Tamil Nadu, India
                 </span>
               </p>
+              <div className="h-r" />
+              <p className="font-[600] flex gap-2 items-start text-[14px] sm:text-[16px] 2xl:text-[20px] text-[#141414]">
+                <span>
+                  <LocationIcon />
+                </span>
+                <span>
+                6B - Tower 2, Trans Asia Corporate Park, Kakkanad, Cochin - 682037, Kerala, India
+                </span>
+              </p>
             </div>
             <div className="flex flex-col w-full lg:flex-row">
             <div className="flex flex-col mt-1 sm:mt-2 gap-2">
@@ -189,7 +198,7 @@ export default function Contact() {
                 +44 798 878 2024 (United Kingdom)
               </span>
             </div>
-            <div className="flex flex-col mt-2 md:mt-0 gap-2">
+            <div className="flex flex-col mt-2 md:mt-2 gap-2">
               <span className="text-[16px] heading-main font-[900] text-[#141414]">
                 Email Us
               </span>
