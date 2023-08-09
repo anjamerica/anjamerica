@@ -136,7 +136,7 @@ export default function LandingScreen() {
             <div className="hidden lg:flex c7 absolute"></div>
             <div className="hidden lg:flex c6 absolute lg:mt-[80px] bottom-[200px] -left-[90px]"></div>
             <div className=" flex h-full flex-col gap-0 justify-center self-center items-center">
-              <div className="text-anim-blog heading-main  z-10 text-[#07038C] uppercase text-[24px] text-center w-[18rem] font-extrabold sm:w-[40rem] md:w-[44rem] xl:w-[60rem] sm:text-[40px] md:text-[45px] xl:text-[60px] 2xl:text-[85px] 2xl:w-[85rem] 2xl:leading-[90px]   lg:leading-[70px]">
+              <div className="text-anim-blog heading-main  z-10 text-[#07038C] uppercase text-[24px] text-center w-[18rem] font-bold sm:w-[40rem] md:w-[47rem] xl:w-[60rem] sm:text-[40px] md:text-[45px] xl:text-[50px] 2xl:text-[82px] 2xl:w-[85rem] 2xl:leading-[90px]   lg:leading-[70px]">
                 Digitize your Business today and Grow your Brand...
               </div>
               <div className="text-anim-blog flex items-center text-center justify-center">

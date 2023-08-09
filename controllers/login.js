@@ -1,7 +1,7 @@
-import bcrypt from "bcrypt";
 import Admin from "../models/admin";
 import jsonwebtoken from "jsonwebtoken";
 import getConfig from 'next/config'
+import bcrypt from "bcryptjs"
 var crypto = require('crypto');
 
 // Only holds serverRuntimeConfig and publicRuntimeConfig

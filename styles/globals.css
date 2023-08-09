@@ -7,30 +7,14 @@
   scroll-behavior: smooth;
 }
 
-@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Raleway:wght@700&family=Roboto:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gothic+A1:wght@400;500;600;700;800&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,800&display=swap');
 
-@font-face {
-  font-family: sofia-pro;
-  src: url(../public/fonts/sofia-pro.otf);
-}
-
-@font-face {
-  font-family: sofia-pro-bold;
-  src: url(../public//fonts/sofia_pro_bold.ttf);
-}
-
-@font-face {
-  font-family: raleway-bold;
-  src: url(../public//fonts/Raleway-Bold.ttf);
-}
 
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: "sofia-pro", sans-serif;
+  font-family: 'Poppins', sans-serif;
   min-width: 350px;
   min-height: 900px;
   -webkit-tap-highlight-color: transparent;
@@ -55,15 +39,15 @@ a {
 } */
 
 .f-roboto{
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 .heading-main {
-  font-family: sofia-pro-bold;
+  font-family: 'Poppins', sans-serif;
 }
 
 .raleway-font {
-  font-family: raleway-bold;
+  font-family: 'Poppins', sans-serif;
 }
 
 
@@ -386,7 +370,7 @@ select {
 
 .fix {
   position: absolute;
-  *position: relative;
+  position: relative;
   width: 100px;
   height: -webkit-fill-available;
 }
