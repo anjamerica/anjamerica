@@ -33,12 +33,11 @@ export default function Header({ navOpen, setNavOpen }) {
       <div
         ref={headRef}
         style={{ transition: ".3s", transform: "scale(1)", boxShadow: "none" }}
-        className={`${
-          router.pathname ===
+        className={`${router.pathname ===
           ("/blogs" || "/about" || "/digitize" || "/staffing")
-            ? "relative transition-all w-full flex bg-white justify-between items-center h-[80px]  px-4  md:px-[2%] md:py-4 md:items-center  sh"
-            : "relative w-full  flex justify-between items-center h-[80px]  px-4  md:px-[2%] md:py-4 md:items-center  sh"
-        }`}
+          ? "relative transition-all w-full flex bg-white justify-between items-center h-[80px]  px-4  md:px-[2%] md:py-4 md:items-center  sh"
+          : "relative w-full  flex justify-between items-center h-[80px]  px-4  md:px-[2%] md:py-4 md:items-center  sh"
+          }`}
       >
         <div className=" xl:ml-5 w-fit">
           <Link href="/" passHref>
@@ -50,12 +49,12 @@ export default function Header({ navOpen, setNavOpen }) {
             />
           </Link>
         </div>
+
         <div className="hidden lg:flex justify-around gap-1 xl:gap-3 items-center md:mx-4 mr-7">
           <Link href="/about" passHref>
             <span
-              className={`cursor-pointer text-center md:text-base 2xl:text-[20px] mx-2 md:mx-4 font-semibold hover:text-primary-blue ${
-                active == "/about" ? "text-[#07038C]" : "text-[#08081E]"
-              }`}
+              className={`cursor-pointer text-center md:text-base 2xl:text-[20px] mx-2 md:mx-4 font-semibold hover:text-primary-blue ${active == "/about" ? "text-[#07038C]" : "text-[#08081E]"
+                }`}
             >
               Discover
               <span className="w-full flex justify-center transform ease-linear duration-1000">
@@ -73,11 +72,17 @@ export default function Header({ navOpen, setNavOpen }) {
               </span>
             </span>
           </Link>
+          <a target="__blank" href="/assets/portfolio/ANJ_Portfolio.pdf">
+            <span
+              className={`cursor-pointer text-center md:text-base 2xl:text-[20px] mx-2 md:mx-4 font-semibold hover:text-primary-blue text-[#08081E]`}
+            >
+              Portfolio
+            </span>
+          </a>
           <Link href="/digitize">
             <span
-              className={`cursor-pointer text-center md:text-base 2xl:text-[20px] mx-2 md:mx-4 font-semibold hover:text-primary-blue ${
-                active == "/digitize" ? "text-[#07038C]" : "text-[#08081E]"
-              }`}
+              className={`cursor-pointer text-center md:text-base 2xl:text-[20px] mx-2 md:mx-4 font-semibold hover:text-primary-blue ${active == "/digitize" ? "text-[#07038C]" : "text-[#08081E]"
+                }`}
               n
             >
               Digitize
@@ -98,9 +103,8 @@ export default function Header({ navOpen, setNavOpen }) {
           </Link>
           <Link href="/staffing">
             <span
-              className={`cursor-pointer text-center md:text-base 2xl:text-[20px] mx-2 md:mx-4 font-semibold hover:text-primary-blue ${
-                active == "/staffing" ? "text-[#07038C]" : "text-[#08081E]"
-              }`}
+              className={`cursor-pointer text-center md:text-base 2xl:text-[20px] mx-2 md:mx-4 font-semibold hover:text-primary-blue ${active == "/staffing" ? "text-[#07038C]" : "text-[#08081E]"
+                }`}
             >
               Hire Right
               <span className="w-full flex justify-center ease-linear duration-1000">
@@ -120,9 +124,8 @@ export default function Header({ navOpen, setNavOpen }) {
           </Link>
           <Link href="/career">
             <span
-              className={`cursor-pointer text-center md:text-base 2xl:text-[20px] mx-2 md:mx-4 font-semibold hover:text-primary-blue ${
-                active == "/career" ? "text-[#07038C]" : "text-[#08081E]"
-              }`}
+              className={`cursor-pointer text-center md:text-base 2xl:text-[20px] mx-2 md:mx-4 font-semibold hover:text-primary-blue ${active == "/career" ? "text-[#07038C]" : "text-[#08081E]"
+                }`}
             >
               Careers
               <span className="w-full flex justify-center ease-linear duration-1000">
@@ -142,9 +145,8 @@ export default function Header({ navOpen, setNavOpen }) {
           </Link>
           <Link href="/#products">
             <span
-              className={`cursor-pointer text-center md:text-base 2xl:text-[20px] mx-2 md:mx-4 font-semibold hover:text-primary-blue ${
-                active == "/#products" ? "text-[#07038C]" : "text-[#08081E]"
-              }`}
+              className={`cursor-pointer text-center md:text-base 2xl:text-[20px] mx-2 md:mx-4 font-semibold hover:text-primary-blue ${active == "/#products" ? "text-[#07038C]" : "text-[#08081E]"
+                }`}
             >
               Our Products
               <span className="w-full flex justify-center ease-linear duration-1000">
@@ -164,9 +166,8 @@ export default function Header({ navOpen, setNavOpen }) {
           </Link>
           <Link href="/blogs">
             <span
-              className={`cursor-pointer text-center md:text-base 2xl:text-[20px] mx-2 md:mx-4 font-semibold hover:text-primary-blue ${
-                active == "/blogs" ? "text-[#07038C]" : "text-[#08081E]"
-              }`}
+              className={`cursor-pointer text-center md:text-base 2xl:text-[20px] mx-2 md:mx-4 font-semibold hover:text-primary-blue ${active == "/blogs" ? "text-[#07038C]" : "text-[#08081E]"
+                }`}
             >
               Blog
               <span className="w-full flex justify-center ease-linear duration-1000">
@@ -184,12 +185,11 @@ export default function Header({ navOpen, setNavOpen }) {
               </span>
             </span>
           </Link>
-         
+
           <Link href="/#contact">
             <span
-              className={`cursor-pointer text-center md:text-base 2xl:text-[20px] mx-2 md:mx-4 font-semibold hover:text-primary-blue ${
-                active == "/#contact" ? "text-[#07038C]" : "text-[#08081E]"
-              }`}
+              className={`cursor-pointer text-center md:text-base 2xl:text-[20px] mx-2 md:mx-4 font-semibold hover:text-primary-blue ${active == "/#contact" ? "text-[#07038C]" : "text-[#08081E]"
+                }`}
             >
               Get in Touch
               <span className="w-full flex justify-center ease-linear duration-1000">
@@ -221,41 +221,47 @@ export default function Header({ navOpen, setNavOpen }) {
             <div className=" w-full p-3  h-fit">
               <ul className="menu">
                 <Link href="/about" >
-                  <li onClick={()=>setNavOpen(false)} className="text-left py-2 text-primary-blue-dark hover:text-blue-800 text-xs font-semibold">
+                  <li onClick={() => setNavOpen(false)} className="text-left py-2 text-primary-blue-dark hover:text-blue-800 text-xs font-semibold">
                     Discover
                   </li>
                 </Link>
+                <a target="__blank" href="/assets/portfolio/ANJ_Portfolio.pdf">
+                  <li onClick={() => setNavOpen(false)} className="text-left py-2 text-primary-blue-dark hover:text-blue-800 text-xs font-semibold">
+                    Portfolio
+                  </li>
+                </a>
                 <Link href="/digitize">
-                  <li onClick={()=>setNavOpen(false)} className="text-left py-2 text-primary-blue-dark hover:text-blue-800 text-xs font-semibold">
+                  <li onClick={() => setNavOpen(false)} className="text-left py-2 text-primary-blue-dark hover:text-blue-800 text-xs font-semibold">
                     Digitize
                   </li>
                 </Link>
                 <Link href="/staffing">
-                  <li onClick={()=>setNavOpen(false)} className="text-left py-2 text-primary-blue-dark hover:text-blue-800 text-xs font-semibold">
+                  <li onClick={() => setNavOpen(false)} className="text-left py-2 text-primary-blue-dark hover:text-blue-800 text-xs font-semibold">
                     Hire Right
                   </li>
                 </Link>
                 <Link href="/career">
-                  <li onClick={()=>setNavOpen(false)} className="text-left py-2 text-primary-blue-dark hover:text-blue-800 text-xs font-semibold">
+                  <li onClick={() => setNavOpen(false)} className="text-left py-2 text-primary-blue-dark hover:text-blue-800 text-xs font-semibold">
                     Careers
                   </li>
                 </Link>
                 <Link href="/#products">
-                  <li onClick={()=>setNavOpen(false)} className=" text-left py-2 text-primary-blue-dark hover:text-blue-800 text-xs font-semibold">
+                  <li onClick={() => setNavOpen(false)} className=" text-left py-2 text-primary-blue-dark hover:text-blue-800 text-xs font-semibold">
                     Our Products
                   </li>
                 </Link>
 
                 <Link href="/blogs">
-                  <li onClick={()=>setNavOpen(false)} className="text-left py-2 text-primary-blue-dark hover:text-blue-800 text-xs font-semibold">
+                  <li onClick={() => setNavOpen(false)} className="text-left py-2 text-primary-blue-dark hover:text-blue-800 text-xs font-semibold">
                     Blog
                   </li>
                 </Link>
                 <Link href="/#contact">
-                  <li onClick={()=>setNavOpen(false)} className="text-left py-2 text-primary-blue-dark hover:text-blue-800 text-xs font-semibold">
+                  <li onClick={() => setNavOpen(false)} className="text-left py-2 text-primary-blue-dark hover:text-blue-800 text-xs font-semibold">
                     Get in Touch
                   </li>
                 </Link>
+
               </ul>
             </div>
           </div>
