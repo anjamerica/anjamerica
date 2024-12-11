@@ -2,21 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
-
 * {
   scroll-behavior: smooth;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Gothic+A1:wght@400;500;600;700;800&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,800&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: 'Poppins', sans-serif;
   min-width: 350px;
   min-height: 900px;
+  font-family: "IBM Plex Sans", sans-serif;
   -webkit-tap-highlight-color: transparent;
 }
 
@@ -38,18 +36,17 @@ a {
   user-select: none;
 } */
 
-.f-roboto{
-  font-family: 'Poppins', sans-serif;
+.f-roboto {
+  font-family: "Poppins", sans-serif;
 }
 
 .heading-main {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 .raleway-font {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
-
 
 .yellow-action-button {
   @apply w-fit font-[800] text-black  bg-primary-yellow px-4 py-2  uppercase  rounded-full hover:bg-[#ecd378] transition-all text-center flex items-center justify-center;
@@ -1102,7 +1099,7 @@ input.file {
 }
 
 .h-r {
-  background: linear-gradient(180deg, #05F6DA 0%, #05F8DA 100%);
+  background: linear-gradient(180deg, #05f6da 0%, #05f8da 100%);
   height: 1px;
   margin-top: 3px;
   margin-bottom: 3px;
@@ -1113,7 +1110,7 @@ input.file {
 }
 
 .section {
-  scroll-snap-align: start
+  scroll-snap-align: start;
 }
 
 .main {
@@ -1122,4 +1119,193 @@ input.file {
 
 .section {
   scroll-snap-align: center;
+}
+
+.footer-bg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background-repeat: no-repeat;
+  background: url("../public/V2/images/landing/footer.png");
+}
+
+.banner-bg-landing {
+  width: 100vw;
+  height: 650px;
+  background-image: url("../public/V2/images/landing/banner.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.banner-bg-services {
+  width: 100vw;
+  height: 650px;
+  background-image: url("../public/V2/images/services/service.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.banner-bg-exp-design {
+  width: 100vw;
+  height: 650px;
+  background-image: url("../public/V2/images/services/exp-design.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.banner-bg-digital-marketing {
+  width: 100vw;
+  height: 650px;
+  background-image: url("../public/V2/images/services/digital-marketing.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.banner-bg-technology {
+  width: 100vw;
+  height: 650px;
+  background-image: url("../public/V2/images/services/technology.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.banner-bg-branding {
+  width: 100vw;
+  height: 650px;
+  background-image: url("../public/V2/images/services/branding.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.banner-bg-agile {
+  width: 100vw;
+  height: 650px;
+  background-image: url("../public/V2/images/services/agile.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.banner-bg-erp {
+  width: 100vw;
+  height: 650px;
+  background-image: url("../public/V2/images/services/erp.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.banner-bg-cs {
+  width: 100vw;
+  height: 650px;
+  background-image: url("../public/V2/images/services/cs.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.banner-bg-devops {
+  width: 100vw;
+  height: 650px;
+  background-image: url("../public/V2/images/services/devops.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.banner-bg-blogs {
+  width: 100vw;
+  height: 650px;
+  background-image: url("../public/V2/images/blogs/banner.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.banner-bg-our-team {
+  width: 100vw;
+  height: 650px;
+  background-image: url("../public/V2/images/our-team/banner.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.banner-bg-about-us {
+  width: 100vw;
+  height: 650px;
+  background-image: url("../public/V2/images/about-us/banner.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.banner-bg-contact-us {
+  width: 100vw;
+  height: 650px;
+  background-image: url("../public/V2/images/contact-us/banner.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.banner-bg-privacy-policy {
+  width: 100vw;
+  height: 650px;
+  background-image: url("../public/V2/images/privacy-policy/banner.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.heading-1 {
+  @apply text-xl md:text-[35px] leading-[48px] font-normal text-gray-secondary;
+}
+
+.text-md {
+  font-size: 14px;
+}
+
+.border-gray-normal-y {
+  border-top: 1px solid #808080;
+  border-bottom: 1px solid #808080;
+}
+
+.marquee-container {
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+}
+
+.marquee-content {
+  display: inline-flex;
+  animation: marquee 15s linear infinite;
+}
+
+.marquee-content img {
+  margin-right: 10px;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.bg-gradient-overlay {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    linear-gradient(
+      271.4deg,
+      rgba(0, 0, 0, 0) 49.78%,
+      rgba(0, 0, 0, 0.4) 68.26%
+    );
 }

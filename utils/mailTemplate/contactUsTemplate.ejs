@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anj Email</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@160..700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body
+    style="
+      margin: 0;
+      font-family: Readex Pro, sans-serif;
+      box-sizing: border-box;
+    "
+  >
+    <table
+      style="
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      "
+    >
+      <tr>
+        <td>
+          <table style="width: 100%; background-color: #000">
+            <tr>
+              <td>
+                <table
+                  style="
+                    width: 100%;
+                    padding-top: 27px;
+                    padding-bottom: 27px;
+                    border-bottom: 1px solid #ffffff;
+                    padding-left: 55px;
+                  "
+                >
+                  <tr>
+                    <td>
+                      <img
+                        style="width: 135px"
+                        src="https://nichetechies-public.s3.us-east-2.amazonaws.com/anj+llo.png"
+                      />
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <table
+                  style="
+                    width: 100%;
+                    padding: 55px;
+                    box-sizing: border-box;
+                    color: #ffffff;
+                  "
+                >
+                  <tr>
+                    <td>
+                      <h2
+                        style="
+                          font-size: 18px;
+                          font-weight: 700;
+                          padding-bottom: 24px;
+                          margin: 0;
+                          color: #ffffff;
+                          padding-left: 20px;
+                        "
+                      >
+                        <%= content.name %>,
+                      </h2>
+                      <ul style="margin: 0; padding: 0; list-style: none">
+                        <li
+                          style="
+                            padding: 5px;
+                            font-size: 14px;
+                            padding-bottom: 24px;
+                            color: #ffffff;
+                          "
+                        >
+                          <label>Email Id :</label>
+                          <span><%= content.email %></span>
+                        </li>
+                        <li
+                          style="
+                            padding: 5px;
+                            font-size: 14px;
+                            padding-bottom: 24px;
+                            color: #ffffff;
+                          "
+                        >
+                          <label>Phone number :</label>
+                          <span><%= content.phone_number %></span>
+                        </li>
+                        <li style="padding: 5px; font-size: 14px">
+                          <label
+                            style="
+                              width: 100%;
+                              padding-bottom: 10px;
+                              display: block;
+                              color: #ffffff;
+                            "
+                            >Message :
+                          </label>
+                          <p
+                            style="
+                              margin: 0;
+                              font-size: 12px;
+                              line-height: 30px;
+                              box-sizing: border-box;
+                              color: #ffffff;
+                            "
+                          >
+                            <%= content.message %>
+                          </p>
+                        </li>
+                      </ul>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

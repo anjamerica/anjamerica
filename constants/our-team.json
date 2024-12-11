@@ -1,0 +1,52 @@
+{
+    "list":[
+        {
+            "name":"Muhammed Muzammil K T",
+            "position":"Lead Software Developer - ANJ America",
+            "description":"Muhammed Muzammil is a computer engineer with expertise in high-performance systems embedded design, and team leadership focusing on enhancing productivity and work life balance.",
+            "image":"/v2/images/our-team/muzammil.png"
+        },
+        {
+            "name":"George Alias",
+            "position":"Jr Software Developer - ANJ America",
+            "description":"George Alias is a computer engineer with expertise in high-performance systems embedded design, and team leadership focusing on enhancing productivity and work life balance.",
+            "image":"/v2/images/our-team/george.png"
+        },
+        {
+            "name":"Jini VG",
+            "position":"Scrum Master - ANJ America",
+            "description":"Jini VG is a computer engineer with expertise in high-performance systems embedded design, and team leadership focusing on enhancing productivity and work life balance.",
+            "image":"/v2/images/our-team/jini.png"
+        },
+        {
+            "name":"Afhaam A K",
+            "position":"Lead Software Developer - ANJ America",
+            "description":"Afhaam is a computer engineer with expertise in high-performance systems embedded design, and team leadership focusing on enhancing productivity and work life balance.",
+            "image":"/v2/images/our-team/afham.png"
+        },
+        {
+            "name":"Aswin",
+            "position":"Software Developer - ANJ America",
+            "description":"Aswin is a computer engineer with expertise in high-performance systems embedded design, and team leadership focusing on enhancing productivity and work life balance.",
+            "image":"/v2/images/our-team/aswin.png"
+        },
+        {
+            "name":"Abin M Anil",
+            "position":"Jr Software Developer - ANJ America",
+            "description":"Abin M Anil is a computer engineer with expertise in high-performance systems embedded design, and team leadership focusing on enhancing productivity and work life balance.",
+            "image":"/v2/images/our-team/abin.png"
+        },
+        {
+            "name":"Ruksana",
+            "position":"Business development excutive",
+            "description":"Ruksana is a computer engineer with expertise in high-performance systems embedded design, and team leadership focusing on enhancing productivity and work life balance.",
+            "image":"/v2/images/our-team/ruksana.png"
+        },
+        {
+            "name":"Imthiyaz",
+            "position":"Lead Software Developer - ANJ America",
+            "description":"Imthiyaz is a computer engineer with expertise in high-performance systems embedded design, and team leadership focusing on enhancing productivity and work life balance.",
+            "image":"/v2/images/our-team/imthiyaz.png"
+        }
+    ]
+}

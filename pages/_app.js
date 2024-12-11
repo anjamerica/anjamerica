@@ -8,6 +8,7 @@ import { Toaster } from "react-hot-toast";
 import { useEffect, useState } from "react";
 import Layout from "../components/layout/Layout";
 import Header from "../components/landin/Header";
+import DefaultLayout from "../layouts/DefaultLayout";
 
 function MyApp({ Component, pageProps }) {
   useEffect(() => {
@@ -43,17 +44,17 @@ function MyApp({ Component, pageProps }) {
   );
 }
 
-const DefaultLayout = ({ children }) => {
-  const [navOpen, setNavOpen] = useState(false);
+// const DefaultLayout = ({ children }) => {
+//   const [navOpen, setNavOpen] = useState(false);
 
-  return (
-    <main className="relative mx-auto w-full h-full snap-y scroll-delay">
-      <div className="bg-white shadow-sm sticky left-0 top-0 z-[999]">
-        <Header navOpen={navOpen} setNavOpen={setNavOpen} />
-      </div>
-      <div className="lg:mt-[80px]" onClick={()=>setNavOpen(false)}>{children}</div>
-    </main>
-  );
-};
+//   return (
+//     <main className="relative mx-auto w-full h-full snap-y scroll-delay">
+//       <div className="bg-white shadow-sm sticky left-0 top-0 z-[999]">
+//         <Header navOpen={navOpen} setNavOpen={setNavOpen} />
+//       </div>
+//       <div className="lg:mt-[80px]" onClick={()=>setNavOpen(false)}>{children}</div>
+//     </main>
+//   );
+// };
 
 export default MyApp;
