@@ -75,7 +75,7 @@ export default async function handler(req, res) {
         const drive = google.drive({ version: "v3", auth });
         const sheets = google.sheets({ version: "v4", auth });
 
-        const spreadsheetId = "1NrZkrkjQrBlf-9jXDSd4IB_yox_L_RXvW2Qg6Jsl-FY";
+        const spreadsheetId = process.env.GOOGLE_SPREAD_SHEET_ID;
         const range = "Sheet1!A1:L";
 
         // Fetch existing data to check for duplicates
@@ -107,7 +107,7 @@ export default async function handler(req, res) {
         const driveResponse = await drive.files.create({
           requestBody: {
             name: uploadedFileName,
-            parents: ["1xshJdHJYOaq9LX_1IzRrpH2C2WbKojOx"],
+            parents: [process.env.GDRIVE_ID],
           },
           media: {
             mimeType: files.resume[0]?.mimetype,

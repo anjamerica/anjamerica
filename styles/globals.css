@@ -1325,11 +1325,11 @@ input.file {
 }
 
 .ant-table-row:nth-child(even) {
-  background-color: #f0f0f0 !important; /* Odd row background color */
+  background-color: #f0f0f0 !important;
 }
 
 .ant-table-row:nth-child(odd) {
-  background-color: #fafafa !important; /* Even row background color */
+  background-color: #fafafa !important;
 }
 
 .ant-table-thead > tr > th {
