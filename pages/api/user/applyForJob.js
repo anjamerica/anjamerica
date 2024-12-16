@@ -58,7 +58,7 @@ export default async function handler(req, res) {
         // Google API authentication
         const credentialsPath = path.join(
           process.cwd(),
-          "config/thermal-origin-444510-k6-7e18306874b1.json"
+          process.env.GDRIVE_ACCESS_FILE_LOCATION
         );
         const credentials = JSON.parse(
           fs.readFileSync(credentialsPath, "utf8")
