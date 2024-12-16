@@ -60,17 +60,17 @@ export default function BLG09() {
           increase as time passes by.
         </p>
         <p className="mt-3 text-md md:text-lg leading-[25px] md:leading-[40px] font-thin text-justify text-gray-tertiary">
-          This is usually calculated, to help the Operations' ; team to assess,
-          evaluate, and ensure the process does not go out of hand. It is
-          calculated through the ratio of the increase in system performance to
-          the rise in resources used.
+          This is usually calculated, to help the Operations&apos; ; team to
+          assess, evaluate, and ensure the process does not go out of hand. It
+          is calculated through the ratio of the increase in system performance
+          to the rise in resources used.
         </p>
         <p className="mt-3 text-md md:text-lg leading-[25px] md:leading-[40px] font-thin text-justify text-gray-tertiary">
           It must be understood that building scalable websites helps in high
           productivity and it would further improve the working style of the
           company. When we look at websites of well-established and renowned
-          companies, most of us don't realize the kind of workload that these
-          websites can withstand.
+          companies, most of us don&apos;t realize the kind of workload that
+          these websites can withstand.
         </p>
         <p className="mt-3 text-md md:text-lg leading-[25px] md:leading-[40px] font-thin text-justify text-gray-tertiary">
           This is why, when small businesses wish to develop a website, they
@@ -135,7 +135,7 @@ export default function BLG09() {
           design, and maximum cyber resilience.
         </p>
         <p className="text-md md:text-lg leading-[25px] md:leading-[40px] mt-3 font-thin text-justify text-gray-tertiary">
-          We understand that there's only one boss, and it is our customer.
+          We understand that there&apos;s only one boss, and it is our customer.
           Fulfilling your needs and requirements is our top priority. We would
           like your business to prosper and succeed, preferably without any
           obstacles in the way. We would pave the way to ensure your customers

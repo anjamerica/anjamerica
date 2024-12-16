@@ -76,11 +76,12 @@ export default function BLG11() {
         <p className="heading-1 md:my-3">What is Cloud Management?</p>
         <p className="text-md md:text-lg font-thin text-justify leading-[25px] md:leading-[40px] text-gray-tertiary">
           The evolution and advancement of technology have paved the way to make
-          mankind's life hassle-free! Cloud management is a type of software and
-          technology that ensures seamless, compilation, storage, and management
-          of data that can be done in the blink of an eye! Cloud management can
-          be used for all industries, during one's everyday way of life.
-          Examples include Google Drive and iCloud for Apple Devices.
+          mankind&apos;s life hassle-free! Cloud management is a type of
+          software and technology that ensures seamless, compilation, storage,
+          and management of data that can be done in the blink of an eye! Cloud
+          management can be used for all industries, during one&apos;s everyday
+          way of life. Examples include Google Drive and iCloud for Apple
+          Devices.
         </p>
         <p className="text-2xl my-4">Benefits of Cloud Management Services</p>
         <div className="w-full  md:mt-6 flex flex-col gap-4">
@@ -103,12 +104,14 @@ export default function BLG11() {
             </div>
           ))}
         </div>
-        <p className="text-2xl my-4">Don't fret; ANJ America's got your back</p>
+        <p className="text-2xl my-4">
+          Don&apos;t fret; ANJ America&apos;s got your back
+        </p>
         <p className="text-md md:text-lg leading-[25px] md:leading-[40px] mt-4 font-thin text-justify text-gray-tertiary">
           ANJ America is absolutely customer-driven as we focus on building the
-          infrastructure for your success. One of ANJ’s key services is Cloud
-          Management Services. We wish to create a world where managing the
-          Cloud system is simple, without any complexity. We insist on
+          infrastructure for your success. One of ANJ&apos;s key services is
+          Cloud Management Services. We wish to create a world where managing
+          the Cloud system is simple, without any complexity. We insist on
           transforming cloud systems for enterprises by improving performance,
           adding new capabilities and driving down costs. When you think CMS,
           you think ANJ America!

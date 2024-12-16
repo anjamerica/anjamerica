@@ -12,11 +12,7 @@ import DefaultLayout from "../layouts/DefaultLayout";
 
 function MyApp({ Component, pageProps }) {
   useEffect(() => {
-    AOS.init({
-      easing: "ease-out-cubic",
-      once: true,
-      offset: 50,
-    });
+    AOS.init();
   }, []);
 
   let CustomLayout = Component?.getLayout || DefaultLayout;

@@ -47,7 +47,12 @@ export default function InsideAnj() {
 
 function Card({ item }) {
   return (
-    <div className="flex flex-col gap-3">
+    <div
+      data-aos="fade-right"
+      data-aos-offset="300"
+      data-aos-easing="ease-in-sine"
+      className="flex flex-col gap-3"
+    >
       <p className="text-lg md:text-[30px] font-normal">{item?.title}</p>
       <p className="text-md md:text-[20px] leading-[21px] font-light md:leading-[45px] text-justify xl:text-start">
         {item?.description}

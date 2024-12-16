@@ -4,7 +4,11 @@ import React from "react";
 export default function CourseCard({ item }) {
   const router = useRouter();
   return (
-    <div className="relative w-full h-full rounded-t-[11px] flex flex-col overflow-hiden rounded-[9px] md:rounded-none bg-white shadow-md">
+    <div
+      data-aos="fade-up"
+      data-aos-anchor-placement="top-bottom"
+      className="relative w-full h-full rounded-t-[11px] flex flex-col overflow-hiden rounded-[9px] md:rounded-none bg-white shadow-md"
+    >
       <div className="w-full h-[177px] md:h-[215px] rounded-[11px] relative">
         <img
           className="w-full h-full object-cover rounded-t-[11px]"

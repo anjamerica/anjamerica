@@ -4,39 +4,85 @@ import Container from "../../common/Container";
 import { Gallery } from "react-grid-gallery";
 
 export default function LifeAtAnj() {
-  const videos = [
+  const images = [
     {
-      src: "https://c2.staticflickr.com/9/8817/28973449265_07e3aa5d2e_b.jpg",
+      src: "https://nichetechies-public.s3.us-east-2.amazonaws.com/ANJ_WEBSITE/WEB/IMG-20240906-WA0187.jpg",
       width: 320,
       height: 174,
     },
     {
-      src: "https://c2.staticflickr.com/9/8817/28973449265_07e3aa5d2e_b.jpg",
+      src: "https://nichetechies-public.s3.us-east-2.amazonaws.com/ANJ_WEBSITE/WEB/IMG-20240819-WA0036.jpg",
       width: 320,
       height: 174,
     },
     {
-      src: "https://c2.staticflickr.com/9/8817/28973449265_07e3aa5d2e_b.jpg",
+      src: "https://nichetechies-public.s3.us-east-2.amazonaws.com/ANJ_WEBSITE/WEB/IMG-20240906-WA0057.jpg",
+      width: 320,
+      height: 174,
+    },
+
+    {
+      src: "https://nichetechies-public.s3.us-east-2.amazonaws.com/ANJ_WEBSITE/WEB/IMG-20240302-WA0009.jpg",
       width: 320,
       height: 174,
     },
     {
-      src: "https://c2.staticflickr.com/9/8817/28973449265_07e3aa5d2e_b.jpg",
+      src: "https://nichetechies-public.s3.us-east-2.amazonaws.com/ANJ_WEBSITE/WEB/IMG-20230218-WA0025.jpg",
       width: 320,
       height: 174,
     },
     {
-      src: "https://c2.staticflickr.com/9/8817/28973449265_07e3aa5d2e_b.jpg",
+      src: "https://nichetechies-public.s3.us-east-2.amazonaws.com/ANJ_WEBSITE/WEB/IMG_20240906_221501_661.jpg",
       width: 320,
       height: 174,
     },
     {
-      src: "https://c2.staticflickr.com/9/8817/28973449265_07e3aa5d2e_b.jpg",
+      src: "https://nichetechies-public.s3.us-east-2.amazonaws.com/ANJ_WEBSITE/WEB/IMG_20231229_232201_773.jpg",
       width: 320,
       height: 174,
     },
     {
-      src: "https://c2.staticflickr.com/9/8817/28973449265_07e3aa5d2e_b.jpg",
+      src: "https://nichetechies-public.s3.us-east-2.amazonaws.com/ANJ_WEBSITE/WEB/IMG_20231016_112840_164.webp",
+      width: 320,
+      height: 174,
+    },
+    {
+      src: "https://nichetechies-public.s3.us-east-2.amazonaws.com/ANJ_WEBSITE/WEB/IMG_20230831_134920_971.jpg",
+      width: 320,
+      height: 174,
+    },
+    {
+      src: "https://nichetechies-public.s3.us-east-2.amazonaws.com/ANJ_WEBSITE/WEB/IMG_20230824_203247_645.jpg",
+      width: 320,
+      height: 174,
+    },
+    {
+      src: "https://nichetechies-public.s3.us-east-2.amazonaws.com/ANJ_WEBSITE/WEB/IMG_20230812_112528_480.jpg",
+      width: 320,
+      height: 174,
+    },
+    {
+      src: "https://nichetechies-public.s3.us-east-2.amazonaws.com/ANJ_WEBSITE/WEB/IMG_20230802_102045_862.jpg",
+      width: 320,
+      height: 174,
+    },
+    {
+      src: "https://nichetechies-public.s3.us-east-2.amazonaws.com/ANJ_WEBSITE/WEB/IMG_2071.JPG",
+      width: 320,
+      height: 174,
+    },
+    {
+      src: "https://nichetechies-public.s3.us-east-2.amazonaws.com/ANJ_WEBSITE/WEB/IMG_2011.JPG",
+      width: 320,
+      height: 174,
+    },
+    {
+      src: "https://nichetechies-public.s3.us-east-2.amazonaws.com/ANJ_WEBSITE/WEB/IMG_1941.JPG",
+      width: 320,
+      height: 174,
+    },
+    {
+      src: "https://nichetechies-public.s3.us-east-2.amazonaws.com/ANJ_WEBSITE/WEB/IMG_1885.JPG",
       width: 320,
       height: 174,
     },
@@ -48,7 +94,24 @@ export default function LifeAtAnj() {
         From Strength to Strength: Our Growth in Pictures
       </p>
 
-      <Gallery images={videos} />
+      <div>
+        <Gallery
+          images={images}
+          enableImageSelection={false}
+          renderImage={(props) => (
+            <div
+              style={{
+                width: "fit-content",
+                height: "100%",
+                overflow: "hidden",
+                position: "relative",
+              }}
+            >
+              <img className="object-cover" alt={props.imageProps.alt} />
+            </div>
+          )}
+        />
+      </div>
     </Container>
   );
 }

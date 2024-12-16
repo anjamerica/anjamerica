@@ -120,8 +120,9 @@ export default function BLG01() {
 
               <p className="md:mt-6 text-md md:text-lg font-thin text-justify leading-[25px] md:leading-[40px] text-gray-tertiary">
                 The Computing and Technology Industry Association (CompTIA) is
-                the world's leading industry association for those who design,
-                implement, manage and protect technologies that drive our global
+                the world&apos;s leading industry association for those who
+                design, implement, manage and protect technologies that drive
+                our global
               </p>
             </div>
             <div className="w-full md:w1/2 lg:w-[40%]">

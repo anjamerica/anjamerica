@@ -1,5 +1,5 @@
-import { useRouter } from "next/router";
 import React from "react";
+import { useRouter } from "next/router";
 import BLG01 from "../../components/pages/blogs/BLG01";
 import BLG02 from "../../components/pages/blogs/BLG02";
 import BLG03 from "../../components/pages/blogs/BLG03";
@@ -11,7 +11,7 @@ import BLG09 from "../../components/pages/blogs/BLG09";
 import BLG10 from "../../components/pages/blogs/BLG10";
 import BLG11 from "../../components/pages/blogs/BLG11";
 
-export default function index() {
+export default function Index() {
   const router = useRouter();
 
   const { blogId } = router.query;
