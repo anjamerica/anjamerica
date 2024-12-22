@@ -139,7 +139,6 @@ const Enquiry = () => {
               <label
                 data-aos="fade-top"
                 data-aos-duration="500"
-                ss
                 className="pb-4 input-label"
               >
                 Last Name
@@ -165,7 +164,6 @@ const Enquiry = () => {
               <label
                 data-aos="fade-top"
                 data-aos-duration="500"
-                ss
                 className="pb-4 input-label"
               >
                 Email
@@ -191,7 +189,6 @@ const Enquiry = () => {
               <label
                 data-aos="fade-top"
                 data-aos-duration="500"
-                ss
                 className="pb-4 input-label"
               >
                 Phone Number
