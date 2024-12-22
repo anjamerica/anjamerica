@@ -83,7 +83,7 @@ export default function Header({ navOpen, setNavOpen }) {
             <span
               className={`cursor-pointer text-center md:text-base 2xl:text-[20px] mx-2 md:mx-4 font-semibold hover:text-primary-blue ${active == "/digitize" ? "text-[#07038C]" : "text-[#08081E]"
                 }`}
-              n
+
             >
               Digitize
               <span className="w-full flex justify-center ease-linear duration-1000">
