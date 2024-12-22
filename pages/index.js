@@ -10,7 +10,7 @@
 
 import About from "../components/pages/landing/About";
 import Banner from "../components/pages/landing/Banner";
-import BusinessNeeds from "../components/pages/landing/businessNeeds";
+import BusinessNeeds from "../components/pages/landing/BusinessNeeds";
 import BusinessSuccess from "../components/pages/landing/BusinessSuccess";
 import ImageGallery from "../components/pages/landing/Gallery";
 import OurClients from "../components/pages/landing/OurClients";
