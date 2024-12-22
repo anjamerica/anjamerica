@@ -48,7 +48,7 @@ export default function InsideAnj() {
 function Card({ item }) {
   return (
     <div
-      data-aos="fade-right"
+      // data-aos="fade-right"
       data-aos-offset="300"
       data-aos-easing="ease-in-sine"
       className="flex flex-col gap-3"

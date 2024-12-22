@@ -31,7 +31,7 @@ module.exports = {
         senary: "#1A202C",
         septenary: "#2C2C2C",
         orange: {
-          primary: "#FF9900",
+          primary: "#E58411",
         },
         blue: {
           primary: "#3E36B6",
@@ -51,6 +51,7 @@ module.exports = {
         primary: "#3E36B6",
         secondary: "#141414",
         tertiary: "#404040",
+
         gray: {
           secondary: "#141414",
           tertiary: "#404040",
@@ -59,6 +60,7 @@ module.exports = {
           septenary: "#2C2C2C",
           light: "#B7B7B7",
           medium: "#666666",
+          dark: "#1E1E1E",
         },
       },
       fontSize: {
