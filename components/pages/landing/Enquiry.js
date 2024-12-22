@@ -114,7 +114,6 @@ const Enquiry = () => {
               <label
                 data-aos="fade-top"
                 data-aos-duration="500"
-                ss
                 className="pb-4 input-label"
               >
                 First Name
