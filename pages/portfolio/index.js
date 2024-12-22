@@ -2,15 +2,9 @@ import React from "react";
 
 import Banner from "../../components/common/Banner";
 import Container from "../../components/common/Container";
+import BannerV2 from "../../components/common/BannerV2";
 
 export default function Index() {
-  const bannerContent = {
-    title: "Showcasing Our Expertise",
-    description:
-      "We specialize in app and web development, enhancing user experiences with intuitive UI/UX design and impactful branding. Our solutions combine technical excellence with creative design to meet your goals.",
-    bannerStyle: "banner-bg-portfolio",
-  };
-
   const images = [
     "https://nichetechies-public.s3.us-east-2.amazonaws.com/ANJ_WEBSITE/WEB/pics/1.png",
     "https://nichetechies-public.s3.us-east-2.amazonaws.com/ANJ_WEBSITE/WEB/pics/2.jpg",
@@ -35,20 +29,25 @@ export default function Index() {
     "https://nichetechies-public.s3.us-east-2.amazonaws.com/ANJ_WEBSITE/WEB/pics/21.png",
   ];
 
+  const bannerContent = {
+    title: "Showcasing Our Expertise",
+    description:
+      "Pioneering App & Web Solutions with Exceptional UI/UX Design and Impactful Branding",
+    background: "portfolio-banner",
+  };
+
   return (
-    <div>
-      <Banner item={bannerContent} />
-      <Container>
-        <div className="my-10 md:my-14 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 ">
-          {images?.map((item, i) => (
-            <img
-              key={i}
-              className="w-full h-fit object-contain rounded-[20px]"
-              src={item}
-            />
-          ))}
-        </div>
-      </Container>
+    <div className="-mt-[74px]">
+      <BannerV2 item={bannerContent} />
+      <div className="mt-5 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2 md:gap-5">
+        {images?.map((item, i) => (
+          <img
+            key={i}
+            className="w-full h-fit object-contain rounded-[20px]"
+            src={item}
+          />
+        ))}
+      </div>
     </div>
   );
 }

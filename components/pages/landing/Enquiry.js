@@ -105,33 +105,17 @@ const Enquiry = () => {
   };
 
   return (
-    <Container className="w-full flex justify-center items-center px-5">
+    <Container className="w-full flex justify-center items-center md:px-5">
       <Toaster />
       <div className="w-full max-w-[1618px] py-6 md:py-12">
-        <div className="w-full pb-4 lg:pb-0">
-          <h2
-            data-aos="fade-right"
-            data-aos-duration="500"
-            className="text-start text-gray-senary heading-1 text-base"
-          >
-            Are you interested in hearing more?
-          </h2>
-          <span
-            data-aos="fade-right"
-            data-aos-duration="1000"
-            className="text-start w-full block text-gray-tertiary"
-          >
-            Please share your details and we will reach out to you soon..
-          </span>
-        </div>
         <div className="w-full flex flex-wrap mt-5 md:mt-10a">
           <form className="w-full flex flex-wrap">
-            <div className="w-full lg:w-1/2 lg:pr-4 pb-4">
+            <div className="w-full lg:w-1/2 lg:pr-4 pb-4 md:pb-8">
               <label
                 data-aos="fade-top"
                 data-aos-duration="500"
                 ss
-                className="pb-4 block font-[600]"
+                className="pb-4 input-label"
               >
                 First Name
               </label>
@@ -143,7 +127,7 @@ const Enquiry = () => {
                 <input
                   name="first_name"
                   placeholder="Enter First Name"
-                  className="w-full border border-solid border-[#B7B7B7] p-2"
+                  className="w-full border-input p-2"
                   value={formData?.first_name}
                   onChange={handleChange}
                 />
@@ -152,12 +136,12 @@ const Enquiry = () => {
                 )}
               </div>
             </div>
-            <div className="w-full lg:w-1/2 lg:pr-4 pb-4">
+            <div className="w-full lg:w-1/2 lg:pr-4 pb-4 md:pb-8">
               <label
                 data-aos="fade-top"
                 data-aos-duration="500"
                 ss
-                className="pb-4 block font-[600]"
+                className="pb-4 input-label"
               >
                 Last Name
               </label>
@@ -169,7 +153,7 @@ const Enquiry = () => {
                 <input
                   name="last_name"
                   placeholder="Enter Last Name"
-                  className="w-full border border-solid border-[#B7B7B7] p-2"
+                  className="w-full border-input p-2"
                   value={formData?.last_name}
                   onChange={handleChange}
                 />
@@ -178,12 +162,12 @@ const Enquiry = () => {
                 )}
               </div>
             </div>
-            <div className="w-full lg:w-1/2 lg:pr-4 pb-4">
+            <div className="w-full lg:w-1/2 lg:pr-4 pb-4 md:pb-8">
               <label
                 data-aos="fade-top"
                 data-aos-duration="500"
                 ss
-                className="pb-4 block font-[600]"
+                className="pb-4 input-label"
               >
                 Email
               </label>
@@ -195,7 +179,7 @@ const Enquiry = () => {
                 <input
                   name="email"
                   placeholder="Enter Your Email"
-                  className="w-full border border-solid border-[#B7B7B7] p-2"
+                  className="w-full border-input p-2"
                   value={formData?.email}
                   onChange={handleChange}
                 />
@@ -204,12 +188,12 @@ const Enquiry = () => {
                 )}
               </div>
             </div>
-            <div className="w-full lg:w-1/2 lg:pr-4 pb-4">
+            <div className="w-full lg:w-1/2 lg:pr-4 pb-4 md:pb-8">
               <label
                 data-aos="fade-top"
                 data-aos-duration="500"
                 ss
-                className="pb-4 block font-[600]"
+                className="pb-4 input-label"
               >
                 Phone Number
               </label>
@@ -221,7 +205,7 @@ const Enquiry = () => {
                 <input
                   name="mobile_number"
                   placeholder="Enter Phone Number"
-                  className="w-full border border-solid border-[#B7B7B7] p-2"
+                  className="w-full border-input p-2"
                   value={formData?.mobile_number}
                   onChange={handleChange}
                 />
@@ -235,7 +219,7 @@ const Enquiry = () => {
                 data-aos="fade-top"
                 data-aos-duration="500"
                 ss
-                className="pb-4 block font-[600]"
+                className="pb-4 input-label"
               >
                 Message
               </label>
@@ -251,7 +235,7 @@ const Enquiry = () => {
                 <textarea
                   name="description"
                   placeholder="Enter Your Message"
-                  className="w-full border border-solid border-[#B7B7B7] p-2"
+                  className="w-full border-input p-2 resize-none h-[120px]"
                   value={formData?.description}
                   onChange={handleChange}
                 ></textarea>
@@ -261,20 +245,14 @@ const Enquiry = () => {
               <div className="flex pb-4 lg:pb-0">
                 <span>
                   <input
-                    className="border border-solid border-[#B7B7B7]"
+                    className="w-4 h-4 rounded-[2px] border border-[#262626] checked:bg-white bg-[#1a1a1a] appearance-none cursor-pointer"
                     type="checkbox"
                     onChange={handleAgree}
                   />
                 </span>
-                <span className="w-full flex ">
+                <span className="w-full flex text-white">
                   <span className="pl-2">
-                    I agree with{" "}
-                    <span className="text-primary underline">Terms of Use</span>{" "}
-                    and
-                    <span className="text-primary underline">
-                      {" "}
-                      Privacy Policy
-                    </span>
+                    I agree with Terms of Use and Privacy Policy
                   </span>
                 </span>
               </div>
@@ -282,16 +260,17 @@ const Enquiry = () => {
               <button
                 disabled={isTermsAgreed && !isLoading ? false : true}
                 onClick={handleSubmit}
-                className={`group w-[200px] flex items-center gap-2 p-3 ${
-                  isTermsAgreed ? "bg-primary" : "bg-gray-400"
-                } ${
-                  isTermsAgreed ? "hover:bg-[#efefef]" : ""
-                } uppercase text-[white] ${
-                  isTermsAgreed ? "hover:text-primary" : "cursor-not-allowed"
+                className={`group w-fit min-w-[80px] rounded-md flex justify-center items-center gap-2 p-3 ${
+                  isTermsAgreed
+                    ? "bg-orange-primary"
+                    : "bg-orange-primary opacity-50"
+                }  text-black ${
+                  isTermsAgreed
+                    ? "hover:text-orange-bg-orange-primary"
+                    : "cursor-not-allowed"
                 } md:ml-auto`}
               >
-                {isLoading ? "Loading..." : "Send Message"}{" "}
-                <GoArrowUpRight className="w-5 h-5 text-white group-hover:text-primary" />
+                {isLoading ? "Loading..." : "Send"}{" "}
               </button>
             </div>
           </form>
