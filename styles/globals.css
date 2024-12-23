@@ -1624,18 +1624,19 @@ input.file {
   padding: 0px !important;
 }
 
-.modal-custom .ant-modal-title {
+/* .modal-custom .ant-modal-title {
   display: none !important;
 }
 
 .modal-custom .ant-modal-footer {
   display: none !important;
-}
+} */
 
 .modal-custom .ant-modal-content {
-  width: fit-content !important;
-  margin-left: auto !important;
-  margin-right: auto !important;
+  width: 450px !important;
+  background-color: #f8f8f8;
+  /* margin-left: auto !important;
+  margin-right: auto !important; */
 }
 
 .sticky-header {

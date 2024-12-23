@@ -11,7 +11,7 @@ export default function DefaultLayout({ children }) {
     if (hasSeenModal) {
       const timer = setTimeout(() => {
         setIsModalVisible(true);
-      }, 5000);
+      }, 2000);
 
       return () => clearTimeout(timer);
     }
