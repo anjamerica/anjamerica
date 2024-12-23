@@ -1649,3 +1649,7 @@ input.file {
     top: 20px;
   }
 }
+
+.ant-notification-notice {
+  background-color: #f8f8f8;
+}
