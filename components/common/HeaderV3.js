@@ -99,27 +99,27 @@ export default function HeaderV3() {
             </button>
           </Link>
         </div>
-        <div className="w-6 h-6 xl:hidden">
+        <div className="w-8 cursor-pointer h-8 xl:hidden">
           <MdMenu
             className="w-6 h-6 text-white  cursor-pointer"
             onClick={() => setMobileMenu(!mobileMenu)}
           />
-          <Drawer
-            headerStyle={{ display: "none" }}
-            onClose={() => setMobileMenu(false)}
-            open={mobileMenu}
-          >
-            <ul className="flex flex-col gap-6 ">
-              {navList?.map((item, i) => (
-                <NavItem
-                  item={item}
-                  key={i}
-                  handleCloseMobileMenu={handleCloseMobileMenu}
-                />
-              ))}
-            </ul>
-          </Drawer>
         </div>
+        <Drawer
+          headerStyle={{ display: "none" }}
+          onClose={() => setMobileMenu(false)}
+          open={mobileMenu}
+        >
+          <ul className="flex flex-col gap-6 ">
+            {navList?.map((item, i) => (
+              <NavItem
+                item={item}
+                key={i}
+                handleCloseMobileMenu={handleCloseMobileMenu}
+              />
+            ))}
+          </ul>
+        </Drawer>
       </div>
     </nav>
   );
