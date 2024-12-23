@@ -110,7 +110,7 @@ export default function HeaderV3() {
           onClose={() => setMobileMenu(false)}
           open={mobileMenu}
         >
-          <ul className="flex flex-col gap-6 ">
+          <ul style={{ width: "250px" }} className="flex flex-col gap-6 ">
             {navList?.map((item, i) => (
               <NavItem
                 item={item}
