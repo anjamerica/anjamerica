@@ -5,14 +5,14 @@ import Container from "../../common/Container";
 
 export default function OurClients() {
   const clients = [
-    "/V2/logos/landing/clients/aladdin.svg",
-    "/V2/logos/landing/clients/aki.svg",
-    "/V2/logos/landing/clients/texcoms.svg",
-    "/V2/logos/landing/clients/planet.svg",
-    "/V2/logos/landing/clients/corenroll.svg",
-    "/V2/logos/landing/clients/wheeliyo.svg",
-    "/V2/logos/landing/clients/radheys.svg",
-    "/V2/logos/landing/clients/prakria.svg",
+    "https://nichetechies-public.s3.us-east-2.amazonaws.com/ANJ_WEBSITE/WEB/assets/clients/aladdin.svg",
+    "https://nichetechies-public.s3.us-east-2.amazonaws.com/ANJ_WEBSITE/WEB/assets/clients/aki.svg",
+    "https://nichetechies-public.s3.us-east-2.amazonaws.com/ANJ_WEBSITE/WEB/assets/clients/texcoms.svg",
+    "https://nichetechies-public.s3.us-east-2.amazonaws.com/ANJ_WEBSITE/WEB/assets/clients/planet.svg",
+    "https://nichetechies-public.s3.us-east-2.amazonaws.com/ANJ_WEBSITE/WEB/assets/clients/corenroll.svg",
+    "https://nichetechies-public.s3.us-east-2.amazonaws.com/ANJ_WEBSITE/WEB/assets/clients/wheeliyo.svg",
+    "https://nichetechies-public.s3.us-east-2.amazonaws.com/ANJ_WEBSITE/WEB/assets/clients/radheys.svg",
+    "https://nichetechies-public.s3.us-east-2.amazonaws.com/ANJ_WEBSITE/WEB/assets/clients/prakria.svg",
   ];
   return (
     <div className="w-full bg-white rounded-[20px] py-5 mb-2 md:mb-5">
