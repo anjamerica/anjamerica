@@ -83,7 +83,7 @@ export default function HeaderV3() {
         >
           <img
             className="w-full xl:max-w-[150px] lg:max-w-[236px]"
-            src="/V2/images/common/logo-white.svg"
+            src="https://nichetechies-public.s3.us-east-2.amazonaws.com/ANJ_WEBSITE/WEB/assets/common/logo-white-two-line.svg"
             alt="Logo"
           />
         </span>
