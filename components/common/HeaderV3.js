@@ -82,7 +82,7 @@ export default function HeaderV3() {
           className=" cursor-pointer block pr-5"
         >
           <img
-            className="w-full xl:max-w-[150px] lg:max-w-[236px]"
+            className="w-full xl:w-[155px] lg:max-w-[236px]"
             src="https://nichetechies-public.s3.us-east-2.amazonaws.com/ANJ_WEBSITE/WEB/assets/common/logo-white-two-line.svg"
             alt="Logo"
           />
@@ -95,7 +95,7 @@ export default function HeaderV3() {
         <div>
           <Link href="#contact-us">
             <button className="px-3 py-2 hidden rounded-full xl:flex justify-center items-center text-orange-primary text-base font-medium border border-orange-primary">
-              Connect us text
+              Connect us
             </button>
           </Link>
         </div>

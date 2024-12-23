@@ -1,17 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 import { Modal } from "antd";
 
 export default function VideoModal({ isModalVisible, handleCloseModal }) {
-  const [isImageLoaded, setIsImageLoaded] = useState(false);
-
-  const handleImageLoad = () => {
-    setIsImageLoaded(true);
-  };
-
   return (
     <Modal
       title="Welcome!"
-      visible={isModalVisible && isImageLoaded}
+      visible={isModalVisible}
       onCancel={handleCloseModal}
       className="modal-custom"
     >
@@ -25,8 +19,7 @@ export default function VideoModal({ isModalVisible, handleCloseModal }) {
       </video> */}
       <img
         className="w-fit h-[70vh] object-contain"
-        src="/V3/posters/poster.png"
-        onLoad={handleImageLoad}
+        src="/V3/posters/poster.jpeg"
       />
     </Modal>
   );
