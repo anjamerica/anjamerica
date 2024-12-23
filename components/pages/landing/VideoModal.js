@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Modal } from "antd";
 
 export default function VideoModal({ isModalVisible, handleCloseModal }) {
