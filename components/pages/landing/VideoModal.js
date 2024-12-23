@@ -19,7 +19,7 @@ export default function VideoModal({ isModalVisible, handleCloseModal }) {
       </video> */}
       <img
         className="w-fit h-[70vh] object-contain"
-        src="https://nichetechies-public.s3.us-east-2.amazonaws.com/ANJ_WEBSITE/WEB/assets/posters/Brown+Modern+Illustration+United+States+(USA)+Promotion+Travel+Poster.png"
+        src="/V3/posters/poster.png"
       />
     </Modal>
   );
