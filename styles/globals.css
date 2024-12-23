@@ -1675,7 +1675,7 @@ input.file {
   pointer-events: auto;
 }
 
-.ant-drawer-content-wrapper {
+.ant-drawer-right > .ant-drawer-content-wrapper {
   top: 0;
   right: 0;
   bottom: 0;
@@ -1706,4 +1706,8 @@ input.file {
   min-height: 0;
   padding: 24px;
   overflow: auto;
+}
+
+.ant-drawer .ant-drawer-content-wrapper-hidden {
+  display: none;
 }
