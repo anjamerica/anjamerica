@@ -2,7 +2,6 @@ import Head from "next/head";
 import "../styles/globals.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import "antd/dist/antd.css";
 import { AuthContextProvider } from "../hooks/useAuth";
 import LoadingProvider from "../hooks/loadingContext";
 import { Toaster } from "react-hot-toast";
