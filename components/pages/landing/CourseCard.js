@@ -17,7 +17,7 @@ export default function CourseCard({ item }) {
         />
         <img
           className="w-[100px] h-[19px] object-contain absolute top-5 left-5 z-10"
-          src="/V2/logos/common/logo-white-two-line.svg"
+          src="https://nichetechies-public.s3.us-east-2.amazonaws.com/ANJ_WEBSITE/WEB/assets/common/logo-white-two-line.svg"
           alt="Anj logo"
         />
         <div className="absolute inset-0 rounded-t-[11px] bg-gradient-overlay z-0"></div>

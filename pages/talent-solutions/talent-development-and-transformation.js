@@ -7,7 +7,7 @@ export default function Index() {
     title: "Talent Development and Transformation",
     description:
       "We offer Talent Development and Transformation services to help your organization unlock its workforce's potential, fostering skill growth, leadership development, and organizational change to tackle evolving business challenges.",
-    background: "business-soloutions-banner-five",
+    background: "business-solutions-banner-five",
   };
 
   const servicePageContent = {

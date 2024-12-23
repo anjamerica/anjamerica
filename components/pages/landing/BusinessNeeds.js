@@ -26,7 +26,7 @@ export default function BusinessNeeds() {
             <img
               alt="coren-roll"
               className="w-full lg:w-[50%]"
-              src="/V3/images/landing/businessNeeds/1.png"
+              src="https://nichetechies-public.s3.us-east-2.amazonaws.com/ANJ_WEBSITE/WEB/assets/businessNeeds/1.png"
               data-aos-duration="1500"
               data-aos-anchor-placement="center-bottom"
               data-aos="flip-left"
@@ -74,7 +74,7 @@ export default function BusinessNeeds() {
             <img
               alt="coren-roll-2"
               className="w-full lg:w-[50%]"
-              src="/V3/images/landing/businessNeeds/2.png"
+              src="https://nichetechies-public.s3.us-east-2.amazonaws.com/ANJ_WEBSITE/WEB/assets/businessNeeds/2.png"
               data-aos-duration="1500"
               data-aos-anchor-placement="center-bottom"
               data-aos="flip-left"
@@ -84,7 +84,7 @@ export default function BusinessNeeds() {
             <img
               alt="edu-tech"
               className="w-full lg:w-[50%]"
-              src="/V3/images/landing/businessNeeds/3.png"
+              src="https://nichetechies-public.s3.us-east-2.amazonaws.com/ANJ_WEBSITE/WEB/assets/businessNeeds/3.png"
               data-aos-duration="1500"
               data-aos-anchor-placement="center-bottom"
               data-aos="flip-left"
@@ -130,7 +130,7 @@ export default function BusinessNeeds() {
             <img
               alt="social-network"
               className="w-full lg:w-[50%]"
-              src="/V3/images/landing/businessNeeds/4.png"
+              src="https://nichetechies-public.s3.us-east-2.amazonaws.com/ANJ_WEBSITE/WEB/assets/businessNeeds/4.png"
               data-aos-duration="1500"
               data-aos-anchor-placement="center-bottom"
               data-aos="flip-left"
@@ -140,7 +140,7 @@ export default function BusinessNeeds() {
             <img
               alt="e-commerce"
               className="w-full lg:w-[50%]"
-              src="/V3/images/landing/businessNeeds/5.png"
+              src="https://nichetechies-public.s3.us-east-2.amazonaws.com/ANJ_WEBSITE/WEB/assets/businessNeeds/5.png"
               data-aos-duration="1500"
               data-aos-anchor-placement="center-bottom"
               data-aos="flip-left"

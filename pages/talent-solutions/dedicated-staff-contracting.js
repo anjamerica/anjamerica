@@ -7,7 +7,7 @@ export default function Index() {
     title: "Dedicated Contract Staffing",
     description:
       "We provide Dedicated Contract Staffing services, offering specialized professionals to scale your workforce for specific projects or timeframes. Access skilled experts without the commitment of permanent employment.",
-    background: "business-soloutions-banner-three",
+    background: "business-solutions-banner-three",
   };
 
   const servicePageContent = {

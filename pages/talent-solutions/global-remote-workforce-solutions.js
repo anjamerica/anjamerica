@@ -7,7 +7,7 @@ export default function Index() {
     title: "Global Remote Workforce Solutions",
     description:
       "We offer Global Remote Workforce Solutions, connecting businesses with top talent worldwide. Our expertise in managing remote teams ensures seamless integration of professionals, regardless of location.",
-    background: "business-soloutions-banner-four",
+    background: "business-solutions-banner-four",
   };
 
   const servicePageContent = {

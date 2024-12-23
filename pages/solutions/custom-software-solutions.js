@@ -11,7 +11,7 @@ export default function Index() {
   };
 
   const servicePageContent = {
-    img: "/V3/images/landing/solutions/css.svg",
+    img: "https://nichetechies-public.s3.us-east-2.amazonaws.com/ANJ_WEBSITE/WEB/assets/solutions/css.svg",
     title:
       "We develop flexible, scalable solutions—be it new applications, system integrations, or upgrades—ensuring performance, security, and seamless user experiences from concept to deployment.",
     para: [

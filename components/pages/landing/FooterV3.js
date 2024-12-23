@@ -142,7 +142,7 @@ export default function FooterV3() {
                 <Link href="/" passHref>
                   <img
                     alt="logo image"
-                    src="/V2/logos/common/logo-white-two-line.svg"
+                    src="https://nichetechies-public.s3.us-east-2.amazonaws.com/ANJ_WEBSITE/WEB/assets/common/logo-white-two-line.svg"
                     className="w-fit h-[40px] md:w-[154px] object-contain cursor-pointer"
                     data-aos="fade-up"
                     data-aos-duration="1000"

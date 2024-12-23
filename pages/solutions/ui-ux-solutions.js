@@ -11,7 +11,7 @@ export default function Index() {
   };
 
   const servicePageContent = {
-    img: "/V3/images/landing/solutions/uus.svg",
+    img: "https://nichetechies-public.s3.us-east-2.amazonaws.com/ANJ_WEBSITE/WEB/assets/solutions/uus.svg",
     title:
       "We design UI/UX solutions that ensure smooth, enjoyable user interactions, boosting retention and conversion rates for websites, apps, and enterprise software.",
     para: [

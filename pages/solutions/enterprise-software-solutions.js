@@ -11,7 +11,7 @@ export default function Index() {
   };
 
   const servicePageContent = {
-    img: "/V3/images/landing/solutions/ess.svg",
+    img: "https://nichetechies-public.s3.us-east-2.amazonaws.com/ANJ_WEBSITE/WEB/assets/solutions/ess.svg",
     title:
       "Our scalable, flexible, and secure enterprise software solutions offer automation, real-time insights, and seamless integration to meet your evolving business needs.",
     para: [

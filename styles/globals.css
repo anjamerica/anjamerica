@@ -1296,7 +1296,7 @@ input.file {
 .banner-bg-ess {
   width: "100%";
   height: calc(97vh - 16px);
-  background-image: url("../public/V3/banners/ess.png");
+  background-image: url("https://nichetechies-public.s3.us-east-2.amazonaws.com/ANJ_WEBSITE/WEB/assets/banners/ess.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -1306,7 +1306,7 @@ input.file {
 .banner-bg-css {
   width: "100%";
   height: calc(97vh - 16px);
-  background-image: url("../public/V3/banners/css.png");
+  background-image: url("https://nichetechies-public.s3.us-east-2.amazonaws.com/ANJ_WEBSITE/WEB/assets/banners/css.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -1316,7 +1316,7 @@ input.file {
 .banner-bg-aiss {
   width: "100%";
   height: calc(97vh - 16px);
-  background-image: url("../public/V3/banners/aiss.png");
+  background-image: url("https://nichetechies-public.s3.us-east-2.amazonaws.com/ANJ_WEBSITE/WEB/assets/banners/aiss.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -1326,7 +1326,7 @@ input.file {
 .banner-bg-cbss {
   width: "100%";
   height: calc(97vh - 16px);
-  background-image: url("../public/V3/banners/cbss.png");
+  background-image: url("https://nichetechies-public.s3.us-east-2.amazonaws.com/ANJ_WEBSITE/WEB/assets/banners/cbss.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -1336,7 +1336,7 @@ input.file {
 .banner-bg-cct {
   width: "100%";
   height: calc(97vh - 16px);
-  background-image: url("../public/V3/banners/cct.png");
+  background-image: url("https://nichetechies-public.s3.us-east-2.amazonaws.com/ANJ_WEBSITE/WEB/assets/banners/cct.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -1346,7 +1346,7 @@ input.file {
 .banner-bg-ecs {
   width: "100%";
   height: calc(97vh - 16px);
-  background-image: url("../public/V3/banners/ecs.png");
+  background-image: url("https://nichetechies-public.s3.us-east-2.amazonaws.com/ANJ_WEBSITE/WEB/assets/banners/ecs.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -1356,7 +1356,7 @@ input.file {
 .banner-bg-mas {
   width: "100%";
   height: calc(97vh - 16px);
-  background-image: url("../public/V3/banners/mas.png");
+  background-image: url("https://nichetechies-public.s3.us-east-2.amazonaws.com/ANJ_WEBSITE/WEB/assets/banners/mas.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -1366,57 +1366,57 @@ input.file {
 .banner-bg-uus {
   width: "100%";
   height: calc(97vh - 16px);
-  background-image: url("../public/V3/banners/uus.png");
+  background-image: url("https://nichetechies-public.s3.us-east-2.amazonaws.com/ANJ_WEBSITE/WEB/assets/banners/uus.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   border-radius: 20px;
 }
 
-.business-soloutions-banner-one {
+.business-solutions-banner-one {
   width: "100%";
   height: calc(97vh - 16px);
-  background-image: url("../public/V3/images/landing/businessSuccess/1.png");
+  background-image: url("https://nichetechies-public.s3.us-east-2.amazonaws.com/ANJ_WEBSITE/WEB/assets/businessSuccess/1.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   border-radius: 20px;
 }
 
-.business-soloutions-banner-two {
+.business-solutions-banner-two {
   width: "100%";
   height: calc(97vh - 16px);
-  background-image: url("../public/V3/images/landing/businessSuccess/2.png");
+  background-image: url("https://nichetechies-public.s3.us-east-2.amazonaws.com/ANJ_WEBSITE/WEB/assets/businessSuccess/2.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   border-radius: 20px;
 }
 
-.business-soloutions-banner-three {
+.business-solutions-banner-three {
   width: "100%";
   height: calc(97vh - 16px);
-  background-image: url("../public/V3/images/landing/businessSuccess/3.png");
+  background-image: url("https://nichetechies-public.s3.us-east-2.amazonaws.com/ANJ_WEBSITE/WEB/assets/businessSuccess/3.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   border-radius: 20px;
 }
 
-.business-soloutions-banner-four {
+.business-solutions-banner-four {
   width: "100%";
   height: calc(97vh - 16px);
-  background-image: url("../public/V3/images/landing/businessSuccess/4.png");
+  background-image: url("https://nichetechies-public.s3.us-east-2.amazonaws.com/ANJ_WEBSITE/WEB/assets/businessSuccess/4.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   border-radius: 20px;
 }
 
-.business-soloutions-banner-five {
+.business-solutions-banner-five {
   width: "100%";
   height: calc(97vh - 16px);
-  background-image: url("../public/V3/images/landing/businessSuccess/ws5.png");
+  background-image: url("https://nichetechies-public.s3.us-east-2.amazonaws.com/ANJ_WEBSITE/WEB/assets/businessSuccess/ws5.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -1426,7 +1426,7 @@ input.file {
 .portfolio-banner {
   width: "100%";
   height: calc(97vh - 16px);
-  background-image: url("../public/V3/banners/portfolio.png");
+  background-image: url("https://nichetechies-public.s3.us-east-2.amazonaws.com/ANJ_WEBSITE/WEB/assets/banners/portfolio.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -1535,50 +1535,50 @@ input.file {
 
 /* Business success banners start here */
 
-.business-soloutions-one {
+.business-solutions-one {
   width: "100%";
   height: 310px;
-  background-image: url("../public/V3/images/landing/businessSuccess/1.png");
+  background-image: url("https://nichetechies-public.s3.us-east-2.amazonaws.com/ANJ_WEBSITE/WEB/assets/businessSuccess/1.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   border-radius: 20px;
 }
 
-.business-soloutions-two {
+.business-solutions-two {
   width: "100%";
   height: 310px;
-  background-image: url("../public/V3/images/landing/businessSuccess/2.png");
+  background-image: url("https://nichetechies-public.s3.us-east-2.amazonaws.com/ANJ_WEBSITE/WEB/assets/businessSuccess/2.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   border-radius: 20px;
 }
 
-.business-soloutions-three {
+.business-solutions-three {
   width: "100%";
   height: 310px;
-  background-image: url("../public/V3/images/landing/businessSuccess/3.png");
+  background-image: url("https://nichetechies-public.s3.us-east-2.amazonaws.com/ANJ_WEBSITE/WEB/assets/businessSuccess/3.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   border-radius: 20px;
 }
 
-.business-soloutions-four {
+.business-solutions-four {
   width: "100%";
   height: 310px;
-  background-image: url("../public/V3/images/landing/businessSuccess/4.png");
+  background-image: url("https://nichetechies-public.s3.us-east-2.amazonaws.com/ANJ_WEBSITE/WEB/assets/businessSuccess/4.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   border-radius: 20px;
 }
 
-.business-soloutions-five {
+.business-solutions-five {
   width: "100%";
   height: 310px;
-  background-image: url("../public/V3/images/landing/businessSuccess/5.png");
+  background-image: url("https://nichetechies-public.s3.us-east-2.amazonaws.com/ANJ_WEBSITE/WEB/assets/businessSuccess/5.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -1588,7 +1588,7 @@ input.file {
 .footer-bg-black {
   width: "100%";
   min-height: 96vh;
-  background-image: url("../public/V3/images/landing/footer.png");
+  background-image: url("https://nichetechies-public.s3.us-east-2.amazonaws.com/ANJ_WEBSITE/WEB/assets/banners/footer.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;

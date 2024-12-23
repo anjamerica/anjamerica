@@ -37,7 +37,7 @@ export default function Index() {
   };
 
   return (
-    <div className="-mt-[74px]">
+    <div className="-mt-[62px]">
       <BannerV2 item={bannerContent} />
       <div className="mt-5 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2 md:gap-5">
         {images?.map((item, i) => (

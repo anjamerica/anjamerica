@@ -7,7 +7,7 @@ export default function Index() {
     title: "Permanent Staffing",
     description:
       "We offer Permanent Staffing solutions to find the right talent for your long-term success, matching skilled professionals to your needs and company culture.",
-    background: "business-soloutions-banner-two",
+    background: "business-solutions-banner-two",
   };
 
   const servicePageContent = {
