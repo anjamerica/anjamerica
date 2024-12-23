@@ -82,7 +82,7 @@ export default function HeaderV3() {
           className=" cursor-pointer block pr-5"
         >
           <img
-            className="w-full xl:w-[155px] lg:max-w-[236px]"
+            className="w-[140px] xl:w-[155px] lg:max-w-[236px]"
             src="https://nichetechies-public.s3.us-east-2.amazonaws.com/ANJ_WEBSITE/WEB/assets/common/logo-white-two-line.svg"
             alt="Logo"
           />
@@ -209,7 +209,7 @@ function NavItem({ item, handleCloseMobileMenu }) {
           }}
           className={`p-3 text-black xl:text-white cursor-pointer transition-all ease-in-out${
             router.pathname === item?.activeLink
-              ? " font-bold text-orange-primary"
+              ? " font-bold  !text-orange-primary "
               : "border-transparent"
           } hover:font-bold hover:text-orange-primary`}
         >

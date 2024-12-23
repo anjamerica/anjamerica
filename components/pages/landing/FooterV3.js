@@ -69,19 +69,23 @@ export default function FooterV3() {
   const socialLinks = [
     {
       linkTo: "https://x.com/AnjAmerica?t=PWTlzQLST3AQKpJgvd3bOw&s=09",
-      image: "/V2/logos/landing/footer/x.svg",
+      image:
+        "https://nichetechies-public.s3.us-east-2.amazonaws.com/ANJ_WEBSITE/WEB/assets/footer/x.svg",
     },
     {
       linkTo: "https://www.facebook.com/profile.php?id=61570826336653",
-      image: "/V2/logos/landing/footer/facebook.svg",
+      image:
+        "https://nichetechies-public.s3.us-east-2.amazonaws.com/ANJ_WEBSITE/WEB/assets/footer/facebook.svg",
     },
     {
       linkTo: "https://www.linkedin.com/company/anj-america",
-      image: "/V2/logos/landing/footer/linkedIn.svg",
+      image:
+        "https://nichetechies-public.s3.us-east-2.amazonaws.com/ANJ_WEBSITE/WEB/assets/footer/linkedIn.svg",
     },
     {
       linkTo: "https://www.instagram.com/anj.america/?igshwid=YmMyMTA2M2Y%3D",
-      image: "/V2/logos/landing/footer/instagram.svg",
+      image:
+        "https://nichetechies-public.s3.us-east-2.amazonaws.com/ANJ_WEBSITE/WEB/assets/footer/instagram.svg",
     },
   ];
 
@@ -267,7 +271,7 @@ function AddressView({ item }) {
     >
       <img
         className="w-4 h-4 object-contain mt-1"
-        src="/V2/logos/landing/footer/location.svg"
+        src="https://nichetechies-public.s3.us-east-2.amazonaws.com/ANJ_WEBSITE/WEB/assets/footer/location.svg"
       />
 
       <p className="text-white opacity-80 text-md font-normal cursor-pointer poppins-regular">

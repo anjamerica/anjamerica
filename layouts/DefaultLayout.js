@@ -8,8 +8,12 @@ export default function DefaultLayout({ children }) {
 
   useEffect(() => {
     const hasSeenModal = localStorage.getItem("hasSeenModal");
-    if (!hasSeenModal) {
-      setIsModalVisible(true);
+    if (hasSeenModal) {
+      const timer = setTimeout(() => {
+        setIsModalVisible(true);
+      }, 5000);
+
+      return () => clearTimeout(timer);
     }
   }, []);
 

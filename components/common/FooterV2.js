@@ -90,15 +90,18 @@ export default function FooterV2() {
   const socialLinks = [
     {
       linkTo: "https://www.facebook.com/anjamericadotcom/about/",
-      image: "/V2/logos/landing/footer/facebook.svg",
+      image:
+        "https://nichetechies-public.s3.us-east-2.amazonaws.com/ANJ_WEBSITE/WEB/assets/footer/facebook.svg",
     },
     {
       linkTo: "https://www.linkedin.com/company/anj-america",
-      image: "/V2/logos/landing/footer/linkedIn.svg",
+      image:
+        "https://nichetechies-public.s3.us-east-2.amazonaws.com/ANJ_WEBSITE/WEB/assets/footer/linkedIn.svg",
     },
     {
       linkTo: "https://www.instagram.com/anj.america/?igshwid=YmMyMTA2M2Y%3D",
-      image: "/V2/logos/landing/footer/instagram.svg",
+      image:
+        "https://nichetechies-public.s3.us-east-2.amazonaws.com/ANJ_WEBSITE/WEB/assets/footer/instagram.svg",
     },
   ];
 
