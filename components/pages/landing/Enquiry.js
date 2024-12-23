@@ -64,6 +64,10 @@ const Enquiry = () => {
       validationErrors.mobile_number = "Invalid phone number";
     }
 
+    if (formData.description && formData.description.length > 720) {
+      validationErrors.description = "Message cannot exceed 720 characters.";
+    }
+
     return validationErrors;
   };
 
@@ -234,6 +238,9 @@ const Enquiry = () => {
                   value={formData?.description}
                   onChange={handleChange}
                 ></textarea>
+                {errors.description && (
+                  <span className="text-red-500">{errors.description}</span>
+                )}
               </div>
             </div>
             <div className="w-full lg:pr-4 pt-4 flex flex-wrap items-center">

@@ -3,7 +3,7 @@ import React from "react";
 export default function BannerV2({ item }) {
   return (
     <div
-      className={`${item?.background} rounded-[20px] -mt-[19px] flex justify-center items-end pb-24 w-full`}
+      className={`${item?.background} rounded-[20px] -mt-[19px] flex justify-center items-center w-full`}
     >
       <div className="flex flex-col items-center bottom-8 md:bottom-20 gap-6">
         <p
