@@ -128,6 +128,7 @@ export default function HeaderV3() {
 function NavItem({ item, handleCloseMobileMenu }) {
   const router = useRouter();
   const [submenuOpen, setSubmenuOpen] = useState(false);
+  const [popoverVisible, setPopoverVisible] = useState(false);
 
   const toggleSubmenu = () => setSubmenuOpen(!submenuOpen);
 
@@ -185,9 +186,11 @@ function NavItem({ item, handleCloseMobileMenu }) {
                 </div>
               }
               title=""
-              trigger="click"
+              // trigger="click"
+              visible={popoverVisible}
+              onVisibleChange={(visible) => setPopoverVisible(visible)}
             >
-              <button>
+              <button onClick={() => setPopoverVisible(!popoverVisible)}>
                 <span
                   className={`p-3 text-black xl:text-white cursor-pointer transition-all ease-in-out${
                     router.pathname === item?.activeLink

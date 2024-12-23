@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import HeaderV3 from "../components/common/HeaderV3";
 import FooterV3 from "../components/pages/landing/FooterV3";
-import VideoModal from "../components/pages/landing/VideoModal";
+// import VideoModal from "../components/pages/landing/VideoModal";
 import { notification } from "antd";
 
 export default function DefaultLayout({ children }) {

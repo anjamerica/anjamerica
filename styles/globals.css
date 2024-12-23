@@ -1651,5 +1651,10 @@ input.file {
 }
 
 .ant-notification-notice {
-  background-color: #f8f8f8;
+  padding: 0px !important;
+  background-color: #000;
+}
+
+.ant-notification-notice-close {
+  color: #fff !important;
 }
