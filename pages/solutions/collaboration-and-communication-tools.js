@@ -11,7 +11,7 @@ export default function Index() {
   };
 
   const servicePageContent = {
-    img: "/V3/images/landing/solutions/cct.svg",
+    img: "https://nichetechies-public.s3.us-east-2.amazonaws.com/ANJ_WEBSITE/WEB/assets/solutions/cct.svg",
     title:
       "We provide tools for messaging, video conferencing, project management, and file sharing, tailored to your business for seamless communication and collaboration.",
     para: [

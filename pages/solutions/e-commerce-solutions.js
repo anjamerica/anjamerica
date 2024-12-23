@@ -11,7 +11,7 @@ export default function Index() {
   };
 
   const servicePageContent = {
-    img: "/V3/images/landing/solutions/ecs.svg",
+    img: "https://nichetechies-public.s3.us-east-2.amazonaws.com/ANJ_WEBSITE/WEB/assets/solutions/ecs.svg",
     title:
       "We provide complete e-commerce solutions, from product management to payment integration, marketing tools, and customer support, helping your business succeed online.",
     para: [

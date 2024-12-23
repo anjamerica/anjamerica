@@ -4,35 +4,35 @@ import React from "react";
 export default function BusinessSuccess() {
   const services = [
     {
-      background: "business-soloutions-one",
+      background: "business-solutions-one",
       title: "Staff Augmentation",
       linkTo: "/talent-solutions/staff-augmentation",
       description:
         "Quickly scale your team with skilled professionals on a short-term or long-term basis. Access talent for specialized projects without the overhead of full-time hiring",
     },
     {
-      background: "business-soloutions-two",
+      background: "business-solutions-two",
       title: "Permanent Staffing",
       linkTo: "/talent-solutions/permenant-staffing",
       description:
         "Find the right candidates for permanent roles in your organization. Comprehensive hiring support, including sourcing, screening, and onboarding",
     },
     {
-      background: "business-soloutions-three",
+      background: "business-solutions-three",
       title: "Dedicated Contract Staffing",
       linkTo: "/talent-solutions/dedicated-staff-contracting",
       description:
         "Evaluate potential hires with a trial period before making a permanent offer. Reduce hiring risks and ensure the perfect fit for your team.",
     },
     {
-      background: "business-soloutions-four",
+      background: "business-solutions-four",
       title: "Global Remote Workforce Solutions",
       linkTo: "/talent-solutions/global-remote-workforce-solutions",
       description:
         "Build a global team with flexible remote working options. Access talent beyond geographic constraints while maintaining productivity.",
     },
     {
-      background: "business-soloutions-five",
+      background: "business-solutions-five",
       title: "Talent Development and Transformation",
       linkTo: "/talent-solutions/talent-development-and-transformation",
       description:

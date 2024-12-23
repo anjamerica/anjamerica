@@ -1,59 +1,66 @@
 import React from "react";
-import { GoArrowRight } from "react-icons/go";
 
 export default function Solutions() {
   const services = [
     {
-      image: "/V3/images/landing/solutions/ess.svg",
+      image:
+        "https://nichetechies-public.s3.us-east-2.amazonaws.com/ANJ_WEBSITE/WEB/assets/solutions/ess.svg",
       title: "Enterprise Software Solutions",
       description:
         "Revolutionize your business processes with powerful enterprise systems, including ERP, CRM, and HRM, tailored to streamline operations and improve productivity.",
       linkTo: "/solutions/enterprise-software-solutions",
     },
     {
-      image: "/V3/images/landing/solutions/css.svg",
+      image:
+        "https://nichetechies-public.s3.us-east-2.amazonaws.com/ANJ_WEBSITE/WEB/assets/solutions/css.svg",
       title: "Custom Software Solutions",
       description:
         "We design and develop bespoke software solutions that address your unique challenges, ensuring seamless integration with your workflows and delivering measurable results.",
       linkTo: "/solutions/custom-software-solutions",
     },
     {
-      image: "/V3/images/landing/solutions/aiss.svg",
+      image:
+        "https://nichetechies-public.s3.us-east-2.amazonaws.com/ANJ_WEBSITE/WEB/assets/solutions/aiss.svg",
       title: "AI-Powered Software Solutions",
       description:
         "Transform your systems with AI-driven intelligence. Our services include predictive analytics, automation, and AI-powered tools like chatbots and virtual assistants to enhance efficiency and decision-making.",
       linkTo: "/solutions/ai-powered-software-solutions",
     },
     {
-      image: "/V3/images/landing/solutions/cbss.svg",
+      image:
+        "https://nichetechies-public.s3.us-east-2.amazonaws.com/ANJ_WEBSITE/WEB/assets/solutions/cbss.svg",
       title: "Cloud-Based Software Solutions",
       description:
         "Leverage the scalability and flexibility of the cloud with our cutting-edge solutions. From SaaS applications to full cloud migration, we future-proof your business operations.",
       linkTo: "/solutions/cloud-based-software-solutions",
     },
     {
-      image: "/V3/images/landing/solutions/mas.svg",
+      image:
+        "https://nichetechies-public.s3.us-east-2.amazonaws.com/ANJ_WEBSITE/WEB/assets/solutions/mas.svg",
       title: "Mobile App Solutions",
       description:
         "Expand your digital presence with intuitive and user-friendly mobile applications for iOS and Android, crafted to elevate customer experiences and engage your audience.",
       linkTo: "/solutions/mobile-app-solutions",
     },
     {
-      image: "/V3/images/landing/solutions/ecs.svg",
+      image:
+        "https://nichetechies-public.s3.us-east-2.amazonaws.com/ANJ_WEBSITE/WEB/assets/solutions/ecs.svg",
       title: "E-Commerce Solutions",
       description:
         "Build and scale your online presence with secure and dynamic e-commerce platforms. From storefront design to payment integration, we provide end-to-end solutions for online success.",
       linkTo: "/solutions/e-commerce-solutions",
     },
     {
-      image: "/V3/images/landing/solutions/cct.svg",
+      image:
+        "https://nichetechies-public.s3.us-east-2.amazonaws.com/ANJ_WEBSITE/WEB/assets/solutions/cct.svg",
       title: "Collaboration and Communication Tools",
       description:
         "Enhance teamwork and communication with advanced tools for messaging, video conferencing, and project management, designed to keep your team connected and productive.",
       linkTo: "/solutions/collaboration-and-communication-tools",
     },
     {
-      image: "/V3/images/landing/solutions/uus.svg",
+      image:
+        "https://nichetechies-public.s3.us-east-2.amazonaws.com/ANJ_WEBSITE/WEB/assets/solutions/uus.svg",
       title: "UI/UX Solutions",
       description:
         "At ANJ America, we act as an extension of your team, specializing in UX-focused design solutions for software companies. Our mission is to help you deliver seamless, user-friendly experiences that enhance the functionality and value of your software products.",

@@ -11,7 +11,7 @@ export default function Index() {
   };
 
   const servicePageContent = {
-    img: "/V3/images/landing/solutions/cbss.svg",
+    img: "https://nichetechies-public.s3.us-east-2.amazonaws.com/ANJ_WEBSITE/WEB/assets/solutions/cbss.svg",
     title:
       "We help businesses streamline operations, reduce costs, and boost productivity with cloud-based applications, storage, and custom solutions, ensuring scalability, performance, and security.",
     para: [

@@ -11,7 +11,7 @@ export default function Index() {
   };
 
   const servicePageContent = {
-    img: "/V3/images/landing/solutions/aiss.svg",
+    img: "https://nichetechies-public.s3.us-east-2.amazonaws.com/ANJ_WEBSITE/WEB/assets/solutions/aiss.svg",
     title:
       "We use AI to unlock opportunities, enhance experiences, and drive innovation with tailored solutions like predictive analytics and automation.",
     para: [

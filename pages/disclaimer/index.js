@@ -24,7 +24,7 @@ export default function Index() {
     },
   ];
   return (
-    <div className="w-full -mt-[74px]">
+    <div className="w-full -mt-[62px]">
       <div className="w-full flex flex-col items-center rounded-[20px] p-5 pt-[145px] bg-white">
         <p
           data-aos="fade-up"

@@ -7,7 +7,7 @@ export default function Index() {
     title: "Staff Augmentation",
     description:
       "We offer staff augmentation services, providing skilled professionals on-demand to meet your resource needs for short-term or long-term projects.",
-    background: "business-soloutions-banner-one",
+    background: "business-solutions-banner-one",
   };
 
   const servicePageContent = {

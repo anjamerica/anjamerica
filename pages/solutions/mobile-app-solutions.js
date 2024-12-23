@@ -11,7 +11,7 @@ export default function Index() {
   };
 
   const servicePageContent = {
-    img: "/V3/images/landing/solutions/mas.svg",
+    img: "https://nichetechies-public.s3.us-east-2.amazonaws.com/ANJ_WEBSITE/WEB/assets/solutions/mas.svg",
     title:
       "We provide end-to-end mobile app development, delivering intuitive, scalable, and high-performance apps tailored to your business needs.",
     para: [
