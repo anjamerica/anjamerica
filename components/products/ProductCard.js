@@ -1,11 +1,10 @@
 import React from "react";
 import { IoMdCheckmarkCircleOutline } from "react-icons/io";
 
-export default function ProductCard({ data,currentIndex }) {
-
+export default function ProductCard({ data, currentIndex }) {
   return (
     <>
-      <div
+      {/* <div
         className="flex flex-col w-full lg:flex-row-reverse justify-between gap-0 md:gap-10 fade-in"
         setCurrentIndex={currentIndex}
       >
@@ -61,7 +60,7 @@ export default function ProductCard({ data,currentIndex }) {
             })}
           </div>
         </div>
-      </div>
+      </div> */}
     </>
   );
 }

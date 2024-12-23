@@ -1,0 +1,61 @@
+{
+   "list": [
+    {
+        "title": "Business Analyst (BA)",
+        "cover": "/V2/images/courses/1.png",
+        "duration": "6",
+        "rating": "4.9",
+        "linkTo": ""
+    },
+    {
+        "title": "Scrum Master Program",
+        "cover": "/V2/images/courses/2.png",
+        "duration": "6",
+        "rating": "4.9",
+        "linkTo": ""
+    },
+    {
+        "title": "UI/UX Designing",
+        "cover": "/V2/images/courses/3.png",
+        "duration": "6",
+        "rating": "4.9",
+        "linkTo": ""
+    },
+    {
+        "title": "Fullstack Development",
+        "cover": "/V2/images/courses/4.png",
+        "duration": "6",
+        "rating": "4.9",
+        "linkTo": ""
+    },
+    {
+        "title": "Backend Development",
+        "cover": "/V2/images/courses/5.png",
+        "duration": "6",
+        "rating": "4.9",
+        "linkTo": ""
+    },
+    {
+        "title": "Frontend Development",
+        "cover": "/V2/images/courses/6.png",
+        "duration": "6",
+        "rating": "4.9",
+        "linkTo": ""
+    },
+    {
+        "title": "Automation / Manual Testing",
+        "cover": "/V2/images/courses/7.png",
+        "duration": "6",
+        "rating": "4.9",
+        "linkTo": ""
+    },
+    {
+        "title": "DevOps",
+        "cover": "/V2/images/courses/8.png",
+        "duration": "6",
+        "rating": "4.9",
+        "linkTo": ""
+    }
+]
+
+}

@@ -5,10 +5,6 @@ import Header from "../components/landin/Header";
 function NotFoundPage() {
   return (
     <div className="w-full h-[calc(100vh-8vh)] md:h-[calc(100vh-10vh)]">
-      <div className="w-full h-fit">
-        <Header />
-      </div>
-
       <div className="w-full h-full flex flex-col items-center justify-center gap-2 sm:gap-4">
         <span className="text-primary-blue text-[100px] sm:text-[150px]">
           404
