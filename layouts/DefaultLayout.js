@@ -2,16 +2,25 @@ import React, { useEffect, useState } from "react";
 import HeaderV3 from "../components/common/HeaderV3";
 import FooterV3 from "../components/pages/landing/FooterV3";
 import VideoModal from "../components/pages/landing/VideoModal";
+import { notification } from "antd";
 
 export default function DefaultLayout({ children }) {
-  const [isModalVisible, setIsModalVisible] = useState(false);
-
   useEffect(() => {
     const hasSeenModal = localStorage.getItem("hasSeenModal");
     if (!hasSeenModal) {
       const timer = setTimeout(() => {
-        setIsModalVisible(true);
-      }, 2000);
+        notification.open({
+          duration: 0,
+          description: (
+            <div className="bg-[#f8f8f8]">
+              <img
+                className="w-fit h-fit  object-contain"
+                src="/V3/posters/poster.jpeg"
+              />
+            </div>
+          ),
+        });
+      }, 1000);
 
       return () => clearTimeout(timer);
     }
@@ -19,7 +28,6 @@ export default function DefaultLayout({ children }) {
 
   const handleCloseModal = () => {
     localStorage.setItem("hasSeenModal", "true");
-    setIsModalVisible(false);
   };
 
   return (
@@ -36,11 +44,6 @@ export default function DefaultLayout({ children }) {
       <div className="mt-auto px-2 md:px-5">
         <FooterV3 />
       </div>
-
-      <VideoModal
-        isModalVisible={isModalVisible}
-        handleCloseModal={handleCloseModal}
-      />
     </div>
   );
 }
