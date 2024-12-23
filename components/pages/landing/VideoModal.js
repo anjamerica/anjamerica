@@ -4,10 +4,10 @@ import { Modal } from "antd";
 export default function VideoModal({ isModalVisible, handleCloseModal }) {
   return (
     <Modal
-      title="Welcome!"
       visible={isModalVisible}
       onCancel={handleCloseModal}
       className="modal-custom"
+      footer={false}
     >
       {/* <video
         controls
