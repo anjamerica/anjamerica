@@ -52,14 +52,14 @@ export default function HeaderV3() {
       title: "Domains",
       activeLink: "/#domains",
     },
-    // {
-    //   title: "Work with us",
-    //   activeLink: "/work-with-us",
-    // },
-    // {
-    //   title: "Blogs",
-    //   activeLink: "/blogs",
-    // },
+    {
+      title: "Work with us",
+      activeLink: "/work-with-us",
+    },
+    {
+      title: "Blogs",
+      activeLink: "/blogs",
+    },
     {
       title: "Portfolio",
       activeLink: "/portfolio",
