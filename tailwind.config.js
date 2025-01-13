@@ -80,6 +80,7 @@ module.exports = {
         "landing-image-web": "url('/landing/bg_web.png')",
         "polygon-image": "url('/assets/landing/polygon.svg')",
       },
+      safelist: ["curved-container"],
     },
   },
   plugins: [require("@tailwindcss/line-clamp")],

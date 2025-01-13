@@ -1432,6 +1432,46 @@ input.file {
   background-position: center;
   border-radius: 20px;
 }
+
+.blogs-banner {
+  width: "100%";
+  height: calc(97vh - 16px);
+  background-image: url("./../assets/image.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 20px;
+}
+
+.work-life {
+  width: "100%";
+  height: calc(97vh - 16px);
+  background-image: url("https://nichetechies-public.s3.us-east-2.amazonaws.com/ANJ_WEBSITE/WEB/assets/blogs/work-life.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 20px;
+}
+
+.web-ready {
+  width: "100%";
+  height: calc(97vh - 16px);
+  background-image: url("https://nichetechies-public.s3.us-east-2.amazonaws.com/ANJ_WEBSITE/WEB/assets/blogs/is-your-web-ready.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 20px;
+}
+
+.points-to-remember {
+  width: "100%";
+  height: calc(97vh - 16px);
+  background-image: url("https://nichetechies-public.s3.us-east-2.amazonaws.com/ANJ_WEBSITE/WEB/assets/blogs/points-to-remember.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 20px;
+}
 /* Banners ends here  */
 
 .banner-bg-landing-about {

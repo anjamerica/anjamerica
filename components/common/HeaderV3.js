@@ -56,10 +56,10 @@ export default function HeaderV3() {
     //   title: "Work with us",
     //   activeLink: "/work-with-us",
     // },
-    // {
-    //   title: "Blogs",
-    //   activeLink: "/blogs",
-    // },
+    {
+      title: "Blogs",
+      activeLink: "/blogs",
+    },
     {
       title: "Portfolio",
       activeLink: "/portfolio",
