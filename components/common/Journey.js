@@ -46,7 +46,7 @@ const Journey = () => {
         data-aos-anchor-placement="center-bottom"
         className="text-xl text-center leading-[40px] md:leading-[57px] md:text-[40px] font-light max-w-[927px]"
       >
-        Start enjoying ANJ America's <br />
+        Start enjoying ANJ America&apos;s <br />
         competitive benefits from day one
       </p>
       <div className="w-full flex justify-center">
