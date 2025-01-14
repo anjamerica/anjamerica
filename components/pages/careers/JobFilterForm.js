@@ -19,12 +19,19 @@ const JobFilter = ({ data, setFilteredJobs }) => {
   useEffect(() => {
     if (data?.length > 0) {
       const locations = data.map((job) => job.location);
+
       const uniqueLocations = [...new Set(locations)];
+
       const formattedLocations = uniqueLocations.map((loc) => ({
         label: loc,
         _id: loc,
       }));
-      setLocationOptions(formattedLocations);
+
+      setLocationOptions([
+        ...formattedLocations,
+        { label: "Memphis, TN38103, USA", _id: "Memphis, TN38103, USA" },
+        { label: "Columbus, OH 43240, USA", _id: "Columbus, OH 43240, USA" },
+      ]);
     }
   }, [data]);
 

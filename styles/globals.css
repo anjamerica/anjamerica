@@ -1739,6 +1739,12 @@ input.file {
   color: #1a202c;
 }
 
+.ant-select-selection-placeholder {
+  font-size: 14px !important;
+  font-weight: 500;
+  color: #1a202c !important;
+}
+
 .ant-table-wrapper .ant-table-thead > tr > th {
   border-bottom: 2px solid white !important;
 }
