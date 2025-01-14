@@ -5,13 +5,14 @@ import { IoCloseCircleOutline } from "react-icons/io5";
 
 import HeaderV3 from "../components/common/HeaderV3";
 import FooterV3 from "../components/pages/landing/FooterV3";
+import PosterModal from "../components/common/PosterModal";
 
 export default function DefaultLayout({ children }) {
   const [isModalVisible, setIsModalVisible] = useState(false);
 
   useEffect(() => {
     const hasSeenModal = localStorage.getItem("hasSeenModal");
-    if (!hasSeenModal) {
+    if (hasSeenModal) {
       const timer = setTimeout(() => {
         setIsModalVisible(true);
       }, 1000);
@@ -41,7 +42,7 @@ export default function DefaultLayout({ children }) {
       </div>
 
       {/* Ant Design Modal */}
-      <Modal
+      {/* <Modal
         visible={isModalVisible}
         footer={null}
         closable={true}
@@ -50,7 +51,7 @@ export default function DefaultLayout({ children }) {
         closeIcon={
           <IoCloseCircleOutline
             onClick={handleCloseModal}
-            className="text-white w-5 h-5 cursor-pointer"
+            className="text-white z-10 w-5 h-5 cursor-pointer"
           />
         }
       >
@@ -61,7 +62,21 @@ export default function DefaultLayout({ children }) {
             alt="Poster"
           />
         </div>
-      </Modal>
+      </Modal> */}
+
+      <PosterModal
+        isVisible={isModalVisible}
+        onClose={handleCloseModal}
+        children={
+          <div className="w-full h-full flex justify-center items-center">
+            <img
+              className="w-[400px] h-[500px] object-contain"
+              src="/V3/posters/poster.jpeg"
+              alt="Poster"
+            />
+          </div>
+        }
+      />
     </div>
   );
 }
