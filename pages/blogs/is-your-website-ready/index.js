@@ -33,7 +33,7 @@ export default function Index() {
   return (
     <div className="w-full -mt-[62px]">
       <BannerV2 item={bannerContent} />
-      <div className="w-full flex flex-col items-center rounded-[20px] p-5 pt-[145px] bg-white"></div>
+
       <div className="rounded-[20px] flex flex-col gap-3 p-5 my-5 bg-white">
         {items?.map((item, i) => (
           <div

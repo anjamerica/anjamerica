@@ -1432,7 +1432,15 @@ input.file {
   background-position: center;
   border-radius: 20px;
 }
-
+.blogs-banner {
+  width: "100%";
+  height: calc(97vh - 16px);
+  background-image: url("https://nichetechies-public.s3.us-east-2.amazonaws.com/ANJ_WEBSITE/WEB/assets/blogs/work-life.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 20px;
+}
 .work-life {
   width: "100%";
   height: calc(97vh - 16px);
