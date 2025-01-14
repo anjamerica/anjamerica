@@ -12,6 +12,7 @@ import About from "../components/pages/landing/About";
 import Banner from "../components/pages/landing/Banner";
 import BusinessNeeds from "../components/pages/landing/BusinessNeeds";
 import BusinessSuccess from "../components/pages/landing/BusinessSuccess";
+import Campaign from "../components/pages/landing/Campaign";
 import ImageGallery from "../components/pages/landing/Gallery";
 import OurClients from "../components/pages/landing/OurClients";
 import Solutions from "../components/pages/landing/Solutions";
@@ -43,6 +44,7 @@ export default function Home() {
       <BusinessSuccess />
       <BusinessNeeds />
       <ImageGallery />
+      <Campaign />
     </div>
   );
 }

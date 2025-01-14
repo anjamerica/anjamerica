@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react";
 
 import { MdFilterAltOff } from "react-icons/md";
-import { GoArrowUpRight } from "react-icons/go";
+import { FaArrowRight } from "react-icons/fa";
 
 import Button from "../../common/Button";
 import SelectInput from "../../common/Select";
@@ -19,12 +19,19 @@ const JobFilter = ({ data, setFilteredJobs }) => {
   useEffect(() => {
     if (data?.length > 0) {
       const locations = data.map((job) => job.location);
+
       const uniqueLocations = [...new Set(locations)];
+
       const formattedLocations = uniqueLocations.map((loc) => ({
         label: loc,
         _id: loc,
       }));
-      setLocationOptions(formattedLocations);
+
+      setLocationOptions([
+        ...formattedLocations,
+        { label: "Memphis, TN38103, USA", _id: "Memphis, TN38103, USA" },
+        { label: "Columbus, OH 43240, USA", _id: "Columbus, OH 43240, USA" },
+      ]);
     }
   }, [data]);
 
@@ -77,16 +84,15 @@ const JobFilter = ({ data, setFilteredJobs }) => {
   };
 
   return (
-    <div className="p-4 bg-white shadow-md md:rounded-lg">
-      <h2 className="text-lg md:text-2xl font-medium mb-2">
-        Job Opportunities
-      </h2>
+    <div className="p-4 bg-white career-card-shadow md:rounded-[20px]">
+      <h2 className="text-lg md:text-2xl font-bold">Job Opportunities</h2>
       <p className="mb-4">Browse Our Career Openings</p>
       <div className="flex flex-col md:flex-row gap-4">
         <div className="w-full md:w-[30vw]">
           <TextInput
             placeholder="Type a job name, role or skill"
             value={filters.search}
+            className="yellow-border-input-rounded"
             onChange={(e) => handleFilterChange("search", e.target.value)}
           />
         </div>
@@ -94,12 +100,14 @@ const JobFilter = ({ data, setFilteredJobs }) => {
           <SelectInput
             value={filters.location}
             options={locationOptions}
+            className="yellow-border-input-rounded"
             placeholder="Sort by location"
             onChange={(option) => handleFilterChange("location", option.value)}
           />
         </div>
         <div className="w-full md:w-[25vw]">
           <SelectInput
+            className="yellow-border-input-rounded"
             placeholder="Experience"
             value={filters.experience}
             onChange={(option) =>
@@ -119,7 +127,7 @@ const JobFilter = ({ data, setFilteredJobs }) => {
           <Button
             title="Explore"
             onClick={applyFilter}
-            icon={<GoArrowUpRight className="w-5 h-5 text-white" />}
+            icon={<FaArrowRight className="w-4 h-4 text-white" />}
           />
         </div>
         <div className="content-center">

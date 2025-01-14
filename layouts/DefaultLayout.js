@@ -1,25 +1,19 @@
 import React, { useEffect, useState } from "react";
+
+import { Modal } from "antd";
+import { IoCloseCircleOutline } from "react-icons/io5";
+
 import HeaderV3 from "../components/common/HeaderV3";
 import FooterV3 from "../components/pages/landing/FooterV3";
-// import VideoModal from "../components/pages/landing/VideoModal";
-import { notification } from "antd";
 
 export default function DefaultLayout({ children }) {
+  const [isModalVisible, setIsModalVisible] = useState(false);
+
   useEffect(() => {
     const hasSeenModal = localStorage.getItem("hasSeenModal");
     if (!hasSeenModal) {
       const timer = setTimeout(() => {
-        notification.open({
-          duration: 0,
-          description: (
-            <div className="bg-[#f8f8f8]">
-              <img
-                className="w-fit h-fit  object-contain"
-                src="/V3/posters/poster.jpeg"
-              />
-            </div>
-          ),
-        });
+        setIsModalVisible(true);
       }, 1000);
 
       return () => clearTimeout(timer);
@@ -28,6 +22,7 @@ export default function DefaultLayout({ children }) {
 
   const handleCloseModal = () => {
     localStorage.setItem("hasSeenModal", "true");
+    setIsModalVisible(false);
   };
 
   return (
@@ -44,6 +39,29 @@ export default function DefaultLayout({ children }) {
       <div className="mt-auto px-2 md:px-5">
         <FooterV3 />
       </div>
+
+      {/* Ant Design Modal */}
+      <Modal
+        visible={isModalVisible}
+        footer={null}
+        closable={true}
+        centered
+        width={400}
+        closeIcon={
+          <IoCloseCircleOutline
+            onClick={handleCloseModal}
+            className="text-white w-5 h-5 cursor-pointer"
+          />
+        }
+      >
+        <div className="w-full h-full flex justify-center items-center">
+          <img
+            className="w-[400px] h-[500px] object-contain"
+            src="/V3/posters/poster.jpeg"
+            alt="Poster"
+          />
+        </div>
+      </Modal>
     </div>
   );
 }
