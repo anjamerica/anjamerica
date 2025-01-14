@@ -13,7 +13,7 @@ export default function Solutions() {
         "https://nichetechies-public.s3.us-east-2.amazonaws.com/ANJ_WEBSITE/WEB/assets/blogs/is-your-web-ready.webp",
       title: "Is Your Website Ready For A Mobile-First World",
       description:
-        "Achieving work-life balance isn’t intangible or even impossible. It’s simply being able to handle the stress of your work and personal life on the go. The ultimate goal is that at the end of each day you go to bed with zero stress, and wake up the next morning with a smile on your face and a spring in your steps. Many people consider work and their personal lives to be two separate entities, when in fact they go hand-in-hand. Rather than trying to separate the two, this blog is aimed at helping you cope with both so that you can lead a stress-free and balanced life.",
+        "With the extraordinary increase and usage of smart devices like mobile phones and tablets, Google has decided to do an innovative change in the way its search engines work. Based on the quality and responsiveness of a website’s mobile version, Google will rank it high or low. So, the way your mobile website works will determine your search engine ranking. Mobile optimization is a crucial factor for small and large enterprises and businesses. If your company’s website doesn’t have an optimized mobile responsive website then it’s time to make it ideal for a mobile-first world..",
       linkTo: "/blogs/is-your-website-ready",
     },
     {
@@ -22,7 +22,7 @@ export default function Solutions() {
       title: "Job Scenario in the USA for Immigrants",
       description:
         "Transform your systems with AI-driven intelligence. Our services include predictive analytics, automation, and AI-powered tools like chatbots and virtual assistants to enhance efficiency and decision-making.",
-      linkTo: "/blogs/points-to-remember",
+      linkTo: "/blogs/job",
     },
     {
       image:
@@ -30,7 +30,7 @@ export default function Solutions() {
       title: "The Importance of Scalable Web Development",
       description:
         "Leverage the scalability and flexibility of the cloud with our cutting-edge solutions. From SaaS applications to full cloud migration, we future-proof your business operations.",
-      linkTo: "/blogs",
+      linkTo: "/blogs/web-developement",
     },
     {
       image:
@@ -38,7 +38,7 @@ export default function Solutions() {
       title: "Migrating To The USA? Here Is A Consolidated Checklist",
       description:
         "Expand your digital presence with intuitive and user-friendly mobile applications for iOS and Android, crafted to elevate customer experiences and engage your audience.",
-      linkTo: "/solutions/mobile-app-solutions",
+      linkTo: "/blogs/checklist",
     },
     {
       image:
@@ -46,7 +46,7 @@ export default function Solutions() {
       title: "What is Cloud Management?",
       description:
         "Build and scale your online presence with secure and dynamic e-commerce platforms. From storefront design to payment integration, we provide end-to-end solutions for online success.",
-      linkTo: "/solutions/e-commerce-solutions",
+      linkTo: "/blogs/management",
     },
   ];
 
@@ -69,7 +69,7 @@ export default function Solutions() {
         Stay Updated with the Latest Innovations and Milestones from ANJ America
       </p>
       <div className="w-full flex justify-center">
-        <div className="w-full max-w-[1200px] flex flex-wrap gap-10 rounded-lg">
+        <div className="w-full max-w-[1300px] flex flex-wrap gap-5 rounded-lg">
           {services?.map((item, i) => (
             <Card item={item} key={i} i={i} />
           ))}
@@ -82,22 +82,30 @@ export default function Solutions() {
 
 function Card({ item }) {
   return (
-    <div className="relative flex flex-col gap-6 w-full md:w-[48%] items-center">
-      <div className="relative rounded w-full h-[440px]">
+    <div className="relative mx-auto flex flex-col gap-6 w-full md:w-[49%] items-center">
+      <div className="relative  w-full h-[440px] lg:min-h-[610px]">
         <img
-          className="w-full h-full object-fill"
+          className="w-full h-full rounded-[20px] lg:min-h-[610px] object-cover"
           src={item?.image}
           alt={item?.title}
         />
         {/* sub Card */}
-        <div className="absolute bottom-0 left-0  bg-white p-4 h-[110px] w-[412px] overflow-hidden rounded-tr-[25px]">
+        <div className="absolute bottom-0 left-0  bg-white py-4 h-[110px] w-[412px]  rounded-tr-[25px]">
+          <img
+            className="absolute bottom-0 -right-5 w-5 h-5 object-contain"
+            src="/V3/blogs/rounded-triangle.svg"
+          />
+          <img
+            className="absolute -top-5 left-0 w-5 h-5 object-contain"
+            src="/V3/blogs/rounded-triangle.svg"
+          />
           <p className="text-sm font-bold mb-2 text-gray-900">{item?.title}</p>
-          <p className="text-sm text-gray-700 mb-3 text-ellipsis whitespace-nowrap overflow-hidden">
+          <p className="text-sm text-gray-dark mb-3 text-ellipsis whitespace-nowrap overflow-hidden">
             {item?.description}
           </p>
           <a
             href={item?.linkTo}
-            className="flex items-center text-orange-primary text-md gap-2 hover:underline"
+            className="flex items-center cursor-pointer text-orange-primary text-md gap-2 hover:underline"
           >
             More Info
             <img
