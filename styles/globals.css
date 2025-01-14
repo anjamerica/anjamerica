@@ -1433,16 +1433,6 @@ input.file {
   border-radius: 20px;
 }
 
-.blogs-banner {
-  width: "100%";
-  height: calc(97vh - 16px);
-  background-image: url("./../assets/image.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  border-radius: 20px;
-}
-
 .work-life {
   width: "100%";
   height: calc(97vh - 16px);
