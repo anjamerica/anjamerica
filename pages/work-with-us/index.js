@@ -10,6 +10,8 @@ const workwithus = () => {
     description:
       "Do you love connecting with people, helping them find exciting opportunities,and being part of the future of work? If so, we want to meet you!",
     background: "workwithus-banner",
+    titleStyle: "max-w-[929px]",
+    descriptionStyle: "max-w-[835px]",
   };
 
   const growthPageContent = {

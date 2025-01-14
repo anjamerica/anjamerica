@@ -62,9 +62,7 @@ export default function Index() {
               data-aos-anchor-placement="center-bottom"
               className="flex flex-col gap-1"
             >
-              <p className="text-gray-dark text-justify md:text-start">
-                {item?.para}
-              </p>
+              <p className="text-gray-dark text-justify">{item?.para}</p>
             </div>
           </div>
         ))}

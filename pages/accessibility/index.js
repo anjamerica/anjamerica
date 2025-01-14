@@ -45,7 +45,7 @@ export default function Index() {
       </div>
       <div className="rounded-[20px] flex flex-col gap-3 p-5 my-5 bg-white">
         <p className="font-bold text-base">Commitment to Accessibility</p>
-        <p className="text-gray-dark text-justify md:text-start">
+        <p className="text-gray-dark text-justify">
           We strive to adhere to recognized accessibility standards and
           guidelines, such as the Web Content Accessibility Guidelines (WCAG)
           2.1. Our goal is to make our website and services accessible to users
@@ -67,9 +67,7 @@ export default function Index() {
               className="flex flex-col gap-1"
             >
               {item?.para && (
-                <p className="text-gray-dark text-justify md:text-start">
-                  {item?.para}
-                </p>
+                <p className="text-gray-dark text-justify">{item?.para}</p>
               )}
 
               {item?.list?.map((item, i) => (

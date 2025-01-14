@@ -3,14 +3,22 @@ import React from "react";
 export default function BannerV2({ item }) {
   return (
     <div
-      className={`${item?.background} rounded-[20px] -mt-[19px] flex justify-center items-center w-full`}
+      className={`${item?.background} relative rounded-[20px] -mt-[19px] flex justify-center items-center w-full`}
     >
-      <div className="flex flex-col items-center bottom-8 md:bottom-20 gap-6">
+      <div
+        className="absolute bottom-0 left-0 w-full h-full rounded-b-[20px]"
+        style={{
+          background:
+            "linear-gradient(180deg, rgba(0, 0, 0, 0) 30%, #000000 87.14%)",
+          zIndex: 0, // Ensure it stays below content
+        }}
+      ></div>
+      <div className="flex flex-col z-10 items-center bottom-8 md:bottom-20 gap-6">
         <p
           data-aos="fade-up"
           data-aos-duration="1000"
           data-aos-anchor-placement="center-bottom"
-          className="text-2xl md:leading-[70px] tracking-wide text-center md:text-[60px] font-bold  text-white"
+          className={`text-2xl md:leading-[70px] tracking-wide text-center md:text-[60px] font-bold  text-white ${item?.titleStyle}`}
         >
           {item?.title}
         </p>

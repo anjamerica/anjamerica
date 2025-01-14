@@ -3,10 +3,11 @@ import BannerV2 from "../../../components/common/BannerV2";
 
 const index = () => {
   const bannerContent = {
-    title: "The Importance of Scalable Web Development",
+    title: "Job Scenario in the USA for Immigrants",
     description:
-      "Scalable Web Development refers to the ability of a system, network, and the process of using the website to handle the workload that would increase as time passes by.",
+      "The world-famous animator, Walt Disney told, “All of our dreams come true if we have the courage to pursue them.",
     background: "checklistimg",
+    descriptionStyle: "max-w-[660px]",
   };
 
   const items = [
@@ -92,9 +93,7 @@ const index = () => {
               className="flex flex-col gap-1"
             >
               {item?.para && (
-                <p className="text-gray-dark text-justify md:text-start">
-                  {item?.para}
-                </p>
+                <p className="text-gray-dark text-justify">{item?.para}</p>
               )}
 
               {item?.list?.map((item, i) => (
