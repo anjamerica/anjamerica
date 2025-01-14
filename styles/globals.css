@@ -1432,6 +1432,33 @@ input.file {
   background-position: center;
   border-radius: 20px;
 }
+.workwithus-banner {
+  width: "100%";
+  height: calc(97vh - 16px);
+  background-image: url("https://nichetechies-public.s3.us-east-2.amazonaws.com/ANJ_WEBSITE/WEB/assets/blogs/workwithus.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 20px;
+}
+.webimg {
+  width: "100%";
+  height: calc(97vh - 16px);
+  background-image: url("https://nichetechies-public.s3.us-east-2.amazonaws.com/ANJ_WEBSITE/WEB/assets/blogs/webimg.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 20px;
+}
+.checklistimg {
+  width: "100%";
+  height: calc(97vh - 16px);
+  background-image: url("https://nichetechies-public.s3.us-east-2.amazonaws.com/ANJ_WEBSITE/WEB/assets/blogs/checklistimg.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* background-position: center; */
+  border-radius: 20px;
+}
 
 .career-banner {
   width: "100%";
