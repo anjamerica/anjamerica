@@ -5,7 +5,7 @@ export default function Button({ title, loading, icon, ...props }) {
   return (
     <button
       disabled={loading || props.disabled}
-      className={`flex gap-4 bg-primary-blue items-center font-semibold text-white w-full h-[50px] justify-between px-6 ${
+      className={`flex gap-2 bg-orange-primary items-center rounded-full font-semibold text-white w-full py-3 tracking-wide justify-between px-6 ${
         props.disabled && "opacity-50"
       }`}
       {...props}

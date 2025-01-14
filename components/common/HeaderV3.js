@@ -68,6 +68,10 @@ export default function HeaderV3() {
     //   title: "Who we are",
     //   activeLink: "/who-we-are",
     // },
+    {
+      title: "Career",
+      activeLink: "/careers",
+    },
   ];
 
   const handleCloseMobileMenu = () => {

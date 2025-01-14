@@ -47,13 +47,13 @@ export default function FilePicker({
         onChange={(e) => handleFileChange(e)}
       />
       <div
-        className={`w-full flex items-center border border-solid border-[#B7B7B7] p-2 ${
+        className={`w-full flex items-center yellow-border-input-rounded p-2 ${
           isError && "border border-solid border-[#D12E34]"
         }`}
       >
         <div
           onClick={handleOpenFilePicker}
-          className="w-fit p-1 border border-solid border-[#B7B7B7] text-md cursor-pointer"
+          className="w-fit py-1 px-4 yellow-border-input-rounded text-md cursor-pointer"
         >
           Choose file
         </div>

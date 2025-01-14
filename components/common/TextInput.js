@@ -27,7 +27,7 @@ export default function TextInput({
         onChange={onChange}
         placeholder={placeholder}
         onKeyDown={handleKeyDown}
-        className={` w-full border rounded-none border-solid border-[#B7B7B7] p-2 ${className} ${
+        className={` w-full border rounded-none yellow-border-input p-3 ${className} ${
           isError && "border border-solid border-[#D12E34]"
         }`}
       />

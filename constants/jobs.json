@@ -2,261 +2,404 @@
     "activeJobs":[
         {
             "jobId":"ANJC047",
-            "jobTitle":"Custom Software Business Development Manager",
+            "jobTitle":"Automation Test Lead",
             "location":"Kochi, Kerala, India",
-            "experience":"1 - 2 yrs",
-            "description":"Custom Software Business Development Manager",
+            "experience":"5+ yrs",
+            "description":"We are looking for a highly skilled and motivated Automation Test Lead to spearhead the automation testing efforts, ensuring the delivery of high-quality software products. The ideal candidate will lead the test automation team, design efficient testing strategies, and collaborate with cross-functional teams to ensure seamless integration and effective test coverage.",
             "responsibilities":[
                 {
-                    "title":"Consultative Selling:",
-                    "description":"Engage with prospective clients to understand their business needs, challenges, and objectives. Identify opportunities where custom software solutions can add value to their operations."
+                    "title":"Leadership and Team Coordination:",  
+                    "description":"Lead, mentor, and manage a team of automation testers by assigning tasks, monitoring progress, ensuring timely delivery of testing milestones, and fostering a culture of collaboration and continuous improvement within the team."
                 },
                 {
-                    "title":"Consultative Selling:",
-                    "description":"Engage with prospective clients to understand their business needs, challenges, and objectives. Identify opportunities where custom software solutions can add value to their operations."
+                    "title":"Automation Strategy Development:",
+                    "description":"Develop and implement robust automation testing strategies and frameworks by defining objectives, processes, and best practices, while evaluating and selecting appropriate automation tools and technologies."
                 },
                 {
-                    "title":"Consultative Selling:",
-                    "description":"Engage with prospective clients to understand their business needs, challenges, and objectives. Identify opportunities where custom software solutions can add value to their operations."
+                    "title":"Test Planning and Design:",
+                    "description":"Collaborate with product, development, and DevOps teams to define test requirements, design and maintain reusable and scalable test scripts for functional, regression, and performance testing, and ensure thorough test coverage aligned with business goals."
+                },
+                {
+                    "title":"Execution and Monitoring:",
+                    "description":"Oversee the execution of automated test cases, analyze results, monitor and report on test progress, defects, and risks, and identify, log, and track bugs to ensure their timely resolution."
+                },
+                {
+                    "title":"Integration with CI/CD:",
+                    "description":"Integrate automated tests into CI/CD pipelines to ensure smooth deployment processes and optimize automation scripts for faster execution and reporting."
+                },
+                {
+                    "title":"Stakeholder Collaboration and Reporting:",
+                    "description":"Act as the primary point of contact for automation testing discussions with stakeholders, providing clear updates on test results, quality metrics, and project risks while offering actionable insights and recommendations for quality improvement."
+                },
+                {
+                    "title":"Continuous Improvement:",
+                    "description":"Stay updated with the latest trends in test automation and QA practices, identify areas for improvement in current testing processes, and implement enhancements."
                 }
             ],
             "qualification":[
                 {
                     "title":"Education",
-                    "description":"Bachelor’s degree in business, IT , computer science, or a related field (preferred)."
+                    "description":"Bachelor’s degree in Computer Science, Software Engineering, or a related field (or equivalent experience)."
                 },
                 {
                     "title":"Experience",
-                    "description":"5+ yrs"
+                    "description":"Possess over 5 years of experience in software testing with a focus on test automation, including 2+ years in a leadership or managerial role within QA, with strong expertise in test automation tools like Selenium, Appium, TestNG, Cypress, or similar, and hands-on experience with CI/CD tools such as Jenkins, GitLab, or Azure DevOps."
                 },
                 {
                     "title":"Technical Skills",
-                    "description":"5+ yrs"
+                    "description":"Proficiency with tools like Google Ads, Analytics, and SEO platforms (e.g., SEMrush, Ahrefs). Creative thinker with strong communication and analytical skills. A self-starter who thrives in a fast-paced, collaborative environment."
                 },
                 {
-                    "title":"Soft Skills",
-                    "description":"5+ yrs"
+                    "title":"Other Skills",
+                    "description":"Proficient in programming languages such as Java, Python, or JavaScript for automation, with a solid understanding of software QA methodologies, tools, and processes, experience in API testing tools like Postman or RestAssured, strong analytical and problem-solving skills, and excellent communication, leadership, and team management abilities."
+                },
+                {
+                    "title":"Preferred Qualifications",
+                    "description":"Hold an ISTQB or similar certification in software testing, with experience in performance testing tools like JMeter or LoadRunner, familiarity with cloud-based testing and infrastructure, and exposure to Agile/Scrum methodologies and practices."
                 }
             ],
             "benefits":[
                 {
-                    "description":"Competitive base salary plus performance-based incentives."
+                    "description":"Competitive salary and benefits package."
                    
                 },
                 {
-                    "description": "Opportunity to work on innovative and impactful software projects both domestic and International.."
+                    "description":"Opportunities for growth and career development."
+                   
+                },
+                {
+                    "description": "A collaborative and innovative work environment."
                 }
-            ],
+            ],            
             "employmentType":"Full time"
         },
         {
             "jobId":"ANJC048",
-            "jobTitle":"Software Training Sales Representative",
-            "location":"Chennai, India",
-            "experience":"3 - 5 yrs",
-            "description":"Custom Software Business Development Manager",
+            "jobTitle":"Digital Marketing Executive",
+            "location":"Kochi, Kerala, India ",
+            "experience":"3+ yrs",
+            "description":"ANJ America is seeking a talented and driven Digital Marketing Executive to join our dynamic marketing team. In this role, you will be responsible for developing, implementing, and optimizing our digital marketing strategies across multiple channels to increase brand awareness, drive traffic, and generate leads for our business. You will work closely with the marketing and creative teams to execute campaigns that support business objectives and ",
             "responsibilities":[
                 {
-                    "title":"Consultative Selling:",
-                    "description":"Engage with prospective clients to understand their business needs, challenges, and objectives. Identify opportunities where custom software solutions can add value to their operations."
+                    "title":"",
+                    "description":"Develop, execute, and manage digital marketing campaigns across various channels such as Google Ads, SEO, SEM, email marketing, social media, and display advertising."
                 },
                 {
-                    "title":"Consultative Selling:",
-                    "description":"Engage with prospective clients to understand their business needs, challenges, and objectives. Identify opportunities where custom software solutions can add value to their operations."
+                    "title":"",
+                    "description":"Conduct market research to identify trends, competitive analysis, and customer insights to improve campaign strategies."
                 },
                 {
-                    "title":"Consultative Selling:",
-                    "description":"Engage with prospective clients to understand their business needs, challenges, and objectives. Identify opportunities where custom software solutions can add value to their operations."
+                    "title":"",
+                    "description":"Collaborate with internal teams to create compelling content for digital platforms, including blog posts, social media updates, and email newsletters."
+                },
+                {
+                    "title":"",
+                    "description":"Manage and grow the company’s presence across social media platforms (Facebook, Instagram, LinkedIn, Twitter, etc.), including content creation, posting, and engagement."
+                },
+                {
+                    "title":"",
+                    "description":"Track, analyze, and report on the performance of digital marketing campaigns using tools like Google Analytics, SEMrush, and social media analytics."
+                },
+                {
+                    "title":"",
+                    "description":"Assist in the creation of landing pages, lead forms, and other assets that drive engagement and conversions."
+                },
+                {
+                    "title":"",
+                    "description":"Stay updated with the latest trends, tools, and best practices in digital marketing to continuously improve our strategies."
+                },
+                {
+                    "title":"",
+                    "description":"Coordinate with external vendors and agencies as needed to implement campaigns or procure digital assets."
+                },
+                {
+                    "title":"",
+                    "description":"Work with the design and content teams to ensure branding and messaging are consistent across all digital touchpoints."
                 }
             ],
             "qualification":[
                 {
                     "title":"Education",
-                    "description":"Bachelor’s degree in business, IT , computer science, or a related field (preferred)."
+                    "description":"Bachelor’s degree in Marketing, Business, or a related field."
                 },
                 {
                     "title":"Experience",
-                    "description":"5+ yrs"
+                    "description":"Proven experience (3+ years) in digital marketing, SEO, SEM, and social media management."
                 },
                 {
                     "title":"Technical Skills",
-                    "description":"5+ yrs"
+                    "description":"Possess a strong understanding of digital marketing strategies, web analytics, and performance metrics, with proficiency in Google Ads, Google Analytics, SEO tools (e.g., Ahrefs, SEMrush), and social media platforms. Excellent written and verbal communication skills, along with the ability to analyze data and derive actionable insights."
                 },
                 {
                     "title":"Soft Skills",
-                    "description":"5+ yrs"
+                    "description":"A creative thinker with a passion for staying ahead of digital marketing trends, strong organizational skills to handle multiple projects simultaneously, and a self-motivated, results-oriented attitude capable of working both independently and within a team."
                 }
             ],
             "benefits":[
                 {
-                    "description":"Competitive base salary plus performance-based incentives."
+                    "description":"Competitive salary and benefits package."
                    
                 },
                 {
-                    "description": "Opportunity to work on innovative and impactful software projects both domestic and International.."
+                    "description":"Opportunities for growth and career development."
+                   
+                },
+                {
+                    "description": "A collaborative and innovative work environment."
                 }
             ],
             "employmentType":"Full time"
         },
         {
             "jobId":"ANJC049",
-            "jobTitle":"Custom Software Business Development Manager",
-            "location":"Malappuram, Kerala, India",
-            "experience":"5 - 9 yrs",
-            "description":"We are seeking a highly motivated and consultative Custom Software Sales Representative to join our team. This role involves working closely with businesses to understand their unique challenges and proposing tailored software solutions developed by our team. The ideal candidate will have strong communication skills, a consultative sales approach, and the ability to bridge the gap between client requirements and technical possibilities.",
+            "jobTitle":"Scrum Master",
+            "location":"Kochi, Kerala, India",
+            "experience":"5+ yrs",
+            "description":"We are seeking a highly motivated and experienced Scrum Master to facilitate the Agile development process and ensure the effective delivery of high-quality projects. The ideal candidate will act as a servant leader, coach, and advocate for Agile principles, working collaboratively with cross-functional teams to achieve business goals.",
             "responsibilities":[
                 {
-                    "title":"Consultative Selling:",
-                    "description":"Engage with prospective clients to understand their business needs, challenges, and objectives. Identify opportunities where custom software solutions can add value to their operations."
+                    "title":"Facilitate Scrum Ceremonies:",
+                    "description":"Organize and lead daily stand-ups, sprint planning, retrospectives, and review meetings, ensuring time-boxing and adherence to Agile best practices."
                 },
                 {
-                    "title":"Consultative Selling:",
-                    "description":"Engage with prospective clients to understand their business needs, challenges, and objectives. Identify opportunities where custom software solutions can add value to their operations."
+                    "title":"Remove Impediments:",
+                    "description":"Identify and address roadblocks that hinder team progress, acting as a buffer between external distractions and the team to maintain focus and productivity."
                 },
                 {
-                    "title":"Consultative Selling:",
-                    "description":"Engage with prospective clients to understand their business needs, challenges, and objectives. Identify opportunities where custom software solutions can add value to their operations."
+                    "title":"Coach the Team:",
+                    "description":"Guide the team on Agile principles, practices, and values, promoting self-organization, accountability, and continuous improvement."
+                },
+                {
+                    "title":"Stakeholder Collaboration:",
+                    "description":"Work closely with Product Owners to refine and prioritize the product backlog, and communicate progress, risks, and dependencies to stakeholders."
+                },
+                {
+                    "title":"Monitor and Track Progress:",
+                    "description":"Use Agile metrics (e.g., velocity, burndown charts) to monitor team performance and ensure transparency of work progress to both the team and stakeholders."
+                },
+                {
+                    "title":"Foster a Collaborative Environment:",
+                    "description":"Encourage open communication and foster a culture of trust within the team, while supporting team dynamics and facilitating conflict resolution."
+                },
+                {
+                    "title":"Promote Continuous Improvement:",
+                    "description":"Drive retrospectives to identify and implement actionable improvements, while advocating for and implementing Agile tools and processes."
                 }
             ],
             "qualification":[
                 {
                     "title":"Education",
-                    "description":"Bachelor’s degree in business, IT , computer science, or a related field (preferred)."
+                    "description":"Bachelor's degree in Computer Science, Business, or related field (or equivalent experience)."
                 },
                 {
                     "title":"Experience",
-                    "description":"5+ yrs"
+                    "description":"Proven experience as a Scrum Master or in a similar role in Agile environments, with expertise in Agile frameworks (e.g., Scrum, Kanban, SAFe) and hands-on experience with tools like Jira or Azure DevOps."
                 },
                 {
                     "title":"Technical Skills",
-                    "description":"5+ yrs"
+                    "description":"Strong understanding of Agile principles and practices."
                 },
                 {
                     "title":"Soft Skills",
-                    "description":"5+ yrs"
+                    "description":"Excellent facilitation, coaching, and conflict-resolution skills, with strong communication and interpersonal abilities, and the capacity to manage multiple priorities while working collaboratively with diverse teams."
+                },
+                {
+                    "title":"Preferred Qualifications",
+                    "description":"Certified Scrum Master (CSM) or Professional Scrum Master (PSM), with knowledge of scaling frameworks such as SAFe, LeSS, or Scrum@Scale, and experience working in software development or technology-driven environments."
                 }
+
             ],
             "benefits":[
-                "Competitive base salary plus performance-based incentives.","Competitive base salary plus performance-based incentives.","Competitive base salary plus performance-based incentives."
+                {
+                    "description":"Competitive salary and benefits package."
+                   
+                },
+                {
+                    "description": "Opportunities for growth and career development."
+                },
+                {
+                    "description": "A collaborative, innovative work environment."
+                }
             ],
             "employmentType":"Full time"
         },
         {
             "jobId":"ANJC050",
-            "jobTitle":"Software Training Sales Representative",
-            "location":"Trivandrum, Kerala, India",
-            "experience":"5 - 9 yrs",
-            "description":"Custom Software Business Development Manager",
+            "jobTitle":"Telecaller Executive",
+            "location":"Kochi, Kerala, India",
+           "experience":"2+ yrs",
+            "description":"We are seeking an enthusiastic and results-driven Telecaller Executive with experience in selling software training courses. The ideal candidate will be responsible for reaching out to potential customers, providing them with information about our training programs, and converting leads into enrolled students. A strong background in tele-sales and excellent communication skills are essential.",
             "responsibilities":[
                 {
-                    "title":"Consultative Selling:",
-                    "description":"Engage with prospective clients to understand their business needs, challenges, and objectives. Identify opportunities where custom software solutions can add value to their operations."
+                    "title":"Lead Generation and Outreach:",
+                    "description":"Make outbound calls to prospective customers and organization-provided leads, identifying customer needs and recommending suitable software training courses."
                 },
                 {
-                    "title":"Consultative Selling:",
-                    "description":"Engage with prospective clients to understand their business needs, challenges, and objectives. Identify opportunities where custom software solutions can add value to their operations."
+                    "title":"Sales and Conversions:",
+                    "description":"Provide detailed information about training courses, fees, and benefits, handle customer queries and objections effectively, and persuade potential customers to enroll in courses while achieving sales targets."
                 },
                 {
-                    "title":"Consultative Selling:",
-                    "description":"Engage with prospective clients to understand their business needs, challenges, and objectives. Identify opportunities where custom software solutions can add value to their operations."
+                    "title":"Follow-Up:",
+                    "description":"Follow up with leads and prospects to ensure a high conversion rate, while maintaining a database of customer interactions and status updates."
+                },
+                {
+                    "title":"Customer Relationship Management:",
+                    "description":"Build and maintain strong relationships with prospective and existing customers, ensuring customer satisfaction by addressing concerns and providing post-enrollment support."
+                },
+
+                {
+                    "title":"Market Knowledge:",
+                    "description":"Stay updated on market trends and competitor offerings, and provide feedback to the marketing and product teams to improve course offerings."
+                
                 }
+
             ],
             "qualification":[
                 {
                     "title":"Education",
-                    "description":"Bachelor’s degree in business, IT , computer science, or a related field (preferred)."
+                    "description":"High school diploma or equivalent (Bachelor’s degree preferred)."
                 },
                 {
                     "title":"Experience",
-                    "description":"5+ yrs"
+                    "description":"1–3 years of experience in tele-sales, preferably in the education or software training domain, with a proven track record of meeting or exceeding sales targets."
+                },
+                
+                {
+                    "title":"Skills",
+                    "description":"Excellent verbal communication and persuasive skills, with the ability to explain complex concepts in a simple and clear manner, strong organizational and multitasking abilities, and proficiency in using CRM software and MS Office tools."
                 },
                 {
-                    "title":"Technical Skills",
-                    "description":"5+ yrs"
-                },
-                {
-                    "title":"Soft Skills",
-                    "description":"5+ yrs"
+                    "title":"Preferred Qualifications",
+                    "description":"Experience in selling technical or IT-related training programs, familiarity with software tools and technologies such as Python, Java, and Data Science, and knowledge of multiple languages for enhanced customer outreach."
                 }
+
             ],
             "benefits":[
                 {
-                    "description":"Competitive base salary plus performance-based incentives."
+                    "description":"Competitive salary and benefits package."
                    
                 },
                 {
-                    "description": "Opportunity to work on innovative and impactful software projects both domestic and International.."
+                    "description": "Opportunities for growth and career development."
+                },
+                {
+                    "description": "A collaborative, innovative work environment."
                 }
             ],
             "employmentType":"Full time"
         },
         {
             "jobId":"ANJC051",
-            "jobTitle":"Custom Software Business Development Manager",
+            "jobTitle":"Senior Sales Executive (Software Training Programs)",
             "location":"Kochi, Kerala, India",
-            "experience":"5 - 9 yrs",
-            "description":"Custom Software Business Development Manager",
+           "experience":"5+ yrs",
+            "description":"We are looking for a dynamic and driven Senior Software Training Sales Representative to join our team. The ideal candidate will excel at understanding client needs for skill development and offering tailored training solutions. This role involves working with businesses and individuals to promote and sell software training programs, ensuring they gain the skills needed to maximize productivity and software adoption.",
             "responsibilities":[
                 {
-                    "title":"Consultative Selling:",
-                    "description":"Engage with prospective clients to understand their business needs, challenges, and objectives. Identify opportunities where custom software solutions can add value to their operations."
+                    "title":"Client Prospecting and Outreach:",
+                    "description":"Identify and target potential clients in need of software training services, utilizing a variety of methods such as cold calls, emails, and networking to generate leads."
                 },
                 {
-                    "title":"Consultative Selling:",
-                    "description":"Engage with prospective clients to understand their business needs, challenges, and objectives. Identify opportunities where custom software solutions can add value to their operations."
+                    "title":"Solution Selling:",
+                    "description":"Assess client needs and recommend suitable training programs for teams, departments, or individual professionals, while clearly articulating the value of training solutions in improving software proficiency and operational efficiency."
                 },
                 {
-                    "title":"Consultative Selling:",
-                    "description":"Engage with prospective clients to understand their business needs, challenges, and objectives. Identify opportunities where custom software solutions can add value to their operations."
+                    "title":"Product Presentation and Customization:",
+                    "description":"Deliver engaging presentations to clients, explaining training offerings and their benefits, while working closely with clients to customize training packages that align with their specific requirements."
+                },
+                {
+                    "title":"Pipeline and Relationship Management:",
+                    "description":"Maintain a robust pipeline of prospects and regularly update CRM systems, while building and nurturing strong, long-term relationships with clients to foster repeat business."
+                },
+                {
+                    "title":"Collaboration and Coordination:",
+                    "description":"Partner with the training delivery team to ensure programs meet client expectations and timelines, acting as a liaison between the client and the training team to address any concerns or adjustments."
+                },
+                {
+                    "title":"Sales and Revenue Goals:",
+                    "description":"Achieve or exceed monthly and quarterly sales targets for training programs, while negotiating contracts and closing sales in alignment with company policies."
+                },
+
+                {
+                    "title":"Market Awareness:",
+                    "description":"Stay updated on trends in software training and learning solutions, while gathering feedback from clients to improve and expand training offerings."
                 }
             ],
             "qualification":[
                 {
                     "title":"Education",
-                    "description":"Bachelor’s degree in business, IT , computer science, or a related field (preferred)."
+                    "description":"Bachelor’s degree in business, marketing, or a related field (preferred)."
                 },
                 {
                     "title":"Experience",
-                    "description":"5+ yrs"
+                    "description":"Proven track record in sales, preferably in professional training, software solutions, or technology services.Experience in selling to corporate clients and decision-makers is a plus."
                 },
                 {
                     "title":"Technical Skills",
-                    "description":"5+ yrs"
+                    "description":"Ability to explain the value of training programs to non-technical audiences, proficiency with CRM tools and sales management software, and a self-starter with excellent time management and organizational skills."
                 },
                 {
                     "title":"Soft Skills",
-                    "description":"5+ yrs"
+                    "description":"Strong consultative selling and communication skills, with a goal-oriented mindset and the ability to work independently or as part of a team."
                 }
             ],
             "benefits":[
                 {
-                    "description":"Competitive base salary plus performance-based incentives."
+                    "description":"Competitive base salary plus performance-based incentives, with the opportunity to work on innovative and impactful software projects both domestically and internationally."
                    
                 },
                 {
-                    "description": "Opportunity to work on innovative and impactful software projects both domestic and International.."
+                    "description": "Collaborative, supportive, and growth-oriented team environment, with comprehensive benefits including health insurance, paid time off, and professional development opportunities."
                 }
             ],
             "employmentType":"Full time"
         },
         {
             "jobId":"ANJC052",
-            "jobTitle":"Software Training Sales Representative",
+            "jobTitle":"Digital Marketing Executive",
             "location":"Kochi, Kerala, India",
-            "experience":"5 - 9 yrs",
-            "description":"Custom Software Business Development Manager",
+           "experience":"3+ yrs",
+            "description":"ANJ America is seeking a talented and driven Digital Marketing Executive to join our dynamic marketing team. In this role, you will be responsible for developing, implementing,and optimizing our digital marketing strategies across multiple channels to increase brand awareness, drive traffic, and generate leads for our business. You will work closely with the marketing and creative teams to execute campaigns that support business objectives and target audiences.",
             "responsibilities":[
                 {
-                    "title":"Consultative Selling:",
-                    "description":"Engage with prospective clients to understand their business needs, challenges, and objectives. Identify opportunities where custom software solutions can add value to their operations."
+                    "title":"",
+                    "description":"Develop, execute, and manage digital marketing campaigns across various channels such as Google Ads, SEO, SEM, email marketing, social media, and display advertising."
                 },
                 {
-                    "title":"Consultative Selling:",
-                    "description":"Engage with prospective clients to understand their business needs, challenges, and objectives. Identify opportunities where custom software solutions can add value to their operations."
+                    "title":"",
+                    "description":"Monitor and optimize campaigns to drive conversions, engagement, and traffic, ensuring that KPIs are met."
                 },
                 {
-                    "title":"Consultative Selling:",
-                    "description":"Engage with prospective clients to understand their business needs, challenges, and objectives. Identify opportunities where custom software solutions can add value to their operations."
+                    "title":"",
+                    "description":"Conduct market research to identify trends, competitive analysis, and customer insights to improve campaign strategies."
+                },
+                {
+                    "title":"",
+                    "description":"Collaborate with internal teams to create compelling content for digital platforms, including blog posts, social media updates, and email newsletters."
+                },
+                {
+                    "title":"",
+                    "description":"Manage and grow the company’s presence across social media platforms (Facebook, Instagram, LinkedIn, Twitter, etc.), including content creation, posting, and engagement."
+                },
+                {
+                    "title":"",
+                    "description":"Track, analyze, and report on the performance of digital marketing campaigns using tools like Google Analytics, SEMrush, and social media analytics."
+                },
+                {
+                    "title":"",
+                    "description":"Assist in the creation of landing pages, lead forms, and other assets that drive engagement and conversions."
+                },
+                {
+                    "title":"",
+                    "description":"Stay updated with the latest trends, tools, and best practices in digital marketing to continuously improve our strategies."
+                },
+                {
+                    "title":"",
+                    "description":"Coordinate with external vendors and agencies as needed to implement campaigns or procure digital assets."
+                },
+                {
+                    "title":"",
+                    "description":"Work with the design and content teams to ensure branding and messaging are consistent across all digital touchpoints."
                 }
             ],
             "qualification":[
@@ -265,16 +408,8 @@
                     "description":"Bachelor’s degree in business, IT , computer science, or a related field (preferred)."
                 },
                 {
-                    "title":"Experience",
-                    "description":"5+ yrs"
-                },
-                {
-                    "title":"Technical Skills",
-                    "description":"5+ yrs"
-                },
-                {
-                    "title":"Soft Skills",
-                    "description":"5+ yrs"
+                    "title":"Preferred Skills",
+                    "description":"Experience with paid social ads (Facebook Ads, LinkedIn Ads)."   
                 }
             ],
             "benefits":[
@@ -283,7 +418,10 @@
                    
                 },
                 {
-                    "description": "Opportunity to work on innovative and impactful software projects both domestic and International.."
+                    "description": "Opportunities for growth and career development."
+                },
+                {
+                    "description": "A collaborative, innovative work environment."
                 }
             ],
             "employmentType":"Full time"

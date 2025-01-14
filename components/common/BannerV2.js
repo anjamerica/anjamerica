@@ -18,7 +18,7 @@ export default function BannerV2({ item }) {
           data-aos="fade-up"
           data-aos-duration="1500"
           data-aos-anchor-placement="center-bottom"
-          className="text-lg px-5 md:px-0 text-center leading-[30px] md:text-[22px] font-medium max-w-[1117px] text-white opacity-80"
+          className={`text-lg px-5 md:px-0 text-center leading-[30px] md:text-[22px] font-medium max-w-[1117px] text-white opacity-80 ${item?.descriptionStyle}`}
         >
           {item?.description}
         </p>
