@@ -50,7 +50,7 @@ export default function SelectInput({
         onBlur={handleBlur}
         filterOption={false}
         placeholder={placeholder}
-        className={` w-full !h-[48px] border rounded-none border-solid border-[#B7B7B7] ${className} ${
+        className={` w-full !h-[48px] border rounded-none ${className} ${
           isError && "border border-solid border-[#D12E34]"
         }`}
         suffixIcon={<FaChevronDown className="text-black w-[10px] mr-2" />}

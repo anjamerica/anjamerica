@@ -1,7 +1,7 @@
 import React from "react";
 
 export default function ImageGallery() {
-  const images = new Array(28).fill(0).map((_, i) => ({
+  const images = new Array(35).fill(0).map((_, i) => ({
     src: `https://nichetechies-public.s3.us-east-2.amazonaws.com/ANJ_WEBSITE/WEB/gallery/${
       i + 1
     }.jpg`,

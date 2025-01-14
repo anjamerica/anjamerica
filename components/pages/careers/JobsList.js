@@ -68,24 +68,21 @@ export default function JobsList({ data = [] }) {
     setExpandedRows(newExpandedRows);
   };
 
-  console.log(expandedRows);
-
   return (
-    <Container>
-      <div className="my-6 md:mt-10 mb:mb-14 rounded-2xl">
-        <Table
-          dataSource={data}
-          columns={columns}
-          rowKey="jobId"
-          pagination={false}
-          expandable={{
-            expandedRowRender: (record, i) => (
-              <JobDetails details={record} index={i} />
-            ),
-            expandedRowKeys: expandedRows,
-          }}
-        />
-      </div>
-    </Container>
+    <div className="md:m-8 rounded-2xl md:overflow-hidden">
+      <Table
+        dataSource={data}
+        columns={columns}
+        rowKey="jobId"
+        pagination={false}
+        expandable={{
+          expandedRowRender: (record, i) => (
+            <JobDetails details={record} index={i} />
+          ),
+          expandedRowKeys: expandedRows,
+        }}
+        scroll={{ x: "max-content" }}
+      />
+    </div>
   );
 }

@@ -95,15 +95,15 @@ export default function JobApplyForm({ job }) {
     resume?.name &&
     isTermsAgreed;
 
-  console.log("====================================");
-  console.log(isTermsAgreed);
-  console.log("====================================");
   return (
-    <div className="mt-6">
+    <div className="mt-6 rounded-[20px] bg-white p-5">
       <Toaster />
-      <p>Job Title: {job?.jobTitle}</p>
+
       <div className="flex mt-4 flex-col md:flex-row gap-5">
         <div className="w-full flex flex-col gap-6 md:w-[47%]">
+          <p className="text-black opacity-80 font-medium">
+            Job Title: {job?.jobTitle}
+          </p>
           <Controller
             control={control}
             rules={{
@@ -119,29 +119,10 @@ export default function JobApplyForm({ job }) {
                 value={value}
                 error={errors.name}
                 onChange={onChange}
+                className="yellow-border-input-rounded"
               />
             )}
             name="name"
-          />
-          <Controller
-            control={control}
-            rules={{
-              required: "Contact number is required",
-              pattern: {
-                value: /^[0-9]{10}$/,
-                message: "Enter a valid 10-digit contact number",
-              },
-            }}
-            render={({ field: { onChange, value } }) => (
-              <TextInput
-                placeholder="Contact number*"
-                value={value}
-                type="number"
-                error={errors.contact}
-                onChange={onChange}
-              />
-            )}
-            name="contact"
           />
           <Controller
             control={control}
@@ -154,14 +135,37 @@ export default function JobApplyForm({ job }) {
             }}
             render={({ field: { onChange, value } }) => (
               <TextInput
-                placeholder="Email ID*"
+                placeholder="Email Address*"
                 value={value}
                 error={errors.email}
                 onChange={onChange}
+                className="yellow-border-input-rounded"
               />
             )}
             name="email"
           />
+          <Controller
+            control={control}
+            rules={{
+              required: "Contact number is required",
+              pattern: {
+                value: /^[0-9]{10}$/,
+                message: "Enter a valid 10-digit contact number",
+              },
+            }}
+            render={({ field: { onChange, value } }) => (
+              <TextInput
+                placeholder="Contact Number*"
+                value={value}
+                type="number"
+                error={errors.contact}
+                onChange={onChange}
+                className="yellow-border-input-rounded"
+              />
+            )}
+            name="contact"
+          />
+
           <Controller
             control={control}
             rules={{
@@ -173,6 +177,7 @@ export default function JobApplyForm({ job }) {
                 value={value}
                 error={errors.position}
                 onChange={onChange}
+                className="yellow-border-input-rounded"
               />
             )}
             name="position"
@@ -188,6 +193,7 @@ export default function JobApplyForm({ job }) {
                 value={value}
                 error={errors.location}
                 onChange={onChange}
+                className="yellow-border-input-rounded"
               />
             )}
             name="location"
@@ -202,19 +208,20 @@ export default function JobApplyForm({ job }) {
             }}
             render={({ field: { onChange, value } }) => (
               <TextArea
-                placeholder="Briefly describe your self"
+                placeholder="Briefly Describe Your Self"
                 value={value}
                 onChange={onChange}
+                className="yellow-border-input-rounded"
               />
             )}
             name="description"
           />
         </div>
         <div className="flex flex-col gap-6 w-full md:w-[47%]">
+          <p className="text-black opacity-80 font-semibold text-md md:text-base">
+            Experience*
+          </p>
           <div className="flex flex-col md:flex-row gap-3 md:gap-4 justify-between md:items-center">
-            <p className="text-md md:text-base font-thin text-[#718096]">
-              Experience*
-            </p>
             <div className="w-full">
               <Controller
                 control={control}
@@ -232,6 +239,7 @@ export default function JobApplyForm({ job }) {
                     value={value}
                     error={errors.exp_year}
                     onChange={onChange}
+                    className="yellow-border-input-rounded"
                   />
                 )}
                 name="exp_year"
@@ -254,6 +262,7 @@ export default function JobApplyForm({ job }) {
                     aaa
                     error={errors.exp_month}
                     onChange={onChange}
+                    className="yellow-border-input-rounded"
                   />
                 )}
                 name="exp_month"
@@ -267,16 +276,17 @@ export default function JobApplyForm({ job }) {
             }}
             render={({ field: { onChange, value } }) => (
               <TextInput
-                placeholder="Previous company*"
+                placeholder="Previous Company*"
                 value={value}
                 error={errors.previous_employer}
                 onChange={onChange}
+                className="yellow-border-input-rounded"
               />
             )}
             name="previous_employer"
           />
-          <p className="text-gray-senary md:mt-4 md:mb-2 font-semibold text-md md:text-base">
-            Academics
+          <p className="text-black opacity-80 md:mt-4 md:mb-2 font-semibold text-md md:text-base">
+            Academics Qualifications
           </p>
           <Controller
             control={control}
@@ -289,6 +299,7 @@ export default function JobApplyForm({ job }) {
                 value={value}
                 error={errors.qualification}
                 onChange={onChange}
+                className="yellow-border-input-rounded"
               />
             )}
             name="qualification"
@@ -304,12 +315,13 @@ export default function JobApplyForm({ job }) {
                 value={value}
                 error={errors.college}
                 onChange={onChange}
+                className="yellow-border-input-rounded"
               />
             )}
             name="college"
           />
           <div>
-            <p className="text-gray-senary mb-6 md:mb-3 font-semibold text-md md:text-base">
+            <p className="text-black opacity-80 mb-6 md:mb-3 font-semibold text-md md:text-base">
               Upload resume
             </p>
             <FilePicker
@@ -329,12 +341,12 @@ export default function JobApplyForm({ job }) {
                 className="border w-5 h-5 border-solid border-[#B7B7B7]"
               />
             </span>
-            <span className="w-full flex ">
+            <span className="w-full mt-1 flex text-xs">
               <span className="pl-2">
                 I agree with{" "}
-                <span className="text-[#3E36B6] underline">Terms of Use</span>{" "}
+                <span className="text-[#0339D9] underline">Terms of Use</span>{" "}
                 and
-                <span className="text-[#3E36B6] underline">
+                <span className="text-[#0339D9] underline">
                   {" "}
                   Privacy Policy
                 </span>

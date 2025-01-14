@@ -110,9 +110,7 @@ export default function Index() {
               className="flex flex-col gap-1"
             >
               {item?.para && (
-                <p className="text-gray-dark text-justify md:text-start">
-                  {item?.para}
-                </p>
+                <p className="text-gray-dark text-justify">{item?.para}</p>
               )}
 
               {item?.list?.map((item, i) => (

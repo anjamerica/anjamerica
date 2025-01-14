@@ -126,15 +126,17 @@ export default function Contact() {
                 <span>
                   <LocationIcon />
                 </span>
-                <span>119 South Main Street, Memphis, TN 38103, USA</span>
+                <span>
+                  119 South Main Street, Memphis, Suit #500, TN 38103, USA
+                </span>
               </p>
-              <div className="h-r" />
-              <p className="font-[600] flex gap-2 items-start text-[14px] sm:text-[16px] 2xl:text-[20px] text-[#141414]">
+              {/* <div className="h-r" /> */}
+              {/* <p className="font-[600] flex gap-2 items-start text-[14px] sm:text-[16px] 2xl:text-[20px] text-[#141414]">
                 <span>
                   <LocationIcon />
                 </span>
                 <span>10 Billiter Road, L7A4G8, Brampton, Canada</span>
-              </p>
+              </p> */}
               <div className="h-r" />
               <p className="font-[600] flex gap-2 items-start text-[14px] sm:text-[16px] 2xl:text-[20px] text-[#141414]">
                 <span>
@@ -145,7 +147,7 @@ export default function Contact() {
                 </span>
               </p>
               <div className="h-r" />
-              <p className="font-[600] flex gap-2 items-start text-[14px] sm:text-[16px] 2xl:text-[20px] text-[#141414]">
+              {/* <p className="font-[600] flex gap-2 items-start text-[14px] sm:text-[16px] 2xl:text-[20px] text-[#141414]">
                 <span>
                   <LocationIcon />
                 </span>
@@ -153,8 +155,8 @@ export default function Contact() {
                   4th Floor, Teepeeyem Square, MG Road, Opposite Cochin
                   Shipyard, Ravipuram, Kochi - 682015, Kerala, India
                 </span>
-              </p>
-              <div className="h-r" />
+              </p> */}
+              {/* <div className="h-r" />
               <p className="font-[600] flex gap-2 items-start text-[14px] sm:text-[16px] 2xl:text-[20px] text-[#141414]">
                 <span>
                   <LocationIcon />
@@ -163,9 +165,9 @@ export default function Contact() {
                   TC79/342(5), 2nd Floor, CPS Plaza, Opp KIA Motors NH Bypass,
                   Venpalavattom, Anayara (P.O) 695029, Thiruvananthapuram, Kerala, India  
                 </span>
-              </p>
-              <div className="h-r" />
-              <p className="font-[600] flex gap-2 items-start text-[14px] sm:text-[16px] 2xl:text-[20px] text-[#141414]">
+              </p> */}
+              {/* <div className="h-r" /> */}
+              {/* <p className="font-[600] flex gap-2 items-start text-[14px] sm:text-[16px] 2xl:text-[20px] text-[#141414]">
                 <span>
                   <LocationIcon />
                 </span>
@@ -173,39 +175,40 @@ export default function Contact() {
                   Old No.3, New No.20, Pycrofts Garden Road, Chennai - 600006, Tamil Nadu, India
                 </span>
               </p>
-              <div className="h-r" />
+              <div className="h-r" /> */}
               <p className="font-[600] flex gap-2 items-start text-[14px] sm:text-[16px] 2xl:text-[20px] text-[#141414]">
                 <span>
                   <LocationIcon />
                 </span>
                 <span>
-                6B - Tower 2, Trans Asia Corporate Park, Kakkanad, Cochin - 682037, Kerala, India
+                  6B - Tower 2, Trans Asia Corporate Park, Kakkanad, Cochin -
+                  682037, Kerala, India
                 </span>
               </p>
             </div>
-            <div className="flex flex-col w-full lg:flex-row">
-            <div className="flex flex-col mt-1 sm:mt-2 gap-2">
-              <span className="text-[16px] heading-main font-[900] text-[#141414]">
-                Call Us
-              </span>
-              {/* <span className="font-[600] text-[14px] whitespace-nowrap md:text-[16px] 2xl:text-[20px] text-[#141414]">
+            <div className="flex flex-col w-full gap-6 lg:flex-row">
+              <div className="flex flex-col mt-1 sm:mt-2 gap-2">
+                <span className="text-[16px] heading-main font-[900] text-[#141414]">
+                  Call Us
+                </span>
+                {/* <span className="font-[600] text-[14px] whitespace-nowrap md:text-[16px] 2xl:text-[20px] text-[#141414]">
                 +1 (901) 371 7302 (USA)
               </span> */}
-              <span className="font-[600] text-[14px] whitespace-nowrap md:text-[16px] mt-0  2xl:text-[20px] text-[#141414]">
-                +1 (901) 310 0451 (USA)
-              </span>
-              <span className="font-[600] text-[14px] whitespace-nowrap md:text-[16px] mt-0  2xl:text-[20px] text-[#141414]">
-                +44 798 878 2024 (United Kingdom)
-              </span>
-            </div>
-            <div className="flex flex-col mt-2 md:mt-2 gap-2">
-              <span className="text-[16px] heading-main font-[900] text-[#141414]">
-                Email Us
-              </span>
-              <span className="font-[600] text-[14px] md:text-[16px] 2xl:text-[20px] text-[#141414]">
-                contact@anjamerica.com
-              </span>
-            </div>
+                <span className="font-[600] text-[14px] whitespace-nowrap md:text-[16px] mt-0  2xl:text-[20px] text-[#141414]">
+                  +1 (901) 371 7302 (USA)
+                </span>
+                <span className="font-[600] text-[14px] whitespace-nowrap md:text-[16px] mt-0  2xl:text-[20px] text-[#141414]">
+                  +91 98954 45280 (India)
+                </span>
+              </div>
+              <div className="flex flex-col mt-2 md:mt-2 gap-2">
+                <span className="text-[16px] heading-main font-[900] text-[#141414]">
+                  Email Us
+                </span>
+                <span className="font-[600] text-[14px] md:text-[16px] 2xl:text-[20px] text-[#141414]">
+                  contact@anjamerica.com
+                </span>
+              </div>
             </div>
           </div>
           <div className="flex flex-col justify-center gap-2 xl:px-[30px] md:py-[25px] w-full">
@@ -305,7 +308,6 @@ export default function Contact() {
                 class="g-recaptcha"
                 sitekey="6Lf_GLchAAAAADi1FwEaV9VEB-s7b9Chb8bJ2pW5"
                 onChange={onCaptchaChange}
-                
               />
               <span className="text-xs text-red-600">
                 {formError.captcha_err}
