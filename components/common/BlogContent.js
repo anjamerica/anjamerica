@@ -13,7 +13,7 @@ export default function Solutions() {
         "https://nichetechies-public.s3.us-east-2.amazonaws.com/ANJ_WEBSITE/WEB/assets/blogs/is-your-web-ready.webp",
       title: "Is Your Website Ready For A Mobile-First World",
       description:
-        "Achieving work-life balance isn’t intangible or even impossible. It’s simply being able to handle the stress of your work and personal life on the go. The ultimate goal is that at the end of each day you go to bed with zero stress, and wake up the next morning with a smile on your face and a spring in your steps. Many people consider work and their personal lives to be two separate entities, when in fact they go hand-in-hand. Rather than trying to separate the two, this blog is aimed at helping you cope with both so that you can lead a stress-free and balanced life.",
+        "With the extraordinary increase and usage of smart devices like mobile phones and tablets, Google has decided to do an innovative change in the way its search engines work. Based on the quality and responsiveness of a website’s mobile version, Google will rank it high or low. So, the way your mobile website works will determine your search engine ranking. Mobile optimization is a crucial factor for small and large enterprises and businesses. If your company’s website doesn’t have an optimized mobile responsive website then it’s time to make it ideal for a mobile-first world..",
       linkTo: "/blogs/is-your-website-ready",
     },
     {
