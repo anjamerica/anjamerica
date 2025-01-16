@@ -16,7 +16,7 @@ export default function JobDetails({ details, index }) {
         "https://nichetechies-public.s3.us-east-2.amazonaws.com/ANJ_WEBSITE/WEB/assets/career/x.svg",
     },
     {
-      linkTo: "https://www.facebook.com/anjamericadotcom/about/",
+      linkTo: "https://www.facebook.com/profile.php?id=61570826336653",
       image:
         "https://nichetechies-public.s3.us-east-2.amazonaws.com/ANJ_WEBSITE/WEB/assets/career/fb.svg",
     },
@@ -81,7 +81,7 @@ export default function JobDetails({ details, index }) {
             icon={<FaArrowRight className="w-4 h-4 text-white" />}
           />
         </div>
-        <div className="w-[1px] h-[50px] bg-gray-light" />
+        <div className="hidden sm:block w-[1px] h-[50px] bg-gray-light" />
         <div>
           <p className="text-gray-senary text-md font-normal leading-[21px]">
             Share with your friends

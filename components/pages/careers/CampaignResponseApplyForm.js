@@ -60,6 +60,7 @@ export default function CampaignResponseApplyForm({ job }) {
         toast.success("Application submitted successfully");
       } catch (error) {
         setLoading(false);
+        console.log(error);
         toast.error("Failed to submit application");
       }
     })();

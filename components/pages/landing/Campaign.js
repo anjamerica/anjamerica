@@ -10,7 +10,7 @@ export default function Campaign() {
     linkTo: "/campaign-enquiry",
   };
   return (
-    <div className="w-full  mt-5 p-5 md:pb-14 md:px-5 md:pt-5 pt-8 bg-white rounded-[20px] flex flex-col gap-6 items-center justify-center">
+    <div className="w-full  mt-5 p-5 md:pb-20 md:px-5 md:pt-5 pt-8 bg-white rounded-[20px] flex flex-col gap-6 items-center justify-center">
       <p
         data-aos="fade-up"
         data-aos-duration="1000"

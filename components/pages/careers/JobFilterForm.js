@@ -84,7 +84,7 @@ const JobFilter = ({ data, setFilteredJobs }) => {
   };
 
   return (
-    <div className="p-4 bg-white career-card-shadow md:rounded-[20px]">
+    <div className="p-4 bg-white career-card-shadow rounded-[20px]">
       <h2 className="text-lg md:text-2xl font-bold">Job Opportunities</h2>
       <p className="mb-4">Browse Our Career Openings</p>
       <div className="flex flex-col md:flex-row gap-4">

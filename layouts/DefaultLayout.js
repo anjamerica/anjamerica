@@ -11,6 +11,7 @@ export default function DefaultLayout({ children }) {
   const [isModalVisible, setIsModalVisible] = useState(false);
 
   useEffect(() => {
+    scrollToTop();
     const hasSeenModal = localStorage.getItem("hasSeenModal");
     if (!hasSeenModal) {
       const timer = setTimeout(() => {
@@ -26,6 +27,12 @@ export default function DefaultLayout({ children }) {
     setIsModalVisible(false);
   };
 
+  const scrollToTop = (behavior = "smooth") => {
+    window.scrollTo({
+      top: 0,
+      behavior,
+    });
+  };
   return (
     <div className="relative min-h-screen w-full flex flex-col">
       {/* Sticky Header */}
@@ -68,9 +75,9 @@ export default function DefaultLayout({ children }) {
         isVisible={isModalVisible}
         onClose={handleCloseModal}
         children={
-          <div className="w-full h-full flex justify-center items-center">
+          <div className="w-full h-full  flex justify-center items-center">
             <img
-              className="w-[400px] h-[500px] object-contain"
+              className="w-[400px] h-[500px] md:w-[600px] md:h-[600px] object-contain"
               src="/V3/posters/poster.jpeg"
               alt="Poster"
             />
