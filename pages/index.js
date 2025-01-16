@@ -14,6 +14,7 @@ import BusinessNeeds from "../components/pages/landing/BusinessNeeds";
 import BusinessSuccess from "../components/pages/landing/BusinessSuccess";
 import Campaign from "../components/pages/landing/Campaign";
 import ImageGallery from "../components/pages/landing/Gallery";
+import News from "../components/pages/landing/News";
 import OurClients from "../components/pages/landing/OurClients";
 import Solutions from "../components/pages/landing/Solutions";
 
@@ -40,11 +41,12 @@ export default function Home() {
       <section id="software-solutions">
         <OurClients />
       </section>
+      <News />
       <Solutions />
       <BusinessSuccess />
       <BusinessNeeds />
-      <ImageGallery />
       <Campaign />
+      <ImageGallery />
     </div>
   );
 }

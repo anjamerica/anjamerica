@@ -6,7 +6,7 @@ const PosterModal = ({ isVisible, onClose, children }) => {
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
-      <div className="relative bg-white rounded-lg w-[400px] h-[400px] shadow-lg">
+      <div className="relative bg-white rounded-lg w-fit h-fit shadow-lg">
         {/* Close Icon */}
         <button
           onClick={onClose}

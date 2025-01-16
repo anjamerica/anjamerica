@@ -18,6 +18,7 @@ export default function JobsList({ data = [] }) {
       title: "Job Title",
       dataIndex: "jobTitle",
       key: "jobTitle",
+      render: (_, record) => <p className="max-w-150px">{record?.jobTitle}</p>,
     },
     {
       title: "Location",
@@ -55,13 +56,14 @@ export default function JobsList({ data = [] }) {
           )}
         </span>
       ),
+      fixed: "right",
     },
   ];
 
   const [expandedRows, setExpandedRows] = useState([]);
 
   const handleExpandToggle = (record, index, e) => {
-    e.stopPropagation();
+    // e.stopPropagation();
     const newExpandedRows = expandedRows.includes(record.jobId)
       ? expandedRows.filter((key) => key !== record.jobId)
       : [record.jobId];
@@ -82,6 +84,9 @@ export default function JobsList({ data = [] }) {
           expandedRowKeys: expandedRows,
         }}
         scroll={{ x: "max-content" }}
+        onRow={(record) => ({
+          onClick: () => handleExpandToggle(record),
+        })}
       />
     </div>
   );
