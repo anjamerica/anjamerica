@@ -13,7 +13,7 @@ export default function DefaultLayout({ children }) {
   useEffect(() => {
     scrollToTop();
     const hasSeenModal = localStorage.getItem("hasSeenModal");
-    if (hasSeenModal) {
+    if (!hasSeenModal) {
       const timer = setTimeout(() => {
         setIsModalVisible(true);
       }, 1000);
