@@ -21,14 +21,14 @@ export default function Index() {
       <div className="relative">
         <BannerV2 item={bannerContent} />
 
-        <div className="absolute -bottom-20 left-0 right-0 mx-auto w-full md:w-[80vw] lg:w-[70vw] md:-mt-[80px]">
+        <div className=" my-3 sm:my-5 md:my-0 md:absolute md:-bottom-20 left-0 right-0 mx-auto w-full md:w-[80vw] lg:w-[70vw] md:-mt-[80px]">
           <JobFilter
             data={jobs?.activeJobs}
             setFilteredJobs={setFilteredJobs}
           />
         </div>
       </div>
-      <div className="w-full mt-5 bg-white md:p-5 pt-[60px] md:pt-[60px] lg:pt-16 rounded-[20px]">
+      <div className="w-full mt-3 md:mt-5 bg-white md:p-5 md:pt-[60px] lg:pt-16 rounded-[20px] overflow-hidden">
         <JobsList data={filteredJobs} />
       </div>
     </div>

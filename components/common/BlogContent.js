@@ -90,13 +90,13 @@ function Card({ item }) {
           alt={item?.title}
         />
         {/* sub Card */}
-        <div className="absolute bottom-0 left-0  bg-white py-4 h-[110px] w-[412px]  rounded-tr-[25px]">
+        <div className="absolute bottom-0 left-0  bg-white py-4 h-[110px] w-full  sm:w-[412px]  rounded-tr-[25px]">
           <img
-            className="absolute bottom-0 -right-5 w-5 h-5 object-contain"
+            className="absolute bottom-0 -right-[19px] w-5 h-5 object-contain"
             src="/V3/blogs/rounded-triangle.svg"
           />
           <img
-            className="absolute -top-5 left-0 w-5 h-5 object-contain"
+            className="absolute -top-[19px] left-0 w-5 h-5 object-contain"
             src="/V3/blogs/rounded-triangle.svg"
           />
           <p className="text-sm font-bold mb-2 text-gray-900">{item?.title}</p>

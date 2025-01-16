@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { GoArrowUpRight } from "react-icons/go";
+import { FaArrowRight } from "react-icons/fa";
 import toast, { Toaster } from "react-hot-toast";
 import { Controller, useForm } from "react-hook-form";
 
@@ -362,7 +362,7 @@ export default function JobApplyForm({ job }) {
             onClick={onSubmit}
             loading={loading}
             disabled={!btnEnabled}
-            icon={<GoArrowUpRight className="w-5 h-5 text-white" />}
+            icon={<FaArrowRight className="w-5 h-5 text-white" />}
           />
         </div>
       </div>

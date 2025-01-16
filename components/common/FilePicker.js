@@ -53,7 +53,7 @@ export default function FilePicker({
       >
         <div
           onClick={handleOpenFilePicker}
-          className="w-fit py-1 px-4 yellow-border-input-rounded text-md cursor-pointer"
+          className="w-fit py-1 px-4 yellow-border-input-rounded whitespace-nowrap text-md cursor-pointer"
         >
           Choose file
         </div>

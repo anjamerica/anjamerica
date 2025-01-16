@@ -1,8 +1,9 @@
-import { Drawer, Popover } from "antd";
+import { Popover } from "antd";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import React, { useState } from "react";
 import { MdMenu } from "react-icons/md";
+import Drawer from "./Drawer";
 
 export default function HeaderV3() {
   const router = useRouter();
@@ -50,18 +51,22 @@ export default function HeaderV3() {
     },
     {
       title: "Domains",
+      linkTo: "/#domains",
       activeLink: "/#domains",
     },
     {
       title: "Work with us",
+      linkTo: "/work-with-us",
       activeLink: "/work-with-us",
     },
     {
       title: "Blogs",
+      linkTo: "/blogs",
       activeLink: "/blogs",
     },
     {
       title: "Portfolio",
+      linkTo: "/portfolio",
       activeLink: "/portfolio",
     },
     // {
@@ -70,6 +75,7 @@ export default function HeaderV3() {
     // },
     {
       title: "Career",
+      linkTo: "/careers",
       activeLink: "/careers",
     },
   ];
@@ -110,11 +116,12 @@ export default function HeaderV3() {
           />
         </div>
         <Drawer
-          headerStyle={{ display: "none" }}
-          onClose={() => setMobileMenu(false)}
-          open={mobileMenu}
+          // headerStyle={{ display: "none" }}
+          // onClose={() => setMobileMenu(false)}
+          isOpen={mobileMenu}
+          setIsOpen={setMobileMenu}
         >
-          <ul style={{ width: "250px" }} className="flex flex-col gap-6 ">
+          <ul className="flex flex-col h-full gap-6 ">
             {navList?.map((item, i) => (
               <NavItem
                 item={item}
@@ -211,10 +218,13 @@ function NavItem({ item, handleCloseMobileMenu }) {
       ) : (
         <span
           onClick={() => {
-            router.push(item?.activeLink);
+            console.log("====================================");
+            console.log("cleeeee");
+            console.log("====================================");
+            router.push(item?.linkTo);
             handleCloseMobileMenu && handleCloseMobileMenu();
           }}
-          className={`p-3 text-black xl:text-white cursor-pointer transition-all ease-in-out${
+          className={`p-3 text-black xl:text-white cursor-pointer transition-all ease-in-out ${
             router.pathname === item?.activeLink
               ? " font-bold  !text-orange-primary "
               : "border-transparent"
