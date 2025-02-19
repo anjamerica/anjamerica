@@ -44,8 +44,8 @@ export default function FooterV3() {
       linkTo: "mailto:info@anjamerica.com",
     },
     {
-      label: "+1 614 535 5738 (USA)",
-      linkTo: "tel:+1 614 535 5738",
+      label: "+1 901 310 0451 (USA)",
+      linkTo: "tel:+1 901 310 0451",
     },
     {
       label: "+91 98954 45280 (IND)",
@@ -57,9 +57,9 @@ export default function FooterV3() {
     {
       address: "119 South Main Street, Suite #500 Memphis, TN 38103, USA",
     },
-    {
-      address: "8425 Pulsar Place, Suite #280, Columbus, OH 43240, USA",
-    },
+    // {
+    //   address: "8425 Pulsar Place, Suite #280, Columbus, OH 43240, USA",
+    // },
     {
       address:
         "6B - Tower 2, Trans Asia Corporate Park,  Seaport-Airport RD, Kakkanad, Cochin, India, 682037",
