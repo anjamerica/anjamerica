@@ -1,30 +1,30 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 
-import { Modal } from "antd";
-import { IoCloseCircleOutline } from "react-icons/io5";
+// import { Modal } from "antd";
+// import { IoCloseCircleOutline } from "react-icons/io5";
 
 import HeaderV3 from "../components/common/HeaderV3";
 import FooterV3 from "../components/pages/landing/FooterV3";
-import PosterModal from "../components/common/PosterModal";
+// import PosterModal from "../components/common/PosterModal";
 
 export default function DefaultLayout({ children }) {
-  const [isModalVisible, setIsModalVisible] = useState(false);
+  // const [isModalVisible, setIsModalVisible] = useState(false);
 
-  useEffect(() => {
-    const hasSeenModal = localStorage.getItem("hasSeenModal");
-    if (!hasSeenModal) {
-      const timer = setTimeout(() => {
-        setIsModalVisible(true);
-      }, 1000);
+  // useEffect(() => {
+  //   const hasSeenModal = localStorage.getItem("hasSeenModal");
+  //   if (!hasSeenModal) {
+  //     const timer = setTimeout(() => {
+  //       setIsModalVisible(true);
+  //     }, 1000);
 
-      return () => clearTimeout(timer);
-    }
-  }, []);
+  //     return () => clearTimeout(timer);
+  //   }
+  // }, []);
 
-  const handleCloseModal = () => {
-    localStorage.setItem("hasSeenModal", "true");
-    setIsModalVisible(false);
-  };
+  // const handleCloseModal = () => {
+  //   localStorage.setItem("hasSeenModal", "true");
+  //   setIsModalVisible(false);
+  // };
 
   return (
     <div className="relative min-h-screen w-full flex flex-col">
@@ -64,7 +64,7 @@ export default function DefaultLayout({ children }) {
         </div>
       </Modal> */}
 
-      <PosterModal
+      {/* <PosterModal
         isVisible={isModalVisible}
         onClose={handleCloseModal}
         children={
@@ -76,7 +76,7 @@ export default function DefaultLayout({ children }) {
             />
           </div>
         }
-      />
+      /> */}
     </div>
   );
 }
