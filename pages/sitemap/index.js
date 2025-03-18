@@ -30,7 +30,7 @@ export default function Index() {
       list: [
         "Banking & Financial Services",
         "Insurance",
-        "EduTech",
+        "EdTech",
         "Social Media Applications",
         "E-Commerce Solutions: Smarter Insights, Better Decisions",
       ],
