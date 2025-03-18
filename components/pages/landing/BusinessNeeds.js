@@ -95,7 +95,7 @@ export default function BusinessNeeds() {
               data-aos-anchor-placement="center-bottom"
               className="w-full xl:w-[470px] lg:w-[40%]"
             >
-              <p className="text-xl md:text-[30px]  font-bold">EduTech</p>
+              <p className="text-xl md:text-[30px]  font-bold">EdTech</p>
               <p className="text-base font-normal text-justify leading-[30px] mt-3 text-[#1E1E1E]">
                 Revolutionizing education with technology that inspires and
                 empowers learners.
